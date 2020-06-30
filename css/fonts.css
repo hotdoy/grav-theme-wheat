@@ -1,0 +1,31 @@
+/* inter-regular - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../../calottecore/fonts/Inter/inter-v1-latin-regular.woff2') format('woff2'),
+       url('../../calottecore/fonts/Inter/inter-v1-latin-regular.woff') format('woff'); 
+}
+
+@font-face {
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lexend Deca Regular'), local('LexendDeca-Regular'),
+       url('../../calottecore/fonts/LexendDeca/lexend-deca-v1-latin-regular.woff2') format('woff2'), 
+       url('../../calottecore/fonts/LexendDeca/lexend-deca-v1-latin-regular.woff') format('woff'); 
+}
+
+
+
+html {
+  --font-base: 'Inter', sans-serif;
+  --font-alt: 'Lexend Deca', serif;
+  font-size: 16px;
+  font-family: var(--font-base);
+}
+
+h1, h2, h3, blockquote {
+  font-family: var(--font-alt);
+}

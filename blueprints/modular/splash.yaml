@@ -1,0 +1,39 @@
+title: Splash
+'@extends': modular/module
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+
+        content:
+          type: tab
+          title: Content
+          fields:
+
+            header.selected_media:
+              label: Media
+              type: pagemediaselect
+
+            header.selected_media_alt:
+              type: text
+              label: Media Alt
+
+        options:
+          type: tab
+          title: Options
+          fields:
+
+            Optional:
+              type: section
+              title: Optional
+              underline: true
+
+            header.optional_classes:
+              type: text
+              label: Optional Classes
+              markdown: true
+              description: '```header```, ```header_fullscreen```, ```smaller_h1```, ```rounded```'

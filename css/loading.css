@@ -1,0 +1,45 @@
+#loading{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+
+
+
+
+/*TRANSITION*/
+#loading.transition {
+	background-color: var(--color-bg);
+	z-index: 4999;	
+}
+
+body.loaded #loading.transition {
+	/*transition: all 0.2s; */
+	opacity: 0;
+	visibility: hidden;
+}
+
+
+
+
+
+/*INTRO*/
+#loading.intro {
+	background-color: black;
+	color: white;
+	z-index: 9999;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition-property: transform visibility;
+	transition-duration: 0.3s; 
+	transition-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+body.loaded #loading.intro {
+	transform: translateY(-100%);
+	visibility: hidden;
+}

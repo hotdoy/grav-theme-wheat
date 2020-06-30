@@ -1,0 +1,12 @@
+{% set loading = page.header.loading ?? 'transition' %}
+
+{% if loading == 'intro' %}
+<div id="loading" class="intro" data-reveal-delay="1100" data-loaded-delay="900">{% include 'partials/logo.html.twig' %}</div>
+{% else %}
+<div id="loading" class="transition" data-reveal-delay="100" data-loaded-delay="0"></div>
+{% endif %}
+
+
+
+
+

@@ -1,0 +1,36 @@
+title: Collection
+'@extends': modular/module
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            header.media_order:
+              unset@: true
+
+            header.content.items:
+              type: text
+              yaml: true
+              label: items
+              default: '@self.children'
+              validate:
+                type: yaml
+
+            header.content.order.by:
+              type: text
+              label: by
+              default: date
+              
+            header.content.order.dir:
+              type: text
+              label: dir
+              default: desc
+
+            header.content.limit:
+              type: text
+              label: limit
+              default: 10
+

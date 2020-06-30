@@ -1,0 +1,33 @@
+<footer>
+
+	<div class="footer__top">
+
+		<div class="footer__nav">
+			<ul>
+				{% for p in pages.children.visible %}
+				<li>
+			    	{% set active = p.active ? 'active' : '' %}
+			    	<a href="{{ p.url }}" class="{{ active }}">{{ p.menu }}</a>
+				    {% if p.children.visible %}
+				    <ul>
+				      	{% for p in p.children.visible %}
+				        {% set active = p.active ? 'active' : '' %}
+				        <li><a href="{{ p.url }}" class="{{ active }}">{{ p.menu }}</a></li>
+				        {% endfor %}
+				    </ul>
+				    {% endif %}
+			    </li>
+				{% endfor %}
+			</ul>
+		</div>
+
+	</div>
+
+
+
+	<div class="footer__bottom">
+		<div class="footer__copyright">© {{ site.title }} {{ "now"|date("Y") }}</div>
+		<a href="https://calotte.ca" class="footer__credit">{% include 'partials/calotte.html.twig' %}</a>
+	</div>
+
+</footer>

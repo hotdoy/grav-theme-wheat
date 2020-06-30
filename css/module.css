@@ -1,0 +1,28 @@
+.module {
+  position: relative;
+  margin-top: var(--rhythm);
+  z-index: 1000;
+}
+
+/*FIX FIRST MODULE TOP MARGIN*/
+#content > .module:nth-child(1) {
+    margin-top: calc(var(--rhythm) - var(--header-heigth)/2);
+}
+
+/*========================================
+                OPTIONALS
+==========================================*/
+.module.padded {
+  padding: var(--rhythm) 0 var(--rhythm) 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.module.no_margin {
+  margin-top: 0;
+}
+
+.module.double_margin {
+  margin-top: calc(var(--rhythm)*2);
+  margin-bottom: calc(var(--rhythm)*2);
+}

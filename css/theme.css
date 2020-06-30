@@ -1,0 +1,56 @@
+/*===========================================
+					VARS 
+============================================*/
+
+html {
+  --color-bg: #FFF;
+  --color-fg: #000;
+  --color-hl: #FFAB00;
+
+  --width-text: 835px;
+  --width-body: 1200px;
+  --width-site: 1600px;
+  --width-full: 1920px;
+
+  --gutter: 32px;
+  --rhythm: 125px;
+  --header-heigth: 5rem;
+}
+
+
+
+
+
+/*===========================================
+					          MISC 
+============================================*/
+
+body {
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+}
+
+::selection {
+  background-color: #ffeb3b; 
+}
+
+
+
+
+
+/*===========================================
+				          UTILS 
+============================================*/
+
+.landscape{display: block;}
+@media (max-width: 835px) {.landscape {display: none;}}
+.portrait {display: block;}
+@media (min-width: 835px) {.portrait {display: none;}}
+
+.fill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

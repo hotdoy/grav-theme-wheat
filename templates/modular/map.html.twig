@@ -1,0 +1,25 @@
+{% set zoom = zoom|default(page.header.zoom) %}
+{% set pin = url('theme://images/map/pin.svg') %}
+
+{% set markers %}
+	[{% for marker in page.header.markers %}
+		["{{ marker.title }}", "{{ marker.lat }}", "{{ marker.lng }}","{{ marker.url }}", "{{ pin }}"]{% if not loop.last %},{% endif %}
+	{% endfor %}]
+{% endset %}
+
+<section class="module map">
+    {% if page.content %}
+    <div class="map__content" data-reveal>{{ page.content }}</div>
+    {% endif %}
+    <div class="map__ctn" data-reveal>
+        {% if theme.gmaps_key %}
+        <div 
+        id="map-{{ random() }}" 
+        data-zoom="{{ zoom }}"
+        data-styles='{{ theme.gmaps_styles }}'
+        data-key="{{ theme.gmaps_key }}"
+        data-markers='{{ markers }}'>
+        </div>
+        {% endif %}
+    </div>
+</section>

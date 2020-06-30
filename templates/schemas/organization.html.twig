@@ -1,0 +1,10 @@
+{% if page.url == home_url and theme.organization_logo %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "url": "{{ base_url_absolute }}",
+  "logo": "{{ theme.organization_logo }}"
+}
+</script>
+{% endif %}

@@ -1,0 +1,21 @@
+{# JQUERY #}
+{% do assets.addJs('jquery', 100) %}
+
+{# LIBS #}
+{% do assets.addJs('theme://libs/swiper/swiper.min.js', { group:'bottom' }) %}
+
+{% do assets.addJs('theme://js/reveal.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/link.js', { group:'bottom'}) %}
+
+{# COMPONENTS #}
+{% do assets.addJs('theme://js/header.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/announcement.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/youtube.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/collection.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/map.js', { group:'bottom' }) %}
+
+{# CUSTOM #}
+{% do assets.addJs('theme://js/custom.js', { group:'bottom' }) %}
+
+{# LOADING #}
+{% do assets.addJs('theme://js/loading.js', { group:'bottom', priority: 0 }) %}

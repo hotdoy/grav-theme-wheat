@@ -1,0 +1,25 @@
+title: Grid
+'@extends': modular/module
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+
+            header.items:
+              name: Items
+              type: list
+              style: vertical
+              label: Items
+              fields:
+                .content:
+                  type: markdown
+                  classes: 'CodeMirror--small'
+                  label: Content

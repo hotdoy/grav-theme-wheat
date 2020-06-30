@@ -1,0 +1,6 @@
+{% set optional_classes = classes|default(page.header.optional_classes) %}
+{% set content = content|default(page.content) %}
+
+<section class="module content {{ optional_classes }}" data-auto-reveal>
+	{{ content }}
+</section>

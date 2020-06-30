@@ -1,0 +1,60 @@
+{% set title %}
+{% if page.header.meta_title %}
+{{- page.header.meta_title -}}
+{% elseif page.header.title and page.url != base_url %}
+{{- page.header.title|e('html') }} - {{ site.title|e('html') -}}
+{% else %}
+{{- site.title|e('html') -}}
+{% endif %}
+{% endset %}
+
+{% set description %}
+{% if page.header.meta_description %}
+{{- page.header.meta_description -}}
+{% else %}
+{% for meta in page.metadata if meta.name == 'description' %}
+{{- meta.content -}}
+{% endfor %}
+{% endif %}
+{% endset %}
+
+{% set og_type = og_type|default('website') %}
+{% set url = url|default(page.url(true, true)) %}
+{% set image = image|default(page.media.images|first ? uri.base() ~ page.media.images|first.url : '') %}
+	
+<meta charset="utf-8" />
+<title>{{ title }}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% if config.plugins.langswitcher.enabled %}
+{% include 'partials/langswitcher.hreflang.html.twig' %}
+{% endif %}
+
+{% for meta in page.metadata %}
+<meta {% if meta.name %}name="{{ meta.name }}" {% endif -%}
+{% if meta.http_equiv %}http-equiv="{{ meta.http_equiv }}" {% endif -%}
+{% if meta.charset %}charset="{{ meta.charset }}" {% endif -%}
+{% if meta.property %}property="{{ meta.property }}" {% endif -%}
+{% if meta.content %}content="{{ meta.content }}" {% endif %}/>
+{% endfor %}
+
+{% if theme.facebook_app_id %}
+<meta property="fb:app_id" content="{{ theme.facebook_app_id }}" />
+{% endif %}
+
+<meta property="og:url" content="{{ url }}" />
+<meta property="og:type" content="{{ og_type }}" />
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:description" content="{{ description }}" />
+{% if image %}<meta property="og:image" content="{{ image }}" />{% endif %}
+
+{% if theme.twitter_site %}
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="{{ theme.twitter_site }}">
+<meta name="twitter:title" content="{{ title }}" />
+<meta name="twitter:description" content="{{ description }}" />
+{% if image %}<meta name="twitter:image" content="{{ image }}" />{% endif %}
+{% endif %}
+
+

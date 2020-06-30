@@ -1,0 +1,152 @@
+/*===========================================
+					        FONTS 
+============================================*/
+
+/* inter-regular - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/Inter/inter-v1-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/Inter/inter-v1-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* inter-800 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  src: local(''),
+       url('../fonts/Inter/inter-v1-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/Inter/inter-v1-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* inter-900 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  src: local(''),
+       url('../fonts/Inter/inter-v1-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/Inter/inter-v1-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+
+
+
+/*===========================================
+					      RULES 
+============================================*/
+html {
+  --font-base: 'Inter', sans-serif;
+  font-size: 16px;
+  font-family: var(--font-base);
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+@media (min-width: 735px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+@media (min-width: 735px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+@media (min-width: 735px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+p:empty{
+  display: none;
+}
+
+strong, 
+p strong {
+  font-weight: 700;
+}
+
+em, 
+p em {
+  font-style: italic;
+}
+
+sup {
+  font-size: 10px;
+}
+
+blockquote>p {
+  font-size: 1.5rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 0;
+}
+@media (min-width: 735px) {
+  blockquote>p {
+    font-size: 2rem;
+  }
+}
+
+pre {
+  margin-top: 1rem;
+  padding: 0 var(--gutter) 0 var(--gutter);
+  font-family: monospace;
+}
+
+pre code {
+  display: block;
+  padding: 1rem;
+  border-radius: 4px;
+  color: #f1f1f1;
+  background-color: #1a2429;
+
+  overflow-x: auto;
+}
+
+ul, ol {
+  margin-top: 1rem;
+  line-height: 1.6;
+  list-style-position: inside;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li > p {
+  display: inline;
+  padding: 0;
+}
+
+p a {
+  color: inherit;
+  text-decoration: underline;
+}

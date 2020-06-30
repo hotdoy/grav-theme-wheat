@@ -1,0 +1,38 @@
+{# PRELOAD #}
+<link rel="preload" href="{{ url('theme://fonts/Inter/inter-v1-latin-regular.woff2', true) }}" as="font" crossorigin>
+
+{# LOADING #}
+{% do assets.addCss('theme://css/loading.css', { loading : 'inline' }) %}
+
+{# THEME #}
+{% do assets.addCss('theme://css/reset.css') %}
+{% do assets.addCss('theme://css/typography.css') %}
+{% do assets.addCss('theme://css/theme.css') %}
+{% do assets.addCss('theme://css/reveal.css') %}
+
+{# LIBS #}
+{% do assets.addCss('theme://libs/swiper/swiper.min.css') %}
+
+{# COMPONENTS #}
+{% do assets.addCss('theme://css/header.css') %}
+{% do assets.addCss('theme://css/mailchimp.css') %}
+{% do assets.addCss('theme://css/footer.css') %}
+{% do assets.addCss('theme://css/announcement.css') %}
+{% do assets.addCss('theme://css/buttons.css') %}
+{% do assets.addCss('theme://css/notices.css') %}
+
+{# MODULES #}
+{% do assets.addCss('theme://css/module.css') %}
+{% do assets.addCss('theme://css/content.css') %}
+{% do assets.addCss('theme://css/drawer.css') %}
+{% do assets.addCss('theme://css/collection.css') %}
+{% do assets.addCss('theme://css/mediatext.css') %}
+{% do assets.addCss('theme://css/splash.css') %}
+{% do assets.addCss('theme://css/map.css') %}
+
+{# PAGES #}
+{% do assets.addCss('theme://css/landing.css') %}
+{% do assets.addCss('theme://css/article.css') %}
+
+{# CUSTOM #}
+{% do assets.addCss('theme://css/custom.css', 1) %}

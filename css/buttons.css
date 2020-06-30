@@ -1,0 +1,82 @@
+/*LINK*/
+
+a.btn-link {
+    position: relative;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    user-select: none;
+	color: var(--color-hl);
+	text-decoration: none;
+}
+
+a.btn-link:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-hl);
+
+    transition: height 0.2s;
+}
+
+a.btn-link:hover:after {
+    animation: hoverLink 0.7s cubic-bezier(0.32, 0.94, 0.6, 1);
+}
+
+@keyframes hoverLink {
+    0% {transform:scaleX(1);transform-origin:right}
+    50%{transform:scaleX(0);transform-origin:right}
+    51%{transform:scaleX(0);transform-origin:left}
+    100%{transform-origin:left;transform:scaleX(1)}
+}
+
+
+
+
+
+/*ROUND*/
+
+a.btn-round,
+.content a.btn-round {
+	user-select: none;
+	display: inline-block;
+	color: var(--color-hl-inverted);
+	background-color: var(--color-hl);
+	font-family: var(--font-alt);
+	padding: 10px 25px;
+    transition: all 0.2s; 
+    text-decoration: none;
+    border-radius: 9999px;
+    text-align: center;
+}
+
+/*a.btn-round:hover {}*/
+
+/*a.btn-round:hover:active {}*/
+
+
+
+
+
+/*SQUARE*/
+
+a.btn-square,
+.content a.btn-square {
+	user-select: none;
+	display: inline-block;
+	color: var(--color-hl-inverted);
+	background-color: var(--color-hl);
+	font-family: var(--font-alt);
+	padding: 10px 25px;
+    transition: all 0.2s; 
+    text-decoration: none;
+}
+
+/*a.btn-square:hover {}*/
+
+/*a.btn-square:hover:active {}*/

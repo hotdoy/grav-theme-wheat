@@ -1,0 +1,53 @@
+{% set hash = random() %}
+{% set crumbs = { (hash) : { title: page.title, url: page.url(true) }} %}
+{% set options = { items: {'@self.parent':''} } %}
+{% if page.parent and page.parent.title != 'Pages' %}
+	{% for page in page.collection(options) %}
+		{% set hash = random() %}
+		{% set values = { (hash) : { title: page.title, url: page.url(true) }} %}
+		{% set crumbs = crumbs|merge(values) %}
+
+		{% if page.parent and page.parent.title != 'Pages' %}
+			{% for page in page.collection(options) %}
+				{% set hash = random() %}
+				{% set values = { (hash) : { title: page.title, url: page.url(true) }} %}
+				{% set crumbs = crumbs|merge(values) %}
+
+					{% if page.parent and page.parent.title != 'Pages' %}
+						{% for page in page.collection(options) %}
+							{% set hash = random() %}
+							{% set values = { (hash) : { title: page.title, url: page.url(true) }} %}
+							{% set crumbs = crumbs|merge(values) %}
+
+							{% if page.parent and page.parent.title != 'Pages' %}
+								{% for page in page.collection(options) %}
+									{% set hash = random() %}
+									{% set values = { (hash) : { title: page.title, url: page.url(true) }} %}
+									{% set crumbs = crumbs|merge(values) %}
+								{% endfor %}
+							{% endif %}
+
+						{% endfor %}
+					{% endif %}
+
+			{% endfor %}
+		{% endif %}
+
+	{% endfor %}
+{% endif %}
+
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": [
+
+	{% for crumb in crumbs|reverse %}{
+		"@type": "ListItem",
+		"position": {{ loop.index }},
+		"name": "{{ crumb.title }}",
+		"item": "{{ crumb.url }}"
+	}{% if not loop.last %},{% endif %}
+	{% endfor %}
+]}
+</script>

@@ -1,0 +1,11 @@
+{% set optional_classes = classes|default(page.header.optional_classes) %}
+<section class="module grid {{ optional_classes }}" data-reveal>
+	{% if page.content %}
+	<div class="grid__content">{{ page.content }}</div>
+	{% endif %}
+	<div class="grid__grid" data-auto-reveal>
+		{% for item in page.header.items %}
+		<div class="grid__item">{{ item.content|markdown }}</div>
+		{% endfor %}
+	</div>
+</section>

@@ -1,0 +1,57 @@
+/*MAILCHIMP*/
+#mc_embed_signup {
+	width: 100%;
+	max-width: 100%;
+}
+@media (min-width: 735px) {
+	#mc_embed_signup {
+		max-width: 300px;
+	}
+}
+
+#mc_embed_signup form input,
+#mc_embed_signup form input::placeholder {
+	font-family: var(--font-base);
+	box-sizing: border-box;
+	color: #313131;
+}
+
+#mc_embed_signup form input::placeholder {
+	color: #c1c1c1;
+}
+
+#mc_embed_signup input[type=email],
+#mc_embed_signup input[type=text] {
+	width: 100%;
+    margin-top: 10px;
+    border: 2px solid #585858;
+    padding: 10px;
+    background-color: #313131;
+    border-radius: 4px;
+    color: #f1f1f1;
+}
+
+#mc_embed_signup input.email:focus {
+	outline: none;
+	border-color: #a7a7a7;
+}
+
+#mc_embed_signup input.button {
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #484848;
+    background-color: #484848;
+    width: 100%;
+    font-size: inherit;
+}
+@media (min-width: 735px) {
+	#mc_embed_signup input.button {
+		width: auto;
+	}
+}
+#mc_embed_signup input.button:hover {
+	border-color: #585858;
+}

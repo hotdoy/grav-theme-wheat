@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	{% set options = { items: {'@root.descendants':''} } %}
+	{% set pages = page.collection(options) %}
+	{% for page in pages if page.routable %}
+	<url>
+		<loc>{{ page.url(true) }}</loc>
+		<changefreq>daily</changefreq>
+		<priority>0.5</priority>
+	</url>
+	{% endfor %}
+</urlset>

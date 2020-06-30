@@ -1,0 +1,23 @@
+{% set collection_options = { items: {'@root.descendants':''} } %}
+{% set all_pages = page.collection(collection_options) %}
+
+{% for p in all_pages if p.template == 'announcement' %}
+	{% for a in p.header.items %}
+		{% set id = a.id ?? ('missingId' ~ random()) %}
+		{% set theme = a.theme ?? '' %}
+		{% set remember = a.remember ?? '0'  %}
+		{% set targets = a.target_pages ?? '' %}
+		{% set msg = a.content|markdown %}
+
+		{% if targets and page.rawroute in targets %}
+			{{ _self.announcement(id, theme, remember, msg) }}	
+		{% elseif not targets %}
+			{{ _self.announcement(id, theme, remember, msg) }}
+		{% endif %}
+
+	{% endfor %}
+{% endfor %}
+
+{% macro announcement(id, theme, remember, msg) %}
+    <div data-announcement data-id="{{ id }}" data-theme="{{ theme }}" data-store="{{ remember }}">{{ msg }}</div>
+{% endmacro %}

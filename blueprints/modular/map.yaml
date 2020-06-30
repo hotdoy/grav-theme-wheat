@@ -1,0 +1,42 @@
+title: map
+'@extends': modular/module
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            header.markers:
+              name: markers
+              type: list
+              style: vertical
+              label: Markers
+              fields:
+
+                .title:
+                  type: text
+                  label: Title
+
+                .lat:
+                  type: text
+                  label: Latitude
+
+                .lng:
+                  type: text
+                  label: Longitude
+
+                .url:
+                  type: text
+                  label: URL
+
+            header.zoom:
+              type: range
+              label: Zoom
+              default: 15
+              description: '1-World > 5-Landmass > 10-City > 15-Streets > 20-Buildings'
+              help: 'Only used if 1 marker. Outer bounds will be automatically determined otherwise.'
+              validate:
+                min: 1
+                max: 20

@@ -1,0 +1,17 @@
+title: default
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    header.body_classes:
+                      markdown: true
+                      description: '```todo```'
+

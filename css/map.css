@@ -1,0 +1,27 @@
+.map__content {
+	margin: 0 auto 2rem auto;
+	padding: 0 var(--gutter);
+	max-width: var(--width-tight);
+}
+
+.map__content *:first-child {
+	margin-top: 0;
+}
+
+.map__ctn {
+	width: 100%;
+	max-width: var(--width-site);
+	margin: 0 auto;
+	padding: 0 var(--gutter);
+}
+
+.map__ctn > div {
+	height: 400px;
+    width: 100%;
+}
+
+@media (min-width: 735px) {
+	.map__ctn > div {
+		height: 600px;
+	}
+}

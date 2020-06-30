@@ -1,0 +1,16 @@
+html {
+  --color-bg: #f1f1f1;
+  --color-fg: #313131;
+  --color-hl: #009688;
+  --color-hl-inverted: #FFF;
+}
+
+body {
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+}
+
+::selection {
+  background-color: var(--color-hl); 
+  color: var(--color-hl-inverted);
+}

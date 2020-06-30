@@ -1,0 +1,46 @@
+title: MediaText
+'@extends': modular/module
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+
+            header.selected_media:
+              label: Media
+              type: pagemediaselect
+              
+            header.selected_media_alt:
+              type: text
+              label: Media Alt
+
+            header.media_position:
+              type: toggle
+              label: Media Position
+              default: left
+              options: 
+                left: 'Left'
+                right: 'Right'
+
+        options:
+          type: tab
+          title: Options
+          fields:
+
+            Optional:
+              type: section
+              title: Optional
+              underline: true
+
+            header.optional_classes:
+              type: text
+              label: Optional Classes
+              markdown: true
+              description: '`text_align_center`, `media_width_70`, `media_width_50`, `media_width_20`'

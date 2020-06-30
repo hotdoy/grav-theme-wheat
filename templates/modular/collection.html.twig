@@ -1,0 +1,39 @@
+{% set optional_classes = classes|default(page.header.optional_classes) %}
+
+<section class="module collection {{ optional_classes }}">
+
+	{# content #}
+	{% if page.content %}
+	<div class="collection__content" data-reveal>{{ page.content|raw }}</div>
+	{% endif %}
+
+	{# swiper #}
+	<div class="collection__ctn">
+		<div class="swiper-container" id="carousel-{{ random() }}">
+			<div class="swiper-wrapper">
+
+				{% for p in page.collection %}
+				{% set selected_media = p.header.selected_media ? p.media[p.header.selected_media] %}
+				{% set selected_media_alt = p.header.selected_media_alt ?? '' %}
+
+				<article class="swiper-slide collection__item">
+					<a href="{{ p.url }}">
+						<div class="fill">
+							{% if selected_media.type == 'video' %}
+							{{ selected_media.controls(0).autoplay(1).muted(1).loop(1).html('', selected_media_alt) }}
+							{% else %}
+							{{ selected_media.html('', selected_media_alt) }}
+							{% endif %}
+						</div>
+						<div class="item__veil fill">
+							<h3 class="item__title">{{ p.title }}</h3>
+						</div>
+					</a>
+				</article>
+				{% endfor %}
+
+			</div>
+		</div>
+	</div>
+
+</section>

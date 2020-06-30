@@ -1,0 +1,11 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+	{% if page.content %}
+	<section class="module content" data-auto-reveal>
+	{{ page.content }}
+	</section>
+	{% endif %}
+	{% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by': 'folder', 'dir': 'asc'}}) %}
+	{{ module.content|raw }}
+	{% endfor %}
+{% endblock %}

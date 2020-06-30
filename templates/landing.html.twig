@@ -1,0 +1,27 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set selected_media = selected_media|default(page.header.selected_media ? page.media[page.header.selected_media]) %}
+{% set selected_media_alt = selected_media_alt|default(page.header.selected_media_alt ?? '') %}
+
+{% block content %}
+	<section class="landing__header">
+		<div class="landing__header__media">
+			<div class="fill">
+				{% if selected_media.type == 'video' %}
+				{{ selected_media.controls(0).autoplay(1).muted(1).loop(1).html('', selected_media_alt) }}
+				{% else %}
+				{{ selected_media.html('', selected_media_alt) }}
+				{% endif %}
+				<div class="landing__media__veil fill" data-reveal="reveal--veil"></div>
+			</div>
+		</div>
+		<div class="landing__header__content" data-reveal>
+			{{ page.content|raw }}
+		</div>
+	</section>
+
+	{% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by': 'folder', 'dir': 'asc'}}) %}
+	{{ module.content|raw }}
+	{% endfor %}
+
+{% endblock %}

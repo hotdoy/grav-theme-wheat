@@ -1,0 +1,32 @@
+.reveal--hidden {
+	opacity:0;
+}
+
+
+
+
+
+.reveal {
+	animation-name: reveal;
+	animation-duration: 0.7s; 
+}
+@keyframes reveal {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0px);}
+}
+
+
+
+
+
+.reveal--veil {
+	transform-origin: top;
+	animation-name: reveal_veil;
+	animation-duration: 0.5s; 
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+}
+@keyframes reveal_veil {
+    from {transform: scaleY(1);}
+    to {transform: scaleY(0);}
+}

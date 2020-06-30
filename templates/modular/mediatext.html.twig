@@ -1,0 +1,20 @@
+{% set optional_classes = classes|default(page.header.optional_classes) %}
+{% set selected_media = selected_media|default(page.header.selected_media ? page.media[page.header.selected_media]) %}
+{% set selected_media_alt = selected_media_alt|default(page.header.selected_media_alt ?? '') %}
+{% set media_position = media_position|default(page.header.media_position ?? 'left') %}
+{% set content = content|default(page.content) %}
+
+<section class="module mediatext mediatext--{{ media_position }} {{ optional_classes }}">
+	<div class="mediatext__ctn">
+		<div class="mediatext__media" data-reveal>
+		{% if selected_media.type == 'video' %}
+			{{ selected_media.controls(0).autoplay(1).muted(1).loop(1).html('', selected_media_alt) }}
+		{% else %}
+			{{ selected_media.html('', selected_media_alt) }}
+		{% endif %}
+		</div>
+		<div class="mediatext__content" data-reveal>
+		{{ content }}
+		</div>
+	</div>
+</section>
