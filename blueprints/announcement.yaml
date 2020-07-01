@@ -21,14 +21,14 @@ form:
               classes: 'CodeMirror--small'
               label: Content
 
-            header.theme:
+            header.class:
               type: select
-              label: Theme
+              label: Class
               options: 
-                notice: 'Notice'
-                success: 'Success'
-                warning: 'Warning'
-                error: 'Error'
+                blue: 'Blue'
+                green: 'Green'
+                yellow: 'Yellow'
+                red: 'Red'
 
             header.target:
               type: pages

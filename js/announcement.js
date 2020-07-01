@@ -13,10 +13,10 @@ var Announcement = (function(){
         return e;
     }
 
-    self.CreateAnnouncement = function(id, theme, store, msg) {
+    self.CreateAnnouncement = function(id, classes, store, content) {
         let e = document.createElement('div');
-        e.className = 'announcement ' + theme;
-        e.innerHTML = msg;
+        e.className = 'announcement ' + classes;
+        e.innerHTML = content;
         e.appendChild(AddActionDone(id, store));
         $('body').append(e);
     }
@@ -25,12 +25,12 @@ var Announcement = (function(){
         let a = document.querySelectorAll('[data-announcement]');
         a.forEach(b => {
             let id = b.dataset.id;
-            let theme = b.dataset.theme;
+            let classes = b.dataset.class;
             let store = b.dataset.store;
-            let msg = b.innerHTML;
+            let content = b.innerHTML;
             let storedValue = id ? localStorage.getItem(id) : null;  
-            if ((storedValue == null || Date.now() - storedValue > 86400000) && msg) {
-                self.CreateAnnouncement(id, theme, store, msg);            
+            if ((storedValue == null || Date.now() - storedValue > 86400000) && content) {
+                self.CreateAnnouncement(id, classes, store, content);            
             };
             b.remove();
 

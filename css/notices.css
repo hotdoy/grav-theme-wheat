@@ -1,5 +1,5 @@
 /*
-To use with Grav Plugin: Markdown Notices.
+For Grav Plugin: Markdown Notices.
 Make sure to disable built-in CSS.
 */
 
@@ -23,15 +23,19 @@ Make sure to disable built-in CSS.
     margin-top: 0;
 }
 
-.notices strong {
-    font-weight: 700;
-}
-
 .notices a,
 .content .notices a {
     color: inherit;
     text-decoration: underline;
 }
+
+
+
+
+
+/*====================================== 
+                THEMES
+ ======================================*/
 
 .notices.yellow {
     background: #FFAB00;

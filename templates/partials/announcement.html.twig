@@ -1,23 +1,21 @@
-{% set collection_options = { items: {'@root.descendants':''} } %}
-{% set all_pages = page.collection(collection_options) %}
+{% for p in page.collection({ items: {'@root.descendants':''} }) if p.template == 'announcement' %}
 
-{% for p in all_pages if p.template == 'announcement' %}
-	{% for a in p.header.items %}
-		{% set id = a.id ?? ('missingId' ~ random()) %}
-		{% set theme = a.theme ?? '' %}
-		{% set remember = a.remember ?? '0'  %}
-		{% set targets = a.target_pages ?? '' %}
-		{% set msg = a.content|markdown %}
+	{% set id = p.header.id ?? ('missingId' ~ random()) %}
+	{% set class = p.header.class ?? '' %}
+	{% set remember = p.header.remember ?? '0'  %}
+	{% set targets = p.header.target ?? '' %}
+	{% set msg = p.header.content|markdown %}
 
-		{% if targets and page.rawroute in targets %}
-			{{ _self.announcement(id, theme, remember, msg) }}	
-		{% elseif not targets %}
-			{{ _self.announcement(id, theme, remember, msg) }}
-		{% endif %}
+	{% if targets and page.rawroute in targets %}
+		{{ _self.announcement(id, class, remember, msg) }}	
+	{% elseif not targets %}
+		{{ _self.announcement(id, class, remember, msg) }}
+	{% endif %}
 
-	{% endfor %}
 {% endfor %}
 
-{% macro announcement(id, theme, remember, msg) %}
-    <div data-announcement data-id="{{ id }}" data-theme="{{ theme }}" data-store="{{ remember }}">{{ msg }}</div>
+{% macro announcement(id, class, remember, msg) %}
+    <div data-announcement data-id="{{ id }}" data-class="{{ class }}" data-store="{{ remember }}">
+	{{ msg }}
+	</div>
 {% endmacro %}

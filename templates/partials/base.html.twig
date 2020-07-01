@@ -23,10 +23,10 @@
 
 	<body class="{{ page.template }} {{ page.header.body_classes }} loading">
 
-		{% block loading %}{% include 'partials/loading.html.twig' %}{% endblock %}
+		{# {% block loading %}{% include 'partials/loading.html.twig' %}{% endblock %} #}
 		{# {% block header %}{% include 'partials/header.html.twig' %}{% endblock %} #}
 		<section id="content">{% block content %}{% endblock %}</section>
-		{% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %}
+		{# {% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %} #}
 		{% block announcements %}{% include 'partials/announcement.html.twig' %}{% endblock %}
 		{% block bottom %}{{ assets.js('bottom')|raw }}{% endblock %}
 		{% block gtm_body %}{% include 'partials/gtm-body.html.twig' %}{% endblock %}
