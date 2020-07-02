@@ -10,7 +10,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, button {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -19,7 +19,8 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 	-webkit-font-smoothing: antialiased;
-  	-moz-osx-font-smoothing: grayscale;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 }
 
 article, aside, details, figcaption, figure, 
@@ -43,6 +44,17 @@ blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
+}
+
+button {
+	display: inline-block;
+	background: none;
+	border: none;
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	/* outline: none; */
+	cursor: pointer;
 }
 
 table {
