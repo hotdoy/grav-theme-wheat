@@ -46,6 +46,10 @@ div[data-announcement] {
     cursor: pointer;
 }
 
+.announcement__done:focus {
+    outline: -webkit-focus-ring-color auto 1px;
+}
+
 .announcement h1,
 .announcement h2,
 .announcement h3,
