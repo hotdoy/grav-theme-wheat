@@ -2,7 +2,7 @@ var Announcement = (function(){
     var self = {};
 
     var AddActionDone = function(id, store) {
-        let e = document.createElement('div');
+        let e = document.createElement('button');
         e.className = 'announcement__done';
         e.addEventListener("click", function () {
             if (!!store && store == 1) {
