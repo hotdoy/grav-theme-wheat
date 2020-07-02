@@ -1,26 +1,32 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set selected_media = selected_media|default(page.header.selected_media ? page.media[page.header.selected_media]) %}
-{% set selected_media_alt = selected_media_alt|default(page.header.selected_media_alt ?? '') %}
+{% set main_image = main_image|default(page.header.main_image ? page.media[page.header.main_image]) %}
+{% set main_image_alt = main_image_alt|default(page.header.main_image_alt ?? '') %}
 
 {% block content %}
 
-	<section class="article__header">
-		<div class="article__header__media">
-			<div class="fill">
-				{{ selected_media.html('', selected_media_alt) }}
-				<div class="article__media__veil fill" data-reveal="reveal--veil"></div>
-			</div>
-		</div>
-			<h1 class="article__header__title" data-reveal>{{ page.title }}</h1>
-	</section>
+	<article class="article">
 
-	<section class="module content" data-auto-reveal>
-		{{ page.content|raw }}
-	</section>
+		<h1 class="article__title">{{ page.title }}</h1>
+		<p class="article__subheading">{{ page.header.subheading }}</p>
 
-	{% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by': 'folder', 'dir': 'asc'}}) %}
-	{{ module.content|raw }}
-	{% endfor %}
+		<section class="article__meta">
+			@todo date
+			@todo readtime
+			{% include 'partials/share-button.html.twig' %}
+		</section>
+
+		<figure>
+			{{ main_image.html('', main_image_alt, 'article__main-image') }}
+			<figcaption class="article__caption">{{ page.header.main_image_caption }}</figcaption>
+		</figure>
+
+		<section class="module content text">
+			{{ page.content|raw }}
+		</section>
+
+	</article>
+
+	
 
 {% endblock %}

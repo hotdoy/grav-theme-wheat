@@ -28,6 +28,7 @@
 		<section id="content">{% block content %}{% endblock %}</section>
 		{# {% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %} #}
 		{% block announcements %}{% include 'partials/announcement.html.twig' %}{% endblock %}
+		{% block share_dialog %}{% include 'partials/share-dialog.html.twig' %}{% endblock %}
 		{% block bottom %}{{ assets.js('bottom')|raw }}{% endblock %}
 		{% block gtm_body %}{% include 'partials/gtm-body.html.twig' %}{% endblock %}
 		{% block facebook_pixel %}{{ theme.facebook_pixel }}{% endblock %}
