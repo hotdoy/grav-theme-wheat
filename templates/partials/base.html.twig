@@ -1,5 +1,4 @@
 {{dump(page)}}
-{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 
@@ -24,7 +23,7 @@
 	<body class="{{ page.template }} {{ page.header.body_classes }} loading">
 
 		{% block loading %}{% include 'partials/loading.html.twig' %}{% endblock %}
-		{# {% block header %}{% include 'partials/header.html.twig' %}{% endblock %} #}
+		{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
 		<section id="content">{% block content %}{% endblock %}</section>
 		{# {% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %} #}
 		{% block announcements %}{% include 'partials/announcement.html.twig' %}{% endblock %}
@@ -37,3 +36,7 @@
 	</body>
 
 </html>
+
+
+
+{% include 'template' ignore missing with vars only %}
