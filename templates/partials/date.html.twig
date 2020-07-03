@@ -1,0 +1,23 @@
+{% macro format(date, format, lang) %}
+
+	{% set date = date|default('now') %}
+	{% set lang = lang|default(grav.language.getActive ?? 'en') %}
+	{% set format = format|default('short') %}
+
+	{% if format == 'short' and lang == 'fr' %}
+	{{ date|date('Y-m-d') }}
+
+	{% elseif format == 'short' and lang == 'en' %}
+	{{ date|date('m-d-Y') }}
+
+	{% elseif format == 'long' and lang == 'fr' %}
+	{{ date|date('d') }} {{ 'GRAV.MONTHS_OF_THE_YEAR'|ta(date|date('n') - 1) }} {{ date|date('Y') }}
+
+	{% elseif format == 'long' and lang == 'en' %}
+	{{ 'GRAV.MONTHS_OF_THE_YEAR'|ta(date|date('n') - 1) }} {{ date|date('S') }} {{ date|date('Y') }}
+
+	{% else %}
+	{{ date|date('Y-m-d') }}
+
+	{% endif %}
+{% endmacro %}
