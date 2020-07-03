@@ -23,10 +23,17 @@
 		</section>
 
 		{% if main_image %}
-		<figure>
-			{{ main_image.html('', main_image_alt, 'article__main-image') }}
-			<figcaption class="article__caption">{{ page.header.main_image_caption }}</figcaption>
-		</figure>
+		<section class="article__main-image__container">
+			<figure>
+				<div class="article__main-image__ratio">
+					<div class="article__main-image__filler">
+						<img class="article__main-image__img" src="{{ main_image.url }}" alt="main_image_alt">
+					</div>
+				</div>
+				<figcaption class="article__main-image__caption">{{ page.header.main_image_caption }}</figcaption>
+			<figure>
+		</section>
+
 		{% endif %}
 
 		<section class="module content text">
@@ -34,7 +41,5 @@
 		</section>
 
 	</article>
-
-	
 
 {% endblock %}
