@@ -8,7 +8,7 @@
 
 .reveal {
 	animation-name: reveal;
-	animation-duration: 0.7s; 
+	animation-duration: 0.5s; 
 }
 @keyframes reveal {
     from {opacity: 0; transform: translateY(20px);}

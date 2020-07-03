@@ -3,31 +3,35 @@
 
 {% block content %}
 
-<section class="blog__header">
-	<h1 class="blog__title">{{ page.title }}</h1>
-	{% if page.header.subheading %}
-	<h3 class="blog__subheading">{{ page.header.subheading }}</h3>
-	{% endif %}
-</section>
+<main>
+	
+	<section class="blog__header">
+		<h1 class="blog__title">{{ page.title }}</h1>
+		{% if page.header.subheading %}
+		<h3 class="blog__subheading">{{ page.header.subheading }}</h3>
+		{% endif %}
+	</section>
 
-<section class="blog__grid">
-	{% for p in page.collection( {items: {'@self.children': ''}} ) %}
-	{% set main_image = p.header.main_image ? p.media[p.header.main_image] %}
-	{% set main_image_alt = p.header.main_image_alt ?? '' %}
-	<article class="blog-item">
-		<a href="{{ p.url }}">
-			<div class="blog-item__image-container">
-				<div class="fill">
-					{{ main_image.html('', main_image_alt) }}
+	<section class="blog__grid">
+		{% for p in page.collection() %}
+		{% set main_image = p.header.main_image ? p.media[p.header.main_image] %}
+		{% set main_image_alt = p.header.main_image_alt ?? '' %}
+		<article class="blog-item">
+			<a href="{{ p.url }}">
+				<div class="blog-item__image-container">
+					<div class="fill">
+						{{ main_image.html('', main_image_alt) }}
+					</div>
 				</div>
-			</div>
-			<h3 class="blog-item__title">{{ p.title }}</h3>
-			<p class="blog-item__subheading">{{ p.header.subheading }}</p>
-			<div class="blog-item__author">{{ site.author.name }}</div>
-			<time datetime="{{ p.header.date }}" class="blog-item__date">{{ date.format(p.header.date, 'long') }}</time>
-		</a>
-	</article>
-	{% endfor %}
-</section>
+				<h3 class="blog-item__title">{{ p.title }}</h3>
+				<p class="blog-item__subheading">{{ p.header.subheading }}</p>
+				<div class="blog-item__author">{{ site.author.name }}</div>
+				<time datetime="{{ p.header.date }}" class="blog-item__date">{{ date.format(p.header.date, 'long') }}</time>
+			</a>
+		</article>
+		{% endfor %}
+	</section>
+
+</main>
 
 {% endblock %}

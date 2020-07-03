@@ -6,37 +6,41 @@
 
 {% block content %}
 
-<h1 class="post__title">{{ page.title }}</h1>
+<main>
 
-{% if page.header.subheading %}
-<p class="post__subheading">{{ page.header.subheading }}</p>
-{% endif %}
+	<h1 class="post__title">{{ page.title }}</h1>
 
-<section class="post__toolbar">
-	{% include 'partials/share-button.html.twig' %}
-	<div class="post__metas">
-		<div class="post__author">{{ site.author.name }}</div>
-		<div class="post__date">{{ date.format(page.header.date, 'long') }}</div>
-	</div>
-</section>
+	{% if page.header.subheading %}
+	<p class="post__subheading">{{ page.header.subheading }}</p>
+	{% endif %}
 
-{% if main_image %}
-<section class="post__main-image__container">
-	<figure>
-		<div class="post__main-image__ratio">
-			<div class="post__main-image__filler">
-				<img class="post__main-image__img" src="{{ main_image.url }}" alt="main_image_alt">
-			</div>
+	<section class="post__toolbar">
+		{% include 'partials/share-button.html.twig' %}
+		<div class="post__metas">
+			<div class="post__author">{{ site.author.name }}</div>
+			<div class="post__date">{{ date.format(page.header.date, 'long') }}</div>
 		</div>
-		<figcaption class="post__main-image__caption">{{ page.header.main_image_caption }}</figcaption>
-	<figure>
-</section>
+	</section>
 
-{% endif %}
+	{% if main_image %}
+	<section class="post__main-image__container">
+		<figure>
+			<div class="post__main-image__ratio">
+				<div class="post__main-image__filler">
+					<img class="post__main-image__img" src="{{ main_image.url }}" alt="main_image_alt">
+				</div>
+			</div>
+			<figcaption class="post__main-image__caption">{{ page.header.main_image_caption }}</figcaption>
+		</figure>
+	</section>
 
-<section class="module content text">
-	{{ page.content|raw }}
-</section>
+	{% endif %}
+
+	<section class="module content text">
+		{{ page.content|raw }}
+	</section>
+
+</main>
 
 
 {% endblock %}
