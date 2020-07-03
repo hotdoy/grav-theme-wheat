@@ -1,13 +1,14 @@
 .share__button {
-    position: relative;
-    display: block;
-    margin: 1rem auto;
-    padding: 10px 20px;
-    background-color: #0083ff;
-    color: white;
-    border-radius: 4px;
-    /* outline: none; */
-    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share__button svg {
+    padding-right: 5px;
+    color: inherit;
+    width: 20px;
+    height: 20px;
 }
 
 #share__dialog {
