@@ -1,4 +1,4 @@
-{% for p in page.collection({ items: {'@root.descendants':''} }) if p.template == 'announcement' %}
+{% for p in page.collection({ items: {'@root.descendants':''} }) if p.template == 'announcement' and p.header.delivering %}
 
 	{% set id = p.header.id ?? ('missingId' ~ random()) %}
 	{% set class = p.header.class ?? '' %}
