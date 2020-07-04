@@ -3,11 +3,12 @@
 
 {% set main_image = main_image|default(page.header.main_image ? page.media[page.header.main_image]) %}
 {% set main_image_alt = main_image_alt|default(page.header.main_image_alt ?? '') %}
-{% set authors = page.header.taxonomy.author ??  [site.author.name] %}
+{% set authors = page.header.taxonomy.author ?? {'0':site.author.name} %}
+{% set tags = page.header.taxonomy.tag %}
 
 {% block content %}
 
-<main>
+<main style="margin-bottom:6rem;">
 
 	<h1 class="post__title">{{ page.title }}</h1>
 
@@ -18,11 +19,7 @@
 	<section class="post__toolbar">
 		{% include 'partials/share-button.html.twig' %}
 		<div class="post__metas">
-			<div class="post__author">
-			{% for author in authors %}
-			{{ author }}
-			{% endfor %}
-			</div>
+			<div class="post__author">{{ authors[0] }}</div>
 			<div class="post__date">{{ date.format(page.header.date, 'long') }}</div>
 		</div>
 	</section>
@@ -32,7 +29,7 @@
 		<figure>
 			<div class="post__main-image__ratio">
 				<div class="post__main-image__filler">
-					<img class="post__main-image__img" src="{{ main_image.url }}" alt="main_image_alt">
+					<img class="post__main-image__img" src="{{ main_image.cropResize(1920,1920).url }}" alt="main_image_alt">
 				</div>
 			</div>
 			{% if page.header.main_image_caption %}
@@ -44,6 +41,18 @@
 
 	<section class="module content text">
 		{{ page.content|raw }}
+	</section>
+
+	{% if tags %}
+	<section class="post__tag-container">
+		{% for tag in tags %}
+		<a href="{{ page.parent.url }}/tag{{ config.system.param_sep }}{{ tag }}" class="post__tag">{{ tag }}</a>
+		{% endfor %}
+	</section>
+	{% endif %}
+
+	<section class="post__bottom-share">
+		{% include 'partials/share-button.html.twig' %}
 	</section>
 
 </main>

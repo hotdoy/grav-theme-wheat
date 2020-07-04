@@ -20,7 +20,7 @@
 			<a href="{{ p.url }}">
 				<div class="blog-item__image-container">
 					<div class="fill">
-						{{ main_image.html('', main_image_alt) }}
+						{{ main_image.cropResize(500,500).html('', main_image_alt) }}
 					</div>
 				</div>
 				<h3 class="blog-item__title">{{ p.title }}</h3>

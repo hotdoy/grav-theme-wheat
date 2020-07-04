@@ -6,30 +6,29 @@
 
 .pagination a, .pagination span {
     display: flex;
-    text-decoration: none;
+    align-items: center;
+    justify-content: center;
     margin-left: 5px;
     margin-right: 5px;
     padding-left: 13px;
     padding-right: 13px;
-    border-radius: 4px;
     height: 36px;
-    align-items: center;
-    justify-content: center;
     border: 1px solid whitesmoke;
+    border-radius: 4px;
+    text-decoration: none;
     transition-property: background-color transform;
 }
 
-
 .pagination a:hover {
-	background-color: whitesmoke;
+	background-color: #f2f2f2;
 }
 
 .pagination a:hover:active {
-    background-color: lightgrey;
+    background-color: #f2f2f2;
     transform: translateY(1px);
 }
 
 .pagination .active {
-	background-color: #313131;
-	color: white;
+	background-color: var(--color-fg);
+	color: var(--color-bg);
 }
