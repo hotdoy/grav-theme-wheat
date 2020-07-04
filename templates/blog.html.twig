@@ -32,6 +32,10 @@
 		{% endfor %}
 	</section>
 
+	{% if config.plugins.pagination.enabled and page.collection.params.pagination %}
+    {% include 'partials/pagination.html.twig' %}
+	{% endif %}
+
 </main>
 
 {% endblock %}

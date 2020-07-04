@@ -3,6 +3,7 @@
 
 {% set main_image = main_image|default(page.header.main_image ? page.media[page.header.main_image]) %}
 {% set main_image_alt = main_image_alt|default(page.header.main_image_alt ?? '') %}
+{% set authors = page.header.taxonomy.author ??  [site.author.name] %}
 
 {% block content %}
 
@@ -17,7 +18,11 @@
 	<section class="post__toolbar">
 		{% include 'partials/share-button.html.twig' %}
 		<div class="post__metas">
-			<div class="post__author">{{ site.author.name }}</div>
+			<div class="post__author">
+			{% for author in authors %}
+			{{ author }}
+			{% endfor %}
+			</div>
 			<div class="post__date">{{ date.format(page.header.date, 'long') }}</div>
 		</div>
 	</section>
@@ -30,10 +35,11 @@
 					<img class="post__main-image__img" src="{{ main_image.url }}" alt="main_image_alt">
 				</div>
 			</div>
+			{% if page.header.main_image_caption %}
 			<figcaption class="post__main-image__caption">{{ page.header.main_image_caption }}</figcaption>
+			{% endif %}
 		</figure>
 	</section>
-
 	{% endif %}
 
 	<section class="module content text">
@@ -41,6 +47,5 @@
 	</section>
 
 </main>
-
 
 {% endblock %}

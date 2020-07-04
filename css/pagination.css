@@ -1,0 +1,35 @@
+.pagination {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination a, .pagination span {
+    display: flex;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-radius: 4px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid whitesmoke;
+    transition-property: background-color transform;
+}
+
+
+.pagination a:hover {
+	background-color: whitesmoke;
+}
+
+.pagination a:hover:active {
+    background-color: lightgrey;
+    transform: translateY(1px);
+}
+
+.pagination .active {
+	background-color: #313131;
+	color: white;
+}

@@ -13,11 +13,11 @@
 /*TRANSITION*/
 #loading.transition {
 	background-color: var(--color-bg);
-	z-index: 4999;	
+	z-index: 4000;	
 }
 
 body.loaded #loading.transition {
-	transition: all 0.2s; 
+	/*transition: all 0.2s; */
 	opacity: 0;
 	visibility: hidden;
 }
