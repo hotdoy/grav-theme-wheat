@@ -4,8 +4,9 @@
 	left: 0;
 	right: 0;
 	height: var(--header-heigth);
-	color: white;
-	background-color: #313131;
+	color: var(--color-fg);
+	background-color: var(--color-bg);
+	box-shadow: 0px 1px 20px 0px #00000014;
 	z-index: 5000;
 }
 

@@ -11,7 +11,7 @@
 	animation-duration: 0.5s; 
 }
 @keyframes reveal {
-    from {opacity: 0; transform: translateY(20px);}
+    from {opacity: 0; transform: translateY(10px);}
     to {opacity: 1; transform: translateY(0px);}
 }
 

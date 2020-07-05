@@ -3,24 +3,18 @@
 ============================================*/
 
 html {
-  --color-bg: #FFF;
-  --color-fg: #000;
-  --color-hl: #006bff;
+	--color-bg: #FFF;
+	--color-fg: #000;
+	--color-hl: #006bff;
 
-  --width-text: 735px;
-  --width-body: 1072px;
-  --width-site: 1600px;
-  --width-full: 1920px;
+	--width-text: 735px;
+	--width-body: 1072px;
+	--width-site: 1600px;
+	--width-full: 1920px;
 
-  --gutter: 15px;
-  --rhythm: 125px;
-  --header-heigth: 60px;
-}
-
-@media (min-width: 400px) {
-  html {
-    --gutter: 32px;
-  }
+	--gutter: 20px;
+	--rhythm: 125px;
+	--header-heigth: 50px;
 }
 
 
@@ -28,7 +22,7 @@ html {
 
 
 /*===========================================
-					          MISC 
+				  MISC 
 ============================================*/
 
 body {
@@ -44,13 +38,24 @@ body {
   position: relative;
 }
 
+#content section:nth-child(1) {
+	margin-top: 40px;
+}
+
+@media (min-width: 1200px) {
+	#content section:nth-child(1) {
+		margin-top: calc(var(--rhythm) - var(--header-heigth)/2);
+	}
+}
+
+
 
 
 
 
 /*===========================================
-				          UTILS 
-============================================*/
+					 UTILS 
+=========================================*/
 
 .landscape{display: block;}
 @media (max-width: 835px) {.landscape {display: none;}}
@@ -58,9 +63,9 @@ body {
 @media (min-width: 835px) {.portrait {display: none;}}
 
 .fill {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }

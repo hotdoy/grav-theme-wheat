@@ -8,7 +8,6 @@
 
 .blog__header {
 	position: relative;
-	margin-top: calc(var(--rhythm) - var(--header-heigth)/2);;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: var(--gutter);
@@ -16,7 +15,6 @@
 	width: 100%;
 	max-width: var(--width-body);
 }
-
 
 .blog__title {
 	font-size: 40px;
@@ -72,10 +70,16 @@
 /*ITEM (card)*/
 
 .blog-item {
-	position: relative;
-	text-decoration: none;
-	padding-bottom: 40px;
-	transition-property: transform;
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 40px;
+    transition-property: transform;
+    padding: 1rem;
+    border: 1px solid #f2f2f2;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 1px 20px 0px #00000014;
+
 }
 
 .blog-item:hover:active {
@@ -137,7 +141,8 @@
 /*TITLE*/
 
 .post__title {
-	margin: 40px auto 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 0 var(--gutter);
 	max-width: var(--width-text);
 	font-size: 40px;
@@ -145,7 +150,7 @@
 	font-weight: 700;
 }
 
-.post__subheading {
+.post__subtitle {
 	margin: 20px auto 0 auto;
 	padding: 0 var(--gutter);
 	max-width: var(--width-text);
@@ -233,15 +238,13 @@
 
 /*CONTENT*/
 
-.post .module.content.text{
+.post .module.content {
 	margin-top: 2rem;
 }
 
-.post .module.content.text blockquote>p{
+.post .module.content blockquote>p{
 	padding-left: 30px;
 	padding-right: 30px;
-	margin-top: 3rem;
-	margin-bottom: 3rem;
 }
 
 
