@@ -4,16 +4,13 @@
 
 	const InitShare = function(){
 
-        const shareButtons = document.querySelectorAll('.share__button');
+        const shareButtons = document.querySelectorAll('.js-share-button');
         const shareDialog = document.getElementById('share__dialog');
-        const closeDialogButton = document.getElementsByClassName('share__dialog__close');
+        const closeDialogButton = shareDialog.getElementsByClassName('share__dialog__close');
         const title = document.title;
         const url = window.location.href;
-        const targetFacebook = document.getElementById('share-target-facebook');
-        const targetTwitter = document.getElementById('share-target-twitter');
-        const targetLinkedin = document.getElementById('share-target-linkedin');
-        const targetEmail = document.getElementById('share-target-email');
-        const targetReddit = document.getElementById('share-target-reddit');
+        const targets = shareDialog.getElementsByClassName('js-share-target');
+
 
         // Share Buttons
         for (let shareButton of shareButtons ) {
@@ -49,30 +46,29 @@
             }
         })
 
-        // Facebook
-        targetFacebook.addEventListener('click', event => {
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`);
-        })
-
-        // Twitter
-        targetTwitter.addEventListener('click', event => {
-            window.open(`https://twitter.com/intent/tweet?url=${url}&title=${title}`);
-        })
-
-        // LinkedIn
-        targetLinkedin.addEventListener('click', event => {
-            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`);
-        })
-
-        // Reddit
-        targetReddit.addEventListener('click', event => {
-            window.open(`https://reddit.com/submit?url=${url}&title=${title}`);
-        })
-
-        // Email
-        targetEmail.addEventListener('click', event => {
-            window.open(`mailto:?subject=${title}&body=${url}`);
-        })
+        for (let target of targets) {
+            if (target.classList.contains('facebook')) {
+                target.addEventListener('click', event => {
+                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`);
+                })
+            } else if (target.classList.contains('twitter')) {
+                target.addEventListener('click', event => {
+                    window.open(`https://twitter.com/intent/tweet?url=${url}&title=${title}`);
+                }) 
+            } else if (target.classList.contains('linkedin')) {
+                target.addEventListener('click', event => {
+                    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`);
+                }) 
+            } else if (target.classList.contains('reddit')) {
+                target.addEventListener('click', event => {
+                    window.open(`https://reddit.com/submit?url=${url}&title=${title}`);
+                }) 
+            } else if (target.classList.contains('email')) {
+                target.addEventListener('click', event => {
+                    window.open(`mailto:?subject=${title}&body=${url}`);
+                }) 
+            }
+        }
 	}
 	InitShare();
 })();

@@ -78,8 +78,14 @@
     border: 1px solid #f2f2f2;
     border-radius: 8px;
     background-color: white;
-    box-shadow: 0px 1px 20px 0px #00000014;
+    box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+    transition-property: box-shadow, transform;
+    transition-duration: 0.2s
+}
 
+.blog-item:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025)
 }
 
 .blog-item:hover:active {
@@ -274,17 +280,4 @@
 
 .post__tag:hover:active {
     transform: translateY(1px);
-}
-
-/*BOTTOM SHARE*/
-
-.post__bottom-share {
-    width: 100%;
-    max-width: var(--width-text);
-    margin: 20px auto 0 auto;
-    padding: 0 var(--gutter);
-}
-
-.post__bottom-share .share__button {
-	width: 100%;
 }

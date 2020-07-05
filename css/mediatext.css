@@ -10,12 +10,13 @@
 	width: 100%;
 	max-width: var(--width-site);
 	margin: 0 auto;
-	padding: 0 2rem;
+	padding: 0 var(--gutter);
 	align-items: center;
 }
 
-/*.mediatext--left .mediatext__ctn{}*/
-.mediatext--right .mediatext__ctn{flex-direction: row-reverse;}
+.mediatext--right .mediatext__ctn {
+	flex-direction: row-reverse;
+}
 
 .mediatext__media,
 .mediatext__content {
@@ -50,4 +51,8 @@
 	.mediatext__content> *:nth-child(1) {
 		margin-top: 0;
 	}
+}
+
+.mediatext h2 {
+	color: var(--color-hl);
 }
