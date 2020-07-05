@@ -51,17 +51,3 @@
 		margin-top: 0;
 	}
 }
-
-/*CUSTOM CONTENT*/
-
-.mediatext h2 {
-	padding-right: 10%;
-    font-size: 36px;
-    line-height: 1;
-}
-
-@media (min-width: 735px) {
-	.mediatext h2 {
-	    font-size: 48px;
-	}
-}

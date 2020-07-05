@@ -1,7 +1,6 @@
 <footer>
 
-	<div class="footer__top">
-
+	<section class="footer__top">
 		<div class="footer__nav">
 			<ul>
 				{% for p in pages.children.visible %}
@@ -20,14 +19,11 @@
 				{% endfor %}
 			</ul>
 		</div>
+	</section>
 
-	</div>
-
-
-
-	<div class="footer__bottom">
+	<section class="footer__bottom">
 		<div class="footer__copyright">© {{ site.title }} {{ "now"|date("Y") }}</div>
-		<a href="https://calotte.ca" class="footer__credit">{% include 'partials/calotte.html.twig' %}</a>
-	</div>
+		<a class="footer__credit" href="https://calotte.ca">{% include 'partials/calotte.html.twig' %}</a>
+	</section>
 
 </footer>

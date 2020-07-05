@@ -51,8 +51,12 @@
 	</section>
 	{% endif %}
 
-	<section class="post__bottom-share">
+	<section class="post__toolbar">
 		{% include 'partials/share-button.html.twig' %}
+		<div class="post__metas">
+			<div class="post__author">{{ authors[0] }}</div>
+			<div class="post__date">{{ date.format(page.header.date, 'long') }}</div>
+		</div>
 	</section>
 
 </main>

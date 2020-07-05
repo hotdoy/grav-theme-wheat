@@ -12,9 +12,15 @@ html {
   --width-site: 1600px;
   --width-full: 1920px;
 
-  --gutter: 32px;
+  --gutter: 15px;
   --rhythm: 125px;
-  --header-heigth: 5rem;
+  --header-heigth: 60px;
+}
+
+@media (min-width: 400px) {
+  html {
+    --gutter: 32px;
+  }
 }
 
 
@@ -32,6 +38,10 @@ body {
 
 ::selection {
   background-color: #ffeb3b; 
+}
+
+#content {
+  position: relative;
 }
 
 

@@ -47,7 +47,7 @@ html {
 .text h1 {
   margin-top: 4rem;
   font-size: 3rem;
-  line-height: 1.4;
+  line-height: 1.1;
 }
 @media (min-width: 735px) {
   .text h1 {
@@ -58,7 +58,7 @@ html {
 .text h2 {
   margin-top: 4rem;
   font-size: 2rem;
-  line-height: 1.4;
+  line-height: 1.1;
 }
 @media (min-width: 735px) {
   .text h2 {
@@ -135,6 +135,7 @@ html {
 
 .text ul {
   margin-top: 1rem;
+  margin-bottom: 1rem;
   line-height: 1.6;
   list-style-position: inside;
   list-style-type: disc;
@@ -142,6 +143,7 @@ html {
 
 .text ol {
   margin-top: 1rem;
+  margin-bottom: 1rem;
   line-height: 1.6;
   list-style-position: inside;
   list-style-type: decimal;
@@ -155,15 +157,4 @@ html {
 .text p a {
   color: inherit;
   text-decoration: underline;
-}
-
-
-/*===========================================
-					        TEXT 
-============================================*/
-
-
-.text h4, .text h5, .text h6 {
-	margin-top: 2rem;
-	font-weight: 700;
 }
