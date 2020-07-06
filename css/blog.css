@@ -57,7 +57,7 @@
     }
 }
 
-@media (min-width: 835px) {
+@media (min-width: 800px) {
     .blog__grid {
         grid-template-columns: 1fr 1fr 1fr;
 
@@ -71,56 +71,44 @@
 
 .blog-item {
     position: relative;
+    display: flex;
+    align-items: flex-end;
+    height: 517px;
     text-decoration: none;
-    padding-bottom: 40px;
-    transition-property: transform;
-    padding: 1rem;
-    border: 1px solid #f2f2f2;
     border-radius: 8px;
     background-color: white;
+    background-size: cover;
+    background-position: top center;
     box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+    overflow: hidden;
     transition-property: box-shadow, transform;
     transition-duration: 0.2s
 }
 
 .blog-item:hover {
 	transform: translateY(-2px);
-	box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025)
+	box-shadow: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
 }
 
 .blog-item:hover:active {
 	transform: translateY(1px);
 }
 
-.blog-item a {
-	text-decoration: none;
+.blog-item__veil {
+	background: linear-gradient(180deg, transparent 45%, black 80%);
+	z-index: 0;
 }
 
-.blog-item__image-container {
-	position: relative;
-	width: 100%;
-	height: 172px;
-	border: 1px solid lightgrey;
-	background-color: #f2f2f2;
-}
-
-.blog-item__image-container img {
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
+.blog-item__text-container {
+	padding: 20px;
+	color: white;
+	z-index: 1;
 }
 
 .blog-item__title {
 	margin-top: 10px;
 	font-size: 21px;
 	line-height: 1.4;
-}
-
-.blog-item__subheading {
-	margin-top: 10px;
-  	font-size: 1rem;
-  	line-height: 1.6;
-  	color: grey;
 }
 
 .blog-item__author {
@@ -132,7 +120,7 @@
 .blog-item__date {
 	font-size: 13px;
 	margin-top: 5px;
-	color: grey;
+	opacity: 0.5;
 }
 
 
@@ -260,24 +248,16 @@
 	width: 100%;
 	max-width: var(--width-text);
 	padding: 0 calc(var(--gutter)*2) 0 var(--gutter);
-	margin-top: 35px;
+	margin-top: 40px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.post__tag {
-	text-transform: capitalize;
-	display: inline-block;
-	text-decoration: none;
-	margin-top: 5px;
-    padding: 5px 10px;
-    font-size: 13px;
-    color: #313131;
-    border-radius: 4px;
-    background-color: #f2f2f2;
-    transition-property: transform;
-}
-
-.post__tag:hover:active {
-    transform: translateY(1px);
+.post__tag.button {
+	font-size: 12px;
+    font-weight: normal;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    height: 30px;
+    padding: 10px;
 }

@@ -7,6 +7,16 @@ html {
 	--color-fg: #32325d;
 	--color-hl: #6772e5;
 
+	--color-button-bg: white;
+	--color-button-fg: var(--color-hl);
+
+	--shadow-button: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+	--shadow-button-hover: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+
+	/*--shadow-card:;*/
+	/*--shadow-card-hover*/
+
+
 	--width-text: 735px;
 	--width-body: 1072px;
 	--width-site: 1600px;

@@ -16,19 +16,17 @@
 		{% for p in page.collection() %}
 		{% set main_image = p.header.main_image ? p.media[p.header.main_image] %}
 		{% set main_image_alt = p.header.main_image_alt ?? '' %}
-		<article class="blog-item">
-			<a href="{{ p.url }}">
-				<div class="blog-item__image-container">
-					<div class="fill">
-						{{ main_image.cropResize(500,500).html('', main_image_alt) }}
-					</div>
-				</div>
+		<a class="blog-item" href="{{ p.url }}" style="background-image:url({{ main_image.cropResize(800,800).url }})">
+
+			<div class="fill blog-item__veil"></div>
+
+			<div class="blog-item__text-container">
 				<h3 class="blog-item__title">{{ p.title }}</h3>
-				<p class="blog-item__subheading">{{ p.header.subheading }}</p>
 				<div class="blog-item__author">{{ site.author.name }}</div>
 				<time datetime="{{ p.header.date }}" class="blog-item__date">{{ date.format(p.header.date, 'long') }}</time>
-			</a>
-		</article>
+			</div>
+
+		</a>
 		{% endfor %}
 	</section>
 

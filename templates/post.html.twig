@@ -47,7 +47,7 @@
 	{% if tags %}
 	<section class="post__tag-container">
 		{% for tag in tags %}
-		<a href="{{ page.parent.url }}/tag{{ config.system.param_sep }}{{ tag }}" class="post__tag">{{ tag }}</a>
+		<a class="post__tag button" href="{{ page.parent.url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
 		{% endfor %}
 	</section>
 	{% endif %}

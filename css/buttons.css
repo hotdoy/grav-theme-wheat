@@ -1,8 +1,6 @@
-/*LINK*/
-
 .button {
     white-space: nowrap;
-    display: inline-block;
+    display: inline-flex;
     height: 40px;
     padding: 14px;
     border-radius: 4px;
@@ -10,12 +8,11 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .025em;
-    display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-hl);
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+    color: var(--color-button-fg);
+    background-color: var(--color-button-bg);
+    box-shadow: var(--shadow-button);
     transition-property: transform, box-shadow;
     transition-duration: 0.2s;
     outline: none;
@@ -30,7 +27,7 @@
 
 .button:hover {
     transform: translateY(-1px);
-    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+    box-shadow: var(--shadow-button-hover);
 }
 
 .button:hover:active {
@@ -38,10 +35,9 @@
 }
 
 .button.inverted {
-    color: white;
-    background-color: var(--color-hl);
+    color: var(--color-button-bg);
+    background-color: var(--color-button-fg);
 }
-
 
 
 
