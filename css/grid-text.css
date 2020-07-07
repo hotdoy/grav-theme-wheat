@@ -18,11 +18,57 @@
 
 h2.gridtext__title {
 	margin-top: 2rem;
+	margin-bottom: 2rem;
 	font-weight: 700;
 }
-
+@media (min-width: 835px) {
+	h2.gridtext__title {
+		margin-bottom: 3rem;
+		max-width: 65%;
+	}
+}
 
 .gridtext__grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr;
+	grid-gap: 2rem;
+}
+@media (min-width: 835px) {
+	.gridtext__grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: 2rem;
+	}
+}
+
+.gridtext__item {
+	position: relative;
+	width: 100%;
+}
+
+.gridtext__item__icon {
+	width: 50px;
+}
+
+.gridtext__item__icon img {
+	width: 100%;
+}
+
+h3.gridtext__item__title {
+	font-size: medium;
+	font-weight: 700;
+	margin-top: 1rem;
+}
+
+.gridtext__item__text {
+	margin-top: 0.5rem;
+}
+
+.gridtext__item__text>p {
+	font-size: smaller;
+}
+
+/*REMOVE MARGIN FOR FIRST ELEMENT*/
+.gridtext__item__text> *:nth-child(1) {
+	margin-top: 0;
 }

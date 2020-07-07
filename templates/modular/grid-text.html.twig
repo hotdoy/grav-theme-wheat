@@ -1,7 +1,7 @@
 
 <section class="module gridtext {{ page.header.optional_classes }}">
 
-	<div class="gridtext__ctn text">
+	<div class="gridtext__ctn text" data-reveal>
 
 		<div class="gridtext__caption">{{ page.header.caption }}</div>
 
@@ -11,13 +11,13 @@
 
 			{% for item in page.header.items %}
 				<div class="gridtext__item">
-				{% set icon = item.icon ? page.media[icon] %}
-				{% if icon %}
-				<div class="gridtext__item__icon">{{ icon.html }}</div>
-				{% endif %}
-				
-				<h3 class="gridtext__item__title">{{ item.title }}</h3>
-				<div class="gridtext__item__text">{{ item.text|markdown }}</div>
+					{% set icon = item.icon ? page.media[item.icon] %}
+					{% if icon %}
+					<div class="gridtext__item__icon">{{ icon.html }}</div>
+					{% endif %}
+					
+					<h3 class="gridtext__item__title">{{ item.title }}</h3>
+					<div class="gridtext__item__text">{{ item.text|markdown }}</div>
 				</div>
 			{% endfor %}
 
