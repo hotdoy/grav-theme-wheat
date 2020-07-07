@@ -13,6 +13,12 @@ form:
           title: Content
           fields:
 
+            header.surtitle:
+              ordering@: header.title
+              type: text
+              label: Surtitle
+              style: vertical
+
             header.selected_media:
               label: Selected Media
               type: pagemediaselect

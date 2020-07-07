@@ -3,8 +3,8 @@ footer{
 	position: relative;
 	margin: var(--rhythm) 0 0 0;
 	padding: calc(var(--rhythm)/2) 0 20px 0;
-	background-color: #313131;
-	color: #f1f1f1;
+	background-color: var(--color-footer-bg);
+	color: var(--color-footer-fg);
 	font-size: 13px;
 	z-index: 1000;
 }

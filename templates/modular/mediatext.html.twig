@@ -7,12 +7,24 @@
 <section class="module mediatext mediatext--{{ media_position }} {{ optional_classes }}">
 	<div class="mediatext__ctn">
 		<div class="mediatext__media" data-reveal>
-		{% if selected_media.type == 'video' %}
+			{% if selected_media.type == 'video' %}
 			{{ selected_media.controls(0).autoplay(1).muted(1).loop(1).html('', selected_media_alt) }}
-		{% else %}
+			{% else %}
 			{{ selected_media.html('', selected_media_alt) }}
-		{% endif %}
+			{% endif %}
 		</div>
-		<div class="mediatext__content text" data-reveal>{{ content|raw }}</div>
+		<div class="mediatext__content" data-reveal>
+			
+			{% if page.header.surtitle %}
+			<div class="mediatext__surtitle">{{ page.header.surtitle }}</div>
+			{% endif %}
+
+			<h2 class="mediatext__title">{{ page.title }}</h2>
+
+			{% if content %}
+			<div class="text">{{ content|raw }}</div>
+			{% endif %}
+			
+		</div>
 	</div>
 </section>
