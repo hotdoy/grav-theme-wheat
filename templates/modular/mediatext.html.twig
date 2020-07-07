@@ -13,10 +13,10 @@
 			{{ selected_media.html('', selected_media_alt) }}
 			{% endif %}
 		</div>
-		<div class="mediatext__content" data-reveal>
+		<div class="mediatext__content text" data-reveal>
 			
-			{% if page.header.surtitle %}
-			<div class="mediatext__surtitle">{{ page.header.surtitle }}</div>
+			{% if page.header.caption %}
+			<div class="mediatext__caption">{{ page.header.caption }}</div>
 			{% endif %}
 
 			<h2 class="mediatext__title">{{ page.title }}</h2>

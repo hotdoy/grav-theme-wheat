@@ -57,6 +57,11 @@ form:
               validate:
                 rule: slug
 
+            route:
+              type: parents
+              label: PLUGIN_ADMIN.PARENT
+              classes: fancy
+
             name:
               type: select
               classes: fancy

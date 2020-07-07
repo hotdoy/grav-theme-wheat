@@ -1,4 +1,4 @@
-title: MediaText
+title: mediatext
 '@extends': modular/module
 
 form:
@@ -13,10 +13,10 @@ form:
           title: Content
           fields:
 
-            header.surtitle:
+            header.caption:
               ordering@: header.title
               type: text
-              label: Surtitle
+              label: Caption
               style: vertical
 
             header.selected_media:
