@@ -1,0 +1,18 @@
+<section class="module features {{ page.header.optional_classes }}">
+	<div class="features__ctn text" data-reveal>
+		<div class="caption">{{ page.header.caption }}</div>
+		<h2 class="title">{{ page.title }}</h2>
+		<div class="features__grid">
+			{% for item in page.header.items %}
+				<div class="features__item" data-reveal="reveal--grid-item">
+					{% set icon = item.icon ? page.media[item.icon] %}
+					{% if icon %}
+					<div class="features__item__icon">{{ icon.html }}</div>
+					{% endif %}
+					<h3 class="features__item__title">{{ item.title }}</h3>
+					<div class="features__item__text">{{ item.text|markdown }}</div>
+				</div>
+			{% endfor %}
+		</div>	
+	</div>
+</section>

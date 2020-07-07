@@ -14,12 +14,6 @@ form:
         content:
           fields:
 
-            header.subheading:
-              ordering@: header.title
-              type: text
-              label: Subheading
-              style: vertical
-
             content:
               unset@: true
 

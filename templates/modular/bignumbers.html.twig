@@ -1,0 +1,14 @@
+<section class="module bignumbers {{ page.header.optional_classes }}">
+	<div class="bignumbers__ctn text" data-reveal>
+		<div class="caption">{{ page.header.caption }}</div>
+		<h2 class="title">{{ page.title }}</h2>
+		<div class="bignumbers__grid">
+			{% for item in page.header.items %}
+				<div class="bignumbers__item" data-reveal="reveal--grid-item">
+					<h3 class="bignumbers__item__number">{{ item.number }}</h3>
+					<div class="bignumbers__item__text">{{ item.text|markdown }}</div>
+				</div>
+			{% endfor %}
+		</div>	
+	</div>
+</section>

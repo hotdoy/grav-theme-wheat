@@ -1,0 +1,14 @@
+<section class="module logos {{ page.header.optional_classes }}">
+	<div class="logos__ctn text" data-reveal>
+		<div class="caption">{{ page.header.caption }}</div>
+		<h2 class="title">{{ page.title }}</h2>
+		<div class="logos__grid">
+			{% for item in page.header.items %}
+				{% set logo = item.logo ? page.media[item.logo] %}
+				<div class="logos__item" data-reveal="reveal--grid-item">
+					{{ logo.html('', item.alt) }}
+				</div>
+			{% endfor %}
+		</div>	
+	</div>
+</section>

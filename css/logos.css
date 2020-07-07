@@ -1,0 +1,32 @@
+.logos__ctn {
+	width: 100%;
+	max-width: var(--width-body);
+	margin: 0 auto;
+	padding: 0 var(--gutter);
+}
+
+.logos h2.title {
+	text-align: center;
+	margin-top: 0;
+}
+
+.logos__grid {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.logos__item {
+    width: 50%;
+    padding: 2rem 3rem 0 3rem;
+}
+@media (min-width: 835px) {
+	.logos__item {
+	    width: 25%;
+	}
+}
+
+.logos__item img {
+	width: 100%;
+}
