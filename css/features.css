@@ -5,24 +5,24 @@
 	padding: 0 var(--gutter);
 }
 
-.features .caption {
+.features__caption {
 	margin-top: 2rem;
     letter-spacing: 3px;
     color: var(--color-hl);
 }
 @media (min-width: 835px) {
-	.features .caption {
+	.features__caption {
 		margin-top: 0;
 	}
 }
 
-.features h2.title {
+h2.features__title {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 	font-weight: 700;
 }
 @media (min-width: 835px) {
-	.features h2.title {
+	h2.features__title {
 		margin-bottom: 3rem;
 		max-width: 65%;
 	}

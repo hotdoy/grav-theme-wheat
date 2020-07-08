@@ -5,24 +5,24 @@
 	padding: 0 var(--gutter);
 }
 
-.bignumbers .caption {
+.bignumbers__caption {
 	margin-top: 2rem;
 	letter-spacing: 3px;
     color: var(--color-hl);
 }
 @media (min-width: 835px) {
-	.bignumbers .caption {
+	.bignumbers__caption {
 		margin-top: 0;
 	}
 }
 
-.bignumbers h2.title {
+h2.bignumbers__title {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 	font-weight: 700;
 }
 @media (min-width: 835px) {
-	.bignumbers h2.title {
+	h2.bignumbers__title {
 		margin-bottom: 2rem;
 		max-width: 65%;
 	}

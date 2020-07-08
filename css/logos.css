@@ -5,9 +5,10 @@
 	padding: 0 var(--gutter);
 }
 
-.logos h2.title {
+h2.logos__title {
 	text-align: center;
 	margin-top: 0;
+	font-weight: 700;
 }
 
 .logos__grid {

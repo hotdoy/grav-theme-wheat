@@ -19,7 +19,7 @@ form:
               autofocus: true
               style: vertical
               label: PLUGIN_ADMIN.TITLE
-            
+
             content:
               type: markdown
               label: PLUGIN_ADMIN.CONTENT
@@ -35,9 +35,9 @@ form:
           title: Options
           fields:
 
-            Optional:
+            Style:
               type: section
-              title: Optional
+              title: Style
               underline: true
 
             header.optional_classes:
@@ -45,6 +45,16 @@ form:
               label: Optional Classes
               markdown: true
               description: '```padded```, ```no_margin```, ```double_margin```'
+
+            header.display_title:
+              type: toggle
+              label: Display Title
+              toggleable: true
+              highlight: 1
+              default: 1
+              options: 
+                1: 'Yes'
+                0: 'No'
 
             order_title:
               type: section

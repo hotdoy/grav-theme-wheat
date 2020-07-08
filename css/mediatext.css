@@ -45,18 +45,18 @@
 	object-fit: contain;
 }
 
-.mediatext .caption {
+.mediatext__caption {
 	margin-top: 2rem;
 	letter-spacing: 3px;
     color: var(--color-hl);
 }
 @media (min-width: 835px) {
-	.mediatext .caption {
+	.mediatext__caption {
 		margin-top: 0;
 	}
 }
 
-.mediatext h2.title {
+h2.mediatext__title {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 	font-weight: 700;

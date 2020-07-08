@@ -1,2 +1,11 @@
 title: Content
 '@extends': modular/module
+
+form:
+  fields:
+    tabs:
+      fields:
+        options:
+          fields:
+            header.display_title:
+              unset@: true

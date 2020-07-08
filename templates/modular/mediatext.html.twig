@@ -1,8 +1,9 @@
-{% set optional_classes = classes|default(page.header.optional_classes) %}
-{% set selected_media = selected_media|default(page.header.selected_media ? page.media[page.header.selected_media]) %}
-{% set selected_media_alt = selected_media_alt|default(page.header.selected_media_alt ?? '') %}
-{% set media_position = media_position|default(page.header.media_position ?? 'left') %}
-{% set content = content|default(page.content) %}
+{% set optional_classes = page.header.optional_classes %}
+{% set display_title = page.header.display_title ?? 'true' %}
+{% set selected_media = page.header.selected_media ? page.media[page.header.selected_media] %}
+{% set selected_media_alt = page.header.selected_media_alt ?? '' %}
+{% set media_position = page.header.media_position ?? 'left' %}
+{% set content = page.content %}
 
 <section class="module mediatext mediatext--{{ media_position }} {{ optional_classes }}">
 	<div class="mediatext__ctn">
@@ -14,13 +15,14 @@
 			{% endif %}
 		</div>
 		<div class="mediatext__content text" data-reveal>
-			
+
+			{% if display_title %}
 			{% if page.header.caption %}
-			<div class="caption">{{ page.header.caption }}</div>
+			<div class="mediatext__caption">{{ page.header.caption }}</div>
 			{% endif %}
-
-			<h2 class="title">{{ page.title }}</h2>
-
+			<h2 class="mediatext__title">{{ page.title }}</h2>
+			{% endif %}
+			
 			{% if content %}
 			<div class="text">{{ content|raw }}</div>
 			{% endif %}
