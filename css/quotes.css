@@ -1,4 +1,5 @@
 .quotes__wrapper {
+	position: relative;
 	width: 100%;
 	max-width: var(--width-body);
 	margin: 0 auto;
@@ -13,16 +14,23 @@
 }
 
 .quotes__carousel {
-	padding: 60px 20px;
-	min-height: 25vh;
 	background-color: var(--color-hl);
 	color: white;
 	border-radius: 8px;
 	box-shadow: var(--shadow-card);
+	height: auto;
+	width: 100%;
 }
 
 .quotes__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: auto;
+	padding: 6rem 2rem;
 	text-align: center;
+	background-color: var(--color-hl);
 }
 
 blockquote.quotes__item__quote {
@@ -34,6 +42,8 @@ blockquote.quotes__item__quote {
 	width: 50px;
 	margin: 0 auto;
 	margin-top: 30px;
+	overflow: hidden;
+	border-radius: 9999px;
 }
 
 .quotes__item__portrait img {
@@ -42,5 +52,14 @@ blockquote.quotes__item__quote {
 
 .quotes__item__source {
 	margin-top: 10px;
+	width: 250px;
 	font-size: small;
+	line-height: 1.6;
+}
+.quotes .swiper-pagination {
+	padding-bottom: 1rem;
+}
+
+.quotes .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background: white;
 }

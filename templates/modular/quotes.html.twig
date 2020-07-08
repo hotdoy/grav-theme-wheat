@@ -1,26 +1,22 @@
 <section class="module quotes text {{ page.header.optional_classes }}">
-	
 	<div class="quotes__wrapper" data-reveal>
-
 		<h2 class="title">{{ page.title }}</h2>
-
-		<div class="quotes__carousel">
-			{% for item in page.header.items %}
-				<div class="quotes__item">
+		<div class="quotes__carousel swiper-container">
+			<div class="swiper-wrapper">
+				{% for item in page.header.items %}
+				<div class="quotes__item swiper-slide">
 					{% set portrait = item.portrait ? page.media[item.portrait] %}
-
 					<blockquote class="quotes__item__quote">{{ item.quote }}</blockquote>
-
 					{% if portrait %}
-					<div class="quotes__item__portrait">{{ portrait.html('', item.alt) }}</div>
+					<div class="quotes__item__portrait">{{ portrait.cropZoom(200, 200).quality(config.system.images.default_image_quality).html('', item.alt) }}</div>
 					{% endif %}
-
 					<div class="quotes__item__source">{{ item.source }}</div>
-
 				</div>
-			{% endfor %}
+				{% endfor %}
+			</div>
+			{% if page.header.items|length > 1 %}
+			<div class="quotes__pagination swiper-pagination"></div>
+			{% endif %}
 		</div>	
-
 	</div>
-
 </section>

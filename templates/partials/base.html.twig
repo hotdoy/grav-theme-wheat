@@ -12,8 +12,8 @@
 		{% block stylesheets %}{% include 'partials/stylesheet.html.twig' %}{% endblock %}
 		{% block javascripts %}{% include 'partials/javascript.html.twig' %}{% endblock %}
 		{% block assets deferred %}
-		    {{ assets.css()|raw }}
-		    {{ assets.js()|raw }}
+		{{ assets.css()|raw }}
+		{{ assets.js()|raw }}
 		{% endblock %}
 		{% block gtm_head %}{% include 'partials/gtm-head.html.twig' %}{% endblock %}
 		{% block gtag %}{% include 'partials/gtag.html.twig' %}{% endblock %}
@@ -24,19 +24,22 @@
 
 		{% block loading %}{% include 'partials/loading.html.twig' %}{% endblock %}
 		{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
-		<section id="content">{% block content %}{% endblock %}</section>
+		<section id="content">
+		{% block content %}{% endblock %}
+		</section>
 		{% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %}
 		{% block announcements %}{% include 'partials/announcement.html.twig' %}{% endblock %}
 		{% block share_dialog %}{% include 'partials/share-dialog.html.twig' %}{% endblock %}
-		{% block bottom %}{{ assets.js('bottom')|raw }}{% endblock %}
+		{% block bottom %}
+		{{ assets.js('bottom')|raw }}
+		{% endblock %}
 		{% block gtm_body %}{% include 'partials/gtm-body.html.twig' %}{% endblock %}
 		{% block facebook_pixel %}{{ theme.facebook_pixel }}{% endblock %}
 		{% block serviceworker %}{% include 'partials/serviceworker.html.twig' %}{% endblock %}
+
+		{# <script src="https://browser.sentry-cdn.com/5.19.0/bundle.min.js" integrity="sha384-edPCPWtQrj57nipnV3wt78Frrb12XdZsyMbmpIKZ9zZRi4uAxNWiC6S8xtGCqwDG" crossorigin="anonymous"></script>
+		<script>Sentry.init({ dsn: 'https://79895c8e623b4881aa07d408ce8838d1@o417431.ingest.sentry.io/5317410' });</script> #}
 		
 	</body>
 
 </html>
-
-
-
-{% include 'template' ignore missing with vars only %}
