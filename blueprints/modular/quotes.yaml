@@ -1,0 +1,40 @@
+title: quotes
+'@extends': modular/module
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+
+            content:
+              unset@: true
+
+            header.items:
+              ordering@: header.title
+              name: items
+              type: list
+              style: vertical
+              label: Items
+              fields:
+                .quote:
+                  type: textarea
+                  label: Quote
+                .portrait:
+                  type: pagemediaselect
+                  label: Portrait
+                .source:
+                  type: text
+                  label: Source
+
+        options:
+          fields:
+            Optional:
+            header.optional_classes:
+              description: ''

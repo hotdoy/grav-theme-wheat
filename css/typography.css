@@ -110,18 +110,21 @@ html {
 .text blockquote {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  font-size: x-large;
+  line-height: normal;
 }
 
+@media (min-width: 835px) {
+  .text blockquote {
+    font-size: xx-large;
+  }
+}
 
 .text blockquote>p {
-  font-size: 1.5rem;
+  font-size: inherit;
+  line-height: inherit;
   margin: 0 auto;
   padding: 0;
-}
-@media (min-width: 735px) {
-  .text blockquote>p {
-    font-size: 2rem;
-  }
 }
 
 .text pre {

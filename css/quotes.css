@@ -1,0 +1,46 @@
+.quotes__wrapper {
+	width: 100%;
+	max-width: var(--width-body);
+	margin: 0 auto;
+	padding: 0 var(--gutter);
+}
+
+.quotes h2.title {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.quotes__carousel {
+	padding: 60px 20px;
+	min-height: 25vh;
+	background-color: var(--color-hl);
+	color: white;
+	border-radius: 8px;
+	box-shadow: var(--shadow-card);
+}
+
+.quotes__item {
+	text-align: center;
+}
+
+blockquote.quotes__item__quote {
+	margin: 0 auto;
+	max-width: var(--width-text);
+}
+
+.quotes__item__portrait {
+	width: 50px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.quotes__item__portrait img {
+	max-width: 100%;
+}
+
+.quotes__item__source {
+	margin-top: 10px;
+	font-size: small;
+}
