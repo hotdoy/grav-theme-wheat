@@ -55,13 +55,14 @@
 
 
 
+
 /*ITEM (card)*/
 
 .blog-item {
     position: relative;
     display: flex;
     align-items: flex-end;
-    height: 517px;
+    height: 450px;
     text-decoration: none;
     border-radius: 8px;
     background-color: white;
@@ -95,20 +96,21 @@
 
 .blog-item__title {
 	margin-top: 10px;
-	font-size: 21px;
-	line-height: 1.4;
+    font-size: large;
+    line-height: 1.2;
 }
 
 .blog-item__author {
-	font-size: 13px;
+	font-size: small;
 	margin-top: 10px;
 
 }
 
 .blog-item__date {
-	font-size: 13px;
+	display: block;
+	font-size: small;
 	margin-top: 5px;
-	opacity: 0.5;
+	color: grey;
 }
 
 
@@ -127,18 +129,29 @@
 	margin-right: auto;
 	padding: 0 var(--gutter);
 	max-width: var(--width-text);
-	font-size: 40px;
-	line-height: 48px;
+	font-size: xx-large;
+	line-height: 1.3;
 	font-weight: 700;
+}
+@media (min-width: 835px){
+	.post__title {
+		font-size: xx-large;
+		line-height: 1.3;
+	}
 }
 
 .post__subtitle {
 	margin: 20px auto 0 auto;
 	padding: 0 var(--gutter);
 	max-width: var(--width-text);
-	font-size: 21px;
-	line-height: 1.4;
+	font-size: large;
+	line-height: 1.3;
 	opacity: 0.7;
+}
+@media (min-width: 835px){
+	.post__subtitle {
+		font-size: x-large;
+	}
 }
 
 
@@ -148,9 +161,8 @@
     margin: 20px auto 0 auto;
     padding: 0 var(--gutter);
     max-width: var(--width-text);
-    font-size: 13px;
+    font-size: small;
 }
-
 @media (min-width: 835px) {
 	.post__toolbar {
 		display: flex;
@@ -166,7 +178,7 @@
 }
 @media (min-width: 835px) {
 	.post__author {
-		margin-top: 0px;
+		margin-top: 0;
 	}
 }
 
@@ -209,10 +221,10 @@
 }
 
 .post__main-image__caption {
-    margin: 5px auto 0 auto;
+    margin: 10px auto 0 auto;
     padding: 0 var(--gutter);
     max-width: var(--width-text);
-    font-size: 13px;
+    font-size: small;
     text-align: center;
     color: grey;
 }
@@ -242,7 +254,7 @@
 }
 
 .post__tag.button {
-	font-size: 12px;
+	font-size: small;
     font-weight: normal;
     margin-right: 5px;
     margin-bottom: 10px;

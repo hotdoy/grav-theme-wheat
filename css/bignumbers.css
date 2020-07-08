@@ -7,6 +7,8 @@
 
 .bignumbers .caption {
 	margin-top: 2rem;
+	letter-spacing: 3px;
+    color: var(--color-hl);
 }
 @media (min-width: 835px) {
 	.bignumbers .caption {
@@ -17,6 +19,7 @@
 .bignumbers h2.title {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
+	font-weight: 700;
 }
 @media (min-width: 835px) {
 	.bignumbers h2.title {

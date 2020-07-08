@@ -1,19 +1,14 @@
 #header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
+	position: relative;
 	height: var(--header-heigth);
 	color: var(--color-fg);
-	background-color: white;
-	box-shadow: var(--shadow-button);
 	z-index: 5000;
 }
 
-.header__shim {
+/*.header__shim {
 	position: relative;
 	height: var(--header-heigth);
-}
+}*/
 
 .header__container {
 	display: flex;
@@ -23,5 +18,13 @@
 	padding: 0 var(--gutter);
 	width: 100%;
 	height: 100%;
-	max-width: var(--width-site);
+	max-width: var(--width-body);
+}
+
+.header__logo {
+	width: 70px;
+}
+
+.header__logo svg {
+	max-width: 100%; 
 }
