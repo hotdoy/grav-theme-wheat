@@ -8,11 +8,27 @@ form:
         content:
           fields:
 
+            content:
+              unset@: true
+
             header.media_order:
               unset@: true
 
-            header.content.items:
+            header.caption:
+              ordering@: header.title
               type: text
+              label: Caption
+              style: vertical
+
+            collection:
+              type: section
+              title: Collection
+              text: Learn more about <a href="https://learn.getgrav.org/16/content/collections" target="_blank">Collections</a>.<br>This module is best used in expert mode.
+              markdown: true
+              underline: true
+
+            header.content.items:
+              type: textarea
               yaml: true
               label: items
               default: '@self.children'

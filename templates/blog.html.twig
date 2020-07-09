@@ -13,7 +13,7 @@
 		{% for p in page.collection() %}
 		{% set main_image = p.header.main_image ? p.media[p.header.main_image] %}
 		{% set main_image_alt = p.header.main_image_alt ?? '' %}
-		<a class="blog-item" href="{{ p.url }}" style="background-image:url({{ main_image.cropResize(800,800).url }})">
+		<a class="blog-item" href="{{ p.url }}" style="background-image:url({{ main_image.cropResize(1000,1000).url }})">
 
 			<div class="fill blog-item__veil"></div>
 
