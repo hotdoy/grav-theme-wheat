@@ -18,6 +18,8 @@
 .map__ctn > div {
 	height: 400px;
     width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 @media (min-width: 735px) {

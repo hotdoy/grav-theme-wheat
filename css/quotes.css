@@ -14,10 +14,10 @@
 }
 
 .quotes__carousel {
-	background-color: var(--color-hl);
+	background-color: var(--color-material-bg);
 	color: white;
 	border-radius: 8px;
-	box-shadow: var(--shadow-card);
+	box-shadow: var(--shadow-material);
 	height: auto;
 	width: 100%;
 }
@@ -30,7 +30,8 @@
 	height: auto;
 	padding: 6rem 2rem;
 	text-align: center;
-	background-color: var(--color-hl);
+	background-color: var(--color-material-bg);
+	color: var(--color-material-fg);
 }
 
 blockquote.quotes__item__quote {
@@ -62,5 +63,5 @@ blockquote.quotes__item__quote {
 }
 
 .quotes .swiper-pagination-bullet.swiper-pagination-bullet-active {
-	background: white;
+	background: var(--color-material-fg);
 }

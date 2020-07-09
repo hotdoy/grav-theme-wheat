@@ -71,3 +71,8 @@ footer{
 	width: 49px;
 	height: 17px;
 }
+
+/*OPTIONAL*/
+.remove_footer_margin footer {
+	margin-top: 0;
+}

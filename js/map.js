@@ -1,6 +1,5 @@
-let ctns = document.querySelectorAll('[id^="map-"]');
-
 function initMap() {
+	const ctns = document.querySelectorAll('[id^="map-"]');
 	for (let ctn of ctns){
 		let zoom = ctn.dataset.zoom ? parseInt(ctn.dataset.zoom) : '';
 		let	markers = ctn.dataset.markers ? JSON.parse(ctn.dataset.markers) : '';
@@ -48,11 +47,23 @@ function initMap() {
 	}
 }
 
-if (!!ctns[0]) {
-	let key = ctns[0].dataset.key;
-	let script = document.createElement('script');
-	script.src = "https://maps.googleapis.com/maps/api/js?key=" + key + "&callback=initMap";
-	script.defer = true;
-	script.async = true;
-	document.body.appendChild(script);
-}
+
+(function () {
+
+	'use strict';
+
+	const InitMaps = function(){
+		const ctns = document.querySelectorAll('[id^="map-"]');
+		if (!!ctns[0]) {
+			let key = ctns[0].dataset.key;
+			let script = document.createElement('script');
+			script.src = "https://maps.googleapis.com/maps/api/js?key=" + key + "&callback=initMap";
+			script.defer = true;
+			script.async = true;
+			document.body.appendChild(script);
+		}
+	}
+
+	InitMaps();
+
+})();

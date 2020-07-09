@@ -1,6 +1,8 @@
 .module {
     position: relative;
     margin-top: var(--rhythm);
+    background-color: var(--color-bg);
+    color: var(--color-fg);
     z-index: 1000;
 }
 
@@ -14,8 +16,11 @@
 
 .module.padded {
       padding: var(--rhythm) 0 var(--rhythm) 0;
-      background-color: #000;
-      color: #fff;
+}
+
+.module.padded + .module.padded {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .module.no_margin {

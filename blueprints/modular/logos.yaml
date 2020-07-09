@@ -29,8 +29,3 @@ form:
                 .alt:
                   type: text
                   label: alt
-        options:
-          fields:
-            Optional:
-            header.optional_classes:
-              description: ''

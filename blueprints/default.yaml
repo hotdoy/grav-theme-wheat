@@ -13,5 +13,5 @@ form:
                   fields:
                     header.body_classes:
                       markdown: true
-                      description: '```todo```'
+                      description: '```dark```, ```remove_footer_margin```'
 

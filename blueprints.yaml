@@ -6,7 +6,7 @@ description: Wheat theme for Grav CMS
 icon: rebel
 author:
   name: Calotte
-  email: rouleau.vincent@gmail.com
+  email: vincent@calotte.ca
 homepage: https://github.com/calotte/grav-theme-wheat
 demo: http://demo.yoursite.com
 keywords: grav, theme, etc
@@ -20,13 +20,107 @@ dependencies:
 form:
   validation: loose
   fields:
-    dropdown.enabled:
-        type: toggle
-        label: Dropdown in Menu
-        highlight: 1
-        default: 1
-        options:
-          1: PLUGIN_ADMIN.ENABLED
-          0: PLUGIN_ADMIN.DISABLED
-        validate:
-          type: bool
+
+    ga:
+      type: section
+      title: Google Analytics
+      underline: true
+
+    ga_tracking_id:
+      type: text
+      label: GA Tracking ID
+      help: Google Analytics Tracking ID
+      placeholder: 'UA-123456789-1'
+      description: Do not fill if you are using GTM
+
+    gtm_container_id:
+      type: text
+      label: GTM Container ID
+      placeholder: 'GTM-ZXCVB00'
+
+    sentry:
+      type: section
+      title: Sentry
+      underline: true
+
+    sentry_script_tag:
+      type: text
+      label: Sentry Script Tag
+      placeholder: '<script src="https://browser.sentry-cdn.com/X.XX.X/bundle.min.js" integrity="XXXXX" crossorigin="anonymous"></script>'
+
+    sentry_init_script:
+      type: text
+      label: Sentry Init Script
+      placeholder: 'Sentry.init({ dsn: "https://XXXXX" });'
+
+    sentry_test_mode:
+      type: toggle
+      label: Sentry Test Mode
+      help: 'Generates an undefined function and throw an exception for Sentry.io to catch.'
+      toggleable: true
+      highlight: 0
+      default: 0
+      options:
+        1: 'On'
+        0: 'Off'
+  
+    facebook:
+      type: section
+      title: Facebook
+      underline: true
+
+    facebook_app_id:
+      type: text
+      label: Facebook App Id
+      placeholder: '123456789123456'
+
+    twitter:
+      type: section
+      title: Twitter
+      underline: true
+
+    twitter_site:
+      type: text
+      label: Twitter Site
+      placeholder: '@twitter_handle'
+
+    gmaps:
+      type: section
+      title: Google Maps
+      underline: true
+
+    gmaps_key:
+      type: text
+      label: Google Maps API Key
+
+    gmaps_styles:
+      type: textarea
+      rows: 13
+      label: Snazzy Maps
+
+    organization:
+      type: section
+      title: Organization Schema
+      underline: true
+
+    organization_logo:
+      type: text
+      label: Organization Logo
+      help: The absolute path to the organization logo. The image must be 112x112px at minimum. And of jpg, png, or gif format.
+      placeholder: 'https://path/to/logo.png'
+
+    publisher:
+      type: section
+      title: Publisher Schema
+      underline: true
+
+    publisher_name:
+      type: text
+      label: Publisher Name
+      help: The absolute path to the organization's logo. The image must be 112x112px at minimum. And of jpg, png, or gif format.
+
+    publisher_logo:
+      type: text
+      label: Publisher Logo
+      help: The absolute path to the publisher's logo. The image must fit in a 600x60px rectangle including a 6px top and bottom padding. And of jpg, png, or gif format.
+      placeholder: 'https://path/to/logo.png'

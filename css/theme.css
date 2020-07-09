@@ -2,24 +2,22 @@
 					VARS 
 ============================================*/
 
-html {
+html, .light {
 	--color-bg: #f6f9fc;
 	--color-fg: #32325d;
 	--color-hl: #6772e5;
-
 	--color-button-bg: white;
 	--color-button-fg: var(--color-hl);
-
-	--color-card-bg: white;
-	--color-card-fg: #32325d;
-
+	--color-material-bg: white;
+	--color-material-fg: #32325d;
+	--color-material-hl: #6772e5;
 	--color-footer-bg: var(--color-fg);
 	--color-footer-fg: white;
 
 	--shadow-button: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
 	--shadow-button-hover: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
-	--shadow-card: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
-	--shadow-card-hover: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
+	--shadow-material: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+	--shadow-material-hover: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
 
 	--width-text: 735px;
 	--width-body: 1072px;
@@ -30,6 +28,17 @@ html {
 	--rhythm: 125px;
 	--header-heigth: 80px;
 
+}
+
+.dark {
+	--color-bg: #0a2540;
+	--color-fg: white;
+	--color-hl: #00d4ff;
+	--color-button-bg: white;
+	--color-button-fg: var(--color-hl);
+	--color-material-bg: #0c2e4e;
+	--color-material-fg: white;
+	--color-material-hl: #6772e5;
 }
 
 

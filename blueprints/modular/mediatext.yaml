@@ -34,9 +34,3 @@ form:
               options: 
                 left: 'Left'
                 right: 'Right'
-
-        options:
-          fields:
-            Optional:
-            header.optional_classes:
-              description: ''

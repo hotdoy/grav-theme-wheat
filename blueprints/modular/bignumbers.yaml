@@ -35,8 +35,3 @@ form:
                 .text:
                   type: textarea
                   label: Text
-        options:
-          fields:
-            Optional:
-            header.optional_classes:
-              description: ''

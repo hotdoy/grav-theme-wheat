@@ -1,4 +1,6 @@
-/* .content {} */
+ .content {
+ 	overflow: hidden;
+ } 
 
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6,
 .content p, .content blockquote, .content pre, 
@@ -39,7 +41,7 @@
 	max-width: var(--width-body);
 	padding-left: var(--gutter);
 	padding-right: var(--gutter);
-	margin: 2rem auto;
+	margin: 0 auto;
 }
 
 .content .embed.youtube,
@@ -49,7 +51,6 @@
 	height: 0; 
 	overflow: hidden; 
 	width: 100%;
-	margin-top: 1rem;
 }
 
 .content .embed.youtube iframe,

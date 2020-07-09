@@ -44,7 +44,7 @@ form:
               type: text
               label: Optional Classes
               markdown: true
-              description: '```padded```, ```no_margin```, ```double_margin```'
+              description: '```dark```, ```padded```, ```no_margin```, ```double_margin```'
 
             header.display_title:
               type: toggle

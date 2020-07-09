@@ -32,9 +32,3 @@ form:
                 .source:
                   type: text
                   label: Source
-
-        options:
-          fields:
-            Optional:
-            header.optional_classes:
-              description: ''

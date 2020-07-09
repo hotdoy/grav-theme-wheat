@@ -1,0 +1,9 @@
+{% if theme.sentry_script_tag and theme.sentry_init_script %}
+{{ theme.sentry_script_tag }}
+<script>
+	{{ theme.sentry_init_script }}
+	{% if theme.sentry_test_mode %}
+	SentryUndefinedFunction();
+	{% endif %}
+</script>
+{% endif %}
