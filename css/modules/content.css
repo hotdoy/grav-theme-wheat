@@ -80,3 +80,12 @@ table, th, td {
 	width: 100%;
 	max-width: var(--width-text);
 }
+
+.content span.dropcap {
+    float: left;
+    font-size: xxx-large;
+    font-weight: 700;
+    line-height: 1;
+    padding-top: 2px;
+    padding-right: 8px;
+}

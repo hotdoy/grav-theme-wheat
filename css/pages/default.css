@@ -1,0 +1,8 @@
+/*.default{}*/
+
+.default__title {
+	text-align: center;
+	max-width: var(--width-text);
+	margin: var(--rhythm) auto;
+	font-size: xx-large;
+}

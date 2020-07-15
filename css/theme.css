@@ -65,13 +65,11 @@ body {
 #content section:nth-child(1) {
 	margin-top: 40px;
 }
-
 @media (min-width: 1200px) {
 	#content section:nth-child(1) {
 		margin-top: calc(var(--rhythm) - var(--header-heigth)/2);
 	}
 }
-
 
 
 

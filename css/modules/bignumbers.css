@@ -7,6 +7,7 @@
 
 .bignumbers__caption {
 	margin-top: 2rem;
+	font-size: small;
 	letter-spacing: 3px;
     color: var(--color-hl);
 }

@@ -15,3 +15,12 @@ form:
                       markdown: true
                       description: '```dark```, ```remove_footer_margin```'
 
+                    header.display_title:
+                      type: toggle
+                      label: Display Title
+                      toggleable: true
+                      highlight: 1
+                      default: 1
+                      options: 
+                        1: 'Yes'
+                        0: 'No'

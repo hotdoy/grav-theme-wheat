@@ -47,6 +47,7 @@
 
 .mediatext__caption {
 	margin-top: 2rem;
+	font-size: small;
 	letter-spacing: 3px;
     color: var(--color-hl);
 }
@@ -56,7 +57,7 @@
 	}
 }
 
-h2.mediatext__title {
+h2.mediatext__title, h1.mediatext__title {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 	font-weight: 700;

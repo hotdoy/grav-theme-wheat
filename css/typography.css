@@ -44,24 +44,13 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-.text h1 {
+.text h2, .text h1 {
   margin-top: 4rem;
   font-size: xx-large;
   line-height: 1.1;
 }
 @media (min-width: 735px) {
-  .text h1 {
-    font-size: xxx-large;
-  }
-}
-
-.text h2 {
-  margin-top: 4rem;
-  font-size: xx-large;
-  line-height: 1.1;
-}
-@media (min-width: 735px) {
-  .text h2 {
+  .text h2, .text h1 {
     font-size: xxx-large;
   }
 }

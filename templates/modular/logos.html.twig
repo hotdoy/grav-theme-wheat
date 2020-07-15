@@ -13,7 +13,7 @@
 
 			{% set logo = item.logo ? page.media[item.logo] %}
 			<div class="logos__item" data-reveal="reveal--grid-item">
-			{{ logo.html('', item.alt) }}
+				{{ logo.html('', item.alt) }}
 			</div>
 
 			{% endfor %}

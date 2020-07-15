@@ -1,5 +1,6 @@
 {% set optional_classes = page.header.optional_classes %}
 {% set display_title = page.header.display_title ?? 'true' %}
+{% set title_level = page.header.title_level ?? '2' %}
 {% set selected_media = page.header.selected_media ? page.media[page.header.selected_media] %}
 {% set selected_media_alt = page.header.selected_media_alt ?? '' %}
 {% set media_position = page.header.media_position ?? 'left' %}
@@ -20,7 +21,7 @@
 			{% if page.header.caption %}
 			<div class="mediatext__caption">{{ page.header.caption }}</div>
 			{% endif %}
-			<h2 class="mediatext__title">{{ page.title }}</h2>
+			<h{{ title_level }} class="mediatext__title">{{ page.title }}</h{{ title_level }}>
 			{% endif %}
 			
 			{% if content %}
