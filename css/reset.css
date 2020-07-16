@@ -73,6 +73,6 @@ a {
 	text-decoration: none;
 }
 
-img {
+img, svg, video {
 	max-width: 100%;
 }

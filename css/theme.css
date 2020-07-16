@@ -33,7 +33,7 @@ html, .light {
 .dark {
 	--color-bg: #0a2540;
 	--color-fg: white;
-	--color-hl: #00d4ff;
+	--color-hl: #6772e5;
 	--color-button-bg: white;
 	--color-button-fg: var(--color-hl);
 	--color-material-bg: #0c2e4e;

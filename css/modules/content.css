@@ -89,3 +89,7 @@ table, th, td {
     padding-top: 2px;
     padding-right: 8px;
 }
+
+.content h1 {
+	font-weight: 700;
+}

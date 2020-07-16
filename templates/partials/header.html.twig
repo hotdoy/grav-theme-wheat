@@ -1,19 +1,33 @@
-{# <div class="header__shim"></div> #}
 <section id="header">
 
     <div class="header__container">
-        
         {# LOGO #}
         <a class="header__logo" href="{{ home_url }}" aria-label="Logo">{% include 'partials/logo.html.twig' %}</a>
+        {# TOGGLE #}
+        <button class="header__on">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"></path><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+        </button>
+    </div>
 
-        {# NAV #}
-        <nav class="header__nav">
+    <div class="panel">
+
+        <div class="panel__container">
+            <div class="panel__header">
+                {# LOGO #}
+                <a class="panel__logo" href="{{ home_url }}" aria-label="Logo">{% include 'partials/logo.html.twig' %}</a>
+                {# TOGGLE #}
+                <button class="header__off">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"></path><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+                </button>
+            </div>
             <ul>
                 {% for p in pages.children.visible if p.url != home_url  %}
-                <li><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
+                <li><a class="panel__link {{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
                 {% endfor %}
             </ul>
-        </nav>
+        </div>
+
 
     </div>
+
 </section>

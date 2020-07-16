@@ -97,15 +97,15 @@ html {
 }
 
 .text blockquote {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  font-size: x-large;
-  line-height: normal;
+  margin-top: 0;
+  font-size: xx-large;
+  line-height: 1.1;
+  font-weight: 700;
 }
 
-@media (min-width: 835px) {
+@media (min-width: 735px) {
   .text blockquote {
-    font-size: xx-large;
+    font-size: xxx-large;
   }
 }
 

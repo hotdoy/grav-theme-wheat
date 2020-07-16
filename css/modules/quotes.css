@@ -35,9 +35,18 @@
 }
 
 blockquote.quotes__item__quote {
+	font-weight: normal;
+	font-size: x-large;
 	margin: 0 auto;
 	max-width: var(--width-text);
 }
+
+@media (min-width: 735px) {
+  blockquote.quotes__item__quote {
+    font-size: xx-large;
+  }
+}
+
 
 .quotes__item__portrait {
 	margin: 0 auto;
