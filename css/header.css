@@ -20,6 +20,10 @@
 	width: 70px;
 }
 
+.header__logo svg {
+	width: 100%;
+}
+
 .header__on {
 
 }
@@ -55,6 +59,10 @@
 
 .panel__logo {
 	width: 70px;
+}
+
+.panel__logo svg {
+	width: 100%;
 }
 
 .panel__link {
