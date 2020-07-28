@@ -63,7 +63,7 @@ const Reveal = {
 
 
 	Observe: function(el) {
-		let observer = new IntersectionObserver(onIntersection, {rootMargin: '-10px', threshold: 0.01});
+		let observer = new IntersectionObserver(onIntersection, {rootMargin: '0px', threshold: 0.01});
 		setTimeout(function(){
 			for (let e of el){
 				observer.observe(e);
