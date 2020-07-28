@@ -21,3 +21,13 @@ form:
             header.selected_media_alt:
               type: text
               label: Selected Media Alt
+
+            header.veil:
+              type: toggle
+              label: Veil
+              highlight: 0
+              default: 0
+              options: 
+                0: 'No'
+                1: 'Yes'
+
