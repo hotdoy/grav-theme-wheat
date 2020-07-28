@@ -15,7 +15,7 @@
 			
 			else if (!!href && href.match('^/')) {
 				link.addEventListener('click', function(event){
-					body.classList.add('exiting');
+					body.classList.add('navigating');
 				}, false);
 				let preLoadLink = document.createElement("link");
 				preLoadLink.rel = 'prerender';

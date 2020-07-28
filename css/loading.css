@@ -1,3 +1,4 @@
+// Use transitions for the loader and animations for whatever moving things you put in it
 #loading{
 	position: fixed;
 	top: 0;
@@ -47,13 +48,14 @@ body.loaded #loading.intro {
 
 
 
-/*EXIT*/
-/*.exiting #content {
-  animation-name: exiting;
+
+/*UNLOAD*/
+.navigating.unloading #content {
+  animation-name: unloading;
   animation-duration: 0.2s; 
   animation-fill-mode: forwards;
 }
-@keyframes exiting {
+@keyframes unloading {
     from {opacity: 1; transform: translateY(0px);}
     to {opacity: 0; transform: translateY(10px);}
-}*/
+}

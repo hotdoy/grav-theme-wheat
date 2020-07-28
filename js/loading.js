@@ -18,15 +18,22 @@ const Loading = {
 		}, delay);
 	},
 
+	Unload: function(context) {
+		if (!!context) {
+			window.addEventListener('beforeunload', function (e) {
+				context.classList.add('unloading');
+			});
+		}
+	},
+
 	Init: function() {
 		const context = document.body;
 		const loader = document.getElementById("loading");
 		const delay = loader.dataset.loadedDelay ? loader.dataset.loadedDelay : '0';
 		Loading.Loaded(context, delay, loader);
+		Loading.Unload(context);
 	},
 
 }
 
 Loading.Init();
-
-// Use transitions for the loader and animations for whatever moving things you put in it
