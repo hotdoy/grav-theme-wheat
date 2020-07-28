@@ -7,7 +7,7 @@
 <section class="module splash {{ optional_classes }}">
 	<div class="splash__ctn">
 
-		<div class="splash__media fill">
+		<div class="splash__media fill" data-reveal="reveal--scalein">
 		{% if selected_media.type == 'video' %}
 			{{ selected_media.controls(0).autoplay(1).muted(1).loop(1).html('', selected_media_alt) }}
 		{% else %}
