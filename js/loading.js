@@ -14,6 +14,7 @@ const Loading = {
 				context.classList.add('loaded');
 				context.classList.remove('loading');
 				Loading.Remove(loader);
+				Loading.Unload(context);
 			}
 		}, delay);
 	},
@@ -31,7 +32,6 @@ const Loading = {
 		const loader = document.getElementById("loading");
 		const delay = loader.dataset.loadedDelay ? loader.dataset.loadedDelay : '0';
 		Loading.Loaded(context, delay, loader);
-		Loading.Unload(context);
 	},
 
 }
