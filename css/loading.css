@@ -13,7 +13,7 @@
 
 /*TRANSITION*/
 #loading.transition {
-	background-color: white;
+	background-color: var(--color-bg);
 	z-index: 4000;	
 }
 
