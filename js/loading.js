@@ -1,6 +1,6 @@
 const Loading = {
 
-	Remove: function(loader) {
+	RemoveLoader: function(loader) {
 		if (!!loader) {
 		    loader.addEventListener('transitionend', () =>{
 		    	loader.remove();
@@ -8,18 +8,17 @@ const Loading = {
 		}
 	},
 
-	Loaded: function(context, delay, loader) {
+	SetLoadedState: function(context, delay, loader) {
 		setTimeout(function(){ 
 			if (!!context.classList.contains('loading')) {
 				context.classList.add('loaded');
 				context.classList.remove('loading');
-				Loading.Remove(loader);
-				Loading.Unload(context);
+				Loading.RemoveLoader(loader);
 			}
 		}, delay);
 	},
 
-	Unload: function(context) {
+	SetUnloadEvent: function(context) {
 		if (!!context) {
 			window.addEventListener('beforeunload', function (e) {
 				context.classList.add('unloading');
@@ -29,9 +28,10 @@ const Loading = {
 
 	Init: function() {
 		const context = document.body;
-		const loader = document.getElementById("loading");
+		const loader = document.getElementById('loading');
 		const delay = loader.dataset.loadedDelay ? loader.dataset.loadedDelay : '0';
-		Loading.Loaded(context, delay, loader);
+		Loading.SetLoadedState(context, delay, loader);
+		Loading.SetUnloadEvent(context);
 	},
 
 }
