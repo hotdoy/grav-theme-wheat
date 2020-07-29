@@ -1,4 +1,4 @@
-// Use transitions for the loader and animations for whatever moving things you put in it
+/*Use transitions for the loader and animations for whatever moving things you put in it*/
 #loading{
 	position: fixed;
 	top: 0;
@@ -13,14 +13,15 @@
 
 /*TRANSITION*/
 #loading.transition {
-	background-color: var(--color-bg);
+	background-color: white;
 	z-index: 4000;	
 }
 
-body.loaded #loading.transition {
-	/*transition: all 0.2s; */
+.loaded #loading.transition {
 	opacity: 0;
 	visibility: hidden;
+	transition-property: opacity visibility; 
+	transition-duration: 0.2s;
 }
 
 
