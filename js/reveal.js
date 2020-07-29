@@ -83,7 +83,7 @@ const Reveal = {
 
 	Init: function(context) {
 		Reveal.PropagateAutoReveal(context);
-		let el = context.querySelectorAll("[data-reveal]");
+		const el = context.querySelectorAll("[data-reveal]");
 		Reveal.HideElements(el);
 		Reveal.Observe(el);
 	},
