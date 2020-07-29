@@ -30,19 +30,19 @@
        url('../fonts/Inter/inter-v1-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+html {
+  --font-base: 'Inter', sans-serif;
+  font-size: 16px;
+  font-family: var(--font-base);
+}
+
 
 
 
 
 /*===========================================
-					     BASIC RULES 
+					         TEXT
 ============================================*/
-html {
-  --font-base: 'Inter', sans-serif;
-  font-size: 16px;
-  font-family: var(--font-base);
-  text-rendering: optimizeLegibility;
-}
 
 .text h2, .text h1 {
   margin-top: 4rem;
