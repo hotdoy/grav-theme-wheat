@@ -4,7 +4,7 @@
 
 	const InitShare = function(){
 
-        const shareButtons = document.querySelectorAll('.js-share-button');
+        const shareButtons = document.querySelectorAll('[data-share-button]');
         const shareDialog = document.getElementById('share__dialog');
         const closeDialogButton = shareDialog.getElementsByClassName('share__dialog__close');
         const title = document.title;
