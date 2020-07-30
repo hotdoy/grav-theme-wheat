@@ -16,8 +16,8 @@ const Reveal = {
 
 	GetRevealClass: function(e) {
 		if (!!e) {
-			let rawClass = e.dataset.reveal.length ? e.dataset.reveal : Reveal.defaultRevealClass;
-			let classArray = rawClass.split(" ");
+			const rawClass = e.dataset.reveal.length ? e.dataset.reveal : Reveal.defaultRevealClass;
+			const classArray = rawClass.split(" ");
 			return classArray;
 		}
 	},
@@ -25,19 +25,19 @@ const Reveal = {
 
 	GetAutoRevealClass: function(e) {
 		if (!!e) {
-			let rawClass = e.dataset.autoReveal.length ? e.dataset.autoReveal : Reveal.defaultRevealClass;
-			let classArray = rawClass.split(" ");
+			const rawClass = e.dataset.autoReveal.length ? e.dataset.autoReveal : Reveal.defaultRevealClass;
+			const classArray = rawClass.split(" ");
 			return classArray;
 		}
 	},
 
 
 	PropagateAutoReveal: function(context) {
-		let el = context.querySelectorAll("[data-auto-reveal]");
+		const el = context.querySelectorAll("[data-auto-reveal]");
 		if (!!el) {
 			for (let e of el) {
-				let classList = Reveal.GetAutoRevealClass(e);
-				let children = e.children;
+				const classList = Reveal.GetAutoRevealClass(e);
+				const children = e.children;
 				if (!!children) {
 					for (let c of children) {
 						c.setAttribute("data-reveal", classList);
@@ -63,7 +63,7 @@ const Reveal = {
 
 
 	Observe: function(el) {
-		let observer = new IntersectionObserver(onIntersection, {rootMargin: '0px', threshold: 0.01});
+		const observer = new IntersectionObserver(onIntersection, {rootMargin: '0px', threshold: 0.01});
 		setTimeout(function(){
 			for (let e of el){
 				observer.observe(e);

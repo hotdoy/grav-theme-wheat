@@ -28,8 +28,8 @@ const Loading = {
 
 	Init: function() {
 		const context = document.body;
-		const loader = document.getElementById('loading');
-		const delay = loader.dataset.loadedDelay ? loader.dataset.loadedDelay : '0';
+		const loader = context.querySelectorAll('[data-loading]');
+		const delay = loader[0].dataset.loadedStateDelay ? loader[0].dataset.loadedStateDelay : '0';
 		Loading.SetLoadedState(context, delay, loader);
 		Loading.SetUnloadEvent(context);
 	},

@@ -1,9 +1,9 @@
 {% set loading = page.header.loading ?? 'transition' %}
 
 {% if loading == 'intro' %}
-<div id="loading" class="intro" data-reveal-delay="1100" data-loaded-delay="900">{% include 'partials/logo.html.twig' %}</div>
+<div class="intro" data-loading data-loaded-state-delay="900" data-reveal-delay="1100">{% include 'partials/logo.html.twig' %}</div>
 {% else %}
-<div id="loading" class="transition" data-reveal-delay="100" data-loaded-delay="0"></div>
+<div class="transition" data-loading data-loaded-state-delay="0" data-reveal-delay="100"></div>
 {% endif %}
 
 

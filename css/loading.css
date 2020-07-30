@@ -1,5 +1,5 @@
-/*Use transitions for the loader and animations for whatever moving things you put in it*/
-#loading{
+/*Use transitions for the loader and animations for whatever moving things you put in it to prevent bubbling*/
+[data-loading]{
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -12,12 +12,12 @@
 
 
 /*TRANSITION*/
-#loading.transition {
+[data-loading].transition {
 	background-color: var(--color-bg);
 	z-index: 4000;	
 }
 
-.loaded #loading.transition {
+.loaded [data-loading].transition {
 	opacity: 0;
 	visibility: hidden;
 	transition-property: opacity visibility; 
@@ -29,7 +29,7 @@
 
 
 /*INTRO*/
-#loading.intro {
+[data-loading].intro {
 	background-color: black;
 	color: white;
 	z-index: 9999;	
@@ -41,7 +41,7 @@
 	transition-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-body.loaded #loading.intro {
+body.loaded [data-loading].intro {
 	transform: translateY(-100%);
 	visibility: hidden;
 }

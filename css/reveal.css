@@ -23,11 +23,11 @@
 
 /*CASCADE OF SIBLING ELEMENTS*/
 .reveal--cascade {
-	animation-name: reveal_grid_item;
+	animation-name: revealcascade;
 	animation-duration: 0.5s; 
 }
 
-@keyframes reveal_grid_item {
+@keyframes revealcascade {
     from {opacity: 0; transform: translateY(10px);}
     to {opacity: 1; transform: translateY(0px);}
 }
@@ -41,20 +41,4 @@
 	.reveal--cascade:nth-child(6) { animation-delay: 0.30s; }
 	.reveal--cascade:nth-child(7) { animation-delay: 0.35s; }
 	.reveal--cascade:nth-child(8) { animation-delay: 0.40s; }
-}
-
-
-
-
-
-/*SCALE-IN*/
-.reveal--scalein {
-    animation-name: scalein;
-    animation-duration: 5s;
-    animation-delay: 0s;
-    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
-@keyframes scalein {
-	from {opacity: 0; transform: scale(1.1);}
-	to {opacity: 1; transform: scale(1)}
 }

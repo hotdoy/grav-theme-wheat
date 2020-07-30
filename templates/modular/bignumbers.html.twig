@@ -11,9 +11,9 @@
 		<h2 class="bignumbers__title">{{ page.title }}</h2>
 		{% endif %}
 
-		<div class="bignumbers__grid">
+		<div class="bignumbers__grid" data-auto-reveal="reveal--cascade">
 			{% for item in page.header.items %}
-				<div class="bignumbers__item" data-reveal="reveal--cascade">
+				<div class="bignumbers__item">
 					<h3 class="bignumbers__item__number">{{ item.number }}</h3>
 					<div class="bignumbers__item__text">{{ item.text|markdown }}</div>
 				</div>
