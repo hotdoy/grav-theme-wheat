@@ -11,9 +11,9 @@
 		<h2 class="features__title">{{ page.title }}</h2>
 		{% endif %}
 
-		<div class="features__grid" data-auto-reveal="reveal--cascade">
+		<div class="features__grid">
 			{% for item in page.header.items %}
-			<div class="features__item">
+			<div class="features__item" data-reveal="reveal--cascade">
 
 				{% set icon = item.icon ? page.media[item.icon] %}
 				{% if icon %}

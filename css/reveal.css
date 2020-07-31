@@ -13,7 +13,7 @@
 	animation-duration: 0.5s; 
 }
 @keyframes reveal {
-    from {opacity: 0; transform: translateY(25px);}
+    from {opacity: 0; transform: translateY(10px);}
     to {opacity: 1; transform: translateY(0px);}
 }
 
@@ -41,4 +41,20 @@
 	.reveal--cascade:nth-child(6) { animation-delay: 0.30s; }
 	.reveal--cascade:nth-child(7) { animation-delay: 0.35s; }
 	.reveal--cascade:nth-child(8) { animation-delay: 0.40s; }
+}
+
+
+
+
+
+/*CONTENT*/
+.reveal--content {
+	animation-name: revealcontent;
+	animation-duration: 0.5s; 
+}
+
+
+@keyframes revealcontent {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0px);}
 }

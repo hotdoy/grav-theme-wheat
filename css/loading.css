@@ -53,10 +53,11 @@ body.loaded [data-loading].intro {
 /*UNLOAD*/
 .navigating.unloading #content {
   animation-name: unloading;
-  animation-duration: 0.2s; 
+  animation-duration: 0.1s; 
   animation-fill-mode: forwards;
 }
 @keyframes unloading {
     from {opacity: 1;}
     to {opacity: 0; transform: translateY(10px);}
 }
+
