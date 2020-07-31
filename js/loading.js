@@ -30,7 +30,7 @@ const Loading = {
 		const context = document.body;
 		const loader = context.querySelectorAll('[data-loading]');
 		const delay = loader[0].dataset.loadedStateDelay ? loader[0].dataset.loadedStateDelay : '0';
-		Loading.SetLoadedState(context, delay, loader);
+		Loading.SetLoadedState(context, delay, loader[0]);
 		Loading.SetUnloadEvent(context);
 	},
 
