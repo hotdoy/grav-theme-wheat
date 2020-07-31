@@ -1,0 +1,38 @@
+.dialog {
+	--color-bg: #32325d;
+	--color-fg: #f6f9fc;
+
+	margin-bottom: var(--rhythm);
+}
+
+.dialog__header {
+	position: relative;
+	height: var(--header-heigth);
+	color: var(--color-fg);
+	z-index: 5000;
+}
+
+.dialog__header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	padding: 0 var(--gutter);
+	width: 100%;
+	height: 100%;
+	max-width: var(--width-body);
+}
+
+.dialog__header-logo {
+	width: 70px;
+}
+
+.dialog__header-logo svg {
+	width: 100%;
+}
+
+.dialog__header-toggle {
+
+}
+
+
