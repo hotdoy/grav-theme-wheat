@@ -5,12 +5,18 @@ form:
   fields:
     tabs:
       fields:
-        advanced:
+        options:
           fields:
-            columns:
+            publishing:
               fields:
-                column1:
-                  fields:
-                    header.body_classes:
-                      markdown: true
-                      description: '```dark```, ```remove_footer_margin```'
+                header.page_title:
+                  type: text
+                  label: Page Title
+
+                header.meta_description:
+                  type: text
+                  label: Meta Description
+
+                header.meta_image:
+                  label: Meta Image
+                  type: pagemediaselect

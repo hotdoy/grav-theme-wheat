@@ -1,6 +1,6 @@
 {% set title %}
-{% if page.header.meta_title %}
-{{- page.header.meta_title -}}
+{% if page.header.page_title %}
+{{- page.header.page_title -}}
 {% elseif page.header.title and page.url != base_url %}
 {{- page.header.title|e('html') }} - {{ site.title|e('html') -}}
 {% else %}
@@ -18,12 +18,13 @@
 {% endif %}
 {% endset %}
 
-{% set og_type = og_type|default('website') %}
-{% set url = url|default(page.url(true, true)) %}
-{% set image = image|default(page.media.images|first ? uri.base() ~ page.media.images|first.url : '') %}
+{% set og_type = 'website' %}
+{% set url = page.url(true, true) %}
+{% set image = page.header.meta_image ? uri.base() ~ page.media[page.header.meta_image].url : '' %}
 	
 <meta charset="utf-8" />
 <title>{{ title }}</title>
+<description>{{ description }}</description>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -56,5 +57,3 @@
 <meta name="twitter:description" content="{{ description }}" />
 {% if image %}<meta name="twitter:image" content="{{ image }}" />{% endif %}
 {% endif %}
-
-
