@@ -1,6 +1,7 @@
 /*.default{}*/
 
 .default__title {
+	padding: 0 var(--gutter);
 	margin: 0 auto;
 	text-align: center;
 	font-weight: 700;

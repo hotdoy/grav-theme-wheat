@@ -31,11 +31,10 @@
 	width: 100%;
 }
 
-.dialog__header-toggle {
-
-}
+/*.dialog__header-toggle {}*/
 
 .dialog__title {
+	padding: 0 var(--gutter);
 	margin: 0 auto;
 	text-align: center;
 	font-weight: 700;
