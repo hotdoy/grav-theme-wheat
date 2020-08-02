@@ -4,7 +4,7 @@
     z-index: 1000;
 }
 
-/*.module.padded {
+.module.padded {
       padding: var(--rhythm) 0 var(--rhythm) 0;
 }
 
@@ -21,4 +21,3 @@
     margin-top: calc(var(--rhythm)*2);
     margin-bottom: calc(var(--rhythm)*2);
 }
-*/

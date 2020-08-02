@@ -19,7 +19,7 @@ html, .light {
 	--shadow-material: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
 	--shadow-material-hover: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
 
-	--width-text: 1072px;
+	--width-text: 735px;
 	--width-body: 1072px;
 	--width-site: 1600px;
 	--width-full: 1920px;
