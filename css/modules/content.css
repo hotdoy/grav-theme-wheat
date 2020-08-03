@@ -26,6 +26,7 @@
 	display: block;
 	margin: 0 auto 0 auto;
 	width: 100%;
+	border-radius: 8px;
 }
 
 .content pre {
@@ -36,12 +37,13 @@
 	padding: 0;
 }
 
-/*YOUTUBE - VIMEO*/
+/*YOUTUBE | VIMEO*/
 .content .embed__ctn {
 	max-width: var(--width-body);
 	padding-left: var(--gutter);
 	padding-right: var(--gutter);
 	margin: 0 auto;
+	margin-top: 2rem;
 }
 
 .content .embed.youtube,
@@ -61,6 +63,17 @@
 	width: 100%; 
 	height: 100%;
 	border-radius: 8px;
+}
+
+/*SPOTIFY*/
+.content iframe[src*="spotify"] {
+	display: block;
+	margin: 0 auto;
+	margin-top: 2rem;
+	padding-left: var(--gutter);
+	padding-right: var(--gutter);
+	width: 100%;
+	max-width: var(--width-text);
 }
 
 /* TABLES */
@@ -88,8 +101,4 @@ table, th, td {
     line-height: 1;
     padding-top: 2px;
     padding-right: 8px;
-}
-
-.content h1 {
-	font-weight: 700;
 }
