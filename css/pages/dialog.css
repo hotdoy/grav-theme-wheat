@@ -5,6 +5,10 @@
 	margin-bottom: var(--rhythm);
 }
 
+
+
+
+/*HEADER*/
 .dialog__header {
 	position: relative;
 	height: var(--header-heigth);
@@ -31,14 +35,27 @@
 	width: 100%;
 }
 
-/*.dialog__header-toggle {}*/
 
+
+
+
+/*TITLE*/
 .dialog__title {
 	padding: 0 var(--gutter);
 	margin: 0 auto;
+	margin-top: calc(var(--rhythm) - (var(--header-heigth)/2));
 	text-align: center;
 	font-weight: 700;
 	max-width: var(--width-text);
 }
 
-
+.dialog__title h1 {
+  margin-top: 0;
+  font-size: xx-large;
+  line-height: 1.1;
+}
+@media (min-width: 735px) {
+  .dialog__title h1 {
+    font-size: xxx-large;
+  }
+}
