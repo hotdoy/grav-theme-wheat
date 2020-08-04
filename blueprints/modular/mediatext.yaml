@@ -35,16 +35,3 @@ form:
                 left: 'Left'
                 right: 'Right'
 
-        options:
-          fields:
-
-            header.title_level:
-              ordering@: header.display_title
-              type: toggle
-              label: Title Level
-              toggleable: true
-              highlight: 2
-              default: 2
-              options: 
-                1: 'h1'
-                2: 'h2'

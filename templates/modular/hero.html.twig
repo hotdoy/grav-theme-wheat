@@ -1,0 +1,33 @@
+{% set optional_classes = page.header.optional_classes %}
+{% set display_title = page.header.display_title ?? 'true' %}
+{% set title_level = page.header.title_level ?? '2' %}
+{% set selected_media = page.header.selected_media ? page.media[page.header.selected_media] %}
+{% set selected_media_alt = page.header.selected_media_alt ?? '' %}
+{% set media_position = page.header.media_position ?? 'left' %}
+{% set content = page.content %}
+
+<section class="module hero hero--{{ media_position }} {{ optional_classes }}">
+	<div class="hero__ctn">
+		<div class="hero__media" data-reveal>
+			{% if selected_media.type == 'video' %}
+			{{ selected_media.controls(0).autoplay(1).muted(1).loop(1).html('', selected_media_alt) }}
+			{% else %}
+			{{ selected_media.html('', selected_media_alt) }}
+			{% endif %}
+		</div>
+		<div class="hero__content text" data-reveal>
+
+			{% if display_title %}
+			{% if page.header.caption %}
+			<div class="hero__caption">{{ page.header.caption }}</div>
+			{% endif %}
+			<h{{ title_level }} class="hero__title">{{ page.title }}</h{{ title_level }}>
+			{% endif %}
+			
+			{% if content %}
+			<div class="text">{{ content|raw }}</div>
+			{% endif %}
+			
+		</div>
+	</div>
+</section>

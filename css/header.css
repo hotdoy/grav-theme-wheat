@@ -38,7 +38,7 @@
 	position: fixed;
 	top: 0;
 	right: 0;
-	bottom: 0;
+	bottom: 50%;
 	left: 0;
 	background-color: var(--color-fg);
 	color: var(--color-bg);
@@ -70,11 +70,6 @@
 	font-size: xxx-large;
 	font-weight: 700;
 	margin-top: 25px;
-
-	transition-property: opacity, transform;
-	transition-duration: 0.2s;
-	opacity: 0;
-	transform: translateY(10px);
 }
 
 
@@ -85,17 +80,3 @@
 .header--on .panel {
 	visibility: visible;
 }
-
-.header--on .panel__link {
-	opacity: 1;
-	transform: translateY(0px);
-}
-
-.header--on li:nth-child(1) > .panel__link {transition-delay: 0.15s;}
-.header--on li:nth-child(2) > .panel__link {transition-delay: 0.20s;}
-.header--on li:nth-child(3) > .panel__link {transition-delay: 0.25s;}
-.header--on li:nth-child(4) > .panel__link {transition-delay: 0.30s;}
-.header--on li:nth-child(5) > .panel__link {transition-delay: 0.35s;}
-.header--on li:nth-child(6) > .panel__link {transition-delay: 0.40s;}
-.header--on li:nth-child(7) > .panel__link {transition-delay: 0.45s;}
-.header--on li:nth-child(8) > .panel__link {transition-delay: 0.50s;}
