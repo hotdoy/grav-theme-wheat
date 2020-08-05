@@ -13,14 +13,15 @@ RewriteRule (.*) %{REQUEST_URI}/ [R=301,L]
 
 ## Security
 <IfModule mod_headers.c>
+Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' cdnjs.cloudflare.com *.googleapis.com https://*.googleapis.com *.gstatic.com https://*.gstatic.com ajax.googleapis.com *.youtube.com https://*.youtube.com *.ytimg.com https://*.ytimg.com *.vimeo.com https://*.vimeo.com *.vimeocdn.com https://*.vimeocdn.com www.gravatar.com *.google-analytics.com *.doubleclick.net *.google.com data:; connect-src 'self'"
+
 Header unset Server
 Header unset X-Powered-By
-Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' cdnjs.cloudflare.com *.googleapis.com https://*.googleapis.com *.gstatic.com https://*.gstatic.com ajax.googleapis.com *.youtube.com https://*.youtube.com *.ytimg.com https://*.ytimg.com *.vimeo.com https://*.vimeo.com *.vimeocdn.com https://*.vimeocdn.com www.gravatar.com *.google-analytics.com *.doubleclick.net *.google.com data:; connect-src 'self'"
-Header always set Access-Control-Allow-Origin "*"
-Header always set Access-Control-Allow-Credentials true
-Header always set Access-Control-Allow-Methods "GET, PUT, POST, DELETE, HEAD, OPTIONS"
-Header always set X-XSS-Protection "X-XSS-Protection: 1; mode=block"
-Header always set X-Content-Type-Options nosniff
-Header always append X-Frame-Options SAMEORIGIN
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Credentials true
+Header set Access-Control-Allow-Methods "GET, PUT, POST, DELETE, HEAD, OPTIONS"
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Content-Type-Options nosniff
+Header append X-Frame-Options SAMEORIGIN
 Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
 </IfModule>
