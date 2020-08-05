@@ -9,8 +9,8 @@ RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [L,NE,R=301]
 
 # Force trailing slash
-RewriteCond %{REQUEST_URI} !(/$|\.) 
-RewriteRule (.*) %{REQUEST_URI}/ [R=301,L] 
+# RewriteCond %{REQUEST_URI} !(/$|\.) 
+# RewriteRule (.*) %{REQUEST_URI}/ [R=301,L] 
 
 ## Begin RewriteBase
 # If you are getting 500 or 404 errors on subpages, you may have to uncomment the RewriteBase entry
@@ -75,18 +75,19 @@ RewriteRule \.md$ error [F]
 RewriteRule (^|/)\.(?!well-known) - [F]
 # Block access to specific files in the root folder
 RewriteRule ^(LICENSE\.txt|composer\.lock|composer\.json|\.htaccess)$ error [F]
+
 <IfModule mod_headers.c>
 Header unset Server
 Header unset X-Powered-By
-Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' cdnjs.cloudflare.com *.googleapis.com https://*.googleapis.com *.gstatic.com https://*.gstatic.com ajax.googleapis.com *.youtube.com https://*.youtube.com *.ytimg.com https://*.ytimg.com *.vimeo.com https://*.vimeo.com *.vimeocdn.com https://*.vimeocdn.com www.gravatar.com *.google-analytics.com *.doubleclick.net *.google.com data:; connect-src 'self'"
-Header always set Access-Control-Allow-Origin "*"
-Header always set Access-Control-Allow-Credentials true
-Header always set Access-Control-Allow-Methods "GET, PUT, POST, DELETE, HEAD, OPTIONS"
-Header always set X-XSS-Protection "X-XSS-Protection: 1; mode=block"
-Header always set X-Content-Type-Options nosniff
-Header always append X-Frame-Options SAMEORIGIN
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Credentials true
+Header set Access-Control-Allow-Methods "GET, PUT, POST, DELETE, HEAD, OPTIONS"
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Content-Type-Options nosniff
+Header append X-Frame-Options SAMEORIGIN
 Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
 </IfModule>
+
 ## End - Security
 
 </IfModule>
