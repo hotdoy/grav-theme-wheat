@@ -1,8 +1,11 @@
 {# PRELOAD #}
 <link rel="preload" href="{{ url('theme://fonts/Inter/inter-v1-latin-regular.woff2', true) }}" as="font" crossorigin>
 
-{# LOADING #}
-{% do assets.addCss('theme://css/loading.css', { loading : 'inline' }) %}
+{# INLINE #}
+{% do assets.addCss('theme://css/loading.css', {loading : 'inline'}) %}
+
+{# EXTERNAL: BEFORE #}
+{% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.18/default/snipcart.css', {position:'before'}) %}
 
 {# THEME #}
 {% do assets.addCss('theme://css/reset.css') %}
@@ -12,7 +15,6 @@
 
 {# LIBS #}
 {% do assets.addCss('theme://libs/swiper/swiper.min.css') %}
-{% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.18/default/snipcart.css') %}
 
 {# COMPONENTS #}
 {% do assets.addCss('theme://css/header.css') %}
