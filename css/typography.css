@@ -134,9 +134,9 @@ html {
 
 .text ul {
   margin-top: 1rem;
-  margin-bottom: 1rem;
   line-height: 1.6;
-  list-style-position: inside;
+  list-style-position: outside;
+  padding-left: 1em;
   list-style-type: disc;
 }
 
@@ -144,7 +144,7 @@ html {
   margin-top: 1rem;
   margin-bottom: 1rem;
   line-height: 1.6;
-  list-style-position: inside;
+  list-style-position: outside;
   list-style-type: decimal;
 }
 
