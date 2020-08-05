@@ -9,8 +9,9 @@ RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [L,NE,R=301]
 
 # Force trailing slash
-# RewriteCond %{REQUEST_URI} !(/$|\.) 
-# RewriteRule (.*) %{REQUEST_URI}/ [R=301,L] 
+RewriteCond %{REQUEST_URI} !(/$|\.) 
+RewriteCond %{REQUEST_URI} !/admin
+RewriteRule (.*) %{REQUEST_URI}/ [R=301,L]
 
 ## Begin RewriteBase
 # If you are getting 500 or 404 errors on subpages, you may have to uncomment the RewriteBase entry

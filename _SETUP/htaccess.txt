@@ -9,6 +9,7 @@ RewriteRule ^ https://%1%{REQUEST_URI} [L,NE,R=301]
 
 # Force trailing slash
 RewriteCond %{REQUEST_URI} !(/$|\.) 
+RewriteCond %{REQUEST_URI} !/admin
 RewriteRule (.*) %{REQUEST_URI}/ [R=301,L]
 
 ## Security
