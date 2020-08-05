@@ -31,8 +31,13 @@ h2.enum-text__title {
 
 .enum-text__grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-gap: var(--gutter);
+}
+@media (min-width: 411px) {
+	.enum-text__grid {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 @media (min-width: 835px) {
 	.enum-text__grid {
