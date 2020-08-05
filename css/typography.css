@@ -136,7 +136,7 @@ html {
   margin-top: 1rem;
   line-height: 1.6;
   list-style-position: outside;
-  padding-left: 1em;
+  padding-left: 18px;
   list-style-type: disc;
 }
 
@@ -145,6 +145,7 @@ html {
   margin-bottom: 1rem;
   line-height: 1.6;
   list-style-position: outside;
+  padding-left: 18px;
   list-style-type: decimal;
 }
 

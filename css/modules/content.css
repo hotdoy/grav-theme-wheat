@@ -11,6 +11,10 @@
 	margin-right: auto;
 }
 
+.content ul li {
+	margin-left: 18px;
+}
+
 /*REMOVE MARGIN FOR FIRST ELEMENT*/
 .content> *:nth-child(1) {
 	margin-top: 0;
