@@ -1,0 +1,73 @@
+.enum-text__ctn {
+	width: 100%;
+	max-width: var(--width-body);
+	margin: 0 auto;
+	padding: 0 var(--gutter);
+}
+
+.enum-text__caption {
+	margin-top: 2rem;
+	font-size: small;
+	letter-spacing: 3px;
+    color: var(--color-hl);
+}
+@media (min-width: 835px) {
+	.enum-text__caption {
+		margin-top: 0;
+	}
+}
+
+h2.enum-text__title {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	font-weight: 700;
+}
+@media (min-width: 835px) {
+	h2.enum-text__title {
+		margin-bottom: 2rem;
+		max-width: 65%;
+	}
+}
+
+.enum-text__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: var(--gutter);
+}
+@media (min-width: 835px) {
+	.enum-text__grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: calc(var(--gutter)*2);
+	}
+}
+
+.enum-text__item__content p,
+.enum-text__item__content h1,
+.enum-text__item__content h2,
+.enum-text__item__content h3,
+.enum-text__item__content h4,
+.enum-text__item__content h5,
+.enum-text__item__content li,
+.enum-text__item__content img,
+.enum-text__item__content svg,
+.enum-text__item__content video {
+	margin-top: 0.5rem;
+	font-size: small;
+}
+
+.enum-text__item__content h1,
+.enum-text__item__content h2,
+.enum-text__item__content h3,
+.enum-text__item__content h4,
+.enum-text__item__content h5{
+	font-size: larger;
+	line-height: 1.2;
+	font-weight: 700;
+	color: var(--color-hl);
+}
+
+/*REMOVE MARGIN FOR FIRST ELEMENT*/
+.enum-text__item__content> *:nth-child(1) {
+	margin-top: 0;
+}

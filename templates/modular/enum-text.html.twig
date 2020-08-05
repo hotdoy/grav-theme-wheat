@@ -1,0 +1,22 @@
+{% set optional_classes = page.header.optional_classes %}
+{% set display_title = page.header.display_title ?? 'true' %}
+
+<section class="module enum-text {{ optional_classes }}">
+	<div class="enum-text__ctn text" data-reveal>
+
+		{% if display_title %}
+		{% if page.header.caption %}
+		<div class="enum-text__caption">{{ page.header.caption }}</div>
+		{% endif %}
+		<h2 class="enum-text__title">{{ page.title }}</h2>
+		{% endif %}
+
+		<div class="enum-text__grid">
+			{% for item in page.header.items %}
+			<div class="enum-text__item" data-reveal="reveal--cascade">
+				<div class="enum-text__item__content">{{ item.text|markdown }}</div>
+			</div>
+			{% endfor %}
+		</div>	
+	</div>
+</section>
