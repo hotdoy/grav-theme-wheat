@@ -1,0 +1,78 @@
+.enum-card__ctn {
+	width: 100%;
+	max-width: var(--width-body);
+	margin: 0 auto;
+	padding: 0 var(--gutter);
+}
+
+.enum-card__caption {
+	margin-top: 2rem;
+	font-size: small;
+    letter-spacing: 3px;
+    color: var(--color-hl);
+}
+@media (min-width: 835px) {
+	.enum-card__caption {
+		margin-top: 0;
+	}
+}
+
+h2.enum-card__title {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	font-weight: 700;
+}
+@media (min-width: 835px) {
+	h2.enum-card__title {
+		margin-bottom: 3rem;
+		max-width: 65%;
+	}
+}
+
+.enum-card__grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 2rem;
+}
+@media (min-width: 835px) {
+	.enum-card__grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: 2rem;
+	}
+}
+
+.enum-card__item {
+	background-color: var(--color-material-bg);
+	color: var(--color-material-fg);
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: var(--shadow-material);
+}
+
+.enum-card__item__icon {
+	width: 50px;
+}
+
+.enum-card__item__icon img {
+	width: 100%;
+}
+
+h3.enum-card__item__title {
+	font-size: medium;
+	font-weight: 700;
+	margin-top: 1rem;
+}
+
+.enum-card__item__text {
+	margin-top: 0.5rem;
+}
+
+.enum-card__item__text>p {
+	font-size: small;
+}
+
+/*REMOVE MARGIN FOR FIRST ELEMENT*/
+.enum-card__item__text> *:nth-child(1) {
+	margin-top: 0;
+}

@@ -1,0 +1,35 @@
+title: product
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            header.id:
+              type: text
+              label: ID
+
+            header.name:
+              type: text
+              label: Name
+
+            header.price:
+              type: text
+              label: Price
+              validate:
+                type: number
+                min: 0
+
+            header.description:
+              type: text
+              label: Description
+
+            header.main_image:
+              label: Main Image
+              type: pagemediaselect
+              accept:
+                - jpg
+              

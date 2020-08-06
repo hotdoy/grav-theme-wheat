@@ -76,8 +76,15 @@
 	margin-top: 2rem;
 	padding-left: var(--gutter);
 	padding-right: var(--gutter);
-	width: 100%;
 	max-width: var(--width-text);
+}
+
+.content iframe[src*="spotify/embed-podcast"] {
+	width: 100%;
+}
+
+.content iframe[src*="spotify/embed/track"] {
+	width: 100%;
 }
 
 /* TABLES */

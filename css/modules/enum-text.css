@@ -34,7 +34,7 @@ h2.enum-text__title {
 	grid-template-columns: 1fr;
 	grid-gap: var(--gutter);
 }
-@media (min-width: 411px) {
+@media (min-width: 512px) {
 	.enum-text__grid {
 		grid-template-columns: 1fr 1fr;
 	}
@@ -53,7 +53,8 @@ h2.enum-text__title {
 .enum-text__item__content h3,
 .enum-text__item__content h4,
 .enum-text__item__content h5,
-.enum-text__item__content li,
+.enum-text__item__content ul,
+.enum-text__item__content ol,
 .enum-text__item__content img,
 .enum-text__item__content svg,
 .enum-text__item__content video {
