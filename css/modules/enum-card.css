@@ -42,6 +42,7 @@ h2.enum-card__title {
 	}
 }
 
+a.enum-card__item,
 .enum-card__item {
 	position: relative;
 	display: flex;
@@ -56,12 +57,17 @@ h2.enum-card__title {
     overflow: hidden;
     transition-property: box-shadow, transform;
     transition-duration: 0.2s;
+    text-decoration: none;
+}
+
+a.enum-card__item:hover {
+	transform: translateY(-2px);
+    box-shadow: var(--shadow-material-hover);
     cursor: pointer;
 }
 
-.enum-card__item:hover {
-	transform: translateY(-2px);
-    box-shadow: var(--shadow-material-hover);
+a.enum-card__item:hover:active {
+	transform: translateY(1px);
 }
 
 h3.enum-card__item__title {
