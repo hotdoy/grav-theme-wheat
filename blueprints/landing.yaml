@@ -1,0 +1,20 @@
+title: landing
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            content:
+              unset@: true
+
+            header.header_media:
+              label: Header Media
+              type: pagemediaselect
+              
+            header.header_media_alt:
+              type: text
+              label: Header Media Alt
