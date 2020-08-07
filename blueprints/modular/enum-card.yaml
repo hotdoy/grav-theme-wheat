@@ -29,12 +29,16 @@ form:
               style: vertical
               label: Items
               fields:
-                .icon:
-                  label: Icon
-                  type: pagemediaselect
                 .title:
                   type: text
                   label: title
                 .text:
                   type: textarea
                   label: Text
+                .url:
+                  type: text
+                  label: Url
+                .color:
+                  label: Color
+                  type: colorpicker
+

@@ -43,36 +43,53 @@ h2.enum-card__title {
 }
 
 .enum-card__item {
+	position: relative;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px 40px 20px;
+    min-height: 300px;
 	background-color: var(--color-material-bg);
-	color: var(--color-material-fg);
-	padding: 2rem;
-	border-radius: 8px;
-	box-shadow: var(--shadow-material);
+    color: var(--color-material-fg);
+    border-radius: 8px;
+    box-shadow: var(--shadow-material);
+    overflow: hidden;
+    transition-property: box-shadow, transform;
+    transition-duration: 0.2s;
+    cursor: pointer;
 }
 
-.enum-card__item__icon {
-	width: 50px;
-}
-
-.enum-card__item__icon img {
-	width: 100%;
+.enum-card__item:hover {
+	transform: translateY(-2px);
+    box-shadow: var(--shadow-material-hover);
 }
 
 h3.enum-card__item__title {
 	font-size: medium;
 	font-weight: 700;
-	margin-top: 1rem;
+	margin-top: 0;
+	z-index: 2;
 }
 
 .enum-card__item__text {
 	margin-top: 0.5rem;
+	z-index: 2;
 }
 
 .enum-card__item__text>p {
 	font-size: small;
 }
 
+.enum-card__item__arrow {
+    display: inline;
+    width: 15px;
+    height: 15px;
+    transform: translateY(2px);
+}
+
+
 /*REMOVE MARGIN FOR FIRST ELEMENT*/
 .enum-card__item__text> *:nth-child(1) {
 	margin-top: 0;
 }
+

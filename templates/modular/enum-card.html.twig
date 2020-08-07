@@ -13,16 +13,17 @@
 
 		<div class="enum-card__grid">
 			{% for item in page.header.items %}
-			<div class="enum-card__item" data-reveal="reveal--cascade">
+			{% set image = item.image ? page.media[item.image] %}
+			{% set color = item.color %}
 
-				{% set icon = item.icon ? page.media[item.icon] %}
-				{% if icon %}
-				<div class="enum-card__item__icon">{{ icon.html }}</div>
-				{% endif %}
-
-				<h3 class="enum-card__item__title">{{ item.title }}</h3>
-				<div class="enum-card__item__text">{{ item.text|markdown }}</div>
+			<div class="enum-card__item" data-reveal="reveal--cascade" {% if color %}style="--color-material-bg: {{ color }}"{% endif %}>
 				
+				<div class="enum-card__item__veil fill"></div>
+				<h3 class="enum-card__item__title">{{ item.title }}
+					<svg class="enum-card__item__arrow" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="currentColor"></path></svg>
+				</h3>
+				<div class="enum-card__item__text">{{ item.text|markdown }}</div>
+
 			</div>
 			{% endfor %}
 		</div>	
