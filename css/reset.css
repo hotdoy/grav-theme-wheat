@@ -72,3 +72,7 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+
+img, svg, video {
+	max-width: 100%;
+}

@@ -71,6 +71,6 @@ blockquote.quotes__item__quote {
 	padding-bottom: 1rem;
 }
 
-.quotes .swiper-pagination-bullet.swiper-pagination-bullet-active {
-	background: var(--color-material-fg);
+.quotes .swiper-pagination-bullet-active {
+	background: var(--color-material-hl);
 }

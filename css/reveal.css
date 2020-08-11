@@ -11,7 +11,6 @@
 .reveal {
 	animation-name: reveal;
 	animation-duration: 0.5s; 
-	animation-timing-function: cubic-bezier(.19,1,.22,1);
 }
 @keyframes reveal {
     from {opacity: 0; transform: translateY(20px);}

@@ -38,7 +38,10 @@ form:
                 .url:
                   type: text
                   label: Url
-                .color:
-                  label: Color
+                .background:
+                  label: Background
+                  type: colorpicker
+                .foreground:
+                  label: Foreground
                   type: colorpicker
 

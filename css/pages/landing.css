@@ -39,7 +39,10 @@
 	}
 }
 
-.landing__hero__content *{
+.landing__hero__content p,
+.landing__hero__content h1,
+.landing__hero__content h2,
+.landing__hero__content h3 {
 	max-width: var(--width-text);
 }
 

@@ -32,3 +32,9 @@ form:
                 .source:
                   type: text
                   label: Source
+                .background:
+                  label: Background
+                  type: colorpicker
+                .foreground:
+                  label: Foreground
+                  type: colorpicker

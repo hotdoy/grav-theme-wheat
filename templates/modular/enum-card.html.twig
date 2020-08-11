@@ -13,11 +13,17 @@
 
 		<div class="enum-card__grid">
 			{% for item in page.header.items %}
-			{% set image = item.image ? page.media[item.image] %}
-			{% set color = item.color %}
 			{% set el = item.url ? 'a' : 'div' %}
+			{% set image = item.image ? page.media[item.image] %}
+			{% set background = item.background %}
+			{% set foreground = item.foreground %}
+			
+			{% set color %}
+			{%- if background %}--color-material-bg:{{- background -}};{% endif -%}
+			{%- if foreground %}--color-material-fg:{{- foreground -}};{% endif -%}
+			{% endset %}
 
-			<{{el}} href="{{ item.url }}" class="enum-card__item" data-reveal="reveal--cascade" {% if color %}style="--color-material-bg: {{ color }}"{% endif %}>
+			<{{el}} href="{{ item.url }}" class="enum-card__item" data-reveal="reveal--cascade" {% if color %}style="{{ color }}"{% endif %}>
 				
 				<div class="enum-card__item__veil fill"></div>
 				<h3 class="enum-card__item__title">
