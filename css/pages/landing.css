@@ -25,11 +25,18 @@
 .landing__hero__content {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-end;
 	max-width: var(--width-body);
 	margin: 0 auto;
 	color: white;
 	padding: 0 var(--gutter);
+	padding-bottom: calc(var(--rhythm)/1.5);
+}
+
+@media (min-width: 500px) {
+	.landing__hero__content {
+		justify-content: center;
+	}
 }
 
 .landing__hero__content *{
@@ -39,6 +46,10 @@
 .landing__hero__content h1 {
 	margin-top: 0;
 	font-weight: 700;
+}
+
+.landing__hero__content p {
+	margin-top: 1rem;
 }
 
 @media (max-width: 500px) {

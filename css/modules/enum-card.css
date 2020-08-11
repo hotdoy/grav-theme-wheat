@@ -32,7 +32,7 @@ h2.enum-card__title {
 .enum-card__grid {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-gap: 2rem;
+	grid-gap: var(--gutter);
 }
 @media (min-width: 500px) {
 	.enum-card__grid {
