@@ -8,9 +8,6 @@ form:
         content:
           fields:
 
-            content:
-              unset@: true
-
             header.header_media:
               label: Header Media
               type: pagemediaselect

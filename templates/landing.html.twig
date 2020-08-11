@@ -5,23 +5,17 @@
 
 {% block content %}
 
-	<section class="default__hero">
-		<h1>{{ page.title }}</h1>
-
-		<div class="landing__hero__media fill">
-			{% if selected_media.type == 'video' %}
-			{{ selected_media.controls(0).autoplay(1).muted(1).loop(1).html('', selected_media_alt) }}
+	<section class="landing__hero">
+		<div class="fill">
+			{% if header_media.type == 'video' %}
+			{{ header_media.controls(0).autoplay(1).muted(1).loop(1).html('', '', 'landing__hero__media') }}
 			{% else %}
-			{{ selected_media.html('', selected_media_alt) }}
+			{{ header_media.html('', header_media_alt, 'landing__hero__media') }}
 			{% endif %}
 		</div>
-
-
+		<div class="landing__hero__veil fill"></div>
+		<div class="landing__hero__content fill text" data-reveal>{{ page.content|raw }}</div>
 	</section>
-	
-	{% if page.content %}
-	{% include 'modular/content.html.twig' %}
-	{% endif %}
 	{% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
 	{{ module.content|raw }}
 	{% endfor %}

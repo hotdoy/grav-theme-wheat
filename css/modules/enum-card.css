@@ -34,11 +34,19 @@ h2.enum-card__title {
 	grid-template-columns: 1fr;
 	grid-gap: 2rem;
 }
+@media (min-width: 500px) {
+	.enum-card__grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
 @media (min-width: 835px) {
 	.enum-card__grid {
-		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+@media (min-width: 1000px) {
+	.enum-card__grid {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-gap: 2rem;
 	}
 }
 
@@ -71,7 +79,7 @@ a.enum-card__item:hover:active {
 }
 
 h3.enum-card__item__title {
-	font-size: medium;
+	font-size: x-large;
 	font-weight: 700;
 	margin-top: 0;
 	z-index: 2;

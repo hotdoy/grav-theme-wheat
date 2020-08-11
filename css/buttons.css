@@ -3,15 +3,15 @@ a.button,
 button.button {
     white-space: nowrap;
     display: inline-flex;
-    height: 40px;
-    padding: 14px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
     border-radius: 4px;
+    text-align: center;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .025em;
-    align-items: center;
-    justify-content: center;
     color: var(--color-button-fg);
     background-color: var(--color-button-bg);
     box-shadow: var(--shadow-button);
@@ -40,4 +40,4 @@ button.button {
 .button.inverted {
     color: var(--color-button-bg);
     background-color: var(--color-button-fg);
-}
+}   
