@@ -1,7 +1,15 @@
 {% set optional_classes = page.header.optional_classes %}
 {% set display_title = page.header.display_title ?? 'true' %}
 
-<section class="module quotes {{ optional_classes }}">
+{% set background = page.header.background %}
+{% set foreground = page.header.foreground %}
+
+{% set color %}
+{%- if background %}--color-material-bg:{{- background -}};{% endif -%}
+{%- if foreground %}--color-material-fg:{{- foreground -}};{% endif -%}
+{% endset %}	
+
+<section class="module quotes {{ optional_classes }}" {% if color %}style="{{ color }}"{% endif %}>
 	<div class="quotes__wrapper text" data-reveal>
 
 		{% if display_title %}
@@ -13,22 +21,15 @@
 
 				{% for item in page.header.items %}
 				{% set portrait = item.portrait ? page.media[item.portrait] %}
-					
-				{% set background = item.background %}
-				{% set foreground = item.foreground %}
 
-				{% set color %}
-				{%- if background %}--color-material-bg:{{- background -}};{% endif -%}
-				{%- if foreground %}--color-material-fg:{{- foreground -}};{% endif -%}
-				{% endset %}	
-				
-				<div class="quotes__item swiper-slide" {% if color %}style="{{ color }}"{% endif %}>
+				<div class="quotes__item swiper-slide">
 					<blockquote class="quotes__item__quote">{{ item.quote }}</blockquote>
 					{% if portrait %}
 					<div class="quotes__item__portrait">{{ portrait.cropZoom(200, 200).quality(config.system.images.default_image_quality).html('', item.alt) }}</div>
 					{% endif %}
 					<div class="quotes__item__source">{{ item.source }}</div>
 				</div>
+
 				{% endfor %}
 
 			</div>

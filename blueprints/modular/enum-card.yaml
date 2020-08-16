@@ -13,17 +13,7 @@ form:
           title: Content
           fields:
 
-            header.caption:
-              ordering@: header.title
-              type: text
-              label: Caption
-              style: vertical
-
-            content:
-              unset@: true
-
             header.items:
-              ordering@: header.caption
               name: items
               type: list
               style: vertical

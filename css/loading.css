@@ -30,8 +30,8 @@
 
 /*INTRO*/
 [data-loading].intro {
-	background-color: black;
-	color: white;
+	background-color: var(--color-bg);
+	color: var(--color-fg);
 	z-index: 9999;	
 	display: flex;
 	justify-content: center;
@@ -41,7 +41,17 @@
 	transition-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-body.loaded [data-loading].intro {
+[data-loading].intro svg {
+	width: 100px;
+	animation-name: intrologo;
+	animation-duration: 0.5s; 
+}
+@keyframes intrologo {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0px);}
+}
+
+.loaded [data-loading].intro {
 	transform: translateY(-100%);
 	visibility: hidden;
 }

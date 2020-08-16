@@ -16,6 +16,14 @@ form:
             content:
               unset@: true
 
+            header.background:
+              label: Background
+              type: colorpicker
+              
+            header.foreground:
+              label: Foreground
+              type: colorpicker
+
             header.items:
               ordering@: header.title
               name: items
@@ -32,9 +40,3 @@ form:
                 .source:
                   type: text
                   label: Source
-                .background:
-                  label: Background
-                  type: colorpicker
-                .foreground:
-                  label: Foreground
-                  type: colorpicker

@@ -13,12 +13,6 @@ form:
           title: Content
           fields:
 
-            header.caption:
-              ordering@: header.title
-              type: text
-              label: Caption
-              style: vertical
-
             header.selected_media:
               label: Selected Media
               type: pagemediaselect

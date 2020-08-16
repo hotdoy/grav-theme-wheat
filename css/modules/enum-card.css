@@ -5,28 +5,13 @@
 	padding: 0 var(--gutter);
 }
 
-.enum-card__caption {
+.enum-card__content h2 {
 	margin-top: 2rem;
-	font-size: small;
-    letter-spacing: 3px;
-    color: var(--color-hl);
-}
-@media (min-width: 835px) {
-	.enum-card__caption {
-		margin-top: 0;
-	}
-}
-
-h2.enum-card__title {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
 	font-weight: 700;
 }
-@media (min-width: 835px) {
-	h2.enum-card__title {
-		margin-bottom: 3rem;
-		max-width: 65%;
-	}
+
+.enum-card__content {
+	margin-bottom: 2.5rem;
 }
 
 .enum-card__grid {

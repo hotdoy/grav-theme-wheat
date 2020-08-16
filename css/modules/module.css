@@ -4,20 +4,14 @@
     z-index: 1000;
 }
 
-.module.padded {
-      padding: var(--rhythm) 0 var(--rhythm) 0;
+.module .caption {
+	margin-top: 2rem;
+	font-size: small;
+	letter-spacing: 3px;
+    color: var(--color-hl);
 }
-
-.module.padded + .module.padded {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.module.no_margin {
-    margin-top: 0;
-}
-
-.module.double_margin {
-    margin-top: calc(var(--rhythm)*2);
-    margin-bottom: calc(var(--rhythm)*2);
+@media (min-width: 835px) {
+	.module .caption {
+		margin-top: 0;
+	}
 }

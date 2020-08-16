@@ -72,5 +72,5 @@ blockquote.quotes__item__quote {
 }
 
 .quotes .swiper-pagination-bullet-active {
-	background: var(--color-material-hl);
+	background: var(--color-material-fg);
 }

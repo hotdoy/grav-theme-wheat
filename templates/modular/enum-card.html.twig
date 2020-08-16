@@ -4,13 +4,10 @@
 <section class="module enum-card {{ optional_classes }}">
 	<div class="enum-card__ctn text" data-reveal>
 
-		{% if display_title %}
-		{% if page.header.caption %}
-		<div class="enum-card__caption">{{ page.header.caption }}</div>
+		{% if page.content %}
+		<div class="enum-card__content">{{ page.content|raw }}</div>
 		{% endif %}
-		<h2 class="enum-card__title">{{ page.title }}</h2>
-		{% endif %}
-
+		
 		<div class="enum-card__grid">
 			{% for item in page.header.items %}
 			{% set el = item.url ? 'a' : 'div' %}
