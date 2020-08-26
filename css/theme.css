@@ -2,7 +2,7 @@
 					VARS 
 ============================================*/
 
-html, .light {
+html {
 	--color-bg: #f6f9fc;
 	--color-fg: #32325d;
 	--color-hl: #6772e5;
@@ -70,4 +70,28 @@ body {
 	right: 0;
 	bottom: 0;
 	left: 0;
+}
+
+.width-text {
+	width: 100%;
+	max-width: var(--width-text);
+	margin: 0 auto;
+}
+
+.width-body {
+	width: 100%;
+	max-width: var(--width-body);
+	margin: 0 auto;
+}
+
+.width-site {
+	width: 100%;
+	max-width: var(--width-site);
+	margin: 0 auto;
+}
+
+.width-full {
+	width: 100%;
+	max-width: var(--width-full);
+	margin: 0 auto;
 }

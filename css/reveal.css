@@ -10,7 +10,8 @@
 /*DEFAULT*/
 .reveal {
 	animation-name: reveal;
-	animation-duration: 0.5s; 
+	animation-duration: 0.4s; 
+	animation-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
 }
 @keyframes reveal {
     from {opacity: 0; transform: translateY(20px);}

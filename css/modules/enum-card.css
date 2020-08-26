@@ -19,7 +19,7 @@
 	grid-template-columns: 1fr;
 	grid-gap: var(--gutter);
 }
-@media (min-width: 500px) {
+@media (min-width: 511px) {
 	.enum-card__grid {
 		grid-template-columns: 1fr 1fr;
 	}

@@ -5,7 +5,11 @@
 	z-index: 5000;
 }
 
-.header__container {
+#header li {
+	list-style: none;
+}
+
+.header__ctn {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -19,67 +23,96 @@
 .header__logo {
 	width: 70px;
 }
-
 .header__logo svg {
 	width: 100%;
 }
 
-.header__toggle-panel-on {
-	margin-left: 10px;
+.header__nav-ctn {
+	display: flex;
+	align-items: center;
 }
 
-/*.header__toggle-cart {}*/
+.header__nav {
+	display: none;
+}
+@media (min-width: 835px) {
+	.header__nav {
+		display: flex;
+	}	
+}
 
+.header__toggle-panel {
+	display: block;
+}
+@media (min-width: 835px) {
+	.header__toggle-panel {
+		display: none;
+	}	
+}
 
-
+.header__link,
+.header__toggle-panel,
+.header__toggle-cart {
+	margin-left: 20px;
+}
 
 
 /*PANEL*/
-.nav-panel {
+.panel {
 	visibility: hidden;
 	position: fixed;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-color: var(--color-fg);
-	color: var(--color-bg);
+	color: var(--color-fg);
+	background-color: var(--color-bg);
+
+	transition-property: opacity, transform, visibility;
+	transition-duration: 0.2s;
+	transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+	opacity: 0.5;
+	transform: translateX(100%)
 }
 
-.nav-panel__container {
+.panel__ctn {
 	margin: 0 auto;
-	padding: var(--gutter);
 	width: 100%;
 	max-width: var(--width-body);
 }
 
-.nav-panel__header {
+.panel__header {
+	height: var(--header-heigth);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin: 0 var(--gutter);
+	padding: var(--gutter) 0;
+	border-bottom: 1px solid lightgrey;
 }
 
-.nav-panel__logo {
+.panel__logo {
 	width: 70px;
+	transform: translateY(1px);
 }
-
-.nav-panel__logo svg {
+.panel__logo svg {
 	width: 100%;
 }
 
-.nav-panel__link {
-	display: block;
-	font-size: xxx-large;
-	font-weight: 700;
-	margin-top: 25px;
+.panel__toggle-panel,
+.panel__toggle-cart {
+	margin-left: 16px;
 }
 
-.nav-panel__toggle-panel-off {
-	margin-left: 10px;
+.panel__link {
+	margin: 0 var(--gutter);
+	padding: var(--gutter) 0;
+	border-bottom: 1px solid lightgray;
 }
-
 
 /*PANEL ON*/
-.header--on .nav-panel {
+.header--on .panel {
 	visibility: visible;
+	opacity: 1;
+	transform: translateX(0%)
 }

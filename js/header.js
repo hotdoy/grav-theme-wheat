@@ -4,8 +4,8 @@
 
 	const InitHeader = function() {
 		const b = document.body;
-		const onTriggers = document.getElementsByClassName("header__toggle-panel-on");
-		const offTriggers = document.getElementsByClassName("nav-panel__toggle-panel-off");
+		const onTriggers = document.getElementsByClassName("header__toggle-panel");
+		const offTriggers = document.getElementsByClassName("panel__toggle-panel");
 		let lastOffset = 0;
 
 		for (let onTrigger of onTriggers) {
