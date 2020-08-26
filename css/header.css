@@ -106,8 +106,12 @@
 
 .panel__link {
 	margin: 0 var(--gutter);
-	padding: var(--gutter) 0;
 	border-bottom: 1px solid lightgray;
+}
+
+.panel__link a {
+	display: block;
+	padding: var(--gutter) 0;
 }
 
 /*PANEL ON*/

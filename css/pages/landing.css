@@ -17,11 +17,6 @@
 	height: 100%;
 }
 
-.landing__hero__veil {
-	background-color: #313131;
-	opacity: 0.4;
-}
-
 .landing__hero__content {
 	display: flex;
 	flex-direction: column;

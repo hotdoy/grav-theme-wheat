@@ -13,7 +13,6 @@
 			{{ header_media.html('', header_media_alt, 'landing__hero__media') }}
 			{% endif %}
 		</div>
-		<div class="landing__hero__veil fill"></div>
 		<div class="landing__hero__content fill text" data-reveal>{{ page.content|raw }}</div>
 	</section>
 	{% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
