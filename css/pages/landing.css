@@ -11,10 +11,12 @@
 	min-height: 100vh;
 }
 
-.landing__hero__media {
-	object-fit: cover;
-	width: 100%;
+.landing__hero__media img,
+.landing__hero__media video {
 	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
 }
 
 .landing__hero__content {

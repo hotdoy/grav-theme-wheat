@@ -81,6 +81,7 @@ body {
 .width-body {
 	width: 100%;
 	max-width: var(--width-body);
+	padding: 0 var(--gutter);
 	margin: 0 auto;
 }
 

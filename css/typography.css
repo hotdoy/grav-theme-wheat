@@ -51,7 +51,7 @@ html {
 }
 @media (min-width: 735px) {
   .text h2, .text h1 {
-    font-size: xxx-large;
+    font-size: 64px;
   }
 }
 

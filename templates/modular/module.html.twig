@@ -1,0 +1,7 @@
+{% set padded = page.header.media_bg or page.header.color_bg ? 'padded' : '' %}
+{% set optional_classes = page.header.optional_classes %}
+{% set computed_classes = class ~ padded ~ ' ' ~ optional_classes %}
+
+<section class="module {{computed_classes}}">
+{% block content %}{% endblock %}
+</section>

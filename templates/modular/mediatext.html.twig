@@ -1,24 +1,34 @@
-{% set optional_classes = page.header.optional_classes %}
-{% set selected_media = page.header.selected_media ? page.media[page.header.selected_media] %}
-{% set selected_media_alt = page.header.selected_media_alt ?? '' %}
+{% extends 'modular/module.html.twig' %}
+{% set media_position = page.header.media_position ? 'mediatext--' ~ page.header.media_position : 'mediatext--left' %}
+{% set class = 'mediatext ' ~ media_position %}
+
+{% set mp4 = page.header.mp4 ? page.media[page.header.mp4] %}
+{% set webm = page.header.webm ? page.media[page.header.webm] %}
+{% set image = page.header.image ? page.media[page.header.image] %}
+{% set image_alt = page.header.image_alt ?? '' %}
 {% set media_position = page.header.media_position ?? 'left' %}
 {% set content = page.content %}
 
-<section class="module mediatext mediatext--{{ media_position }} {{ optional_classes }}">
-	<div class="mediatext__ctn">
-		<div class="mediatext__media" data-reveal>
-			{% if selected_media.type == 'video' %}
-			{{ selected_media.controls(0).autoplay(1).muted(1).loop(1).html('', selected_media_alt) }}
-			{% else %}
-			{{ selected_media.html('', selected_media_alt) }}
-			{% endif %}
-		</div>
-		<div class="mediatext__content text" data-reveal>
-		
-			{% if content %}
-			<div class="text">{{ content|raw }}</div>
-			{% endif %}
-			
-		</div>
+{% block content %}
+<div class="mediatext__ctn">
+	<div class="mediatext__media" data-reveal>
+
+		{% if mp4 or webm %}
+		<video autoplay loop muted poster="{{ image.url }}">
+			{% if mp4 %} <source type="video/mp4" src="{{ mp4.url }}">{% endif %}
+			{% if webm %} <source type="video/webm" src="{{ webm.url }}">{% endif %}
+		</video>
+		{% elseif image %}
+		{{ image.html('', image_alt) }}
+		{% endif %}
+
 	</div>
-</section>
+	<div class="mediatext__content text" data-reveal>
+	
+		{% if content %}
+		<div class="text">{{ content|raw }}</div>
+		{% endif %}
+		
+	</div>
+</div>
+{% endblock %}
