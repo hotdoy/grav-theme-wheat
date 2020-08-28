@@ -23,3 +23,14 @@ form:
             header.image_alt:
               label: Image Alt
               type: text
+
+            header.veil:
+              type: toggle
+              label: Veil
+              toggleable: true
+              highlight: 0
+              default: 0
+              options:
+                1: 'Yes'
+                0: 'No'
+

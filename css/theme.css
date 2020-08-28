@@ -6,8 +6,8 @@ html {
 	--color-bg: #f6f9fc;
 	--color-fg: #32325d;
 	--color-hl: #6772e5;
-	--color-button-bg: white;
-	--color-button-fg: var(--color-hl);
+	--color-btn-bg: white;
+	--color-btn-fg: var(--color-hl);
 	--color-material-bg: white;
 	--color-material-fg: #32325d;
 	--color-material-hl: #6772e5;

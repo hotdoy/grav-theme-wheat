@@ -20,7 +20,7 @@
 
 	</head>
 
-	<body class="{{ page.template }} {{ page.header.body_classes }} loading">
+	<body class="{{ page.template }} {{ page.header.body_classes }} loading" style="{% include 'partials/theme.html.twig' %}">
 
 		{% block loading %}{% include 'partials/loading.html.twig' %}{% endblock %}
 		{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}

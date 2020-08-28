@@ -20,7 +20,12 @@
 			{% endif %}
 		</div>
 
-		<div class="landing__hero__content fill text" data-reveal>{{ page.content|raw }}</div>
+		{% if page.header.veil %}<div class="landing__hero__veil fill"></div>{% endif %}
+
+		<div class="landing__hero__content fill text" data-reveal>
+			<div>{{ page.content|raw }}</div>
+		</div>
+
 	</section>
 	{% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
 	{{ module.content|raw }}

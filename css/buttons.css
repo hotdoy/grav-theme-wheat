@@ -13,8 +13,8 @@ button.button {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .025em;
-    color: var(--color-button-fg);
-    background-color: var(--color-button-bg);
+    color: var(--color-btn-fg);
+    background-color: var(--color-btn-bg);
     box-shadow: var(--shadow-button);
     text-decoration: none;
     transition-property: transform, box-shadow;
@@ -39,6 +39,6 @@ button.button {
 }
 
 .button.inverted {
-    color: var(--color-button-bg);
-    background-color: var(--color-button-fg);
+    color: var(--color-btn-bg);
+    background-color: var(--color-btn-fg);
 }   
