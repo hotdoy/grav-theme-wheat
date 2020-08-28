@@ -1,0 +1,39 @@
+{% extends 'modular/module.html.twig' %}
+{% set class = 'product-head ' %}
+
+{% set image = page.header.image ? page.media[page.header.image] %}
+{% set image_alt = page.header.image_alt ?? '' %}
+{% set content = page.content|raw %}
+
+{% block content %}
+<div class="product-head__ctn">
+	<div class="product-head__media" data-reveal>
+
+		{% if image %}
+		{{ image.html('', image_alt) }}
+		{% endif %}
+
+	</div>
+	<div class="product-head__content" data-reveal>
+		
+		<div class="product-head__sticky-ctn">
+
+			{% if content %}
+			<div class="product-head__description text">{{ content }}</div>
+			{% endif %}
+
+			<button class="product-head__buy-btn button snipcart-add-item"
+			data-item-id="{{ page.header.id }}"
+			data-item-price="{{ page.header.price }}"
+			data-item-url="{{ page.url(true, true) }}"
+			data-item-description="{{ page.header.description }}"
+			data-item-image="{{ image ? uri.base() ~ image.url : '' }}"
+			data-item-name="{{ page.header.name }}">
+			Add to cart
+			</button>
+
+		</div>
+		
+	</div>
+</div>
+{% endblock %}

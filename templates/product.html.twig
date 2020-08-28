@@ -2,24 +2,15 @@
 
 {% block content %}
 
-	<section class="default__title">
+	<section class="default__title" data-reveal>
 		<h1>{{ page.title }}</h1>
 	</section>
 
-	<button class="product__buy-button button snipcart-add-item"
-	  data-item-id="{{ page.header.id }}"
-	  data-item-price="{{ page.header.price }}"
-	  data-item-url="{{ page.url(true, true) }}"
-	  data-item-description="{{ page.header.description }}"
-	  data-item-image="{{ page.header.main_image ? uri.base() ~ page.media[page.header.main_image].url : '' }}"
-	  data-item-name="{{ page.header.name }}">
-	  Add to cart
-	</button>
+	{% include 'modular/product-head.html.twig' %}
 	
-	{% if page.content %}
-	{% include 'modular/content.html.twig' %}
-	{% endif %}
 	{% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
 	{{ module.content|raw }}
 	{% endfor %}
+
 {% endblock %}
+
