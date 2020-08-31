@@ -22,6 +22,8 @@
 			<div class="product-head__description text">{{ content }}</div>
 			{% endif %}
 
+			<div class="product-head__price">CAD {{ page.header.price }}</div>
+
 			<button class="product-head__buy-btn button snipcart-add-item"
 			data-item-id="{{ page.header.id }}"
 			data-item-price="{{ page.header.price }}"

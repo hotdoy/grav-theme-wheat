@@ -41,8 +41,7 @@ a.enum-card__item,
 	display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px 20px 40px 20px;
-    min-height: 300px;
+    padding: 20px;
 	background-color: var(--color-material-bg);
     color: var(--color-material-fg);
     border-radius: 8px;
@@ -51,6 +50,12 @@ a.enum-card__item,
     transition-property: box-shadow, transform;
     transition-duration: 0.2s;
     text-decoration: none;
+}
+@media (min-width: 835px) {
+	a.enum-card__item,
+	.enum-card__item {
+		min-height: 300px;
+	}
 }
 
 a.enum-card__item:hover {
