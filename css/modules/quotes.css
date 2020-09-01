@@ -6,13 +6,6 @@
 	padding: 0 var(--gutter);
 }
 
-.quotes h2.title {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-	font-weight: 700;
-	text-align: center;
-}
-
 .quotes__carousel {
 	background-color: var(--color-material-bg);
 	color: white;
@@ -37,6 +30,7 @@
 blockquote.quotes__item__quote {
 	font-weight: normal;
 	font-size: x-large;
+	line-height: 1.6;
 	margin: 0 auto;
 	max-width: var(--width-text);
 }
