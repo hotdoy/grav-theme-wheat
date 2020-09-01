@@ -1,0 +1,22 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+  <section class="default__title" data-reveal>
+    <h1>{{ page.title }}</h1>
+  </section>
+  {% if page.content %}
+  {% include 'modular/content.html.twig' %}
+  {% endif %}
+  {% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
+  {{ module.content|raw }}
+  {% endfor %}
+
+  <section class="collection__grid" data-reveal>
+    <div class="collection__grid__ctn">
+    {% for item in page.collection() %}
+    {% include 'partials/cards.html.twig' %}
+    {% endfor %}
+    </div>
+  </section>
+
+{% endblock %}

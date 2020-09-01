@@ -38,6 +38,16 @@ form:
       label: GTM Container ID
       placeholder: 'GTM-ZXCVB00'
 
+    snipcart:
+      type: section
+      title: Snipcart
+      underline: true
+
+    snipcart_public_key:
+      type: text
+      label: Snipcart Public Key
+      placeholder: MDU0OGM2YjItMzZiZS00MjQ4LWJiNGQtOGVlYjE4ODAxMWVhNjM3MDEwNjY5ODU4OTU2Mzkx
+
     sentry:
       type: section
       title: Sentry

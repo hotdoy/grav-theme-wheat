@@ -28,7 +28,7 @@
 		{% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %}
 		{% block announcements %}{% include 'partials/announcement.html.twig' %}{% endblock %}
 		{% block share_dialog %}{% include 'partials/share-dialog.html.twig' %}{% endblock %}
-		{% block snipcart %}<div id="snipcart" data-api-key="MDU0OGM2YjItMzZiZS00MjQ4LWJiNGQtOGVlYjE4ODAxMWVhNjM3MDEwNjY5ODU4OTU2Mzkx" hidden></div>{% endblock %}
+		{% block snipcart %}{% include 'partials/snipcart.html.twig' %}{% endblock %}
 		{% block bottom %}{{ assets.js('bottom')|raw }}{% endblock %}
 		{% block sentry %}{% include 'partials/sentry.html.twig' %}{% endblock %}
 		{% block gtm_body %}{% include 'partials/gtm-body.html.twig' %}{% endblock %}	
