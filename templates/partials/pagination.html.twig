@@ -7,7 +7,7 @@
     {% if pagination.hasPrev %}
         {% set url =  (base_url ~ pagination.params ~ pagination.prevUrl)|replace({'//':'/'}) %}
         <li>
-            <a class="button prev" rel="prev" href="{{ url }}">
+            <a class="paginatiuon__prev" rel="prev" href="{{ url }}">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
             </a>
         </li>
@@ -16,10 +16,10 @@
     {% for paginate in pagination %}
 
         {% if paginate.isCurrent %}
-        <li><span class="button inverted active">{{ paginate.number }}</span></li>
+        <li><span class="pagination__active">{{ paginate.number }}</span></li>
         {% elseif paginate.isInDelta %}
         {% set url = (base_url ~ pagination.params ~ paginate.url)|replace({'//':'/'}) %}
-         <li><a class="button" href="{{ url }}">{{ paginate.number }}</a></li>
+         <li><a class="pagination__page" href="{{ url }}">{{ paginate.number }}</a></li>
         {% endif %}
 
     {% endfor %}
@@ -27,7 +27,7 @@
     {% if pagination.hasNext %}
         {% set url = (base_url ~ pagination.params ~ pagination.nextUrl)|replace({'//':'/'}) %}
         <li>
-            <a class="button next" rel="next" href="{{ url }}">
+            <a class="pagination__next" rel="next" href="{{ url }}">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
             </a>
         </li>

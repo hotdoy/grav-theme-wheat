@@ -5,20 +5,28 @@
     margin-top: calc(var(--rhythm)/2);
 }
 
-.pagination .button {
+.pagination li {
     margin-left: 5px;
     margin-right: 5px;
 }
 
-.pagination .button.active {
-    box-shadow: none;
+.pagination__prev {}
+
+.pagination__next {}
+
+.pagination__page {}
+
+.pagination__active {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+    border-radius: 50%;
 }
 
-.pagination .button svg {
-    padding: 0;
-}
 
-.pagination .button.active:hover {
-    box-shadow: none;
-    transform: none;
-}
+
+

@@ -8,10 +8,15 @@
 
 .collection__grid__ctn {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-gap: var(--gutter);
 	width: 100%;
 	max-width: var(--width-body);
 	margin: 0 auto;
 	padding: 0 var(--gutter);
+}
+@media (min-width: 835px) {
+	.collection__grid__ctn {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }

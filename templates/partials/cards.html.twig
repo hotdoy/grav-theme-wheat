@@ -3,17 +3,15 @@
 {% set image = item.header.image ? item.media[item.header.image] %}
 {% set image_alt = item.header.image_alt ?? '' %}
 
-{% if item.template == 'product' %}
 <article class="product-card">
 	<a href="{{ item.url }}">
+		<div class="product-card__media">
+			<div class="fill">{{ image.html('', image_alt) }}</div>
+		</div>
 
-		<div class="product-card__ctn">
-
-			<div class="product-card__image fill">{{ image.html('', image_alt) }}</div>
+		<div class="product-card__info">
 			<div class="product-card__title">{{ item.title }}</div>
 			<div class="product-card__price">{{ item.header.price }}</div>
-	
 		</div>
 	</a>
 </article>
-{% endif %}

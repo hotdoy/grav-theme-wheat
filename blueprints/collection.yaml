@@ -1,0 +1,22 @@
+title: collection
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            header.virtual_items:
+              name: virtual_items
+              type: list
+              style: vertical
+              label: virtual_items
+              description: Allows you to reference pages from another collection without moving the page.
+              fields:
+                .page:
+                  type: pages
+                  label: Page 
+                  show_modular: false
+                  show_root: false

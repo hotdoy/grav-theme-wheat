@@ -13,10 +13,22 @@
 
   <section class="collection__grid" data-reveal>
     <div class="collection__grid__ctn">
+
+    {% for virtual_item in page.header.virtual_items %}
+    {% set item = page.find(virtual_item.page) %}
+    {% include 'partials/cards.html.twig' with {'item': item} %}
+    {% endfor %}
+
     {% for item in page.collection() %}
     {% include 'partials/cards.html.twig' %}
     {% endfor %}
+
     </div>
   </section>
+
+  {% if config.plugins.pagination.enabled and page.collection.params.pagination %}
+  {% include 'partials/pagination.html.twig' %}
+  {% endif %}
+
 
 {% endblock %}
