@@ -19,11 +19,10 @@
 		<div class="product-head__sticky-ctn">
 
 			{% if content %}
-			<h2 class="product-head__name">{{ page.header.name }}</h2>
 			<div class="product-head__description text">{{ content }}</div>
 			{% endif %}
 
-			<div class="product-head__price">CAD {{ page.header.price }}</div>
+			<div class="product-head__price">{{ page.header.price|number_format(2, ',', ' ') }} $</div>
 
 			<button class="product-head__buy-btn button snipcart-add-item"
 			data-item-id="{{ page.header.id }}"

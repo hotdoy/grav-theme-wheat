@@ -11,7 +11,7 @@
 
 		<div class="product-card__info">
 			<div class="product-card__title">{{ item.title }}</div>
-			<div class="product-card__price">{{ item.header.price }}</div>
+			<div class="product-card__price">{{ item.header.price|number_format(2, ',', ' ') }} $</div>
 		</div>
 	</a>
 </article>

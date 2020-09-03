@@ -1,34 +1,35 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-  <section class="default__title" data-reveal>
-    <h1>{{ page.title }}</h1>
-  </section>
-  {% if page.content %}
-  {% include 'modular/content.html.twig' %}
-  {% endif %}
-  {% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
-  {{ module.content|raw }}
-  {% endfor %}
+    
+    <section class="default__title" data-reveal>
+        <h1>{{ page.title }}</h1>
+    </section>
 
-  <section class="collection__grid" data-reveal>
-    <div class="collection__grid__ctn">
-
-    {% for virtual_item in page.header.virtual_items %}
-    {% set item = page.find(virtual_item.page) %}
-    {% include 'partials/cards.html.twig' with {'item': item} %}
+    {% if page.content %}
+    {% include 'modular/content.html.twig' %}
+    {% endif %}
+    {% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
+    {{ module.content|raw }}
     {% endfor %}
 
-    {% for item in page.collection() %}
-    {% include 'partials/cards.html.twig' %}
-    {% endfor %}
+    <section class="collection__ctn" data-reveal>
+        <div class="collection__grid">
 
-    </div>
-  </section>
+        {#     {% for virtual_item in page.header.virtual_items %}
+        {% set item = page.find(virtual_item.page) %}
+        {% include 'partials/product-card.html.twig' with {'item': item} only %}
+        {% endfor %} #}
 
-  {% if config.plugins.pagination.enabled and page.collection.params.pagination %}
-  {% include 'partials/pagination.html.twig' %}
-  {% endif %}
+        {% for item in page.collection() %}
+        {% include 'partials/' ~ item.template ~ '-card.html.twig' with {'item': item} only %}
+        {% endfor %}
 
+        </div>
+    </section>
+
+    {% if config.plugins.pagination.enabled and page.collection.params.pagination %}
+    {% include 'partials/pagination.html.twig' %}
+    {% endif %}
 
 {% endblock %}

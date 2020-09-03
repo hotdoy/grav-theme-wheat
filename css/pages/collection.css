@@ -1,22 +1,23 @@
 /*.collection {}*/
 
-.collection__grid {
+.collection__ctn {
 	position: relative;
     margin-top: var(--rhythm);
     z-index: 1000;
 }
 
-.collection__grid__ctn {
+.collection__grid{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-gap: var(--gutter);
+	grid-gap: 5px;
 	width: 100%;
 	max-width: var(--width-body);
 	margin: 0 auto;
 	padding: 0 var(--gutter);
 }
 @media (min-width: 835px) {
-	.collection__grid__ctn {
+	.collection__grid {
 		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 10px;
 	}
 }
