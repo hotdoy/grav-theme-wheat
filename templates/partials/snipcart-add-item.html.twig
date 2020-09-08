@@ -1,0 +1,9 @@
+<button class="{% if class %}{{ class }} {% endif %}snipcart-add-item button"
+data-item-id="{{ page.header.id }}"
+data-item-price="{{ page.header.price }}"
+data-item-url="{{ page.url(true, true) }}"
+data-item-description="{{ page.header.description }}"
+data-item-image="{{ image ? uri.base() ~ image.url : '' }}"
+data-item-name="{{ page.header.name }}">
+Add to cart
+</button>

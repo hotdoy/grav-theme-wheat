@@ -11,8 +11,6 @@ html {
 	--color-material-bg: white;
 	--color-material-fg: #32325d;
 	--color-material-hl: #6772e5;
-	--color-footer-bg: black;
-	--color-footer-fg: white;
 
 	--shadow-button: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
 	--shadow-button-hover: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
@@ -27,7 +25,6 @@ html {
 	--gutter: 20px;
 	--rhythm: 125px;
 	--header-heigth: 80px;
-
 }
 
 

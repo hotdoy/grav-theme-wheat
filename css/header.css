@@ -69,8 +69,7 @@
 	background-color: var(--color-bg);
 
 	transition-property: opacity, transform, visibility;
-	transition-duration: 0.2s;
-	transition-timing-function: cubic-bezier(1,0,0,1);
+	transition-duration: 0.5s;
 	opacity: 0.5;
 	transform: translateX(100%)
 }

@@ -67,7 +67,7 @@ html {
 }
 
 .text h4, .text h5, .text h6 {
-  font-size: larger;
+  font-size: large;
   margin-top: 2rem;
   font-weight: 700;
 }
@@ -82,18 +82,18 @@ html {
   display: none;
 }
 
-.text strong, 
-.text p strong {
+.text strong {
+  font-size: inherit;
   font-weight: 700;
 }
 
-.text em, 
-.text p em {
+.text em {
+  font-size: inherit;
   font-style: italic;
 }
 
 .text sup {
-  font-size: 10px;
+  font-size: x-small;
 }
 
 .text blockquote {
@@ -101,12 +101,6 @@ html {
   font-size: xx-large;
   line-height: 1.1;
   font-weight: 700;
-}
-
-@media (min-width: 735px) {
-  .text blockquote {
-    font-size: xxx-large;
-  }
 }
 
 .text blockquote>p {
@@ -134,6 +128,7 @@ html {
 
 .text ul {
   margin-top: 1rem;
+  font-size: inherit;
   line-height: 1.6;
   list-style-position: outside;
   padding-left: 18px;
@@ -143,6 +138,7 @@ html {
 .text ol {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  font-size: inherit;
   line-height: 1.6;
   list-style-position: outside;
   padding-left: 18px;
@@ -151,6 +147,7 @@ html {
 
 .text li > p {
   display: inline;
+  font-size: inherit;
   padding: 0;
 }
 

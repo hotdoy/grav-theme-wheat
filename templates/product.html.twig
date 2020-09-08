@@ -1,16 +1,50 @@
 {% extends 'partials/base.html.twig' %}
 
+
 {% block content %}
 
 	<section class="default__title" data-reveal>
 		<h1>{{ page.title }}</h1>
 	</section>
 
-	{% include 'modular/product-head.html.twig' %}
-	
+	<section class="module product__head">
+		<div class="product__head__ctn">
+			<div class="product__head__media" data-reveal>
+
+				{% set image = page.header.image ? page.media[page.header.image] %}
+				{% set image_alt = page.header.image_alt ?? '' %}
+				{% if image %}
+				{{ image.html('', image_alt) }}
+				{% endif %}
+
+			</div>
+			<div class="product__head__content" data-reveal>
+				
+				<div class="product__head__sticky-ctn">
+
+					{% if content %}
+					<div class="product__head__description text">{{ page.content|raw }}</div>
+					{% endif %}
+
+					<div class="product__head__price">{{ page.header.price|number_format(2, ',', ' ') }} $</div>
+
+					{% include 'partials/snipcart-add-item.html.twig' with {'class': 'product__head__add-to-cart'} %}
+
+				</div>
+				
+			</div>
+		</div>
+	</section>
+
+	<section class="product__bottom-bar">
+
+		<div class="product-__bottom-bar__price">{{ page.header.price|number_format(2, ',', ' ') }} $</div>
+		{% include 'partials/snipcart-add-item.html.twig' with {'class': 'product__bottom-bar__add-to-cart'} %}
+
+	</section>
+
 	{% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
 	{{ module.content|raw }}
 	{% endfor %}
 
 {% endblock %}
-

@@ -1,7 +1,6 @@
 .button,
 a.button,
 button.button {
-    margin-top: 0.5rem;
     white-space: nowrap;
     display: inline-flex;
     align-items: center;
