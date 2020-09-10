@@ -9,15 +9,24 @@
 .collection__grid{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-gap: 5px;
+	grid-gap: 10px 5px;
 	width: 100%;
 	max-width: var(--width-body);
 	margin: 0 auto;
-	padding: 0 var(--gutter);
 }
 @media (min-width: 835px) {
 	.collection__grid {
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-gap: 10px;
+		grid-gap: 10px 10px;
 	}
 }
+
+.collection__grid.collection__grid--2 {
+	grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 835px) {
+	.collection__grid.collection__grid--2 {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+

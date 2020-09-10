@@ -9,7 +9,7 @@
 
 	<section class="landing__hero">
 
-		<div class="landing__hero__media fill">
+		<div class="landing__hero__media fill" data-reveal="reveal--scalein">
 			{% if mp4 or webm %}
 			<video autoplay loop muted poster="{{ image.url }}">
 				{% if mp4 %} <source type="video/mp4" src="{{ mp4.url }}">{% endif %}

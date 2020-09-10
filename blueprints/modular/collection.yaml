@@ -11,42 +11,14 @@ form:
             content:
               unset@: true
 
-            header.media_order:
-              unset@: true
-
-            header.caption:
-              ordering@: header.title
-              type: text
-              label: Caption
+            header.items:
+              name: items
+              type: list
               style: vertical
-
-            collection:
-              type: section
-              title: Collection
-              text: Learn more about <a href="https://learn.getgrav.org/16/content/collections" target="_blank">Collections</a>.<br>This module is best used in expert mode.
-              markdown: true
-              underline: true
-
-            header.content.items:
-              type: textarea
-              yaml: true
               label: items
-              default: '@self.children'
-              validate:
-                type: yaml
-
-            header.content.order.by:
-              type: text
-              label: by
-              default: date
-              
-            header.content.order.dir:
-              type: text
-              label: dir
-              default: desc
-
-            header.content.limit:
-              type: text
-              label: limit
-              default: 10
-
+              fields:
+                .page:
+                  type: pages
+                  label: Page 
+                  show_modular: false
+                  show_root: false

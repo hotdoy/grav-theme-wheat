@@ -13,20 +13,7 @@
     {{ module.content|raw }}
     {% endfor %}
 
-    <section class="collection__ctn" data-reveal>
-        <div class="collection__grid">
-
-        {#     {% for virtual_item in page.header.virtual_items %}
-        {% set item = page.find(virtual_item.page) %}
-        {% include 'partials/product-card.html.twig' with {'item': item} only %}
-        {% endfor %} #}
-
-        {% for item in page.collection() %}
-        {% include 'partials/' ~ item.template ~ '-card.html.twig' with {'item': item} only %}
-        {% endfor %}
-
-        </div>
-    </section>
+    {% include 'modular/collection.html.twig' %}
 
     {% if config.plugins.pagination.enabled and page.collection.params.pagination %}
     {% include 'partials/pagination.html.twig' %}

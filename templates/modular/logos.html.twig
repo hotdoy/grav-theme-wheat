@@ -1,23 +1,23 @@
-{% set optional_classes = page.header.optional_classes %}
-{% set display_title = page.header.display_title ?? 'true' %}
+{% extends 'modular/module.html.twig' %}
+{% set class = 'logos' %}
 
-<section class="module logos {{ optional_classes }}">
-	<div class="logos__ctn text" data-reveal>
+{% block content %}
+<div class="logos__ctn" data-reveal>
 
-		{% if display_title %}
-		<h2 class="logos__title">{{ page.title }}</h2>
-		{% endif %}
+	{% if page.header.display_title %}
+	<h2 class="module__title">{{ page.header.display_title }}</h2>
+	{% endif %}
 
-		<div class="logos__grid">
-			{% for item in page.header.items %}
+	<div class="logos__grid">
+		{% for item in page.header.items %}
+		{% set logo = item.logo ? page.media[item.logo] %}
+		<div class="logos__item" data-reveal="reveal--cascade">
+			{{ logo.html('', item.alt) }}
+		</div>
+		{% endfor %}
+	</div>	
 
-			{% set logo = item.logo ? page.media[item.logo] %}
-			<div class="logos__item" data-reveal="reveal--cascade">
-				{{ logo.html('', item.alt) }}
-			</div>
+</div>
+{% endblock %}
 
-			{% endfor %}
-		</div>	
 
-	</div>
-</section>

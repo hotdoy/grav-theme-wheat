@@ -2,10 +2,10 @@
 {% set class = 'material-cards' %}
 
 {% block content %}
-<div class="material-cards__ctn text" data-reveal>
+<div class="material-cards__ctn" data-reveal>
 
-	{% if page.content %}
-	<div class="material-cards__content">{{ page.content|raw }}</div>
+	{% if page.header.display_title %}
+	<h2 class="module__title">{{ page.header.display_title }}</h2>
 	{% endif %}
 	
 	<div class="material-cards__grid">
@@ -20,7 +20,7 @@
 		{%- if color_material_fg %}--color-material-fg:{{- color_material_fg -}};{% endif -%}
 		{% endset %}
 
-		<{{el}} href="{{ item.url }}" class="material-cards__item" data-reveal="reveal--cascade" {% if color %}style="{{ color }}"{% endif %}>
+		<{{el}} href="{{ item.url }}" class="material-cards__item text" data-reveal="reveal--cascade" {% if color %}style="{{ color }}"{% endif %}>
 			
 			<div class="material-cards__item__veil fill"></div>
 			<h3 class="material-cards__item__title">

@@ -1,3 +1,6 @@
+{% extends 'modular/module.html.twig' %}
+{% set class = 'map' %}
+
 {% set zoom = zoom|default(page.header.zoom) %}
 {% set pin = url('theme://images/map/pin.svg') %}
 
@@ -7,16 +10,19 @@
 	{% endfor %}]
 {% endset %}
 
-<section class="module map">
-    <div class="map__ctn" data-reveal>
-        {% if theme.gmaps_key %}
-        <div 
-        id="map-{{ random() }}" 
-        data-zoom="{{ zoom }}"
-        data-styles='{{ theme.gmaps_styles }}'
-        data-key="{{ theme.gmaps_key }}"
-        data-markers='{{ markers }}'>
-        </div>
-        {% endif %}
+{% block content %}
+<div class="map__ctn" data-reveal>
+    {% if theme.gmaps_key %}
+    <div 
+    id="map-{{ random() }}" 
+    data-zoom="{{ zoom }}"
+    data-styles='{{ theme.gmaps_styles }}'
+    data-key="{{ theme.gmaps_key }}"
+    data-markers='{{ markers }}'>
     </div>
-</section>
+    {% endif %}
+</div>
+{% endblock %}
+
+
+

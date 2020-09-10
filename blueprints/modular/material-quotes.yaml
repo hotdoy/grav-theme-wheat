@@ -17,7 +17,6 @@ form:
               unset@: true
 
             header.items:
-              ordering@: header.title
               name: items
               type: list
               style: vertical

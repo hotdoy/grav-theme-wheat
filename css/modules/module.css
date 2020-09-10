@@ -9,14 +9,19 @@
 	background-color: var(--color-bg);
 }
 
-.module .caption {
-	margin-top: 2rem;
-	font-size: small;
-	letter-spacing: 3px;
-    color: var(--color-hl);
+.module__title {
+    margin: 0 auto;
+    margin-bottom: calc(var(--rhythm)/2);
+    font-size: xx-large;
+    font-weight: 700;
+ 	line-height: 1.1;
+    text-align: center;
+ 	color: var(--color-fg);
+    max-width: var(--width-text);
+    padding: 0 var(--gutter);
 }
-@media (min-width: 835px) {
-	.module .caption {
-		margin-top: 0;
-	}
+@media (min-width: 735px) {
+    .module__title {
+        font-size: 64px;
+    }
 }

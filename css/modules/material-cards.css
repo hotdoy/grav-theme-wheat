@@ -5,16 +5,6 @@
 	padding: 0 var(--gutter);
 }
 
-.material-cards__content h2 {
-	margin-top: 2rem;
-	font-weight: 700;
-}
-
-.material-cards__content {
-	margin-bottom: 2.5rem;
-	color: var(--color-fg);
-}
-
 .material-cards__grid {
 	display: grid;
 	grid-template-columns: 1fr;

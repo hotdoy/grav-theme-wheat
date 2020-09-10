@@ -2,7 +2,11 @@
 {% set class = 'material-quotes' %}
 
 {% block content %}
-<div class="material-quotes__wrapper text" data-reveal>
+<div class="material-quotes__ctn" data-reveal>
+
+	{% if page.header.display_title %}
+	<h2 class="module__title">{{ page.header.display_title }}</h2>
+	{% endif %}
 	
 	<div class="material-quotes__carousel swiper-container">
 		<div class="swiper-wrapper">
@@ -10,7 +14,7 @@
 			{% for item in page.header.items %}
 			{% set portrait = item.portrait ? page.media[item.portrait] %}
 
-			<div class="material-quotes__item swiper-slide">
+			<div class="material-quotes__item text swiper-slide">
 				<blockquote class="material-quotes__item__quote">{{ item.quote }}</blockquote>
 				{% if portrait %}
 				<div class="material-quotes__item__portrait">{{ portrait.cropZoom(200, 200).quality(config.system.images.default_image_quality).html('', item.alt) }}</div>

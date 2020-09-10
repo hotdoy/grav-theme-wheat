@@ -13,6 +13,9 @@ form:
           title: Content
           fields:
 
+            content:
+              unset@: true
+
             header.items:
               name: items
               type: list

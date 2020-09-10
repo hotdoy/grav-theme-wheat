@@ -1,41 +1,36 @@
-{% set optional_classes = page.header.optional_classes %}
-{% set display_title = page.header.display_title ?? 'true' %}
+{% extends 'modular/module.html.twig' %}
+{% set class = 'collection' %}
 
-<section class="module collection {{ optional_classes }}">
+{% set count = page.header.items|length %}
 
-	<div class="collection__ctn text" data-reveal>
-		{% if display_title %}
-		{% if page.header.caption %}
-		<div class="collection__caption">{{ page.header.caption }}</div>
-		{% endif %}
-		<h2 class="collection__title">{{ page.title }}</h2>
-		{% endif %}
+{% set grid_modifier %}
+{% switch count %}
+{% case 2 %} collection__grid--2
+{% default %}
+{% endswitch %}
+{% endset %}
 
-		<div class="swiper-container" id="carousel-{{ random() }}">
-			<div class="swiper-wrapper">
+{% block content %}
+<div class="material-cards__ctn" data-reveal>
 
-				{% for p in page.collection %}
-				{% set selected_media = p.header.selected_media ? p.media[p.header.selected_media] : p.media.images|first %}
-				{% set selected_media_alt = p.header.selected_media_alt ?? '' %}
+	{% if page.header.display_title %}
+	<h2 class="module__title">{{ page.header.display_title }}</h2>
+	{% endif %}
 
-				<article class="swiper-slide collection__item">
-					<a href="{{ p.url }}">
-						<div class="fill">
-							{% if selected_media.type == 'video' %}
-							{{ selected_media.controls(0).autoplay(1).muted(1).loop(1).html('', selected_media_alt) }}
-							{% else %}
-							{{ selected_media.cropResize(1034,692).html('', selected_media_alt) }}
-							{% endif %}
-						</div>
-						<div class="collection__item__veil fill">
-							<h3 class="collection__item__title">{{ p.title }}</h3>
-						</div>
-					</a>
-				</article>
-				{% endfor %}
+	<div class="collection__grid {{ grid_modifier }}">
 
-			</div>
-		</div>
-	</div>
+        {% for item in page.header.items %}
+        {% set item = page.find(item.page) %}
+        {% include 'partials/' ~ item.template ~ '-card.html.twig' with {'item': item} only %}
+        {% endfor %}
 
-</section>
+        {% for item in page.collection() %}
+        {% include 'partials/' ~ item.template ~ '-card.html.twig' with {'item': item} only %}
+        {% endfor %}
+        
+    </div>
+	
+</div>
+
+{% endblock %}
+
