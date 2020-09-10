@@ -35,16 +35,38 @@ form:
           title: Options
           fields:
 
-            Style:
+            style:
               type: section
               title: Style
               underline: true
 
-            header.optional_classes:
-              type: text
-              label: Optional Classes
-              markdown: true
-              description: ''
+            header.color_bg:
+              type: colorpicker
+              label: color_bg
+
+            header.color_fg:
+              type: colorpicker
+              label: color_fg
+
+            header.color_hl:
+              type: colorpicker
+              label: color_hl
+
+            header.color_btn_bg:
+              type: colorpicker
+              label: color_btn_bg
+
+            header.color_btn_fg:
+              type: colorpicker
+              label: color_btn_fg
+
+            header.color_material_bg:
+              type: colorpicker
+              label: color_material_bg
+
+            header.color_material_fg:
+              type: colorpicker
+              label: color_material_fg
 
             order_title:
               type: section

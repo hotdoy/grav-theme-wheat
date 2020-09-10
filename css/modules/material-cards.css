@@ -1,42 +1,43 @@
-.enum-card__ctn {
+.material-cards__ctn {
 	width: 100%;
 	max-width: var(--width-body);
 	margin: 0 auto;
 	padding: 0 var(--gutter);
 }
 
-.enum-card__content h2 {
+.material-cards__content h2 {
 	margin-top: 2rem;
 	font-weight: 700;
 }
 
-.enum-card__content {
+.material-cards__content {
 	margin-bottom: 2.5rem;
+	color: var(--color-fg);
 }
 
-.enum-card__grid {
+.material-cards__grid {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: var(--gutter);
 }
 @media (min-width: 511px) {
-	.enum-card__grid {
+	.material-cards__grid {
 		grid-template-columns: 1fr 1fr;
 	}
 }
 @media (min-width: 835px) {
-	.enum-card__grid {
+	.material-cards__grid {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
 @media (min-width: 1000px) {
-	.enum-card__grid {
+	.material-cards__grid {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 }
 
-a.enum-card__item,
-.enum-card__item {
+a.material-cards__item,
+.material-cards__item {
 	position: relative;
 	display: flex;
     flex-direction: column;
@@ -52,39 +53,39 @@ a.enum-card__item,
     text-decoration: none;
 }
 @media (min-width: 835px) {
-	a.enum-card__item,
-	.enum-card__item {
+	a.material-cards__item,
+	.material-cards__item {
 		min-height: 300px;
 	}
 }
 
-a.enum-card__item:hover {
+a.material-cards__item:hover {
 	transform: translateY(-2px);
     box-shadow: var(--shadow-material-hover);
     cursor: pointer;
 }
 
-a.enum-card__item:hover:active {
+a.material-cards__item:hover:active {
 	transform: translateY(1px);
 }
 
-h3.enum-card__item__title {
+h3.material-cards__item__title {
 	font-size: x-large;
 	font-weight: 700;
 	margin-top: 0;
 	z-index: 2;
 }
 
-.enum-card__item__text {
+.material-cards__item__text {
 	margin-top: 0.5rem;
 	z-index: 2;
 }
 
-.enum-card__item__text>p {
+.material-cards__item__text>p {
 	font-size: small;
 }
 
-.enum-card__item__arrow {
+.material-cards__item__arrow {
     display: inline;
     width: 15px;
     height: 15px;
@@ -92,7 +93,7 @@ h3.enum-card__item__title {
 
 
 /*REMOVE MARGIN FOR FIRST ELEMENT*/
-.enum-card__item__text> *:nth-child(1) {
+.material-cards__item__text> *:nth-child(1) {
 	margin-top: 0;
 }
 

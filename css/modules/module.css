@@ -4,6 +4,11 @@
     z-index: 1000;
 }
 
+.module.padded {
+	padding: var(--rhythm) 0;
+	background-color: var(--color-bg);
+}
+
 .module .caption {
 	margin-top: 2rem;
 	font-size: small;

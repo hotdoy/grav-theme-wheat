@@ -1,0 +1,29 @@
+{% extends 'modular/module.html.twig' %}
+{% set class = 'material-quotes' %}
+
+{% block content %}
+<div class="material-quotes__wrapper text" data-reveal>
+	
+	<div class="material-quotes__carousel swiper-container">
+		<div class="swiper-wrapper">
+
+			{% for item in page.header.items %}
+			{% set portrait = item.portrait ? page.media[item.portrait] %}
+
+			<div class="material-quotes__item swiper-slide">
+				<blockquote class="material-quotes__item__quote">{{ item.quote }}</blockquote>
+				{% if portrait %}
+				<div class="material-quotes__item__portrait">{{ portrait.cropZoom(200, 200).quality(config.system.images.default_image_quality).html('', item.alt) }}</div>
+				{% endif %}
+				<div class="material-quotes__item__source">{{ item.source }}</div>
+			</div>
+
+			{% endfor %}
+
+		</div>
+		{% if page.header.items|length > 1 %}
+		<div class="material-quotes__pagination swiper-pagination"></div>
+		{% endif %}
+	</div>	
+</div>
+{% endblock %}

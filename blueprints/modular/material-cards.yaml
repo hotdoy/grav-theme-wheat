@@ -1,4 +1,4 @@
-title: enum-card
+title: material-cards
 '@extends': modular/module
 
 form:
@@ -28,10 +28,10 @@ form:
                 .url:
                   type: text
                   label: Url
-                .background:
-                  label: Background
+                .color_material_bg:
+                  label: color_material_bg
                   type: colorpicker
-                .foreground:
-                  label: Foreground
+                .color_material_fg:
+                  label: color_material_fg
                   type: colorpicker
 

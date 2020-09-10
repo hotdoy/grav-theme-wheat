@@ -21,29 +21,3 @@ form:
                 header.meta_image:
                   label: Meta Image
                   type: pagemediaselect
-
-            theme:
-              type: section
-              title: Theme
-              underline: true
-              fields:
-
-                header.color_bg:
-                  label: color_bg
-                  type: colorpicker
-
-                header.color_fg:
-                  label: color_fg
-                  type: colorpicker
-
-                header.color_hl:
-                  label: color_hl
-                  type: colorpicker
-
-                header.color_btn_bg:
-                  label: color_btn_bg
-                  type: colorpicker
-                  
-                header.color_btn_fg:
-                  label: color_btn_fg
-                  type: colorpicker

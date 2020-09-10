@@ -1,0 +1,40 @@
+{% extends 'modular/module.html.twig' %}
+{% set class = 'material-cards' %}
+
+{% block content %}
+<div class="material-cards__ctn text" data-reveal>
+
+	{% if page.content %}
+	<div class="material-cards__content">{{ page.content|raw }}</div>
+	{% endif %}
+	
+	<div class="material-cards__grid">
+		{% for item in page.header.items %}
+		{% set el = item.url ? 'a' : 'div' %}
+		{% set image = item.image ? page.media[item.image] %}
+		{% set color_material_bg = item.color_material_bg %}
+		{% set color_material_fg = item.color_material_fg %}
+		
+		{% set color %}
+		{%- if color_material_bg %}--color-material-bg:{{- color_material_bg -}};{% endif -%}
+		{%- if color_material_fg %}--color-material-fg:{{- color_material_fg -}};{% endif -%}
+		{% endset %}
+
+		<{{el}} href="{{ item.url }}" class="material-cards__item" data-reveal="reveal--cascade" {% if color %}style="{{ color }}"{% endif %}>
+			
+			<div class="material-cards__item__veil fill"></div>
+			<h3 class="material-cards__item__title">
+				{{ item.title }}
+				{% if item.url %}
+				<svg class="material-cards__item__arrow" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="currentColor"></path></svg>
+				{% endif %}
+			</h3>
+			<div class="material-cards__item__text">{{ item.text|markdown }}</div>
+
+		</{{el}}>
+		{% endfor %}
+	</div>	
+</div>
+
+{% endblock %}
+
