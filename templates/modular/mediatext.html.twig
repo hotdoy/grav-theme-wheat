@@ -1,6 +1,6 @@
 {% extends 'modular/module.html.twig' %}
-{% set media_position = page.header.media_position ? 'mediatext--' ~ page.header.media_position : 'mediatext--left' %}
-{% set class = 'mediatext ' ~ media_position %}
+{% set name = 'mediatext' %}
+{% set classes = classes|default(page.header.media_position ? 'mediatext--' ~ page.header.media_position : 'mediatext--left') %}
 
 {% set mp4 = page.header.mp4 ? page.media[page.header.mp4] %}
 {% set webm = page.header.webm ? page.media[page.header.webm] %}

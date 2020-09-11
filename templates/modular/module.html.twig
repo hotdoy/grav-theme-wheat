@@ -16,8 +16,10 @@
 {% if color_material_fg %}--color-material-fg:{{ color_material_fg }};{% endif %}
 {% endset %}
 
-{% set padded = page.header.color_bg ? ' padded' : '' %}
-{% set computed_classes = class ~ padded ~ ' ' ~ optional_classes %}
+{% set name = name|default() %}
+{% set classes = classes %}
+{% set padded = color_bg ? ' padded' : '' %}
+{% set computed_classes = name ~ padded ~ ' ' ~ classes %}
 
 <section class="module {{computed_classes}}" style="{{ module_theme }}">
 {% block content %}{% endblock %}

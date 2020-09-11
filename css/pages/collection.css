@@ -1,10 +1,6 @@
 /*.collection {}*/
 
-.collection__ctn {
-	position: relative;
-    margin-top: var(--rhythm);
-    z-index: 1000;
-}
+.collection__ctn {}
 
 .collection__grid{
 	display: grid;

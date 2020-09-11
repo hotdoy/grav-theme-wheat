@@ -1,5 +1,6 @@
 {% extends 'modular/module.html.twig' %}
-{% set class = 'map' %}
+{% set name = 'map' %}
+{% set classes = classes|default() %}
 
 {% set zoom = zoom|default(page.header.zoom) %}
 {% set pin = url('theme://images/map/pin.svg') %}
