@@ -33,6 +33,7 @@ a.material-cards__item,
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
+    min-height: 200px;
 	background-color: var(--color-material-bg);
     color: var(--color-material-fg);
     border-radius: 8px;

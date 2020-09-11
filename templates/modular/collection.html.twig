@@ -1,13 +1,14 @@
 {% extends 'modular/module.html.twig' %}
 {% set class = 'collection' %}
 
-{% set count = page.header.items|length %}
-
+{% set count = page.header.items|length + page.collection()|length %}
 {% set grid_modifier %}
-{% switch count %}
-{% case 2 %} collection__grid--2
-{% default %}
-{% endswitch %}
+{%- if count == 2 %}collection__grid--2
+{%- elseif count == 3 %}collection__grid--3
+{%- elseif count == 4 %}collection__grid--4
+{%- elseif count is divisible by(2) %}collection__grid--even
+{%- else %}collection__grid--odd
+{% endif %}
 {% endset %}
 
 {% block content %}
