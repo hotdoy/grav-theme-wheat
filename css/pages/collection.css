@@ -1,6 +1,8 @@
 /*.collection {}*/
 
-.collection__ctn {}
+.collection__ctn {
+	padding: 0 var(--gutter);
+}
 
 .collection__grid{
 	display: grid;
