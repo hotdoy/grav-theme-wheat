@@ -21,7 +21,7 @@
 	opacity: 0;
 	visibility: hidden;
 	transition-property: opacity visibility; 
-	transition-duration: 0.2s;
+	transition-duration: 0.1s;
 }
 
 
@@ -63,11 +63,10 @@
 /*UNLOAD*/
 /*.navigating.unloading #content {
   animation-name: unloading;
-  animation-duration: 0.1s; 
+  animation-duration: 100ms; 
   animation-fill-mode: forwards;
 }
 @keyframes unloading {
     from {opacity: 1;}
-    to {opacity: 0; transform: translateY(10px);}
-}
-*/
+    to {opacity: 0; transform: translateY(-50px);}
+}*/

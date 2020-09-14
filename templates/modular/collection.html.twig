@@ -6,7 +6,7 @@
 {% set items = items|default(page.header.items) %}
 {% set collection = collection|default(page.collection()) %}
 
-{% set count = items|length + collection|length %}
+{% set count = count|default(items|length + collection|length) %}
 {% set grid_modifier %}
 {%- if count == 2 %}collection__grid--2
 {%- elseif count == 3 %}collection__grid--3

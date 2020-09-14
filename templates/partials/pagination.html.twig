@@ -1,7 +1,7 @@
 {% set pagination = pagination|default(page.collection.params.pagination) %}
 {% set base_url = page.url %}
 
-{% if pagination|length > 1 %}
+{# {% if pagination|length > 1 %}
 
 <ul class="pagination">
     {% if pagination.hasPrev %}
@@ -34,4 +34,14 @@
     {% endif %}
 </ul>
 
+{% endif %}
+
+ #}
+
+
+{% if pagination|length > 1 and pagination.hasNext %}
+<section class="pagination">
+    {% set url = (base_url ~ pagination.params ~ pagination.nextUrl)|replace({'//':'/'}) %}
+    <a class="pagination__load-more button" rel="next" href="{{ url }}">Load More </a>
+</section>
 {% endif %}

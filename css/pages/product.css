@@ -85,9 +85,15 @@
 }
 
 .product__head__price {
-	font-size: x-large;
-    font-weight: 700;
-    margin-top: 2rem;
+	display: none;
+}
+@media (min-width: 835px) {
+	.product__head__price {
+		display: block;
+		font-size: x-large;
+    	font-weight: 700;
+    	margin-top: 2rem;
+	}
 }
 
 button.product__head__add-to-cart {
@@ -129,6 +135,7 @@ button.product__head__add-to-cart {
 
 .product-__bottom-bar__price {
 	font-size: small;
+	font-weight: 700;
 }
 
 /*.product__bottom-bar__add-to-cart {}*/
