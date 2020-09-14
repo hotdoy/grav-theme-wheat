@@ -40,8 +40,8 @@
 
 
 {% if pagination|length > 1 and pagination.hasNext %}
-<section class="pagination">
+<div class="pagination">
     {% set url = (base_url ~ pagination.params ~ pagination.nextUrl)|replace({'//':'/'}) %}
-    <a class="pagination__load-more button" rel="next" href="{{ url }}">Load More </a>
-</section>
+    <button class="pagination__load-more button" href="{{ url }}" data-pagination-btn>Load More </button>
+</div>
 {% endif %}

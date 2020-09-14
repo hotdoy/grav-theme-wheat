@@ -23,7 +23,7 @@
 	<h2 class="module__title">{{ title }}</h2>
 	{% endif %}
 
-	<div class="collection__grid {{ grid_modifier }}">
+	<div class="collection__grid {{ grid_modifier }}" data-pagination-ctn>
 
         {% for item in items %}
         {% set item = page.find(item.page) %}
@@ -35,6 +35,10 @@
         {% endfor %}
 
     </div>
+
+    {% if config.plugins.pagination.enabled and page.collection.params.pagination %}
+    {% include 'partials/pagination.html.twig' %}
+    {% endif %}
 
 </div>
 {% endblock %}

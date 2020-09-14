@@ -15,8 +15,4 @@
 
     {% include 'modular/collection.html.twig' with {count: '5'} %}
 
-    {% if config.plugins.pagination.enabled and page.collection.params.pagination %}
-    {% include 'partials/pagination.html.twig' %}
-    {% endif %}
-
 {% endblock %}

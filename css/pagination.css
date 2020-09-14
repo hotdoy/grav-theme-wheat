@@ -37,16 +37,15 @@
     align-items: center;
     justify-content: center;
     margin-top: calc(var(--rhythm)/2);
-    padding: 0 var(--gutter);
 }
 
-a.pagination__load-more {
+button.pagination__load-more {
     display: block;
     width: 100%;
 }
 
 @media (min-width: 835px) {
-    a.pagination__load-more {
+    button.pagination__load-more {
         width: auto;
     }
 }

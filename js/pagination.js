@@ -1,17 +1,40 @@
-var request = new XMLHttpRequest();
-request.open('GET', 'http://127.0.0.1/wheat/fr/men', true);
 
-request.onload = function() {
-	if (this.status >= 200 && this.status < 400) {
-		console.log('Cake :D');
-		var resp = this.response;
-	} else {
-		console.log('Some cake :)');
-	}
-};
+let btn = document.querySelector('[data-pagination-btn]');
+let ctn = document.querySelector('[data-pagination-ctn]');
+	
+btn.addEventListener('click',(event) => {
 
-request.onerror = function() {
-	console.log('No cake :(');
-};
+	event.preventDefault();
 
-request.send();
+	let url = btn.getAttribute('href');
+	let request = new XMLHttpRequest();
+	request.responseType = 'document';
+	request.open('GET', url, true);
+	request.onload = function() {
+
+		if (this.status >= 200 && this.status < 400) {
+			// SUCCESS
+
+			let results = this.response.querySelector('[data-pagination-ctn]').childNodes;
+
+			console.log(results);
+
+			// ctn.appendChild(results);
+
+		
+		} else {
+			// SERVER ERROR
+			console.log('PAGINATION - SERVER STATUS: ' + this.status);
+		}
+
+	};
+
+	// ERROR
+	request.onerror = function() {
+		console.log('PAGINATION - ERROR');
+	};
+
+	request.send();
+});
+
+
