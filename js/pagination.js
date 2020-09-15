@@ -1,40 +1,54 @@
+const Pagination = {
 
-let btn = document.querySelector('[data-pagination-btn]');
-let ctn = document.querySelector('[data-pagination-ctn]');
-	
-btn.addEventListener('click',(event) => {
+	Request: function(ctn, btn, url) {
+		let request = new XMLHttpRequest();
+		request.responseType = 'document';
+		request.open('GET', url, true);
+		request.onload = function() {
 
-	event.preventDefault();
+			if (this.status >= 200 && this.status < 400) {
+				
+				// Get new articles and append them to the pahination ctn
+				let articles = this.response.querySelector('[data-pagination-ctn]').childNodes;
+				for (var i = articles.length - 1; i >= 0; i--) {
+					ctn.appendChild(articles[i]);
+				}
 
-	let url = btn.getAttribute('href');
-	let request = new XMLHttpRequest();
-	request.responseType = 'document';
-	request.open('GET', url, true);
-	request.onload = function() {
+				// Get new pagination button and replace the old one
+				let newBtn = this.response.querySelector('[data-pagination-btn]');
+				if (!!newBtn) {
+					btn.parentNode.replaceChild(newBtn, btn);
+				} else {
+					btn.parentNode.remove();
+				}
 
-		if (this.status >= 200 && this.status < 400) {
-			// SUCCESS
+				// Init next pagination
+				Pagination.Init();
+				
+			} else {
+				console.log('PAGINATION - SERVER STATUS: ' + this.status);
+			}
 
-			let results = this.response.querySelector('[data-pagination-ctn]').childNodes;
+		};
 
-			console.log(results);
+		request.onerror = function() {
+			console.log('PAGINATION - ERROR');
+		};
 
-			// ctn.appendChild(results);
-
-		
-		} else {
-			// SERVER ERROR
-			console.log('PAGINATION - SERVER STATUS: ' + this.status);
-		}
-
-	};
-
-	// ERROR
-	request.onerror = function() {
-		console.log('PAGINATION - ERROR');
-	};
-
-	request.send();
-});
+		request.send();
+	},
 
 
+	Init: function() {
+		const ctn = document.querySelector('[data-pagination-ctn]');
+		const btn = document.querySelector('[data-pagination-btn]');
+		const url = btn.getAttribute('href');
+		btn.addEventListener('click',(event) => {
+			event.preventDefault();
+			Pagination.Request(ctn, btn, url);
+		});
+	},
+
+}
+
+Pagination.Init();
