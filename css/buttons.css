@@ -9,6 +9,7 @@ button.button {
     border-radius: 4px;
     text-align: center;
     font-size: 12px;
+    line-height: 1.6;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .025em;
