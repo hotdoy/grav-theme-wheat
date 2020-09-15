@@ -43,12 +43,14 @@ const Pagination = {
 		const ctn = document.querySelector('[data-pagination-ctn]');
 		const btn = document.querySelector('[data-pagination-btn]');
 		const url = btn.getAttribute('href');
-		btn.addEventListener('click',(event) => {
-			event.preventDefault();
-			Pagination.Request(ctn, btn, url);
-		});
-	},
 
+		if (!!ctn && !!btn && !!url) {
+			btn.addEventListener('click',(event) => {
+				event.preventDefault();
+				Pagination.Request(ctn, btn, url);
+			});
+		}
+	},
 }
 
 Pagination.Init();
