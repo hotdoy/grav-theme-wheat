@@ -24,10 +24,11 @@ const Pagination = {
 	},
 
 	AppendResult: function() {
-		const articles = Pagination.result.querySelector('[data-pagination-ctn]').childNodes;
+		const articles = Pagination.result.querySelector('[data-pagination-ctn]').children;
 		for (var i = articles.length - 1; i >= 0; i--) {
 			Pagination.ctn.appendChild(articles[i]);
 		}
+		Pagination.UpdateParams();
 		Pagination.ReplaceBtn();
 	},
 
@@ -39,6 +40,14 @@ const Pagination = {
 			Pagination.btn.parentNode.remove();
 		}
 		Pagination.Init();
+	},
+
+	UpdateParams: function() {
+		const key = 'articles';
+		const value = Pagination.ctn.children.length;
+		const params = new URLSearchParams();
+		params.set(key, value);
+		window.history.replaceState({}, '', `${location.pathname}?${params}`);
 	},
 
 	Init: function() {
