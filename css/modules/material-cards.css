@@ -57,6 +57,7 @@ a.material-cards__item:hover {
 }
 
 a.material-cards__item:hover:active {
+	transition-duration: 0s;
 	transform: translateY(1px);
 }
 

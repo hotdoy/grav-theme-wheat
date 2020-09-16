@@ -9,7 +9,7 @@ button.button {
     border-radius: 4px;
     text-align: center;
     font-size: 12px;
-    line-height: 1.6;
+    line-height: 100%;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .025em;
@@ -35,6 +35,7 @@ button.button {
 }
 
 .button:hover:active {
+    transition-duration: 0s;
     transform: translateY(1px);
 }
 

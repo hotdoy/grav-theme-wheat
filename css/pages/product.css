@@ -100,7 +100,6 @@ button.product__head__add-to-cart {
     display: none;
     width: 100%;
     margin-top: 2rem;
-    padding: 15px 24px;
 }
 @media (min-width: 835px) {
 	button.product__head__add-to-cart {
@@ -167,6 +166,7 @@ button.product__head__add-to-cart {
 }
 
 .product-card:hover:active {
+	transition-duration: 0s;
 	transform: translateY(1px);
 }
 
