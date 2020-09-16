@@ -23,11 +23,15 @@ const Pagination = {
 		request.send();
 	},
 
-	AppendResult: function () {
+	AppendResult: function() {
 		const articles = Pagination.result.querySelector('[data-pagination-ctn]').childNodes;
 		for (var i = articles.length - 1; i >= 0; i--) {
 			Pagination.ctn.appendChild(articles[i]);
 		}
+		Pagination.ReplaceBtn();
+	},
+
+	ReplaceBtn: function() {
 		let newBtn = Pagination.result.querySelector('[data-pagination-btn]');
 		if (!!newBtn) {
 			Pagination.btn.parentNode.replaceChild(newBtn, Pagination.btn);
@@ -36,7 +40,6 @@ const Pagination = {
 		}
 		Pagination.Init();
 	},
-
 
 	Init: function() {
 		Pagination.ctn = document.querySelector('[data-pagination-ctn]');
