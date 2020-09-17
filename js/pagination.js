@@ -28,8 +28,8 @@ const Pagination = {
 		for (var i = articles.length - 1; i >= 0; i--) {
 			Pagination.ctn.appendChild(articles[i]);
 		}
-		Pagination.UpdateParams();
 		Pagination.ReplaceBtn();
+		Pagination.UpdateParams();
 	},
 
 	ReplaceBtn: function() {

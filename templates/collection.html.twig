@@ -7,11 +7,12 @@
 {% set qs_start = qs_values[0]|default(0) %}
 {% set qs_end = qs_values[1] ?? step %}
 
-{% set new_qs_start = qs_end + 1 %}
-{% set new_qs_end = qs_end + step + 1 %}
+{% set new_qs_start = qs_end %}
+{% set new_qs_end = new_qs_start + step %}
 
 {% set raw_collection_params = { items: {'@self.children':''}, 'order': {'by': 'folder', 'dir': 'asc'}} %}
-{% set raw_collection_length = page.collection(raw_collection_params)|length %}
+{% set raw_collection = page.collection(raw_collection_params) %}
+{% set raw_collection_length = raw_collection|length %}
 
 {% set collection_params = { items: {'@self.children':''}, 'limit': qs_end, 'order': {'by': 'folder', 'dir': 'asc'}} %}
 {% set collection = page.collection(collection_params) %}
@@ -25,11 +26,11 @@
 
     {% include 'modular/collection.html.twig' with {collection: collection, count: 4} %}
 
-    {% if new_qs_start <= raw_collection_length %}
-    <div class="pagination">
+    {% if new_qs_start + 1 <= raw_collection_length %}
+    <section class="pagination" data-reveal>
         {% set url = (page.url ~ '?' ~ qs_key ~ '=' ~ new_qs_start ~ '-' ~ new_qs_end)|replace({'//':'/'}) %}
         <button class="pagination__load-more button" href="{{ url }}" data-pagination-btn>Load More </button>
-    </div>
+    </section>
     {% endif %}
 
     {% if page.content %}

@@ -37,6 +37,7 @@
     align-items: center;
     justify-content: center;
     margin-top: calc(var(--rhythm)/2);
+    padding: 0 var(--gutter);
 }
 
 button.pagination__load-more {
