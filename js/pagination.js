@@ -44,7 +44,8 @@ const Pagination = {
 
 	UpdateParams: function() {
 		const key = 'articles';
-		const value = Pagination.ctn.children.length;
+		const length = Pagination.ctn.children.length;
+		const value = '0-' + length;
 		const params = new URLSearchParams();
 		params.set(key, value);
 		window.history.replaceState({}, '', `${location.pathname}?${params}`);

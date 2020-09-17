@@ -1,12 +1,36 @@
 {% extends 'partials/base.html.twig' %}
 
+{% set start = 0 %}
+{% set step = 4 %}
+{% set qs_key = 'articles' %}
+{% set qs_values = uri.query(qs_key)|split('-') %}
+{% set qs_start = qs_values[0]|default(0) %}
+{% set qs_end = qs_values[1] ?? step %}
+
+{% set new_qs_start = qs_end + 1 %}
+{% set new_qs_end = qs_end + step + 1 %}
+
+{% set raw_collection_params = { items: {'@self.children':''}, 'order': {'by': 'folder', 'dir': 'asc'}} %}
+{% set raw_collection_length = page.collection(raw_collection_params)|length %}
+
+{% set collection_params = { items: {'@self.children':''}, 'limit': qs_end, 'order': {'by': 'folder', 'dir': 'asc'}} %}
+{% set collection = page.collection(collection_params) %}
+{% set collection = collection|slice(qs_start, qs_end) %}
+
 {% block content %}
     
     <section class="default__title" data-reveal>
         <h1>{{ page.title }}</h1>
     </section>
 
-    {% include 'modular/collection.html.twig' %}
+    {% include 'modular/collection.html.twig' with {collection: collection, count: 4} %}
+
+    {% if new_qs_start <= raw_collection_length %}
+    <div class="pagination">
+        {% set url = (page.url ~ '?' ~ qs_key ~ '=' ~ new_qs_start ~ '-' ~ new_qs_end)|replace({'//':'/'}) %}
+        <button class="pagination__load-more button" href="{{ url }}" data-pagination-btn>Load More </button>
+    </div>
+    {% endif %}
 
     {% if page.content %}
     {% include 'modular/content.html.twig' %}
