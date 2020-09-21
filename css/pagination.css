@@ -1,42 +1,8 @@
-/*.pagination {
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: calc(var(--rhythm)/2);
-}
-
-.pagination li {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.pagination__prev {
-    display: flex;
-}
-
-.pagination__next {
-    display: flex;
-}
-
-.pagination__page {}
-
-.pagination__active {
-    display: flex;
-    width: 24px;
-    height: 24px;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-fg);
-    color: var(--color-bg);
-    border-radius: 50%;
-}
-*/
-
 .pagination {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: calc(var(--rhythm)/2);
+    margin-top: var(--gutter);
     padding: 0 var(--gutter);
 }
 

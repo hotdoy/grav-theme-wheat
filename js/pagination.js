@@ -24,10 +24,8 @@ const Pagination = {
 	},
 
 	AppendResult: function() {
-		const articles = Pagination.result.querySelector('[data-pagination-ctn]').children;
-		for (var i = articles.length - 1; i >= 0; i--) {
-			Pagination.ctn.appendChild(articles[i]);
-		}
+		const articles = Pagination.result.querySelector('[data-pagination-ctn]').innerHTML;
+		Pagination.ctn.insertAdjacentHTML('beforeend', articles);
 		Pagination.ReplaceBtn();
 		Pagination.UpdateParams();
 	},
@@ -63,7 +61,7 @@ const Pagination = {
 				});
 			}
 		}
-	},
+	},	
 }
 
 Pagination.Init();
