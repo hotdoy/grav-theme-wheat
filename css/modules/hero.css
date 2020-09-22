@@ -1,0 +1,19 @@
+/*.hero {}*/
+
+.hero__ctn {
+	position: relative;
+	max-width: var(--width-body);
+	margin: 0 auto;
+	min-height: 600px;
+}
+
+.hero__media {
+	margin: 0 var(--gutter);
+}
+
+.hero__media img, 
+.hero__media video {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}

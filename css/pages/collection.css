@@ -1,5 +1,7 @@
 /*.collection {}*/
 
+/*.module.collection {}*/
+
 .collection__ctn {
     padding: 0 var(--gutter);
     max-width: var(--width-body);

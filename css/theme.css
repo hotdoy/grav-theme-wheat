@@ -26,6 +26,11 @@ html {
 	--rhythm: 125px;
 	--header-heigth: 80px;
 }
+@media (min-width: 835px) {
+	html {
+		--rhythm: 160px;
+	}
+}
 
 
 
