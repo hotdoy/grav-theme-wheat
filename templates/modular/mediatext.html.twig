@@ -1,6 +1,5 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'mediatext' %}
-{% set classes = classes|default(page.header.media_position ? 'mediatext--' ~ page.header.media_position : 'mediatext--left') %}
 
 {% set mp4 = page.header.mp4 ? page.media[page.header.mp4] %}
 {% set webm = page.header.webm ? page.media[page.header.webm] %}
@@ -10,8 +9,8 @@
 {% set content = page.content %}
 
 {% block content %}
-<div class="mediatext__ctn">
-	<div class="mediatext__media" data-reveal>
+<div class="wrapper {{ media_position }}">
+	<div class="media_ctn" data-reveal>
 
 		{% if mp4 or webm %}
 		<video autoplay loop muted poster="{{ image.url }}">
@@ -23,7 +22,7 @@
 		{% endif %}
 
 	</div>
-	<div class="mediatext__content text" data-reveal>
+	<div class="content_ctn text" data-reveal>
 	
 		{% if content %}
 		<div class="text">{{ content|raw }}</div>

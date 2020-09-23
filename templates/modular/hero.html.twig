@@ -7,29 +7,24 @@
 {% set image_alt = page.header.image_alt ?? '' %}
 {% set content = page.content %}
 
-{% set content_position_x = page.header.content_position_x ?? 'center' %} {# left, center, right #}
-{% set content_position_y = page.header.content_position_y ?? 'center' %} {# top, center, bottom #}
-
 {% block content %}
-<div class="hero__ctn">
-	<div class="hero__media fill">
-
-		{% if mp4 or webm %}
-		<video autoplay loop muted poster="{{ image.url }}">
-			{% if mp4 %} <source type="video/mp4" src="{{ mp4.url }}">{% endif %}
-			{% if webm %} <source type="video/webm" src="{{ webm.url }}">{% endif %}
-		</video>
-		{% elseif image %}
-		{{ image.html('', image_alt) }}
-		{% endif %}
-
-	</div>
-	<div class="hero__content text fill" data-reveal>
-	
-		{% if content %}
-		<div class="text">{{ content|raw }}</div>
-		{% endif %}
-		
-	</div>
+<div class="wrapper">
+	<a href="{{ page.header.url }}">
+		<div class="media_ctn fill">
+			{% if mp4 or webm %}
+			<video autoplay loop muted poster="{{ image.url }}">
+				{% if mp4 %} <source type="video/mp4" src="{{ mp4.url }}">{% endif %}
+				{% if webm %} <source type="video/webm" src="{{ webm.url }}">{% endif %}
+			</video>
+			{% elseif image %}
+			{{ image.html('', image_alt) }}
+			{% endif %}
+		</div>
+		<div class="content_ctn text fill" data-reveal>
+			<h2>{{ page.header.display_title }}</h2>
+			<p>{{ page.header.subtitle }}</p>
+			<div class="button">{{ page.header.label }}</div>
+		</div>
+	</a>
 </div>
 {% endblock %}

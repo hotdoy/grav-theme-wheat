@@ -1,33 +1,32 @@
 {% extends 'modular/module.html.twig' %}
-{% set name = 'material-quotes' %}
-{% set classes = classes|default() %}
+{% set name = 'material_quotes' %}
 
 {% block content %}
-<div class="material-quotes__ctn" data-reveal>
+<div class="wrapper" data-reveal>
 
 	{% if page.header.display_title %}
-	<h2 class="module__title">{{ page.header.display_title }}</h2>
+	<h2 class="module_title">{{ page.header.display_title }}</h2>
 	{% endif %}
 	
-	<div class="material-quotes__carousel swiper-container">
+	<div class="carousel swiper-container">
 		<div class="swiper-wrapper">
 
 			{% for item in page.header.items %}
 			{% set portrait = item.portrait ? page.media[item.portrait] %}
 
-			<div class="material-quotes__item text swiper-slide">
-				<blockquote class="material-quotes__item__quote">{{ item.quote }}</blockquote>
+			<div class="item text swiper-slide">
+				<blockquote>{{ item.quote }}</blockquote>
 				{% if portrait %}
-				<div class="material-quotes__item__portrait">{{ portrait.cropZoom(200, 200).quality(config.system.images.default_image_quality).html('', item.alt) }}</div>
+				<div class="portrait">{{ portrait.cropZoom(200, 200).quality(config.system.images.default_image_quality).html('', item.alt) }}</div>
 				{% endif %}
-				<div class="material-quotes__item__source">{{ item.source }}</div>
+				<div class="source">{{ item.source }}</div>
 			</div>
 
 			{% endfor %}
 
 		</div>
 		{% if page.header.items|length > 1 %}
-		<div class="material-quotes__pagination swiper-pagination"></div>
+		<div class="pagination swiper-pagination"></div>
 		{% endif %}
 	</div>	
 </div>

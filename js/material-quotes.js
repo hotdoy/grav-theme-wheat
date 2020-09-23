@@ -4,7 +4,7 @@
 
     const initMaterialQuotes = function(){
 
-        var swiper = new Swiper('.module.material-quotes .swiper-container', {
+        var swiper = new Swiper('.module.material_quotes .swiper-container', {
             spaceBetween: 30,
             centeredSlides: true,
             effect: 'fade',

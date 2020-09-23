@@ -12,9 +12,21 @@ form:
           type: tab
           title: Content
           fields:
-            
-            header.display_title:
+
+            content:
               unset@: true
+
+            header.subtitle:
+              ordering@: header.display_title
+              label: subtitle
+              type: text
+              style: vertical
+
+            header.label:
+              ordering@: header.subtitle
+              label: label
+              type: text
+              style: vertical
 
             header.mp4:
               label: Mp4
@@ -31,21 +43,7 @@ form:
             header.image_alt:
               label: Image Alt
               type: text
-              
-            header.content_position_x:
-              type: toggle
-              label: content_position_x
-              default: center
-              options: 
-                left: 'left'
-                center: 'center'
-                right: 'right'
 
-            header.content_position_y:
-              type: toggle
-              label: content_position_y
-              default: center
-              options: 
-                top: 'top'
-                center: 'center'
-                bottom: 'bottom'
+            header.url:
+              label: url
+              type: text

@@ -61,11 +61,6 @@ body {
 					 UTILS 
 =========================================*/
 
-.landscape{display: block;}
-@media (max-width: 835px) {.landscape {display: none;}}
-.portrait {display: block;}
-@media (min-width: 835px) {.portrait {display: none;}}
-
 .fill {
 	position: absolute;
 	top: 0;

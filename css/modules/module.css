@@ -9,7 +9,7 @@
 	background-color: var(--color-bg);
 }
 
-.module__title {
+.module_title {
     margin: 0 auto;
     margin-bottom: calc(var(--rhythm)/2);
     font-size: xx-large;
@@ -21,7 +21,7 @@
     padding: 0 var(--gutter);
 }
 @media (min-width: 735px) {
-    .module__title {
+    .module_title {
         font-size: 64px;
     }
 }

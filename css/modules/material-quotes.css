@@ -1,4 +1,4 @@
-.material-quotes__ctn {
+.material_quotes .wrapper {
 	position: relative;
 	width: 100%;
 	max-width: var(--width-body);
@@ -6,7 +6,7 @@
 	padding: 0 var(--gutter);
 }
 
-.material-quotes__carousel {
+.material_quotes .carousel {
 	background-color: var(--color-material-bg);
 	color: white;
 	border-radius: 8px;
@@ -15,7 +15,7 @@
 	width: 100%;
 }
 
-.material-quotes__item {
+.material_quotes .item {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -27,7 +27,7 @@
 	color: var(--color-material-fg);
 }
 
-blockquote.material-quotes__item__quote {
+.material_quotes blockquote {
 	font-weight: normal;
 	font-size: x-large;
 	line-height: 1.6;
@@ -36,13 +36,12 @@ blockquote.material-quotes__item__quote {
 }
 
 @media (min-width: 735px) {
-  blockquote.material-quotes__item__quote {
-    font-size: xx-large;
-  }
+	.material_quotes blockquote {
+		font-size: xx-large;
+	}
 }
 
-
-.material-quotes__item__portrait {
+.material_quotes .portrait {
 	margin: 0 auto;
 	margin-top: 30px;
 	width: 50px;
@@ -51,20 +50,21 @@ blockquote.material-quotes__item__quote {
 	border-radius: 9999px;
 }
 
-.material-quotes__item__portrait img {
+.material_quotes .portrait img {
 	max-width: 100%;
 }
 
-.material-quotes__item__source {
+.material_quotes .source {
 	margin-top: 10px;
 	width: 250px;
 	font-size: small;
 	line-height: 1.6;
 }
-.material-quotes .swiper-pagination {
+
+.material_quotes .pagination {
 	padding-bottom: 1rem;
 }
 
-.material-quotes .swiper-pagination-bullet-active {
+.material_quotes .swiper-pagination-bullet-active {
 	background: var(--color-material-fg);
 }
