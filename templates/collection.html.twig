@@ -20,11 +20,31 @@
 
 {% block content %}
     
+    {% if page.header.display_title %}
     <section class="default__title" data-reveal>
-        <h1>{{ page.title }}</h1>
+        <h1>{{ page.header.display_title }}</h1>
     </section>
+    {% endif %}
 
-    {% include 'modular/collection.html.twig' with {collection: collection} %}
+    <section class="module collection">
+        <div class="collection__ctn" data-reveal>
+            <div class="collection__grid" data-pagination-ctn>
+
+                {% for item in items %}
+                {% set item = page.find(item.page) %}
+                {% include 'partials/' ~ item.template ~ '-card.html.twig' with {'item': item} %}
+                {% endfor %}
+
+                {% for item in collection %}
+                {% include 'partials/' ~ item.template ~ '-card.html.twig' with {'item': item} %}
+                {% endfor %}
+
+            </div>
+            {% if config.plugins.pagination.enabled and collection.params.pagination %}
+            {% include 'partials/pagination.html.twig' %}
+            {% endif %}
+        </div>
+    </section>
 
     {% if new_qs_start + 1 <= raw_collection_length %}
     <section class="pagination" data-reveal>

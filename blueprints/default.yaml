@@ -5,6 +5,14 @@ form:
   fields:
     tabs:
       fields:
+        content:
+          fields:
+            header.display_title:
+              ordering@: header.title
+              type: text
+              style: vertical
+              label: display_title
+              
         options:
           fields:
             publishing:

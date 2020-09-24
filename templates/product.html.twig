@@ -41,8 +41,8 @@
 	{% endfor %}
 
 	{# RELATED ITEMS #}
-    {% set options = { items: {'@self.siblings':''}, 'limit': 4, 'order': {'by': 'random'}} %}
-    {% set related = page.collection(options) %}
-    {% include 'modular/collection.html.twig' with { collection: related, title: 'You might also like'} %}
+    {# {% set options = { items: {'@self.siblings':''}, 'limit': 4, 'order': {'by': 'random'}} %} #}
+    {# {% set related = page.collection(options) %} #}
+
 
 {% endblock %}

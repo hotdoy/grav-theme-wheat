@@ -2,9 +2,11 @@
 
 {% block content %}
 
+	{% if page.header.display_title %}
 	<section class="default__title" data-reveal>
-		<h1>{{ page.title }}</h1>
+		<h1>{{ page.header.display_title }}</h1>
 	</section>
+	{% endif %}
 
 	{% if page.content %}
 	{% include 'modular/content.html.twig' %}
