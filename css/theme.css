@@ -23,8 +23,8 @@ html {
 	--width-full: 1920px;
 
 	--gutter: 20px;
-	--rhythm: 125px;
-	--header-heigth: 80px;
+	--rhythm: 80px;
+	--header-heigth: 48px;
 }
 @media (min-width: 835px) {
 	html {

@@ -18,7 +18,6 @@
 	height: 100%;
 }
 
-
 .hero .content_ctn {
 	display: flex;
 	align-items: center;
@@ -39,4 +38,14 @@
 
 .hero .button {
 	margin-top: 20px;
+}
+
+.hero .wrapper:hover .button {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-button-hover);
+}
+
+.hero .wrapper:hover:active .button {
+    transition-duration: 0s;
+    transform: translateY(1px);
 }

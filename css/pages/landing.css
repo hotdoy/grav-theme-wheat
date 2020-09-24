@@ -1,9 +1,5 @@
 /*.landing {}*/
 
-.landing #header {
-	color: white;
-}
-
 .landing__hero {
 	position: relative;
 	margin-top: calc(var(--header-heigth)*-1);

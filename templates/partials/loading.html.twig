@@ -1,10 +1,10 @@
-{% set loading = page.header.loading ?? 'transition' %}
+{# {% set loading = page.header.loading ?? 'transition' %} #}
 
-{% if loading == 'intro' %}
+{# {% if loading == 'intro' %} #}
 {# <div class="intro" data-loading data-loaded-state-delay="900" data-reveal-delay="1100">{% include 'partials/logo.html.twig' %}</div> #}
-{% else %}
-{# <div class="transition" data-loading data-loaded-state-delay="0" data-reveal-delay="100"></div> #}
-{% endif %}
+{# {% else %} #}
+<div class="transition" data-loading data-loaded-state-delay="0" data-reveal-delay="0"></div>
+{# {% endif %} #}
 
 
 

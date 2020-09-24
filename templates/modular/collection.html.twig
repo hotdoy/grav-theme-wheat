@@ -19,10 +19,6 @@
 {% block content %}
 <div class="collection__ctn" data-reveal>
 
-	{% if title %}
-	<h2 class="module__title">{{ title }}</h2>
-	{% endif %}
-
 	<div class="collection__grid {{ grid_modifier }}" data-pagination-ctn>
 
         {% for item in items %}

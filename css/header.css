@@ -1,7 +1,17 @@
-#header {
+.header_shim {
 	position: relative;
 	height: var(--header-heigth);
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: var(--header-heigth);
+	background-color: var(--color-bg);	
 	color: var(--color-fg);
+	border-bottom: 1px solid #e4e4e4;
 	z-index: 5000;
 }
 
@@ -69,8 +79,8 @@
 	background-color: var(--color-bg);
 
 	transition-property: opacity, transform, visibility;
-	transition-duration: 0.4s;
-	transform: translateX(100%)
+	transition-duration: 0.2s;
+	opacity: 0;
 }
 
 .panel__ctn {
@@ -91,8 +101,8 @@
 
 .panel__logo {
 	width: 70px;
-	transform: translateY(1px);
 }
+
 .panel__logo svg {
 	width: 100%;
 }
@@ -122,5 +132,4 @@
 .header--on .panel {
 	visibility: visible;
 	opacity: 1;
-	transform: translateX(0%)
 }
