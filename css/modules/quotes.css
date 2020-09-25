@@ -1,4 +1,11 @@
-.material_quotes .wrapper {
+html {
+	--color-panel-bg: var(--color-fg);
+	--color-panel-fg: var(--color-bg);
+	--color-pagination-bg: var(--color-fg);
+	--color-pagination-fg: var(--color-bg);
+}
+
+.quotes .wrapper {
 	position: relative;
 	width: 100%;
 	max-width: var(--width-body);
@@ -6,16 +13,14 @@
 	padding: 0 var(--gutter);
 }
 
-.material_quotes .carousel {
-	background-color: var(--color-material-bg);
+.quotes .carousel {
+	background-color: var(--color-panel-bg);
 	color: white;
-	border-radius: 8px;
-	box-shadow: var(--shadow-material);
 	height: auto;
 	width: 100%;
 }
 
-.material_quotes .item {
+.quotes .item {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -23,11 +28,11 @@
 	height: auto;
 	padding: 6rem 2rem;
 	text-align: center;
-	background-color: var(--color-material-bg);
-	color: var(--color-material-fg);
+	background-color: var(--color-panel-bg);
+	color: var(--color-panel-fg);
 }
 
-.material_quotes blockquote {
+.quotes blockquote {
 	font-weight: normal;
 	font-size: x-large;
 	line-height: 1.6;
@@ -36,12 +41,12 @@
 }
 
 @media (min-width: 735px) {
-	.material_quotes blockquote {
+	.quotes blockquote {
 		font-size: xx-large;
 	}
 }
 
-.material_quotes .portrait {
+.quotes .portrait {
 	margin: 0 auto;
 	margin-top: 30px;
 	width: 50px;
@@ -50,21 +55,25 @@
 	border-radius: 9999px;
 }
 
-.material_quotes .portrait img {
+.quotes .portrait img {
 	max-width: 100%;
 }
 
-.material_quotes .source {
+.quotes .source {
 	margin-top: 10px;
 	width: 250px;
 	font-size: small;
 	line-height: 1.6;
 }
 
-.material_quotes .pagination {
+.quotes .pagination {
 	padding-bottom: 1rem;
 }
 
-.material_quotes .swiper-pagination-bullet-active {
-	background: var(--color-material-fg);
+.quotes.swiper-pagination-bullet {
+	background: var(--color-pagination-bg);
+}
+
+.quotes .swiper-pagination-bullet-active {
+	background: var(--color-pagination-fg);
 }

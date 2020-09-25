@@ -65,14 +65,6 @@ form:
               type: colorpicker
               label: color_btn_fg
 
-            header.color_material_bg:
-              type: colorpicker
-              label: color_material_bg
-
-            header.color_material_fg:
-              type: colorpicker
-              label: color_material_fg
-
             order_title:
               type: section
               title: Folder
