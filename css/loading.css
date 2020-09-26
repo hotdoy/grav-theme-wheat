@@ -5,7 +5,16 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+	animation-name: loadingfallback;
+	animation-duration: 0.2s;
+	animation-delay: 6s;
+	animation-fill-mode: forwards;
 }
+@keyframes loadingfallback {
+    from {opacity: 1; visibility: visible;}
+    to { opacity:0; visibility:hidden;}
+}
+
 
 
 
