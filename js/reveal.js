@@ -1,6 +1,6 @@
 const Reveal = {
 
-	defaultRevealClass: "reveal",
+	defaultRevealClass: "reveal--default",
 	defaultHiddenClass: "reveal--hidden",
 	defaultInitialDelay: 0,
 

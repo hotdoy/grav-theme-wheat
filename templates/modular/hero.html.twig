@@ -8,7 +8,7 @@
 {% set content = page.content %}
 
 {% block content %}
-<div class="wrapper">
+<div class="wrapper" data-reveal>
 	<a href="{{ page.header.url }}">
 		<div class="media_ctn fill">
 			{% if mp4 or webm %}
@@ -20,7 +20,7 @@
 			{{ image.html('', image_alt) }}
 			{% endif %}
 		</div>
-		<div class="content_ctn text fill" data-reveal>
+		<div class="content_ctn text fill">
 			<h2>{{ page.header.display_title }}</h2>
 			<p>{{ page.header.subtitle }}</p>
 			<div class="button">{{ page.header.label }}</div>

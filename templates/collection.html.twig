@@ -1,7 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
 {% set start = 0 %}
-{% set step = 4 %}
+{% set step = 8 %}
 {% set qs_key = 'articles' %}
 {% set qs_values = uri.query(qs_key)|split('-') %}
 {% set qs_start = qs_values[0]|default(0) %}

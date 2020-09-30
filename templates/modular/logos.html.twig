@@ -12,7 +12,7 @@
 	<div class="grid">
 		{% for item in page.header.items %}
 		{% set logo = item.logo ? page.media[item.logo] %}
-		<div class="logo" data-reveal="reveal--cascade">
+		<div class="logo">
 			{{ logo.html('', item.alt) }}
 		</div>
 		{% endfor %}
