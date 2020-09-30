@@ -20,11 +20,11 @@
 
 	</head>
 
-	<body class="{{ page.template }} {{ page.header.body_classes }} loading" style="{% include 'partials/theme.html.twig' %}">
+	<body class="{{ page.template }} {{ page.header.body_classes }} loading">
 
 		{% block loading %}{% include 'partials/loading.html.twig' %}{% endblock %}
 		{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
-		<main id="content">{% block content %}{% endblock %}</main>
+		<main id="main">{% block content %}{% endblock %}</main>
 		{% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %}
 		{# {% block announcements %}{% include 'partials/announcement.html.twig' %}{% endblock %} #}
 		{# {% block share_dialog %}{% include 'partials/share-dialog.html.twig' %}{% endblock %} #}

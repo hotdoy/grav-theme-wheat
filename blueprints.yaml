@@ -134,36 +134,3 @@ form:
       label: Publisher Logo
       help: The absolute path to the publisher's logo. The image must fit in a 600x60px rectangle including a 6px top and bottom padding. And of jpg, png, or gif format.
       placeholder: 'https://path/to/logo.png'
-
-    colors:
-      type: section
-      title: Colors
-      underline: true
-
-    color_bg:
-      type: colorpicker
-      label: color_bg
-
-    color_fg:
-      type: colorpicker
-      label: color_fg
-
-    color_hl:
-      type: colorpicker
-      label: color_hl
-
-    color_btn_bg:
-      type: colorpicker
-      label: color_btn_bg
-
-    color_btn_fg:
-      type: colorpicker
-      label: color_btn_fg
-
-    color_material_bg:
-      type: colorpicker
-      label: color_material_bg
-
-    color_material_fg:
-      type: colorpicker
-      label: color_material_fg

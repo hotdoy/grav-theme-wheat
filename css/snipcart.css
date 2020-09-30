@@ -1,5 +1,9 @@
 
-.snipcart {
+.snipcart,
+.snipcart__font--secondary,
+.snipcart button,
+.snipcart form legend,
+.snipcart__font--subtitle {
 	font-family: var(--font-base);
 }
 
@@ -12,6 +16,12 @@
 }
 
 .snipcart-cart-button--highlight {
+	background: none;
+	background-color: var(--color-btn-bg);
+	color: var(--color-btn-fg);
+}
+
+.snipcart__box--badge-highlight {
 	background: none;
 	background-color: var(--color-btn-bg);
 	color: var(--color-btn-fg);
