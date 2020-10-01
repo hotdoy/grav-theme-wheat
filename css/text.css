@@ -1,0 +1,122 @@
+.text h1 {
+  font-size: xx-large;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-top: 4rem;
+}
+@media (min-width: 835px) {
+  .text h1 {
+    font-size: 48px;
+  }
+}
+
+.text h2 {
+  font-size: xx-large;
+  line-height: 1.1;
+  margin-top: 4rem;
+}
+@media (min-width: 835px) {
+  .text h2 {
+    font-size: 48px;
+  }
+}
+
+.text h3 {
+  font-size: x-large;
+  line-height: 1.4;
+  margin-top: 2rem;
+}
+@media (min-width: 835px) {
+  .text h3 {
+    font-size: 32px;
+  }
+}
+
+.text h4, .text h5, .text h6 {
+  font-size: large;
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+.text p {
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.text p:empty{
+  display: none;
+}
+
+.text strong {
+  font-size: inherit;
+  font-weight: 700;
+}
+
+.text em {
+  font-size: inherit;
+  font-style: italic;
+}
+
+.text sup {
+  font-size: x-small;
+}
+
+.text blockquote {
+  margin-top: 0;
+  font-size: xx-large;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.text blockquote>p {
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.text pre {
+  margin-top: 1rem;
+  padding: 0 var(--gutter) 0 var(--gutter);
+  font-family: monospace;
+}
+
+.text pre code {
+  display: block;
+  padding: 1rem;
+  border-radius: 4px;
+  color: #f1f1f1;
+  background-color: #1a2429;
+  overflow-x: auto;
+}
+
+.text ul {
+  margin-top: 1rem;
+  font-size: inherit;
+  line-height: 1.6;
+  list-style-position: outside;
+  padding-left: 18px;
+  list-style-type: disc;
+}
+
+.text ol {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: inherit;
+  line-height: 1.6;
+  list-style-position: outside;
+  padding-left: 18px;
+  list-style-type: decimal;
+}
+
+.text li > p {
+  display: inline;
+  font-size: inherit;
+  padding: 0;
+}
+
+.text a {
+  color: inherit;
+  text-decoration: underline;
+}

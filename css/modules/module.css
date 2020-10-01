@@ -20,8 +20,8 @@
     max-width: var(--width-text);
     padding: 0 var(--gutter);
 }
-@media (min-width: 735px) {
-    .module_title {
-        font-size: 64px;
-    }
+@media (min-width: 835px) {
+  .module_title {
+    font-size: 48px;
+  }
 }

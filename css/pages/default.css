@@ -14,8 +14,8 @@
   font-size: xx-large;
   line-height: 1.1;
 }
-@media (min-width: 735px) {
+@media (min-width: 835px) {
   .default__title h1 {
-    font-size: xxx-large;
+    font-size: 48px;
   }
 }

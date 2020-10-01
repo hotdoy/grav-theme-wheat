@@ -51,3 +51,8 @@
 	margin-bottom: 2rem;
 	font-weight: 700;
 }
+@media (min-width: 835px) {
+	.mediatext h2:first-child {
+		margin-top: 0;
+	}
+}
