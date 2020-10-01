@@ -135,6 +135,10 @@
 #header .site-panel nav li {
 	margin: 0 var(--gutter);
 	border-bottom: 1px solid lightgray;
+}
+
+#header .site-panel nav li a {
+	display: block;
 	padding: var(--gutter) 0;
 }
 
