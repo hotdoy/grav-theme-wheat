@@ -165,8 +165,10 @@ body.panel--open #header .site-panel {
 
 
 #header .snipcart-items-count {
+	display: flex;
     position: absolute;
-    display: flex;
+    top: -3px;
+    right: -6px;
     width: 15px;
     height: 15px;
     font-size: 10px;
@@ -174,8 +176,29 @@ body.panel--open #header .site-panel {
     line-height: 10px;
     background-color: var(--color-btn-bg);
     color: var(--color-btn-fg);
-    top: -3px;
-    right: -6px;
     align-items: center;
     justify-content: center;
+}
+
+.snipcart-pulse {
+    position: absolute;
+    top: -3px;
+    right: -6px;
+    width: 15px;
+    height: 15px;
+    opacity: 0;
+	border-radius: 100%;
+	background-color: var(--color-btn-bg);
+}
+
+.snipcart-pulse.active {
+	opacity: 1;
+	animation-name: snipcart-pulse;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+@keyframes snipcart-pulse {
+    from {opacity: 0.7; transform: scale(1);}
+    to {opacity: 0; transform: scale(10);}
 }
