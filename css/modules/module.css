@@ -25,3 +25,7 @@
     font-size: 48px;
   }
 }
+
+.module.hero + .module.hero {
+    margin-top: var(--gutter);
+}
