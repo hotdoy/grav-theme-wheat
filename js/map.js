@@ -34,7 +34,6 @@ function initMap() {
 			
 			google.maps.event.addListener(marker, 'click', function() {
 				window.open(this.url, '_blank')
-				
 			});
 			
 			bounds.extend(position);
@@ -61,6 +60,7 @@ function initMap() {
 			script.defer = true;
 			script.async = true;
 			document.body.appendChild(script);
+
 		}
 	}
 

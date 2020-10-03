@@ -1,29 +1,20 @@
-.map__content {
-	margin: 0 auto 2rem auto;
-	padding: 0 var(--gutter);
-	max-width: var(--width-tight);
-}
+/*.module.map {}*/
 
-.map__content *:first-child {
-	margin-top: 0;
-}
-
-.map__ctn {
+.map .wrapper {
 	width: 100%;
-	max-width: var(--width-site);
+	max-width: var(--width-body);
 	margin: 0 auto;
 	padding: 0 var(--gutter);
 }
 
-.map__ctn > div {
+.map .map_ctn {
 	height: 400px;
     width: 100%;
-    border-radius: 8px;
     overflow: hidden;
 }
 
-@media (min-width: 735px) {
-	.map__ctn > div {
+@media (min-width: 835px) {
+	.map .map_ctn {
 		height: 600px;
 	}
 }

@@ -1,20 +1,24 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'map' %}
-{% set classes = classes|default() %}
 
 {% set zoom = zoom|default(page.header.zoom) %}
 {% set pin = url('theme://images/map/pin.svg') %}
-
-{% set markers %}
-	[{% for marker in page.header.markers %}
-		["{{ marker.title }}", "{{ marker.lat }}", "{{ marker.lng }}","{{ marker.url }}", "{{ pin }}"]{% if not loop.last %},{% endif %}
-	{% endfor %}]
-{% endset %}
+{%- set markers %}
+[{% for marker in page.header.markers %}
+["{{ marker.title }}","{{ marker.lat }}","{{ marker.lng }}","{{ marker.url }}","{{ pin }}"]{% if not loop.last %},{% endif %}
+{% endfor %}]
+{% endset -%}
 
 {% block content %}
-<div class="map__ctn" data-reveal>
+<div class="wrapper" data-reveal>
+
+    {% if page.header.display_title %}
+    <h2 class="module_title">{{ page.header.display_title }}</h2>
+    {% endif %}
+
     {% if theme.gmaps_key %}
-    <div 
+    <div
+    class="map_ctn" 
     id="map-{{ random() }}" 
     data-zoom="{{ zoom }}"
     data-styles='{{ theme.gmaps_styles }}'
