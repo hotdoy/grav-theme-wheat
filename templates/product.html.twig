@@ -8,8 +8,12 @@
 	{% endif %}
 	
 	{# TITLE #}
-	<section class="default__title" data-reveal>
-		<h1>{{ page.title }}</h1>
+	<section class="default_title" data-reveal>
+		<h1>
+		{% if page.header.display_title %}{{ page.header.display_title }}
+		{% else %}{{ page.title }}
+		{% endif %}
+		</h1>
 	</section>
 
 	{# PRODUCT #}

@@ -1,9 +1,8 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'content' %}
-{% set classes = classes|default('text') %}
 
 {% block content %}
-<div data-reveal>
+<div class="text" data-reveal>
 	{{ content|raw }}
 </div>
 {% endblock %}
