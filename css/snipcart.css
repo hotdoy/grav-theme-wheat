@@ -2,16 +2,13 @@
 .snipcart__font--secondary,
 .snipcart button,
 .snipcart form legend,
-.snipcart__font--subtitle {
+.snipcart__font--subtitle,
+.snipcart__actions--link {
 	font-family: var(--font-base);
 }
 
 .snipcart-modal__container {
     z-index: 6000;
-}
-
-.snipcart-cart-header__option {
-	display: none;
 }
 
 .snipcart-cart-button--highlight {
@@ -24,4 +21,12 @@
 	background: none;
 	background-color: var(--color-btn-bg);
 	color: var(--color-btn-fg);
+}
+
+.snipcart__actions--link {
+	color: var(--color-hl)
+}
+
+.snipcart-modal__close-icon path {
+ 	fill: var(--color-hl);
 }

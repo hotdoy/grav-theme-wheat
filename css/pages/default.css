@@ -5,7 +5,6 @@
 	margin: 0 auto;
   margin-top: calc(var(--rhythm) - (var(--header-heigth)/2));
 	text-align: center;
-	font-weight: 700;
 	max-width: var(--width-text);
 }
 

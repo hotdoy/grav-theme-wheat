@@ -9,6 +9,10 @@
 	background-color: var(--color-bg);
 }
 
+.module.padded + .module.padded {
+    margin-top: 0;
+}
+
 .module_title {
     margin: 0 auto;
     margin-bottom: calc(var(--rhythm)/2);
