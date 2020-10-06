@@ -1,6 +1,6 @@
-/*.default{}*/
+/*.template-default{}*/
 
-.default_title {
+.default-title {
 	padding: 0 var(--gutter);
 	margin: 0 auto;
   margin-top: calc(var(--rhythm) - (var(--header-heigth)/2));
@@ -8,13 +8,13 @@
 	max-width: var(--width-text);
 }
 
-.default_title h1 {
+.default-title h1 {
   margin-top: 0;
   font-size: xx-large;
   line-height: 1.1;
 }
 @media (min-width: 835px) {
-  .default_title h1 {
+  .default-title h1 {
     font-size: 48px;
   }
 }

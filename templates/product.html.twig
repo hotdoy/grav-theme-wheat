@@ -8,7 +8,7 @@
 	{% endif %}
 	
 	{# TITLE #}
-	<section class="default_title" data-reveal>
+	<section class="default-title" data-reveal>
 		<h1>
 		{% if page.header.display_title %}{{ page.header.display_title }}
 		{% else %}{{ page.title }}
@@ -17,31 +17,31 @@
 	</section>
 
 	{# PRODUCT #}
-	<section class="module product__head">
-		<div class="product__head__ctn">
-			<div class="product__head__media" data-reveal>
+	<section class="module product">
+		<div class="wrapper">
+			<div class="media_ctn" data-reveal>
 			{% set image = page.header.image ? page.media[page.header.image] %}
 			{% set image_alt = page.header.image_alt ?? '' %}
 			{% if image %}
 			{{ image.html('', image_alt) }}
 			{% endif %}
 			</div>
-			<div class="product__head__content" data-reveal>
-				<div class="product__head__sticky-ctn">
+			<div class="content_ctn" data-reveal>
+				<div class="sticky_ctn">
 					{% if content %}
-					<div class="product__head__description text">{{ page.content|raw }}</div>
+					<div class="description text">{{ page.content|raw }}</div>
 					{% endif %}
-					<div class="product__head__price">{{ page.header.price|number_format(2, ',', ' ') }} $</div>
-					{% include 'partials/snipcart-add-item.html.twig' with {'class': 'product__head__add-to-cart'} %}
+					<div class="price">{{ page.header.price|number_format(2, ',', ' ') }} $</div>
+					{% include 'partials/snipcart-add-item.html.twig' with {'class': 'add-to-cart button'} %}
 				</div>
 			</div>
 		</div>
 	</section>
 
 	{# MOBILE BUY BUTTON #}
-	<section class="product__bottom-bar">
-		<div class="product-__bottom-bar__price">{{ page.header.price|number_format(2, ',', ' ') }} $</div>
-		{% include 'partials/snipcart-add-item.html.twig' with {'class': 'product__bottom-bar__add-to-cart'} %}
+	<section class="bottom-bar">
+		<div class="price">{{ page.header.price|number_format(2, ',', ' ') }} $</div>
+		{% include 'partials/snipcart-add-item.html.twig' with {'class': 'add-to-cart button'} %}
 	</section>
 
 	{# MODULES #}
