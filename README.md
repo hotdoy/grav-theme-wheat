@@ -2,7 +2,7 @@
 
 ## Description
 
-Wheat is a Pop-up shop theme for Grav CMS using Snipcart. It is also the starter theme for everything getting out of Calotte. It's meant to be usable out of the box, reducing the installation process, maintenance and dependencies to a minimum. It uses vanilla everything (html, js, css) and completelly eliminate the build process. While the theme is opinionated, everything is packaged and documented (nope) to be as simple as possible, allowing someone with minimum coding knowledge to jump in as fast as possible.
+Wheat is a Pop-up shop theme for Grav CMS using Snipcart. It is also the starter theme for everything getting out of Calotte. It's meant to be usable out of the box, reducing the installation process, maintenance and dependencies to a minimum. It uses vanilla everything (html, js, css) and completelly eliminate the build process. While the theme is opinionated, everything is packaged and (will be) documented to be as simple as possible, allowing someone with minimum coding knowledge to jump in as fast as possible.
 
 ## Tenets
 - Stick to mobile
