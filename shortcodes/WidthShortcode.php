@@ -6,28 +6,22 @@ class WidthShortcode extends Shortcode
 {
     public function init()
     {
-        $this->shortcode->getHandlers()->add('width-text', function(ShortcodeInterface $sc) {
+        $this->shortcode->getHandlers()->add('w-text', function(ShortcodeInterface $sc) {
             $class = $sc->getParameter('class');
             $style = $sc->getParameter('style');
-            return '<div class="width-text ' . $class . '" style="' . $style . '">' . $sc->getContent() . '</div>';
+            return '<div class="w-text ' . $class . '" style="' . $style . '">' . $sc->getContent() . '</div>';
         });
 
-         $this->shortcode->getHandlers()->add('width-body', function(ShortcodeInterface $sc) {
+         $this->shortcode->getHandlers()->add('w-body', function(ShortcodeInterface $sc) {
             $class = $sc->getParameter('class');
             $style = $sc->getParameter('style');
-            return '<div class="width-body ' . $class . '" style="' . $style . '">' . $sc->getContent() . '</div>';
+            return '<div class="w-body ' . $class . '" style="' . $style . '">' . $sc->getContent() . '</div>';
         });
 
-         $this->shortcode->getHandlers()->add('width-site', function(ShortcodeInterface $sc) {
+        $this->shortcode->getHandlers()->add('w-full', function(ShortcodeInterface $sc) {
             $class = $sc->getParameter('class');
             $style = $sc->getParameter('style');
-            return '<div class="width-site ' . $class . '" style="' . $style . '">' . $sc->getContent() . '</div>';
-        });
-
-        $this->shortcode->getHandlers()->add('width-full', function(ShortcodeInterface $sc) {
-            $class = $sc->getParameter('class');
-            $style = $sc->getParameter('style');
-            return '<div class="width-full ' . $class . '" style="' . $style . '">' . $sc->getContent() . '</div>';
+            return '<div class="w-full ' . $class . '" style="' . $style . '">' . $sc->getContent() . '</div>';
         });
     }
 }

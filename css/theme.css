@@ -59,7 +59,6 @@ html {
 
 	--width-text: 735px;
 	--width-body: 1200px;
-	--width-site: 1600px;
 	--width-full: 1920px;
 
 	--gutter: 20px;
@@ -105,26 +104,20 @@ body {
 	left: 0;
 }
 
-.width-text {
+.w-text {
 	width: 100%;
 	max-width: var(--width-text);
 	margin: 0 auto;
 }
 
-.width-body {
+.w-body {
 	width: 100%;
 	max-width: var(--width-body);
 	padding: 0 var(--gutter);
 	margin: 0 auto;
 }
 
-.width-site {
-	width: 100%;
-	max-width: var(--width-site);
-	margin: 0 auto;
-}
-
-.width-full {
+.w-full {
 	width: 100%;
 	max-width: var(--width-full);
 	margin: 0 auto;

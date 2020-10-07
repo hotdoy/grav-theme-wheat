@@ -1,10 +1,16 @@
- .content {
+ /*.content {} */
 
- } 
-
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6,
-.content p, .content blockquote, .content pre, 
-.content ul, .content ol {
+.content h1, 
+.content h2, 
+.content h3, 
+.content h4, 
+.content h5, 
+.content h6,
+.content p, 
+.content blockquote, 
+.content pre, 
+.content ul, 
+.content ol {
 	padding: 0 var(--gutter);
 	max-width: var(--width-text);
 	margin-left: auto;
@@ -30,11 +36,6 @@
 	display: block;
 	margin: 0 auto 0 auto;
 	width: 100%;
-	border-radius: 8px;
-}
-
-.content pre {
-    max-width: var(--width-text);
 }
 
 .content blockquote p {
@@ -72,19 +73,12 @@
 /*SPOTIFY*/
 .content iframe[src*="spotify"] {
 	display: block;
+	width: 100%;
 	margin: 0 auto;
 	margin-top: 2rem;
 	padding-left: var(--gutter);
 	padding-right: var(--gutter);
 	max-width: var(--width-text);
-}
-
-.content iframe[src*="spotify/embed-podcast"] {
-	width: 100%;
-}
-
-.content iframe[src*="spotify/embed/track"] {
-	width: 100%;
 }
 
 /* TABLES */
@@ -107,7 +101,7 @@ table, th, td {
 
 .content span.dropcap {
     float: left;
-    font-size: xxx-large;
+    font-size: xx-large;
     font-weight: 700;
     line-height: 1;
     padding-top: 2px;
