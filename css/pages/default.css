@@ -18,3 +18,12 @@
     font-size: 48px;
   }
 }
+
+#breadcrumbs {
+  text-align: center;
+  margin-top: calc(var(--rhythm) - (var(--header-heigth)/2));
+}
+
+#breadcrumbs + .default-title {
+  margin-top: var(--gutter);
+}

@@ -1,8 +1,0 @@
-#breadcrumbs {
-	text-align: center;
-	margin-top: calc(var(--rhythm) - (var(--header-heigth)/2));
-}
-
-#breadcrumbs + .default_title {
-	margin-top: var(--gutter);
-}
