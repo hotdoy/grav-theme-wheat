@@ -19,13 +19,33 @@
 	{# PRODUCT #}
 	<section class="module product">
 		<div class="wrapper">
+
 			<div class="media_ctn" data-reveal>
-			{% set image = page.header.image ? page.media[page.header.image] %}
-			{% set image_alt = page.header.image_alt ?? '' %}
-			{% if image %}
-			{{ image.html('', image_alt) }}
-			{% endif %}
+				{% if page.header.images %}
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						{% for item in page.header.images %}
+						<div class="swiper-slide">
+							{% set image = item.image ? page.media[item.image] %}
+							{% set image_alt = item.image_alt ?? '' %}
+							{% if image %}
+							{{ image.html('', image_alt) }}
+							{% endif %}
+						</div>
+						{% endfor %}
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>	
+				{% else %}
+				{% set image = page.header.image ? page.media[page.header.image] %}
+				{% set image_alt = page.header.image_alt ?? '' %}
+				{% if image %}
+				{{ image.html('', image_alt) }}
+				{% endif %}
+				{% endif %}
 			</div>
+
+
 			<div class="content_ctn" data-reveal>
 				<div class="sticky_ctn">
 					{% if content %}

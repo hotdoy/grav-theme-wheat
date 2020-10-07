@@ -10,26 +10,40 @@ form:
 
             header.id:
               type: text
-              label: ID
+              label: id
 
             header.name:
               type: text
-              label: Name
+              label: name
 
             header.price:
               type: text
-              label: Price
+              label: price
               validate:
                 type: number
                 min: 0
 
             header.description:
               type: text
-              label: Description
+              label: description
 
             header.image:
-              label: Image
               type: pagemediaselect
+              label: main_image
               accept:
                 - jpg
               
+            header.images:
+              name: images
+              type: list
+              style: vertical
+              label: images
+              fields:
+                .image:
+                  label: image
+                  type: pagemediaselect
+                  accept:
+                    - jpg
+                .alt:
+                  type: text
+                  label: alt
