@@ -1,3 +1,5 @@
+/*PAGE*/
+
 /*.template-default{}*/
 
 .default-title {
@@ -26,4 +28,48 @@
 
 #breadcrumbs + .default-title {
   margin-top: var(--gutter);
+}
+
+
+
+
+
+/*CARD*/
+.default-card {
+    position: relative;
+    font-size: large;
+    font-weight: 700;
+    line-height: 1.4;
+    transition-duration: 0.2s;
+    transition-property: transform;
+}
+
+@media (min-width: 835px) {
+    .default-card {
+        font-size: x-large;
+        line-height: 1.4;        
+    }
+}
+
+.default-card:hover {
+    transform: translateY(-2px);
+}
+
+.default-card:hover:active {
+    transition-duration: 0s;
+    transform: translateY(1px);
+}
+
+.default-card .wrapper {
+    position: relative;
+    padding-top: 133%;
+    border: 1px solid var(--color-border);
+}
+
+.default-card .fill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--gutter);
 }

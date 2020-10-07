@@ -1,0 +1,9 @@
+{% set item = item|default(item) %}
+
+<article class="default-card">
+	<a href="{{ item.url }}">
+		<div class="wrapper">
+			<div class="fill">{{ item.header.title }}</div>
+		</div>
+	</a>
+</article>
