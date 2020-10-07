@@ -46,16 +46,12 @@ html {
 	--color-bg: #f6f9fc;
 	--color-fg: #32325d;
 	--color-hl: #6772e5;
+	--color-border: #e4e4e4;
+
 	--color-btn-bg: #6772e5;
 	--color-btn-fg: white;
-	--color-material-bg: white;
-	--color-material-fg: #32325d;
-	--color-material-hl: #6772e5;
-
 	--shadow-button: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
 	--shadow-button-hover: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
-	--shadow-material: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
-	--shadow-material-hover: 0 30px 60px -12px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
 
 	--width-text: 735px;
 	--width-body: 1200px;
