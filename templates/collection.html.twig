@@ -39,7 +39,7 @@
                 {% endfor %}
 
                 {% for item in collection %}
-                {% include 'partials/' ~ item.template ~ '-card.html.twig' with {'item': item} %}
+                {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item} %}
                 {% endfor %}
 
             </div>
@@ -51,14 +51,11 @@
 
     {% if new_qs_start + 1 <= raw_collection_length %}
     <section class="pagination" data-reveal>
-        {% set url = (page.url ~ '?' ~ qs_key ~ '=' ~ new_qs_start ~ '-' ~ new_qs_end)|replace({'//':'/'}) %}
+        {% set url = (page.url ~ '?' ~ qs_key ~ '=' ~ new_qs_start ~ '-' ~ new_qs_end) %}
         <button class="pagination__load-more button" href="{{ url }}" data-pagination-btn>Load More </button>
     </section>
     {% endif %}
 
-    {% if page.content %}
-    {% include 'modular/content.html.twig' %}
-    {% endif %}
     {% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
     {{ module.content|raw }}
     {% endfor %}
