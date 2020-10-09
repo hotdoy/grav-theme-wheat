@@ -1,0 +1,14 @@
+title: editorial
+'@extends': modular/module
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            
+            header.display_title:
+              unset@: true

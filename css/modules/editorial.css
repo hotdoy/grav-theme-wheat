@@ -1,0 +1,109 @@
+ /*.editorial {} */
+
+.editorial h1, 
+.editorial h2, 
+.editorial h3, 
+.editorial h4, 
+.editorial h5, 
+.editorial h6,
+.editorial p, 
+.editorial blockquote, 
+.editorial pre, 
+.editorial ul, 
+.editorial ol {
+	padding: 0 var(--gutter);
+	max-width: var(--width-text);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.editorial ul li {
+	margin-left: 18px;
+}
+
+/*REMOVE MARGIN FOR FIRST ELEMENT*/
+.editorial> *:nth-child(1) {
+	margin-top: 0;
+}
+
+.editorial hr {
+	margin: calc(var(--rhythm)/2) 0 calc(var(--rhythm)/2) 0;
+    border: none;
+}
+
+.editorial p img,
+.editorial p video {
+	display: block;
+	margin: 0 auto 0 auto;
+	width: 100%;
+}
+
+.editorial blockquote p {
+	padding: 0;
+}
+
+/*YOUTUBE | VIMEO*/
+.editorial .embed__ctn {
+	max-width: var(--width-body);
+	padding-left: var(--gutter);
+	padding-right: var(--gutter);
+	margin: 0 auto;
+	margin-top: 2rem;
+}
+
+.editorial .embed.youtube,
+.editorial .embed.vimeo {
+	position: relative;
+	padding-bottom: 56.25%; 
+	height: 0; 
+	overflow: hidden; 
+	width: 100%;
+}
+
+.editorial .embed.youtube iframe,
+.editorial .embed.vimeo iframe {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%;
+	border-radius: 8px;
+}
+
+/*SPOTIFY*/
+.editorial iframe[src*="spotify"] {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 2rem;
+	padding-left: var(--gutter);
+	padding-right: var(--gutter);
+	max-width: var(--width-text);
+}
+
+/* TABLES */
+.editorial table {
+	margin-top: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table, th, td {
+	padding: 1rem;
+	border: 1px solid var(--color-fg);
+  }
+  
+.editorial .twitter-tweet {
+	margin: 0 auto;
+	width: 100%;
+	max-width: var(--width-text);
+}
+
+.editorial span.dropcap {
+    float: left;
+    font-size: xx-large;
+    font-weight: 700;
+    line-height: 1;
+    padding-top: 2px;
+    padding-right: 8px;
+}

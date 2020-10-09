@@ -2,7 +2,7 @@
 
 .module.product {}
 
-.product .wrapper {
+.product-showcase .wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
@@ -11,28 +11,28 @@
 	padding: 0 var(--gutter);
 }
 
-.product .media_ctn {
+.product-showcase .media_ctn {
 	width: 100%;
 }
 @media (min-width: 835px) {
-	.product .media_ctn {
+	.product-showcase .media_ctn {
 		width: 50%;
 	}
 }
 
-.product .pagination {
+.product-showcase .pagination {
 	padding-bottom: 1rem;
 }
 
-.product .swiper-pagination-bullet {
+.product-showcase .swiper-pagination-bullet {
 	background: var(--color-bg);
 }
 
-.product .swiper-pagination-bullet-active {
+.product-showcase .swiper-pagination-bullet-active {
 	background: var(--color-hl);
 }
 
-.product .media_ctn img {
+.product-showcase .media_ctn img {
 	display: block;
 	margin: 0 auto;
 	width: 100%;
@@ -41,52 +41,52 @@
 }
 
 @media (min-width: 835px) {
-	.product .sticky_ctn {
+	.product-showcase .sticky_ctn {
 		position: sticky;
 		top: calc(var(--header-heigth) + var(--gutter));
 	}	
 }
 
-.product .name {
+.product-showcase .name {
 	margin-top: 2rem;
 	font-weight: 700;
 	font-size: x-large;
 }
 @media (min-width: 835px) {
-	.product .name {
+	.product-showcase .name {
 		margin-top: 0;
 	}
 }
 
-.product .content_ctn {
+.product-showcase .content_ctn {
 	width: 100%;
 }
 @media (min-width: 835px) {
-	.product .content_ctn {
+	.product-showcase .content_ctn {
 		width: 50%;
 		padding-right: 0;
 		padding-left: 90px;
 	}
 }
 
-.product .description {
+.product-showcase .description {
 	margin-top: 2rem;
 }
 @media (min-width: 835px) {
-	.product .description {
+	.product-showcase .description {
 		margin-top: 0;
 	}
 }
 
-.product .description> *:nth-child(1) {
+.product-showcase .description> *:nth-child(1) {
 	margin-top: 0;
 }
 
-.product .price {
+.product-showcase .price {
 	display: none;
 }
 @media (min-width: 835px) {
-	.product .price {
+	.product-showcase .price {
 		display: block;
 		font-size: x-large;
     	font-weight: 700;
@@ -94,13 +94,13 @@
 	}
 }
 
-.product button.add-to-cart {
+.product-showcase button.add-to-cart {
     display: none;
     width: 100%;
     margin-top: 2rem;
 }
 @media (min-width: 835px) {
-	.product button.add-to-cart {
+	.product-showcase button.add-to-cart {
 	    display: block;
 	}
 }
