@@ -2,10 +2,9 @@
 {% if theme.snipcart_public_key %}{% do assets.addJs('https://cdn.snipcart.com/themes/v3.0.22/default/snipcart.js') %}{% endif %}
 {% do assets.addJs('theme://libs/swiper/swiper.min.js', { group:'bottom' }) %}
 
+{# COMPONENTS #}
 {% do assets.addJs('theme://js/reveal.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/links.js', { group:'bottom'}) %}
-
-{# COMPONENTS #}
 {% do assets.addJs('theme://js/header.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/announcement.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/youtube.js', { group:'bottom' }) %}
