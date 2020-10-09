@@ -1,14 +1,12 @@
-/*.collection {}*/
+/*body.collection {}*/
 
-/*.module.collection {}*/
-
-.collection__ctn {
+.collection-grid-wrapper {
     padding: 0 var(--gutter);
     max-width: var(--width-body);
     margin: 0 auto;
 }
 
-.collection__grid{
+.collection-grid{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 10px 5px;
@@ -17,7 +15,7 @@
 	margin: 0 auto;
 }
 @media (min-width: 835px) {
-	.collection__grid {
+	.collection-grid {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-gap: 10px 10px;
 	}

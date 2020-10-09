@@ -1,4 +1,4 @@
-/*.product{}*/
+/*body.product{}*/
 
 .module.product {}
 
@@ -110,7 +110,7 @@
 
 /*BOTTOM BAR*/
 
-.template-product .bottom-bar {
+.product .bottom-bar {
 	display: none;
 	justify-content: space-between;
 	align-items: center;
@@ -125,7 +125,7 @@
 	z-index: 1001;
 }
 @media (max-width: 835px) {
-	.template-product .bottom-bar {
+	.product .bottom-bar {
 		display: flex;
 	}
 }
@@ -135,11 +135,11 @@
 	font-weight: 700;
 }
 
-.template-product footer {
+.product footer {
 	margin-bottom: 52px;
 }
 @media (min-width: 835px) {
-	.template-product footer {
+	.product footer {
 		margin-bottom: 0;
 	}
 }
