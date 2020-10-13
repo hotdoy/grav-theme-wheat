@@ -57,6 +57,7 @@ const Pagination = {
 			if (!!Pagination.ctn && !!Pagination.url) {
 				Pagination.btn.addEventListener('click',(event) => {
 					event.preventDefault();
+					Pagination.btn.setAttribute('data-pagination-btn','requesting');
 					Pagination.Request();
 				});
 			}

@@ -49,7 +49,10 @@
     {% if new_qs_start + 1 <= raw_collection_length %}
     <section class="pagination">
         {% set url = (page.url ~ '?' ~ qs_key ~ '=' ~ new_qs_start ~ '-' ~ new_qs_end) %}
-        <button class="pagination__load-more button" href="{{ url }}" data-pagination-btn>Load More </button>
+        <button class="button" href="{{ url }}" data-pagination-btn>
+            <span class="spinner"></span>
+            <span class="label">Load More</span>
+        </button>
     </section>
     {% endif %}
 
