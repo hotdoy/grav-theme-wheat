@@ -46,6 +46,13 @@
   }
 }
 
+.pagination button.button[data-pagination-btn='requesting'],
+.pagination button.button[data-pagination-btn='requesting']:hover,
+.pagination button.button[data-pagination-btn='requesting']:hover:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
 .pagination button[data-pagination-btn='requesting'] .label {
     opacity: 0;
 }
