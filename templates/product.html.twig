@@ -2,19 +2,9 @@
 
 {% block content %}
 
-	{# BREADCRUMBS #}
-	{% if config.plugins.breadcrumbs.enabled %}
-		{% include 'partials/breadcrumbs.html.twig' %}
-	{% endif %}
-	
-	{# TITLE #}
-	<section class="default-title" data-reveal>
-		<h1>
-		{% if page.header.display_title %}{{ page.header.display_title }}
-		{% else %}{{ page.title }}
-		{% endif %}
-		</h1>
-	</section>
+	{# HEADER #}
+    {% set title = page.header.display_title ?? page.title %}
+    {% include 'partials/default-header.html.twig' with {title: title} %}
 
 	{# PRODUCT #}
 	<section class="module product-showcase">

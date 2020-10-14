@@ -2,18 +2,17 @@
 
 {% block content %}
 
-	{% if page.header.display_title %}
-	<section class="default-title" data-reveal>
-		<h1>{{ page.header.display_title }}</h1>
-	</section>
-	{% endif %}
-
+	{# HEADER #}
+	{% include 'partials/default-header.html.twig' %}
+	
+	{# CONTENT #}
 	{% if page.content %}
 	{% include 'modular/editorial.html.twig' %}
 	{% endif %}
-	
+
+	{# MODULES #}
 	{% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
 	{{ module.content|raw }}
 	{% endfor %}
-	
+
 {% endblock %}
