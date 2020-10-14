@@ -44,7 +44,7 @@ const Pagination = {
 
 	UpdateParams: function() {
 		const key = 'articles';
-		const length = Pagination.ctn.children.length;
+		const length = Pagination.list.children.length;
 		const value = '0-' + length;
 		const params = new URLSearchParams();
 		params.set(key, value);
