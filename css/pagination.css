@@ -2,8 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: var(--gutter);
     padding: 0 var(--gutter);
+    max-width: var(--width-body);
+    margin: 0 auto;
+    margin-top: var(--gutter);
 }
 
 .pagination button[data-pagination-btn] {
@@ -64,4 +66,13 @@
     left: calc(50% - 7px);
 }
 
-
+.pagination .no-result {
+    background-color: #eef1f5;
+    display: block;
+    width: auto;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: small;
+}

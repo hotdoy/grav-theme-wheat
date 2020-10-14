@@ -28,7 +28,7 @@
 
     <section class="module">
         <div class="collection-grid-wrapper" data-reveal>
-            <div class="collection-grid" data-pagination-ctn>
+            <div class="collection-grid" data-pagination-list>
 
                 {% for item in items %}
                 {% set item = page.find(item.page) %}
@@ -46,15 +46,19 @@
         </div>
     </section>
 
-    {% if new_qs_start + 1 <= raw_collection_length %}
-    <section class="pagination">
+    
+    <section class="pagination" data-pagination-ctn>
+        {% if new_qs_start + 1 <= raw_collection_length %}
         {% set url = (page.url ~ '?' ~ qs_key ~ '=' ~ new_qs_start ~ '-' ~ new_qs_end) %}
         <button class="button" href="{{ url }}" data-pagination-btn>
             <span class="spinner"></span>
             <span class="label">{{ 'THEME_WHEAT.PAGINATION.LOAD_MORE'|t }}</span>
-        </button>
+        </button> 
+        {% else %}
+        <div class="no-result">That's it for today!</div>
+        {% endif %}   
     </section>
-    {% endif %}
+  
 
     {% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
     {{ module.content|raw }}

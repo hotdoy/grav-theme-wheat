@@ -1,11 +1,13 @@
 const Pagination = {
 
+	list: {},
 	ctn: {},
 	btn: {},
 	url: {},
 	result: {},
 
 	Request: function() {
+		Pagination.btn.setAttribute('data-pagination-btn','requesting');
 		let request = new XMLHttpRequest();
 		request.responseType = 'document';
 		request.open('GET', Pagination.url, true);
@@ -24,18 +26,18 @@ const Pagination = {
 	},
 
 	AppendResult: function() {
-		const articles = Pagination.result.querySelector('[data-pagination-ctn]').innerHTML;
-		Pagination.ctn.insertAdjacentHTML('beforeend', articles);
-		Pagination.ReplaceBtn();
+		const articles = Pagination.result.querySelector('[data-pagination-list]').innerHTML;
+		Pagination.list.insertAdjacentHTML('beforeend', articles);
+		Pagination.UpdateCtn();
 		Pagination.UpdateParams();
 	},
 
-	ReplaceBtn: function() {
-		let newBtn = Pagination.result.querySelector('[data-pagination-btn]');
-		if (!!newBtn) {
-			Pagination.btn.parentNode.replaceChild(newBtn, Pagination.btn);
+	UpdateCtn: function() {
+		let newCtn = Pagination.result.querySelector('[data-pagination-ctn]');
+		if (!!newCtn) {
+			Pagination.ctn.parentNode.replaceChild(newCtn, Pagination.ctn);
 		} else {
-			Pagination.btn.parentNode.remove();
+			Pagination.ctn.parentNode.remove();
 		}
 		Pagination.Init();
 	},
@@ -50,14 +52,14 @@ const Pagination = {
 	},
 
 	Init: function() {
+		Pagination.list = document.querySelector('[data-pagination-list]');
 		Pagination.ctn = document.querySelector('[data-pagination-ctn]');
 		Pagination.btn = document.querySelector('[data-pagination-btn]');
 		if (!!Pagination.btn) {
 			Pagination.url = Pagination.btn.getAttribute('href');
-			if (!!Pagination.ctn && !!Pagination.url) {
+			if (!!Pagination.ctn && !!Pagination.url && !!Pagination.list) {
 				Pagination.btn.addEventListener('click',(event) => {
 					event.preventDefault();
-					Pagination.btn.setAttribute('data-pagination-btn','requesting');
 					Pagination.Request();
 				});
 			}
