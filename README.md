@@ -9,8 +9,8 @@ Wheat is a Pop-up shop theme for Grav CMS using Snipcart. It is also the starter
 - Always choose the maintainable solution. 
 - Keep it light and fast. Time is money.
 - Think about the added value all the time. If something does not add value, ditch it.
-- Never put something that might block the user's journey unless it prints money.
-- Your site should be like a Call of Duty map. You should be able to never stop running and never be trapped in a corner.
+- Never block the user's journey unless it prints money.
+- Your site must be like a Call of Duty map. You should be able to never stop running and never be trapped in a corner.
 
 ## Pages
 - Default
