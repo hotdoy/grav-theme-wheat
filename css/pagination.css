@@ -65,14 +65,3 @@
     position: absolute;
     left: calc(50% - 7px);
 }
-
-.pagination .no-result {
-    background-color: #eef1f5;
-    display: block;
-    width: auto;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    border-radius: 8px;
-    font-size: small;
-}
