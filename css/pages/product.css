@@ -40,6 +40,18 @@
 	object-fit: contain;
 }
 
+.product-showcase .swiper-slide,
+.product-showcase .single-image {
+	position: relative;
+	padding-top: 133%;
+}
+
+.product-showcase .swiper-slide img,
+.product-showcase .single-image img {
+	position: absolute;
+	object-fit: cover;
+}
+
 @media (min-width: 835px) {
 	.product-showcase .sticky_ctn {
 		position: sticky;
