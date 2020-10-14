@@ -1,15 +1,10 @@
 {% extends 'default.html.twig' %}
 
-
 {% block content %}
 
 	{# TITLE #}
 	<section class="default-title" data-reveal>
-		<h1>
-		{% if page.header.display_title %}{{ page.header.display_title }}
-		{% else %}{{ page.title }}
-		{% endif %}
-		</h1>
+		<h1>{{ page.title }}</h1>
 	</section>
 	
 {% endblock %}
