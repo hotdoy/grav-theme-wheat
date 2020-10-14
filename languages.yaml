@@ -1,15 +1,8 @@
-fr:
-    THEME:
-        ERROR:
-          TITLE: 404
-          CONTENT: Cette page n'existe pas
-        SHARE:
-          LABEL: Partager
-        
-en:
-    THEME:
-        ERROR:
-          TITLE: 404
-          CONTENT: Page Not Found
-        SHARE:
-          LABEL: Share
+en: 
+    THEME_WHEAT:
+        PAGINATION:
+            LOAD_MORE: Load More
+fr: 
+    THEME_WHEAT:
+        PAGINATION:
+            LOAD_MORE: Charger plus
