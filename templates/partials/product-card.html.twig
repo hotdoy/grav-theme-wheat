@@ -5,13 +5,13 @@
 
 <article class="product-card">
 	<a href="{{ item.url }}">
-		<div class="product-card__media">
+		<div class="media">
 			<div class="fill">{{ image.html('', image_alt) }}</div>
 		</div>
 
-		<div class="product-card__info">
-			<div class="product-card__title">{{ item.title }}</div>
-			<div class="product-card__price">{{ item.header.price|number_format(2, ',', ' ') }} $</div>
+		<div class="info">
+			<div class="title">{{ item.title }}</div>
+			<div class="price">{{ item.header.price|number_format(2, ',', ' ') }} $</div>
 		</div>
 	</a>
 </article>

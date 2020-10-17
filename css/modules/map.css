@@ -7,14 +7,14 @@
 	padding: 0 var(--gutter);
 }
 
-.map .map_ctn {
+.map .map-ctn {
 	height: 400px;
     width: 100%;
     overflow: hidden;
 }
 
 @media (min-width: 835px) {
-	.map .map_ctn {
+	.map .map-ctn {
 		height: 600px;
 	}
 }

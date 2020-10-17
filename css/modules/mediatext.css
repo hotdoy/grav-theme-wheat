@@ -12,32 +12,32 @@
 	flex-direction: row-reverse;
 }
 
-.mediatext.media_ctn,
-.mediatext.content_ctn {
+.mediatext.media-ctn,
+.mediatext.content-ctn {
 	width: 100%;
 }
 
 @media (min-width: 835px) {
 
-	.mediatext .media_ctn {
+	.mediatext .media-ctn {
 		width: 40%;
 	}
 
-	.mediatext .content_ctn {
+	.mediatext .content-ctn {
 		width: 60%;
 		padding-right: 0;
 		padding-left: 90px;
 
 	}
 
-	.mediatext .wrapper.right .content_ctn {
+	.mediatext .wrapper.right .content-ctn {
 		padding-right: 90px;
 		padding-left: 0;
 	}
 }
 
-.mediatext .media_ctn video,
-.mediatext .media_ctn img {
+.mediatext .media-ctn video,
+.mediatext .media-ctn img {
 	display: block;
 	margin: 0 auto;
 	width: 100%;

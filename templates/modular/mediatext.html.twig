@@ -6,11 +6,11 @@
 {% set image = page.header.image ? page.media[page.header.image] %}
 {% set image_alt = page.header.image_alt ?? '' %}
 {% set media_position = page.header.media_position ?? 'left' %}
-{% set content = page.content %}
+{% set content = page.content|raw %}
 
 {% block content %}
 <div class="wrapper {{ media_position }}">
-	<div class="media_ctn" data-reveal>
+	<div class="media-ctn" data-reveal>
 
 		{% if mp4 or webm %}
 		<video autoplay loop muted poster="{{ image.url }}">
@@ -22,10 +22,10 @@
 		{% endif %}
 
 	</div>
-	<div class="content_ctn text" data-reveal>
+	<div class="content-ctn text" data-reveal>
 	
 		{% if content %}
-		<div class="text">{{ content|raw }}</div>
+		<div class="text">{{ content }}</div>
 		{% endif %}
 		
 	</div>

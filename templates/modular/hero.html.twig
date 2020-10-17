@@ -10,7 +10,7 @@
 {% block content %}
 <div class="wrapper" data-reveal>
 	<a href="{{ page.header.url }}">
-		<div class="media_ctn fill">
+		<div class="media-ctn fill">
 			{% if mp4 or webm %}
 			<video autoplay loop muted poster="{{ image.url }}">
 				{% if mp4 %} <source type="video/mp4" src="{{ mp4.url }}">{% endif %}
@@ -20,7 +20,7 @@
 			{{ image.html('', image_alt) }}
 			{% endif %}
 		</div>
-		<div class="content_ctn text fill">
+		<div class="content-ctn text fill">
 			<h2>{{ page.header.display_title }}</h2>
 			<p>{{ page.header.subtitle }}</p>
 			<div class="button">{{ page.header.label }}</div>
