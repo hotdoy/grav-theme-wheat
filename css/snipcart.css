@@ -30,3 +30,7 @@
 .snipcart-modal__close-icon path {
  	fill: var(--color-hl);
 }
+
+.snipcart__icon--blue-dark path {
+	fill: var(--color-hl);
+}

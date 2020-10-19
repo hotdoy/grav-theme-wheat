@@ -43,13 +43,13 @@ html {
 	font-size: 16px;
   	font-family: var(--font-base);
 
-	--color-bg: #f6f9fc;
-	--color-fg: #32325d;
-	--color-hl: #6772e5;
+	--color-bg: #fff;
+	--color-fg: #313131;
+	--color-hl: #0a5b61;
 	--color-border: #e4e4e4;
-
-	--color-btn-bg: #6772e5;
-	--color-btn-fg: white;
+	--color-btn-bg: #0a5b61;
+	--color-btn-fg: #fff;
+	
 	--shadow-button: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
 	--shadow-button-hover: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
 

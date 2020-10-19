@@ -5,17 +5,16 @@
 {% set color_panel_bg = page.header.color_panel_bg %}
 {% set color_panel_fg = page.header.color_panel_fg %}
 {% set color_pagination_bg = page.header.color_pagination_bg %}
-{% set color_pagination_fg = page.header.color_pagination_fg %}
+{% set color_pagination = page.header.color_pagination %}
 
-{% set panel_theme %}
+{% set styles %}
 {% if color_panel_bg %}--color-panel-bg:{{ color_panel_bg }};{% endif %}
 {% if color_panel_fg %}--color-panel-fg:{{ color_panel_fg }};{% endif %}
-{% if color_pagination_bg %}--color-pagination-bg:{{ color_pagination_bg }};{% endif %}
-{% if color_pagination_fg %}--color-pagination-fg:{{ color_pagination_fg }};{% endif %}
+{% if color_pagination %}--color-pagination-fg:{{ color_pagination }};{% endif %}
 {% endset %}
 
 {% block content %}
-<div class="wrapper" data-reveal style="{{ panel_theme }}">
+<div class="wrapper" data-reveal=""{% if styles %} style="{{ styles }}"{% endif %}>
 
 	{% if page.header.display_title %}
 	<h2 class="module-title">{{ page.header.display_title }}</h2>

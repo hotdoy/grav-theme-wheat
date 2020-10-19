@@ -15,6 +15,7 @@
 
 .hero .media-ctn {
 	margin: 0 var(--gutter);
+	background-color: var(--color-bg);
 }
 
 .hero .media-ctn img, 

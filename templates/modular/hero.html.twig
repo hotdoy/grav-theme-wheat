@@ -7,8 +7,20 @@
 {% set image_alt = page.header.image_alt ?? '' %}
 {% set content = page.content %}
 
+{% set color_bg = page.header.color_bg %}
+{% set color_fg = page.header.color_fg %}
+{% set color_btn_bg = page.header.color_btn_bg %}
+{% set color_btn_fg = page.header.color_btn_fg %}
+
+{% set styles %}
+{% if color_bg %}--color-bg:{{ color_bg }};{% endif %}
+{% if color_fg %}--color-fg:{{ color_fg }};{% endif %}
+{% if color_btn_bg %}--color-btn-bg:{{ color_btn_bg }};{% endif %}
+{% if color_btn_fg %}--color-btn-fg:{{ color_btn_fg }};{% endif %}
+{% endset %}
+
 {% block content %}
-<div class="wrapper" data-reveal>
+<div class="wrapper" data-reveal=""{% if styles %} style="{{ styles }}"{% endif %}>
 	<a href="{{ page.header.url }}">
 		<div class="media-ctn fill">
 			{% if mp4 or webm %}

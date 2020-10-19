@@ -40,31 +40,6 @@ form:
           title: Options
           fields:
 
-            style:
-              type: section
-              title: Style
-              underline: true
-
-            header.color_bg:
-              type: colorpicker
-              label: color_bg
-
-            header.color_fg:
-              type: colorpicker
-              label: color_fg
-
-            header.color_hl:
-              type: colorpicker
-              label: color_hl
-
-            header.color_btn_bg:
-              type: colorpicker
-              label: color_btn_bg
-
-            header.color_btn_fg:
-              type: colorpicker
-              label: color_btn_fg
-
             order_title:
               type: section
               title: Folder

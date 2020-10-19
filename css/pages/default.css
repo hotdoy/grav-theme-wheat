@@ -3,7 +3,7 @@
 .default-header {
 	padding: 0 var(--gutter);
 	margin: 0 auto;
-  margin-top: calc(var(--rhythm) - (var(--header-heigth)/2));
+  margin-top: calc(var(--rhythm)/2);
 	text-align: center;
 	max-width: var(--width-text);
 }
@@ -21,7 +21,7 @@
 
 .breadcrumbs {
   text-align: center;
-  margin-top: calc(var(--rhythm) - (var(--header-heigth)/2));
+  margin-top: calc(var(--rhythm)/2);
 }
 
 .default-header .breadcrumbs {

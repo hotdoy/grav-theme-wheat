@@ -4,15 +4,6 @@
     z-index: 1000;
 }
 
-.module.padded {
-	padding: var(--rhythm) 0;
-	background-color: var(--color-bg);
-}
-
-.module.padded + .module.padded {
-    margin-top: 0;
-}
-
 .module-title {
     margin: 0 auto;
     margin-bottom: calc(var(--rhythm)/2);
@@ -32,4 +23,9 @@
 
 .module.hero + .module.hero {
     margin-top: var(--gutter);
+}
+
+
+.default-header + .module {
+    margin-top: calc(var(--rhythm)/2);
 }

@@ -1,8 +1,7 @@
 html {
-	--color-panel-bg: var(--color-fg);
-	--color-panel-fg: var(--color-bg);
-	--color-pagination-bg: var(--color-fg);
-	--color-pagination-fg: var(--color-bg);
+	--color-panel-bg: var(--color-btn-bg);
+	--color-panel-fg: var(--color-btn-fg);
+	--color-pagination: var(--color-btn-bg);
 }
 
 .quotes .wrapper {
@@ -14,10 +13,10 @@ html {
 }
 
 .quotes .carousel {
-	background-color: var(--color-panel-bg);
 	color: white;
 	height: auto;
 	width: 100%;
+	background-color: var(--color-panel-bg);
 }
 
 .quotes .swiper-slide {
@@ -70,10 +69,10 @@ html {
 	padding-bottom: 1rem;
 }
 
-.quotes.swiper-pagination-bullet {
-	background: var(--color-pagination-bg);
+.quotes .swiper-pagination-bullet {
+	background: var(--color-pagination);
 }
 
 .quotes .swiper-pagination-bullet-active {
-	background: var(--color-pagination-fg);
+	background: var(--color-pagination);
 }

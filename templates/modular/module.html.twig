@@ -1,26 +1,7 @@
 {% set name = name|default() %}
-
-{% set color_bg = page.header.color_bg %}
-{% set color_fg = page.header.color_fg %}
-{% set color_hl = page.header.color_hl %}
-{% set color_btn_bg = page.header.color_btn_bg %}
-{% set color_btn_fg = page.header.color_btn_fg %}
-
-{% set module_theme %}
-{% if color_bg %}--color-bg:{{ color_bg }};{% endif %}
-{% if color_fg %}--color-fg:{{ color_fg }};{% endif %}
-{% if color_hl %}--color-hl:{{ color_hl }};{% endif %}
-{% if color_btn_bg %}--color-btn-bg:{{ color_btn_bg }};{% endif %}
-{% if color_btn_fg %}--color-btn-fg:{{ color_btn_fg }};{% endif %}
-{% endset %}
-
-{% set padded = color_bg ? ' padded' : '' %}
-{% set computed_classes = name ~ padded %}
-
+{% set computed_classes = name %}
 <section 
-class="module {{computed_classes}}" 
+class="module {{ computed_classes }}" 
 {% if module_theme %}style="{{ module_theme }}"{% endif %}>
 {% block content %}{% endblock %}
 </section>
-
-

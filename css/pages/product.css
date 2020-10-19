@@ -131,9 +131,10 @@
 	left: 0;
 	right: 0;
 	height: 52px;
+	border-top: 1px solid var(--color-border);
 	padding: calc(var(--gutter)/2) var(--gutter);
 	background-color: var(--color-bg);
-	box-shadow: var(--shadow-material);
+	box-shadow: var(--shadow-button-hover);
 	z-index: 1001;
 }
 @media (max-width: 835px) {

@@ -47,3 +47,19 @@ form:
             header.url:
               label: url
               type: text
+
+            header.color_bg:
+              type: colorpicker
+              label: color_bg
+
+            header.color_fg:
+              type: colorpicker
+              label: color_fg
+
+            header.color_btn_bg:
+              type: colorpicker
+              label: color_btn_bg
+
+            header.color_btn_fg:
+              type: colorpicker
+              label: color_btn_fg

@@ -32,34 +32,14 @@ form:
                   type: text
                   label: Source
 
-
-        options:
-          type: tab
-          title: Options
-          fields:
-
-            header.color_btn_bg:
-              unset@: true
-
-            header.color_btn_fg:
-              unset@: true
-
             header.color_panel_bg:
-              ordering@: header.color_hl
               type: colorpicker
               label: color_panel_bg
 
             header.color_panel_fg:
-              ordering@: header.color_panel_bg
               type: colorpicker
               label: color_panel_fg
 
-            header.color_pagination_bg:
-              ordering@: header.color_panel_fg
+            header.color_pagination:
               type: colorpicker
-              label: color_pagination_bg
-
-            header.color_pagination_fg:
-              ordering@: header.color_pagination_bg
-              type: colorpicker
-              label: color_pagination_fg
+              label: color_pagination

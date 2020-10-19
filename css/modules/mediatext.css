@@ -20,11 +20,11 @@
 @media (min-width: 835px) {
 
 	.mediatext .media-ctn {
-		width: 40%;
+		width: 50%;
 	}
 
 	.mediatext .content-ctn {
-		width: 60%;
+		width: 50%;
 		padding-right: 0;
 		padding-left: 90px;
 
