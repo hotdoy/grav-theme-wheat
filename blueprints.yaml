@@ -47,33 +47,7 @@ form:
       type: text
       label: Snipcart Public Key
       placeholder: MDU0OGM2YjItMzZiZS00MjQ4LWJiNGQtOGVlYjE4ODAxMWVhNjM3MDEwNjY5ODU4OTU2Mzkx
-
-    sentry:
-      type: section
-      title: Sentry
-      underline: true
-
-    sentry_script_tag:
-      type: text
-      label: Sentry Script Tag
-      placeholder: '<script src="https://browser.sentry-cdn.com/X.XX.X/bundle.min.js" integrity="XXXXX" crossorigin="anonymous"></script>'
-
-    sentry_init_script:
-      type: text
-      label: Sentry Init Script
-      placeholder: 'Sentry.init({ dsn: "https://XXXXX" });'
-
-    sentry_test_mode:
-      type: toggle
-      label: Sentry Test Mode
-      help: 'Generates an undefined function and throw an exception for Sentry.io to catch.'
-      toggleable: true
-      highlight: 0
-      default: 0
-      options:
-        1: 'On'
-        0: 'Off'
-  
+ 
     facebook:
       type: section
       title: Facebook
