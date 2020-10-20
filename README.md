@@ -29,4 +29,3 @@ Wheat is a Pop-up shop theme for Grav CMS using Snipcart. It is also the starter
 - PreCache
 - AdvancedPageCache
 - AutoDate
-- Pagination
