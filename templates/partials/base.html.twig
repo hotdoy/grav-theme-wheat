@@ -20,7 +20,12 @@
 
 	</head>
 
-	<body class="{{ page.template }} {{ page.header.body_classes }} loading">
+	{% set color_hl = theme.color_hl %}
+	{% set styles %}
+	{% if color_hl %}--color-hl:{{ color_hl }};{% endif %}
+	{% endset %}
+
+	<body class="{{ page.template }} {{ page.header.body_classes }} loading"{% if styles %} style="{{ styles }}"{% endif %}>
 
 		{% block loading %}{% include 'partials/loading.html.twig' %}{% endblock %}
 		{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}

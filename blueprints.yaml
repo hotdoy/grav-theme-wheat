@@ -21,6 +21,15 @@ form:
   validation: loose
   fields:
 
+    colors:
+      type: section
+      title: Colors
+      underline: true
+
+    color_hl:
+      type: colorpicker
+      label: color_hl
+
     ga:
       type: section
       title: Google Analytics

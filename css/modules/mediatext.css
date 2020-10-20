@@ -47,10 +47,17 @@
 
 .mediatext h2,
 .mediatext h3 {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 	font-weight: 700;
 }
+
+.mediatext p {
+	margin-top: 1rem;
+	margin-bottom: 0;
+}
+
+
 @media (min-width: 835px) {
 	.mediatext h2:first-child {
 		margin-top: 0;

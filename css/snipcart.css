@@ -13,14 +13,14 @@
 
 .snipcart-cart-button--highlight {
 	background: none;
-	background-color: var(--color-btn-bg);
-	color: var(--color-btn-fg);
+	background-color: var(--color-hl);
+	color: white;
 }
 
 .snipcart__box--badge-highlight {
 	background: none;
-	background-color: var(--color-btn-bg);
-	color: var(--color-btn-fg);
+	background-color: var(--color-hl);
+	color: white;
 }
 
 .snipcart__actions--link {

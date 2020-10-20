@@ -175,8 +175,8 @@ body.panel--open #header .site-panel {
     font-size: 10px;
     border-radius: 10px;
     line-height: 10px;
-    background-color: var(--color-btn-bg);
-    color: var(--color-btn-fg);
+    background-color: var(--color-hl);
+    color: white;
     align-items: center;
     justify-content: center;
 }
@@ -189,7 +189,7 @@ body.panel--open #header .site-panel {
     height: 15px;
     opacity: 0;
 	border-radius: 100%;
-	background-color: var(--color-btn-bg);
+	background-color: var(--color-hl);
 }
 
 .snipcart-pulse.active {
