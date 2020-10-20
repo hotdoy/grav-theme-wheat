@@ -3,29 +3,36 @@
 .default-header {
 	padding: 0 var(--gutter);
 	margin: 0 auto;
-  margin-top: calc(var(--rhythm)/2);
+    margin-top: calc(var(--rhythm)/2);
 	text-align: center;
 	max-width: var(--width-text);
 }
 
+@media (min-width: 835px) {
+    .default-header {
+        margin-top: var(--rhythm);
+        text-align: center;
+    }
+}
+
 .default-header h1 {
-  margin-top: 0;
-  font-size: xx-large;
-  line-height: 1.1;
+    margin-top: 0;
+    font-size: xx-large;
+    line-height: 1.1;
 }
 @media (min-width: 835px) {
-  .default-header h1 {
-    font-size: 48px;
-  }
+    .default-header h1 {
+        font-size: 48px;
+    }
 }
 
 .breadcrumbs {
-  text-align: center;
-  margin-top: calc(var(--rhythm)/2);
+    text-align: center;
+    margin-top: calc(var(--rhythm)/2);
 }
 
 .default-header .breadcrumbs {
-  margin-bottom: var(--gutter);
+    margin-bottom: var(--gutter);
 }
 
 

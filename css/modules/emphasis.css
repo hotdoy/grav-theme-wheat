@@ -1,0 +1,23 @@
+.module.emphasis {
+	margin: calc(var(--rhythm)*2) 0;
+}
+
+.emphasis .wrapper {
+	width: 100%;
+	max-width: var(--width-body);
+	margin: 0 auto;
+	padding: 0 var(--gutter);
+	text-align: center;
+}
+
+.emphasis h2.title {
+	margin-top: 0;
+	font-weight: 700;
+}
+
+.emphasis .content {
+	width: 100%;
+	max-width: calc(var(--width-text) - 2*var(--gutter));
+	margin: 0 auto;
+	padding: 0 calc(var(--gutter));
+}

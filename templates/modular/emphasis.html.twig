@@ -1,0 +1,23 @@
+{% extends 'modular/module.html.twig' %}
+{% set name = 'emphasis' %}
+
+{% set display_title = page.header.display_title %}
+{% set content = page.content|raw %}
+
+{% block content %}
+
+<div class="wrapper text" data-reveal>
+	
+	{% if display_title %}
+	<h2 class="title">{{ display_title }}</h2>
+	{% endif %}
+
+	{% if content %}
+	<div class="content">
+		{{ content|raw }}
+	</div>
+	{% endif %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+title: emphasis
+'@extends': modular/module
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+
+        content:
+          type: tab
+          title: Content
+
+            header.text_align:
+              type: toggle
+              toggleable: true
+              label: text_align
+              highlight: center
+              options:
+                left: left
+                center: center
+                right: right
