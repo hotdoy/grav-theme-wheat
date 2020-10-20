@@ -30,7 +30,7 @@
 	opacity: 0;
 	visibility: hidden;
 	transition-property: opacity visibility; 
-	transition-duration: 0.2s;
+	transition-duration: 0.4s;
 }
 
 
@@ -38,7 +38,7 @@
 
 
 /*INTRO*/
-[data-loading].intro {
+/*[data-loading].intro {
 	background-color: var(--color-bg);
 	color: var(--color-fg);
 	z-index: 9999;	
@@ -63,19 +63,19 @@
 .loaded [data-loading].intro {
 	transform: translateY(-100%);
 	visibility: hidden;
-}
+}*/
 
 
 
 
 
 /*UNLOAD*/
-/*.navigating.unloading #content {
+.navigating.unloading #main {
   animation-name: unloading;
-  animation-duration: 100ms; 
+  animation-duration: 0.1s; 
   animation-fill-mode: forwards;
 }
 @keyframes unloading {
     from {opacity: 1;}
-    to {opacity: 0; transform: translateY(-50px);}
-}*/
+    to {opacity: 0; transform: translateY(50px);}
+}

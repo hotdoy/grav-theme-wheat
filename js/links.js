@@ -1,40 +1,30 @@
-(function () {
+const Links = {
 
-	'use strict';
+	context: document.body,
 
-	const InitLinks = function(){
-		const body = document.body;
-		const links = document.querySelectorAll('a');
-		links.forEach(link => {
+	Init: function() {
+		let a = Links.context.querySelectorAll('a')
+		a.forEach(a => {
 
-			// get the href
-			let href = link.getAttribute('href');
+			// href
+			let href = a.getAttribute('href');
 
 			// external
 			if (!!href && href.match('^http')) {
-				link.setAttribute('target', '_blank');
-				link.setAttribute('rel', 'noopener');
+				a.setAttribute('target', '_blank');
+				a.setAttribute('rel', 'noopener');
 			}
 
-			// go back in history if referrer includes the href
-			// The href should usially be the index of your site and will be used as fallback
-			else if (link.hasAttribute('data-history-back')) {
-				console.log('back');
-				link.addEventListener('click',(event) => {
-					event.preventDefault();
-					if (document.referrer.includes(href)) {
-						history.back();
-					} else {
-						window.location.href = href;
-					}
-					body.classList.add('navigating');
-				});
-			}
-
-			// internal
+			// navigation
 			else if (!!href && href.match('^/')) {
-				link.addEventListener('click', function(event){
-					body.classList.add('navigating');
+				a.addEventListener('click', function(event){
+					
+					event.preventDefault();
+					Links.context.classList.add('navigating');
+			        setTimeout(function() {
+			            window.location.href = href;
+			        }, 100);
+
 				}, false);
 				let preLoadLink = document.createElement("link");
 				preLoadLink.rel = 'prerender';
@@ -42,8 +32,7 @@
 				document.head.appendChild(preLoadLink);				
 			}
 		})
-	}
+	},
+}
 
-	InitLinks();
-
-})();
+Links.Init();
