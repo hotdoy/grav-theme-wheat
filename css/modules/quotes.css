@@ -1,7 +1,7 @@
 html {
-	--color-panel-bg: var(--color-btn-bg);
-	--color-panel-fg: var(--color-btn-fg);
-	--color-pagination: var(--color-btn-bg);
+	--color-panel-bg: var(--color-hl);
+	--color-panel-fg: white;
+	--color-pagination: white;
 }
 
 .quotes .wrapper {
