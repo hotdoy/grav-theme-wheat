@@ -38,7 +38,7 @@
 					ROOT 
 ============================================*/
 
-:root {
+html {
 	--font-base: 'Inter', sans-serif;
 	font-size: 16px;
   	font-family: var(--font-base);

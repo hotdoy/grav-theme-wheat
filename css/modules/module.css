@@ -24,8 +24,3 @@
 .module.hero + .module.hero {
     margin-top: var(--gutter);
 }
-
-
-.default-header + .module {
-    margin-top: calc(var(--rhythm)/2);
-}

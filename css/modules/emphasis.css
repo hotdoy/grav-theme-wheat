@@ -1,6 +1,4 @@
-.module.emphasis {
-	margin: calc(var(--rhythm)*2) 0;
-}
+/*.module.emphasis {}*/
 
 .emphasis .wrapper {
 	width: 100%;
