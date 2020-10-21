@@ -7,8 +7,7 @@
 {% block content %}
 
 	{# HEADER #}
-    {% set title = page.header.display_title ?? page.title %}
-    {% include 'partials/default-header.html.twig' with {title: title} %}
+
 
 	{# PRODUCT #}
 	<section class="module product-showcase">
@@ -49,9 +48,10 @@
 
 			<div class="content_ctn" data-reveal>
 				<div class="sticky_ctn">
-					{% if content %}
+					{% include 'partials/breadcrumbs.html.twig' %}
+				    {% set title = page.header.display_title ?? page.title %}
+				    <h1 class="name">{{ title }}</h1>
 					<div class="description text">{{ page.content|raw }}</div>
-					{% endif %}
 					<div class="price">{{ page.header.price|number_format(2, ',', ' ') }} $</div>
 					{% include 'partials/snipcart-add-item.html.twig' with {'class': 'add-to-cart button'} %}
 				</div>

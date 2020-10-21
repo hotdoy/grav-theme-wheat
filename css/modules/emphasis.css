@@ -8,9 +8,22 @@
 	text-align: center;
 }
 
+.emphasis .wrapper[style*="--color-bg"] .inner {
+	background-color: var(--color-bg);
+	color: var(--color-fg);
+	padding: calc(var(--rhythm)/2) var(--gutter); 
+}
+
 .emphasis h2.title {
+	font-size: x-large;
 	margin-top: 0;
 	font-weight: 700;
+}
+
+@media (min-width: 835px) {
+	.emphasis h2.title {
+		font-size: xx-large;
+	}
 }
 
 .emphasis .content {

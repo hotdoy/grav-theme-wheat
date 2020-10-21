@@ -76,19 +76,12 @@
   padding: 0;
 }
 
-.text pre {
-  margin-top: 1rem;
-  padding: 0 var(--gutter) 0 var(--gutter);
-  font-family: monospace;
-}
-
-.text pre code {
-  display: block;
-  padding: 1rem;
-  border-radius: 4px;
-  color: #f1f1f1;
-  background-color: #1a2429;
-  overflow-x: auto;
+.text code {
+    border: 1px solid var(--color-border);
+    background-color: white;
+    padding: 2px;
+    border-radius: 4px;
+    font-family: monospace;
 }
 
 .text ul {

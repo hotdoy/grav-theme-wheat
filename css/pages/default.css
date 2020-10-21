@@ -3,15 +3,14 @@
 .default-header {
 	padding: 0 var(--gutter);
 	margin: 0 auto;
-    margin-top: var(--rhythm);
+    margin-top: calc(var(--rhythm) - (var(--header-heigth) * 0.5 ));
 	text-align: center;
 	max-width: var(--width-text);
 }
 
 @media (min-width: 835px) {
     .default-header {
-        margin-top: var(--rhythm);
-        text-align: center;
+        margin-top: calc(var(--rhythm) - (var(--header-heigth) * 0.5 ));
     }
 }
 
@@ -26,12 +25,8 @@
     }
 }
 
-.breadcrumbs {
-    text-align: center;
-    margin-top: var(--rhythm);
-}
-
 .default-header .breadcrumbs {
+    text-align: center;
     margin-bottom: var(--gutter);
 }
 
