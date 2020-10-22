@@ -17,6 +17,7 @@
 		{% endblock %}
 		{% block gtm_head %}{% include 'partials/gtm-head.html.twig' %}{% endblock %}
 		{% block gtag %}{% include 'partials/gtag.html.twig' %}{% endblock %}
+		{% block head_extra %}{% endblock %}
 
 	</head>
 
@@ -35,7 +36,8 @@
 		{# {% block share_dialog %}{% include 'partials/share-dialog.html.twig' %}{% endblock %} #}
 		{% block snipcart %}{% include 'partials/snipcart.html.twig' %}{% endblock %}
 		{% block bottom %}{{ assets.js('bottom')|raw }}{% endblock %}
-		{% block gtm_body %}{% include 'partials/gtm-body.html.twig' %}{% endblock %}	
+		{% block gtm_body %}{% include 'partials/gtm-body.html.twig' %}{% endblock %}
+		{% block body_extra %}{% endblock %}
 
 	</body>
 
