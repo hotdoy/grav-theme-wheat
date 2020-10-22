@@ -16,30 +16,47 @@ const Links = {
 		observer.observe(target, config);
 	},
 
+	SetTargetBlank: function(link) {
+		link.setAttribute('target', '_blank');
+	},
+
+	SetNoopener: function(link) {
+		link.setAttribute('rel', 'noopener');
+	},
+
+	SetNavigationEvent: function(link, href) {
+		link.addEventListener('click', function(event){
+			event.preventDefault();
+			document.body.classList.add('navigating');
+			setTimeout(function() {
+			    window.location.href = href;
+			}, 100);
+		}, false);
+	},
+
+	SetPreloadLink: function(href) {
+		let preLoadLink = document.createElement("link");
+		preLoadLink.rel = 'prerender';
+		preLoadLink.href = href;
+		document.head.appendChild(preLoadLink);	
+	},
+
 	Crawl: function(links) {
 		for (let link of links) {
-			// href
-			let href = link.getAttribute('href');
-			// external
-			if (!!href && href.match('^http')) {
-				link.setAttribute('target', '_blank');
-				link.setAttribute('rel', 'noopener');
-			}
-			// navigation
-			else if (!!href && href.match('^/')) {
-				link.addEventListener('click', function(event){
-					
-					event.preventDefault();
-					document.body.classList.add('navigating');
-			        setTimeout(function() {
-			            window.location.href = href;
-			        }, 100);
 
-				}, false);
-				let preLoadLink = document.createElement("link");
-				preLoadLink.rel = 'prerender';
-				preLoadLink.href = href;
-				document.head.appendChild(preLoadLink);				
+			// GET HREF
+			const href = link.getAttribute('href');
+
+			// CONSIDER URLS STARTING WITH HTTP AS EXTERNAL LINKS
+			if (!!href && href.match('^http')) {
+				Links.SetTargetBlank(link);
+				Links.SetNoopener(link);
+			}
+
+			// CONSIDER URLS STARTING WITH / AS NAVIGATION LINKS
+			else if (!!href && href.match('^/')) {
+				Links.SetNavigationEvent(link, href);
+				Links.SetPreloadLink(href);
 			}
 		}
 	},
