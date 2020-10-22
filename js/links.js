@@ -1,26 +1,36 @@
 const Links = {
 
-	context: document.body,
+	Init: function(links, watch) {
+		Links.Crawl(links);
+		if (watch) {
+			Links.Watch();
+		}
+	},
 
-	Init: function() {
-		let a = Links.context.querySelectorAll('a')
-		a.forEach(a => {
+	Watch: function() {
+		const target = document.querySelector('#main');
+		const config = { childList: true, subtree: true };
+		const observer = new MutationObserver(function(){
+			Links.Init(document.body.querySelectorAll('a'), false);
+		});
+		observer.observe(target, config);
+	},
 
+	Crawl: function(links) {
+		for (let link of links) {
 			// href
-			let href = a.getAttribute('href');
-
+			let href = link.getAttribute('href');
 			// external
 			if (!!href && href.match('^http')) {
-				a.setAttribute('target', '_blank');
-				a.setAttribute('rel', 'noopener');
+				link.setAttribute('target', '_blank');
+				link.setAttribute('rel', 'noopener');
 			}
-
 			// navigation
 			else if (!!href && href.match('^/')) {
-				a.addEventListener('click', function(event){
+				link.addEventListener('click', function(event){
 					
 					event.preventDefault();
-					Links.context.classList.add('navigating');
+					document.body.classList.add('navigating');
 			        setTimeout(function() {
 			            window.location.href = href;
 			        }, 100);
@@ -31,8 +41,8 @@ const Links = {
 				preLoadLink.href = href;
 				document.head.appendChild(preLoadLink);				
 			}
-		})
+		}
 	},
 }
 
-Links.Init();
+Links.Init(document.body.querySelectorAll('a'), true);
