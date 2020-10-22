@@ -4,6 +4,7 @@
 
     const initProduct = function(){
 
+        // Swiper
         var swiper = new Swiper('.product .product-showcase .swiper-container', {
             spaceBetween: 10,
             centeredSlides: true,
@@ -11,6 +12,7 @@
                 el: '.swiper-pagination',
             },
         });
+
     }
 
     initProduct();

@@ -4,12 +4,23 @@
 {% set main_image_alt = page.header.image_alt ?? '' %}
 {% set other_images = page.header.images %}
 
+{# {% block head_extra %}
+<meta name="uid" content="{{ page.id() }}">
+{% endblock %} #}
+
 {% block content %}
 
-	{# HEADER #}
+{# 	{% set currentId = page.id() %}
+	{{ currentId }}
+	<br>
+	{% set options = { items: {'@root.descendants':''} } %}
+	{% set pages = page.collection(options) %}
+	{% for page in pages if page.routable and page.id() == currentId %}
+		{{ page.id() }}
+	{% endfor %} #}
 
 
-	{# PRODUCT #}
+	{# SHOWCASE #}
 	<section class="module product-showcase">
 		<div class="wrapper">
 
