@@ -38,3 +38,8 @@ button.button:hover:active {
     color: var(--color-btn-bg);
     background-color: var(--color-btn-fg);
 }   
+
+.button.disabled {
+    opacity: 0.7;
+    box-shadow: 0;
+}

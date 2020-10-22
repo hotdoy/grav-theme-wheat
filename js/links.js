@@ -1,5 +1,7 @@
 const Links = {
 
+	navigationDelay: 100,
+
 	Init: function(links, watch) {
 		Links.Crawl(links);
 		if (watch) {
@@ -30,7 +32,7 @@ const Links = {
 			document.body.classList.add('navigating');
 			setTimeout(function() {
 			    window.location.href = href;
-			}, 100);
+			}, Links.navigationDelay);
 		}, false);
 	},
 
