@@ -1,4 +1,4 @@
-{% if theme.snipcart_public_key %}
+{% if theme.snipcart_enabled and theme.snipcart_public_key %}
 <div 
 id="snipcart" 
 data-api-key="{{ theme.snipcart_public_key }}" 

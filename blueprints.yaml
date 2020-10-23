@@ -52,11 +52,22 @@ form:
       title: Snipcart
       underline: true
 
+    snipcart_enabled:
+      type: toggle
+      label: Enable Snipcart
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
     snipcart_public_key:
       type: text
       label: Snipcart Public Key
       placeholder: MDU0OGM2YjItMzZiZS00MjQ4LWJiNGQtOGVlYjE4ODAxMWVhNjM3MDEwNjY5ODU4OTU2Mzkx
- 
+
     facebook:
       type: section
       title: Facebook

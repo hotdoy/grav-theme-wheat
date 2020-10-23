@@ -1,3 +1,4 @@
+{% if theme.snipcart_enabled and theme.snipcart_public_key %}
 <button class="{% if class %}{{ class }} {% endif %}snipcart-add-item"
 data-item-id="{{ page.header.id }}"
 data-item-price="{{ page.header.price }}"
@@ -7,3 +8,7 @@ data-item-image="{{ image ? uri.base() ~ image.url : '' }}"
 data-item-name="{{ page.header.name }}">
 Add to cart
 </button>
+{% else %}
+<div class="button disabled snipcart-add-item {{ class }}">Cart is disabled</div>
+{% endif %}
+

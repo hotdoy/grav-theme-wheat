@@ -1,6 +1,6 @@
 {# LIBS #}
 {# {% if theme.snipcart_public_key %}{% do assets.addJs('https://cdn.snipcart.com/themes/v3.0.23/default/snipcart.js') %}{% endif %} #}
-{% if theme.snipcart_public_key %}{% do assets.addJs('https://cdn.snipcart.com/themes/v3.0.23/default/snipcart.js', { group:'bottom' }) %}{% endif %}
+{% if theme.snipcart_enabled and theme.snipcart_public_key %}{% do assets.addJs('https://cdn.snipcart.com/themes/v3.0.23/default/snipcart.js', { group:'bottom' }) %}{% endif %}
 {% do assets.addJs('theme://libs/swiper/swiper.min.js', { group:'bottom' }) %}
 
 {# COMPONENTS #}

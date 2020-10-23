@@ -1,5 +1,5 @@
 /*Use transitions for the loader and animations for whatever moving things you put in it to prevent bubbling*/
-[data-loading]{
+div[data-loading] {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -7,7 +7,7 @@
 	left: 0;
 	animation-name: loadingfallback;
 	animation-duration: 0.2s;
-	animation-delay: 6s;
+	animation-delay: 5s;
 	animation-fill-mode: forwards;
 }
 @keyframes loadingfallback {
@@ -19,20 +19,57 @@
 
 
 
-
 /*TRANSITION*/
-[data-loading].transition {
+div[data-loading].transition {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: var(--color-bg);
 	z-index: 4000;	
 }
 
-.loaded [data-loading].transition {
+.loaded div[data-loading].transition {
 	opacity: 0;
 	visibility: hidden;
 	transition-property: opacity visibility; 
 	transition-duration: 0.4s;
 }
 
+/*div[data-loading].transition .inner {
+	opacity: 0;
+	animation-name: transitionSpinnerWrapper;
+	animation-delay: 5s;
+	animation-duration: 0.2s;
+	animation-fill-mode: forwards;
+}
+@keyframes transitionSpinnerWrapper {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+div[data-loading].transition .spinner,
+div[data-loading].transition .spinner:after {
+    position: relative;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+div[data-loading].transition .spinner {
+    margin: 0 auto;
+    font-size: 14px;
+    position: relative;
+    text-indent: -9999em;
+    border: 2px solid #f1f1f1;
+    border-left: 2px solid var(--color-fg);
+    transform: translateZ(0);
+    animation: transitionSpinner 1.1s infinite linear;
+}
+@keyframes transitionSpinner {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+*/
 
 
 
@@ -70,7 +107,7 @@
 
 
 /*UNLOAD*/
-.navigating.unloading #main {
+body.navigating.unloading #main {
   animation-name: unloading;
   animation-duration: 0.1s; 
   animation-fill-mode: forwards;
