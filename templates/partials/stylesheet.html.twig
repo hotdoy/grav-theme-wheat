@@ -5,7 +5,9 @@
 {% do assets.addCss('theme://css/loading.css', {loading : 'inline'}) %}
 
 {# EXTERNAL: BEFORE #}
-{% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.23/default/snipcart.css', {position:'before'}) %}
+{# {% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.23/default/snipcart.css', {position:'before'}) %} #}
+{% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.23/default/snipcart.css') %}
+
 
 {# THEME #}
 {% do assets.addCss('theme://css/reset.css') %}
