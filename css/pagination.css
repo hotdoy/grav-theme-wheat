@@ -37,9 +37,9 @@
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     border-left: 2px solid #ffffff;
     transform: translateZ(0);
-    animation: load8 1.1s infinite linear;
+    animation: paginationSpinner 1.1s infinite linear;
 }
-@keyframes load8 {
+@keyframes paginationSpinner {
   0% {
     transform: rotate(0deg);
   }
