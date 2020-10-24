@@ -2,7 +2,9 @@ en:
   THEME_WHEAT:
     PAGINATION:
       LOAD_MORE: Load More
+      END: That's it for now!
 fr:
   THEME_WHEAT:
     PAGINATION:
       LOAD_MORE: Charger plus
+      END: C'est tout pour le moment!
