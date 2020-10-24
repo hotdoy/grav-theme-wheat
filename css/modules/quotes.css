@@ -1,78 +1,78 @@
 html {
-	--color-panel-bg: var(--color-hl);
-	--color-panel-fg: white;
-	--color-pagination: white;
+  --color-panel-bg: var(--color-hl);
+  --color-panel-fg: white;
+  --color-pagination: white;
 }
 
 .module.quotes .wrapper {
-	position: relative;
-	width: 100%;
-	max-width: var(--width-body);
-	margin: 0 auto;
-	padding: 0 var(--gutter);
+  position: relative;
+  width: 100%;
+  max-width: var(--width-body);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
 }
 
 .module.quotes .carousel {
-	color: white;
-	height: auto;
-	width: 100%;
-	background-color: var(--color-panel-bg);
+  color: white;
+  height: auto;
+  width: 100%;
+  background-color: var(--color-panel-bg);
 }
 
 .module.quotes .swiper-slide {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	height: auto;
-	padding: 6rem 2rem;
-	text-align: center;
-	background-color: var(--color-panel-bg);
-	color: var(--color-panel-fg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  padding: 6rem 2rem;
+  text-align: center;
+  background-color: var(--color-panel-bg);
+  color: var(--color-panel-fg);
 }
 
 .module.quotes blockquote {
-	font-weight: normal;
-	font-size: x-large;
-	line-height: 1.6;
-	margin: 0 auto;
-	max-width: var(--width-text);
+  font-weight: normal;
+  font-size: x-large;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: var(--width-text);
 }
 
 @media (min-width: 735px) {
-	.module.quotes blockquote {
-		font-size: xx-large;
-	}
+  .module.quotes blockquote {
+    font-size: xx-large;
+  }
 }
 
 .module.quotes .portrait {
-	margin: 0 auto;
-	margin-top: 30px;
-	width: 50px;
-	height: 50px;
-	overflow: hidden;
-	border-radius: 9999px;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 9999px;
 }
 
 .module.quotes .portrait img {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 .module.quotes .source {
-	margin-top: 10px;
-	width: 250px;
-	font-size: small;
-	line-height: 1.6;
+  margin-top: 10px;
+  width: 250px;
+  font-size: small;
+  line-height: 1.6;
 }
 
 .module.quotes .swiper-pagination {
-	padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .module.quotes .swiper-pagination-bullet {
-	background: var(--color-pagination);
+  background: var(--color-pagination);
 }
 
 .module.quotes .swiper-pagination-bullet-active {
-	background: var(--color-pagination);
+  background: var(--color-pagination);
 }

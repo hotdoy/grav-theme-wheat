@@ -1,66 +1,66 @@
 .module.mediatext .wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	max-width: var(--width-body);
-	margin: 0 auto;
-	padding: 0 var(--gutter);
-	align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: var(--width-body);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  align-items: center;
 }
 
 .module.mediatext .wrapper.right {
-	flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .module.mediatext.media-ctn,
 .module.mediatext.content-ctn {
-	width: 100%;
+  width: 100%;
 }
 
 @media (min-width: 835px) {
-	.module.mediatext .media-ctn {
-		width: 50%;
-	}
+  .module.mediatext .media-ctn {
+    width: 50%;
+  }
 
-	.module.mediatext .content-ctn {
-		width: 50%;
-		padding-right: 0;
-		padding-left: 90px;
-	}
+  .module.mediatext .content-ctn {
+    width: 50%;
+    padding-right: 0;
+    padding-left: 90px;
+  }
 
-	.module.mediatext .wrapper.right .content-ctn {
-		padding-right: 90px;
-		padding-left: 0;
-	}
+  .module.mediatext .wrapper.right .content-ctn {
+    padding-right: 90px;
+    padding-left: 0;
+  }
 }
 
 .module.mediatext .media-ctn video,
 .module.mediatext .media-ctn img {
-	display: block;
-	margin: 0 auto;
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .module.mediatext h2,
 .module.mediatext h3 {
-	margin-top: 1.5rem;
-	margin-bottom: 1rem;
-	font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .module.mediatext p {
-	margin-top: 1rem;
-	margin-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 .module.mediatext .button {
-	margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 @media (min-width: 835px) {
-	.module.mediatext h2:first-child {
-		margin-top: 0;
-	}
+  .module.mediatext h2:first-child {
+    margin-top: 0;
+  }
 }

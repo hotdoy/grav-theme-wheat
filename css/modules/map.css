@@ -1,20 +1,20 @@
 /* .module.map {} */
 
 .module.map .wrapper {
-	width: 100%;
-	max-width: var(--width-body);
-	margin: 0 auto;
-	padding: 0 var(--gutter);
+  width: 100%;
+  max-width: var(--width-body);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
 }
 
 .module.map .map-ctn {
-	height: 400px;
-	width: 100%;
-	overflow: hidden;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
 }
 
 @media (min-width: 835px) {
-	.module.map .map-ctn {
-		height: 600px;
-	}
+  .module.map .map-ctn {
+    height: 600px;
+  }
 }
