@@ -15,8 +15,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: local(""), 
-    url("../fonts/Inter/inter-v2-latin-700.woff2") format("woff2"),
+  src: local(""), url("../fonts/Inter/inter-v2-latin-700.woff2") format("woff2"),
     url("../fonts/Inter/inter-v2-latin-700.woff") format("woff");
 }
 
@@ -24,8 +23,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 900;
-  src: local(""), 
-    url("../fonts/Inter/inter-v1-latin-900.woff2") format("woff2"),
+  src: local(""), url("../fonts/Inter/inter-v1-latin-900.woff2") format("woff2"),
     url("../fonts/Inter/inter-v1-latin-900.woff") format("woff");
 }
 
