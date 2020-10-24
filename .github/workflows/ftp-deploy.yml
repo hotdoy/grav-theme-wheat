@@ -15,6 +15,6 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ftp://ftp.getwheat.ca/
+        ftp-server: ${{ secrets.WHEAT_DEPLOY_HOST }}
         ftp-username: ${{ secrets.WHEAT_DEPLOY_USER }}
         ftp-password: ${{ secrets.WHEAT_DEPLOY_PASSWORD }}
