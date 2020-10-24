@@ -1,13 +1,10 @@
 name: Deploy
 
-on:
-  push:
-    branches: [master]
-  pull_request:
+on: 
+  release:
     branches: [master]
 
 jobs:
-
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
