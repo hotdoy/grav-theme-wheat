@@ -1,6 +1,3 @@
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
-![Test FTP Deploy](https://github.com/SamKirkland/FTP-Deploy-Action/workflows/Test%20FTP%20Deploy/badge.svg) ![Test SFTP Deploy](https://github.com/SamKirkland/FTP-Deploy-Action/workflows/Test%20SFTP%20Deploy/badge.svg)
-
 # Wheat theme for Grav CMS.
 
 ## Description
