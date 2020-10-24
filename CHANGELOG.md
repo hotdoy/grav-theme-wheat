@@ -1,8 +1,15 @@
+# v0.1.3
+##  10/24/2020
+
+1. [](#improved)
+    * Cleaning
+    * Pagination missing translation
+
 # v0.1.2
 ##  10/24/2020
 
 1. [](#improved)
-    * Cleaned some class names
+    * Cleaning
     * Removed Roboto
 2. [](#bugfix)
 	* Fixed product showcase swiper pagination color.  
@@ -11,7 +18,7 @@
 ##  10/24/2020
 
 1. [](#new)
-    * Deployment test
+    * Deploy
 
 # v0.1.0
 ##  06/30/2020
