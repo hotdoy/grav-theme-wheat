@@ -1,5 +1,5 @@
 title: emphasis
-'@extends': modular/module
+"@extends": modular/module
 
 form:
   fields:
@@ -8,12 +8,10 @@ form:
       active: 1
 
       fields:
-
         content:
           type: tab
           title: Content
           fields:
-
             header.color_bg:
               type: colorpicker
               label: color_bg

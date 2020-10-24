@@ -13,7 +13,6 @@ form:
       fields:
         content:
           fields:
-
             content:
               unset@: true
 
@@ -21,7 +20,7 @@ form:
               type: textarea
               yaml: true
               label: Items
-              default: '@self.children'
+              default: "@self.children"
               validate:
                 type: yaml
 
@@ -77,5 +76,3 @@ form:
           import@:
             type: partials/blog-bits
             context: blueprints://pages
-
-

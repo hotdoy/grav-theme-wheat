@@ -15,12 +15,11 @@ readme: https://github.com/calotte/grav-theme-wheat/blob/develop/README.md
 license: MIT
 
 dependencies:
-  - { name: grav, version: '>=1.6.0' }
+  - { name: grav, version: ">=1.6.0" }
 
 form:
   validation: loose
   fields:
-
     colors:
       type: section
       title: Colors
@@ -39,13 +38,13 @@ form:
       type: text
       label: GA Tracking ID
       help: Google Analytics Tracking ID
-      placeholder: 'UA-123456789-1'
+      placeholder: "UA-123456789-1"
       description: Do not fill if you are using GTM
 
     gtm_container_id:
       type: text
       label: GTM Container ID
-      placeholder: 'GTM-ZXCVB00'
+      placeholder: "GTM-ZXCVB00"
 
     snipcart:
       type: section
@@ -76,7 +75,7 @@ form:
     facebook_app_id:
       type: text
       label: Facebook App Id
-      placeholder: '123456789123456'
+      placeholder: "123456789123456"
 
     twitter:
       type: section
@@ -86,7 +85,7 @@ form:
     twitter_site:
       type: text
       label: Twitter Site
-      placeholder: '@twitter_handle'
+      placeholder: "@twitter_handle"
 
     gmaps:
       type: section
@@ -111,7 +110,7 @@ form:
       type: text
       label: Organization Logo
       help: The absolute path to the organization logo. The image must be 112x112px at minimum. And of jpg, png, or gif format.
-      placeholder: 'https://path/to/logo.png'
+      placeholder: "https://path/to/logo.png"
 
     publisher:
       type: section
@@ -127,4 +126,4 @@ form:
       type: text
       label: Publisher Logo
       help: The absolute path to the publisher's logo. The image must fit in a 600x60px rectangle including a 6px top and bottom padding. And of jpg, png, or gif format.
-      placeholder: 'https://path/to/logo.png'
+      placeholder: "https://path/to/logo.png"

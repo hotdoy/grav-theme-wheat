@@ -1,45 +1,45 @@
 .button,
 a.button,
 button.button {
-    white-space: nowrap;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 24px;
-    border-radius: 4px;
-    text-align: center;
-    font-size: 12px;
-    line-height: 100%;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .025em;
-    color: var(--color-btn-fg);
-    background-color: var(--color-btn-bg);
-    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
-    text-decoration: none;
-    transition-property: transform, box-shadow;
-    transition-duration: 0.2s;
-    outline: none;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: var(--color-btn-fg);
+  background-color: var(--color-btn-bg);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  transition-property: transform, box-shadow;
+  transition-duration: 0.2s;
+  outline: none;
 }
 
 a.button:hover,
 button.button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
 a.button:hover:active,
 button.button:hover:active {
-    transition-duration: 0s;
-    transform: translateY(1px);
+  transition-duration: 0s;
+  transform: translateY(1px);
 }
 
 .button.inverted {
-    color: var(--color-btn-bg);
-    background-color: var(--color-btn-fg);
-}   
+  color: var(--color-btn-bg);
+  background-color: var(--color-btn-fg);
+}
 
 .button.disabled {
-    opacity: 0.7;
-    box-shadow: 0;
+  opacity: 0.7;
+  box-shadow: 0;
 }

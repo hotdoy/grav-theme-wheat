@@ -1,75 +1,72 @@
 /*body.default {}*/
 
 .default-header {
-	padding: 0 var(--gutter);
-	margin: 0 auto;
-    margin-top: calc(var(--rhythm) - (var(--header-heigth) * 0.5 ));
-	text-align: center;
-	max-width: var(--width-text);
+  padding: 0 var(--gutter);
+  margin: 0 auto;
+  margin-top: calc(var(--rhythm) - (var(--header-heigth) * 0.5));
+  text-align: center;
+  max-width: var(--width-text);
 }
 
 @media (min-width: 835px) {
-    .default-header {
-        margin-top: calc(var(--rhythm) - (var(--header-heigth) * 0.5 ));
-    }
+  .default-header {
+    margin-top: calc(var(--rhythm) - (var(--header-heigth) * 0.5));
+  }
 }
 
 .default-header h1 {
-    margin-top: 0;
-    font-size: xx-large;
-    line-height: 1.1;
+  margin-top: 0;
+  font-size: xx-large;
+  line-height: 1.1;
 }
+
 @media (min-width: 835px) {
-    .default-header h1 {
-        font-size: 48px;
-    }
+  .default-header h1 {
+    font-size: 48px;
+  }
 }
 
 .default-header .breadcrumbs {
-    text-align: center;
-    margin-bottom: var(--gutter);
+  text-align: center;
+  margin-bottom: var(--gutter);
 }
-
-
-
-
 
 /*CARD*/
 .default-card {
-    position: relative;
-    font-size: large;
-    font-weight: 700;
-    line-height: 1.4;
-    transition-duration: 0.2s;
-    transition-property: transform;
+  position: relative;
+  font-size: large;
+  font-weight: 700;
+  line-height: 1.4;
+  transition-duration: 0.2s;
+  transition-property: transform;
 }
 
 @media (min-width: 835px) {
-    .default-card {
-        font-size: x-large;
-        line-height: 1.4;        
-    }
+  .default-card {
+    font-size: x-large;
+    line-height: 1.4;
+  }
 }
 
 .default-card:hover {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .default-card:hover:active {
-    transition-duration: 0s;
-    transform: translateY(1px);
+  transition-duration: 0s;
+  transform: translateY(1px);
 }
 
 .default-card .wrapper {
-    position: relative;
-    padding-top: 133%;
-    border: 1px solid var(--color-border);
+  position: relative;
+  padding-top: 133%;
+  border: 1px solid var(--color-border);
 }
 
 .default-card .fill {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--gutter);
 }

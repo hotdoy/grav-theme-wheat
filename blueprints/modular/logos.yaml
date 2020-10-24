@@ -1,5 +1,5 @@
 title: logos
-'@extends': modular/module
+"@extends": modular/module
 
 form:
   fields:
@@ -12,7 +12,6 @@ form:
           type: tab
           title: Content
           fields:
-
             content:
               unset@: true
 

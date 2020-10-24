@@ -4,33 +4,33 @@
 .snipcart form legend,
 .snipcart__font--subtitle,
 .snipcart__actions--link {
-	font-family: var(--font-base);
+  font-family: var(--font-base);
 }
 
 .snipcart-modal__container {
-    z-index: 6000;
+  z-index: 6000;
 }
 
 .snipcart-cart-button--highlight {
-	background: none;
-	background-color: var(--color-hl);
-	color: white;
+  background: none;
+  background-color: var(--color-hl);
+  color: white;
 }
 
 .snipcart__box--badge-highlight {
-	background: none;
-	background-color: var(--color-hl);
-	color: white;
+  background: none;
+  background-color: var(--color-hl);
+  color: white;
 }
 
 .snipcart__actions--link {
-	color: var(--color-hl)
+  color: var(--color-hl);
 }
 
 .snipcart-modal__close-icon path {
- 	fill: var(--color-hl);
+  fill: var(--color-hl);
 }
 
 .snipcart__icon--blue-dark path {
-	fill: var(--color-hl);
+  fill: var(--color-hl);
 }

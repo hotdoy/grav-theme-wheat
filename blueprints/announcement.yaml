@@ -11,24 +11,23 @@ form:
           type: tab
           title: Content
           fields:
-
             header.id:
               type: text
               label: ID
 
             header.content:
               type: editor
-              classes: 'CodeMirror--small'
+              classes: "CodeMirror--small"
               label: Content
 
             header.class:
               type: select
               label: Class
-              options: 
-                blue: 'Blue'
-                green: 'Green'
-                yellow: 'Yellow'
-                red: 'Red'
+              options:
+                blue: "Blue"
+                green: "Green"
+                yellow: "Yellow"
+                red: "Red"
 
             header.target:
               type: pages
@@ -44,18 +43,18 @@ form:
               label: Delivering
               highlight: 1
               default: 1
-              options: 
-                1: 'Yes'
-                0: 'No'
+              options:
+                1: "Yes"
+                0: "No"
 
             header.remember:
               type: toggle
               label: Remember
               highlight: 1
               default: 0
-              options: 
-                1: 'Yes'
-                0: 'No'
+              options:
+                1: "Yes"
+                0: "No"
 
             header.routable:
               type: toggle

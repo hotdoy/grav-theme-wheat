@@ -1,5 +1,5 @@
 title: Collection
-'@extends': modular/module
+"@extends": modular/module
 
 form:
   fields:
@@ -7,7 +7,6 @@ form:
       fields:
         content:
           fields:
-
             content:
               unset@: true
 
@@ -19,6 +18,6 @@ form:
               fields:
                 .page:
                   type: pages
-                  label: Page 
+                  label: Page
                   show_modular: false
                   show_root: false

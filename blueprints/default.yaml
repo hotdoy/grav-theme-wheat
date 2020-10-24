@@ -1,5 +1,5 @@
 title: default
-'@extends': default
+"@extends": default
 
 form:
   fields:
@@ -12,12 +12,11 @@ form:
               type: text
               style: vertical
               label: display_title
-              
+
         options:
           fields:
             publishing:
               fields:
-
                 header.page_title:
                   type: text
                   label: Page Title
