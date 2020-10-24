@@ -55,6 +55,7 @@ html {
   --rhythm: 80px;
   --header-heigth: 48px;
 }
+
 @media (min-width: 835px) {
   html {
     --rhythm: 160px;

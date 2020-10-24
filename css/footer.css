@@ -16,8 +16,7 @@ footer {
   padding: var(--gutter);
 }
 
-.footer__copyright {
-}
+/*.footer__copyright {}*/
 
 .footer__credit {
   width: 49px;
