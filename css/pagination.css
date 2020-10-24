@@ -15,7 +15,8 @@
 }
 
 @media (min-width: 835px) {
-  .pagination .button[data-pagination-btn] {
+  .pagination .button[data-pagination-btn],
+  .pagination .button.disabled {
     width: auto;
   }
 }

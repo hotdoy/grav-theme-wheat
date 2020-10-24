@@ -43,7 +43,7 @@
 }
 
 /*YOUTUBE & VIMEO*/
-.module.editorial .embed__ctn {
+.module.editorial .embed {
   max-width: var(--width-body);
   padding-left: var(--gutter);
   padding-right: var(--gutter);
@@ -51,8 +51,7 @@
   margin-top: 2rem;
 }
 
-.module.editorial .embed.youtube,
-.module.editorial .embed.vimeo {
+.module.editorial .embed > .wrapper {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
@@ -60,8 +59,7 @@
   width: 100%;
 }
 
-.module.editorial .embed.youtube iframe,
-.module.editorial .embed.vimeo iframe {
+.module.editorial .embed > .wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
