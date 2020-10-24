@@ -4,7 +4,7 @@
 ## Linter GitHub Actions ##
 ###########################
 ###########################
-name: Super Linter
+name: superlinter
 
 #
 # Documentation:
