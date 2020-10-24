@@ -1,4 +1,8 @@
+[![Discord](https://img.shields.io/discord/501836936584101899.svg?logo=discord&colorB=728ADA&label=Discord%20Chat)](https://chat.getgrav.org)
+[![Get Grav](https://img.shields.io/badge/get-grav-blueviolet)](https://getgrav.org/downloads)
 # Wheat theme for Grav CMS.
+
+[Live demo](https://getwheat.ca/)
 
 ## Description
 Wheat is a Pop-up shop theme for Grav CMS using Snipcart. It is also the starter theme for everything getting out of Calotte. It's meant to be usable out of the box, reducing the installation process, maintenance and dependencies to a minimum. It uses vanilla everything (html, js, css) and completelly eliminate the build process. While the theme is opinionated, everything is packaged and (will be) documented to be as simple as possible, allowing someone with minimum coding knowledge to jump in as fast as possible.
