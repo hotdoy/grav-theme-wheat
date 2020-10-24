@@ -28,7 +28,7 @@
 }
 
 .product-showcase .swiper-pagination-bullet {
-  background: var(--color-bg);
+  background: var(--color-hl);
 }
 
 .product-showcase .swiper-pagination-bullet-active {
