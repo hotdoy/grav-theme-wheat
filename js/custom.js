@@ -1,1 +1,1 @@
-console.log('referrer: ' + document.referrer);
+console.log("referrer: " + document.referrer);
