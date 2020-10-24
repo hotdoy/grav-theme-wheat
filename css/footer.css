@@ -1,4 +1,4 @@
-footer {
+#footer {
   position: relative;
   margin: var(--rhythm) 0 0 0;
   background-color: var(--color-bg);
@@ -7,7 +7,7 @@ footer {
   z-index: 1000;
 }
 
-.footer__ctn {
+#footer .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,9 +16,9 @@ footer {
   padding: var(--gutter);
 }
 
-/*.footer__copyright {}*/
+/*#footer .copyright {}*/
 
-.footer__credit {
+#footer .credit {
   width: 49px;
   height: 17px;
 }
