@@ -1,20 +1,20 @@
-/*.module.map {}*/
+/* .module.map {} */
 
-.map .wrapper {
+.module.map .wrapper {
 	width: 100%;
 	max-width: var(--width-body);
 	margin: 0 auto;
 	padding: 0 var(--gutter);
 }
 
-.map .map-ctn {
+.module.map .map-ctn {
 	height: 400px;
-    width: 100%;
-    overflow: hidden;
+	width: 100%;
+	overflow: hidden;
 }
 
 @media (min-width: 835px) {
-	.map .map-ctn {
+	.module.map .map-ctn {
 		height: 600px;
 	}
 }

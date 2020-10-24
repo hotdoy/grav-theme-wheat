@@ -1,6 +1,6 @@
-/*.hero {}*/
+/* .module.hero {} */
 
-.hero .wrapper {
+.module.hero .wrapper {
 	position: relative;
 	max-width: var(--width-body);
 	margin: 0 auto;
@@ -8,57 +8,57 @@
 }
 
 @media (min-width: 835px) {
-	.hero .wrapper {
+	.module.hero .wrapper {
 		min-height: 550px;
 	}
 }
 
-.hero .media-ctn {
+.module.hero .media-ctn {
 	margin: 0 var(--gutter);
 	background-color: var(--color-bg);
 }
 
-.hero .media-ctn img, 
-.hero .media-ctn video {
+.module.hero .media-ctn img, 
+.module.hero .media-ctn video {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
 }
 
-.hero .content-ctn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 var(--gutter);
-    padding: 0 var(--gutter);
-    color: var(--color-fg);
-    text-align: center;
+.module.hero .content-ctn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: 0 var(--gutter);
+	padding: 0 var(--gutter);
+	color: var(--color-fg);
+	text-align: center;
 }
 
-.hero .content-ctn * {
+.module.hero .content-ctn * {
 	max-width: 500px;
 }
 
-.hero h2 {
+.module.hero h2 {
 	font-weight: 700;
 	margin: 0;
 }
 
-.hero p {
+.module.hero p {
 	margin-top: 10px;
 }
 
-.hero .button {
+.module.hero .button {
 	margin-top: 20px;
 }
 
-.hero .wrapper:hover .button {
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-button-hover);
+.module.hero .wrapper:hover .button {
+	transform: translateY(-1px);
+	box-shadow: var(--shadow-button-hover);
 }
 
-.hero .wrapper:hover:active .button {
-    transition-duration: 0s;
-    transform: translateY(1px);
+.module.hero .wrapper:hover:active .button {
+	transition-duration: 0s;
+	transform: translateY(1px);
 }

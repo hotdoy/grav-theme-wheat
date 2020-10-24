@@ -1,9 +1,9 @@
-/*body.collection {}*/
+/* body.collection {} */
 
 .collection-grid-wrapper {
-    padding: 0 var(--gutter);
-    max-width: var(--width-body);
-    margin: 0 auto;
+  padding: 0 var(--gutter);
+  max-width: var(--width-body);
+  margin: 0 auto;
 }
 
 .collection-grid{
@@ -14,6 +14,7 @@
 	max-width: var(--width-body);
 	margin: 0 auto;
 }
+
 @media (min-width: 835px) {
 	.collection-grid {
 		grid-template-columns: 1fr 1fr 1fr 1fr;

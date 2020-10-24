@@ -4,7 +4,7 @@ html {
 	--color-pagination: white;
 }
 
-.quotes .wrapper {
+.module.quotes .wrapper {
 	position: relative;
 	width: 100%;
 	max-width: var(--width-body);
@@ -12,14 +12,14 @@ html {
 	padding: 0 var(--gutter);
 }
 
-.quotes .carousel {
+.module.quotes .carousel {
 	color: white;
 	height: auto;
 	width: 100%;
 	background-color: var(--color-panel-bg);
 }
 
-.quotes .swiper-slide {
+.module.quotes .swiper-slide {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -31,7 +31,7 @@ html {
 	color: var(--color-panel-fg);
 }
 
-.quotes blockquote {
+.module.quotes blockquote {
 	font-weight: normal;
 	font-size: x-large;
 	line-height: 1.6;
@@ -40,12 +40,12 @@ html {
 }
 
 @media (min-width: 735px) {
-	.quotes blockquote {
+	.module.quotes blockquote {
 		font-size: xx-large;
 	}
 }
 
-.quotes .portrait {
+.module.quotes .portrait {
 	margin: 0 auto;
 	margin-top: 30px;
 	width: 50px;
@@ -54,25 +54,25 @@ html {
 	border-radius: 9999px;
 }
 
-.quotes .portrait img {
+.module.quotes .portrait img {
 	max-width: 100%;
 }
 
-.quotes .source {
+.module.quotes .source {
 	margin-top: 10px;
 	width: 250px;
 	font-size: small;
 	line-height: 1.6;
 }
 
-.quotes .swiper-pagination {
+.module.quotes .swiper-pagination {
 	padding-bottom: 1rem;
 }
 
-.quotes .swiper-pagination-bullet {
+.module.quotes .swiper-pagination-bullet {
 	background: var(--color-pagination);
 }
 
-.quotes .swiper-pagination-bullet-active {
+.module.quotes .swiper-pagination-bullet-active {
 	background: var(--color-pagination);
 }

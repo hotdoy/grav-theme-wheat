@@ -1,20 +1,21 @@
 .module {
-    position: relative;
-    margin-top: var(--rhythm);
-    z-index: 1000;
+  position: relative;
+  margin-top: var(--rhythm);
+  z-index: 1000;
 }
 
 .module-title {
-    margin: 0 auto;
-    margin-bottom: calc(var(--rhythm)/2);
-    font-size: xx-large;
-    font-weight: 700;
- 	line-height: 1.1;
-    text-align: center;
- 	color: var(--color-fg);
-    max-width: var(--width-text);
-    padding: 0 var(--gutter);
+  margin: 0 auto;
+  margin-bottom: calc(var(--rhythm)/2);
+  font-size: xx-large;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--color-fg);
+  max-width: var(--width-text);
+  padding: 0 var(--gutter);
 }
+
 @media (min-width: 835px) {
   .module-title {
     font-size: 48px;
@@ -22,5 +23,5 @@
 }
 
 .module.hero + .module.hero {
-    margin-top: var(--gutter);
+  margin-top: var(--gutter);
 }

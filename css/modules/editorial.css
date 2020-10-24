@@ -21,7 +21,7 @@
 	margin-left: 18px;
 }
 
-/*REMOVE MARGIN FOR FIRST ELEMENT*/
+/* REMOVE MARGIN FOR FIRST ELEMENT */
 .editorial> *:nth-child(1) {
 	margin-top: 0;
 }
@@ -42,7 +42,7 @@
 	padding: 0;
 }
 
-/*YOUTUBE | VIMEO*/
+/*YOUTUBE & VIMEO*/
 .editorial .embed__ctn {
 	max-width: var(--width-body);
 	padding-left: var(--gutter);
