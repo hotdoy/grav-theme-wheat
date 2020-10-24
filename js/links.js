@@ -15,7 +15,8 @@ const Links = {
 		const observer = new MutationObserver(function(){
 			Links.Init(document.body.querySelectorAll('a'), false);
 		});
-		observer.observe(target, config);
+		// this is a voluntary typo to test github superlinter
+		observer.obsdderve(target, config);
 	},
 
 	SetTargetBlank: function(link) {
