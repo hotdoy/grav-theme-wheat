@@ -2,11 +2,12 @@ name: Continuous Integration
 
 on:
   push:
-    branches: [master]
+    branches: [develop]
   pull_request:
-    branches: [master]
+    branches: [develop]
 
 jobs:
+
   prettier:
     runs-on: ubuntu-latest
     steps:
@@ -17,3 +18,17 @@ jobs:
         uses: creyD/prettier_action@v3.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Super-Linter
+        uses: github/super-linter@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_CSS: true
+          VALIDATE_JAVASCRIPT_STANDARD: true
+          VALIDATE_PHP: true
+          VALIDATE_HTML: true
+          
