@@ -28,7 +28,7 @@ If you fork this theme, be aware that I use the following Github Actions so you 
 ## Modular
 - Hero
 - Mediatext
-- Content
+- Editorial
 - Quotes
 - Map
 - Emphasis
