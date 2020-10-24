@@ -1,3 +1,5 @@
+[![Discord](https://img.shields.io/discord/501836936584101899.svg?logo=discord&colorB=728ADA&label=Discord%20Chat)](https://chat.getgrav.org)
+[![Get Grav](https://img.shields.io/badge/get-grav-blueviolet)](https://getgrav.org/downloads)
 # Wheat theme for Grav CMS.
 
 [Live demo](https://getwheat.ca/)
@@ -26,7 +28,7 @@ If you fork this theme, be aware that I use the following Github Actions so you 
 ## Modular
 - Hero
 - Mediatext
-- Content
+- Editorial
 - Quotes
 - Map
 - Emphasis
