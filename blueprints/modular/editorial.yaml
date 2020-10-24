@@ -1,5 +1,5 @@
 title: editorial
-'@extends': modular/module
+"@extends": modular/module
 form:
   fields:
     tabs:
@@ -9,6 +9,5 @@ form:
       fields:
         content:
           fields:
-            
             header.display_title:
               unset@: true

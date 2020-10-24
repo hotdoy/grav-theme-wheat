@@ -1,5 +1,5 @@
 title: collection
-'@extends': default
+"@extends": default
 
 form:
   fields:
@@ -7,7 +7,6 @@ form:
       fields:
         content:
           fields:
-
             header.virtual_items:
               name: virtual_items
               type: list
@@ -17,6 +16,6 @@ form:
               fields:
                 .page:
                   type: pages
-                  label: Page 
+                  label: Page
                   show_modular: false
                   show_root: false

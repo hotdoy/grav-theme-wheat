@@ -1,8 +1,8 @@
-en: 
-    THEME_WHEAT:
-        PAGINATION:
-            LOAD_MORE: Load More
-fr: 
-    THEME_WHEAT:
-        PAGINATION:
-            LOAD_MORE: Charger plus
+en:
+  THEME_WHEAT:
+    PAGINATION:
+      LOAD_MORE: Load More
+fr:
+  THEME_WHEAT:
+    PAGINATION:
+      LOAD_MORE: Charger plus

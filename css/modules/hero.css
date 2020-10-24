@@ -18,7 +18,7 @@
   background-color: var(--color-bg);
 }
 
-.module.hero .media-ctn img, 
+.module.hero .media-ctn img,
 .module.hero .media-ctn video {
   object-fit: cover;
   width: 100%;

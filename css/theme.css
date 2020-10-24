@@ -4,69 +4,62 @@
 
 /* inter-regular - latin */
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: local(''),
-       url('../fonts/Inter/inter-v1-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/Inter/inter-v1-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""),
+    url("../fonts/Inter/inter-v1-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/Inter/inter-v1-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* inter-700 - latin */
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: local(''),
-       url('../fonts/Inter/inter-v2-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/Inter/inter-v2-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""), url("../fonts/Inter/inter-v2-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/Inter/inter-v2-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* inter-900 - latin */
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 900;
-  src: local(''),
-       url('../fonts/Inter/inter-v1-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/Inter/inter-v1-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""), url("../fonts/Inter/inter-v1-latin-900.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/Inter/inter-v1-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
-
-
-
 
 /*===========================================
 					ROOT 
 ============================================*/
 
 html {
-	--font-base: 'Inter', sans-serif;
-	font-size: 16px;
-  	font-family: var(--font-base);
+  --font-base: "Inter", sans-serif;
+  font-size: 16px;
+  font-family: var(--font-base);
 
-	--color-bg: #fff;
-	--color-fg: #313131;
-	--color-hl: #0a5b61;
-	--color-border: #e4e4e4;
-	--color-btn-bg: var(--color-hl);
-    --color-btn-fg: white;
+  --color-bg: #fff;
+  --color-fg: #313131;
+  --color-hl: #0a5b61;
+  --color-border: #e4e4e4;
+  --color-btn-bg: var(--color-hl);
+  --color-btn-fg: white;
 
-	--width-text: 735px;
-	--width-body: 1200px;
-	--width-full: 1920px;
+  --width-text: 735px;
+  --width-body: 1200px;
+  --width-full: 1920px;
 
-	--gutter: 20px;
-	--rhythm: 80px;
-	--header-heigth: 48px;
+  --gutter: 20px;
+  --rhythm: 80px;
+  --header-heigth: 48px;
 }
 @media (min-width: 835px) {
-	html {
-		--rhythm: 160px;
-	}
+  html {
+    --rhythm: 160px;
+  }
 }
-
-
-
-
 
 /*===========================================
 					MISC 
@@ -78,40 +71,36 @@ body {
 }
 
 ::selection {
-  background-color: #ffeb3b; 
+  background-color: #ffeb3b;
 }
-
-
-
-
 
 /*===========================================
 					 UTILS 
 =========================================*/
 
 .fill {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .w-text {
-	width: 100%;
-	max-width: var(--width-text);
-	margin: 0 auto;
+  width: 100%;
+  max-width: var(--width-text);
+  margin: 0 auto;
 }
 
 .w-body {
-	width: 100%;
-	max-width: var(--width-body);
-	padding: 0 var(--gutter);
-	margin: 0 auto;
+  width: 100%;
+  max-width: var(--width-body);
+  padding: 0 var(--gutter);
+  margin: 0 auto;
 }
 
 .w-full {
-	width: 100%;
-	max-width: var(--width-full);
-	margin: 0 auto;
+  width: 100%;
+  max-width: var(--width-full);
+  margin: 0 auto;
 }

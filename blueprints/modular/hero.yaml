@@ -1,5 +1,5 @@
 title: hero
-'@extends': modular/module
+"@extends": modular/module
 
 form:
   fields:
@@ -12,7 +12,6 @@ form:
           type: tab
           title: Content
           fields:
-
             content:
               unset@: true
 
@@ -39,7 +38,7 @@ form:
             header.image:
               label: Image
               type: pagemediaselect
-              
+
             header.image_alt:
               label: Image Alt
               type: text

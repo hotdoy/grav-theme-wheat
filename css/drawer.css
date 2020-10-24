@@ -1,16 +1,16 @@
-.drawer{
-	margin: 2rem auto 0 auto;
-	padding: 0 2rem;
-	width: 100%;
-	max-width: var(--width-tight);
+.drawer {
+  margin: 2rem auto 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  max-width: var(--width-tight);
 }
 
-.drawer summary{
-	font-family: var(--font-alt);
-	display: flex;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
+.drawer summary {
+  font-family: var(--font-alt);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
 }
 
 .drawer summary h1,
@@ -20,8 +20,8 @@
 .drawer summary h5,
 .drawer summary h6,
 .drawer summary p {
-	padding: 0 2rem 0 0;
-	margin: 0;
+  padding: 0 2rem 0 0;
+  margin: 0;
 }
 
 .drawer h1,
@@ -31,46 +31,51 @@
 .drawer h5,
 .drawer h6,
 .drawer p {
-	padding: 0;
+  padding: 0;
 }
 
-.drawer__summary:focus{
-	outline: 0;
+.drawer__summary:focus {
+  outline: 0;
 }
 
 .drawer__summary::-webkit-details-marker {
   display: none;
 }
 
-.drawer__title{
-	margin-bottom: 1.5rem;
-	padding: 0;
+.drawer__title {
+  margin-bottom: 1.5rem;
+  padding: 0;
 }
 
-.drawer__icon { 
-	position: absolute;
-	right: 0;
-	transition: transform 0.2s;
-	font-size: 2rem;
+.drawer__icon {
+  position: absolute;
+  right: 0;
+  transition: transform 0.2s;
+  font-size: 2rem;
 }
 
 details.drawer[open] .drawer__icon {
-	transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
-.drawer__content{
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+.drawer__content {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .fadeinfromtop {
-	opacity: 0;
-	animation-name: fadeinfromtop;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+  animation-name: fadeinfromtop;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
 @keyframes fadeinfromtop {
-	from {opacity: 0; transform: translateY(-30px);}
-	to {opacity: 1;}
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+  }
 }

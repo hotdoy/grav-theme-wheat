@@ -6,7 +6,7 @@
 
 .module-title {
   margin: 0 auto;
-  margin-bottom: calc(var(--rhythm)/2);
+  margin-bottom: calc(var(--rhythm) / 2);
   font-size: xx-large;
   font-weight: 700;
   line-height: 1.1;

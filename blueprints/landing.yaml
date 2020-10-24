@@ -1,5 +1,5 @@
 title: landing
-'@extends': default
+"@extends": default
 
 form:
   fields:
@@ -7,7 +7,6 @@ form:
       fields:
         content:
           fields:
-
             header.mp4:
               label: Mp4
               type: pagemediaselect
@@ -19,7 +18,7 @@ form:
             header.image:
               label: Image
               type: pagemediaselect
-              
+
             header.image_alt:
               label: Image Alt
               type: text
@@ -31,6 +30,5 @@ form:
               highlight: 0
               default: 0
               options:
-                1: 'Yes'
-                0: 'No'
-
+                1: "Yes"
+                0: "No"

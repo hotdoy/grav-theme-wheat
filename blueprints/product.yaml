@@ -1,5 +1,5 @@
 title: product
-'@extends': default
+"@extends": default
 
 form:
   fields:
@@ -7,7 +7,6 @@ form:
       fields:
         content:
           fields:
-
             header.id:
               type: text
               label: id
@@ -32,7 +31,7 @@ form:
               label: main_image
               accept:
                 - jpg
-              
+
             header.images:
               name: images
               type: list

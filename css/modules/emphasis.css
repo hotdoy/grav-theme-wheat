@@ -11,7 +11,7 @@
 .emphasis .wrapper[style*="--color-bg"] .inner {
   background-color: var(--color-bg);
   color: var(--color-fg);
-  padding: calc(var(--rhythm)/2) var(--gutter); 
+  padding: calc(var(--rhythm) / 2) var(--gutter);
 }
 
 .emphasis h2.title {
@@ -28,7 +28,7 @@
 
 .emphasis .content {
   width: 100%;
-  max-width: calc(var(--width-text) - 2*var(--gutter));
+  max-width: calc(var(--width-text) - 2 * var(--gutter));
   margin: 0 auto;
   padding: 0 calc(var(--gutter));
 }

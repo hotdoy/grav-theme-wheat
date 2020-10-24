@@ -8,12 +8,10 @@ form:
       active: 1
 
       fields:
-
         content:
           type: tab
           title: Content
           fields:
-
             header.title:
               type: text
               autofocus: true
@@ -39,7 +37,6 @@ form:
           type: tab
           title: Options
           fields:
-
             order_title:
               type: section
               title: Folder
@@ -61,9 +58,9 @@ form:
               label: Published
               highlight: 1
               default: 1
-              options: 
-                1: 'Yes'
-                0: 'No'
+              options:
+                1: "Yes"
+                0: "No"
 
             ordering:
               type: toggle
@@ -80,4 +77,3 @@ form:
               type: order
               label: PLUGIN_ADMIN.SORTABLE_PAGES
               sitemap:
-

@@ -1,205 +1,197 @@
 #header .shim {
-	position: relative;
-	height: var(--header-heigth);
+  position: relative;
+  height: var(--header-heigth);
 }
 
 #header .site-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: var(--header-heigth);
-	background-color: var(--color-bg);	
-	color: var(--color-fg);
-	border-bottom: 1px solid #e4e4e4;
-	z-index: 5000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-heigth);
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  border-bottom: 1px solid #e4e4e4;
+  z-index: 5000;
 }
 
 #header .site-header li {
-	list-style: none;
+  list-style: none;
 }
 
 #header .site-header .wrapper {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin: 0 auto;
-	width: 100%;
-	height: 100%;
-	max-width: var(--width-body);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  max-width: var(--width-body);
 }
 
 #header .site-header .logo {
-    width: 70px;
-    height: var(--header-heigth);
-    display: flex;
-    align-items: center;
-    margin-left: var(--gutter);
+  width: 70px;
+  height: var(--header-heigth);
+  display: flex;
+  align-items: center;
+  margin-left: var(--gutter);
 }
 #header .site-header .logo svg {
-	width: 100%;
+  width: 100%;
 }
 
 #header .site-header .nav_wrapper {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 #header .site-header nav {
-	display: none;
+  display: none;
 }
 @media (min-width: 835px) {
-	#header .site-header nav {
-		display: flex;
-	}	
+  #header .site-header nav {
+    display: flex;
+  }
 }
 
 #header .site-header nav li {
-	margin-left: 20px;
+  margin-left: 20px;
 }
 
 #header .site-header .cart {
-	position: relative;
-	margin-left: 20px;
-	margin-right: 0;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 0;
 }
 @media (min-width: 835px) {
-	#header .site-header .cart {
-		margin-right: 20px;
-	}
+  #header .site-header .cart {
+    margin-right: 20px;
+  }
 }
 
 #header .site-header .burger {
-	display: block;
-	height: var(--header-heigth);
-	margin-left: 20px;
-	padding-right: var(--gutter);
+  display: block;
+  height: var(--header-heigth);
+  margin-left: 20px;
+  padding-right: var(--gutter);
 }
 @media (min-width: 835px) {
-	#header .site-header .burger {
-		display: none;
-	}	
+  #header .site-header .burger {
+    display: none;
+  }
 }
-
-
-
 
 /*PANEL*/
 #header .site-panel {
-	visibility: hidden;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	color: var(--color-fg);
-	background-color: var(--color-bg);
-	z-index: 5000;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+  z-index: 5000;
 
-	transition-property: opacity, transform, visibility;
-	transition-duration: 0.2s;
-	opacity: 0;
+  transition-property: opacity, transform, visibility;
+  transition-duration: 0.2s;
+  opacity: 0;
 }
 
 #header .site-panel .header {
-	height: var(--header-heigth);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	border-bottom: 1px solid lightgrey;
+  height: var(--header-heigth);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
 }
 
 #header .site-panel .logo {
-    width: 70px;
-    height: var(--header-heigth);
-    display: flex;
-    align-items: center;
-    margin-left: var(--gutter);
+  width: 70px;
+  height: var(--header-heigth);
+  display: flex;
+  align-items: center;
+  margin-left: var(--gutter);
 }
 
 #header .site-panel .logo svg {
-	width: 100%;
+  width: 100%;
 }
 
 /*.site-panel .toggles {}*/
 
 #header .site-panel .toggles .cart {
-	position: relative;
-	margin-left: var(--gutter);
+  position: relative;
+  margin-left: var(--gutter);
 }
 
 #header .site-panel .close {
-	height: var(--header-heigth);
-	padding-right: var(--gutter);
-	margin-left: 16px;
+  height: var(--header-heigth);
+  padding-right: var(--gutter);
+  margin-left: 16px;
 }
 
 #header .site-panel nav li {
-	margin: 0 var(--gutter);
-	list-style: none;
-	border-bottom: 1px solid lightgray;
+  margin: 0 var(--gutter);
+  list-style: none;
+  border-bottom: 1px solid lightgray;
 }
 
 #header .site-panel nav li a {
-	display: block;
-	padding: var(--gutter) 0;
+  display: block;
+  padding: var(--gutter) 0;
 }
 
 body.panel--open {
-	overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 body.panel--open #header .site-panel {
-	visibility: visible;
-	opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 #header .snipcart-items-count {
-	display: flex;
-    position: absolute;
-    top: -3px;
-    right: -6px;
-    width: 15px;
-    height: 15px;
-    font-size: 10px;
-    border-radius: 10px;
-    line-height: 10px;
-    background-color: var(--color-hl);
-    color: white;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  position: absolute;
+  top: -3px;
+  right: -6px;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  border-radius: 10px;
+  line-height: 10px;
+  background-color: var(--color-hl);
+  color: white;
+  align-items: center;
+  justify-content: center;
 }
 
 .snipcart-pulse {
-    position: absolute;
-    top: -3px;
-    right: -6px;
-    width: 15px;
-    height: 15px;
-    opacity: 0;
-	border-radius: 100%;
-	background-color: var(--color-hl);
+  position: absolute;
+  top: -3px;
+  right: -6px;
+  width: 15px;
+  height: 15px;
+  opacity: 0;
+  border-radius: 100%;
+  background-color: var(--color-hl);
 }
 
 .snipcart-pulse.active {
-	opacity: 1;
-	animation-name: snipcart-pulse;
-	animation-duration: 1s;
-	animation-iteration-count: 1;
+  opacity: 1;
+  animation-name: snipcart-pulse;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
 }
 
 @keyframes snipcart-pulse {
-    from {opacity: 0.7; transform: scale(1);}
-    to {opacity: 0; transform: scale(10);}
+  from {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(10);
+  }
 }

@@ -32,7 +32,9 @@
   }
 }
 
-.text h4, .text h5, .text h6 {
+.text h4,
+.text h5,
+.text h6 {
   font-size: large;
   margin-top: 2rem;
   font-weight: 700;
@@ -44,7 +46,7 @@
   line-height: 1.6;
 }
 
-.text p:empty{
+.text p:empty {
   display: none;
 }
 
@@ -69,7 +71,7 @@
   font-weight: 700;
 }
 
-.text blockquote>p {
+.text blockquote > p {
   font-size: inherit;
   line-height: inherit;
   margin: 0 auto;
@@ -77,11 +79,11 @@
 }
 
 .text code {
-    border: 1px solid var(--color-border);
-    background-color: white;
-    padding: 2px;
-    border-radius: 4px;
-    font-family: monospace;
+  border: 1px solid var(--color-border);
+  background-color: white;
+  padding: 2px;
+  border-radius: 4px;
+  font-family: monospace;
 }
 
 .text ul {

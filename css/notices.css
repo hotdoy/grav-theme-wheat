@@ -4,55 +4,51 @@ Make sure to disable built-in CSS.
 */
 
 .notices {
-    position: relative;
-    max-width: calc(var(--width-text) - 4rem);
-    margin: var(--gutter);
-    padding: var(--gutter) 0;
-    border-radius: 4px;
+  position: relative;
+  max-width: calc(var(--width-text) - 4rem);
+  margin: var(--gutter);
+  padding: var(--gutter) 0;
+  border-radius: 4px;
 }
 
 @media (min-width: 835px) {
-    .notices {
-        margin: var(--gutter) auto;
-        padding: var(--gutter) 0;
-    }
+  .notices {
+    margin: var(--gutter) auto;
+    padding: var(--gutter) 0;
+  }
 }
 
 /* fix first element margin */
 .notices > *:nth-child(1) {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .notices a,
 .content .notices a {
-    color: inherit;
-    text-decoration: underline;
+  color: inherit;
+  text-decoration: underline;
 }
-
-
-
-
 
 /*====================================== 
                 THEMES
  ======================================*/
 
 .notices.yellow {
-    background: #FFAB00;
-    color: #172B4D;
+  background: #ffab00;
+  color: #172b4d;
 }
 
 .notices.red {
-    background-color: #de350b;
-    color: #fff;
+  background-color: #de350b;
+  color: #fff;
 }
 
 .notices.blue {
-    background: #42526e;
-    color: #ffffff;
+  background: #42526e;
+  color: #ffffff;
 }
 
 .notices.green {
-    background: #00875a;
-    color: #fff;
+  background: #00875a;
+  color: #fff;
 }

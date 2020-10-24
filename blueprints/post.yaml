@@ -1,5 +1,5 @@
 title: post
-'@extends': default
+"@extends": default
 
 form:
   fields:
@@ -7,7 +7,6 @@ form:
       fields:
         content:
           fields:
-
             header.subheading:
               ordering@: header.title
               type: text
@@ -19,7 +18,7 @@ form:
               type: pagemediaselect
               accept:
                 - image/*
-              
+
             header.main_image_alt:
               type: text
               label: Main Image Alt
