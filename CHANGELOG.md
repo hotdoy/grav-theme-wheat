@@ -1,3 +1,9 @@
+# v0.1.4
+##  10/24/2020
+
+1. [](#new)
+    * Added theme version and server time in html
+
 # v0.1.3
 ##  10/24/2020
 
