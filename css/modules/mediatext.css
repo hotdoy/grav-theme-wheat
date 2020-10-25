@@ -1,4 +1,4 @@
-.module.mediatext .wrapper {
+.module.mediatext > .wrapper {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -8,12 +8,12 @@
   align-items: center;
 }
 
-.module.mediatext .wrapper.right {
+.module.mediatext > .wrapper.right {
   flex-direction: row-reverse;
 }
 
-.module.mediatext.media-ctn,
-.module.mediatext.content-ctn {
+.module.mediatext .media-ctn,
+.module.mediatext .content-ctn {
   width: 100%;
 }
 
@@ -28,7 +28,7 @@
     padding-left: 90px;
   }
 
-  .module.mediatext .wrapper.right .content-ctn {
+  .module.mediatext > .wrapper.right .content-ctn {
     padding-right: 90px;
     padding-left: 0;
   }

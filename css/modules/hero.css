@@ -1,6 +1,6 @@
 /* .module.hero {} */
 
-.module.hero .wrapper {
+.module.hero > .wrapper {
   position: relative;
   max-width: var(--width-body);
   margin: 0 auto;
@@ -8,7 +8,7 @@
 }
 
 @media (min-width: 835px) {
-  .module.hero .wrapper {
+  .module.hero > .wrapper {
     min-height: 550px;
   }
 }
@@ -53,12 +53,12 @@
   margin-top: 20px;
 }
 
-.module.hero .wrapper:hover .button {
+.module.hero > .wrapper:hover .button {
   transform: translateY(-1px);
   box-shadow: var(--shadow-button-hover);
 }
 
-.module.hero .wrapper:hover:active .button {
+.module.hero > .wrapper:hover:active .button {
   transition-duration: 0s;
   transform: translateY(1px);
 }

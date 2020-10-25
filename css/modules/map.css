@@ -1,6 +1,6 @@
 /* .module.map {} */
 
-.module.map .wrapper {
+.module.map > .wrapper {
   width: 100%;
   max-width: var(--width-body);
   margin: 0 auto;

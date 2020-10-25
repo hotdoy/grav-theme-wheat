@@ -4,7 +4,9 @@ html {
   --color-pagination: white;
 }
 
-.module.quotes .wrapper {
+/*.module.quotes {}*/
+
+.module.quotes > .wrapper {
   position: relative;
   width: 100%;
   max-width: var(--width-body);
@@ -12,7 +14,7 @@ html {
   padding: 0 var(--gutter);
 }
 
-.module.quotes .carousel {
+.module.quotes .swiper-container {
   color: white;
   height: auto;
   width: 100%;
