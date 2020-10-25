@@ -3,7 +3,7 @@
 
   const initCarousel = function () {
     var swiper = new Swiper(".module.carousel .swiper-container", {
-    	slidesPerView: 'auto',
+      slidesPerView: "auto",
       spaceBetween: 20,
     });
   };

@@ -10,7 +10,6 @@ form:
       fields:
         content:
           fields:
-
             content:
               unset@: true
 
