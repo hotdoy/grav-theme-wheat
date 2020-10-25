@@ -9,7 +9,7 @@
 .collection-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10px 5px;
+  grid-gap: var(--gutter);
   width: 100%;
   max-width: var(--width-body);
   margin: 0 auto;
@@ -18,6 +18,6 @@
 @media (min-width: 835px) {
   .collection-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px 10px;
+    grid-gap: var(--gutter);
   }
 }
