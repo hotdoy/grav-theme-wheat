@@ -1,3 +1,10 @@
+# v0.1.6
+##  10/25/2020
+
+1. [](#improved)
+    * Carousel UX
+    * Collection and carousel now feel more related
+
 # v0.1.5
 ##  10/25/2020
 
