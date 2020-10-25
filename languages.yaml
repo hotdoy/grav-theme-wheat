@@ -3,8 +3,12 @@ en:
     PAGINATION:
       LOAD_MORE: Load More
       END: That's it for now!
+    PRODUCT:
+      RELATED_TITLE: From the same collection
 fr:
   THEME_WHEAT:
     PAGINATION:
       LOAD_MORE: Charger plus
       END: C'est tout pour le moment!
+    PRODUCT:
+      RELATED_TITLE: Dans la même collection

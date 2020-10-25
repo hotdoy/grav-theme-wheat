@@ -1,0 +1,31 @@
+/*.module.carousel {}*/
+
+.module.carousel > .wrapper {
+  position: relative;
+  width: 100%;
+  max-width: var(--width-body);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  overflow: hidden;
+}
+
+.module.carousel .swiper-container {
+  height: auto;
+  width: 100%;
+}
+
+.module.carousel .swiper-slide {
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  .module.carousel .swiper-slide {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .module.carousel .swiper-slide {
+    width: 25%;
+  }
+}

@@ -4,7 +4,7 @@
   z-index: 1000;
 }
 
-.module-title {
+.module .module-title {
   margin: 0 auto;
   margin-bottom: calc(var(--rhythm) / 2);
   font-size: xx-large;
@@ -17,7 +17,7 @@
 }
 
 @media (min-width: 835px) {
-  .module-title {
+  .module .module-title {
     font-size: 48px;
   }
 }

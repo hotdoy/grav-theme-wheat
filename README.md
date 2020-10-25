@@ -32,6 +32,7 @@ If you fork this theme, be aware that I use the following Github Actions so you 
 - Quotes
 - Map
 - Emphasis
+- Carousel
 
 ## Required plugins
 - Breadcrumbs

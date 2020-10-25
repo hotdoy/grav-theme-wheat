@@ -4,21 +4,11 @@
 {% set main_image_alt = page.header.image_alt ?? '' %}
 {% set other_images = page.header.images %}
 
-{# {% block head_extra %}
+{% block head_extra %}
 <meta name="uid" content="{{ page.id() }}">
-{% endblock %} #}
+{% endblock %}
 
 {% block content %}
-
-{# 	{% set currentId = page.id() %}
-	{{ currentId }}
-	<br>
-	{% set options = { items: {'@root.descendants':''} } %}
-	{% set pages = page.collection(options) %}
-	{% for page in pages if page.routable and page.id() == currentId %}
-		{{ page.id() }}
-	{% endfor %} #}
-
 
 	{# SHOWCASE #}
 	<section class="module product-showcase">
@@ -81,9 +71,21 @@
 	{{ module.content|raw }}
 	{% endfor %}
 
-	{# RELATED ITEMS #}
-    {# {% set options = { items: {'@self.siblings':''}, 'limit': 4, 'order': {'by': 'random'}} %} #}
-    {# {% set related = page.collection(options) %} #}
+	<div class="divider">
+		<hr>
+	</div>
 
+	{# RELATED ITEMS #}
+    {% set related_options = { items: {'@self.siblings':''}, 'limit': 6, 'order': {'by': 'random'}} %}
+    {% set related_items = page.collection(related_options) %}
+
+    {% include 'modular/carousel.html.twig' with { 'display_title': 'THEME_WHEAT.PRODUCT.RELATED_TITLE'|t ,'collection': related_items } %}
+
+    {# PREVIOUSLY LOOKED AT ITEMS #}
+{# 	{% set options = { items: {'@root.descendants':''} } %}
+	{% set pages = page.collection(options) %}
+	{% for page in pages if page.routable and page.id() == currentId %}
+		{{ page.id() }}
+	{% endfor %} #}
 
 {% endblock %}

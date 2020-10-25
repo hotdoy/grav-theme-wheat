@@ -28,7 +28,7 @@
 
 .module.editorial hr {
   margin: calc(var(--rhythm) / 2) 0 calc(var(--rhythm) / 2) 0;
-  border: none;
+  /*border: none;*/
 }
 
 .module.editorial p img,

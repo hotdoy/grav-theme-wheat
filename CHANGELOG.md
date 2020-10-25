@@ -1,3 +1,12 @@
+# v0.1.5
+##  10/25/2020
+
+1. [](#new)
+    * Carousel modular
+    * Carousel of siblings in product pages
+2. [](#improved)
+	* CSS specificity of various modules
+
 # v0.1.4
 ##  10/24/2020
 
