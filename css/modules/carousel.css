@@ -6,18 +6,12 @@
   max-width: var(--width-body);
   margin: 0 auto;
   padding: 0 var(--gutter);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .module.carousel .swiper-container {
   height: auto;
   width: 100%;
-  overflow: visible;
-}
-@media (min-width: 768px) {
-  .module.carousel .swiper-container {
-    overflow: hidden;
-  }
 }
 
 .module.carousel .swiper-slide {
