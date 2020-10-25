@@ -8,17 +8,18 @@
 {% do assets.addJs('theme://js/header.js', { group:'bottom' }) %}
 {# {% do assets.addJs('theme://js/announcement.js', { group:'bottom' }) %} #}
 {% do assets.addJs('theme://js/youtube.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/collection.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/map.js', { group:'bottom' }) %}
 {# {% do assets.addJs('theme://js/share.js', { group:'bottom' }) %} #}
 {% do assets.addJs('theme://js/pagination.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/snipcart.js', { group:'bottom' }) %}
+{% if theme.snipcart_enabled and theme.snipcart_public_key %}{% do assets.addJs('theme://js/snipcart.js', { group:'bottom' }) %}{% endif %}
 
 {# MODULES #}
 {% do assets.addJs('theme://js/quotes.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/carousel.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/map.js', { group:'bottom' }) %}
 
 {# PAGES #}
 {% do assets.addJs('theme://js/product.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/collection.js', { group:'bottom' }) %}
 
 {# LOADING #}
 {% do assets.addJs('theme://js/loading.js', { group:'bottom', priority: 0 }) %}
