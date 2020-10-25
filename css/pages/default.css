@@ -38,6 +38,8 @@
   font-size: large;
   font-weight: 700;
   line-height: 1.4;
+  background-color: var(--color-btn-bg);
+  color: var(--color-btn-fg);
   transition-duration: 0.2s;
   transition-property: transform;
 }
