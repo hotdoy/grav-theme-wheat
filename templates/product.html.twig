@@ -71,10 +71,16 @@
 	{{ module.content|raw }}
 	{% endfor %}
 
-	{# TODOS!!! #}
+	<div class="divider">
+		<hr>
+	</div>
+
 	{# RELATED ITEMS #}
-    {# {% set options = { items: {'@self.siblings':''}, 'limit': 4, 'order': {'by': 'random'}} %} #}
-    {# {% set related = page.collection(options) %} #}
+    {% set related_options = { items: {'@self.siblings':''}, 'limit': 6, 'order': {'by': 'random'}} %}
+    {% set related_items = page.collection(related_options) %}
+
+    {% include 'modular/carousel.html.twig' with { 'display_title': 'THEME_WHEAT.PRODUCT.RELATED_TITLE'|t ,'collection': related_items } %}
+
     {# PREVIOUSLY LOOKED AT ITEMS #}
 {# 	{% set options = { items: {'@root.descendants':''} } %}
 	{% set pages = page.collection(options) %}

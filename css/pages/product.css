@@ -169,6 +169,17 @@
   }
 }
 
+.product .divider {
+  width: var(--width-body);
+  margin: 0 auto;
+  margin-top: var(--rhythm);
+}
+
+.product .divider > hr {
+  border: 1px solid var(--color-border);
+  margin: 0 var(--gutter);
+}
+
 /*PRODUCT CARD*/
 .product-card {
   transition-duration: 0.2s;

@@ -1,21 +1,33 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'carousel' %}
 
-{% set items = items|default(page.header.items) %}
+{% set display_title = display_title|default(page.header.display_title) %}
+{% set collection = collection|default() %}
+{% set list = list|default(page.header.items) %}
 
 {% block content %}
 <div class="wrapper" data-reveal="">
-	{% if page.header.display_title %}
-	<h2 class="module-title">{{ page.header.display_title }}</h2>
+	{% if display_title %}
+	<h2 class="module-title">{{ display_title }}</h2>
 	{% endif %}
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
-			{% for item in items %}
+
+			{# COLLECTION #}
+			{% for item in collection %}
+			<div class="swiper-slide">
+				 {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item} %}
+			</div>
+			{% endfor %}
+
+			{# PAGES #}
+			{% for item in list %}
 			{% set item = page.find(item.page) %}	
 			<div class="swiper-slide">
 				 {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item} %}
 			</div>
 			{% endfor %}
+
 		</div>
 	</div>	
 </div>
