@@ -1,0 +1,27 @@
+title: carousel
+"@extends": modular/module
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+
+            content:
+              unset@: true
+
+            header.items:
+              name: items
+              type: list
+              style: vertical
+              label: Items
+              fields:
+                .page:
+                  type: pages
+                  label: Page
+                  show_modular: false
+                  show_root: false
