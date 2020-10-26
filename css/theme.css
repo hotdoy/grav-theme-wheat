@@ -83,20 +83,20 @@ body {
   left: 0;
 }
 
-.w-text {
+.width-text {
   width: 100%;
   max-width: var(--width-text);
   margin: 0 auto;
 }
 
-.w-body {
+.width-body {
   width: 100%;
   max-width: var(--width-body);
   padding: 0 var(--gutter);
   margin: 0 auto;
 }
 
-.w-full {
+.width-full {
   width: 100%;
   max-width: var(--width-full);
   margin: 0 auto;
