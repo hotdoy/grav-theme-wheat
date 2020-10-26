@@ -177,7 +177,8 @@
 }
 
 .product .divider > hr {
-  border: 1px solid var(--color-border);
+  border: 0;
+  border-top: 1px solid var(--color-border);
   margin: 0 var(--gutter);
 }
 
