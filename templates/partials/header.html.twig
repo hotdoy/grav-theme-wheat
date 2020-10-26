@@ -1,7 +1,23 @@
 <header id="header">
-
+    
+    
+    
     {# HEADER #}
     <div class="shim"></div>
+
+    {# MARQUEE #}
+    {% set marquee_options = { items: {'@root.modular':''}, 'order': {'by': 'folder', 'dir': 'asc'}} %}
+    {% set marquee_collection = page.collection(marquee_options) %}
+    {% for marquee in marquee_collection %}
+    {% set color_marquee_bg = marquee.header.color_bg %}
+    {% set color_marquee_fg = marquee.header.color_fg %}
+    {% set marquee_styles %}
+    {% if color_marquee_bg %}--color-marquee-bg:{{ color_marquee_bg }};{% endif %}
+    {% if color_marquee_fg %}--color-marquee-fg:{{ color_marquee_fg }};{% endif %}
+    {% endset %}
+    <section class="marquee"{% if marquee_styles %} style="{{ marquee_styles }}"{% endif %}>{{ marquee.header.content|raw }}</section>
+    {% endfor %}
+
     <section class="site-header">
         <div class="wrapper">
             <a class="logo" href="{{ home_url }}" aria-label="Logo">{% include 'partials/logo.html.twig' %}</a>

@@ -1,0 +1,78 @@
+title: marquee
+
+form:
+  validation: loose
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+
+            header.title:
+              type: text
+              autofocus: true
+              style: vertical
+              label: PLUGIN_ADMIN.TITLE
+
+            header.content:
+              type: text
+              style: vertical
+              label: content
+
+            header.color_bg:
+              type: colorpicker
+              label: color_bg
+
+            header.color_fg:
+              type: colorpicker
+              label: color_fg
+
+        options:
+          type: tab
+          title: Options
+          fields:
+            order_title:
+              type: section
+              title: Folder
+              underline: true
+
+            folder:
+              type: text
+              label: PLUGIN_ADMIN.FOLDER_NAME
+              validate:
+                rule: slug
+
+            route:
+              type: parents
+              label: PLUGIN_ADMIN.PARENT
+              classes: fancy
+
+            header.published:
+              type: toggle
+              label: Published
+              highlight: 1
+              default: 1
+              options:
+                1: "Yes"
+                0: "No"
+
+            ordering:
+              type: toggle
+              label: PLUGIN_ADMIN.FOLDER_NUMERIC_PREFIX
+              help: PLUGIN_ADMIN.FOLDER_NUMERIC_PREFIX_HELP
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            order:
+              type: order
+              label: PLUGIN_ADMIN.SORTABLE_PAGES
+              sitemap:
