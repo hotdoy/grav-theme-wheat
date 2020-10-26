@@ -12,7 +12,6 @@ form:
           type: tab
           title: Content
           fields:
-
             header.title:
               type: text
               autofocus: true
