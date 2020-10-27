@@ -1,3 +1,14 @@
+# v0.1.7
+##  10/26/2020
+
+1. [](#new)
+    * Added the root-config concept
+    * Added Marquee using root-config
+2. [](#improved)
+    * Various shortcodes and css utilities
+3. [](#bugfix)
+    * Product divider border
+
 # v0.1.6
 ##  10/25/2020
 
@@ -34,7 +45,7 @@
     * Cleaning
     * Removed Roboto
 2. [](#bugfix)
-	* Fixed product showcase swiper pagination color.  
+	* Fixed product showcase swiper pagination color
 
 # v0.1.1
 ##  10/24/2020
