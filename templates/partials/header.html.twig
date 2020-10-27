@@ -1,7 +1,19 @@
 <header id="header">
-
+    
+    
+    
     {# HEADER #}
     <div class="shim"></div>
+
+    {# MARQUEE #}
+    {% if root_config.header.marquee_enabled %}
+    {% set marquee_styles %}
+    {% if root_config.header.marquee_color_bg %}--color-marquee-bg:{{ root_config.header.marquee_color_bg }};{% endif %}
+    {% if root_config.header.marquee_color_fg %}--color-marquee-fg:{{ root_config.header.marquee_color_fg }};{% endif %}
+    {% endset %}
+    <section class="marquee"{% if marquee_styles %} style="{{ marquee_styles }}"{% endif %}>{{ root_config.header.marquee_content|raw }}</section>
+    {% endif %}
+
     <section class="site-header">
         <div class="wrapper">
             <a class="logo" href="{{ home_url }}" aria-label="Logo">{% include 'partials/logo.html.twig' %}</a>

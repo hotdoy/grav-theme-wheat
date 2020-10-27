@@ -1,0 +1,42 @@
+title: Root Config
+
+form:
+  validation: loose
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            marquee:
+              type: section
+              title: Marquee
+              underline: true
+
+            header.marquee_enabled:
+              type: toggle
+              label: marquee_enabled
+              highlight: 1
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            header.marquee_content:
+              type: text
+              style: vertical
+              label: marquee_content
+
+            header.marquee_color_bg:
+              type: colorpicker
+              label: marquee_color_bg
+
+            header.marquee_color_fg:
+              type: colorpicker
+              label: marquee_color_fg

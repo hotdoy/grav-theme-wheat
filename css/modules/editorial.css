@@ -106,3 +106,13 @@ td {
   padding-top: 2px;
   padding-right: 8px;
 }
+
+.module.editorial span.small * {
+  font-size: small;
+  line-height: 1.4;
+}
+
+.module.editorial span.large * {
+  font-size: xx-large;
+  line-height: 1.4;
+}

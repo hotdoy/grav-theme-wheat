@@ -195,3 +195,13 @@ body.panel--open #header .site-panel {
     transform: scale(10);
   }
 }
+
+#header .marquee {
+  text-align: center;
+  font-size: small;
+  padding: 10px var(--gutter);
+  background-color: var(--color-marquee-bg, var(--color-btn-bg));
+  color: var(--color-marquee-fg, var(--color-btn-fg));
+  position: relative;
+  z-index: 5000;
+}
