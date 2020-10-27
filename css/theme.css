@@ -31,7 +31,7 @@
 					ROOT 
 ============================================*/
 
-html {
+:root {
   --font-base: "Inter", sans-serif;
   font-size: 16px;
   font-family: var(--font-base);
@@ -49,13 +49,18 @@ html {
 
   --gutter: 20px;
   --rhythm: 80px;
+
   --header-heigth: 48px;
 }
 
 @media (min-width: 835px) {
-  html {
+  :root {
     --rhythm: 160px;
   }
+}
+
+body {
+  --color-btn-bg: var(--color-hl);
 }
 
 /*===========================================

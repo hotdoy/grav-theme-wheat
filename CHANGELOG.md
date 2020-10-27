@@ -1,3 +1,13 @@
+# v0.1.8
+##  10/27/2020
+
+1. [](#new)
+    * root-params marquee can have an url
+2. [](#improved)
+    * root-config renamed to root-params
+3. [](#bugfix)
+    * button color custom properties scope
+
 # v0.1.7
 ##  10/26/2020
 
