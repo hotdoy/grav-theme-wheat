@@ -12,7 +12,6 @@ form:
           type: tab
           title: Content
           fields:
-
             marquee:
               type: section
               title: Marquee
