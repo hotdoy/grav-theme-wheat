@@ -38,4 +38,3 @@ form:
             header.color_panel_fg:
               type: colorpicker
               label: color_panel_fg
-              
