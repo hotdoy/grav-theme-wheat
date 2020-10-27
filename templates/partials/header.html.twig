@@ -6,12 +6,12 @@
     <div class="shim"></div>
 
     {# MARQUEE #}
-    {% if root_config.header.marquee_enabled %}
+    {% if root_params.header.marquee_enabled %}
     {% set marquee_styles %}
-    {% if root_config.header.marquee_color_bg %}--color-marquee-bg:{{ root_config.header.marquee_color_bg }};{% endif %}
-    {% if root_config.header.marquee_color_fg %}--color-marquee-fg:{{ root_config.header.marquee_color_fg }};{% endif %}
+    {% if root_params.header.marquee_color_bg %}--color-marquee-bg:{{ root_params.header.marquee_color_bg }};{% endif %}
+    {% if root_params.header.marquee_color_fg %}--color-marquee-fg:{{ root_params.header.marquee_color_fg }};{% endif %}
     {% endset %}
-    <section class="marquee"{% if marquee_styles %} style="{{ marquee_styles }}"{% endif %}>{{ root_config.header.marquee_content|raw }}</section>
+    <section class="marquee"{% if marquee_styles %} style="{{ marquee_styles }}"{% endif %}><a href="{{ root_params.header.marquee_url }}">{{ root_params.header.marquee_content|raw }}</a></section>
     {% endif %}
 
     <section class="site-header">

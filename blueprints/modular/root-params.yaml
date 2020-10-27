@@ -1,4 +1,4 @@
-title: Root Config
+title: Root Params
 
 form:
   validation: loose
@@ -30,8 +30,11 @@ form:
 
             header.marquee_content:
               type: text
-              style: vertical
               label: marquee_content
+
+            header.marquee_url:
+              type: text
+              label: marquee_url
 
             header.marquee_color_bg:
               type: colorpicker
