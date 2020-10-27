@@ -40,8 +40,6 @@
   --color-fg: #313131;
   --color-hl: #0a5b61;
   --color-border: #e4e4e4;
-  --color-btn-bg: var(--color-hl);
-  --color-btn-fg: white;
 
   --width-text: 735px;
   --width-body: 1200px;

@@ -200,8 +200,8 @@ body.panel--open #header .site-panel {
   text-align: center;
   font-size: small;
   padding: 10px var(--gutter);
-  background-color: var(--color-marquee-bg, var(--color-btn-bg));
-  color: var(--color-marquee-fg, var(--color-btn-fg));
+  background-color: var(--color-marquee-bg, var(--color-hl));
+  color: var(--color-marquee-fg, white);
   position: relative;
   z-index: 5000;
 }
