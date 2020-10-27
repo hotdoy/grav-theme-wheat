@@ -1,4 +1,6 @@
-{# {{dump(page)}} #}
+{{ dump(page) }}
+{% set root_config = page.find('/_root-config/') %}
+
 <!DOCTYPE html> 
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 
@@ -27,7 +29,7 @@
 	{% endset %}
 
 	<body class="{{ page.template }} {{ page.header.body_classes }} loading"{% if styles %} style="{{ styles }}"{% endif %}>
-
+		
 		{% block loading %}{% include 'partials/loading.html.twig' %}{% endblock %}
 		{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
 		<main id="main">{% block content %}{% endblock %}</main>
@@ -39,6 +41,7 @@
 		{% block gtm_body %}{% include 'partials/gtm-body.html.twig' %}{% endblock %}
 		{% block body_extra %}{% endblock %}
 		<!-- {{ "now"|date("m/d/Y H:i:s") }} - {{ grav.theme.getBlueprint().name }} {{ grav.theme.getBlueprint().version }} -->
+
 	</body>
 
 </html>

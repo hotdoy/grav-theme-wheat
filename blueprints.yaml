@@ -20,6 +20,7 @@ dependencies:
 form:
   validation: loose
   fields:
+    
     colors:
       type: section
       title: Colors

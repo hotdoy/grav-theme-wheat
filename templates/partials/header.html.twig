@@ -6,17 +6,13 @@
     <div class="shim"></div>
 
     {# MARQUEE #}
-    {% set marquee_options = { items: {'@root.modular':''}, 'order': {'by': 'folder', 'dir': 'asc'}} %}
-    {% set marquee_collection = page.collection(marquee_options) %}
-    {% for marquee in marquee_collection %}
-    {% set color_marquee_bg = marquee.header.color_bg %}
-    {% set color_marquee_fg = marquee.header.color_fg %}
+    {% if root_config.header.marquee_enabled %}
     {% set marquee_styles %}
-    {% if color_marquee_bg %}--color-marquee-bg:{{ color_marquee_bg }};{% endif %}
-    {% if color_marquee_fg %}--color-marquee-fg:{{ color_marquee_fg }};{% endif %}
+    {% if root_config.header.marquee_color_bg %}--color-marquee-bg:{{ root_config.header.marquee_color_bg }};{% endif %}
+    {% if root_config.header.marquee_color_fg %}--color-marquee-fg:{{ root_config.header.marquee_color_fg }};{% endif %}
     {% endset %}
-    <section class="marquee"{% if marquee_styles %} style="{{ marquee_styles }}"{% endif %}>{{ marquee.header.content|raw }}</section>
-    {% endfor %}
+    <section class="marquee"{% if marquee_styles %} style="{{ marquee_styles }}"{% endif %}>{{ root_config.header.marquee_content|raw }}</section>
+    {% endif %}
 
     <section class="site-header">
         <div class="wrapper">
