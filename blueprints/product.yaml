@@ -28,7 +28,7 @@ form:
 
             header.image:
               type: pagemediaselect
-              label: main_image
+              label: image
               accept:
                 - jpg
 
