@@ -1,3 +1,13 @@
+# v0.1.10
+##  10/28/2020
+
+1. [](#improved)
+    * minor style improvement
+    * section modular colors (WIP, might delete later)
+2. [](#bugfix)
+    * fixed missing snipcart product image
+    * added some missing snipcart color overwides
+
 # v0.1.9
 ##  10/27/2020
 

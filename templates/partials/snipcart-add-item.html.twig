@@ -1,4 +1,5 @@
 {% if theme.snipcart_enabled and theme.snipcart_public_key %}
+{% set image = page.header.image ? page.media[page.header.image] %}
 <button class="{% if class %}{{ class }} {% endif %}snipcart-add-item"
 data-item-id="{{ page.header.id }}"
 data-item-price="{{ page.header.price }}"
