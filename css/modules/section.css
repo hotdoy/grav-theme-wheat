@@ -1,0 +1,11 @@
+.module.section {
+  padding-bottom: var(--rhythm);
+  background-color: var(--color-hl);
+  color: white;
+  overflow: auto;
+}
+
+.module.section .button {
+  color: var(--color-hl);
+  background-color: var(--color-bg);
+}

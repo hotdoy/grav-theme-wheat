@@ -12,6 +12,7 @@ form:
           type: tab
           title: Content
           fields:
+
             header.title:
               type: text
               autofocus: true
@@ -37,6 +38,7 @@ form:
           type: tab
           title: Options
           fields:
+            
             order_title:
               type: section
               title: Folder
