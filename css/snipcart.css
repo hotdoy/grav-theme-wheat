@@ -36,18 +36,18 @@
 }
 
 .snipcart-signin__register-link {
-    color: var(--color-hl);
+  color: var(--color-hl);
 }
 
 .snipcart-signin__forgot-password {
-    color: var(--color-hl);
+  color: var(--color-hl);
 }
 
 .snipcart-form__select:focus {
-    border: 1px solid var(--color-hl);
+  border: 1px solid var(--color-hl);
 }
 
-.snipcart-form-radio:checked+label:before {
-    background: none;
-    background-color: var(--color-hl);
+.snipcart-form-radio:checked + label:before {
+  background: none;
+  background-color: var(--color-hl);
 }
