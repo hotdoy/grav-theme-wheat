@@ -8,10 +8,8 @@ form:
       active: 1
 
       fields:
-        
         content:
           fields:
-
             header.display_title:
               unset@: true
 
