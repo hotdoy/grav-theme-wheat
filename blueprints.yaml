@@ -1,17 +1,17 @@
 name: Wheat
 slug: wheat
 type: theme
-version: 0.1.8
-description: Wheat theme for Grav CMS
+version: 0.1.9
+description: Wheat, a starter-kit for Grav CMS with a strong vanilla taste.
 icon: rebel
 author:
   name: Calotte
   email: vincent@calotte.ca
-homepage: https://github.com/calotte/grav-theme-wheat
-demo: http://demo.yoursite.com
+homepage: https://github.com/hotdoy/grav-theme-wheat/
+demo: https://getwheat.ca/
 keywords: grav, theme, etc
-bugs: https://github.com/calotte/grav-theme-wheat/issues
-readme: https://github.com/calotte/grav-theme-wheat/blob/develop/README.md
+bugs: https://github.com/hotdoy/grav-theme-wheat/issues
+readme: https://github.com/hotdoy/grav-theme-wheat/blob/master/README.md
 license: MIT
 
 dependencies:

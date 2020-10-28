@@ -1,0 +1,20 @@
+title: Section Start
+"@extends": modular/module
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.display_title:
+              unset@: true
+
+            content:
+              unset@: true
+
+            header.media_order:
+              unset@: true

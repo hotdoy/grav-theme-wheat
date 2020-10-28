@@ -1,9 +1,3 @@
-html {
-  --color-panel-bg: var(--color-hl);
-  --color-panel-fg: white;
-  --color-pagination: white;
-}
-
 /*.module.quotes {}*/
 
 .module.quotes > .wrapper {
@@ -29,8 +23,8 @@ html {
   height: auto;
   padding: 6rem 2rem;
   text-align: center;
-  background-color: var(--color-panel-bg);
-  color: var(--color-panel-fg);
+  background-color: var(--color-panel-bg, var(--color-hl));
+  color: var(--color-panel-fg, white);
 }
 
 .module.quotes blockquote {
@@ -72,9 +66,9 @@ html {
 }
 
 .module.quotes .swiper-pagination-bullet {
-  background: var(--color-pagination);
+  background: var(--color-panel-fg, white);
 }
 
 .module.quotes .swiper-pagination-bullet-active {
-  background: var(--color-pagination);
+  background: var(--color-panel-fg, white);
 }

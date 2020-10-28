@@ -1,3 +1,12 @@
+# v0.1.9
+##  10/27/2020
+
+1. [](#new)
+    * Section modular (start / end)
+2. [](#improved)
+    * HL color management accross the board
+    * Theme blueprint informations
+
 # v0.1.8
 ##  10/27/2020
 

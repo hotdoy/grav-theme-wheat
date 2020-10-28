@@ -31,8 +31,8 @@ If you fork this theme, be aware that I use the following Github Actions so you 
 - Editorial
 - Quotes
 - Map
-- Emphasis
 - Carousel
+- Section Start / End
 
 ## Required plugins
 - Breadcrumbs

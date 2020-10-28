@@ -38,7 +38,3 @@ form:
             header.color_panel_fg:
               type: colorpicker
               label: color_panel_fg
-
-            header.color_pagination:
-              type: colorpicker
-              label: color_pagination
