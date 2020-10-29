@@ -7,7 +7,6 @@ form:
       fields:
         content:
           fields:
-
             content:
               ordering@: header.main_image_alt
               label: Description

@@ -8,7 +8,7 @@ en:
     CART:
       DISABLED: Cart is disabled
       ADD: Add to cart
-      INSTRUCTION: Product size and availability will be confirmed during the checkout process.  
+      INSTRUCTION: Product size and availability will be confirmed during the checkout process.
 fr:
   THEME:
     PAGINATION:
