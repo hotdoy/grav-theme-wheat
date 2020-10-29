@@ -7,42 +7,85 @@ form:
       fields:
         content:
           fields:
+            content:
+              ordering@: header.main_image_alt
+              label: Description
+
+            header.product:
+              type: section
+              title: Product
+              underline: true
+
             header.id:
               type: text
               label: id
+              help: Product's unique ID
 
             header.name:
               type: text
               label: name
+              help: Product's name
 
             header.price:
               type: text
               label: price
+              help: Product's price. You must use a . as decimal separator.
               validate:
                 type: number
                 min: 0
 
-            header.description:
+            header.short_description:
               type: text
-              label: description
+              label: short_description
+              help: The Product's description showing in the cart.
 
-            header.image:
+            header.main_image:
               type: pagemediaselect
-              label: image
+              label: main_image
+              help: Main image representing the product (will also appear in the cart).
               accept:
                 - jpg
 
-            header.images:
-              name: images
+            header.main_image_alt:
+              type: text
+              label: main_image_alt
+
+            header.variants:
+              type: section
+              title: Variants
+              underline: true
+
+            header.sizes:
+              name: sizes
               type: list
               style: vertical
-              label: images
+              label: sizes
+              help: Product variants are very specific to each sites, ask your administrator about modifying this to fit your needs.
+
+              fields:
+                .value:
+                  toggleable: true
+                  type: text
+                  label: Value
+
+            header.gallery:
+              type: section
+              title: Gallery
+              underline: true
+
+            header.gallery_images:
+              name: gallery_images
+              type: list
+              style: vertical
+              label: gallery_images
+
               fields:
                 .image:
-                  label: image
                   type: pagemediaselect
+                  label: image
                   accept:
                     - jpg
-                .alt:
+
+                .image_alt:
                   type: text
-                  label: alt
+                  label: image_alt

@@ -1,8 +1,9 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set main_image = page.header.image ? page.media[page.header.image] %}
-{% set main_image_alt = page.header.image_alt ?? '' %}
-{% set other_images = page.header.images %}
+{% set main_image = page.header.image ? page.media[page.header.main_image] %}
+{% set main_image_alt = page.header.main_image_alt ?? '' %}
+{% set gallery_images = page.header.gallery_images %}
+{% set price = page.header.price|number_format(2, ',', ' ') %}
 
 {% block head_extra %}
 <meta name="uid" content="{{ page.id() }}">
@@ -17,7 +18,7 @@
 			<div class="media-ctn" data-reveal>
 
 				{# SWIPER #}
-				{% if other_images %}
+				{% if gallery_images %}
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
 						{% if main_image %}
@@ -25,7 +26,7 @@
 							<div class="fill">{{ main_image.html('', main_image_alt) }}</div>
 						</div>
 						{% endif %}
-						{% for item in other_images %}
+						{% for item in gallery_images %}
 						<div class="swiper-slide">
 							{% set image = item.image ? page.media[item.image] %}
 							{% set image_alt = item.image_alt ?? '' %}
@@ -53,8 +54,26 @@
 				    {% set title = page.header.display_title ?? page.title %}
 				    <h1 class="name">{{ title }}</h1>
 					<div class="description text">{{ page.content|raw }}</div>
-					<div class="price">{{ page.header.price|number_format(2, ',', ' ') }} $</div>
-					{% include 'partials/snipcart-add-item.html.twig' with {'class': 'add-to-cart button'} %}
+					<div class="price">{{ price }} $</div>
+
+					{% if theme.snipcart_enabled and theme.snipcart_public_key %}
+					<button class="snipcart-add-item button"
+					data-item-id="{{ page.header.id }}"
+					data-item-price="{{ page.header.price }}"
+					data-item-url="{{ page.url(true, true) }}"
+					data-item-description="{{ page.header.short_description }}"
+					data-item-image="{{ main_image ? uri.base() ~ main_image.url : '' }}"
+					data-item-name="{{ page.header.name }}"
+					data-item-custom1-name="Sizes"
+					data-item-custom1-options="{% for size in page.header.sizes %}{{ size.value }}{% if not loop.last %}|{% endif %}{% endfor %}">
+					{{ 'THEME.CART.ADD'|t }}
+					</button>
+					{% else %}
+					<div class="button disabled snipcart-add-item {{ class }}">{{ 'THEME.CART.DISABLED'|t }}</div>
+					{% endif %}
+
+					<div class="instruction">{{ 'THEME.CART.INSTRUCTION'|t }}</div>
+
 				</div>
 			</div>
 		</div>
@@ -63,7 +82,23 @@
 	{# MOBILE BUY BUTTON #}
 	<section class="bottom-bar">
 		<div class="price">{{ page.header.price|number_format(2, ',', ' ') }} $</div>
-		{% include 'partials/snipcart-add-item.html.twig' with {'class': 'add-to-cart button'} %}
+
+		{% if theme.snipcart_enabled and theme.snipcart_public_key %}
+		<button class="{% if class %}{{ class }} {% endif %}snipcart-add-item button"
+		data-item-id="{{ page.header.id }}"
+		data-item-price="{{ page.header.price }}"
+		data-item-url="{{ page.url(true, true) }}"
+		data-item-description="{{ page.header.short_description }}"
+		data-item-image="{{ main_image ? uri.base() ~ main_image.url : '' }}"
+		data-item-name="{{ page.header.name }}"
+		data-item-custom1-name="Sizes"
+		data-item-custom1-options="{% for size in page.header.sizes %}{{ size.value }}{% if not loop.last %}|{% endif %}{% endfor %}">
+		{{ 'THEME.CART.ADD'|t }}
+		</button>
+		{% else %}
+		<div class="button disabled snipcart-add-item {{ class }}">{{ 'THEME.CART.DISABLED'|t }}</div>
+		{% endif %}
+
 	</section>
 
 	{# MODULES #}
@@ -79,7 +114,7 @@
     {% set related_options = { items: {'@self.siblings':''}, 'limit': 6, 'order': {'by': 'random'}} %}
     {% set related_items = page.collection(related_options) %}
 
-    {% include 'modular/carousel.html.twig' with { 'display_title': 'THEME_WHEAT.PRODUCT.RELATED_TITLE'|t ,'collection': related_items } %}
+    {% include 'modular/carousel.html.twig' with { 'display_title': 'THEME.PRODUCT.RELATED'|t ,'collection': related_items } %}
 
     {# PREVIOUSLY LOOKED AT ITEMS #}
 {# 	{% set options = { items: {'@root.descendants':''} } %}

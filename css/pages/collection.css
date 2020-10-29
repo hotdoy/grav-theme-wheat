@@ -17,7 +17,7 @@
 
 @media (min-width: 835px) {
   .collection-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: var(--gutter);
   }
 }

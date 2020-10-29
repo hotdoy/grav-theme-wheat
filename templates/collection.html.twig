@@ -1,7 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
 {% set start = 0 %}
-{% set step = 8 %}
+{% set step = 6 %}
 {% set qs_key = 'articles' %}
 {% set qs_values = uri.query(qs_key)|split('-') %}
 {% set qs_start = qs_values[0]|default(0) %}
@@ -45,10 +45,10 @@
         {% set url = (page.url ~ '?' ~ qs_key ~ '=' ~ new_qs_start ~ '-' ~ new_qs_end) %}
         <button class="button" href="{{ url }}" data-pagination-btn>
             <span class="spinner"></span>
-            <span class="label">{{ 'THEME_WHEAT.PAGINATION.LOAD_MORE'|t }}</span>
+            <span class="label">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</span>
         </button>
         {% else %}
-        <div class="button disabled">{{ 'THEME_WHEAT.PAGINATION.END'|t }}</div>
+        <div class="button disabled">{{ 'THEME.PAGINATION.END'|t }}</div>
         {% endif %}
     </section>
 
