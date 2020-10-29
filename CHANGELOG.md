@@ -1,3 +1,11 @@
+# v0.1.11
+##  10/28/2020
+
+1. [](#improved)
+    * Mostly cleaning
+2. [](#new)
+    * site logo can be added as inline svg from the theme config
+
 # v0.1.10
 ##  10/28/2020
 
