@@ -64,7 +64,7 @@
 					data-item-description="{{ page.header.short_description }}"
 					data-item-image="{{ main_image ? uri.base() ~ main_image.url : '' }}"
 					data-item-name="{{ page.header.name }}"
-					data-item-custom1-name="Sizes"
+					data-item-custom1-name="Size"
 					data-item-custom1-options="{% for size in page.header.sizes %}{{ size.value }}{% if not loop.last %}|{% endif %}{% endfor %}">
 					{{ 'THEME.CART.ADD'|t }}
 					</button>
@@ -91,7 +91,7 @@
 		data-item-description="{{ page.header.short_description }}"
 		data-item-image="{{ main_image ? uri.base() ~ main_image.url : '' }}"
 		data-item-name="{{ page.header.name }}"
-		data-item-custom1-name="Sizes"
+		data-item-custom1-name="Size"
 		data-item-custom1-options="{% for size in page.header.sizes %}{{ size.value }}{% if not loop.last %}|{% endif %}{% endfor %}">
 		{{ 'THEME.CART.ADD'|t }}
 		</button>
