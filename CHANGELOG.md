@@ -1,3 +1,14 @@
+# v0.1.12
+##  10/29/2020
+
+1. [](#improved)
+    * carousel modular item width
+    * collection grid on desktop
+    * produt in general
+2. [](#new)
+    * Product variants (wip)
+    * product page translations
+
 # v0.1.11
 ##  10/28/2020
 
