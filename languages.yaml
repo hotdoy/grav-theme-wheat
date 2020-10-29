@@ -1,14 +1,22 @@
 en:
-  THEME_WHEAT:
+  THEME:
     PAGINATION:
       LOAD_MORE: Load More
       END: That's it for now!
     PRODUCT:
-      RELATED_TITLE: From the same collection
+      RELATED: In the same collection
+    CART:
+      DISABLED: Cart is disabled
+      ADD: Add to cart
+      INSTRUCTION: Product size and availability will be confirmed during the checkout process.  
 fr:
-  THEME_WHEAT:
+  THEME:
     PAGINATION:
       LOAD_MORE: Charger plus
       END: C'est tout pour le moment!
     PRODUCT:
-      RELATED_TITLE: Dans la même collection
+      RELATED: Dans la même collection
+    CART:
+      DISABLED: Panier désactivé
+      ADD: Ajouter au panier
+      INSTRUCTION: La taille et la disponibilité du produit seront confirmées lors du processus de commande.
