@@ -19,7 +19,7 @@
             <a class="logo" href="{{ home_url }}" aria-label="Logo">{% include 'partials/logo.html.twig' %}</a>
             <div class="nav_wrapper">
                 <nav>
-                    {% for p in pages.children.visible if p.url != home_url  %}
+                    {% for p in pages.children.visible  %}
                     <li><a class="header__link {{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
                     {% endfor %}
                 </nav>
@@ -61,7 +61,7 @@
             </div>
         </div>
         <nav>
-            {% for p in pages.children.visible if p.url != home_url  %}
+            {% for p in pages.children.visible  %}
             <li class="{{ (p.active or p.activeChild) ? ' active' : '' }}"><a href="{{ p.url }}">{{ p.menu }}</a></li>
             {% endfor %}
         </nav>
