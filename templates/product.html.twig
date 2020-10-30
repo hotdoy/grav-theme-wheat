@@ -1,6 +1,6 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set main_image = page.header.image ? page.media[page.header.main_image] %}
+{% set main_image = page.header.main_image ? page.media[page.header.main_image] %}
 {% set main_image_alt = page.header.main_image_alt ?? '' %}
 {% set gallery_images = page.header.gallery_images %}
 {% set price = page.header.price|number_format(2, ',', ' ') %}

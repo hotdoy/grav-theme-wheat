@@ -1,6 +1,6 @@
 {% set item = item|default(item) %}
 
-{% set image = item.header.image ? item.media[item.header.image] %}
+{% set image = item.header.main_image ? item.media[item.header.main_image] %}
 {% set image_alt = item.header.image_alt ?? '' %}
 
 <article class="product-card">
