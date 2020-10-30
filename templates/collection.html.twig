@@ -1,7 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
 {% set start = 0 %}
-{% set step = 6 %}
+{% set step = 12 %}
 {% set qs_key = 'articles' %}
 {% set qs_values = uri.query(qs_key)|split('-') %}
 {% set qs_start = qs_values[0]|default(0) %}
@@ -47,8 +47,6 @@
             <span class="spinner"></span>
             <span class="label">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</span>
         </button>
-        {% else %}
-        <div class="button disabled">{{ 'THEME.PAGINATION.END'|t }}</div>
         {% endif %}
     </section>
 

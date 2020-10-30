@@ -62,3 +62,8 @@
   transition-duration: 0s;
   transform: translateY(1px);
 }
+
+.module.hero .button {
+  color: var(--color-btn-fg, white);
+  background-color: var(--color-btn-bg, var(--color-hl));
+}

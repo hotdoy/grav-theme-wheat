@@ -20,11 +20,15 @@ form:
               type: text
               label: id
               help: Product's unique ID
+              validate:
+                required: true
 
             header.name:
               type: text
               label: name
               help: Product's name
+              validate:
+                required: true
 
             header.price:
               type: text
@@ -33,6 +37,16 @@ form:
               validate:
                 type: number
                 min: 0
+                required: true
+
+            header.weight:
+              type: text
+              label: weight
+              help: The weight in grams of the product.
+              validate:
+                type: number
+                min: 0
+                required: true
 
             header.short_description:
               type: text

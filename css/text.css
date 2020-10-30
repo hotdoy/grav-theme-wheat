@@ -1,6 +1,6 @@
 .text h1 {
   font-size: xx-large;
-  line-height: 1.1;
+  line-height: 1.2;
   font-weight: 700;
   margin-top: 4rem;
 }
@@ -13,7 +13,7 @@
 
 .text h2 {
   font-size: xx-large;
-  line-height: 1.1;
+  line-height: 1.2;
   margin-top: 4rem;
 }
 
@@ -25,7 +25,7 @@
 
 .text h3 {
   font-size: x-large;
-  line-height: 1.4;
+  line-height: 1.2;
   margin-top: 2rem;
 }
 
@@ -40,6 +40,7 @@
 .text h6 {
   font-size: large;
   margin-top: 2rem;
+  line-height: 1.2;
   font-weight: 700;
 }
 
