@@ -68,7 +68,6 @@
 					{% if page.header.sizes %}
 					data-item-custom1-options="{% for size in page.header.sizes %}{{ size.value }}{% if not loop.last %}|{% endif %}{% endfor %}"
 					{% endif %}>
-					
 					{{ 'THEME.CART.ADD'|t }}
 					</button>
 					{% else %}
@@ -87,16 +86,17 @@
 		<div class="price">{{ page.header.price|number_format(2, ',', ' ') }} $</div>
 
 		{% if theme.snipcart_enabled and theme.snipcart_public_key %}
-		<button class="{% if class %}{{ class }} {% endif %}snipcart-add-item button"
+		<button class="snipcart-add-item button"
 		data-item-id="{{ page.header.id }}"
 		data-item-price="{{ page.header.price }}"
 		data-item-url="{{ page.url(true, true) }}"
 		data-item-description="{{ page.header.short_description }}"
 		data-item-image="{{ main_image ? uri.base() ~ main_image.url : '' }}"
 		data-item-name="{{ page.header.name }}"
-		data-item-weight="{{ page.header.weight }}"
 		data-item-custom1-name="Size"
-		data-item-custom1-options="{% for size in page.header.sizes %}{{ size.value }}{% if not loop.last %}|{% endif %}{% endfor %}">
+		{% if page.header.sizes %}
+		data-item-custom1-options="{% for size in page.header.sizes %}{{ size.value }}{% if not loop.last %}|{% endif %}{% endfor %}"
+		{% endif %}>
 		{{ 'THEME.CART.ADD'|t }}
 		</button>
 		{% else %}
