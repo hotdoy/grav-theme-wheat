@@ -118,7 +118,7 @@
     {% set related_options = { items: {'@self.siblings':''}, 'limit': 6, 'order': {'by': 'random'}} %}
     {% set related_items = page.collection(related_options) %}
 
-    {% include 'modular/carousel.html.twig' with { 'display_title': 'THEME.PRODUCT.RELATED'|t ,'collection': related_items } %}
+    {% include 'modular/carousel.html.twig' with { 'collection': related_items } %}
 
     {# PREVIOUSLY LOOKED AT ITEMS #}
 {# 	{% set options = { items: {'@root.descendants':''} } %}
