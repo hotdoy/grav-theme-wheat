@@ -12,7 +12,6 @@ form:
           type: tab
           title: Content
           fields:
-            
             header.mp4:
               label: Mp4
               type: pagemediaselect
