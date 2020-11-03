@@ -18,11 +18,6 @@ form:
               style: vertical
               label: PLUGIN_ADMIN.TITLE
 
-            header.display_title:
-              type: text
-              style: vertical
-              label: display_title
-
             content:
               type: markdown
               label: PLUGIN_ADMIN.CONTENT

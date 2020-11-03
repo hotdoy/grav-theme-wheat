@@ -36,10 +36,6 @@
   text-align: center;
 }
 
-.module.hero .content-ctn * {
-  max-width: 500px;
-}
-
 .module.hero h2 {
   font-weight: 700;
   margin: 0;

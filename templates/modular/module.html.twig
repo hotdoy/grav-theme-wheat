@@ -1,5 +1,7 @@
 {% set name = name|default() %}
-{% set computed_classes = name %}
+{% set classes = classes|default() %}
+
+{% set computed_classes = name ~ classes %}
 <section 
 class="module {{ computed_classes }}" 
 {% if module_theme %}style="{{ module_theme }}"{% endif %}>
