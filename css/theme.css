@@ -110,5 +110,5 @@ body {
 }
 
 .m-t-half {
-  margin-top: calc(var(--rhythm)/2);
+  margin-top: calc(var(--rhythm) / 2);
 }
