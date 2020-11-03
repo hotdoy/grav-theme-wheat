@@ -37,6 +37,10 @@ form:
               title: Folder
               underline: true
 
+            header.body_class:
+              type: text
+              label: body_classes
+
             folder:
               type: text
               label: PLUGIN_ADMIN.FOLDER_NAME

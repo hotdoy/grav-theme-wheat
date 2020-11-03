@@ -20,10 +20,8 @@
 		{{ image.html('', image_alt) }}
 		{% endif %}
 	</div>
-	<div class="content-ctn text" data-reveal>
-		{% if content %}
-		<div>{{ content }}</div>
-		{% endif %}
+	<div class="content text" data-reveal>
+		{% if content %}{{ content }}{% endif %}
 	</div>
 </div>
 {% endblock %}

@@ -1,7 +1,8 @@
 {% set name = name|default() %}
-{% set classes = classes|default() %}
+{% set body_classes = page.header.body_classes %}
+{% set extra_classes = extra_classes|default() %}
 
-{% set computed_classes = name ~ classes %}
+{% set computed_classes = name ~ body_classes ~ extra_classes %}
 <section 
 class="module {{ computed_classes }}" 
 {% if module_theme %}style="{{ module_theme }}"{% endif %}>
