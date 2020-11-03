@@ -1,9 +1,11 @@
 {% set title = title|default(page.header.display_title) %}
 {% set display_breadcrumbs = display_breadcrumbs|default(true) %}
 
+{% if title %}
 <section class="default-header" data-reveal>
 	{% if config.plugins.breadcrumbs.enabled and display_breadcrumbs %}
 	{% include 'partials/breadcrumbs.html.twig' %}
 	{% endif %}
     <h1>{{ title }}</h1>
 </section>
+{% endif %}

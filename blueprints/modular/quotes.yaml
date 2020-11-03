@@ -12,6 +12,9 @@ form:
           type: tab
           title: Content
           fields:
+            header.display_title:
+              unset@: true
+
             content:
               unset@: true
 

@@ -33,8 +33,7 @@
 			{% endif %}
 		</div>
 		<div class="content-ctn text fill">
-			<h2>{{ page.header.display_title }}</h2>
-			<p>{{ page.header.subtitle }}</p>
+			{{ content|raw }}
 			<div class="button">{{ page.header.label }}</div>
 		</div>
 	</a>

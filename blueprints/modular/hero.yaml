@@ -12,9 +12,6 @@ form:
           type: tab
           title: Content
           fields:
-            content:
-              unset@: true
-
             header.subtitle:
               ordering@: header.display_title
               label: subtitle

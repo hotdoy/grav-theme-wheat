@@ -13,7 +13,7 @@
 }
 
 .module.mediatext .media-ctn,
-.module.mediatext .content-ctn {
+.module.mediatext .content {
   width: 100%;
 }
 
@@ -22,13 +22,13 @@
     width: 50%;
   }
 
-  .module.mediatext .content-ctn {
+  .module.mediatext .content {
     width: 50%;
     padding-right: 0;
     padding-left: 90px;
   }
 
-  .module.mediatext > .wrapper.right .content-ctn {
+  .module.mediatext > .wrapper.right .content {
     padding-right: 90px;
     padding-left: 0;
   }
@@ -60,7 +60,7 @@
 }
 
 @media (min-width: 835px) {
-  .module.mediatext h2:first-child {
+  .module.mediatext .content *:first-child {
     margin-top: 0;
   }
 }
