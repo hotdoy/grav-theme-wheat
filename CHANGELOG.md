@@ -1,3 +1,10 @@
+# v0.1.15
+##  11/03/2020
+
+1. [](#bugfix)
+    * body_classes
+    * CSS utils are now in their own file at the end of the cascade
+
 # v0.1.14
 ##  11/03/2020
 
