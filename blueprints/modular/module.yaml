@@ -39,7 +39,7 @@ form:
 
             header.body_class:
               type: text
-              label: body_classes
+              label: PLUGIN_ADMIN.BODY_CLASSES
 
             folder:
               type: text

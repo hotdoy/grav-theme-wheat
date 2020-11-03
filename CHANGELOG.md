@@ -1,8 +1,18 @@
+# v0.1.14
+##  11/03/2020
+
+1. [](#improved)
+    * Removed the modular title concept
+    * Back to less structured approach of modular
+    * Made body_classes available to modules
+2. [](#bugfix)
+    * fixed mobile buy button
+
 # v0.1.13
 ##  10/30/2020
 
 1. [](#improved)
-    * A bunch.
+    * Hasty release
 
 # v0.1.12
 ##  10/29/2020
