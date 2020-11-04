@@ -6,23 +6,31 @@
   left: 0;
 }
 
-.width-text {
+.width-text,
+.w-text {
   width: 100%;
   max-width: var(--width-text);
+  padding: 0 var(--gutter);
   margin: 0 auto;
 }
 
-.width-body {
+.width-body,
+.w-body {
   width: 100%;
   max-width: var(--width-body);
   padding: 0 var(--gutter);
   margin: 0 auto;
 }
 
-.width-full {
+.width-full,
+.w-full {
   width: 100%;
   max-width: var(--width-full);
   margin: 0 auto;
+}
+
+.m-t-rhythm {
+  margin-top: var(--rhythm);
 }
 
 .m-t-gutter {

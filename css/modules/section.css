@@ -1,18 +1,1 @@
-.module.section {
-  padding-bottom: var(--rhythm);
-  background-color: var(--color-bg);
-  color: white;
-  overflow: auto;
-}
-
-/*BUTTON*/
-.module.section .button {
-  color: var(--color-bg);
-  background-color: var(--color-fg);
-}
-
-/*DEFAULT-CARD*/
-.module.section .default-card {
-  background-color: white;
-  color: var(--color-hl);
-}
+/*.module.section {}*/

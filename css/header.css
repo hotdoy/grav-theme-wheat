@@ -205,3 +205,7 @@ body.panel--open #header .site-panel {
   position: relative;
   z-index: 5000;
 }
+
+#header .langswitcher {
+  opacity: 0.7;
+}
