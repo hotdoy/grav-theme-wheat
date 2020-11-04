@@ -39,14 +39,6 @@ form:
                 min: 0
                 required: true
 
-            header.weight:
-              type: text
-              label: weight
-              help: The weight in grams of the product.
-              validate:
-                type: number
-                min: 0
-
             header.short_description:
               type: text
               label: short_description
@@ -91,6 +83,32 @@ form:
                   type: text
                   label: options
 
+            header.shipping:
+              type: section
+              title: Shipping
+              underline: true
+              
+            header.weight:
+              type: text
+              label: "weight (g)"
+              validate:
+                type: number
+                min: 0
+
+            header.width:
+              type: text
+              label: "width (cm)"
+              validate:
+                type: number
+                min: 0
+
+            header.height:
+              type: text
+              label: "height (cm)"
+              validate:
+                type: number
+                min: 0
+                
             header.gallery:
               type: section
               title: Gallery
