@@ -35,7 +35,6 @@ div[data-loading].transition {
 .loaded div[data-loading].transition {
   opacity: 0;
   visibility: hidden;
-
 }
 
 /*UNLOAD*/

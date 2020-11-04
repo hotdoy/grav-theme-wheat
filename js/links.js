@@ -36,7 +36,6 @@ const Links = {
         // setTimeout(function () {
         //   window.location.href = href;
         // }, Links.navigationDelay);
-        
       },
       false
     );

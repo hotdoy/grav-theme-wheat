@@ -9,5 +9,5 @@
 }
 
 .module-header + .module {
-	margin-top: var(--gutter);
+  margin-top: var(--gutter);
 }
