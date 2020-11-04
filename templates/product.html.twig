@@ -64,10 +64,13 @@
 					data-item-description="{{ page.header.short_description }}"
 					data-item-image="{{ main_image ? uri.base() ~ main_image.url : '' }}"
 					data-item-name="{{ page.header.name }}"
-					data-item-custom1-name="Size"
-					{% if page.header.sizes %}
-					data-item-custom1-options="{% for size in page.header.sizes %}{{ size.value }}{% if not loop.last %}|{% endif %}{% endfor %}"
-					{% endif %}>
+					{% for field in page.header.custom_fields %}
+					data-item-custom{{ loop.index }}-name="{{ field.name }}"
+					data-item-custom{{ loop.index }}-type="{{ field.type }}"
+					{% if field.type == 'select' %}
+					data-item-custom{{ loop.index }}-options="{{ field.options }}"
+					{% endif %}
+					{% endfor %}>
 					{{ 'THEME.CART.ADD'|t }}
 					</button>
 					{% else %}

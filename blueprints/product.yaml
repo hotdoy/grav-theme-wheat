@@ -46,7 +46,6 @@ form:
               validate:
                 type: number
                 min: 0
-                required: true
 
             header.short_description:
               type: text
@@ -64,23 +63,33 @@ form:
               type: text
               label: main_image_alt
 
-            header.variants:
+            header.custom_fields_section:
               type: section
-              title: Variants
+              title: Custom Fields
               underline: true
 
-            header.sizes:
-              name: sizes
+            header.custom_fields:
+              name: custom_fields
               type: list
               style: vertical
-              label: sizes
-              help: Product variants are very specific to each sites, ask your administrator about modifying this to fit your needs.
-
+              label: custom_fields
               fields:
-                .value:
-                  toggleable: true
+                .name:
                   type: text
-                  label: Value
+                  toggleable: true
+                  label: Name
+                .type:
+                  type: select
+                  label: Type
+                  options:
+                    input: input
+                    textarea: textarea
+                    select: select
+                    checkbox: checkbox
+                    readonly: readonly
+                .options:
+                  type: text
+                  label: options
 
             header.gallery:
               type: section
