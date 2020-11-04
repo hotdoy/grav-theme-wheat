@@ -10,6 +10,16 @@
   overflow: hidden;
 }
 
+.module.carousel .title {
+  width: 100%;
+  max-width: var(--width-body);
+  margin-bottom: var(--gutter);
+}
+
+.module.carousel .title h2 {
+  margin-top: 0;
+}
+
 /*left gradient*/
 .module.carousel > .wrapper::before {
   content: "";

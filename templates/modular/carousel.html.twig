@@ -1,11 +1,18 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'carousel' %}
 
+{% set title = title|default(page.header.display_title) %}
 {% set collection = collection|default() %}
 {% set list = list|default(page.header.items) %}
 
 {% block content %}
+
 <div class="wrapper" data-reveal="">
+	
+	{% if title %}
+	<div class="title text"><h2>{{ title }}</h2></div>
+	{% endif %}
+	
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
 

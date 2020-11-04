@@ -12,9 +12,16 @@ form:
           fields:
             content:
               unset@: true
+            header.media_order:
+              unset@: true
+
+            header.display_title:
+              type: text
+              style: vertical
+              label: Display Title
 
             header.items:
-              name: items
+              name: Items
               type: list
               style: vertical
               label: Items

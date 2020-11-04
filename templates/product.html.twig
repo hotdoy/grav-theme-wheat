@@ -55,7 +55,7 @@
 				    <h1 class="name">{{ title }}</h1>
 					<div class="description text">{{ page.content|raw }}</div>
 					<div class="price">{{ price }} $</div>
-					
+				
 					{% if theme.snipcart_enabled and theme.snipcart_public_key %}
 					<button class="snipcart-add-item button"
 					data-item-id="{{ page.header.id }}"
@@ -64,6 +64,10 @@
 					data-item-description="{{ page.header.short_description }}"
 					data-item-image="{{ main_image ? uri.base() ~ main_image.url : '' }}"
 					data-item-name="{{ page.header.name }}"
+					{% if page.header.digital_good %}
+					data-itemfile-guid="{{ page.header.digital_good }}"
+					{% endif %}
+					data-item-stackable="{{ page.header.stackable ? 'auto' : 'never' }}"
 					{% for field in page.header.custom_fields %}
 					data-item-custom{{ loop.index }}-name="{{ field.name }}"
 					data-item-custom{{ loop.index }}-type="{{ field.type }}"
@@ -98,15 +102,13 @@
 	{{ module.content|raw }}
 	{% endfor %}
 
-	<div class="divider">
-		<hr>
-	</div>
+	{# DIVIDER #}
+	<div class="divider"><hr></div>
 
-	{# RELATED ITEMS #}
+	{# RELATED #}
     {% set related_options = { items: {'@self.siblings':''}, 'limit': 6, 'order': {'by': 'random'}} %}
     {% set related_items = page.collection(related_options) %}
-
-    {% include 'modular/carousel.html.twig' with { 'collection': related_items } %}
+    {% include 'modular/carousel.html.twig' with { 'collection': related_items, 'title': 'THEME.PRODUCT.RELATED'|t } %}
 
     {# PREVIOUSLY LOOKED AT ITEMS #}
 {# 	{% set options = { items: {'@root.descendants':''} } %}

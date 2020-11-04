@@ -1,3 +1,17 @@
+# v0.2.0
+##  11/04/2020
+
+1. [](#new)
+    * Snipcart digital good support
+    * Snipacart stackable support
+    * Snipcart add-item behavior (open on add or don't)
+    * Carousel now has a title
+    * Support for langswitcher plugin
+2. [](#improved)
+    * Added instruction to section modular but removed behavior
+    * Removed delay and outro animation on page navigation
+    * slowed down default reveal
+
 # v0.1.16
 ##  11/04/2020
 

@@ -1,8 +1,6 @@
 {% if config.plugins.langswitcher.enabled %}
-<li class="langswitcher-ctn">
-    <ul class="langswitcher">
+<li class="langswitcher">
     {% for language in langswitcher.languages if grav.language.getActive != language %}
-
         {% set show_language = true %}
         {% if language == langswitcher.current %}
             {% set lang_url = page.url %}
@@ -15,7 +13,7 @@
                 {% set translated_page = langswitcher.translated_pages[language] %}
                 {% if (not translated_page) or (not translated_page.published) %}
                     {% if untranslated_pages_behavior == 'redirect' %}
-                        {% set lang_url = base_lang_url ~ '/' %}
+                        {% set lang_url = base_lang_url ~ ' / ' %}
                     {% elseif untranslated_pages_behavior == 'hide' %}
                         {% set show_language = false %}
                     {% endif %}
@@ -23,12 +21,9 @@
             {% endif %}
             {% set active_class = '' %}
         {% endif %}
-
         {% if show_language %}
-            <li><a href="{{ lang_url ~ uri.params }}">{{ language }}</a></li>
+            <a href="{{ lang_url ~ uri.params }}">{{ language }}</a>
         {% endif %}
-
     {% endfor %}
-    </ul>
 </li>
 {% endif %}

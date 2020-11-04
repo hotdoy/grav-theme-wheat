@@ -50,6 +50,14 @@
   font-weight: 700;
 }
 
+@media (min-width: 835px) {
+  .module.mediatext h1,
+  .module.mediatext h2,
+  .module.mediatext h3 {
+    font-size: 48px;
+  }
+}
+
 .module.mediatext p {
   margin-top: 1rem;
   margin-bottom: 0;
