@@ -55,7 +55,7 @@ form:
               type: text
               label: main_image_alt
 
-            header.custom_fields_section:
+            header.section_custom_fields:
               type: section
               title: Custom Fields
               underline: true
@@ -68,7 +68,6 @@ form:
               fields:
                 .name:
                   type: text
-                  toggleable: true
                   label: Name
                 .type:
                   type: select
@@ -82,6 +81,8 @@ form:
                 .options:
                   type: text
                   label: options
+                  markdown: true
+                  description: "A list of | separeted values for type:select only. ex: `S|M|L`"
 
             header.shipping:
               type: section
@@ -130,3 +131,23 @@ form:
                 .image_alt:
                   type: text
                   label: image_alt
+
+            header.section_misc:
+              type: section
+              title: Misc
+              underline: true
+
+            header.stackable:
+              type: toggle
+              label: Stackable
+              highlight: 1
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            header.digital_good:
+              type: text
+              label: Digital Good

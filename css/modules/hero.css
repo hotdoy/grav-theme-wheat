@@ -31,7 +31,7 @@
   justify-content: center;
   flex-direction: column;
   margin: 0 var(--gutter);
-  padding: 0 var(--gutter);
+  padding: 0 calc(var(--gutter)*2);
   color: var(--color-fg);
   text-align: center;
 }
