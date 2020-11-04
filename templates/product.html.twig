@@ -55,7 +55,7 @@
 				    <h1 class="name">{{ title }}</h1>
 					<div class="description text">{{ page.content|raw }}</div>
 					<div class="price">{{ price }} $</div>
-
+					
 					{% if theme.snipcart_enabled and theme.snipcart_public_key %}
 					<button class="snipcart-add-item button"
 					data-item-id="{{ page.header.id }}"
@@ -64,10 +64,23 @@
 					data-item-description="{{ page.header.short_description }}"
 					data-item-image="{{ main_image ? uri.base() ~ main_image.url : '' }}"
 					data-item-name="{{ page.header.name }}"
-					data-item-custom1-name="Size"
-					{% if page.header.sizes %}
-					data-item-custom1-options="{% for size in page.header.sizes %}{{ size.value }}{% if not loop.last %}|{% endif %}{% endfor %}"
-					{% endif %}>
+					{% for field in page.header.custom_fields %}
+					data-item-custom{{ loop.index }}-name="{{ field.name }}"
+					data-item-custom{{ loop.index }}-type="{{ field.type }}"
+					{% if field.type == 'select' %}
+					data-item-custom{{ loop.index }}-options="{{ field.options }}"
+					{% endif %}
+					{% endfor %}
+					{% if page.header.width %}
+					data-item-width="{{ page.header.width }}"
+					{% endif %}
+					{% if page.header.height %}
+					data-item-height="{{ page.header.height }}"
+					{% endif %}
+					{% if page.header.weight %}
+					data-item-weight="{{ page.header.weight }}"
+					{% endif %}
+					>
 					{{ 'THEME.CART.ADD'|t }}
 					</button>
 					{% else %}
@@ -75,34 +88,9 @@
 					{% endif %}
 
 					<div class="instruction">{{ 'THEME.CART.INSTRUCTION'|t }}</div>
-
 				</div>
 			</div>
 		</div>
-	</section>
-
-	{# MOBILE BUY BUTTON #}
-	<section class="bottom-bar">
-		<div class="price">{{ page.header.price|number_format(2, ',', ' ') }} $</div>
-
-		{% if theme.snipcart_enabled and theme.snipcart_public_key %}
-		<button class="snipcart-add-item button"
-		data-item-id="{{ page.header.id }}"
-		data-item-price="{{ page.header.price }}"
-		data-item-url="{{ page.url(true, true) }}"
-		data-item-description="{{ page.header.short_description }}"
-		data-item-image="{{ main_image ? uri.base() ~ main_image.url : '' }}"
-		data-item-name="{{ page.header.name }}"
-		data-item-custom1-name="Size"
-		{% if page.header.sizes %}
-		data-item-custom1-options="{% for size in page.header.sizes %}{{ size.value }}{% if not loop.last %}|{% endif %}{% endfor %}"
-		{% endif %}>
-		{{ 'THEME.CART.ADD'|t }}
-		</button>
-		{% else %}
-		<div class="button disabled snipcart-add-item {{ class }}">{{ 'THEME.CART.DISABLED'|t }}</div>
-		{% endif %}
-
 	</section>
 
 	{# MODULES #}
@@ -118,7 +106,7 @@
     {% set related_options = { items: {'@self.siblings':''}, 'limit': 6, 'order': {'by': 'random'}} %}
     {% set related_items = page.collection(related_options) %}
 
-    {% include 'modular/carousel.html.twig' with { 'display_title': 'THEME.PRODUCT.RELATED'|t ,'collection': related_items } %}
+    {% include 'modular/carousel.html.twig' with { 'collection': related_items } %}
 
     {# PREVIOUSLY LOOKED AT ITEMS #}
 {# 	{% set options = { items: {'@root.descendants':''} } %}

@@ -1,3 +1,12 @@
+# v0.1.16
+##  11/04/2020
+
+1. [](#new)
+    * Removed link prerender generated from navigation links
+    * Removed bottom-bar nuy button for a more consistent button placement
+    * Added full support for Snipcart custom-fields
+    * Added width, height, weight to product for shipping calculation.
+
 # v0.1.15
 ##  11/03/2020
 

@@ -39,12 +39,12 @@ const Links = {
     );
   },
 
-  SetPreloadLink: function (href) {
-    let preLoadLink = document.createElement("link");
-    preLoadLink.rel = "prerender";
-    preLoadLink.href = href;
-    document.head.appendChild(preLoadLink);
-  },
+  // SetPreloadLink: function (href) {
+  //   let preLoadLink = document.createElement("link");
+  //   preLoadLink.rel = "prerender";
+  //   preLoadLink.href = href;
+  //   document.head.appendChild(preLoadLink);
+  // },
 
   Crawl: function (links) {
     for (let link of links) {
@@ -60,7 +60,7 @@ const Links = {
       // CONSIDER URLS STARTING WITH / AS NAVIGATION LINKS
       else if (!!href && href.match("^/")) {
         Links.SetNavigationEvent(link, href);
-        Links.SetPreloadLink(href);
+        // Links.SetPreloadLink(href);
       }
     }
   },

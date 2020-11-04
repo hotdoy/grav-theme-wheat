@@ -15,10 +15,14 @@ form:
             header.mp4:
               label: Mp4
               type: pagemediaselect
+              accept:
+                - mp4
 
             header.webm:
               label: WebM
               type: pagemediaselect
+              accept:
+                - webm
 
             header.image:
               label: Image
@@ -35,12 +39,3 @@ form:
               options:
                 left: "Left"
                 right: "Right"
-
-            header.is_header:
-              type: toggle
-              label: is_header
-              highlight: 1
-              default: 0
-              options:
-                1: "Yes"
-                0: "No"
