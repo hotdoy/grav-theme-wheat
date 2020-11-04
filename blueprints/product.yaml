@@ -87,7 +87,7 @@ form:
               type: section
               title: Shipping
               underline: true
-              
+
             header.weight:
               type: text
               label: "weight (g)"
@@ -108,7 +108,7 @@ form:
               validate:
                 type: number
                 min: 0
-                
+
             header.gallery:
               type: section
               title: Gallery
