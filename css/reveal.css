@@ -1,6 +1,6 @@
 /*UNREVEALED ELEMENTS*/
 .reveal--hidden {
-  opacity: 0.7;
+  opacity: 0;
   transform: translateY(50px);
 }
 
