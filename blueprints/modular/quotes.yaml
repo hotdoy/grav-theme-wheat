@@ -4,16 +4,9 @@ title: quotes
 form:
   fields:
     tabs:
-      type: tabs
-      active: 1
-
       fields:
         content:
-          type: tab
-          title: Content
           fields:
-            header.display_title:
-              unset@: true
 
             content:
               unset@: true
@@ -36,8 +29,8 @@ form:
 
             header.color_panel_bg:
               type: colorpicker
-              label: color_panel_bg
+              label: Color - Background
 
             header.color_panel_fg:
               type: colorpicker
-              label: color_panel_fg
+              label: Color - Foreground

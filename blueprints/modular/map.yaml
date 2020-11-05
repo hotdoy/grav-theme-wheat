@@ -19,19 +19,15 @@ form:
                 .title:
                   type: text
                   label: Title
-
                 .lat:
                   type: text
                   label: Latitude
-
                 .lng:
                   type: text
                   label: Longitude
-
                 .url:
                   type: text
                   label: URL
-
             header.zoom:
               type: range
               label: Zoom
@@ -41,8 +37,3 @@ form:
               validate:
                 min: 1
                 max: 20
-
-        options:
-          fields:
-            header.display_title:
-              unset@: true

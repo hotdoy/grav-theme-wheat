@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
-.module.carousel .title {
+.module.carousel > .wrapper > .title {
   width: 100%;
   max-width: var(--width-body);
   margin-bottom: var(--gutter);

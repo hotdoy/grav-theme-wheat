@@ -167,13 +167,13 @@
 
 /*.product-card .info {}*/
 
-.product-card .title {
+.product-card .name {
   margin-top: 5px;
   font-size: small;
 }
 
 @media (min-width: 835px) {
-  .product-cart .title {
+  .product-cart .name {
     margin-top: 10px;
     font-size: medium;
   }
