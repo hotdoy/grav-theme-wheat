@@ -12,25 +12,18 @@ form:
           type: tab
           title: Content
           fields:
-            header.subtitle:
-              ordering@: header.display_title
-              label: subtitle
-              type: text
-              style: vertical
-
-            header.label:
-              ordering@: header.subtitle
-              label: label
-              type: text
-              style: vertical
 
             header.mp4:
               label: Mp4
               type: pagemediaselect
+              accept:
+                - webm
 
             header.webm:
               label: WebM
               type: pagemediaselect
+              accept:
+                - webm
 
             header.image:
               label: Image
@@ -40,22 +33,26 @@ form:
               label: Image Alt
               type: text
 
+            header.label:
+              label: Label
+              type: text
+
             header.url:
               label: url
               type: text
 
             header.color_bg:
               type: colorpicker
-              label: color_bg
+              label: Color - Background
 
             header.color_fg:
               type: colorpicker
-              label: color_fg
+              label: Color - Foreground
 
             header.color_btn_bg:
               type: colorpicker
-              label: color_btn_bg
+              label: Color - Button Background
 
             header.color_btn_fg:
               type: colorpicker
-              label: color_btn_fg
+              label: Color - Button Foreground

@@ -10,8 +10,6 @@ form:
       fields:
         content:
           fields:
-            header.title:
-              description: "While section-start and section-end don't do anything out of the box, the concept of or Wrapper Modules could be used by a developper to achieve pleinty of interesting front-end effects."
 
             content:
               unset@: true

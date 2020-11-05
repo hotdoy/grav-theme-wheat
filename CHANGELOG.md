@@ -1,3 +1,10 @@
+# v0.2.1
+##  11/05/2020
+
+1. [](#improved)
+    * Blueprints cleaning
+    * Tweaked the loading delays to try and smooth things out.
+
 # v0.2.0
 ##  11/04/2020
 
