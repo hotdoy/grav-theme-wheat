@@ -1,0 +1,20 @@
+{% set options = { items: {'@root.descendants':''} } %}
+{% set pages = page.collection(options) %}
+
+
+[
+{% for p in pages if p.template == 'product' %}
+{% set main_image = p.header.main_image ? p.media[p.header.main_image] %}
+{% set main_image_alt = p.header.main_image_alt ?? '' %}
+  {
+    "id": "{{ p.header.id }}",
+    "name":  "{{ p.header.name }}",
+    "url": "{{ p.url(true, true) }}",
+    "price": {{ p.header.price }},
+    "image": "{{ main_image ? uri.base() ~ main_image.url : '' }}",
+  },
+{% endfor %}
+  {
+    "id": "null",
+  }
+]
