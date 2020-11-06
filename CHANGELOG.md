@@ -1,3 +1,12 @@
+# v0.2.2
+##  11/06/2020
+
+1. [](#new)
+    * Shortcode Core Details styles
+    * Basic JSON product feed (for snipcart crawler). More to come.
+2. [](#improved)
+    * Editorial Modular is getting more restrictive.
+
 # v0.2.1
 ##  11/05/2020
 
