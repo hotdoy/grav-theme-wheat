@@ -17,7 +17,7 @@
   width: 100%;
 }
 
-@media (min-width: 835px) {
+@media (min-width: 735px) {
   .product-showcase .media-ctn {
     width: 50%;
   }
@@ -55,7 +55,7 @@
   object-fit: cover;
 }
 
-@media (min-width: 835px) {
+@media (min-width: 735px) {
   .product-showcase .sticky-ctn {
     position: sticky;
     top: calc(var(--header-heigth) + var(--gutter));
@@ -85,11 +85,11 @@
   width: 100%;
 }
 
-@media (min-width: 835px) {
+@media (min-width: 735px) {
   .product-showcase .content-ctn {
     width: 50%;
     padding-right: 0;
-    padding-left: 90px;
+    padding-left: 5%;
   }
 }
 

@@ -17,7 +17,7 @@
   width: 100%;
 }
 
-@media (min-width: 835px) {
+@media (min-width: 735px) {
   .module.mediatext .media-ctn {
     width: 50%;
   }
@@ -25,11 +25,11 @@
   .module.mediatext .content {
     width: 50%;
     padding-right: 0;
-    padding-left: 90px;
+    padding-left: 5%;
   }
 
   .module.mediatext > .wrapper.right .content {
-    padding-right: 90px;
+    padding-right: 5%;
     padding-left: 0;
   }
 }
@@ -67,7 +67,7 @@
   margin-top: 0.5rem;
 }
 
-@media (min-width: 835px) {
+@media (min-width: 735px) {
   .module.mediatext .content *:first-child {
     margin-top: 0;
   }

@@ -1,20 +1,10 @@
 /* .module.editorial {} */
 
-.module.editorial h1,
-.module.editorial h2,
-.module.editorial h3,
-.module.editorial h4,
-.module.editorial h5,
-.module.editorial h6,
-.module.editorial p,
-.module.editorial blockquote,
-.module.editorial pre,
-.module.editorial ul,
-.module.editorial ol {
+.module.editorial > .wrapper {
   padding: 0 var(--gutter);
+  margin: 0 auto;
   max-width: var(--width-text);
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 
 .module.editorial ul li {
@@ -73,23 +63,6 @@
   width: 100%;
   margin: 0 auto;
   margin-top: 2rem;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
-  max-width: var(--width-text);
-}
-
-/* TABLES */
-.module.editorial table {
-  margin-top: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-table,
-th,
-td {
-  padding: 1rem;
-  border: 1px solid var(--color-fg);
 }
 
 .module.editorial .twitter-tweet {
@@ -115,4 +88,62 @@ td {
 .module.editorial span.large * {
   font-size: xx-large;
   line-height: 1.4;
+}
+
+/*DETAILS/SUMMARY*/
+.module.editorial details {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  width: 100%;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.module.editorial details > *:last-child {
+  padding-bottom: 1rem;
+}
+
+.module.editorial details summary {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  font-size: x-large;
+  line-height: 1.2;
+}
+
+.module.editorial details summary:focus {
+  outline: 0;
+}
+
+.module.editorial details summary::-webkit-details-marker {
+  display: none;
+}
+
+.module.editorial details summary:before,
+.module.editorial details summary:after {
+  position: absolute;
+  right: 10px;
+  content: ' ';
+  height: 20px;
+  width: 1px;
+  background-color: var(--color-fg);
+  transition: transform 0.2s;
+}
+
+.module.editorial details summary:after {
+  transform: rotate(90deg);
+}
+
+.module.editorial details[open] summary:before {
+  transform: rotate(45deg);
+}
+
+.module.editorial details[open] summary:after {
+  transform: rotate(135deg);
+}
+
+.module.editorial details + details {
+  margin: 0;
+  border-top: none;
 }
