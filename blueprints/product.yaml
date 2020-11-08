@@ -55,35 +55,6 @@ form:
               type: text
               label: main_image_alt
 
-            header.section_custom_fields:
-              type: section
-              title: Custom Fields
-              underline: true
-
-            header.custom_fields:
-              name: custom_fields
-              type: list
-              style: vertical
-              label: custom_fields
-              fields:
-                .name:
-                  type: text
-                  label: Name
-                .type:
-                  type: select
-                  label: Type
-                  options:
-                    input: input
-                    textarea: textarea
-                    select: select
-                    checkbox: checkbox
-                    readonly: readonly
-                .options:
-                  type: text
-                  label: options
-                  markdown: true
-                  description: "A list of | separeted values for type:select only. ex: `S|M|L`"
-
             header.shipping:
               type: section
               title: Shipping
@@ -109,6 +80,59 @@ form:
               validate:
                 type: number
                 min: 0
+                
+            header.section_custom_fields:
+              type: section
+              title: Custom Fields
+              underline: true
+
+            header.custom_fields:
+              name: custom_fields
+              type: list
+              style: vertical
+              label: custom_fields
+              fields:
+                .name:
+                  type: text
+                  label: Name
+                .type:
+                  type: select
+                  label: Type
+                  options:
+                    select: select
+                    input: input
+                    textarea: textarea
+                    checkbox: checkbox
+                .select_options:
+                  type: text
+                  label: select_options
+                  markdown: true
+                  description: "A list of | separeted values to be used by the SELECT field type. ex: `S|M|L`"
+            
+            header.initial_stock:
+              type: section
+              title: Initial Stock
+              markdown: true
+              underline: true
+
+            header.variants:
+              name: variants
+              type: list
+              style: vertical
+              label: Variants
+              fields:
+                .options:
+                  type: selectize
+                  label: Options
+                  validate:
+                      type: commalist
+                .initial_stock:
+                  type: text
+                  label: Initial Stock
+                  description: Initial stock should only be used when adding a new product to the store and using the Snipcart JSON crawler.
+                  validate:
+                    type: number
+                    min: 0
 
             header.gallery:
               type: section
