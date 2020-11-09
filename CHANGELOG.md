@@ -1,3 +1,10 @@
+# v0.2.3
+##  11/09/2020
+
+1. [](#improved)
+    * Editorial minor improvements
+    * Product minor improvements
+
 # v0.2.2
 ##  11/06/2020
 
@@ -33,7 +40,7 @@
 
 1. [](#new)
     * Removed link prerender generated from navigation links
-    * Removed bottom-bar nuy button for a more consistent button placement
+    * Removed bottom-bar buy button for a more consistent button placement
     * Added full support for Snipcart custom-fields
     * Added width, height, weight to product for shipping calculation.
 

@@ -104,6 +104,7 @@
 }
 
 .product-showcase .description ul {
+  margin-top: 1rem;
   list-style-position: inside;
 }
 
