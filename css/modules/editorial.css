@@ -76,13 +76,21 @@
   padding-right: 8px;
 }
 
-.module.editorial span.small * {
+.module.editorial .small * {
   font-size: small;
   line-height: 1.4;
 }
 
-.module.editorial span.large * {
-  font-size: xx-large;
+.module.editorial .caption * {
+  font-size: small;
+  line-height: 1.4;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+  margin-right: 10%;
+}
+
+.module.editorial .large * {
+  font-size: x-large;
   line-height: 1.4;
 }
 
