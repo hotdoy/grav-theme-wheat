@@ -9,6 +9,10 @@ body.form .form-container {
 	padding: 0 var(--gutter);
 }
 
+.form span.required {
+    color: var(--color-hl);
+}
+
 .form-field {
 	margin-bottom: 10px;
 }
@@ -21,11 +25,16 @@ body.form .form-container {
 	margin-bottom: 10px;
 }
 
-.form-field input {
+.form-field input,
+.form-field textarea,
+.form-field select {
 	display: block;
 	box-sizing: border-box;
 	width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     padding: .375rem .75rem;
+    font-family: inherit;
     font-size: 1rem;
     line-height: 1.5;
     color: #495057;
@@ -36,7 +45,9 @@ body.form .form-container {
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.form-field input:focus {
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
     color: #495057;
     background-color: #fff;
     border-color: #80bdff;
