@@ -1,0 +1,23 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+	{# HEADER #}
+	{% include 'partials/default-header.html.twig' %}
+	
+	{# CONTENT #}
+	{% if page.content %}
+	{% include 'modular/editorial.html.twig' %}
+	{% endif %}
+
+	{# FORM #}
+	<section class="form-container">
+		{% include "forms/form.html.twig" %}
+	</section>
+
+	{# MODULES #}
+	{% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
+	{{ module.content|raw }}
+	{% endfor %}
+
+{% endblock %}
