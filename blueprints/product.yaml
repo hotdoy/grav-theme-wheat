@@ -78,9 +78,9 @@ form:
                     input: input
                     textarea: textarea
                     checkbox: checkbox
-                .select_options:
+                .options:
                   type: text
-                  label: select_options
+                  label: options
                   markdown: true
                   description: "A list of | separeted values to be used by the SELECT field type. ex: `S|M|L`"
             

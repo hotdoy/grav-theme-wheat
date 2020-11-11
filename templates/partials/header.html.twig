@@ -1,7 +1,5 @@
 <header id="header">
     
-    
-    
     {# HEADER #}
     <div class="shim"></div>
 
@@ -11,7 +9,9 @@
     {% if root_params.header.marquee_color_bg %}--color-marquee-bg:{{ root_params.header.marquee_color_bg }};{% endif %}
     {% if root_params.header.marquee_color_fg %}--color-marquee-fg:{{ root_params.header.marquee_color_fg }};{% endif %}
     {% endset %}
-    <section class="marquee"{% if marquee_styles %} style="{{ marquee_styles }}"{% endif %}><a href="{{ root_params.header.marquee_url }}">{{ root_params.header.marquee_content|raw }}</a></section>
+    <section class="marquee"{% if marquee_styles %} style="{{ marquee_styles }}"{% endif %}>
+        <a href="{{ root_params.header.marquee_url }}">{{ root_params.header.marquee_content|raw }}</a>
+    </section>
     {% endif %}
 
     <section class="site-header">

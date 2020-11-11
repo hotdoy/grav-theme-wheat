@@ -1,3 +1,9 @@
+# v0.2.4
+##  11/10/2020
+
+1. [](#new)
+    * Super basic form support. Might be broken. Do not use.
+
 # v0.2.3
 ##  11/09/2020
 
@@ -10,7 +16,7 @@
 
 1. [](#new)
     * Shortcode Core Details styles
-    * Basic JSON product feed (for snipcart crawler). More to come.
+    * Basic JSON product feed (for snipcart crawler).
 2. [](#improved)
     * Editorial Modular is getting more restrictive.
 
