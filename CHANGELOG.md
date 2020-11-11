@@ -1,3 +1,11 @@
+# v0.2.5
+##  11/11/2020
+
+1. [](#improved)
+    * Mostly symbolic release.
+    * Can confirm forms are working
+    * Improved Notices styles 
+
 # v0.2.4
 ##  11/10/2020
 

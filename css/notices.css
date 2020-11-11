@@ -5,20 +5,13 @@ Make sure to disable built-in CSS.
 
 .notices {
   position: relative;
-  max-width: calc(var(--width-text) - 4rem);
-  margin: var(--gutter);
-  padding: var(--gutter) 0;
+  width: 100%;
+  max-width: var(--width-text);
+  margin: 2rem 0;
+  padding: 1rem;
   border-radius: 4px;
 }
 
-@media (min-width: 835px) {
-  .notices {
-    margin: var(--gutter) auto;
-    padding: var(--gutter) 0;
-  }
-}
-
-/* fix first element margin */
 .notices > *:nth-child(1) {
   margin-top: 0;
 }
