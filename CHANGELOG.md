@@ -1,3 +1,17 @@
+# v0.2.6
+##  11/12/2020
+
+1. [](#improved)
+    * form-field text
+    * form-field email
+    * form-field number
+    * form-field date
+    * form-field tel
+    * form-field url
+    * form-field checkbox and checkboxes
+    * form-field radio
+    * WIP form-field upload dropzone (broken) 
+
 # v0.2.5
 ##  11/11/2020
 

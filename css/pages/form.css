@@ -1,7 +1,6 @@
-body.form {
+/*body.form {}*/
 
-}
-
+/*CONTAINER*/
 body.form .form-container {
 	width: 100%;
 	max-width: var(--width-text);
@@ -9,10 +8,17 @@ body.form .form-container {
 	padding: 0 var(--gutter);
 }
 
+/*MESSAGES*/
+body.form .form-container .notices  {
+    text-align: center;
+}
+
+/*REQUIRED FLAG*/
 .form span.required {
     color: var(--color-hl);
 }
 
+/*FIELDS*/
 .form-field {
 	margin-bottom: 10px;
 }
@@ -21,11 +27,19 @@ body.form .form-container {
 	margin-top: 20px;
 }
 
+/*LABEL*/
 .form-field  .form-label {
 	margin-bottom: 10px;
+    font-weight: 700;
 }
 
-.form-field input,
+/*TEXT INPUT*/
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="number"],
+.form-field input[type="date"],
+.form-field input[type="tel"],
+.form-field input[type="url"],
 .form-field textarea,
 .form-field select {
 	display: block;
@@ -42,19 +56,49 @@ body.form .form-container {
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.form-field input:focus,
-.form-field textarea:focus,
-.form-field select:focus {
+/*RADIO & CHECKBOX LIST*/
+.form-field [data-grav-field="checkboxes"] .checkboxes,
+.form-field [data-grav-field="radio"] .radio {
+    margin-top: 10px;
+}
+
+/*FIX LAFT MARGIN ON SOME INPUT*/
+input[type="checkbox"],
+input[type="radio"] {
+    margin-left: 0;
+}
+
+.form-field input[type="file"] {
+    display: none;
+}
+
+.form .dropzone {
+    display: flex;
+    min-height: 0!important;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
     color: #495057;
     background-color: #fff;
-    border-color: #80bdff;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
 }
 
-.form .buttons {
-	margin-top: 20px;
+/*BUTTONS*/
+.form form .buttons button.button {
+    margin-top: 20px;
+    width: 100%;
+    display: block;
+}
+
+@media (min-width: 835px) {
+    .form form .buttons button.button {
+        width: auto;
+    }
 }
