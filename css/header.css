@@ -60,12 +60,12 @@
 
 #header .site-header .cart {
   position: relative;
-  margin-left: 20px;
+  margin-left: var(--gutter);
   margin-right: 0;
 }
 @media (min-width: 835px) {
   #header .site-header .cart {
-    margin-right: 20px;
+    margin-right: var(--gutter);
   }
 }
 

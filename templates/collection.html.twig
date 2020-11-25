@@ -43,10 +43,7 @@
     <section class="pagination" data-pagination-ctn>
         {% if new_qs_start + 1 <= raw_collection_length %}
         {% set url = (page.url ~ '?' ~ qs_key ~ '=' ~ new_qs_start ~ '-' ~ new_qs_end) %}
-        <button class="button" href="{{ url }}" data-pagination-btn>
-            <span class="spinner"></span>
-            <span class="label">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</span>
-        </button>
+        <button class="button" href="{{ url }}" data-pagination-btn>{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</button>
         {% endif %}
     </section>
 
