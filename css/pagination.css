@@ -8,62 +8,14 @@
   margin-top: var(--gutter);
 }
 
-.pagination .button[data-pagination-btn],
-.pagination .button.disabled {
+.pagination .button {
   display: block;
   width: 100%;
 }
 
 @media (min-width: 835px) {
-  .pagination .button[data-pagination-btn],
-  .pagination .button.disabled {
+  .pagination .button{
     width: auto;
   }
 }
 
-.pagination .button .spinner,
-.pagination .button .spinner:after {
-  position: relative;
-  display: none;
-  border-radius: 50%;
-  width: 14px;
-  height: 14px;
-}
-.pagination .spinner {
-  margin: 0 auto;
-  font-size: 14px;
-  position: relative;
-  text-indent: -9999em;
-  border-top: 2px solid rgba(255, 255, 255, 0.2);
-  border-right: 2px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-  border-left: 2px solid #ffffff;
-  transform: translateZ(0);
-  animation: paginationSpinner 1.1s infinite linear;
-}
-@keyframes paginationSpinner {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.pagination .button[data-pagination-btn="requesting"],
-.pagination .button[data-pagination-btn="requesting"]:hover,
-.pagination .button[data-pagination-btn="requesting"]:hover:active {
-  transform: translateY(0);
-  box-shadow: none;
-}
-
-.pagination [data-pagination-btn="requesting"] .label {
-  opacity: 0;
-}
-
-.pagination .button[data-pagination-btn="requesting"] .spinner,
-.pagination .button[data-pagination-btn="requesting"] .spinner:after {
-  display: block;
-  position: absolute;
-  left: calc(50% - 7px);
-}

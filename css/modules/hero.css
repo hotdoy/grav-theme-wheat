@@ -16,6 +16,8 @@
 .module.hero .media-ctn {
   margin: 0 var(--gutter);
   background-color: var(--color-bg);
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .module.hero .media-ctn img,
@@ -50,8 +52,7 @@
 }
 
 .module.hero > .wrapper:hover .button {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-button-hover);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);;
 }
 
 .module.hero > .wrapper:hover:active .button {

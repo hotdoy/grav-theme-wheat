@@ -13,6 +13,7 @@
   height: auto;
   width: 100%;
   background-color: var(--color-panel-bg);
+  border-radius: 4px;
 }
 
 .module.quotes .swiper-slide {
