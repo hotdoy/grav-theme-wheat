@@ -15,15 +15,10 @@
 		{{ assets.js()|raw }}
 		{% endblock %}
 		{% block gtm_head %}{% include 'partials/gtm-head.html.twig' %}{% endblock %}
-		{% block gtag %}{% include 'partials/gtag.html.twig' %}{% endblock %}
 		{% block head_extra %}{% endblock %}
 	</head>
 
-	{% set color_hl = theme.color_hl %}
-	{% set styles %}
-	{% if color_hl %}--color-hl:{{ color_hl }};{% endif %}
-	{% endset %}
-	<body class="{{ page.template }} {{ page.header.body_classes }} loading"{% if styles %} style="{{ styles }}"{% endif %}>
+	<body class="{{ page.template }} {{ page.header.body_classes }} loading">
 		{% block loading %}{% include 'partials/loading.html.twig' %}{% endblock %}
 		{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
 		<main id="main">{% block content %}{% endblock %}</main>

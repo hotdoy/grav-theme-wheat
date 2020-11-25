@@ -1,8 +1,17 @@
+# v0.2.8
+##  11/25/2020
+
+1. [](#improved)
+    * Removed GA
+    * Updated GTM tags
+    * Updated Snipcart to latest
+    * Removed color_hl form blueprint and base
+
 # v0.2.7
 ##  11/25/2020
 
 1. [](#improved)
-    * Hasty release
+    * Many minor style improvements
 
 # v0.2.6
 ##  11/12/2020
