@@ -3,10 +3,15 @@
 	transition-delay: 0s;
 	transition-duration: 0.5s;
 	opacity: 1;
-	transform: translateY(20px);
+	transform: translateY(30px);
 }
 
-.rvl--current {
+.rvl--visible {
 	opacity: 1;
+	transform: translateY(0px);
+}
+
+.rvl--visited {
+	opacity: 0.5;
 	transform: translateY(0px);
 }

@@ -1,3 +1,11 @@
+# v0.3.0
+##  11/25/2020
+
+1. [](#improved)
+    * Reveal complete refactor. More to come.
+    * Theme is getting bigger.
+    * ...
+
 # v0.2.8
 ##  11/25/2020
 

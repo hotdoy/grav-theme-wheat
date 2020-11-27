@@ -6,12 +6,14 @@ const Rvl = {
 			const e = entry.target;
 
 			if (entry.isIntersecting) {
-				if (!e.classList.contains('rvl--current')) {
-					e.classList.add('rvl--current');
+				if (!e.classList.contains('rvl--visible')) {
+					e.classList.remove('rvl--visited');
+					e.classList.add('rvl--visible');
 				}
 			} else {
-				if (e.classList.contains('rvl--current')) {
-					e.classList.remove('rvl--current');
+				if (e.classList.contains('rvl--visible')) {
+					e.classList.add('rvl--visited');
+					e.classList.remove('rvl--visible');
 				}
 			}
 		}
