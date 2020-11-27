@@ -41,8 +41,10 @@
 .module.editorial .embed > .wrapper {
   position: relative;
   padding-bottom: 56.25%;
+  background-color: var(--color-placeholder);
   height: 0;
   overflow: hidden;
+  border-radius: var(--radius-small);
   width: 100%;
 }
 
@@ -114,6 +116,7 @@
   position: relative;
   font-size: x-large;
   line-height: 1.2;
+  padding-right: 2rem;
 }
 
 .module.editorial details summary:focus {

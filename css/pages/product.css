@@ -48,6 +48,9 @@
 .product-showcase .single-image {
   position: relative;
   padding-top: 133%;
+  background-color: var(--color-placeholder);
+  border-radius: var(--radius-small);
+  overflow: hidden;
 }
 
 .product-showcase .swiper-slide img,
@@ -159,6 +162,9 @@
 .product-card .media {
   position: relative;
   padding-top: 133%;
+  background-color: var(--color-placeholder);
+  border-radius: var(--radius-small);
+  overflow: hidden;
 }
 
 .product-card .media img {

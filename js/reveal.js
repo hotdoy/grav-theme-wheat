@@ -1,90 +1,60 @@
-const Reveal = {
-  defaultRevealClass: "reveal--default",
-  defaultHiddenClass: "reveal--hidden",
-  defaultInitialDelay: 0,
+const Rvl = {
 
-  Reveal: function (e) {
-    const classes = Reveal.GetRevealClass(e);
-    e.addEventListener("animationend", () => {
-      e.classList.remove(Reveal.defaultHiddenClass);
-    });
-    e.classList.add(...classes);
-  },
+	Intersect: function (entries) {
+		for (let entry of entries) {
+	
+			const e = entry.target;
 
-  GetRevealClass: function (e) {
-    if (!!e) {
-      const rawClass = e.dataset.reveal.length
-        ? e.dataset.reveal
-        : Reveal.defaultRevealClass;
-      const classArray = rawClass.split(" ");
-      return classArray;
-    }
-  },
+			if (entry.isIntersecting) {
+				if (!e.classList.contains('rvl--visible')) {
+					e.classList.remove('rvl--visited');
+					e.classList.add('rvl--visible');
+				}
+			} else {
+				if (e.classList.contains('rvl--visible')) {
+					e.classList.add('rvl--visited');
+					e.classList.remove('rvl--visible');
+				}
+			}
+		}
+	},
 
-  GetAutoRevealClass: function (e) {
-    if (!!e) {
-      const rawClass = e.dataset.autoReveal.length
-        ? e.dataset.autoReveal
-        : Reveal.defaultRevealClass;
-      const classArray = rawClass.split(" ");
-      return classArray;
-    }
-  },
+	Observe: function (e, o) {
+		let observer = new IntersectionObserver(Rvl.Intersect, o);
+		observer.observe(e);
+	},
 
-  PropagateAutoReveal: function (context) {
-    const el = context.querySelectorAll("[data-auto-reveal]");
-    if (!!el) {
-      for (let e of el) {
-        const classList = Reveal.GetAutoRevealClass(e);
-        const children = e.children;
-        if (!!children) {
-          for (let c of children) {
-            c.setAttribute("data-reveal", classList);
-          }
-        }
-      }
-    }
-  },
+	GetOptions: function () {
+		const o = {
+			root: null, 
+			rootMargin: '0px', 
+			threshold: 0.1,
+		}
+		return o;
+	},
+ 
+	GetInitialDelay: function () {
+		const e = document.querySelector("[data-reveal-delay]");
+		const delay = e ? e.dataset.revealDelay : '0';
+		return delay;
+	},
 
-  GetInitialDelay: function () {
-    const e = document.querySelector("[data-reveal-delay]");
-    const delay = e ? e.dataset.revealDelay : Reveal.defaultInitialDelay;
-    return delay;
-  },
+	Init: function () {
+		const el = document.querySelectorAll('[data-reveal]');
+		for (let e of el) {
+			if (!e.classList.contains('sntnl')) {
+				e.removeAttribute('data-reveal');
+				let o = Rvl.GetOptions();
+				e.classList.add('rvl');
+				setTimeout(function () {
+					for (let e of el) {
+						Rvl.Observe(e, o);
+					}
+				}, Rvl.GetInitialDelay());
 
-  HideElements: function (el) {
-    for (let e of el) {
-      e.classList.add(Reveal.defaultHiddenClass);
-    }
-  },
+			}
+		}
+	}
+}
 
-  Observe: function (el) {
-    const observer = new IntersectionObserver(onIntersection, {
-      rootMargin: "0px",
-      threshold: 0.01,
-    });
-    setTimeout(function () {
-      for (let e of el) {
-        observer.observe(e);
-      }
-    }, Reveal.GetInitialDelay());
-
-    function onIntersection(el) {
-      for (let e of el) {
-        if (e.intersectionRatio > 0) {
-          observer.unobserve(e.target);
-          Reveal.Reveal(e.target);
-        }
-      }
-    }
-  },
-
-  Init: function (context) {
-    Reveal.PropagateAutoReveal(context);
-    const el = context.querySelectorAll("[data-reveal]");
-    Reveal.HideElements(el);
-    Reveal.Observe(el);
-  },
-};
-
-Reveal.Init(document.body);
+Rvl.Init();

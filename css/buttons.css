@@ -7,7 +7,7 @@ button.button {
   align-items: center;
   justify-content: center;
   padding: 10px 24px;
-  border-radius: 4px;
+  border-radius: var(--radius-small);
   border: none;
   text-align: center;
   font-size: 12px;

@@ -36,16 +36,19 @@
   font-size: 16px;
   font-family: var(--font-base);
 
-  --color-bg: #fff;
-  --color-fg: #1d2445;
-  --color-hl: #0a5b61;
+  --color-bg: white;
+  --color-fg: #3c4054;
+  --color-hl: #4285F4;
   --color-border: #e4e4e4;
   --color-btn-bg: var(--color-hl);
   --color-btn-fg: white;
+  --color-placeholder: #ced4da;
 
   --width-text: 735px;
   --width-body: 1200px;
   --width-full: 1920px;
+
+  --radius-small: 4px;
 
   --gutter: 20px;
   --rhythm: 80px;
