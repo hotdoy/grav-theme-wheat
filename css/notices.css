@@ -9,7 +9,7 @@ Make sure to disable built-in CSS.
   max-width: var(--width-text);
   margin: 2rem 0;
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: var(--radius-small);
 }
 
 .notices > *:nth-child(1) {

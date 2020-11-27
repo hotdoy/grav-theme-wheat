@@ -2,35 +2,56 @@
 
 const Sntnl = {
 
-	ToggleClass: function (entry) {
-		const e = entry.target;
-		e.classList.add('sntnl--intersecting');
-	},
-
 	Intersect: function (entries) {
-		console.log('intersecting');
-
 		for (let entry of entries) {
+			const e = entry.target;
 			if (entry.isIntersecting) {
-				Sntnl.ToggleClass(entry);
-			} 
+				if (!e.classList.contains('sntnl--in')) {
+					e.classList.add('sntnl--in');
+				}
+			} else {
+				if (e.classList.contains('sntnl--in')) {
+					e.classList.remove('sntnl--in');
+					e.classList.add('sntnl--out');
+				}
+			}
 		}
 	},
 
 	Observe: function (e, o) {
 		let observer = new IntersectionObserver(Sntnl.Intersect, o);
 		observer.observe(e);
-		console.log('observing');
+	},
+
+	GetOptions: function () {
+		const o = {
+			root: null, 
+			rootMargin: '0px', 
+			threshold: 0.1,
+		}
+		return o;
+	},
+ 
+	GetInitialDelay: function () {
+		const e = document.querySelector("[data-sentinel-initial-delay]");
+		const delay = e ? e.dataset.sentinelInitialDelay : '0';
+		return delay;
 	},
 
 	Init: function () {
-		for (let e of document.querySelectorAll('.sntnl')) {
-		let o = {
-			root: null,
-			rootMargin: '0px',
-			threshold: 0,
-		}	
-			Sntnl.Observe(e, o);
+		const el = document.querySelectorAll('[data-sentinel]');
+		for (let e of el) {
+			if (!e.classList.contains('sntnl')) {
+				e.removeAttribute('data-sentinel');
+				let o = Sntnl.GetOptions();
+				e.classList.add('sntnl');
+				setTimeout(function () {
+					for (let e of el) {
+						Sntnl.Observe(e, o);
+					}
+				}, Sntnl.GetInitialDelay());
+
+			}
 		}
 	}
 }

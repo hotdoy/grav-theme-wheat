@@ -9,7 +9,8 @@
 {% endset -%}
 
 <section 
-class="module {{ computed_classes }} sntnl" 
-{% if module_theme %}style="{{ module_theme }}"{% endif %}>
+class="module {{ computed_classes }}"
+{% if module_theme %}style="{{ module_theme }}"{% endif %}
+data-sentinel>
 {% block content %}{% endblock %}
 </section>
