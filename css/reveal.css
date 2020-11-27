@@ -1,20 +1,12 @@
-/*UNREVEALED ELEMENTS*/
-.reveal--hidden {
-  opacity: 1;
-  transform: translateY(50px);
+.rvl {
+	transition-property: opacity, transform;
+	transition-delay: 0s;
+	transition-duration: 0.5s;
+	opacity: 1;
+	transform: translateY(20px);
 }
 
-/*DEFAULT*/
-.reveal--default {
-  animation-name: revealdefault;
-  animation-duration: 0.5s;
-  animation-delay: 0s;
-  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
-@keyframes revealdefault {
-  from {
-  }
-  to {
-    transform: translateY(0px);
-  }
+.rvl--current {
+	opacity: 1;
+	transform: translateY(0px);
 }

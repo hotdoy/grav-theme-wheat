@@ -10,7 +10,7 @@
 
 {% block content %}
 <div class="wrapper {{ media_position }}">
-	<div class="media-ctn" data-reveal>
+	<div class="media-ctn">
 		{% if mp4 or webm %}
 		<video autoplay loop muted poster="{{ image.url }}">
 			{% if mp4 %} <source type="video/mp4" src="{{ mp4.url }}">{% endif %}
@@ -20,7 +20,7 @@
 		{{ image.html('', image_alt) }}
 		{% endif %}
 	</div>
-	<div class="content text" data-reveal>
+	<div class="content text">
 		{% if content %}{{ content }}{% endif %}
 	</div>
 </div>
