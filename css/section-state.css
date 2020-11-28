@@ -1,14 +1,24 @@
-[data-section-state],
-[data-section-state='invisible'],
-[data-section-state='visited'] {
+[data-section-state] {
 	transition-property: opacity, transform;
 	transition-delay: 0s;
-	transition-duration: 0.4s;
-	opacity: 0.5;
-	transform: translateY(30px);
+	transition-duration: 0s;
+	opacity: 0;
+	transform: translateY(20px);
 }
 
-[data-page-state='complete'] [data-section-state='visible'] {
+[data-page-state="navigating"] [data-section-state] {
+	transition-duration: 0.2s;
+}
+
+[data-page-state="complete"] [data-section-state="visible"] {
+	transition-duration: 0.4s;
 	opacity: 1;
 	transform: translateY(0px);
 }
+
+[data-page-state="complete"] [data-section-state="visited"] {
+	transition-duration: 0.4s;
+	opacity: 0.5;
+	transform: translateY(0px);
+}
+

@@ -2,6 +2,7 @@ const PageState = {
 
 	state: 'loading',
 	domain: window.location.hostname,
+	navigationDelay: 200,
 
 	SetUnloadEvent: function () {
 		window.addEventListener('beforeunload', function () {
