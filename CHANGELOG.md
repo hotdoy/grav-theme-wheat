@@ -1,3 +1,9 @@
+# v0.4.1
+##  11/28/2020
+
+1. [](#improved)
+    * Section-state can now set a delay on the observer to sync manually sync transitions with page state.
+
 # v0.4.0
 ##  11/28/2020
 
