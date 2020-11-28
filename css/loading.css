@@ -1,28 +1,9 @@
-/*Use transitions for the loader and animations for whatever moving things you put in it to prevent bubbling*/
-div[data-loading] {
+.loading {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  animation-name: loadingfallback;
-  animation-duration: 0.2s;
-  animation-delay: 5s;
-  animation-fill-mode: forwards;
-}
-@keyframes loadingfallback {
-  from {
-    opacity: 1;
-    visibility: visible;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-/*TRANSITION*/
-div[data-loading].transition {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,24 +13,9 @@ div[data-loading].transition {
   z-index: 4000;
 }
 
-.loaded div[data-loading].transition {
+
+[data-page-state='complete'] .loading,
+[data-page-state='exiting'] .loading {
   opacity: 0;
   visibility: hidden;
 }
-
-/*UNLOAD*/
-/*body.navigating.unloading #main {
-  animation-name: unloading;
-  animation-duration: 0.1s;
-  animation-fill-mode: forwards;
-}
-@keyframes unloading {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-}
-*/

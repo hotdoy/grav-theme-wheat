@@ -2,8 +2,13 @@
 {% if theme.snipcart_enabled and theme.snipcart_public_key %}{% do assets.addJs('https://cdn.snipcart.com/themes/v3.0.25/default/snipcart.js', { group:'bottom' }) %}{% endif %}
 {% do assets.addJs('theme://libs/swiper/swiper.min.js', { group:'bottom' }) %}
 
+{# APP #}
+{% do assets.addJs('theme://js/page-state-init.js', {loading : 'inline'}) %}
+{% do assets.addJs('theme://js/page-state.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/section-state.js', { group:'bottom' }) %}
+
 {# COMPONENTS #}
-{% do assets.addJs('theme://js/reveal.js', { group:'bottom' }) %}
+{# {% do assets.addJs('theme://js/reveal.js', { group:'bottom' }) %} #}
 {% do assets.addJs('theme://js/links.js', { group:'bottom'}) %}
 {% do assets.addJs('theme://js/header.js', { group:'bottom' }) %}
 {# {% do assets.addJs('theme://js/announcement.js', { group:'bottom' }) %} #}
@@ -21,7 +26,7 @@
 {% do assets.addJs('theme://js/product.js', { group:'bottom' }) %}
 
 {# LOADING #}
-{% do assets.addJs('theme://js/loading.js', { group:'bottom', priority: 0 }) %}
+{# {% do assets.addJs('theme://js/loading.js', { group:'bottom', priority: 0 }) %} #}
 
 {# CUSTOM #}
 {% do assets.addJs('theme://js/custom.js', { group:'bottom' }) %}

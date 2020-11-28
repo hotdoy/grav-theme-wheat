@@ -12,10 +12,10 @@
 {% block content %}
 
 	{# SHOWCASE #}
-	<section class="module product-showcase">
+	<section class="module product-showcase" data-track-section-state>
 		<div class="wrapper">
 
-			<div class="media-ctn" data-reveal>
+			<div class="media-ctn">
 
 				{# SWIPER #}
 				{% if gallery_images %}
@@ -48,7 +48,7 @@
 
 			</div>
 
-			<div class="content-ctn" data-reveal>
+			<div class="content-ctn">
 				<div class="sticky-ctn">
 					{% include 'partials/breadcrumbs.html.twig' %}
 				    {% set title = page.header.display_title ?? page.title %}

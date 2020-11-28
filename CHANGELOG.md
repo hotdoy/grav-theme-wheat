@@ -1,3 +1,12 @@
+# v0.4.0
+##  11/28/2020
+
+1. [](#new)
+    * Introducing page-state and section-state
+    * Removed reveal scrip and related styles
+    * Removed loading script and related styles
+    * links script now only manage link attr (and no longer manage the 'navigating' state).
+
 # v0.3.0
 ##  11/25/2020
 

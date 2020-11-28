@@ -11,7 +11,7 @@
 {% endset %}
 
 {% block content %}
-<div class="wrapper" data-reveal=""{% if styles %} style="{{ styles }}"{% endif %}>
+<div class="wrapper"{% if styles %} style="{{ styles }}"{% endif %}>
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
 			{% for item in page.header.items %}
