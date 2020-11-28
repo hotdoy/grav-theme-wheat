@@ -1,4 +1,4 @@
-.rvl {
+[data-section-state], [data-section-state='invisible'] {
 	transition-property: opacity, transform;
 	transition-delay: 0s;
 	transition-duration: 0.5s;
@@ -6,12 +6,12 @@
 	transform: translateY(30px);
 }
 
-.rvl--visible {
+[data-page-state='complete'] [data-section-state='visible'] {
 	opacity: 1;
 	transform: translateY(0px);
 }
 
-.rvl--visited {
+[data-page-state='complete'] [data-section-state='visited'] {
 	opacity: 0.5;
 	transform: translateY(0px);
 }

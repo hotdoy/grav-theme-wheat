@@ -18,7 +18,7 @@
 		{% block head_extra %}{% endblock %}
 	</head>
 
-	<body class="{{ page.template }} {{ page.header.body_classes }}" data-state>
+	<body class="{{ page.template }} {{ page.header.body_classes }}">
 		{% block loading %}{% include 'partials/loading.html.twig' %}{% endblock %}
 		{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
 		<main id="main">{% block content %}{% endblock %}</main>
