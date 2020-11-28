@@ -1,5 +1,7 @@
 const SectionState = {
 
+	observerDelay: 150,
+
 	Intersect: function (entries) {
 		for (let entry of entries) {
 			const e = entry.target;
@@ -8,10 +10,6 @@ const SectionState = {
 				switch (e.dataset.sectionState) {
 
 					case '':
-					e.setAttribute('data-section-state', 'visible');
-					break;
-
-					case 'invisible':
 					e.setAttribute('data-section-state', 'visible');
 					break;
 
@@ -25,10 +23,6 @@ const SectionState = {
 
 					case 'visible':
 					e.setAttribute('data-section-state', 'visited');
-					break;
-
-					case '':
-					e.setAttribute('data-section-state', 'invisible');
 					break;
 
 				}
@@ -63,7 +57,10 @@ const SectionState = {
 				let o = SectionState.GetOptions();
 				e.setAttribute('data-section-state', '');
 				e.removeAttribute('data-track-section-state');
-				SectionState.Observe(e, o);
+
+				setTimeout(function(){ 
+					SectionState.Observe(e, o);
+				}, SectionState.observerDelay);
 			}
 		}
 	}
