@@ -2,13 +2,16 @@ const SectionState = {
 
 	Intersect: function (entries) {
 		for (let entry of entries) {
-
 			const e = entry.target;
-
 			if (entry.isIntersecting) {
 
 				switch (e.dataset.sectionState) {
+
 					case '':
+					e.setAttribute('data-section-state', 'visible');
+					break;
+
+					case 'invisible':
 					e.setAttribute('data-section-state', 'visible');
 					break;
 
@@ -16,7 +19,6 @@ const SectionState = {
 					e.setAttribute('data-section-state', 'visible');
 					break;
 				}
-
 			} else {
 
 				switch (e.dataset.sectionState) {

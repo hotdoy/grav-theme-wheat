@@ -16,7 +16,7 @@ const PageState = {
 	UpdateState: function (state) {
 		PageState.state = state;
 		PageState.UpdateStateAttr();
-		console.log(PageState.state);
+		console.log('%c PageState: ' + PageState.state, 'color:green;');
 	},
 
 	UpdateStateAttr: function () {

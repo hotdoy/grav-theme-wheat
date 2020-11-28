@@ -1,17 +1,14 @@
-[data-section-state], [data-section-state='invisible'] {
+[data-section-state],
+[data-section-state='invisible'],
+[data-section-state='visited'] {
 	transition-property: opacity, transform;
 	transition-delay: 0s;
-	transition-duration: 0.5s;
-	opacity: 1;
+	transition-duration: 0.4s;
+	opacity: 0.5;
 	transform: translateY(30px);
 }
 
 [data-page-state='complete'] [data-section-state='visible'] {
 	opacity: 1;
-	transform: translateY(0px);
-}
-
-[data-page-state='complete'] [data-section-state='visited'] {
-	opacity: 0.5;
 	transform: translateY(0px);
 }

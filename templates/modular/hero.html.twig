@@ -20,7 +20,7 @@
 {% endset %}
 
 {% block content %}
-<div class="wrapper" data-reveal=""{% if styles %} style="{{ styles }}"{% endif %}>
+<div class="wrapper"{% if styles %} style="{{ styles }}"{% endif %}>
 	<a href="{{ page.header.url }}">
 		<div class="media-ctn fill">
 			{% if mp4 or webm %}
