@@ -6,19 +6,8 @@
 	transform: translateY(20px);
 }
 
-[data-page-state="navigating"] [data-section-state] {
-	transition-duration: 0.2s;
-}
-
-[data-page-state="complete"] [data-section-state="visible"] {
+[data-page-state^="complete"] [data-section-state="visible"] {
 	transition-duration: 0.4s;
 	opacity: 1;
 	transform: translateY(0px);
 }
-
-[data-page-state="complete"] [data-section-state="visited"] {
-	transition-duration: 0.4s;
-	opacity: 0.5;
-	transform: translateY(0px);
-}
-

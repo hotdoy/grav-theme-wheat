@@ -1,6 +1,6 @@
 const SectionState = {
 
-	observerDelay: 150,
+	observerDelay: 0,
 
 	Intersect: function (entries) {
 		for (let entry of entries) {
@@ -61,6 +61,7 @@ const SectionState = {
 				setTimeout(function(){ 
 					SectionState.Observe(e, o);
 				}, SectionState.observerDelay);
+				
 			}
 		}
 	}
