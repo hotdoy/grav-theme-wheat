@@ -1,3 +1,9 @@
+# v0.4.2
+##  11/30/2020
+
+1. [](#improved)
+    * Improved section-state and page state syntax.
+
 # v0.4.1
 ##  11/28/2020
 
