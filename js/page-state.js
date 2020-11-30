@@ -1,15 +1,33 @@
 const PageState = {
 
 	state: 'loading',
-	domain: window.location.hostname,
-	navigationDelay: 200,
+	protocol: location.protocol,
+	hostname: window.location.hostname,
+	href: window.location.href,
+	destination: window.location.href,
 
-	SetUnloadEvent: function () {
-		window.addEventListener('beforeunload', function () {
-			if (location.href.includes(PageState.domain)) {
-				PageState.UpdateState('navigating');
+	GetPageDepth: function (href) {
+		href = href.replace(PageState.protocol + '//' + PageState.hostname, '');
+		const depth = href.split('/').length - 1;
+		return depth;
+	},
+
+	SetDestinationTracking: function () {
+		const links = document.querySelectorAll("a");
+		for (let link of links) {
+			link.addEventListener('click', function (event) {
+				PageState.destination = link.getAttribute("href");
+				PageState.destinationDepth = PageState.GetPageDepth(PageState.destination);
+			});
+		}
+	},
+
+	SetBeforeUnloadEvent: function () {
+		window.addEventListener('beforeunload', function (event) {
+			if (PageState.destination.match('^/') || PageState.destination.includes(PageState.hostname)) {
+				PageState.UpdateState('complete-navigating');
 			} else {
-				PageState.UpdateState('exiting');
+				PageState.UpdateState('complete-exiting');
 			}
 		});
 	},
@@ -17,7 +35,7 @@ const PageState = {
 	UpdateState: function (state) {
 		PageState.state = state;
 		PageState.UpdateStateAttr();
-		console.log('%c PageState: ' + PageState.state, 'color:green;');
+		console.log('%c PAGE_STATE: ' + PageState.state, 'color:green;');
 	},
 
 	UpdateStateAttr: function () {
@@ -25,9 +43,11 @@ const PageState = {
 	},
 
   	Init: function () {
+  		PageState.depth = PageState.GetPageDepth(PageState.href);
   		PageState.UpdateStateAttr();
   		PageState.UpdateState('complete');
-  		PageState.SetUnloadEvent();
+  		PageState.SetBeforeUnloadEvent();
+  		PageState.SetDestinationTracking();
   	},
 
 };
