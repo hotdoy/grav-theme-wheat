@@ -13,7 +13,7 @@
 }
 
 [data-section-state="visited"] {
-	transition-duration: 0s;
-	opacity: 0.5;
+	transition-duration: 0.4s;
+	opacity: 0.2;
 	transform: translateY(0px);
 }
