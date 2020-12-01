@@ -49,7 +49,7 @@ button.button:hover:active {
   color: transparent;
 }
 
-.button.waiting:after {
+.button.waiting:before {
   content: "";
   width: 8px;
   height: 8px;
@@ -59,20 +59,21 @@ button.button:hover:active {
   left: calc(50% - 4px);
   background-color: var(--color-btn-fg);
   animation-name: button_waiting;
-  animation-duration: 0.7s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
 }
 
 @keyframes button_waiting {
   0% {
-    transform: translateX(7px);
+    opacity: 0;
+    transform: translateY(-7px);
   }
   50% {
-    transform: translateX(-7px);
+    opacity: 1;
+    transform: translateY(0px);
   }
   100% {
-    transform: translateX(7px);
+    opacity: 0;
+    transform: translateY(7px);
   }
 }
-
-
