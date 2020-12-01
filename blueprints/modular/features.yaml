@@ -1,0 +1,34 @@
+title: features
+"@extends": modular/module
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            content:
+              unset@: true
+
+            header.items:
+              name: items
+              type: list
+              style: vertical
+              label: items
+              fields:
+
+                .image:
+                  type: pagemediaselect
+                  label: image
+
+                .image_alt:
+                  type: text
+                  label: image_alt
+
+                .title:
+                  type: text
+                  label: title
+
+                .text:
+                  type: text
+                  label: text

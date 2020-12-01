@@ -1,0 +1,26 @@
+{% extends 'modular/module.html.twig' %}
+{% set name = 'features' %}
+
+{% set title = title|default(page.header.display_title) %}
+{% set items = items|default(page.header.items) %}
+
+{% block content %}
+
+<div class="wrapper">
+	
+	<div class="items">
+		{% for item in items %}
+			{% set image = item.image ? page.media[item.image] %}
+			{% set image_alt = item.image_alt %}
+			{% set title = item.title|raw %}
+			{% set text = item.text|raw %}
+			<div class="item text">
+				{% if image %}{{ image.html('', image_alt) }}{% endif %}
+				{% if title %}<h3>{{ title }}</h3>{% endif %}
+				{% if text %}<p>{{ text }}</p>{% endif %}
+			</div>
+		{% endfor %}
+	</div>
+
+</div>
+{% endblock %}
