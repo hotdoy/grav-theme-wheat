@@ -11,3 +11,9 @@
 	opacity: 1;
 	transform: translateY(0px);
 }
+
+[data-section-state="visited"] {
+	transition-duration: 0.4s;
+	opacity: 0.2;
+	transform: translateY(0px);
+}

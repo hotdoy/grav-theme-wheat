@@ -3,9 +3,14 @@
   visibility: hidden;
 }
 
-[data-page-state='complete-navigating'] #main {
+[data-page-state^='complete-navigating'] #main {
 	transition-duration: 0.2s;
 	transition-property: opacity, transform;
 	opacity: 0;
 	transform: translateY(20px);
+}
+
+[data-page-state^='complete-navigating'] .loading {
+  opacity: 1;
+  visibility: visible;
 }
