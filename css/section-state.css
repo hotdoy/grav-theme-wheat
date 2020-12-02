@@ -6,7 +6,7 @@
 	transform: translateY(20px);
 }
 
-[data-page-state^="complete"] [data-section-state="visible"] {
+[data-section-state="visible"] {
 	transition-duration: 0.4s;
 	opacity: 1;
 	transform: translateY(0px);

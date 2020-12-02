@@ -1,3 +1,11 @@
+# v0.5.0
+##  12/01/2020
+
+1. [](#new)
+    * Added Features module.
+2. [](#improved)
+    * section-state now initiated by page-state removing the need to use the the page-state="complete" css selector.
+
 # v0.4.3
 ##  12/01/2020
 
