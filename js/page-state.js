@@ -40,6 +40,7 @@ const PageState = {
         PageState.UpdateState('complete');
         PageState.TrackDestination();
         PageState.TrackBeforeUnload();
+        SectionState.Init();
     },
 
 };
