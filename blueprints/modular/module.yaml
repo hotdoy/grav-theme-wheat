@@ -1,78 +1,49 @@
 title: module
+'@extends': default
 
 form:
-  validation: loose
   fields:
     tabs:
-      type: tabs
-      active: 1
-
       fields:
-        content:
-          type: tab
-          title: Content
-          fields:
-            header.title:
-              type: text
-              autofocus: true
-              style: vertical
-              label: PLUGIN_ADMIN.TITLE
-
-            content:
-              type: markdown
-              label: PLUGIN_ADMIN.CONTENT
-              validate:
-                type: textarea
-
-            header.media_order:
-              type: pagemedia
-              label: PLUGIN_ADMIN.PAGE_MEDIA
-
         options:
-          type: tab
-          title: Options
           fields:
-            order_title:
-              type: section
-              title: Folder
-              underline: true
-
-            header.body_classes:
-              type: text
-              label: PLUGIN_ADMIN.BODY_CLASSES
-
-            folder:
-              type: text
-              label: PLUGIN_ADMIN.FOLDER_NAME
-              validate:
-                rule: slug
-
-            route:
-              type: parents
-              label: PLUGIN_ADMIN.PARENT
-              classes: fancy
-
-            header.published:
-              type: toggle
-              label: Published
-              highlight: 1
-              default: 1
-              options:
-                1: "Yes"
-                0: "No"
-
-            ordering:
-              type: toggle
-              label: PLUGIN_ADMIN.FOLDER_NUMERIC_PREFIX
-              help: PLUGIN_ADMIN.FOLDER_NUMERIC_PREFIX_HELP
-              highlight: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-              validate:
-                type: bool
-
-            order:
-              type: order
-              label: PLUGIN_ADMIN.SORTABLE_PAGES
-              sitemap:
+            publishing:
+              fields:
+                header.date:
+                  unset@: true
+                header.metadata:
+                  unset@: true
+                header.page_title:
+                  unset@: true
+                header.meta_description:
+                  unset@: true
+                header.meta_image:
+                  unset@: true
+            taxonomies:
+              unset@: true
+        advanced:
+          fields:
+            overrides:
+              fields:
+                header.dateformat:
+                  unset@: true
+                header.menu:
+                  unset@: true
+                header.slug:
+                  unset@: true
+                header.redirect:
+                  unset@: true
+                header.child_type:
+                  unset@: true
+                header.routable:
+                  unset@: true
+                header.visible:
+                  unset@: true
+                header.debugger:
+                  unset@: true
+                header.append_url_extension:
+                  unset@: true
+            routes_only:
+              unset@: true
+            admin_only:
+              unset@: true
