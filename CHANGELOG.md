@@ -1,3 +1,10 @@
+# v0.5.1
+##  12/02/2020
+
+1. [](#improved)
+    * Module base blueprint now extends but reduce default.yaml preventing potential bugs.
+    * Mediatext no longer has desktop specific font-size.
+
 # v0.5.0
 ##  12/01/2020
 
