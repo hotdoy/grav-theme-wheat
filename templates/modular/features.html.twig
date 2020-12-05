@@ -3,6 +3,7 @@
 
 {% set title = title|default(page.header.display_title) %}
 {% set items = items|default(page.header.items) %}
+{% set track_section_state = 0 %}
 
 {% block content %}
 
@@ -14,7 +15,7 @@
 			{% set image_alt = item.image_alt %}
 			{% set title = item.title|raw %}
 			{% set text = item.text|raw %}
-			<div class="item text">
+			<div class="item text" data-track-section-state>
 				{% if image %}{{ image.html('', image_alt) }}{% endif %}
 				{% if title %}<h3>{{ title }}</h3>{% endif %}
 				{% if text %}<p>{{ text }}</p>{% endif %}
