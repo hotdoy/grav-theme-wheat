@@ -11,10 +11,7 @@ class YoutubeShortcode extends Shortcode
             $url = $sc->getParameter('youtube', $this->getBbCode($sc));
             preg_match($reg, $url, $match);
             if (isset($match[1])) {
-                $output = $this->twig->processTemplate('partials/youtube.html.twig', [
-                    'video_id' => $match[1]
-                ]);
-                return $output;
+                return '<lite-youtube videoid="' . $match[1] . '"></lite-youtube>';
             }
         });
     }

@@ -7,6 +7,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-bg);
+  background-color: #fff;
   z-index: 4000;
 }

@@ -1,3 +1,10 @@
+# v0.5.2
+##  12/09/2020
+
+1. [](#improved)
+    * Dramatically improved Youtube load times.
+    * Slowly moving the site nav to a macro patern. 
+
 # v0.5.1
 ##  12/02/2020
 

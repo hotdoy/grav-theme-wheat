@@ -1,6 +1,7 @@
 {% set name = name|default() %}
 {% set body_classes = page.header.body_classes %}
 {% set extra_classes = extra_classes|default() %}
+{% set track_section_state = track_section_state|default(true) %}
 
 {% set computed_classes %}
 {{ name }}
@@ -10,7 +11,6 @@
 
 <section 
 class="module {{ computed_classes }}"
-{% if module_theme %}style="{{ module_theme }}"{% endif %}
-data-track-section-state>
+{% if track_section_state %} data-track-section-state {% endif %}>
 {% block content %}{% endblock %}
 </section>

@@ -4,9 +4,6 @@
 {# INLINE #}
 {% do assets.addCss('theme://css/loading.css', {loading : 'inline'}) %}
 
-{# EXTERNAL: BEFORE #}
-{% if theme.snipcart_enabled and theme.snipcart_public_key %}{% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.25/default/snipcart.css', {position:'before'}) %}{% endif %}
-
 {# THEME #}
 {% do assets.addCss('theme://css/reset.css') %}
 {% do assets.addCss('theme://css/text.css') %}
@@ -14,9 +11,10 @@
 {% do assets.addCss('theme://css/page-state.css') %}
 {% do assets.addCss('theme://css/section-state.css') %}
 
-
 {# LIBS #}
+{% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.26/default/snipcart.css') %}
 {% do assets.addCss('theme://libs/swiper/swiper.min.css') %}
+{% do assets.addCss('theme://libs/lite-yt-embed/lite-yt-embed.css') %}
 
 {# COMPONENTS #}
 {% do assets.addCss('theme://css/header.css') %}
@@ -32,8 +30,6 @@
 {# MODULES #}
 {% do assets.addCss('theme://css/modules/module.css') %}
 {% do assets.addCss('theme://css/modules/editorial.css') %}
-{# {% do assets.addCss('theme://css/modules/drawer.css') %} #}
-{# {% do assets.addCss('theme://css/modules/collection.css') %} #}
 {% do assets.addCss('theme://css/modules/mediatext.css') %}
 {% do assets.addCss('theme://css/modules/map.css') %}
 {% do assets.addCss('theme://css/modules/quotes.css') %}
@@ -45,8 +41,6 @@
 {# PAGES #}
 {% do assets.addCss('theme://css/pages/default.css') %}
 {% do assets.addCss('theme://css/pages/error.css') %}
-{# {% do assets.addCss('theme://css/pages/blog.css') %} #}
-{# {% do assets.addCss('theme://css/pages/post.css') %} #}
 {% do assets.addCss('theme://css/pages/collection.css') %}
 {% do assets.addCss('theme://css/pages/product.css') %}
 {% do assets.addCss('theme://css/pages/landing.css') %}

@@ -32,23 +32,24 @@
   padding: 0;
 }
 
-/*YOUTUBE & VIMEO*/
+/*EMBED*/
+
 .module.editorial .embed {
+  position: relative;
   margin: 0 auto;
   margin-top: 2rem;
 }
 
-.module.editorial .embed > .wrapper {
+.module.editorial .embed > .video-ctn {
   position: relative;
   padding-bottom: 56.25%;
-  background-color: var(--color-placeholder);
   height: 0;
   overflow: hidden;
-  border-radius: var(--radius-small);
   width: 100%;
+  background-color: #000;
 }
 
-.module.editorial .embed > .wrapper iframe {
+.module.editorial .embed iframe {
   position: absolute;
   top: 0;
   left: 0;

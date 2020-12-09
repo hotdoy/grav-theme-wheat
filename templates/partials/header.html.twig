@@ -1,3 +1,5 @@
+{% import "macros/navigation.html.twig" as navigation %}
+
 <header id="header">
     
     {# HEADER #}
@@ -14,15 +16,15 @@
     </section>
     {% endif %}
 
-    <section class="site-header">
+    <section class="bar">
         <div class="wrapper">
+
             <a class="logo" href="{{ home_url }}" aria-label="Logo">{% include 'partials/logo.html.twig' %}</a>
-            <div class="nav_wrapper">
+
+            <div class="nav-wrapper">
                 <nav>
                     {% include 'partials/langswitcher.html.twig' %}
-                    {% for p in pages.children.visible  %}
-                    <li><a class="header__link {{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
-                    {% endfor %}
+                    {{ navigation.TREE(pages) }}
                 </nav>
 
                 {# SNIPCART CHECKOUT #}
@@ -62,9 +64,7 @@
             </div>
         </div>
         <nav>
-            {% for p in pages.children.visible  %}
-            <li class="{{ (p.active or p.activeChild) ? ' active' : '' }}"><a href="{{ p.url }}">{{ p.menu }}</a></li>
-            {% endfor %}
+            {{ navigation.subpanel(pages) }}
             {% include 'partials/langswitcher.html.twig' %}
         </nav>
     </section>
