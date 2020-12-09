@@ -6,7 +6,7 @@
 }
 
 [data-section-state="visible"] {
-	transition-duration: 0.5s;
+	transition-duration: 0.4s;
 	opacity: 1;
 	transform: translateY(0px);
 }
