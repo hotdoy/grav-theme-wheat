@@ -9,14 +9,9 @@ class YoutubeShortcode extends Shortcode
         $this->shortcode->getHandlers()->add('youtube', function(ShortcodeInterface $sc) {
             $reg = '/(?:https?:\/{2}(?:(?:www.youtube(?:-nocookie)?\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=))|(?:youtu\.be\/)))([a-zA-Z0-9_-]{11})/';
             $url = $sc->getParameter('youtube', $this->getBbCode($sc));
-            $params = $sc->getParameter('params', $this->getBbCode($sc));
             preg_match($reg, $url, $match);
             if (isset($match[1])) {
-                $output = $this->twig->processTemplate('partials/youtube.html.twig', [
-                    'video_id' => $match[1],
-                    'params' => $params
-                ]);
-                return $output;
+                return '<lite-youtube videoid="' . $match[1] . '"></lite-youtube>';
             }
         });
     }
