@@ -8,7 +8,7 @@
 }
 
 .snipcart-modal__container {
-  z-index: 6000;
+  z-index: 6000!important;
 }
 
 .snipcart-cart-button--highlight {

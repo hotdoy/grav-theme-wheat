@@ -1,0 +1,17 @@
+[data-scroll] {
+	opacity: 0;
+	transform: translateY(10px);
+	transition-duration: 0.5s;
+	transition-property: opacity, transform;
+	transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+[data-scroll="out"] {
+	opacity: 0;
+	transform: translateY(10px);
+}
+
+[data-scroll="in"] {
+	opacity: 1;
+	transform: translateY(0px);
+}
