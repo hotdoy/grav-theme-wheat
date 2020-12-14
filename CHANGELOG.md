@@ -1,3 +1,13 @@
+# v0.6.0
+##  14/09/2020
+
+1. [](#new)
+    * Added ScrollOut
+2. [](#improved)
+    * Bumped Snipcart
+    * Removed sction-state
+    * Fixed Snipcart z-index
+
 # v0.5.2
 ##  12/09/2020
 

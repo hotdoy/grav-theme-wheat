@@ -9,8 +9,7 @@
 {%- if extra_classes %} {{ extra_classes }}{% endif %}
 {% endset -%}
 
-<section 
-class="module {{ computed_classes }}"
-{% if track_section_state %} data-track-section-state {% endif %}>
+<section class="module {{ computed_classes }}" data-scroll>
+
 {% block content %}{% endblock %}
 </section>

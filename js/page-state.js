@@ -40,7 +40,12 @@ const PageState = {
         PageState.UpdateState('complete');
         PageState.TrackDestination();
         PageState.TrackBeforeUnload();
-        SectionState.Init();
+        ScrollOut({
+            cssProps: {
+                viewportY: true,
+                visibleY: true
+            }   
+        });
     },
 
 };
