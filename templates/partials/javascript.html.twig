@@ -1,3 +1,6 @@
+{# INLINE #}
+{% do assets.addJs('theme://js/page-state-init.js', {loading : 'inline'}) %}
+
 {# CDN #}
 {% do assets.addJs('https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js', { group:'bottom' }) %}
 {% do assets.addJs('https://unpkg.com/scroll-out/dist/scroll-out.min.js', { group:'bottom' }) %}
@@ -6,7 +9,7 @@
 {% do assets.addJs('theme://libs/swiper/swiper.min.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://libs/lite-yt-embed/lite-yt-embed.js', { group:'bottom' }) %}
 
-{% do assets.addJs('theme://js/page-state-init.js', {loading : 'inline'}) %}
+{# MISC #}
 {% do assets.addJs('theme://js/page-state.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/links.js', { group:'bottom'}) %}
 {% do assets.addJs('theme://js/header.js', { group:'bottom' }) %}

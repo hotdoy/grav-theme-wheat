@@ -2,7 +2,14 @@
 <link rel="preload" href="{{ url('theme://fonts/Inter/inter-v1-latin-regular.woff2', true) }}" as="font" crossorigin>
 
 {# INLINE #}
-{% do assets.addCss('theme://css/loading.css', {loading : 'inline'}) %}
+{% do assets.addCss('theme://css/loading.css', {loading : 'inline', position: 'before'}) %}
+
+{# CDN BEFORE #}
+{% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css', {group: 'cdn_before'}) %}
+
+{# LIBS #}
+{% do assets.addCss('theme://libs/swiper/swiper.min.css') %}
+{% do assets.addCss('theme://libs/lite-yt-embed/lite-yt-embed.css') %}
 
 {# THEME #}
 {% do assets.addCss('theme://css/reset.css') %}
@@ -11,14 +18,8 @@
 {% do assets.addCss('theme://css/page-state.css') %}
 {% do assets.addCss('theme://css/scroll-out.css') %}
 
-{# LIBS #}
-{% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css') %}
-{% do assets.addCss('theme://libs/swiper/swiper.min.css') %}
-{% do assets.addCss('theme://libs/lite-yt-embed/lite-yt-embed.css') %}
-
-{# COMPONENTS #}
+{# MISC #}
 {% do assets.addCss('theme://css/header.css') %}
-{# {% do assets.addCss('theme://css/mailchimp.css') %} #}
 {% do assets.addCss('theme://css/footer.css') %}
 {% do assets.addCss('theme://css/buttons.css') %}
 {# {% do assets.addCss('theme://css/announcement.css') %} #}
@@ -47,7 +48,11 @@
 {% do assets.addCss('theme://css/pages/form.css') %}
 
 {# UTILS #}
-{% do assets.addCss('theme://css/utils.css') %}
+{% do assets.addCss('theme://css/utils.css', 2) %}
 
 {# CUSTOM #}
 {% do assets.addCss('theme://css/custom.css', 1) %}
+
+
+
+

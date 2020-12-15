@@ -11,6 +11,7 @@
 		{% block stylesheets %}{% include 'partials/stylesheet.html.twig' %}{% endblock %}
 		{% block javascripts %}{% include 'partials/javascript.html.twig' %}{% endblock %}
 		{% block assets deferred %}
+		{{ assets.css('cdn_before')|raw }}
 		{{ assets.css()|raw }}
 		{{ assets.js()|raw }}
 		{% endblock %}
