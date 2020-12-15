@@ -1,3 +1,9 @@
+# v0.6.1
+##  15/09/2020
+
+1. [](#improved)
+    * Improved assets positions fixing some cascade issues with external css.
+
 # v0.6.0
 ##  14/09/2020
 
