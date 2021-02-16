@@ -29,7 +29,7 @@
 				{% if webm %} <source type="video/webm" src="{{ webm.url }}">{% endif %}
 			</video>
 			{% elseif image %}
-			{{ image.html('', image_alt) }}
+			{{ image.html('', image_alt)|raw }}
 			{% endif %}
 		</div>
 		<div class="content-ctn text fill">

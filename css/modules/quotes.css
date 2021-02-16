@@ -12,7 +12,7 @@
   color: white;
   height: auto;
   width: 100%;
-  background-color: var(--color-panel-bg);
+  background-color: var(--c-panel-bg);
   border-radius: var(--radius-small);
 }
 
@@ -24,8 +24,8 @@
   height: auto;
   padding: 6rem 2rem;
   text-align: center;
-  background-color: var(--color-panel-bg, var(--color-hl));
-  color: var(--color-panel-fg, white);
+  background-color: var(--c-panel-bg, var(--c-hl));
+  color: var(--c-panel-fg, white);
 }
 
 .module.quotes blockquote {

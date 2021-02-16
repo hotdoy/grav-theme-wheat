@@ -9,9 +9,9 @@
   left: 0;
   right: 0;
   height: var(--header-heigth);
-  background-color: var(--color-bg);
-  color: var(--color-fg);
-  border-bottom: 1px solid var(--color-border);
+  background-color: var(--c-bg);
+  color: var(--c-fg);
+  border-bottom: 1px solid var(--c-border);
   z-index: 5000;
 }
 
@@ -93,8 +93,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  color: var(--color-fg);
-  background-color: var(--color-bg);
+  color: var(--c-fg);
+  background-color: var(--c-bg);
   z-index: 5000;
 
   transition-property: opacity, transform, visibility;
@@ -107,7 +107,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--c-border);
 }
 
 #header .site-panel .logo {
@@ -138,7 +138,7 @@
 #header .site-panel nav li {
   margin: 0 var(--gutter);
   list-style: none;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--c-border);
 }
 
 #header .site-panel nav li a {
@@ -165,7 +165,7 @@ body.panel--open #header .site-panel {
   font-size: 10px;
   border-radius: 10px;
   line-height: 10px;
-  background-color: var(--color-hl);
+  background-color: var(--c-hl);
   color: white;
   align-items: center;
   justify-content: center;
@@ -179,7 +179,7 @@ body.panel--open #header .site-panel {
   height: 15px;
   opacity: 0;
   border-radius: 100%;
-  background-color: var(--color-hl);
+  background-color: var(--c-hl);
 }
 
 .snipcart-pulse.active {
@@ -204,8 +204,8 @@ body.panel--open #header .site-panel {
   text-align: center;
   font-size: small;
   padding: 10px var(--gutter);
-  background-color: var(--color-marquee-bg, var(--color-hl));
-  color: var(--color-marquee-fg, white);
+  background-color: var(--c-marquee-bg, var(--c-hl));
+  color: var(--c-marquee-fg, white);
   position: relative;
   z-index: 5000;
 }

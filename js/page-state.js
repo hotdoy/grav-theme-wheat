@@ -1,51 +1,58 @@
 const PageState = {
 
     state: 'loading',
-    protocol: location.protocol,
-    hostname: window.location.hostname,
-    href: window.location.href,
-    destination: window.location.href,
+    completeDelay: 0,
+    navigationDelay: 0,
+    fxDelay: 0,
 
-    TrackDestination: function() {
-        const links = document.querySelectorAll("a");
-        for (let link of links) {
-            link.addEventListener('click', function(event) {
-                PageState.destination = link.getAttribute("href");
-            });
-        }
-    },
-
-    TrackBeforeUnload: function() {
-        window.addEventListener('beforeunload', function(event) {
-            if (PageState.destination.match('^/') || PageState.destination.includes(PageState.hostname)) {
-                PageState.UpdateState('complete-navigating');
-            } else {
-                PageState.UpdateState('complete-exiting');
-            }
-        });
+    Log: function(message) {
+        console.log('%c PAGESTATE: ' + message, 'color:green;');
     },
 
     UpdateState: function(state) {
-        PageState.state = state;
-        PageState.UpdateStateAttr();
-        console.log('%c PAGESTATE: ' + PageState.state, 'color:green;');
+
+        switch(PageState.state) {
+
+            // INTERACTIVE
+            case 'loading':
+                PageState.state = 'interactive';
+                PageState.UpdateStateAttr();
+                break;
+
+            // COMPLETE
+            case 'interactive':
+                PageState.state = 'complete';
+
+                setTimeout(function(){ 
+                    FX.Init();
+                }, PageState.fxDelay);
+
+                PageState.UpdateStateAttr(PageState.completeDelay);
+                break;
+
+            // NAVIGATING
+            case 'complete':
+                PageState.state = 'complete-navigating';
+                PageState.UpdateStateAttr();
+                break;
+        }
+
+        PageState.Log(PageState.state);
     },
 
-    UpdateStateAttr: function() {
-        document.body.setAttribute('data-page-state', PageState.state);
+    UpdateStateAttr: function(delay) {
+        setTimeout(function(){ 
+            document.body.setAttribute('data-page-state', PageState.state);
+        }, delay);
     },
 
     Init: function() {
-        PageState.UpdateStateAttr();
-        PageState.UpdateState('complete');
-        PageState.TrackDestination();
-        PageState.TrackBeforeUnload();
-        ScrollOut({
-            cssProps: {
-                viewportY: true,
-                visibleY: true
-            }   
-        });
+        PageState.UpdateState(); 
     },
-
 };
+
+PageState.state = document.readyState;
+PageState.Log(PageState.state);
+document.onreadystatechange = function() {
+    PageState.UpdateState(); 
+}
