@@ -1,3 +1,11 @@
+# v0.7.0
+##  16/02/2020
+
+1. [](#improved)
+    * Getting up to speed with GRAV 1.7
+    * Updating codebase with 3 months of new stuff
+    
+
 # v0.6.1
 ##  15/09/2020
 
