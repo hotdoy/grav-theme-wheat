@@ -11,7 +11,8 @@
 		{% block stylesheets %}{% include 'partials/stylesheet.html.twig' %}{% endblock %}
 		{% block javascripts %}{% include 'partials/javascript.html.twig' %}{% endblock %}
 		{% block assets deferred %}
-		{{ assets.css('cdn_before')|raw }}
+		{{ assets.css('cdn_top')|raw }}
+		{{ assets.js('cdn_top')|raw }}
 		{{ assets.css()|raw }}
 		{{ assets.js()|raw }}
 		{% endblock %}
@@ -27,7 +28,8 @@
 		{# {% block announcements %}{% include 'partials/announcement.html.twig' %}{% endblock %} #}
 		{# {% block share_dialog %}{% include 'partials/share-dialog.html.twig' %}{% endblock %} #}
 		{% block snipcart %}{% include 'partials/snipcart.html.twig' %}{% endblock %}
-		{% block bottom %}{{ assets.js('bottom')|raw }}{% endblock %}
+		{{ assets.js('cdn_bottom')|raw }}
+		{{ assets.js('bottom')|raw }}
 		{% block gtm_body %}{% include 'partials/gtm-body.html.twig' %}{% endblock %}
 		{% block body_extra %}{% endblock %}
 		<!-- {{ "now"|date("m/d/Y H:i:s") }} - {{ grav.theme.getBlueprint().name }} {{ grav.theme.getBlueprint().version }} -->

@@ -4,8 +4,8 @@
 {# INLINE #}
 {% do assets.addCss('theme://css/loading.css', {loading : 'inline', position: 'before'}) %}
 
-{# CDN BEFORE #}
-{% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css', {group: 'cdn_before'}) %}
+{# CDN TOP #}
+{% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css', {group: 'cdn_top'}) %}
 
 {# LIBS #}
 {% do assets.addCss('theme://libs/swiper/swiper.min.css') %}
@@ -16,7 +16,7 @@
 {% do assets.addCss('theme://css/text.css') %}
 {% do assets.addCss('theme://css/theme.css') %}
 {% do assets.addCss('theme://css/page-state.css') %}
-{% do assets.addCss('theme://css/scroll-out.css') %}
+{% do assets.addCss('theme://css/fx.css') %}
 
 {# MISC #}
 {% do assets.addCss('theme://css/header.css') %}

@@ -15,7 +15,7 @@
 
 .module.hero .media-ctn {
   margin: 0 var(--gutter);
-  background-color: var(--color-bg);
+  background-color: var(--c-bg);
   border-radius: var(--radius-small);
   overflow: hidden;
 }
@@ -34,7 +34,7 @@
   flex-direction: column;
   margin: 0 var(--gutter);
   padding: 0 calc(var(--gutter) * 2);
-  color: var(--color-fg);
+  color: var(--c-fg);
   text-align: center;
 }
 
@@ -61,6 +61,6 @@
 }
 
 .module.hero .button {
-  color: var(--color-btn-fg, white);
-  background-color: var(--color-btn-bg, var(--color-hl));
+  color: var(--c-btn-fg, white);
+  background-color: var(--c-btn-bg, var(--c-hl));
 }

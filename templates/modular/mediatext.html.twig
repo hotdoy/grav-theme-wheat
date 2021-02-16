@@ -17,11 +17,11 @@
 			{% if webm %} <source type="video/webm" src="{{ webm.url }}">{% endif %}
 		</video>
 		{% elseif image %}
-		{{ image.html('', image_alt) }}
+		{{ image.html('', image_alt)|raw }}
 		{% endif %}
 	</div>
-	<div class="content text">
-		{% if content %}{{ content }}{% endif %}
+	<div class="content text prose">
+		{% if content %}{{ content|raw }}{% endif %}
 	</div>
 </div>
 {% endblock %}

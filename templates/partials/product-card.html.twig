@@ -6,7 +6,7 @@
 <article class="product-card">
 	<a href="{{ item.url }}">
 		<div class="media">
-			<div class="fill">{{ image.html('', image_alt) }}</div>
+			<div class="fill">{{ image.html('', image_alt)|raw }}</div>
 		</div>
 
 		<div class="info">
