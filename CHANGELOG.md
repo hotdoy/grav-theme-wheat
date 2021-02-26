@@ -1,3 +1,10 @@
+# v0.7.1
+##  26/02/2020
+
+1. [](#improved)
+    * Enabled snipcart
+    * Fixed some snipcart related styles
+
 # v0.7.0
 ##  16/02/2020
 

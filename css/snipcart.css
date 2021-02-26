@@ -13,41 +13,46 @@
 
 .snipcart-cart-button--highlight {
   background: none;
-  background-color: var(--color-hl);
+  background-color: var(--c-hl);
   color: white;
 }
 
 .snipcart__box--badge-highlight {
   background: none;
-  background-color: var(--color-hl);
+  background-color: var(--c-hl);
   color: white;
 }
 
 .snipcart__actions--link {
-  color: var(--color-hl);
+  color: var(--c-hl);
 }
 
 .snipcart-modal__close-icon path {
-  fill: var(--color-hl);
+  fill: var(--c-hl);
 }
 
 .snipcart__icon--blue-dark path {
-  fill: var(--color-hl);
+  fill: var(--c-hl);
 }
 
 .snipcart-signin__register-link {
-  color: var(--color-hl);
+  color: var(--c-hl);
 }
 
 .snipcart-signin__forgot-password {
-  color: var(--color-hl);
+  color: var(--c-hl);
 }
 
 .snipcart-form__select:focus {
-  border: 1px solid var(--color-hl);
+  border: 1px solid var(--c-hl);
 }
 
 .snipcart-form-radio:checked + label:before {
   background: none;
-  background-color: var(--color-hl);
+  background-color: var(--c-hl);
+}
+
+.snipcart-cart-button {
+  border-radius: 4px;
+  padding: 10px 24px;
 }
