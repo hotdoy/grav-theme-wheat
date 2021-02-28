@@ -1,0 +1,67 @@
+{# INLINE #}
+{% do assets.addCss('theme://css/loading.css', {loading : 'inline', position: 'before'}) %}
+{% do assets.addJs('theme://js/page-state.js', {loading : 'inline'}) %}
+
+{# SNIPCART #}
+{% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.css', {group: 'top'}) %}
+{% do assets.addJs('https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/snipcart.js', { group:'bottom' }) %}
+
+{# SWIPER #}
+{% do assets.addCss('theme://libs/swiper/swiper.min.css') %}
+{% do assets.addJs('theme://libs/swiper/swiper.min.js', { group:'bottom' }) %}
+
+{# LITE YT #}
+{% do assets.addCss('theme://libs/lite-yt-embed/lite-yt-embed.css') %}
+{% do assets.addJs('theme://libs/lite-yt-embed/lite-yt-embed.js', { group:'bottom' }) %}
+
+{# SCROLL-OUT #}
+{% do assets.addJs('https://unpkg.com/scroll-out/dist/scroll-out.min.js', { group:'bottom' }) %}
+
+{# THEME #}
+{% do assets.addCss('theme://css/reset.css') %}
+{% do assets.addCss('theme://css/text.css') %}
+{% do assets.addCss('theme://css/theme.css') %}
+{% do assets.addCss('theme://css/page-state.css') %}
+{% do assets.addCss('theme://css/fx.css') %}
+
+{# MISC #}
+{% do assets.addCss('theme://css/header.css') %}
+{% do assets.addCss('theme://css/footer.css') %}
+{% do assets.addCss('theme://css/buttons.css') %}
+{% do assets.addCss('theme://css/notices.css') %}
+{% do assets.addCss('theme://css/pagination.css') %}
+{% do assets.addCss('theme://css/snipcart.css') %}
+
+{# MODULES #}
+{% do assets.addCss('theme://css/modules/module.css') %}
+{% do assets.addCss('theme://css/modules/editorial.css') %}
+{% do assets.addCss('theme://css/modules/mediatext.css') %}
+{% do assets.addCss('theme://css/modules/map.css') %}
+{% do assets.addJs('theme://js/map.js', { group:'bottom' }) %}
+{% do assets.addCss('theme://css/modules/quotes.css') %}
+{% do assets.addJs('theme://js/quotes.js', { group:'bottom' }) %}
+{% do assets.addCss('theme://css/modules/hero.css') %}
+{% do assets.addCss('theme://css/modules/carousel.css') %}
+{% do assets.addJs('theme://js/carousel.js', { group:'bottom' }) %}
+{% do assets.addCss('theme://css/modules/section.css') %}
+{% do assets.addCss('theme://css/modules/features.css') %}
+
+{# PAGES #}
+{% do assets.addCss('theme://css/pages/default.css') %}
+{% do assets.addCss('theme://css/pages/error.css') %}
+{% do assets.addCss('theme://css/pages/collection.css') %}
+{% do assets.addCss('theme://css/pages/product.css') %}
+{% do assets.addJs('theme://js/product.js', { group:'bottom' }) %}
+{% do assets.addCss('theme://css/pages/landing.css') %}
+{% do assets.addCss('theme://css/pages/form.css') %}
+
+{# MISC #}
+{% do assets.addJs('theme://js/links.js', { group:'bottom'}) %}
+{% do assets.addJs('theme://js/header.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/pagination.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/fx.js', { group:'bottom' }) %}
+
+{% do assets.addCss('theme://css/utils.css', 2) %}
+{% do assets.addCss('theme://css/custom.css', 1) %}
+{% do assets.addJs('theme://js/custom.js', { group:'bottom' }) %}
