@@ -3,12 +3,11 @@
 {% set image = item.header.main_image ? item.media[item.header.main_image] %}
 {% set image_alt = item.header.image_alt ?? '' %}
 
-<article class="product-card">
+<article class="product__card">
 	<a href="{{ item.url }}">
 		<div class="media">
 			<div class="fill">{{ image.html('', image_alt)|raw }}</div>
 		</div>
-
 		<div class="info">
 			<div class="name">{{ item.title }}</div>
 			<div class="price">{{ item.header.price|number_format(2, ',', ' ') }} $</div>

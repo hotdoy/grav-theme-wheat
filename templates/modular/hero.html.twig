@@ -9,14 +9,10 @@
 
 {% set color_bg = page.header.color_bg %}
 {% set color_fg = page.header.color_fg %}
-{% set color_btn_bg = page.header.color_btn_bg %}
-{% set color_btn_fg = page.header.color_btn_fg %}
 
 {% set styles %}
-{% if color_bg %}--color-bg:{{ color_bg }};{% endif %}
-{% if color_fg %}--color-fg:{{ color_fg }};{% endif %}
-{% if color_btn_bg %}--color-btn-bg:{{ color_btn_bg }};{% endif %}
-{% if color_btn_fg %}--color-btn-fg:{{ color_btn_fg }};{% endif %}
+{% if color_bg %}--c-bg:{{ color_bg }};{% endif %}
+{% if color_fg %}--c-fg:{{ color_fg }};{% endif %}
 {% endset %}
 
 {% block content %}

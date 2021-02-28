@@ -12,7 +12,7 @@
 {% block content %}
 
 	{# SHOWCASE #}
-	<section class="module product-showcase" data-scroll>
+	<section class="module product__showcase" data-scroll>
 		<div class="wrapper">
 
 			<div class="media-ctn">
@@ -90,9 +90,7 @@
 					{% else %}
 					<div class="button disabled snipcart-add-item {{ class }}">{{ 'THEME.CART.DISABLED'|t }}</div>
 					{% endif %}
-
 					<div class="instruction">{{ 'THEME.CART.INSTRUCTION'|t }}</div>
-
 				</div>
 			</div>
 		</div>
@@ -104,18 +102,11 @@
 	{% endfor %}
 
 	{# DIVIDER #}
-	<div class="divider"><hr></div>
+	<div class="product__divider"><hr></div>
 
 	{# RELATED #}
     {% set related_options = { items: {'@self.siblings':''}, 'limit': 6, 'order': {'by': 'random'}} %}
     {% set related_items = page.collection(related_options) %}
     {% include 'modular/carousel.html.twig' with { 'collection': related_items, 'title': 'THEME.PRODUCT.RELATED'|t } %}
-
-    {# PREVIOUSLY LOOKED AT ITEMS #}
-{# 	{% set options = { items: {'@root.descendants':''} } %}
-	{% set pages = page.collection(options) %}
-	{% for page in pages if page.routable and page.id() == currentId %}
-		{{ page.id() }}
-	{% endfor %} #}
 
 {% endblock %}
