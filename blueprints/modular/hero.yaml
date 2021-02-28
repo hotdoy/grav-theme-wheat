@@ -48,11 +48,3 @@ form:
             header.color_fg:
               type: colorpicker
               label: Color - Foreground
-
-            header.color_btn_bg:
-              type: colorpicker
-              label: Color - Button Background
-
-            header.color_btn_fg:
-              type: colorpicker
-              label: Color - Button Foreground

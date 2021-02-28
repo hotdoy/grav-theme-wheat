@@ -2,7 +2,7 @@
 {% set display_breadcrumbs = display_breadcrumbs|default(true) %}
 
 {% if title %}
-<section class="default-header" data-scroll>
+<section class="default__header" data-scroll>
 	{% if config.plugins.breadcrumbs.enabled and display_breadcrumbs %}
 	{% include 'partials/breadcrumbs.html.twig' %}
 	{% endif %}

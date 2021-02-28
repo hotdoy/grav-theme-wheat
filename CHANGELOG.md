@@ -1,9 +1,19 @@
+# v0.7.2
+##  28/02/2020
+
+1. [](#improved)
+    * Custom property usage
+    * Class names of some child concept (ex: .product__card)
+    * Removed some transitions
+    * Fixed hero modular color
+    * Fixed caroussel modular edge gradients
+
 # v0.7.1
 ##  26/02/2020
 
 1. [](#improved)
     * Enabled snipcart
-    * Fixed some snipcart related styles
+* Fixed some snipcart related styles
 
 # v0.7.0
 ##  16/02/2020

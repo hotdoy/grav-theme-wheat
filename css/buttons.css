@@ -20,7 +20,6 @@ button.button {
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   text-decoration: none;
   transition-property: transform, box-shadow;
-  transition-duration: 0.2s;
   outline: none;
 }
 
@@ -31,7 +30,6 @@ button.button:hover {
 
 a.button:hover:active,
 button.button:hover:active {
-  transition-duration: 0s;
   transform: translateY(1px);
 }
 

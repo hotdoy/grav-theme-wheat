@@ -16,7 +16,6 @@
 .module.hero .media-ctn {
   margin: 0 var(--gutter);
   background-color: var(--c-bg);
-  border-radius: var(--radius-small);
   overflow: hidden;
 }
 
