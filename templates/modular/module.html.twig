@@ -2,14 +2,11 @@
 {% set body_classes = page.header.body_classes %}
 {% set extra_classes = extra_classes|default() %}
 {% set track_section_state = track_section_state|default(true) %}
-
 {% set computed_classes %}
-{{ name }}
+{{ name }} fx fx--fadein
 {%- if body_classes %} {{ body_classes }}{% endif %}
 {%- if extra_classes %} {{ extra_classes }}{% endif %}
 {% endset -%}
-
-<section class="module {{ computed_classes }}" data-scroll>
-
+<section class="module {{ computed_classes }}">
 {% block content %}{% endblock %}
 </section>

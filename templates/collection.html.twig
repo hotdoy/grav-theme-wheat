@@ -22,8 +22,8 @@
     {% include 'partials/default-header.html.twig' with {title: title} %}
     
     {# LIST #}
-    <section class="module">
-        <div class="collection-grid-wrapper" data-scroll>
+    <section class="module fx fx--fadein">
+        <div class="collection-grid-wrapper">
             <div class="collection-grid" data-pagination-list>
                 {% for item in items %}
                 {% set item = page.find(item.page) %}

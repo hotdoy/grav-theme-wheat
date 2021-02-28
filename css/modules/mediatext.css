@@ -43,20 +43,11 @@
   object-fit: contain;
 }
 
+.module.mediatext h1,
 .module.mediatext h2,
 .module.mediatext h3 {
   margin-top: 1.5rem;
-  margin-bottom: 1rem;
   font-weight: 700;
-}
-
-.module.mediatext p {
-  margin-top: 1rem;
-  margin-bottom: 0;
-}
-
-.module.mediatext .button {
-  margin-top: 0.5rem;
 }
 
 @media (min-width: 735px) {
@@ -65,3 +56,12 @@
   }
 }
 
+.module.mediatext:first-child {
+  margin-top: var(--gutter);
+}
+
+@media (min-width: 1220px) {
+  .module.mediatext:first-child {
+    margin-top: calc(var(--rhythm)/2);
+  }
+}
