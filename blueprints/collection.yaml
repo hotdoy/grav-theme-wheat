@@ -7,15 +7,17 @@ form:
       fields:
         content:
           fields:
-            header.virtual_items:
-              name: virtual_items
-              type: list
-              style: vertical
-              label: virtual_items
-              description: Allows you to reference pages from another collection without moving the page.
-              fields:
-                .page:
-                  type: pages
-                  label: Page
-                  show_modular: false
-                  show_root: false
+            content:
+              unset@: true
+            # header.references:
+            #   name: references
+            #   type: list
+            #   style: vertical
+            #   label: References
+            #   description: Allows you to reference pages from another collections or locations.
+            #   fields:
+            #     .page:
+            #       type: pages
+            #       label: Page
+            #       show_modular: false
+            #       show_root: false
