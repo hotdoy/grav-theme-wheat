@@ -4,26 +4,25 @@ title: hero
 form:
   fields:
     tabs:
-      type: tabs
-      active: 1
-
       fields:
         content:
-          type: tab
-          title: Content
           fields:
+
+            content:
+              unset@: true
+            header.media_order:
+              ordering@: +99
+
+            header.subtitle:
+              type: text
+              label: Subtitle
+              style: vertical
 
             header.mp4:
               label: Mp4
               type: pagemediaselect
               accept:
-                - webm
-
-            header.webm:
-              label: WebM
-              type: pagemediaselect
-              accept:
-                - webm
+                - mp4
 
             header.image:
               label: Image
@@ -48,3 +47,7 @@ form:
             header.color_fg:
               type: colorpicker
               label: Color - Foreground
+
+            header.color_hl:
+              type: colorpicker
+              label: Color - Highlight

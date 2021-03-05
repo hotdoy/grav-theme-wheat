@@ -1,3 +1,13 @@
+# v0.7.5
+##  05/03/2020
+
+1. [](#improved)
+    * Hero modular no longer has content
+    * Hero modular now has display title
+    * Hero modular now has subtitle
+    * Hero modular now has custom hl color
+    * Hero modular is now 16:9 landscape and 1:1 portrait
+
 # v0.7.4
 ##  04/03/2020
 
