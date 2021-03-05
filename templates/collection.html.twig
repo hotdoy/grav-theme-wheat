@@ -1,19 +1,18 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set start = 0 %}
-{% set step = 12 %}
-{% set qs_key = 'articles' %}
-{% set qs_values = uri.query(qs_key)|split('-') %}
-{% set qs_start = qs_values[0]|default(0) %}
-{% set qs_end = qs_values[1] ?? step %}
-{% set new_qs_start = qs_end %}
-{% set new_qs_end = new_qs_start + step %}
-{% set raw_collection_params = { items: {'@self.children':''}, 'order': {'by': 'folder', 'dir': 'asc'}} %}
-{% set raw_collection = page.collection(raw_collection_params) %}
+{% set pagination_start = 0 %}
+{% set pagination_step = 12 %}
+{% set pagination_key = 'articles' %}
+{% set pagination_values = uri.query(pagination_key)|split('-') %}
+{% set pagination_start = pagination_values[0]|default(0) %}
+{% set pagination_end = pagination_values[1] ?? pagination_step %}
+{% set new_pagination_start = pagination_end %}
+{% set new_pagination_end = new_pagination_start + pagination_step %}
+{% set raw_collection = page.collection({ items: {'@self.children':''}, 'order': {'by': 'folder', 'dir': 'asc'}}) %}
 {% set raw_collection_length = raw_collection|length %}
-{% set collection_params = { items: {'@self.children':''}, 'limit': qs_end, 'order': {'by': 'folder', 'dir': 'asc'}} %}
-{% set collection = page.collection(collection_params) %}
-{% set collection = collection|slice(qs_start, qs_end) %}
+{% set collection = page.collection({ items: {'@self.children':''}, 'limit': pagination_end, 'order': {'by': 'folder', 'dir': 'asc'}}) %}
+{% set computed_collection = collection|slice(pagination_start, pagination_end) %}
+{# {% set references = page.header.references %} #}
 
 {% block content %}
 
@@ -25,25 +24,22 @@
     <section class="module fx fx--fadein">
         <div class="collection-grid-wrapper">
             <div class="collection-grid" data-pagination-list>
-                {% for item in items %}
+                {# {% for item in references %}
                 {% set item = page.find(item.page) %}
-                {% include 'partials/' ~ item.template ~ '-card.html.twig' with {'item': item} %}
-                {% endfor %}
-                {% for item in collection %}
+                {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item} %}
+                {% endfor %} #}
+                {% for item in computed_collection %}
                 {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item} %}
                 {% endfor %}
             </div>
-            {% if config.plugins.pagination.enabled and collection.params.pagination %}
-            {% include 'partials/pagination.html.twig' %}
-            {% endif %}
         </div>
     </section>
     
     {# PAGINATION #}
-    <section class="pagination" data-pagination-ctn>
-        {% if new_qs_start + 1 <= raw_collection_length %}
-        {% set url = (page.url ~ '?' ~ qs_key ~ '=' ~ new_qs_start ~ '-' ~ new_qs_end) %}
-        <button class="button" href="{{ url }}" data-pagination-btn>{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</button>
+    <section class="pagination" data-pagination-ui>
+        {% if new_pagination_start + 1 <= raw_collection_length %}
+        {% set url = (page.url ~ '?' ~ pagination_key ~ '=' ~ new_pagination_start ~ '-' ~ new_pagination_end) %}
+        <button class="button" href="{{ url }}" data-pagination-ui-btn>{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</button>
         {% endif %}
     </section>
 

@@ -11,15 +11,15 @@ form:
               ordering@: header.title
               type: text
               style: vertical
-              label: display_title
+              label: Display Title
 
         options:
           fields:
             publishing:
               fields:
-                header.page_title:
+                header.meta_title:
                   type: text
-                  label: Page Title
+                  label: Meta Title
 
                 header.meta_description:
                   type: text

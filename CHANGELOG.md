@@ -1,3 +1,12 @@
+# v0.7.4
+##  04/03/2020
+
+1. [](#improved)
+    * cleaning collection and pagination WIP
+2. [](#bugfix)
+    * detail tag ui color
+    * default card bg color
+
 # v0.7.3
 ##  28/02/2020
 
