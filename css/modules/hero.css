@@ -4,16 +4,27 @@
   position: relative;
   max-width: var(--width-body);
   margin: 0 auto;
-  min-height: 450px;
 }
 
-@media (min-width: 835px) {
-  .module.hero > .wrapper {
-    min-height: 550px;
+.module.hero .inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 100%;
+}
+
+@media (min-width: 735px) {
+  .module.hero .inner {
+    padding-top: 56.25%;
   }
 }
 
 .module.hero .media-ctn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   margin: 0 var(--gutter);
   background-color: var(--c-bg);
   overflow: hidden;
@@ -27,19 +38,21 @@
 }
 
 .module.hero .content-ctn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
   margin: 0 var(--gutter);
-  padding: 0 calc(var(--gutter) * 2);
+  padding: calc(var(--gutter) * 2);
   color: var(--c-fg);
   text-align: center;
-}
-
-.module.hero h2 {
-  font-weight: 700;
-  margin: 0;
 }
 
 .module.hero p {
@@ -47,7 +60,7 @@
 }
 
 .module.hero .button {
-  margin-top: 20px;
+  margin-top: var(--gutter);
 }
 
 .module.hero > .wrapper:hover .button {
@@ -55,11 +68,10 @@
 }
 
 .module.hero > .wrapper:hover:active .button {
-  transition-duration: 0s;
   transform: translateY(1px);
 }
 
 .module.hero .button {
-  color: var(--c-btn-fg, white);
-  background-color: var(--c-btn-bg, var(--c-hl));
+  color: var(--c-hl);
+  background-color: white;
 }

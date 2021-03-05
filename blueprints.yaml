@@ -1,8 +1,8 @@
 name: Wheat
 slug: wheat
 type: theme
-version: 0.7.4
-description: Wheat, a starter-kit for Grav CMS with a strong vanilla taste.
+version: 0.7.5
+description: Wheat, a starter-kit for Grav CMS with a strong vanilla taste and Snipcart at it's heart.
 icon: rebel
 author:
   name: Calotte
