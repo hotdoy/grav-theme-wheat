@@ -1,3 +1,14 @@
+# v0.7.6
+##  08/03/2020
+
+1. [](#new)
+    * Module Media (WIP)
+2. [](#improved)
+    * Removed unused field in mediatext
+    * Removed unused section modules
+    * Removed unused webm support in mediatext
+    * Improved line-height of hero module
+    
 # v0.7.5
 ##  05/03/2020
 

@@ -2,6 +2,12 @@
 {% do assets.addCss('theme://css/loading.css', {loading : 'inline', position: 'before'}) %}
 {% do assets.addJs('theme://js/page-state.js', {loading : 'inline'}) %}
 
+{# SITE #}
+{% do assets.addJs('theme://js/links.js', { group:'bottom'}) %}
+{% do assets.addJs('theme://js/header.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/pagination.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/fx.js', { group:'bottom' }) %}
+
 {# SNIPCART #}
 {% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.css', {group: 'top'}) %}
 {% do assets.addJs('https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.js', { group:'bottom' }) %}
@@ -44,8 +50,8 @@
 {% do assets.addCss('theme://css/modules/hero.css') %}
 {% do assets.addCss('theme://css/modules/carousel.css') %}
 {% do assets.addJs('theme://js/carousel.js', { group:'bottom' }) %}
-{% do assets.addCss('theme://css/modules/section.css') %}
 {% do assets.addCss('theme://css/modules/features.css') %}
+{% do assets.addCss('theme://css/modules/media.css') %}
 
 {# PAGES #}
 {% do assets.addCss('theme://css/pages/default.css') %}
@@ -55,12 +61,6 @@
 {% do assets.addJs('theme://js/product.js', { group:'bottom' }) %}
 {% do assets.addCss('theme://css/pages/landing.css') %}
 {% do assets.addCss('theme://css/pages/form.css') %}
-
-{# MISC #}
-{% do assets.addJs('theme://js/links.js', { group:'bottom'}) %}
-{% do assets.addJs('theme://js/header.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/pagination.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/fx.js', { group:'bottom' }) %}
 
 {% do assets.addCss('theme://css/utils.css', 2) %}
 {% do assets.addCss('theme://css/custom.css', 1) %}

@@ -1,3 +1,5 @@
+/*.module.mediatext {}*/
+
 .module.mediatext > .wrapper {
   display: flex;
   flex-wrap: wrap;

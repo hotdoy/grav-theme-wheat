@@ -1,0 +1,19 @@
+{% extends 'modular/module.html.twig' %}
+{% set name = 'media' %}
+
+{% set mp4 = page.header.mp4 ? page.media[page.header.mp4] %}
+{% set image = page.header.image ? page.media[page.header.image] %}
+{% set image_alt = page.header.image_alt ?? '' %}
+
+{% block content %}
+<div class="wrapper">
+	{% if mp4 %}
+	<video autoplay loop muted poster="{{ image.url }}">
+		{% if mp4 %} <source type="video/mp4" src="{{ mp4.url }}">{% endif %}
+		{% if webm %} <source type="video/webm" src="{{ webm.url }}">{% endif %}
+	</video>
+	{% elseif image %}
+	{{ image.html('', image_alt)|raw }}
+	{% endif %}
+</div>
+{% endblock %}
