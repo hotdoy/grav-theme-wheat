@@ -8,8 +8,12 @@ form:
         content:
           fields:
 
+            content:
+              unset@: true
             header.display_title:
               unset@: true
+            header.media_order:
+              ordering@: +99
 
             header.mp4:
               label: Mp4
@@ -24,11 +28,3 @@ form:
             header.image_alt:
               label: Image Alt
               type: text
-
-            header.media_position:
-              type: toggle
-              label: Media Position
-              default: left
-              options:
-                left: "Left"
-                right: "Right"
