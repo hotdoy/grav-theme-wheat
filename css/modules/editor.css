@@ -1,46 +1,46 @@
-/* .module.editorial {} */
+/* .module.editor {} */
 
-.module.editorial > .wrapper {
+.module.editor > .wrapper {
   padding: 0 var(--gutter);
   margin: 0 auto;
   max-width: var(--width-text);
   width: 100%;
 }
 
-.module.editorial ul li {
+.module.editor ul li {
   margin-left: 18px;
 }
 
 /* REMOVE MARGIN FOR FIRST ELEMENT */
-.module.editorial > *:nth-child(1) {
+.module.editor > *:nth-child(1) {
   margin-top: 0;
 }
 
-.module.editorial hr {
+.module.editor hr {
   margin: calc(var(--rhythm) / 2) 0 calc(var(--rhythm) / 2) 0;
   /*border: none;*/
 }
 
-.module.editorial p img,
-.module.editorial p video {
+.module.editor p img,
+.module.editor p video {
   display: block;
   margin: 0 auto 0 auto;
   width: 100%;
 }
 
-.module.editorial blockquote p {
+.module.editor blockquote p {
   padding: 0;
 }
 
 /*EMBED*/
 
-.module.editorial .embed {
+.module.editor .embed {
   position: relative;
   margin: 0 auto;
   margin-top: 2rem;
 }
 
-.module.editorial .embed > .video-ctn {
+.module.editor .embed > .video-ctn {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
@@ -49,7 +49,7 @@
   background-color: #000;
 }
 
-.module.editorial .embed iframe {
+.module.editor .embed iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -58,19 +58,19 @@
 }
 
 /*SPOTIFY*/
-.module.editorial iframe[src*="spotify"] {
+.module.editor iframe[src*="spotify"] {
   display: block;
   width: 100%;
   margin: 0 auto;
   margin-top: 2rem;
 }
 
-.module.editorial .twitter-tweet {
+.module.editor .twitter-tweet {
   margin: 0 auto;
   width: 100%;
 }
 
-.module.editorial span.dropcap {
+.module.editor span.dropcap {
   float: left;
   font-size: xx-large;
   font-weight: 700;
@@ -79,12 +79,12 @@
   padding-right: 8px;
 }
 
-.module.editorial .small * {
+.module.editor .small * {
   font-size: small;
   line-height: 1.4;
 }
 
-.module.editorial .caption * {
+.module.editor .caption * {
   font-size: small;
   line-height: 1.4;
   opacity: 0.7;
@@ -92,13 +92,13 @@
   margin-right: 10%;
 }
 
-.module.editorial .large * {
+.module.editor .large * {
   font-size: x-large;
   line-height: 1.4;
 }
 
 /*DETAILS/SUMMARY*/
-.module.editorial details {
+.module.editor details {
   margin-top: 2rem;
   padding: 1rem 0;
   width: 100%;
@@ -106,11 +106,11 @@
   border-bottom: 1px solid var(--c-fg);
 }
 
-.module.editorial details > *:last-child {
+.module.editor details > *:last-child {
   padding-bottom: 1rem;
 }
 
-.module.editorial details summary {
+.module.editor details summary {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -120,16 +120,16 @@
   padding-right: 2rem;
 }
 
-.module.editorial details summary:focus {
+.module.editor details summary:focus {
   outline: 0;
 }
 
-.module.editorial details summary::-webkit-details-marker {
+.module.editor details summary::-webkit-details-marker {
   display: none;
 }
 
-.module.editorial details summary:before,
-.module.editorial details summary:after {
+.module.editor details summary:before,
+.module.editor details summary:after {
   position: absolute;
   right: 10px;
   content: ' ';
@@ -139,19 +139,19 @@
   transition: transform 0.2s;
 }
 
-.module.editorial details summary:after {
+.module.editor details summary:after {
   transform: rotate(90deg);
 }
 
-.module.editorial details[open] summary:before {
+.module.editor details[open] summary:before {
   transform: rotate(45deg);
 }
 
-.module.editorial details[open] summary:after {
+.module.editor details[open] summary:after {
   transform: rotate(135deg);
 }
 
-.module.editorial details + details {
+.module.editor details + details {
   margin: 0;
   border-top: none;
 }

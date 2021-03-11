@@ -15,6 +15,10 @@ form:
             header.media_order:
               ordering@: +99
 
+            header.yt_videoid:
+              label: YouTube Video ID
+              type: text
+
             header.mp4:
               label: Mp4
               type: pagemediaselect
@@ -28,3 +32,4 @@ form:
             header.image_alt:
               label: Image Alt
               type: text
+
