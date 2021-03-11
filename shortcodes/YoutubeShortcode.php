@@ -11,7 +11,7 @@ class YoutubeShortcode extends Shortcode
             $url = $sc->getParameter('youtube', $this->getBbCode($sc));
             preg_match($reg, $url, $match);
             if (isset($match[1])) {
-                return '<lite-youtube videoid="' . $match[1] . '"></lite-youtube>';
+                return '<lite-youtube videoid="' . $match[1] . '" params="modestbranding=1&rel=0&autoplay=1"></lite-youtube>';
             }
         });
     }

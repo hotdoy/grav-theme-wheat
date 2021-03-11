@@ -10,7 +10,7 @@
 <div class="wrapper">
 
 	{% if yt_videoid %}
-	<lite-youtube videoid="{{ yt_videoid }}" params="modestbranding=1&rel=0"></lite-youtube>
+	<lite-youtube videoid="{{ yt_videoid }}" params="modestbranding=1&rel=0&autoplay=1"></lite-youtube>
 	{% elseif mp4 %}
 	<video autoplay loop muted poster="{{ image.url }}">
 		{% if mp4 %} <source type="video/mp4" src="{{ mp4.url }}">{% endif %}
