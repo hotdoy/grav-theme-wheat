@@ -1,7 +1,7 @@
 name: Wheat
 slug: wheat
 type: theme
-version: 0.7.7
+version: 0.7.8
 description: Wheat, a starter-kit for Grav CMS with a strong vanilla taste and Snipcart at it's heart.
 icon: rebel
 author:
@@ -41,9 +41,9 @@ form:
       title: Snipcart
       underline: true
 
-    snipcart_product_behavior:
+    snipcart_enabled:
       type: toggle
-      label: Open cart on add-item
+      label: Enable Snipcart
       highlight: 1
       default: 0
       options:
@@ -52,9 +52,9 @@ form:
       validate:
         type: bool
 
-    snipcart_enabled:
+    snipcart_product_behavior:
       type: toggle
-      label: Enable Snipcart
+      label: Open cart on add-item
       highlight: 1
       default: 0
       options:
@@ -101,14 +101,3 @@ form:
       type: textarea
       rows: 13
       label: Snazzy Maps
-
-    organization:
-      type: section
-      title: Organization Schema
-      underline: true
-
-    organization_logo:
-      type: text
-      label: Organization Logo
-      help: The absolute path to the organization logo. The image must be 112x112px at minimum. And of jpg, png, or gif format.
-      placeholder: "https://path/to/logo.png"

@@ -1,3 +1,9 @@
+# v0.7.8
+##  11/03/2020
+
+1. [](#improved)
+    * Cleaning and breaking stuff
+    
 # v0.7.7
 ##  10/03/2020
 
