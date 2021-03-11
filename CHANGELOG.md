@@ -1,3 +1,12 @@
+# v0.7.7
+##  10/03/2020
+
+1. [](#new)
+    * Media modular youtube support.
+2. [](#improved)
+    * Editorial modular renamed to Editor
+    * Force lite-youtube hi-res thumbnail (WIP)
+    
 # v0.7.6
 ##  08/03/2020
 
