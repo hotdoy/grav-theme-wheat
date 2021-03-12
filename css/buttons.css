@@ -15,8 +15,8 @@ button.button {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.025em;
-  color: var(--c-btn-fg);
-  background-color: var(--c-btn-bg);
+  color: var(--c-bg);
+  background-color: var(--c-hl);
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   text-decoration: none;
   transition-property: transform, box-shadow;
@@ -55,7 +55,7 @@ button.button:hover:active {
   position: absolute;
   top: calc(50% - 4px);
   left: calc(50% - 4px);
-  background-color: var(--c-btn-fg);
+  background-color: var(--c-bg);
   animation-name: button_waiting;
   animation-duration: 1s;
   animation-iteration-count: infinite;
