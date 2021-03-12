@@ -1,3 +1,12 @@
+# v0.7.9
+##  12/03/2020
+
+1. [](#improved)
+    * Removed Announcement
+    * Renamed Editorial bp to Editor to fit with template
+    * Use regular theme color for buttons instead of btn specific ones
+    * yt-lite: added support for custom thumbnail
+
 # v0.7.8
 ##  11/03/2020
 
