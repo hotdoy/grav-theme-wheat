@@ -9,9 +9,10 @@
 {% do assets.addJs('theme://js/fx.js', { group:'bottom' }) %}
 
 {# SNIPCART #}
-{% if theme.snipcart_enabled %}
+{% if theme.snipcart %}
 {% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css') %}
-{% do assets.addJs('https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js', { group:'bottom' }) %}
+{# Moved to base.html.twig for now. For dome readon, when Snipcart is included in the asset pipeline, it blows the bundle up to 1.4mb #}
+{# {% do assets.addJs('https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js', { group:'bottom' }) %} #}
 {% do assets.addCss('theme://css/snipcart.css') %}
 {% do assets.addJs('theme://js/snipcart.js', { group:'bottom' }) %}
 {% endif %}
@@ -31,7 +32,6 @@
 {% do assets.addCss('theme://css/reset.css') %}
 {% do assets.addCss('theme://css/text.css') %}
 {% do assets.addCss('theme://css/theme.css') %}
-{% do assets.addCss('theme://css/page-state.css') %}
 {% do assets.addCss('theme://css/fx.css') %}
 
 {# MISC #}

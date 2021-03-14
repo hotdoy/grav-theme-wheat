@@ -2,7 +2,7 @@
 
 .module.hero > .wrapper {
   position: relative;
-  max-width: var(--width-body);
+  max-width: var(--w-body);
   margin: 0 auto;
 }
 

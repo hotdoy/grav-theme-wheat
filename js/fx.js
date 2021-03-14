@@ -2,7 +2,7 @@ const FX = {
 
     Default: function() {
         ScrollOut({
-            targets: '.fx',
+            targets: ['.fx', '.module'],
             once: true,
         });
     },
