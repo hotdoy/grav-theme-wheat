@@ -1,8 +1,8 @@
 #footer {
   position: relative;
   margin: var(--rhythm) 0 0 0;
-  background-color: var(--color-bg);
-  color: var(--color-fg);
+  background-color: var(--c-bg);
+  color: var(--c-fg);
   font-size: small;
   z-index: 1000;
 }
@@ -11,14 +11,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: var(--width-body);
+  max-width: var(--w-body);
   margin: 0 auto;
   padding: var(--gutter);
 }
 
 /*#footer .copyright {}*/
 
-#footer .credit {
+/*#footer .credit {}*/
+
+#footer .credit svg {
   width: 49px;
-  height: 17px;
+  height: auto;
 }

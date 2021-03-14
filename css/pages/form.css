@@ -3,7 +3,7 @@
 /*CONTAINER*/
 body.form .form-container {
 	width: 100%;
-	max-width: var(--width-text);
+	max-width: var(--w-text);
 	margin: var(--rhythm) auto;
 	padding: 0 var(--gutter);
 }

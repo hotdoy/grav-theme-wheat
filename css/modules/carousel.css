@@ -3,7 +3,7 @@
 .module.carousel > .wrapper {
   position: relative;
   width: 100%;
-  max-width: var(--width-body);
+  max-width: var(--w-body);
   margin: 0 auto;
   padding: 0 var(--gutter);
   padding-top: 2px;
@@ -12,7 +12,7 @@
 
 .module.carousel > .wrapper > .title {
   width: 100%;
-  max-width: var(--width-body);
+  max-width: var(--w-body);
   margin-bottom: var(--gutter);
 }
 

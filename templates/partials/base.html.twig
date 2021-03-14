@@ -17,7 +17,13 @@
 		{% block head_extra %}{% endblock %}
 	</head>
 
-<body class="{{ page.template }} {{ page.header.body_classes }}">
+    {% set theme_style -%}
+    {%- if theme.color_bg %}--c-bg:{{ theme.color_bg }};{% endif -%}
+    {%- if theme.color_fg %}--c-fg:{{ theme.color_fg }};{% endif -%}
+    {%- if theme.color_hl %}--c-hl:{{ theme.color_hl }};{% endif -%}
+    {% endset -%}
+
+	<body class="{{ page.template }}{% if page.header.body_classes %} {{ page.header.body_classes }}{% endif %}" {% if theme_style %}style="{{ theme_style }}"{% endif %}>
 		{% block loading %}{% include 'partials/loading.html.twig' %}{% endblock %}
 		{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
 		<main id="main">{% block content %}{% endblock %}</main>
@@ -25,6 +31,7 @@
 		{% block snipcart %}{% include 'partials/snipcart.html.twig' %}{% endblock %}
 		{{ assets.js()|raw }}
 		{{ assets.js('bottom')|raw }}
+		<script async src="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js"></script>
 		{% block gtm_body %}{% include 'partials/gtm-body.html.twig' %}{% endblock %}
 		<!-- {{ grav.theme.getBlueprint().name }} {{ grav.theme.getBlueprint().version }} -->
 	</body>

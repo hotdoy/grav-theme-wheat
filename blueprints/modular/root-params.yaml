@@ -6,40 +6,88 @@ form:
     tabs:
       type: tabs
       active: 1
-
       fields:
-        content:
-          type: tab
-          title: Content
-          fields:
-            marquee:
-              type: section
-              title: Marquee
-              underline: true
 
-            header.marquee_enabled:
-              type: toggle
-              label: marquee_enabled
-              highlight: 1
-              default: 0
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-              validate:
-                type: bool
+        header:
+            type: tab
+            title: Header
+            fields:
 
-            header.marquee_content:
-              type: text
-              label: marquee_content
 
-            header.marquee_url:
-              type: text
-              label: marquee_url
+              marquee_section:
+                type: section
+                title: Marquee
+                underline: true
 
-            header.marquee_color_bg:
-              type: colorpicker
-              label: marquee_color_bg
+              header.marquee:
+                type: toggle
+                label: Marquee
+                highlight: 1
+                default: 0
+                options:
+                  1: PLUGIN_ADMIN.ENABLED
+                  0: PLUGIN_ADMIN.DISABLED
+                validate:
+                  type: bool
 
-            header.marquee_color_fg:
-              type: colorpicker
-              label: marquee_color_fg
+              header.marquee_content:
+                type: text
+                label: Content
+
+              header.marquee_color_bg:
+                type: colorpicker
+                label: Background Color
+
+              header.marquee_color_fg:
+                type: colorpicker
+                label: Foreground Color
+
+              header.header_link_section:
+                type: section
+                title: Header Links
+                underline: true
+
+              header.header_links:
+                name: header_links
+                type: list
+                label: Header Links
+                fields:
+                  .label:
+                    type: text
+                    label: Label
+                  .page:
+                    type: pages
+                    label: Page
+                    show_all: false
+                    show_modular: false
+                    show_root: false
+
+        # footer:
+        #   type: tab
+        #   title: Footer
+        #   fields:
+        #     header.contact:
+        #       label: Contact
+        #       type: editor
+        #     header.footer_nav:
+        #       name: footer_nav
+        #       type: list
+        #       label: Footer Nav
+        #       fields:
+        #         .label:
+        #           type: text
+        #           label: Label
+        #         .links:
+        #           name: links
+        #           type: list
+        #           label: Links
+        #           fields:
+        #             .label:
+        #               type: text
+        #               label: Label
+        #             .link:
+        #               type: pages
+        #               label: Page
+        #               show_all: false
+        #               show_modular: false
+        #               show_root: false

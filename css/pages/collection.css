@@ -2,7 +2,7 @@
 
 .collection-grid-wrapper {
   padding: 0 var(--gutter);
-  max-width: var(--width-body);
+  max-width: var(--w-body);
   margin: 0 auto;
 }
 
@@ -11,7 +11,7 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--gutter);
   width: 100%;
-  max-width: var(--width-body);
+  max-width: var(--w-body);
   margin: 0 auto;
 }
 

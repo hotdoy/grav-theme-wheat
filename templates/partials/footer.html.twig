@@ -1,6 +1,7 @@
+{% import "partials/svg.html.twig" as svg %}
 <footer id="footer">
 	<div class="wrapper">
 		<div class="copyright">© {{ site.title }} {{ "now"|date("Y") }}</div>
-		<a class="credit" href="https://calotte.ca">{% include 'partials/calotte.html.twig' %}</a>
+		<a class="credit" href="https://calotte.ca">{{ svg.calotte() }}</a>
 	</div>
 </footer>

@@ -1,3 +1,17 @@
+# v0.8.0
+##  12/03/2020
+
+1. [](#improved)
+    * Colors are now a setting in theme blueprint
+    * CSS custom properties cleanup
+    * Header nav is now managed trough root_params
+    * Scroll FX no longer user specific classes to target elements
+    * Page state css moved to loading.css
+    * Cleaned Marquee
+    * Use macro to store svgs
+    * Updated Calotte logo
+    * Moved Snipcart js  outside of pipeline. (for some reason it blows the the bundle to 1.4mb when included)
+
 # v0.7.9
 ##  12/03/2020
 

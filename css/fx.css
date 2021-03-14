@@ -1,6 +1,5 @@
-/*.fx {}*/
-
-.fx--fadein {
+.fx, 
+.module {
 	opacity: 0;
 	transform: translateY(15px);
 	transition-duration: 0.5s;
@@ -8,7 +7,8 @@
 	transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
 
-.fx--fadein[data-scroll="in"] {
+.fx[data-scroll="in"],
+.module[data-scroll="in"] {
 	opacity: 1;
 	transform: translateY(0px);
 }

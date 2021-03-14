@@ -5,7 +5,7 @@
   margin: 0 auto;
   margin-top: var(--rhythm);
   text-align: center;
-  max-width: var(--width-text);
+  max-width: var(--w-text);
 }
 
 @media (min-width: 835px) {

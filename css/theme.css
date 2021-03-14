@@ -41,13 +41,11 @@
   --c-hl: #4285F4;
 
   --c-border: #e4e4e4;
-  --c-btn-bg: var(--c-hl);
-  --c-btn-fg: white;
-  --c-placeholder: #ced4da;
+  --c-ph: #ced4da;
 
-  --width-text: 735px;
-  --width-body: 1200px;
-  --width-full: 1920px;
+  --w-text: 735px;
+  --w-body: 1200px;
+  --w-full: 1920px;
 
   --fw-regular: 400;
   --fw-bold: 700;

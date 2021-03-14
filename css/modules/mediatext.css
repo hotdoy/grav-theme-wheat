@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    max-width: var(--width-body);
+    max-width: var(--w-body);
     margin: 0 auto;
     padding: 0 var(--gutter);
     align-items: center;

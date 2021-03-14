@@ -6,10 +6,10 @@ Make sure to disable built-in CSS.
 .notices {
   position: relative;
   width: 100%;
-  max-width: var(--width-text);
+  max-width: var(--w-text);
   margin: 2rem 0;
   padding: 1rem;
-  border-radius: var(--radius-small);
+  border-radius: 4px;
 }
 
 .notices > *:nth-child(1) {

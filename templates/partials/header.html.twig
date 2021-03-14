@@ -1,30 +1,30 @@
-{% import "macros/navigation.html.twig" as navigation %}
-
 <header id="header">
     
     {# HEADER #}
     <div class="shim"></div>
 
     {# MARQUEE #}
-    {% if root_params.header.marquee_enabled %}
+    {% if root_params.header.marquee %}
     {% set marquee_styles %}
-    {% if root_params.header.marquee_color_bg %}--color-marquee-bg:{{ root_params.header.marquee_color_bg }};{% endif %}
-    {% if root_params.header.marquee_color_fg %}--color-marquee-fg:{{ root_params.header.marquee_color_fg }};{% endif %}
+    {% if root_params.header.marquee_color_bg %}--c-hl:{{ root_params.header.marquee_color_bg }};{% endif %}
+    {% if root_params.header.marquee_color_fg %}--c-gb:{{ root_params.header.marquee_color_fg }};{% endif %}
     {% endset %}
-    <section class="marquee"{% if marquee_styles %} style="{{ marquee_styles }}"{% endif %}>
-        <a href="{{ root_params.header.marquee_url }}">{{ root_params.header.marquee_content|raw }}</a>
-    </section>
+    <section class="marquee"{% if marquee_styles %} style="{{ marquee_styles }}"{% endif %}>{{ root_params.header.marquee_content|markdown|raw }}</section>
     {% endif %}
 
     <section class="bar">
         <div class="wrapper">
 
-            <a class="logo" href="{{ home_url }}" aria-label="Logo">{% include 'partials/logo.html.twig' %}</a>
+            <a class="logo" href="{{ home_url }}" aria-label="Site logo">{% include 'partials/logo.html.twig' %}</a>
 
             <div class="nav-wrapper">
+
                 <nav>
                     {% include 'partials/langswitcher.html.twig' %}
-                    {{ navigation.TREE(pages) }}
+                    {% for link in root_params.header.header_links %}
+                    {% set p = page.find(link.page) %}
+                    <li class="{{ (p.active or p.activeChild) ? ' active' : '' }}"><a href="{{ p.url }}">{{ link.label }}</a></li>
+                    {% endfor %}
                 </nav>
 
                 {# SNIPCART CHECKOUT #}
@@ -39,6 +39,7 @@
                 <button class="burger js-panel-open" aria-label="open menu">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"></path><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
                 </button>
+                
             </div>
         </div>
     </section>
@@ -64,7 +65,10 @@
             </div>
         </div>
         <nav>
-            {{ navigation.subpanel(pages) }}
+            {% for link in root_params.header.header_links %}
+            {% set p = page.find(link.page) %}
+            <li class="{{ (p.active or p.activeChild) ? ' active' : '' }}"><a href="{{ p.url }}">{{ link.label }}</a></li>
+            {% endfor %}
             {% include 'partials/langswitcher.html.twig' %}
         </nav>
     </section>

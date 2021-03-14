@@ -3,7 +3,7 @@
 .module.quotes > .wrapper {
   position: relative;
   width: 100%;
-  max-width: var(--width-body);
+  max-width: var(--w-body);
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
@@ -67,9 +67,9 @@
 }
 
 .module.quotes .swiper-pagination-bullet {
-  background: var(--color-panel-fg, white);
+  background: var(--c-panel-fg, white);
 }
 
 .module.quotes .swiper-pagination-bullet-active {
-  background: var(--color-panel-fg, white);
+  background: var(--c-panel-fg, white);
 }
