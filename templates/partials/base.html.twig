@@ -29,7 +29,6 @@
 		<main id="main">{% block content %}{% endblock %}</main>
 		{% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %}
 		{% block snipcart %}{% include 'partials/snipcart.html.twig' %}{% endblock %}
-		{{ assets.js()|raw }}
 		{{ assets.js('bottom')|raw }}
 		<script async src="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js"></script>
 		{% block gtm_body %}{% include 'partials/gtm-body.html.twig' %}{% endblock %}

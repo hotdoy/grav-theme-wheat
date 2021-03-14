@@ -1,6 +1,6 @@
 {# INLINE #}
 {% do assets.addCss('theme://css/loading.css', {loading : 'inline', position: 'before'}) %}
-{% do assets.addJs('theme://js/page-state.js', {loading : 'inline'}) %}
+{% do assets.addJs('theme://js/page-state.js', {loading : 'inline', position: 'before', group: 'top'}) %}
 
 {# SITE #}
 {% do assets.addJs('theme://js/links.js', { group:'bottom'}) %}

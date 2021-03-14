@@ -1,5 +1,11 @@
+# v0.8.1
+##  14/03/2020
+
+1. [](#bugfix)
+    * Fixed js not inlining properly
+
 # v0.8.0
-##  12/03/2020
+##  14/03/2020
 
 1. [](#improved)
     * Colors are now a setting in theme blueprint
