@@ -52,11 +52,11 @@
 
 .module.carousel .swiper-slide {
   overflow: visible;
-  width: 40%;
+  width: 60%;
 }
 
 @media (min-width: 768px) {
   .module.carousel .swiper-slide {
-    width: 27%;
+    width: 39%;
   }
 }

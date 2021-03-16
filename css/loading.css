@@ -1,23 +1,47 @@
 .loading {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--c-bg);
-  z-index: 4000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--c-bg);
+    z-index: 4000;
 }
+
 [data-page-state^='complete'] .loading {
-  transition-property: opacity visibility;
-  transition-duration: 0.2s;
-  opacity: 0;
-  visibility: hidden;
+    transition-property: opacity visibility;
+    transition-duration: 0.2s;
+    opacity: 0;
+    visibility: hidden;
 }
 
 [data-page-state^='complete-navigating'] .loading {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
+}
+
+.loading svg {
+    margin-top: 360px;
+    width: 100%;
+    height: auto;
+    color: #eeeeee;
+    animation-name: skeleton;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+@keyframes skeleton {
+  0% {color: #e1e1e1;}
+  50% {color: #f1f1f1;}
+  100% {color: #e1e1e1;}
+}
+
+@media (min-width: 835px) {
+    .loading svg {
+        display: none;
+    }
 }
