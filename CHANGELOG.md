@@ -1,3 +1,10 @@
+# v0.8.2
+##  15/03/2020
+
+1. [](#improved)
+    * Loading no has a "skeleton"
+    * Carousel and Collection have smaller grid-gap on mobile
+
 # v0.8.1
 ##  14/03/2020
 

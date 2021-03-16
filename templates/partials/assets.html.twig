@@ -11,7 +11,7 @@
 {# SNIPCART #}
 {% if theme.snipcart %}
 {% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css') %}
-{# Moved to base.html.twig for now. For dome readon, when Snipcart is included in the asset pipeline, it blows the bundle up to 1.4mb #}
+{# Moved to base.html.twig for now. For some reason, when Snipcart is included in the asset pipeline, it blows the bundle up to 1.4mb #}
 {# {% do assets.addJs('https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js', { group:'bottom' }) %} #}
 {% do assets.addCss('theme://css/snipcart.css') %}
 {% do assets.addJs('theme://js/snipcart.js', { group:'bottom' }) %}
