@@ -9,7 +9,8 @@
 .collection-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: var(--gutter);
+  /*grid-gap: var(--gutter);*/
+  grid-gap: 10px;
   width: 100%;
   max-width: var(--w-body);
   margin: 0 auto;
