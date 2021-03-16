@@ -7,7 +7,7 @@ project_dir
 | |_grav-theme (symlink)
 |_grav-theme
 
-SYMLINKS
+SYMLINKS - (Vince's Desktop)
 
 Webroot to Grav install
 mklink /D D:\dev\xampp\htdocs\wheat D:\dev\_PROJECTS\wheat\grav-admin
@@ -17,3 +17,15 @@ mklink /D D:\dev\_PROJECTS\wheat\grav-admin\user D:\dev\_PROJECTS\wheat\user
 
 user/themes/project-theme to grav-theme-name
 mklink /D D:\dev\_PROJECTS\wheat\user\themes\wheat D:\dev\_PROJECTS\wheat\grav-theme-wheat
+
+
+SYMLINKS (Vince's - Laptop)
+
+Webroot to Grav install
+mklink /D C:\xampp\htdocs\wheat C:\Users\vincent\_calotte\wheat\grav-admin
+
+Grav-admin user folder to project user
+mklink /D C:\Users\vincent\_calotte\wheat\grav-admin\user C:\Users\vincent\_calotte\wheat\user
+
+user/themes/project-theme to grav-theme-name
+mklink /D C:\Users\vincent\_calotte\wheat\user\themes\wheat C:\Users\vincent\_calotte\wheat\grav-theme-wheat
