@@ -1,10 +1,11 @@
 {% set item = item|default(item) %}
 {% set image = image|default(item.header.image ? item.media[item.header.image]) %}
 {% set image_alt = image_alt|default(item.header.image_alt ?? '') %}
-{% set title = title|default(item.title) %}
-{% set price = price|default(item.header.price) %}
+{% set title = title|default(item.header.title) %}
+{% set summary = summary|default(item.header.summary ?? item.summary) %}
+{% set date = date|default(item.header.date) %}
 
-<article class="product__card">
+<article class="post__card">
 	<a href="{{ item.url }}">
 		<div class="media-ctn">
 			{% if image %}
@@ -13,7 +14,8 @@
 		</div>
 		<div class="text small">
 			<h3>{{ title }}</h3>
-			<p>{{ price|number_format(2, ',', ' ') }} $</p>
+			<time dateime="{{ date|date('U') }}">{{ date|date('Y/m/d') }}</time>
+			<p>{{ summary|striptags  }}</p>
 		</div>
 	</a>
 </article>

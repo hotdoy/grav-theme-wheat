@@ -40,16 +40,16 @@ form:
                 min: 0
                 required: true
 
-            header.main_image:
+            header.image:
               type: pagemediaselect
-              label: main_image
+              label: image
               help: Main image representing the product (will also appear in the cart).
               accept:
                 - jpg
 
-            header.main_image_alt:
+            header.image_alt:
               type: text
-              label: main_image_alt
+              label: image_alt
 
             header.short_description:
               type: text

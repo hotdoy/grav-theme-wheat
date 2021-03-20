@@ -1,3 +1,16 @@
+# v0.8.2
+##  20/03/2020
+
+1. [](#improved)
+    * All card template
+    * Default header
+    * Text h1
+    * Breadcrumb
+    * Readme
+2. [](#new)
+    * Post
+    * Post card
+
 # v0.8.1
 ##  14/03/2020
 

@@ -1,0 +1,21 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+	{# HEADER #}
+	{% include 'partials/default-header.html.twig' with {'date': page.date} %}
+
+	{# MEDIA #}
+	{% include 'modular/media.html.twig' %}
+	
+	{# CONTENT #}
+	{% if page.content %}
+	{% include 'modular/editor.html.twig' %}
+	{% endif %}
+
+	{# MODULES #}
+	{% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
+	{{ module.content|raw }}
+	{% endfor %}
+
+{% endblock %}
