@@ -1,4 +1,4 @@
-# v0.8.2
+# v0.8.3
 ##  20/03/2020
 
 1. [](#improved)
@@ -10,6 +10,13 @@
 2. [](#new)
     * Post
     * Post card
+
+# v0.8.2
+##  15/03/2020
+
+1. [](#improved)
+    * Loading no has a "skeleton"
+    * Carousel and Collection have smaller grid-gap on mobile
 
 # v0.8.1
 ##  14/03/2020

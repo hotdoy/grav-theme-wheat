@@ -1,12 +1,17 @@
 (function () {
-  "use strict";
+  	"use strict";
 
-  const initCarousel = function () {
-    var swiper = new Swiper(".module.carousel .swiper-container", {
-      slidesPerView: "auto",
-      spaceBetween: 20,
-    });
-  };
+	const initCarousel = function () {
+		var swiper = new Swiper(".module.carousel .swiper-container", {
+	  		slidesPerView: "auto",
+	  		spaceBetween: 10,
+	  		breakpoints: {
+	  			835: {
+	  				spaceBetween: 20,
+	  			},
+			},
+		});
+	};
 
-  initCarousel();
+  	initCarousel();
 })();
