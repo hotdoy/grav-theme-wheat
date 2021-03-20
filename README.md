@@ -18,27 +18,27 @@ If you fork this theme, be aware that I use the following Github Actions so you 
 - Keep it light and fast. Time is money.
 - Think about the added value all the time. If something does not add value, ditch it.
 - Never block the user's journey unless it prints money.
-- Your site must be like a Call of Duty map. You should be able to never stop running and never be trapped in a corner.
+- Your site must be like a Call of Duty map. If your users get trapped in a corner, they are dead.
 
 ## Pages
 - Default
 - Collection
 - Product
+- Post
 
 ## Modular
 - Hero
 - Mediatext
-- Editorial
+- Editor
 - Quotes
 - Map
+- Media
 - Carousel
-- Section Start / End (WIP)
 
-## Required plugins
-- Breadcrumbs
-- Shortcode Core
-
-## Recommended Plugins
+## Plugins
+- AutoDate
+- Breadcrumbs `[built-in-css: false, include-home: false, include-current-page: false, link-trailing: false]`
+- Shortcode Core `[custom-shortcodes: /user/themes/wheat/shortcodes, load-fontawesome: false]`
+- Markdown Notices `[built-in-css: false]`
 - PreCache
 - AdvancedPageCache
-- AutoDate

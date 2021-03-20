@@ -1,0 +1,32 @@
+/*body.post {}*/
+
+
+
+
+
+/*CARD*/
+.post__card {
+    position: relative;
+}
+
+.post__card .media-ctn {
+    position: relative;
+    padding-top: 100%;
+    background-color: var(--c-ph);
+}
+
+.post__card .media-ctn img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post__card h3 {
+	margin-top: 0.5rem;
+}
+
+.post__card time {
+	color: var(--c-hl);
+}

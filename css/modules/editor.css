@@ -124,7 +124,7 @@
   outline: 0;
 }
 
-.module.editor details summary::-webkit-details-marker {
+.module.editor details summary::marker {
   display: none;
 }
 

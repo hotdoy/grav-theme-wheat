@@ -1,0 +1,34 @@
+title: post
+"@extends": default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            header.image:
+              type: pagemediaselect
+              label: image
+              accept:
+                - jpg
+                - gif
+
+            header.image_alt:
+              type: text
+              label: image_alt
+
+            header.thumbnail:
+              type: pagemediaselect
+              label: thumbnail
+              accept:
+                - jpg
+
+            header.thumbnail_alt:
+              type: text
+              label: thumbnail_alt
+
+            header.summary:
+              type: text
+              label: summary

@@ -148,44 +148,25 @@
 
 
 /*CARD*/
+
 /*.product__card {}*/
 
-.product__card .media {
+.product__card .media-ctn {
   position: relative;
   padding-top: 133%;
-  background-color: #f1f1f1;
+  background-color: var(--c-ph);
   overflow: hidden;
 }
 
-.product__card .media img {
-  object-fit: cover;
-  object-position: center;
+.product__card img {
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-/*.product__card .info {}*/
-
-.product__card .name {
-  margin-top: 5px;
-  font-size: small;
-}
-
-@media (min-width: 835px) {
-  .product__card .name {
-    margin-top: 10px;
-    font-size: medium;
-  }
-}
-
-.product__card .price {
-  margin-top: 2px;
-  font-size: x-small;
-}
-
-@media (min-width: 835px) {
-  .product__card .price {
-    margin-top: 5px;
-    font-size: small;
-  }
+.product__card h3 {
+  margin-top: 0.5rem;
 }
