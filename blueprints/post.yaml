@@ -11,6 +11,8 @@ form:
             header.image:
               type: pagemediaselect
               label: image
+              style: vertical
+              ordering@: header.display_title
               accept:
                 - jpg
                 - gif
@@ -18,17 +20,5 @@ form:
             header.image_alt:
               type: text
               label: image_alt
-
-            header.thumbnail:
-              type: pagemediaselect
-              label: thumbnail
-              accept:
-                - jpg
-
-            header.thumbnail_alt:
-              type: text
-              label: thumbnail_alt
-
-            header.summary:
-              type: text
-              label: summary
+              style: vertical
+              ordering@: header.image

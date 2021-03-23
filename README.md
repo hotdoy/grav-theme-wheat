@@ -27,12 +27,12 @@ If you fork this theme, be aware that I use the following Github Actions so you 
 - Post
 
 ## Modular
-- Hero
-- Mediatext
 - Editor
+- Media
+- Mediatext
+- Promo
 - Quotes
 - Map
-- Media
 - Carousel
 
 ## Plugins

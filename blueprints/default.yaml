@@ -12,6 +12,8 @@ form:
               type: text
               style: vertical
               label: Display Title
+            content:
+              label: Content
 
         options:
           fields:

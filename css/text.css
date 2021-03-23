@@ -55,6 +55,7 @@
     color: var(--c-fg);
     font-size: 2.25rem;
     line-height: 2.5rem;
+    font-weight: var(--fw-bold);
 }
 @media (min-width: 835px) {
     .text h1, 

@@ -24,7 +24,7 @@
 .module.editor p img,
 .module.editor p video {
   display: block;
-  margin: 0 auto 0 auto;
+  margin: 2rem auto;
   width: 100%;
 }
 
@@ -56,6 +56,10 @@
   width: 100%;
   height: 100%;
 }
+
+
+
+
 
 /*SPOTIFY*/
 .module.editor iframe[src*="spotify"] {
@@ -96,6 +100,10 @@
   font-size: x-large;
   line-height: 1.4;
 }
+
+
+
+
 
 /*DETAILS/SUMMARY*/
 .module.editor details {
