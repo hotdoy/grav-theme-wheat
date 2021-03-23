@@ -33,3 +33,7 @@ form:
               label: Image Alt
               type: text
 
+            header.caption:
+              type: text
+              label: Caption (TODO)
+

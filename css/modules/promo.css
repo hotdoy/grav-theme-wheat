@@ -1,0 +1,81 @@
+/* .module.promo {} */
+
+.module.promo>.wrapper {
+    position: relative;
+    max-width: var(--w-body);
+    margin: 0 auto;
+}
+
+.module.promo .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 100%;
+}
+
+@media (min-width: 735px) {
+    .module.promo .inner {
+        padding-top: 56.25%;
+    }
+}
+
+.module.promo .media-ctn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 var(--gutter);
+    background-color: var(--c-bg);
+    overflow: hidden;
+}
+
+.module.promo .media-ctn img,
+.module.promo .media-ctn video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.module.promo .content-ctn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 var(--gutter);
+    padding: calc(var(--gutter) * 2);
+    color: var(--c-fg);
+    text-align: center;
+}
+
+.module.promo p {
+    margin-top: 10px;
+    line-height: 1.3;
+}
+
+.module.promo .button {
+    margin-top: var(--gutter);
+}
+
+.module.promo>.wrapper:hover .button {
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    ;
+}
+
+.module.promo>.wrapper:hover:active .button {
+    transform: translateY(1px);
+}
+
+.module.promo .button {
+    color: var(--c-hl);
+    background-color: white;
+}
+
+.module.promo + .module.promo {
+  margin-top: var(--gutter);
+}

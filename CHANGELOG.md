@@ -1,3 +1,11 @@
+# v0.8.4
+##  23/03/2020
+
+1. [](#improved)
+    * Hero renamed to Promo
+    * Cleaned up Post unused field
+    * Cleaned collection classes
+
 # v0.8.3
 ##  20/03/2020
 

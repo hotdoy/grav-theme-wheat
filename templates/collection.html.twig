@@ -21,9 +21,9 @@
     {% include 'partials/default-header.html.twig' with {title: title} %}
     
     {# LIST #}
-    <section class="module fx fx--fadein">
-        <div class="collection-grid-wrapper">
-            <div class="collection-grid" data-pagination-list>
+    <section class="module collection__grid">
+        <div class="wrapper">
+            <div class="grid" data-pagination-list>
                 {# {% for item in references %}
                 {% set item = page.find(item.page) %}
                 {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item} %}

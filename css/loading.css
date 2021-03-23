@@ -24,7 +24,8 @@
 }
 
 .loading svg {
-    margin-top: 360px;
+    position: absolute;
+    top: 0;
     width: 100%;
     height: auto;
     color: #eeeeee;
