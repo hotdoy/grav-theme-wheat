@@ -23,7 +23,7 @@
 					<div class="swiper-wrapper">
 						{% if main_image %}
 						<div class="swiper-slide">
-							<div class="fill">{{ main_image.html('', main_image_alt)|raw }}</div>
+							<div class="fill">{{ main_image.cropResize(1000).loading.html('', main_image_alt)|raw }}</div>
 						</div>
 						{% endif %}
 						{% for item in gallery_images %}
@@ -31,7 +31,7 @@
 							{% set image = item.image ? page.media[item.image] %}
 							{% set image_alt = item.image_alt ?? '' %}
 							{% if image %}
-							<div class="fill">{{ image.html('', image_alt)|raw }}</div>
+							<div class="fill">{{ image.cropResize(1000).loading.html('', image_alt)|raw }}</div>
 							{% endif %}
 						</div>
 						{% endfor %}
@@ -42,7 +42,7 @@
 				{# SINGLE IMAGE	 #}
 				{% elseif main_image %}
 				<div class="single-image">
-					<div class="fill">{{ main_image.html('', main_image_alt) }}</div>
+					<div class="fill">{{ main_image.cropResize(1000).loading.html('', main_image_alt) }}</div>
 				</div>
 				{% endif %}
 

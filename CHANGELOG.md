@@ -1,3 +1,9 @@
+# v0.8.5
+##  24/03/2020
+
+1. [](#improved)
+    * Images loading, compression and resizing
+
 # v0.8.4
 ##  23/03/2020
 
