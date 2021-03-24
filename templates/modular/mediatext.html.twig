@@ -15,7 +15,7 @@
 			{% if mp4 %} <source type="video/mp4" src="{{ mp4.url }}">{% endif %}
 		</video>
 		{% elseif image %}
-		{{ image.html('', image_alt)|raw }}
+		{{ image.cropResize(1000).loading.html('', image_alt)|raw }}
 		{% endif %}
 	</div>
 	<div class="content text prose">
