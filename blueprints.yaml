@@ -43,8 +43,8 @@ form:
     color_hl:
       type: colorpicker
       label: Highlight Color
-
-    ga:
+        
+    ga_section:
       type: section
       title: Google Analytics
       underline: true
@@ -102,7 +102,7 @@ form:
       validate:
         type: bool
 
-    facebook:
+    facebook_section:
       type: section
       title: Facebook
       underline: true
@@ -112,7 +112,7 @@ form:
       label: Facebook App Id
       placeholder: "123456789123456"
 
-    twitter:
+    twitter_section:
       type: section
       title: Twitter
       underline: true
@@ -122,7 +122,7 @@ form:
       label: Twitter Site
       placeholder: "@twitter_handle"
 
-    gmaps:
+    gmaps_section:
       type: section
       title: Google Maps
       underline: true
