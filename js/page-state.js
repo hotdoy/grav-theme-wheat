@@ -22,11 +22,9 @@ const PageState = {
             // COMPLETE
             case 'interactive':
                 PageState.state = 'complete';
-
                 setTimeout(function(){ 
                     FX.Init();
                 }, PageState.fxDelay);
-
                 PageState.UpdateStateAttr(PageState.completeDelay);
                 break;
 
