@@ -1,3 +1,10 @@
+# v0.8.6
+##  27/03/2020
+
+1. [](#improved)
+    * Map modular
+    * Monstly invisible stuff
+
 # v0.8.5
 ##  24/03/2020
 
