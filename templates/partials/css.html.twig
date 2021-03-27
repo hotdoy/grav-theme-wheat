@@ -2,8 +2,10 @@
 {% do assets.addCss('theme://css/loading.css', {loading : 'inline', position: 'before'}) %}
 
 {# SNIPCART #}
+{% if theme.snipcart %}
 {% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css') %}
 {% do assets.addCss('theme://css/snipcart.css') %}
+{% endif %}
 
 {# SWIPER #}
 {% do assets.addCss('https://unpkg.com/swiper/swiper-bundle.min.css') %}
