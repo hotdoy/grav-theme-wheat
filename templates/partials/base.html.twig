@@ -1,7 +1,5 @@
 {{ dump(page) }}
 {% set root_params = page.find('/_root-params/') %}
-{% include 'partials/assets.html.twig' %}
-
 <!DOCTYPE html> 
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 	<head>
@@ -10,6 +8,8 @@
 		{% block favicon %}{% include 'partials/favicon.html.twig' %}{% endblock %}
 		{% block assets deferred %}
 		<link rel="preload" href="{{ url('theme://fonts/Inter/inter-v1-latin-regular.woff2', true) }}" as="font" crossorigin>
+		{% include 'partials/js.html.twig' %}
+		{% include 'partials/css.html.twig' %}
 		{{ assets.css()|raw }}
 		{{ assets.js('top')|raw }}
 		{% endblock %}
@@ -34,5 +34,4 @@
 		{% block gtm_body %}{% include 'partials/gtm-body.html.twig' %}{% endblock %}
 		<!-- {{ grav.theme.getBlueprint().name }} {{ grav.theme.getBlueprint().version }} -->
 	</body>
-
 </html>
