@@ -11,7 +11,6 @@
 
 {% block content %}
 <div class="wrapper">
-    {% if theme.gmaps_key %}
     <div
     class="map-ctn" 
     id="map-{{ random() }}" 
@@ -20,7 +19,6 @@
     data-key="{{ theme.gmaps_key }}"
     data-markers='{{ markers }}'>
     </div>
-    {% endif %}
 </div>
 {% endblock %}
 

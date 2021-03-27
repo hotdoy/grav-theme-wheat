@@ -1,32 +1,14 @@
 {# INLINE #}
 {% do assets.addCss('theme://css/loading.css', {loading : 'inline', position: 'before'}) %}
-{% do assets.addJs('theme://js/page-state.js', {loading : 'inline', position: 'before', group: 'top'}) %}
-
-{# SITE #}
-{% do assets.addJs('theme://js/links.js', { group:'bottom'}) %}
-{% do assets.addJs('theme://js/header.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/pagination.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/fx.js', { group:'bottom' }) %}
 
 {# SNIPCART #}
 {% if theme.snipcart %}
 {% do assets.addCss('https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css') %}
-{# Moved to base.html.twig for now. For some reason, when Snipcart is included in the asset pipeline, it blows the bundle up to 1.4mb #}
-{# {% do assets.addJs('https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js', { group:'bottom' }) %} #}
 {% do assets.addCss('theme://css/snipcart.css') %}
-{% do assets.addJs('theme://js/snipcart.js', { group:'bottom' }) %}
 {% endif %}
 
 {# SWIPER #}
 {% do assets.addCss('https://unpkg.com/swiper/swiper-bundle.min.css') %}
-{% do assets.addJs('https://unpkg.com/swiper/swiper-bundle.min.js', { group:'bottom' }) %}
-
-{# SCROLL-OUT #}
-{% do assets.addJs('https://unpkg.com/scroll-out/dist/scroll-out.min.js', { group:'bottom' }) %}	
-
-{# LITE YT #}
-{% do assets.addCss('theme://css/lite-yt-embed.css') %}
-{% do assets.addJs('theme://js/lite-yt-embed.js', { group:'bottom' }) %}
 
 {# THEME #}
 {% do assets.addCss('theme://css/reset.css') %}
@@ -40,18 +22,16 @@
 {% do assets.addCss('theme://css/buttons.css') %}
 {% do assets.addCss('theme://css/notices.css') %}
 {% do assets.addCss('theme://css/pagination.css') %}
+{% do assets.addCss('theme://css/lite-yt-embed.css') %}
 
 {# MODULES #}
 {% do assets.addCss('theme://css/modules/module.css') %}
 {% do assets.addCss('theme://css/modules/editor.css') %}
 {% do assets.addCss('theme://css/modules/mediatext.css') %}
 {% do assets.addCss('theme://css/modules/map.css') %}
-{% do assets.addJs('theme://js/map.js', { group:'bottom' }) %}
 {% do assets.addCss('theme://css/modules/quotes.css') %}
-{% do assets.addJs('theme://js/quotes.js', { group:'bottom' }) %}
 {% do assets.addCss('theme://css/modules/promo.css') %}
 {% do assets.addCss('theme://css/modules/carousel.css') %}
-{% do assets.addJs('theme://js/carousel.js', { group:'bottom' }) %}
 {% do assets.addCss('theme://css/modules/features.css') %}
 {% do assets.addCss('theme://css/modules/media.css') %}
 
@@ -60,12 +40,10 @@
 {% do assets.addCss('theme://css/pages/error.css') %}
 {% do assets.addCss('theme://css/pages/collection.css') %}
 {% do assets.addCss('theme://css/pages/product.css') %}
-{% do assets.addJs('theme://js/product.js', { group:'bottom' }) %}
 {% do assets.addCss('theme://css/pages/landing.css') %}
 {% do assets.addCss('theme://css/pages/form.css') %}
 {% do assets.addCss('theme://css/pages/post.css') %}
 
 {# MISC #}
-{% do assets.addCss('theme://css/utils.css', 2) %}
-{% do assets.addCss('theme://css/custom.css', 1) %}
-{% do assets.addJs('theme://js/custom.js', { group:'bottom' }) %}
+{% do assets.addCss('theme://css/utils.css') %}
+{% do assets.addCss('theme://css/custom.css') %}

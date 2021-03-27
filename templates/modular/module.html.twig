@@ -7,6 +7,7 @@
 {%- if body_classes %} {{ body_classes }}{% endif %}
 {%- if extra_classes %} {{ extra_classes }}{% endif %}
 {% endset -%}
+
 <section class="module {{ computed_classes }}">
 {% block content %}{% endblock %}
 </section>

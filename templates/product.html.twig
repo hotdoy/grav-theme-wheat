@@ -56,7 +56,7 @@
 					<div class="description text">{{ page.content|raw }}</div>
 					<div class="price">{{ price }} $</div>
 			
-					{% if theme.snipcart_enabled and theme.snipcart_public_key %}
+					{% if theme.snipcart %}
 					<button class="snipcart-add-item button"
 					data-item-id="{{ page.header.id }}"
 					data-item-price="{{ page.header.price }}"
