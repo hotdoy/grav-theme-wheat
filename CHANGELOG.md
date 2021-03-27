@@ -1,3 +1,9 @@
+# v0.8.7
+##  27/03/2020
+
+1. [](#improved)
+    * Better FXdelay handling
+
 # v0.8.6
 ##  27/03/2020
 

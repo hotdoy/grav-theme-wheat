@@ -4,6 +4,7 @@ const PageState = {
     completeDelay: 0,
     navigationDelay: 0,
     fxDelay: 0,
+    t: performance.now(),
 
     Log: function(message) {
         console.log('%c PAGESTATE: ' + message, 'color:green;');
@@ -15,6 +16,7 @@ const PageState = {
 
             // INTERACTIVE
             case 'loading':
+                PageState.t = performance.now();
                 PageState.state = 'interactive';
                 PageState.UpdateStateAttr();
                 break;
@@ -22,9 +24,15 @@ const PageState = {
             // COMPLETE
             case 'interactive':
                 PageState.state = 'complete';
-                setTimeout(function(){ 
-                    FX.Init();
-                }, PageState.fxDelay);
+                PageState.t = performance.now();
+                const adjustedFxDelay = PageState.fxDelay - PageState.t;
+                if (adjustedFxDelay < 0) {
+                   FX.Init(); 
+                } else {
+                    setTimeout(function(){ 
+                        FX.Init();
+                    }, adjustedFxDelay);                
+                }
                 PageState.UpdateStateAttr(PageState.completeDelay);
                 break;
 
@@ -35,7 +43,7 @@ const PageState = {
                 break;
         }
 
-        PageState.Log(PageState.state);
+        PageState.Log(PageState.state + '\t\t' + PageState.t);
     },
 
     UpdateStateAttr: function(delay) {
@@ -43,14 +51,10 @@ const PageState = {
             document.body.setAttribute('data-page-state', PageState.state);
         }, delay);
     },
-
-    Init: function() {
-        PageState.UpdateState(); 
-    },
 };
 
 PageState.state = document.readyState;
-PageState.Log(PageState.state);
+PageState.Log(PageState.state + '\t\t\t' + PageState.t);
 document.onreadystatechange = function() {
     PageState.UpdateState(); 
 }
