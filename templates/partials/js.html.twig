@@ -9,7 +9,6 @@
 {% do assets.addJs('theme://js/lite-yt-embed.js', { group:'bottom' }) %}
 
 {# CDN #}
-{% if theme.snipcart %}{% do assets.addJs('theme://js/snipcart.js', { group:'bottom' }) %}{% endif %}
 {% do assets.addJs('https://unpkg.com/swiper/swiper-bundle.min.js', { group:'bottom' }) %}
 {% do assets.addJs('https://unpkg.com/scroll-out/dist/scroll-out.min.js', { group:'bottom' }) %}	
 
@@ -22,4 +21,7 @@
 {% do assets.addJs('theme://js/product.js', { group:'bottom' }) %}
 
 {# MISC #}
+{% if theme.snipcart %}
+	{% do assets.addJs('theme://js/snipcart.js', { group:'bottom' }) %}
+{% endif %}
 {% do assets.addJs('theme://js/custom.js', { group:'bottom' }) %}
