@@ -1,9 +1,9 @@
 const PageState = {
 
-    state: 'loading',
+    state: '0',
     completeDelay: 0,
-    navigationDelay: 0,
     fxDelay: 0,
+    navigationDelay: 0,
     t: performance.now(),
 
     Log: function(message) {
@@ -15,30 +15,32 @@ const PageState = {
         switch(PageState.state) {
 
             // INTERACTIVE
-            case 'loading':
+            case '0':
                 PageState.t = performance.now();
-                PageState.state = 'interactive';
-                PageState.UpdateStateAttr();
-                break;
+                PageState.state = '01';
 
-            // COMPLETE
-            case 'interactive':
-                PageState.state = 'complete';
-                PageState.t = performance.now();
                 const adjustedFxDelay = PageState.fxDelay - PageState.t;
-                if (adjustedFxDelay < 0) {
-                   FX.Init(); 
+                if (adjustedFxDelay <= 0) {
+                    FX.Init(); 
                 } else {
                     setTimeout(function(){ 
                         FX.Init();
                     }, adjustedFxDelay);                
                 }
+
+                PageState.UpdateStateAttr();
+                break;
+
+            // COMPLETE
+            case '01':
+                PageState.state = '012';
+                PageState.t = performance.now();
                 PageState.UpdateStateAttr(PageState.completeDelay);
                 break;
 
             // NAVIGATING
-            case 'complete':
-                PageState.state = 'complete-navigating';
+            case '012':
+                PageState.state = '0123';
                 PageState.UpdateStateAttr();
                 break;
         }
@@ -53,7 +55,6 @@ const PageState = {
     },
 };
 
-PageState.state = document.readyState;
 PageState.Log(PageState.state + '\t\t\t' + PageState.t);
 document.onreadystatechange = function() {
     PageState.UpdateState(); 

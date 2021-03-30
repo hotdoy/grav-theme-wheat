@@ -1,3 +1,10 @@
+# v0.8.8
+##  30/03/2020
+
+1. [](#improved)
+    * Moving everything from page-state: complete to interactive.
+    * page-state values uses a number from 0 being loading to 3 being complete-navigating. Number must be concatenated so the state of a complete page should be 012.
+
 # v0.8.7
 ##  27/03/2020
 

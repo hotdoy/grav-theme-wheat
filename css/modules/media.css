@@ -17,6 +17,10 @@
     margin: 0 auto;
 }
 
+.module.media>.wrapper video {
+	background-color: var(--c-ph);
+}
+
 .module.media:first-child {
     margin-top: calc(var(--rhythm)/2);
 }
