@@ -1,16 +1,16 @@
 {# INLINE #}
 {% do assets.addJs('theme://js/page-state.js', {loading : 'inline', position: 'before', group: 'top'}) %}
 
+{# CDN #}
+{% do assets.addJs('https://unpkg.com/swiper/swiper-bundle.min.js', { group:'bottom' }) %}
+{% do assets.addJs('https://unpkg.com/scroll-out/dist/scroll-out.min.js', { group:'bottom' }) %}	
+
 {# SITE #}
 {% do assets.addJs('theme://js/fx.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/links.js', { group:'bottom'}) %}
 {% do assets.addJs('theme://js/header.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/pagination.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/lite-yt-embed.js', { group:'bottom' }) %}
-
-{# CDN #}
-{% do assets.addJs('https://unpkg.com/swiper/swiper-bundle.min.js', { group:'bottom' }) %}
-{% do assets.addJs('https://unpkg.com/scroll-out/dist/scroll-out.min.js', { group:'bottom' }) %}	
 
 {# MODULES #}
 {% do assets.addJs('theme://js/map.js', { group:'bottom' }) %}
