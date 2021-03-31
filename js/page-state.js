@@ -1,51 +1,53 @@
 const PageState = {
-
-    state: '0',
-    completeDelay: 0,
+    state: 'L',
+    Idelay: 0,
+    Cdelay: 0,
+    Ndelay: 0,
     fxDelay: 0,
-    navigationDelay: 0,
     t: performance.now(),
 
     Log: function(message) {
-        console.log('%c PAGESTATE: ' + message, 'color:green;');
+        console.log('%c PAGESTATE: ' + PageState.state + '\t\t' + PageState.t, 'color:green;');
     },
+
+    GetAdjustDelay: function(delay) {
+        if (delay <= 0) {
+            return delay;
+        } else {
+             return delay - PageState.t;             
+        }
+    },
+
 
     UpdateState: function(state) {
 
         switch(PageState.state) {
 
             // INTERACTIVE
-            case '0':
+            case 'L':
+                PageState.state = 'LI';
                 PageState.t = performance.now();
-                PageState.state = '01';
-
-                const adjustedFxDelay = PageState.fxDelay - PageState.t;
-                if (adjustedFxDelay <= 0) {
-                    FX.Init(); 
-                } else {
-                    setTimeout(function(){ 
-                        FX.Init();
-                    }, adjustedFxDelay);                
-                }
-
+                setTimeout(function(){ 
+                    FX.Init();
+                }, PageState.GetAdjustDelay(PageState.fxDelay)); 
                 PageState.UpdateStateAttr();
                 break;
 
             // COMPLETE
-            case '01':
-                PageState.state = '012';
+            case 'LI':
+                PageState.state = 'LIC';
                 PageState.t = performance.now();
-                PageState.UpdateStateAttr(PageState.completeDelay);
+                PageState.UpdateStateAttr(PageState.Cdelay);
                 break;
 
             // NAVIGATING
-            case '012':
-                PageState.state = '0123';
+            case 'LIC':
+                PageState.state = 'LICN';
                 PageState.UpdateStateAttr();
                 break;
         }
 
-        PageState.Log(PageState.state + '\t\t' + PageState.t);
+        PageState.Log();
     },
 
     UpdateStateAttr: function(delay) {
@@ -55,7 +57,7 @@ const PageState = {
     },
 };
 
-PageState.Log(PageState.state + '\t\t\t' + PageState.t);
+PageState.Log();
 document.onreadystatechange = function() {
     PageState.UpdateState(); 
 }
