@@ -1,6 +1,4 @@
 const Links = {
-    navigationDelay: 100,
-
     Watch: function() {
         const target = document.querySelector("#main");
         const config = { childList: true, subtree: true };
@@ -37,7 +35,7 @@ const Links = {
                     PageState.UpdateState();
                     setTimeout(function(){ 
                         window.location.href = href;
-                    }, PageState.navigationDelay);
+                    }, PageState.Ndelay);
 
                   },
                   false);

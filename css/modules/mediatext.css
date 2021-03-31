@@ -45,6 +45,11 @@
     object-fit: contain;
 }
 
+.module.mediatext .media-ctn img[src$='.jpg'],
+.module.mediatext .media-ctn img[src$='.jpeg'] {
+    background-color: var(--c-ph);
+}
+
 .module.mediatext h1,
 .module.mediatext h2,
 .module.mediatext h3 {

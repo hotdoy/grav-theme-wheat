@@ -1,3 +1,11 @@
+# v0.8.9
+##  31/03/2020
+
+1. [](#improved)
+    * Improved CLS (Cumulative layout shit) of mediatext and media modular.
+    * Page-state use the decomposable string where 'LICN' would be 'navigating'.
+    * Improved page-state delay management.
+
 # v0.8.8
 ##  30/03/2020
 

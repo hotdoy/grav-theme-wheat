@@ -8,6 +8,7 @@
 		{% block canonical %}<link rel="canonical" href="{{ page.url(true, true) }}" />{% endblock %}
 		{% block favicon %}{% include 'partials/favicon.html.twig' %}{% endblock %}
 		<link rel="preload" href="{{ url('theme://fonts/Inter/inter-v1-latin-regular.woff2', true) }}" as="font" crossorigin>
+		<link rel="preload" href="{{ url('theme://fonts/Inter/inter-v2-latin-700.woff2', true) }}" as="font" crossorigin>
 		{% include 'partials/js.html.twig' %}
 		{% include 'partials/css.html.twig' %}
 		{% block assets deferred %}
