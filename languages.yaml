@@ -8,7 +8,7 @@ en:
     CART:
       DISABLED: Cart is disabled
       ADD: Add to cart
-      INSTRUCTION: Product size and availability will be confirmed during the checkout process.
+      INSTRUCTION: Product variant availability and discount will be confirmed during the checkout process.
 
 fr:
   THEME:
@@ -20,4 +20,4 @@ fr:
     CART:
       DISABLED: Panier désactivé
       ADD: Ajouter au panier
-      INSTRUCTION: La taille et la disponibilité du produit seront confirmées lors du processus de commande.
+      INSTRUCTION: Les variantes et la disponibilité du produit seront confirmées lors du processus de commande.
