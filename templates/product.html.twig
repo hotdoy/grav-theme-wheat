@@ -65,7 +65,7 @@
 					{% for field in page.header.custom_fields if field.type == 'select' %}
 					<div class="variant">
 						<label>{{ field.name }}</label>
-						<select>
+						<select data-field="custom{{ loop.index }}">
 							{% for option in field.options|split('|') %}
 							<option value="{{ option }}">{{ option }}</option>
 							{% endfor %}
@@ -79,37 +79,41 @@
 					{# ADD TO CART #}
 					{% if theme.snipcart %}
 					<button class="snipcart-add-item button"
-					data-item-id="{{ page.header.id }}"
-					data-item-price="{{ page.header.price }}"
-					data-item-url="{{ page.url(true, true) }}"
-					data-item-description="{{ page.header.short_description }}"
-					data-item-image="{{ image ? uri.base() ~ image.url : '' }}"
-					data-item-name="{{ page.header.name }}"
-					data-item-stackable="{{ page.header.stackable ? 'auto' : 'never' }}"
-					{% if page.header.digital_good_guid %}
-					data-itemfile-guid="{{ page.header.digital_good_guid }}"
-					{% endif %}
-					{% for field in page.header.custom_fields %}
-					data-item-custom{{ loop.index }}-name="{{ field.name }}"
-					data-item-custom{{ loop.index }}-type="{{ field.type }}"
-					{% if field.type == 'select' %}
-					data-item-custom{{ loop.index }}-options="{{ field.options }}"
-					{% endif %}
-					{% endfor %}
-					{% if page.header.width %}
-					data-item-width="{{ page.header.width }}"
-					{% endif %}
-					{% if page.header.height %}
-					data-item-height="{{ page.header.height }}"
-					{% endif %}
-					{% if page.header.weight %}
-					data-item-weight="{{ page.header.weight }}"
-					{% endif %}
-					>
-					{{ 'THEME.CART.ADD'|t }}
-					</button>
-					{% else %}
-					<div class="button disabled snipcart-add-item">{{ 'THEME.CART.DISABLED'|t }}</div>
+						data-item-id="{{ page.header.id }}"
+						data-item-price="{{ page.header.price }}"
+						data-item-url="{{ page.url(true, true) }}"
+						data-item-description="{{ page.header.short_description }}"
+						data-item-image="{{ image ? uri.base() ~ image.url : '' }}"
+						data-item-name="{{ page.header.name }}"
+						data-item-stackable="{{ page.header.stackable ? 'auto' : 'never' }}"
+						{% if page.header.digital_good_guid %}
+							data-itemfile-guid="{{ page.header.digital_good_guid }}"
+						{% endif %}
+						{% for field in page.header.custom_fields %}
+							data-item-custom{{ loop.index }}-name="{{ field.name }}"
+							data-item-custom{{ loop.index }}-type="{{ field.type }}"
+							{% if field.type == 'select' %}
+								data-item-custom{{ loop.index }}-options="{{ field.options }}"
+								{% set options = field.options|split('|') %}
+								{% if options %}
+									data-item-custom{{ loop.index }}-value="{{ options[0] }}"
+								{% endif %}
+							{% endif %}
+						{% endfor %}
+						{% if page.header.width %}
+							data-item-width="{{ page.header.width }}"
+						{% endif %}
+						{% if page.header.height %}
+							data-item-height="{{ page.header.height }}"
+						{% endif %}
+						{% if page.header.weight %}
+							data-item-weight="{{ page.header.weight }}"
+						{% endif %}
+						>
+						{{ 'THEME.CART.ADD'|t }}
+						</button>
+						{% else %}
+						<div class="button disabled snipcart-add-item">{{ 'THEME.CART.DISABLED'|t }}</div>
 					{% endif %}
 
 					{# CART INSTRUCTIONS #}
