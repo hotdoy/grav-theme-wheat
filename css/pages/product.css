@@ -101,7 +101,7 @@
     margin-top: 1rem;
 }
 
-.product__showcase .variant + .variant {
+.product__showcase .variant+.variant {
     margin-top: 0.5rem;
 }
 
