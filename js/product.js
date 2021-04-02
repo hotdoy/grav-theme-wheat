@@ -12,10 +12,11 @@
         });
 
         // Variant
-        const selects = document.querySelectorAll(".product .product__showcase .variant select");
+        const selects = document.querySelectorAll(".product .variant select");
         for (let select of selects) {
-            select.addEventListener('change', function(){
-              console.log(select.options[select.selectedIndex].value);
+            select.addEventListener('change', function() {
+                let val = select.options[select.selectedIndex].value;
+                document.querySelector('.snipcart-add-item').setAttribute('data-item-' + select.dataset.field + '-value', val);
             });
         };
     };

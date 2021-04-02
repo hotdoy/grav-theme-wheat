@@ -1,3 +1,10 @@
+# v0.8.10
+##  02/04/2020
+
+1. [](#improved)
+    * Basic variant selector (price adjustment not supported).
+    * Minor style adjustments to product.
+
 # v0.8.9
 ##  31/03/2020
 
