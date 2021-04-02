@@ -1,7 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set main_image = page.header.main_image ? page.media[page.header.main_image] %}
-{% set main_image_alt = page.header.main_image_alt ?? '' %}
+{% set image = page.header.image ? page.media[page.header.image] %}
+{% set image_alt = page.header.image_alt ?? '' %}
 {% set gallery_images = page.header.gallery_images %}
 {% set price = page.header.price|number_format(2, ',', ' ') %}
 
@@ -21,9 +21,9 @@
 				{% if gallery_images %}
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
-						{% if main_image %}
+						{% if image %}
 						<div class="swiper-slide">
-							<div class="fill">{{ main_image.cropResize(1000).loading.html('', main_image_alt)|raw }}</div>
+							<div class="fill">{{ image.cropResize(1000).loading.html('', image_alt)|raw }}</div>
 						</div>
 						{% endif %}
 						{% for item in gallery_images %}
@@ -40,57 +40,84 @@
 				</div>
 
 				{# SINGLE IMAGE	 #}
-				{% elseif main_image %}
+				{% elseif image %}
 				<div class="single-image">
-					<div class="fill">{{ main_image.cropResize(1000).loading.html('', main_image_alt) }}</div>
+					<div class="fill">{{ image.cropResize(1000).loading.html('', image_alt)|raw }}</div>
 				</div>
 				{% endif %}
 
 			</div>
 
-			<div class="content-ctn">
+			<div class="content-ctn text prose">
 				<div class="sticky-ctn">
+					
+					{# BREADCRUMBS #}
 					{% include 'partials/breadcrumbs.html.twig' %}
+				    
+				    {# TITLE #}
 				    {% set title = page.header.display_title ?? page.title %}
 				    <h1 class="name">{{ title }}</h1>
+					
+					{# DESCRIPTION #}
 					<div class="description text">{{ page.content|raw }}</div>
+					
+					{# VARIANT #}
+					{% for field in page.header.custom_fields if field.type == 'select' %}
+					<div class="variant">
+						<label>{{ field.name }}</label>
+						<select data-field="custom{{ loop.index }}">
+							{% for option in field.options|split('|') %}
+							<option value="{{ option }}">{{ option }}</option>
+							{% endfor %}
+						</select>
+					</div>
+					{% endfor %}
+
+					{# PRICE #}
 					<div class="price">{{ price }} $</div>
-			
+
+					{# ADD TO CART #}
 					{% if theme.snipcart %}
 					<button class="snipcart-add-item button"
-					data-item-id="{{ page.header.id }}"
-					data-item-price="{{ page.header.price }}"
-					data-item-url="{{ page.url(true, true) }}"
-					data-item-description="{{ page.header.short_description }}"
-					data-item-image="{{ main_image ? uri.base() ~ main_image.url : '' }}"
-					data-item-name="{{ page.header.name }}"
-					data-item-stackable="{{ page.header.stackable ? 'auto' : 'never' }}"
-					{% if page.header.digital_good_guid %}
-					data-itemfile-guid="{{ page.header.digital_good_guid }}"
+						data-item-id="{{ page.header.id }}"
+						data-item-price="{{ page.header.price }}"
+						data-item-url="{{ page.url(true, true) }}"
+						data-item-description="{{ page.header.short_description }}"
+						data-item-image="{{ image ? uri.base() ~ image.url : '' }}"
+						data-item-name="{{ page.header.name }}"
+						data-item-stackable="{{ page.header.stackable ? 'auto' : 'never' }}"
+						{% if page.header.digital_good_guid %}
+							data-itemfile-guid="{{ page.header.digital_good_guid }}"
+						{% endif %}
+						{% for field in page.header.custom_fields %}
+							data-item-custom{{ loop.index }}-name="{{ field.name }}"
+							data-item-custom{{ loop.index }}-type="{{ field.type }}"
+							{% if field.type == 'select' %}
+								data-item-custom{{ loop.index }}-options="{{ field.options }}"
+								{% set options = field.options|split('|') %}
+								{% if options %}
+									data-item-custom{{ loop.index }}-value="{{ options[0] }}"
+								{% endif %}
+							{% endif %}
+						{% endfor %}
+						{% if page.header.width %}
+							data-item-width="{{ page.header.width }}"
+						{% endif %}
+						{% if page.header.height %}
+							data-item-height="{{ page.header.height }}"
+						{% endif %}
+						{% if page.header.weight %}
+							data-item-weight="{{ page.header.weight }}"
+						{% endif %}
+						>
+						{{ 'THEME.CART.ADD'|t }}
+						</button>
+						{% else %}
+						<div class="button disabled snipcart-add-item">{{ 'THEME.CART.DISABLED'|t }}</div>
 					{% endif %}
-					{% for field in page.header.custom_fields %}
-					data-item-custom{{ loop.index }}-name="{{ field.name }}"
-					data-item-custom{{ loop.index }}-type="{{ field.type }}"
-					{% if field.type == 'select' %}
-					data-item-custom{{ loop.index }}-options="{{ field.options }}"
-					{% endif %}
-					{% endfor %}
-					{% if page.header.width %}
-					data-item-width="{{ page.header.width }}"
-					{% endif %}
-					{% if page.header.height %}
-					data-item-height="{{ page.header.height }}"
-					{% endif %}
-					{% if page.header.weight %}
-					data-item-weight="{{ page.header.weight }}"
-					{% endif %}
-					>
-					{{ 'THEME.CART.ADD'|t }}
-					</button>
-					{% else %}
-					<div class="button disabled snipcart-add-item {{ class }}">{{ 'THEME.CART.DISABLED'|t }}</div>
-					{% endif %}
-					<div class="instruction">{{ 'THEME.CART.INSTRUCTION'|t }}</div>
+
+					{# CART INSTRUCTIONS #}
+					<div class="instruction text small prose">{{ 'THEME.CART.INSTRUCTION'|t }}</div>
 				</div>
 			</div>
 		</div>
@@ -107,6 +134,6 @@
 	{# RELATED #}
     {% set related_options = { items: {'@self.siblings':''}, 'limit': 6, 'order': {'by': 'random'}} %}
     {% set related_items = page.collection(related_options) %}
-    {% include 'modular/carousel.html.twig' with { 'collection': related_items, 'title': 'THEME.PRODUCT.RELATED'|t } %}
+    {% include 'modular/carousel.html.twig' with { 'collection': related_items, 'title': 'THEME.PRODUCT.RELATED'|t } only %}
 
 {% endblock %}
