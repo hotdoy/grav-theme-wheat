@@ -59,7 +59,7 @@
 				    <h1 class="name">{{ title }}</h1>
 					
 					{# DESCRIPTION #}
-					<div class="description text">{{ page.content|raw }}</div>
+					<div class="description">{{ page.content|raw }}</div>
 					
 					{# VARIANT #}
 					{% for field in page.header.custom_fields if field.type == 'select' %}

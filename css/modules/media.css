@@ -4,14 +4,15 @@
     width: 100%;
     max-width: var(--w-body);
     margin: 0 auto;
+    padding: 0 var(--gutter);
 }
 
-@media (min-width: 1240px) {
+/*@media (min-width: 1240px) {
     .module.media>.wrapper {
         padding: 0 var(--gutter);
     }
 }
-
+*/
 .module.media>.wrapper>* {
     width: 100%;
     height: auto;
