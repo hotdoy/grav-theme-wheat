@@ -78,7 +78,7 @@
 }
 
 .product__showcase .name {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .product__showcase .content-ctn {
@@ -93,12 +93,15 @@
     }
 }
 
-
-.product__showcase .variant {
-    margin-top: 2rem;
+.product__showcase .description {
+    margin-top: 1rem;
 }
 
-.product__showcase .variant + .variant {
+.product__showcase .variant {
+    margin-top: 1rem;
+}
+
+.product__showcase .variant+.variant {
     margin-top: 0.5rem;
 }
 
@@ -112,22 +115,23 @@
     border-radius: 4px;
     padding: 8px 5px;
     border-color: var(--c-border);
+    background-color: transparent;
 }
 
 .product__showcase .price {
     display: block;
     font-size: x-large;
     font-weight: 700;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .product__showcase .button {
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .product__showcase .instruction {
-    margin-top: 2rem;
+    margin-top: 1rem;
     opacity: 0.7;
 }
 

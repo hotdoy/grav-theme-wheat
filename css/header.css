@@ -185,7 +185,7 @@ body.panel--open #header .site-panel {
 .snipcart-pulse.active {
   opacity: 1;
   animation-name: snipcart-pulse;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-iteration-count: 1;
 }
 
@@ -196,7 +196,7 @@ body.panel--open #header .site-panel {
   }
   to {
     opacity: 0;
-    transform: scale(10);
+    transform: scale(20);
   }
 }
 

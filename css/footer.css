@@ -1,7 +1,7 @@
 #footer {
   position: relative;
   margin: var(--rhythm) 0 0 0;
-  background-color: var(--c-bg);
+  background-color: #f1f1f1;
   color: var(--c-fg);
   font-size: small;
   z-index: 1000;
@@ -13,7 +13,7 @@
   align-items: center;
   max-width: var(--w-body);
   margin: 0 auto;
-  padding: var(--gutter);
+  padding: var(--rhythm) var(--gutter) var(--gutter) var(--gutter);
 }
 
 /*#footer .copyright {}*/

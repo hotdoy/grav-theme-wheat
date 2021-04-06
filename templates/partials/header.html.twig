@@ -14,7 +14,7 @@
     <section class="marquee"{% if marquee_styles %} style="{{ marquee_styles }}"{% endif %}>{{ root_params.header.marquee_content|markdown|raw }}</section>
     {% endif %}
 
-    <section class="bar">
+    <div class="bar">
         <div class="wrapper">
 
             <a class="logo" href="{{ home_url }}" aria-label="Site logo">{% include 'partials/logo.html.twig' %}</a>
@@ -44,10 +44,10 @@
                 
             </div>
         </div>
-    </section>
+    </div>
 
     {# PANEL #}
-    <section class="site-panel">
+    <div class="site-panel">
         <div class="header">
             <a class="logo" href="{{ home_url }}" aria-label="Logo">{% include 'partials/logo.html.twig' %}</a>
             <div class="toggles">
@@ -73,6 +73,6 @@
             {% endfor %}
             {% include 'partials/langswitcher.html.twig' %}
         </nav>
-    </section>
+    </div>
 
 </header>

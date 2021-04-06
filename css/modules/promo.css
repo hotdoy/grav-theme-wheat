@@ -48,9 +48,15 @@
     align-items: center;
     justify-content: flex-end;
     margin: 0 var(--gutter);
-    padding: calc(var(--gutter) * 2);
+    padding: var(--gutter);
     color: var(--c-fg);
     text-align: center;
+}
+
+@media (min-width: 735px) {
+    .module.promo .content-ctn {
+        padding: calc(var(--gutter) * 2);
+    }
 }
 
 .module.promo p {
