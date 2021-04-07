@@ -2,19 +2,62 @@
   position: relative;
   margin: var(--rhythm) 0 0 0;
   background-color: #f1f1f1;
-  color: var(--c-fg);
-  font-size: small;
   z-index: 1000;
 }
 
+#footer a {
+  color: inherit;
+}
+
 #footer .wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   max-width: var(--w-body);
   margin: 0 auto;
   padding: var(--rhythm) var(--gutter) var(--gutter) var(--gutter);
 }
+
+#footer .top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+
+#footer .contact {
+  width: 100%;
+  margin-top: var(--rhythm);
+  text-align: center;
+}
+
+#footer nav {
+  width: 100%;
+}
+
+@media (min-width: 835px) {
+  
+#footer .top {
+  flex-direction: row;
+}
+
+  #footer .contact {
+    width: 25%;
+    text-align: left;
+    margin-top: 0;
+  }
+
+  #footer nav {
+    width: 50%;
+  }
+}
+
+
+#footer .bottom {
+  margin-top: var(--rhythm);
+  display: flex;
+  justify-content: space-between;
+}
+
+
 
 /*#footer .copyright {}*/
 
@@ -23,4 +66,71 @@
 #footer .credit svg {
   width: 49px;
   height: auto;
+}
+
+
+
+
+
+
+
+/*DETAILS/SUMMARY*/
+#footer details {
+  padding: 1rem 0;
+  width: 100%;
+  border-top: 1px solid var(--c-fg);
+  border-bottom: 1px solid var(--c-fg);
+}
+
+#footer details summary {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-right: 2rem;
+}
+
+#footer details summary:focus {
+  outline: 0;
+}
+
+#footer details summary::marker {
+  display: none;
+}
+
+#footer details summary:before,
+#footer details summary:after {
+  position: absolute;
+  right: 10px;
+  content: ' ';
+  height: 20px;
+  width: 1px;
+  background-color: var(--c-fg);
+  transition: transform 0.2s;
+}
+
+#footer details summary:after {
+  transform: rotate(90deg);
+}
+
+#footer details[open] summary:before {
+  transform: rotate(45deg);
+}
+
+#footer details[open] summary:after {
+  transform: rotate(135deg);
+}
+
+#footer details + details {
+  border-top: none;
+}
+
+#footer nav ul {
+  list-style: none;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+#footer nav li {
+  margin-top: 1rem;
 }
