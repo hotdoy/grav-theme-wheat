@@ -33,7 +33,7 @@
   width: 100%;
 }
 
-@media (min-width: 835px) {
+@media (min-width: 735px) {
   
 #footer .top {
   flex-direction: row;

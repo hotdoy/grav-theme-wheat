@@ -1,62 +1,68 @@
 /*.module.carousel {}*/
 
-.module.carousel > .wrapper {
-  position: relative;
-  width: 100%;
-  max-width: var(--w-body);
-  margin: 0 auto;
-  padding: 0 var(--gutter);
-  padding-top: 2px;
-  overflow: hidden;
+.module.carousel>.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: var(--w-body);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    padding-top: 2px;
+    overflow: hidden;
 }
 
-.module.carousel > .wrapper > .title {
-  width: 100%;
-  max-width: var(--w-body);
-  margin-bottom: var(--gutter);
+.module.carousel>.wrapper>.title {
+    width: 100%;
+    max-width: var(--w-body);
+    margin-bottom: var(--gutter);
 }
 
 .module.carousel .title h2 {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 /*left gradient*/
-.module.carousel > .wrapper::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: var(--gutter);
-  background-image: linear-gradient(90deg, var(--c-bg), transparent);
-  z-index: 2;
+.module.carousel>.wrapper::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 0;
+    bottom: 0;
+    width: var(--gutter);
+    background-image: linear-gradient(90deg, var(--c-bg), transparent);
+    z-index: 2;
 }
 
 /*right gradient*/
-.module.carousel > .wrapper::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: var(--gutter);
-  background-image: linear-gradient(-90deg, var(--c-bg), transparent);
-  z-index: 1;
+.module.carousel>.wrapper::after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    top: 0;
+    bottom: 0;
+    width: var(--gutter);
+    background-image: linear-gradient(-90deg, var(--c-bg), transparent);
+    z-index: 1;
 }
 
 .module.carousel .swiper-container {
-  overflow: visible;
-  height: auto;
-  width: 100%;
+    overflow: visible;
+    height: auto;
+    width: 100%;
 }
 
 .module.carousel .swiper-slide {
-  overflow: visible;
-  width: 60%;
+    overflow: visible;
+    width: 60%;
 }
 
-@media (min-width: 768px) {
-  .module.carousel .swiper-slide {
-    width: 39%;
-  }
+@media (min-width: 735px) {
+    .module.carousel .swiper-slide {
+        width: 39%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .module.carousel .swiper-slide {
+        width: 29%;
+    }
 }
