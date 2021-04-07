@@ -62,32 +62,32 @@ form:
                     show_modular: false
                     show_root: false
 
-        # footer:
-        #   type: tab
-        #   title: Footer
-        #   fields:
-        #     header.contact:
-        #       label: Contact
-        #       type: editor
-        #     header.footer_nav:
-        #       name: footer_nav
-        #       type: list
-        #       label: Footer Nav
-        #       fields:
-        #         .label:
-        #           type: text
-        #           label: Label
-        #         .links:
-        #           name: links
-        #           type: list
-        #           label: Links
-        #           fields:
-        #             .label:
-        #               type: text
-        #               label: Label
-        #             .link:
-        #               type: pages
-        #               label: Page
-        #               show_all: false
-        #               show_modular: false
-        #               show_root: false
+        footer:
+          type: tab
+          title: Footer
+          fields:
+            header.contact:
+              label: Contact
+              type: editor
+            header.footer_nav:
+              name: footer_nav
+              type: list
+              label: Footer Nav
+              fields:
+                .label:
+                  type: text
+                  label: Label
+                .links:
+                  name: links
+                  type: list
+                  label: Links
+                  fields:
+                    .label:
+                      type: text
+                      label: Label
+                    .page:
+                      type: pages
+                      label: Page
+                      show_all: false
+                      show_modular: false
+                      show_root: false
