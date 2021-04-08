@@ -12,13 +12,12 @@
 }
 
 /* REMOVE MARGIN FOR FIRST ELEMENT */
-.module.editor>*:nth-child(1) {
+.module.editor>*:first-child {
     margin-top: 0;
 }
 
 .module.editor hr {
     margin: calc(var(--rhythm) / 2) 0 calc(var(--rhythm) / 2) 0;
-    /*border: none;*/
 }
 
 .module.editor p img,
@@ -132,7 +131,9 @@
 }
 
 
-
+.module.editor details + *:not(details) {
+    margin-top: 2rem;
+}
 
 
 /*LITE-YOUTUBE*/
