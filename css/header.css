@@ -64,7 +64,7 @@
 
 #header > .bar .cart {
   position: relative;
-  margin-left: var(--gutter);
+  margin-left: 20px;
   margin-right: 0;
 }
 @media (min-width: 835px) {
@@ -126,7 +126,6 @@
 
 #header .site-panel .toggles .cart {
   position: relative;
-  margin-left: var(--gutter);
 }
 
 #header .site-panel .close {
@@ -143,7 +142,7 @@
 
 #header .site-panel nav li a {
   display: block;
-  padding: var(--gutter) 0;
+  padding: 30px 0;
 }
 
 body.panel--open {
