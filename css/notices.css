@@ -37,11 +37,15 @@ Make sure to disable built-in CSS.
 }
 
 .notices.blue {
-  background: #42526e;
-  color: #ffffff;
+  background: #e1f5fe;
+  color: #01579b;
 }
 
 .notices.green {
   background: #00875a;
   color: #fff;
+}
+
+.notices p {
+  color: inherit;
 }

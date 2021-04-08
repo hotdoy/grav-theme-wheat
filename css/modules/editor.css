@@ -1,60 +1,35 @@
 /* .module.editor {} */
 
-.module.editor > .wrapper {
-  padding: 0 var(--gutter);
-  margin: 0 auto;
-  max-width: var(--w-text);
-  width: 100%;
+.module.editor>.wrapper {
+    padding: 0 var(--gutter);
+    margin: 0 auto;
+    max-width: var(--w-text);
+    width: 100%;
 }
 
 .module.editor ul li {
-  margin-left: 18px;
+    margin-left: 18px;
 }
 
 /* REMOVE MARGIN FOR FIRST ELEMENT */
-.module.editor > *:nth-child(1) {
-  margin-top: 0;
+.module.editor>*:nth-child(1) {
+    margin-top: 0;
 }
 
 .module.editor hr {
-  margin: calc(var(--rhythm) / 2) 0 calc(var(--rhythm) / 2) 0;
-  /*border: none;*/
+    margin: calc(var(--rhythm) / 2) 0 calc(var(--rhythm) / 2) 0;
+    /*border: none;*/
 }
 
 .module.editor p img,
 .module.editor p video {
-  display: block;
-  margin: 2rem auto;
-  width: 100%;
+    display: block;
+    margin: 2rem auto;
+    width: 100%;
 }
 
 .module.editor blockquote p {
-  padding: 0;
-}
-
-/*EMBED*/
-
-.module.editor .embed {
-  position: relative;
-  margin: 0 auto;
-  margin-top: 2rem;
-}
-
-.module.editor .embed > .video-ctn {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  width: 100%;
-  background-color: #000;
-}
-
-.module.editor .embed iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    padding: 0;
 }
 
 
@@ -63,42 +38,34 @@
 
 /*SPOTIFY*/
 .module.editor iframe[src*="spotify"] {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 2rem;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2rem;
 }
 
+
+
+
+
+/*TWITTER*/
 .module.editor .twitter-tweet {
-  margin: 0 auto;
-  width: 100%;
+    margin: 0 auto;
+    width: 100%;
 }
 
+
+
+
+
+/*DROPCAP*/
 .module.editor span.dropcap {
-  float: left;
-  font-size: xx-large;
-  font-weight: 700;
-  line-height: 1;
-  padding-top: 2px;
-  padding-right: 8px;
-}
-
-.module.editor .small * {
-  font-size: small;
-  line-height: 1.4;
-}
-
-.module.editor .caption * {
-  font-size: small;
-  line-height: 1.4;
-  opacity: 0.7;
-  margin-top: 0.5rem;
-  margin-right: 10%;
-}
-
-.module.editor .large * {
-  font-size: x-large;
-  line-height: 1.4;
+    float: left;
+    font-size: xx-large;
+    font-weight: 700;
+    line-height: 1;
+    padding-top: 2px;
+    padding-right: 8px;
 }
 
 
@@ -107,59 +74,90 @@
 
 /*DETAILS/SUMMARY*/
 .module.editor details {
-  margin-top: 2rem;
-  padding: 1rem 0;
-  width: 100%;
-  border-top: 1px solid var(--c-fg);
-  border-bottom: 1px solid var(--c-fg);
+    margin-top: 2rem;
+    padding: 1rem 0;
+    width: 100%;
+    border-top: 1px solid var(--c-fg);
+    border-bottom: 1px solid var(--c-fg);
 }
 
-.module.editor details > *:last-child {
-  padding-bottom: 1rem;
+.module.editor details>*:last-child {
+    padding-bottom: 1rem;
 }
 
 .module.editor details summary {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-  font-size: x-large;
-  line-height: 1.2;
-  padding-right: 2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    font-size: x-large;
+    line-height: 1.2;
+    padding-right: 2rem;
 }
 
 .module.editor details summary:focus {
-  outline: 0;
+    outline: 0;
 }
 
 .module.editor details summary::marker {
-  display: none;
+    display: none;
 }
 
 .module.editor details summary:before,
 .module.editor details summary:after {
-  position: absolute;
-  right: 10px;
-  content: ' ';
-  height: 20px;
-  width: 1px;
-  background-color: var(--c-fg);
-  transition: transform 0.2s;
+    position: absolute;
+    right: 10px;
+    content: ' ';
+    height: 20px;
+    width: 1px;
+    background-color: var(--c-fg);
+    transition: transform 0.2s;
 }
 
 .module.editor details summary:after {
-  transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .module.editor details[open] summary:before {
-  transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .module.editor details[open] summary:after {
-  transform: rotate(135deg);
+    transform: rotate(135deg);
 }
 
-.module.editor details + details {
-  margin: 0;
-  border-top: none;
+.module.editor details+details {
+    margin: 0;
+    border-top: none;
+}
+
+
+
+
+
+/*LITE-YOUTUBE*/
+.module.editor lite-youtube {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+
+/*TABLES*/
+.module.editor table {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+
+/*INLINE CODE*/
+.module.editor code {
+    background-color: #f1f1f1;
+    font-family: monospace;
+    border-radius: 4px;
+    padding: 1px 4px;
 }
