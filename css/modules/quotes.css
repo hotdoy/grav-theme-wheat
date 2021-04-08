@@ -29,17 +29,8 @@
 }
 
 .module.quotes blockquote {
-  font-weight: normal;
-  font-size: x-large;
-  line-height: 1.6;
   margin: 0 auto;
   max-width: var(--width-text);
-}
-
-@media (min-width: 735px) {
-  .module.quotes blockquote {
-    font-size: xx-large;
-  }
 }
 
 .module.quotes .portrait {
@@ -52,7 +43,10 @@
 }
 
 .module.quotes .portrait img {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .module.quotes .source {

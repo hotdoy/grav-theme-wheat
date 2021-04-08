@@ -1,3 +1,10 @@
+# v0.8.13
+##  08/04/2020
+
+1. [](#improved)
+    * Smaller gutter on sub 400px devices
+    * Mostly cleaning
+
 # v0.8.12
 ##  06/04/2020
 
