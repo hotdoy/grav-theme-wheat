@@ -1,5 +1,9 @@
-body.error .text {
+body.error .module .text {
   text-align: center;
+}
+
+body.error .module.editor {
+  margin-top: 0;
 }
 
 body.error footer {
@@ -7,8 +11,4 @@ body.error footer {
   bottom: 0;
   left: 0;
   right: 0;
-}
-
-body.error .module.editor {
-  margin-top: 0;
 }
