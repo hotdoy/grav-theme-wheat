@@ -1,3 +1,13 @@
+# v0.8.14
+##  12/04/2020
+
+1. [](#improved)
+    * Footer link padding and border
+    * Header link padding synced with footer
+    * Some border radius on promo modular
+    * Quote modular text width fix
+    * Commented out some theme color options for upcoming changes
+
 # v0.8.13
 ##  08/04/2020
 

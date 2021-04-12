@@ -30,7 +30,7 @@
 
 .module.quotes blockquote {
   margin: 0 auto;
-  max-width: var(--width-text);
+  max-width: var(--w-text);
 }
 
 .module.quotes .portrait {

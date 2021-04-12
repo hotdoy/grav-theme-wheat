@@ -130,18 +130,8 @@
     padding-left: 0;
 }
 
-#footer nav li {
-    padding: 0.5rem 0;
-}
-
-#footer nav li:first-child {
-    padding-top: 0;
-}
-
-#footer nav li:last-child {
-    margin-bottom: 1rem;
-}
-
 #footer nav li a {
+    padding: 20px 0;
     display: block;
+    border-top: 1px solid var(--c-border);
 }
