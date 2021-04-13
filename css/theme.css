@@ -2,29 +2,14 @@
 					FONTS 
 ============================================*/
 
+/* lexend-deca-regular - latin */
 @font-face {
-  font-family: "Inter";
+  font-family: 'CircularStd';
   font-style: normal;
   font-weight: 400;
-  src: local(""),
-    url("../fonts/Inter/inter-v1-latin-regular.woff2") format("woff2"),
-    url("../fonts/Inter/inter-v1-latin-regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  src: local(""), url("../fonts/Inter/inter-v2-latin-700.woff2") format("woff2"),
-    url("../fonts/Inter/inter-v2-latin-700.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 900;
-  src: local(""), url("../fonts/Inter/inter-v1-latin-900.woff2") format("woff2"),
-    url("../fonts/Inter/inter-v1-latin-900.woff") format("woff");
+  src: local(''),
+       url('../fonts/CircularStd-Book.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/CircularStd-Book.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /*===========================================
@@ -32,12 +17,13 @@
 ============================================*/
 
 :root {
-  --font-base: "Inter", sans-serif;
+  --font-base: 'CircularStd', sans-serif;
   font-size: 16px;
   font-family: var(--font-base);
 
   --c-bg: white;
-  --c-fg: #3c4054;
+  /*--c-fg: #3c4054;*/
+  --c-fg: #2d333a;
   --c-hl: #4285F4;
   --c-ph: #e1e1e1;
 

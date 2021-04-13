@@ -1,6 +1,5 @@
 {{ dump(page) }}
 {% set root_params = page.find('/_root-params/') %}
-
 <!DOCTYPE html> 
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 	<head>
@@ -38,3 +37,4 @@
 		<!-- {{ grav.theme.getBlueprint().name }} {{ grav.theme.getBlueprint().version }} -->
 	</body>
 </html>
+
