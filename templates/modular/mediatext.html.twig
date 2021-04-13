@@ -18,7 +18,7 @@
 		{{ image.cropResize(1000).loading.attribute('width', image.width).attribute('height', image.height).html('', image_alt)|raw }}
 		{% endif %}
 	</div>
-	<div class="content text prose">
+	<div class="content-ctn text prose">
 		{% if content %}{{ content|raw }}{% endif %}
 	</div>
 </div>

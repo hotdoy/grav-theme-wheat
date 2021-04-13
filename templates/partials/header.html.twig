@@ -14,58 +14,53 @@
     <section class="marquee"{% if marquee_styles %} style="{{ marquee_styles }}"{% endif %}>{{ root_params.header.marquee_content|markdown|raw }}</section>
     {% endif %}
 
-    <div class="bar">
-        <div class="wrapper">
 
-            <a class="logo" href="{{ home_url }}" aria-label="Site logo">{% include 'partials/logo.html.twig' %}</a>
 
-            <div class="nav-wrapper">
+    <div class="header">
+        <div class="grid">
 
+            {# LINKS #}
+            <div class="links">
                 <nav>
-                    {% include 'partials/langswitcher.html.twig' %}
                     {% for link in root_params.header.header_links %}
                     {% set p = page.find(link.page) %}
                     <li class="{{ (p.active or p.activeChild) ? ' active' : '' }}"><a href="{{ p.url }}">{{ link.label }}</a></li>
                     {% endfor %}
+                    {% include 'partials/langswitcher.html.twig' %}
                 </nav>
-
-                {# SNIPCART CHECKOUT #}
-                {% if theme.snipcart %}
-                <button class="cart snipcart-checkout" aria-label="open cart">
-                    {{ svg.cart() }}
-                    <span class="snipcart-items-count">0</span>
-                    <span class="snipcart-pulse"></span>
-                </button>
-                {% endif %}
-
                 <button class="burger js-panel-open" aria-label="open menu">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"></path><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
                 </button>
-                
             </div>
-        </div>
-    </div>
 
-    {# PANEL #}
-    <div class="site-panel">
-        <div class="header">
-            <a class="logo" href="{{ home_url }}" aria-label="Logo">{% include 'partials/logo.html.twig' %}</a>
+            {# LOGO #}
+            <a class="logo" href="{{ home_url }}" aria-label="Site logo">{% include 'partials/logo.html.twig' %}</a>
+
+            {# TOGGLES #}
             <div class="toggles">
-
-                {# SNIPCART CHECKOUT #}
+                {# <button onclick="window.location.hash='/cart/dashboard'" class="snipcart-account">{{ svg.face() }}</button> #}
                 {% if theme.snipcart %}
-                <button class="cart snipcart-checkout" aria-label="open cart">
+                <button class="snipcart-checkout" aria-label="open cart">
                     {{ svg.cart() }}
                     <span class="snipcart-items-count">0</span>
                     <span class="snipcart-pulse"></span>
                 </button>
                 {% endif %}
-                
-                <button class="close js-panel-close" aria-label="close menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"></path><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
-                </button>
             </div>
+
         </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    {# PANEL #}
+    <div class="header-panel">
         <nav>
             {% for link in root_params.header.header_links %}
             {% set p = page.find(link.page) %}
