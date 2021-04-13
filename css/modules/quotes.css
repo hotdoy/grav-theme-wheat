@@ -31,6 +31,7 @@
 .module.quotes blockquote {
   margin: 0 auto;
   max-width: var(--w-text);
+  color: white;
 }
 
 .module.quotes .portrait {

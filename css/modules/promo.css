@@ -57,8 +57,11 @@
     justify-content: flex-end;
     margin: 0 var(--gutter);
     padding: var(--gutter);
-    color: var(--c-fg);
     text-align: center;
+}
+
+.module.promo .content-ctn * {
+    color: var(--c-fg);
 }
 
 @media (min-width: 735px) {

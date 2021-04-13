@@ -35,7 +35,6 @@
 .text h3, 
 .text .h3,
 .h3 {
-    color: inherit;
     font-size: 1.5rem;
     line-height: 2rem;
 }
@@ -43,7 +42,6 @@
 .text h2, 
 .text .h2,
 .h2 {
-    color: inherit;
     font-size: 1.875rem;
     line-height: 2.1rem;
     font-weight: var(--fw-bold);
@@ -52,7 +50,6 @@
 .text h1, 
 .text .h1,
 .h1 {
-    color: inherit;
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: var(--fw-bold);

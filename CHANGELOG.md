@@ -1,3 +1,9 @@
+# v0.8.15
+##  12/04/2020
+
+1. [](#improved)
+    * Experimenting with new fonts
+
 # v0.8.14
 ##  12/04/2020
 

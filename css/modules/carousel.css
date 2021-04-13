@@ -13,7 +13,7 @@
 .module.carousel>.wrapper>.title {
     width: 100%;
     max-width: var(--w-body);
-    margin-bottom: var(--gutter);
+    margin-bottom: 1rem;
 }
 
 .module.carousel .title h2 {
