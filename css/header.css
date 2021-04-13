@@ -37,6 +37,11 @@
     justify-content: center;
 }
 
+#header .grid .logo svg {
+    height: calc(var(--header-heigth) - 30px);
+    width: 100%;
+}
+
 #header .grid .toggles {
     display: flex;
     align-items: center;
