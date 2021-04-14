@@ -38,10 +38,10 @@
 
             {# TOGGLES #}
             <div class="toggles">
-                {# <button onclick="window.location.hash='/cart/dashboard'" class="snipcart-account">{{ svg.face() }}</button> #}
+                <button class="snipcart-account snipcart-customer-signin">{{ svg.user() }}</button>
                 {% if theme.snipcart %}
                 <button class="snipcart-checkout" aria-label="open cart">
-                    {{ svg.cart() }}
+                    {{ svg.bag() }}
                     <span class="snipcart-items-count">0</span>
                     <span class="snipcart-pulse"></span>
                 </button>

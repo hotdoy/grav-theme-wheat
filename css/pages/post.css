@@ -13,6 +13,8 @@
     position: relative;
     padding-top: 100%;
     background-color: var(--c-ph);
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 .post__card .media-ctn img {
