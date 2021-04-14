@@ -1,12 +1,17 @@
 #footer {
     position: relative;
     margin: var(--rhythm) 0 0 0;
-    background-color: #f1f1f1;
+    background-color: #f5f5f7;
     z-index: 1000;
 }
 
 #footer a {
     color: inherit;
+}
+
+#footer * {
+    color: #86868b;
+    border-color: #86868b;
 }
 
 #footer .wrapper {
@@ -77,8 +82,8 @@
 /*DETAILS/SUMMARY*/
 #footer details {
     width: 100%;
-    border-top: 1px solid var(--c-fg);
-    border-bottom: 1px solid var(--c-fg);
+    border-top: 1px solid #86868b;
+    border-bottom: 1px solid #86868b;
 }
 
 #footer details summary {
@@ -104,7 +109,7 @@
     content: ' ';
     height: 20px;
     width: 1px;
-    background-color: var(--c-fg);
+    background-color: #86868b;
     transition: transform 0.2s;
 }
 
@@ -130,8 +135,11 @@
     padding-left: 0;
 }
 
+#footer nav li:last-child {
+    margin-bottom: 20px;
+}
+
 #footer nav li a {
-    padding: 20px 0;
+    padding: 10px 0;
     display: block;
-    border-top: 1px solid var(--c-border);
 }
