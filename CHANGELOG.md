@@ -1,3 +1,11 @@
+# v0.8.18
+##  15/04/2020
+
+1. [](#improved)
+    * Multiple visual fixes and changes
+    * Bump Snipcart to v3.1.0
+    * Removed Snipcart from the assets pipeline
+
 # v0.8.17
 ##  14/04/2020
 

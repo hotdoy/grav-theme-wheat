@@ -19,9 +19,9 @@
 
 #header .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 40% 20% 40%;
     margin: 0 auto;
-    max-width: var(--w-body);
+    max-width: var(--w-full);
     height: 100%;
 }
 
@@ -38,7 +38,7 @@
 }
 
 #header .grid .logo svg {
-    height: calc(var(--header-heigth) - 30px);
+    height: calc(var(--header-heigth) - 20px);
     width: 100%;
 }
 
@@ -57,7 +57,7 @@
     display: none;
 }
 
-@media (min-width: 835px) {
+@media (min-width: 1200px) {
     #header .grid nav {
         display: flex;
     }
@@ -81,7 +81,7 @@
     height: 100%;
 }
 
-@media (min-width: 835px) {
+@media (min-width: 1200px) {
     #header .grid .burger {
         display: none;
     }

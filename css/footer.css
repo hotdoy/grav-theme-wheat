@@ -1,7 +1,7 @@
 #footer {
     position: relative;
     margin: var(--rhythm) 0 0 0;
-    background-color: #f5f5f7;
+    background-color: #000;
     z-index: 1000;
 }
 
@@ -10,8 +10,8 @@
 }
 
 #footer * {
-    color: #86868b;
-    border-color: #86868b;
+    color: #fff;
+    border-color: #fff;
 }
 
 #footer .wrapper {
@@ -34,6 +34,19 @@
     text-align: center;
 }
 
+#footer .contact .logo {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    width: 35px;
+    height: auto;
+}
+
+#footer .contact svg {
+    width: 100%;
+    height: auto;
+}
+
 #footer nav {
     width: 100%;
 }
@@ -49,6 +62,11 @@
         text-align: left;
         margin-top: 0;
     }
+
+    #footer .contact .logo {
+        margin-left: 0;
+    }
+
 
     #footer nav {
         width: 50%;

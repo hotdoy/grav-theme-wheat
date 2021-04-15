@@ -16,6 +16,8 @@
 
 .product__showcase .media-ctn {
     width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
 }
 
 @media (min-width: 735px) {
@@ -95,6 +97,11 @@
 
 .product__showcase .description {
     margin-top: 1rem;
+}
+
+.product__showcase .description ul,
+.product__showcase .description li {
+    list-style: disc;
 }
 
 .product__showcase .variant {
