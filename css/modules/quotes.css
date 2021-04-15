@@ -22,7 +22,7 @@
   justify-content: center;
   flex-direction: column;
   height: auto;
-  padding: 6rem 2rem;
+  padding: var(--rhythm) 2rem;
   text-align: center;
   background-color: var(--c-panel-bg, var(--c-hl));
   color: var(--c-panel-fg, white);

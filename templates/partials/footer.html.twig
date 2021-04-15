@@ -4,7 +4,11 @@
 	<div class="wrapper text small">
 
 		<div class="top">
-			<div class="contact">{{ root_params.header.contact|markdown|raw }}</div>
+
+			<div class="contact">
+				<a class="logo" href="{{ home_url }}">{% include 'partials/logo.html.twig' %}</a>
+				{{ root_params.header.contact|markdown|raw }}
+			</div>
 			<nav>
 				{% for drawer in root_params.header.footer_nav %}
 					<details>
