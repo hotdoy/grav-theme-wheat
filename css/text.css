@@ -44,7 +44,7 @@
 .h2 {
     font-size: 1.875rem;
     line-height: 2.1rem;
-    font-weight: var(--fw-bold);
+    font-family: var(--font-alt);
 }
 
 .text h1, 
@@ -52,7 +52,7 @@
 .h1 {
     font-size: 2.25rem;
     line-height: 2.5rem;
-    font-weight: var(--fw-bold);
+    font-family: var(--font-alt);
 }
 @media (min-width: 835px) {
     .text h1, 

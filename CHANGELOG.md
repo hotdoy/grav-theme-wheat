@@ -1,3 +1,13 @@
+# v0.8.19
+##  19/04/2020
+
+1. [](#improved)
+    * Multiple visual fixes and changes
+    * Gordita as alternate font
+    * Bigger buttons
+    * Snipcart Guest Only control
+    * Added micro animation to Details
+
 # v0.8.18
 ##  15/04/2020
 
