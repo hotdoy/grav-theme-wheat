@@ -1,7 +1,7 @@
 #footer {
     position: relative;
     margin: var(--rhythm) 0 0 0;
-    background-color: #000;
+    background-color: var(--c-hl);
     z-index: 1000;
 }
 
@@ -100,8 +100,8 @@
 /*DETAILS/SUMMARY*/
 #footer details {
     width: 100%;
-    border-top: 1px solid #86868b;
-    border-bottom: 1px solid #86868b;
+    border-top: 1px solid ;
+    border-bottom: 1px solid ;
 }
 
 #footer details summary {
@@ -110,6 +110,8 @@
     cursor: pointer;
     position: relative;
     padding: 1rem 2rem 1rem 0;
+    font-family: var(--font-alt);
+    font-weight: var(--fw-medium);
 }
 
 #footer details summary:focus {
@@ -127,7 +129,7 @@
     content: ' ';
     height: 20px;
     width: 1px;
-    background-color: #86868b;
+    background-color: #fff;
     transition: transform 0.2s;
 }
 
@@ -141,6 +143,18 @@
 
 #footer details[open] summary:after {
     transform: rotate(135deg);
+}
+
+#footer details[open] *:not(summary) {
+    animation-name: footer-details;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+@keyframes footer-details {
+    from {opacity: 0.5; transform: translateY(-5px);}
+    to {opacity: 1; transform: translateY(0px);}
 }
 
 #footer details+details {

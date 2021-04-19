@@ -51,10 +51,9 @@
 }
 
 .module.mediatext h1,
-.module.mediatext h2,
-.module.mediatext h3 {
+.module.mediatext h2 {
     margin-top: 1.5rem;
-    font-weight: 700;
+    font-weight: var(--fw-medium);
 }
 
 .module.mediatext .button {

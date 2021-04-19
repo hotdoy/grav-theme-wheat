@@ -14,8 +14,6 @@
     <section class="marquee"{% if marquee_styles %} style="{{ marquee_styles }}"{% endif %}>{{ root_params.header.marquee_content|markdown|raw }}</section>
     {% endif %}
 
-
-
     <div class="header">
         <div class="grid">
 
@@ -38,7 +36,9 @@
 
             {# TOGGLES #}
             <div class="toggles">
+                {% if not theme.snipcart_allow_guests_only %}
                 <button class="snipcart-account snipcart-customer-signin">{{ svg.user() }}</button>
+                {% endif %}
                 {% if theme.snipcart %}
                 <button class="snipcart-checkout" aria-label="open cart">
                     {{ svg.bag() }}
@@ -50,14 +50,6 @@
 
         </div>
     </div>
-
-
-
-
-
-
-
-
 
     {# PANEL #}
     <div class="header-panel">

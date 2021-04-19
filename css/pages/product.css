@@ -120,7 +120,7 @@
 .product__showcase .variant select {
     width: 100%;
     border-radius: 4px;
-    padding: 8px 5px;
+    padding: 10px 5px;
     border-color: var(--c-border);
     background-color: transparent;
 }
