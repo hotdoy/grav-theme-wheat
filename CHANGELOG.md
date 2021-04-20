@@ -1,3 +1,10 @@
+# v0.8.20
+##  20/04/2020
+
+1. [](#improved)
+    * Rolled back Gordita
+    * Simplified font-size
+
 # v0.8.19
 ##  19/04/2020
 
