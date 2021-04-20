@@ -30,8 +30,10 @@
 				 {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item} only %}
 			</div>
 			{% endfor %}
-
 		</div>
+
+		{# SCROLLBAR #}
+		<div class="swiper-scrollbar"></div>
 	</div>	
 </div>
 {% endblock %}

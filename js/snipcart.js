@@ -1,4 +1,5 @@
 document.addEventListener("snipcart.ready", () => {
+
     Snipcart.events.on("item.added", (cartItem) => {
         window.navigator.vibrate(10);
         let snipcartPulses = document.getElementsByClassName("snipcart-pulse");
@@ -11,4 +12,7 @@ document.addEventListener("snipcart.ready", () => {
         }
         return;
     });
+
 });
+
+

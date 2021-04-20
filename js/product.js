@@ -3,9 +3,9 @@ const Product = {
     InitSwiper: function() {
         const e = new Swiper(".product .product__showcase .swiper-container", {
             centeredSlides: true,
-            pagination: {
-                el: ".swiper-pagination",
-            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+             },
         });
     },
 

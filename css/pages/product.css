@@ -60,6 +60,15 @@
     object-fit: cover;
 }
 
+.product__showcase .swiper-container-horizontal>.swiper-scrollbar {
+    position: relative; 
+    margin-top: calc(1rem + 5px);
+    left: 0;
+    height: 5px;
+    width: 100%;
+    z-index: 50;
+}
+
 @media (min-width: 735px) {
     .product__showcase .sticky-ctn {
         position: sticky;

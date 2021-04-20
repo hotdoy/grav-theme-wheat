@@ -1,13 +1,13 @@
 const FX = {
 
-    Default: function() {
+    Modules: function() {
         ScrollOut({
-            targets: ['.fx', '.module'],
+            targets: ['.module'],
             once: true,
         });
     },
 
     Init: function() {
-        FX.Default(); 
+        FX.Modules(); 
     },
 };
