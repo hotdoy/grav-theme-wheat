@@ -53,7 +53,6 @@
 .module.mediatext h1,
 .module.mediatext h2 {
     margin-top: 1.5rem;
-    font-weight: var(--fw-medium);
 }
 
 .module.mediatext .button {
@@ -61,7 +60,7 @@
 }
 
 @media (min-width: 735px) {
-    .module.mediatext .content-ctn *:first-child {
+    .module.mediatext .content-ctn > *:first-child {
         margin-top: 0;
     }
 }
