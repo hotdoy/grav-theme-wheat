@@ -20,24 +20,14 @@
     url("../fonts/inter-v2-latin-700.woff") format("woff");
 }
 
-@font-face {
-  font-family: "Gordita";
-  font-style: normal;
-  font-weight: 500;
-  src: local(""), 
-    url("../fonts/Gordita Medium.woff2") format("woff2"),
-    url("../fonts/Gordita Medium.woff") format("woff");;
-  }
-
 /*===========================================
 					ROOT 
 ============================================*/
 
 :root {
-  --font-base: 'Inter', sans-serif;
-  --font-alt: 'Gordita', sans-serif;
+  --ff-base: 'Inter', sans-serif;
   font-size: 16px;
-  font-family: var(--font-base);
+  font-family: var(--ff-base);
 
   --c-bg: white;
   --c-fg: #2d333a;

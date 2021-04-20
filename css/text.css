@@ -7,60 +7,36 @@
     line-height: 1.9rem;
 }
 
+.text h3, 
+.text .h3,
+.h3,
+.text h4,
+.text .h4,
+.h4,
+.text h5,
+.text .h5,
+.h5,
 .text h6,
 .text .h6,
 .h6 {
-    color: inherit;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-}
-
-.text h5,
-.text .h5,
-.h5 {
-    color: inherit;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-}
-
-
-.text h4,
-.text .h4,
-.h4 {
-    color: inherit;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-}
-
-.text h3, 
-.text .h3,
-.h3 {
-    font-size: 1.5rem;
+    font-size: large;
     line-height: 2rem;
 }
 
 .text h2, 
 .text .h2,
 .h2 {
-    font-size: 1.875rem;
+    font-size: x-large;
     line-height: 2.1rem;
-    font-family: var(--font-alt);
+    font-weight: var(--fw-bold);
 }
 
 .text h1, 
 .text .h1,
 .h1 {
-    font-size: 2.25rem;
+    font-size: xx-large;
     line-height: 2.5rem;
-    font-family: var(--font-alt);
-}
-@media (min-width: 835px) {
-    .text h1, 
-    .text .h1,
-    .h1 {
-        font-size: 3rem;
-        line-height: 3.6rem;
-    }
+    font-weight: var(--fw-bold);
 }
 
 .prose p {margin-top: 1rem;}
@@ -126,9 +102,9 @@
 
 .text blockquote,
 .text blockquote p {
-    font-weight: inherit;
-    line-height: inherit;
-    font-size: inherit;
+    color: inherit;
+    font-size: 1rem;
+    line-height: 1.9rem;
 }
 
 .text ul {
