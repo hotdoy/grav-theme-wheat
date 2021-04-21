@@ -1,0 +1,10 @@
+{% set content = content|default('Dialog!') %}
+
+<div class="dialog">
+	<div class="dialog__veil"></div>
+	<div class="dialog__box">
+		<div class="dialog__content">
+			{{ content|raw }}
+		</div>
+	</div>
+</div>

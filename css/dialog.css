@@ -1,0 +1,57 @@
+.dialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 6000;
+	backdrop-filter: blur(10px);
+    transition-property: opacity, visibility;
+    transition-duration: 0.2s;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dialog.dialog--active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dialog__veil {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #000;
+	opacity: 0.7;
+}
+
+.dialog__box {
+	position: absolute;
+	bottom: var(--gutter);
+	left: var(--gutter);
+	right: var(--gutter);
+	max-width: 500px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 20vh; 
+	padding: 20px var(--gutter);
+	background-color: var(--c-bg);
+	border-radius: 20px;
+
+	transition-property: opacity, transform;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	opacity: 1;
+	transform: translateY(0%);
+}
+
+.dialog:not(.dialog--active) .dialog__box {
+	opacity: 0.5;
+	transform: translateY(100%);
+
+}
