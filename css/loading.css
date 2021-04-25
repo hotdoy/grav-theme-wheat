@@ -24,3 +24,10 @@
     opacity: 1;
     visibility: visible;
 }
+
+[data-page-state^='LICN'] main {
+    transform: translateY(-15px);
+    transition-duration: 0.2s;
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
