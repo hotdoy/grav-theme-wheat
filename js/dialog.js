@@ -1,50 +1,33 @@
 const Dialog = {
 
-    e: null,
-    hash:'',
     resetDelay: 200,
-
-    watch: function() {
-        window.addEventListener('hashchange', function() {
-            if (!!document.querySelectorAll(window.location.hash + ' .dialog')) {
-                Dialog.e = document.getElementById(window.location.hash.substring(1));
-                Dialog.toggle();
-                Dialog.watchOutsideClick();
-            }
-        });
+    
+    open: function(id) {
+        const e = document.getElementById(id);
+        e.classList.add('dialog--active');
+        Dialog.closeOnOutside(e);
     },
 
-    toggle: function() {
-        if (!!Dialog.e) {
-            if (!Dialog.e.classList.contains('dialog--active')) {
-                Dialog.e.classList.add('dialog--active');
-            } else {
-                Dialog.e.classList.remove('dialog--active');
-                Dialog.reset();
-            }
-        }
+    close: function(id) {
+        const e = document.getElementById(id);
+        e.classList.remove('dialog--active');
+        Dialog.reset(e);
     },
 
-    watchOutsideClick: function() {
-        if (!!Dialog.e) {
-            Dialog.e.querySelectorAll('.dialog__veil')[0].addEventListener('click', function() {
-                Dialog.toggle();
+    closeOnOutside: function(e) {
+        if (!!e) {
+            e.querySelectorAll('.dialog__veil')[0].addEventListener('click', function() {
+                Dialog.close(e.id);
             })
         }
     },
 
-    // watchEscapeKey: function() {},
-
-    reset: function() {
-        if (!!Dialog.e) {
+    reset: function(e) {
+        if (!!e) {
             setTimeout(function() {
-                const clone = Dialog.e.cloneNode(true);
-                Dialog.e.parentNode.replaceChild(clone, Dialog.e);
-                Dialog.e = null;
-                history.pushState("", document.title, window.location.pathname + window.location.search);
+                const clone = e.cloneNode(true);
+                e.parentNode.replaceChild(clone, e);
             }, Dialog.resetDelay);
         }
-    },
+    },    
 };
-
-Dialog.watch();
