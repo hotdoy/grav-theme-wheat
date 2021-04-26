@@ -1,9 +1,9 @@
-{% set content = content|default('Dialog!') %}
+{% set content = content|default('<strong>You just found a Dialog from the future!</strong><br>(available in v0.9.0)') %}
 
 <div class="dialog" id="dialog">
 	<div class="dialog__veil"></div>
 	<div class="dialog__box">
-		<div class="dialog__content">
+		<div class="dialog__content text small">
 			{{ content|raw }}
 		</div>
 	</div>

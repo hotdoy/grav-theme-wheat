@@ -1,17 +1,23 @@
 const Dialog = {
 
+    initialized: false,
     resetDelay: 200,
+    initDelay: 1000,
     
     open: function(id) {
         const e = document.getElementById(id);
-        e.classList.add('dialog--active');
-        Dialog.closeOnOutsideClick(id);
+        if (!!e) {
+            e.classList.add('dialog--active');
+            Dialog.closeOnOutsideClick(e);
+        }
     },
 
     close: function(id) {
         const e = document.getElementById(id);
-        e.classList.remove('dialog--active');
-        Dialog.reset(id);
+        if (!!e) {
+            e.classList.remove('dialog--active');
+            Dialog.reset(id);            
+        }
     },
 
     closeAll: function() {
@@ -21,18 +27,11 @@ const Dialog = {
         }
     },
 
-    // THIS DOES NOT WORK
-    closeOnOutsideClick: function(id) {
-        const e = document.getElementById(id);
-        const veil = e.querySelectorAll('.dialog__veil');
-        console.log('1');
-        for(let v of veil) {
-            console.log('2');
-            v.addEventListener('click', function(event) {
-                console.log('3');
-                Dialog.close(id);
-            })
-        }
+    closeOnOutsideClick: function(e) {
+        const v = e.querySelector('.dialog__veil');
+        v.addEventListener('click', function(event) {
+            Dialog.close(e.id);
+        })
     },
 
     reset: function(id) {
@@ -42,25 +41,32 @@ const Dialog = {
                 const clone = e.cloneNode(true);
                 e.parentNode.replaceChild(clone, e);
             }, Dialog.resetDelay);
+            history.pushState("", document.title, window.location.pathname + window.location.search);
         }
     },
 
     watch: function() {
         window.addEventListener('hashchange', function(event) {
-            Dialog.init();
+            const hash = window.location.hash.substring(1);
+            if (hash.length) {
+                Dialog.open(hash);
+            } else {
+                Dialog.closeAll();
+            }
         })
     },
 
     init: function() {
-        Dialog.closeAll();
-        const hash = window.location.hash;
-        if (!!hash) {
-            const el = document.querySelectorAll('.dialog' + hash);
-            for (let e of el) {
-                Dialog.open(e.id); 
-            }              
+        if (!Dialog.initialized) {
+            Dialog.watch();
+            Dialog.initialized = true;
         }
-        Dialog.watch();
+        const hash = window.location.hash.substring(1);
+        if (hash.length) {
+            setTimeout(function() {
+                Dialog.open(hash);
+            }, Dialog.initDelay);
+        }
     },
 };
 

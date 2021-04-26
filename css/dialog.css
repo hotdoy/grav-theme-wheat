@@ -55,3 +55,7 @@
 	transform: translateY(100%);
 
 }
+
+.dialog__content {
+	text-align: center;
+}

@@ -1,3 +1,10 @@
+# v0.8.21
+##  26/04/2020
+
+1. [](#improved)
+    * Pre shipping v0.9 dialog prototype
+    * Styles and stuff
+
 # v0.8.20
 ##  20/04/2020
 
