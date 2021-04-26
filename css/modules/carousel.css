@@ -66,3 +66,12 @@
         width: 29%;
     }
 }
+
+.module.carousel .swiper-container-horizontal>.swiper-scrollbar {
+    position: relative; 
+    margin-top: 1rem;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    z-index: 50;
+}
