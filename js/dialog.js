@@ -3,13 +3,14 @@ const Dialog = {
     initialized: false,
     resetDelay: 200,
     initDelay: 1000,
+    lastHash:'',
     
     open: function(id) {
         const e = document.getElementById(id);
         if (!!e) {
             e.classList.add('dialog--active');
-            Dialog.listenOutsideClick(e);
-            Dialog.listenEscapeKey(e);
+            Dialog.closeOnOutsideClick(e);
+            Dialog.closeOnEscapeKey(e);
         }
     },
 
@@ -28,16 +29,27 @@ const Dialog = {
         }
     },
 
-    listenOutsideClick: function(e) {
+    closeOnOutsideClick: function(e) {
         const v = e.querySelector('.dialog__veil');
         v.addEventListener('click', function(event) {
             Dialog.closeAll();
         })
     },
 
-    listenEscapeKey: function(e) {
+    closeOnEscapeKey: function(e) {
         document.addEventListener('keydown', function(event) {
             if(event.key === 'Escape'){
+                Dialog.close(e.id);
+            }
+        })
+    },
+
+    listenHashchange: function() {
+        window.addEventListener('hashchange', function(event) {
+            const hash = window.location.hash.substring(1);
+            if (hash.length) {
+                Dialog.open(hash);
+            } else {
                 Dialog.closeAll();
             }
         })
@@ -54,20 +66,9 @@ const Dialog = {
         }
     },
 
-    watch: function() {
-        window.addEventListener('hashchange', function(event) {
-            const hash = window.location.hash.substring(1);
-            if (hash.length) {
-                Dialog.open(hash);
-            } else {
-                Dialog.closeAll();
-            }
-        })
-    },
-
     init: function() {
         if (!Dialog.initialized) {
-            Dialog.watch();
+            Dialog.listenHashchange();
             Dialog.initialized = true;
         }
         const hash = window.location.hash.substring(1);
