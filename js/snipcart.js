@@ -13,6 +13,18 @@ document.addEventListener("snipcart.ready", () => {
         return;
     });
 
+    Snipcart.events.on('customer.signedin', (customer) => {
+        console.log(`Customer ${customer.email} just signed in.`);
+    });
+
+    Snipcart.events.on('customer.signedout', () => {
+        console.log('Customer signed out');
+    });
+
+    Snipcart.events.on('snipcart.initialized', (snipcartState) => {
+        console.log(snipcartState);
+    });
+
 });
 
 
