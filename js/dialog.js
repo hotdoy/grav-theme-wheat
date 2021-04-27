@@ -8,7 +8,8 @@ const Dialog = {
         const e = document.getElementById(id);
         if (!!e) {
             e.classList.add('dialog--active');
-            Dialog.closeOnOutsideClick(e);
+            Dialog.listenOutsideClick(e);
+            Dialog.listenEscapeKey(e);
         }
     },
 
@@ -27,10 +28,18 @@ const Dialog = {
         }
     },
 
-    closeOnOutsideClick: function(e) {
+    listenOutsideClick: function(e) {
         const v = e.querySelector('.dialog__veil');
         v.addEventListener('click', function(event) {
-            Dialog.close(e.id);
+            Dialog.closeAll();
+        })
+    },
+
+    listenEscapeKey: function(e) {
+        document.addEventListener('keydown', function(event) {
+            if(event.key === 'Escape'){
+                Dialog.closeAll();
+            }
         })
     },
 
