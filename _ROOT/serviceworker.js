@@ -56,8 +56,7 @@ function precache() {
     return caches.open(CACHE).then(function (cache) {
         // Cache everything
         return cache.addAll([
-            '/offline/',
-            '/'
+            '/',
         ]);
     });
 }
