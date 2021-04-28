@@ -1,4 +1,4 @@
-const CACHE = 'wheat-v1';
+const CACHE = 'wheat-v0.9.0';
 
 self.addEventListener('install', function(evt) {
     skipWaiting();
@@ -13,7 +13,7 @@ self.addEventListener('fetch', function(evt) {
         return;
     }
 
-    // Ignore requests for JSON
+    // Ignore requests for JSON related URLs
     if (request.url.includes('.json')) {
         return;
     }
