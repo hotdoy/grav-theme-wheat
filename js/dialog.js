@@ -44,6 +44,14 @@ const Dialog = {
         })
     },
 
+    openByHash: function(hash, delay = 0) {
+        if (hash.length) {
+            setTimeout(function() {
+                window.location.hash = hash;  
+            }, delay);
+        }
+    },
+
     listenHashchange: function() {
         window.addEventListener('hashchange', function(event) {
             const hash = window.location.hash.substring(1);
