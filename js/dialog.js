@@ -3,12 +3,14 @@ const Dialog = {
     initialized: false,
     resetDelay: 200,
     initDelay: 1000,
+    lastHash:'',
     
     open: function(id) {
         const e = document.getElementById(id);
         if (!!e) {
             e.classList.add('dialog--active');
             Dialog.closeOnOutsideClick(e);
+            Dialog.closeOnEscapeKey(e);
         }
     },
 
@@ -30,7 +32,34 @@ const Dialog = {
     closeOnOutsideClick: function(e) {
         const v = e.querySelector('.dialog__veil');
         v.addEventListener('click', function(event) {
-            Dialog.close(e.id);
+            Dialog.closeAll();
+        })
+    },
+
+    closeOnEscapeKey: function(e) {
+        document.addEventListener('keydown', function(event) {
+            if(event.key === 'Escape'){
+                Dialog.close(e.id);
+            }
+        })
+    },
+
+    openByHash: function(hash, delay = 0) {
+        if (hash.length) {
+            setTimeout(function() {
+                window.location.hash = hash;  
+            }, delay);
+        }
+    },
+
+    listenHashchange: function() {
+        window.addEventListener('hashchange', function(event) {
+            const hash = window.location.hash.substring(1);
+            if (hash.length) {
+                Dialog.open(hash);
+            } else {
+                Dialog.closeAll();
+            }
         })
     },
 
@@ -45,20 +74,9 @@ const Dialog = {
         }
     },
 
-    watch: function() {
-        window.addEventListener('hashchange', function(event) {
-            const hash = window.location.hash.substring(1);
-            if (hash.length) {
-                Dialog.open(hash);
-            } else {
-                Dialog.closeAll();
-            }
-        })
-    },
-
     init: function() {
         if (!Dialog.initialized) {
-            Dialog.watch();
+            Dialog.listenHashchange();
             Dialog.initialized = true;
         }
         const hash = window.location.hash.substring(1);

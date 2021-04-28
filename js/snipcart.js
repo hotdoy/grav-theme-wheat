@@ -13,6 +13,17 @@ document.addEventListener("snipcart.ready", () => {
         return;
     });
 
+    Snipcart.events.on('customer.signedin', (customer) => {
+        console.log(`Customer ${customer.email} signed in.`);
+        Dialog.openByHash('dialog-welcomeback', 1000);
+    });
+
+    Snipcart.events.on('customer.signedout', () => {
+        console.log('Customer signed out');
+    });
+
+    Snipcart.events.on('snipcart.initialized', (snipcartState) => {
+        console.log('Snipcart Initialized');
+    });
+
 });
-
-
