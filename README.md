@@ -14,8 +14,12 @@ Seting up your local development setup should take you about 10 to 30 minutes, t
 - Make sure you have your favorite local LAMP setup up and running (xampp, wamp, etc).
 - [Download](https://getgrav.org/downloads) the latest version of GRAV Core + ADMIN.
 - Create an empty directory for your project.
+- Unzip the downloaded Grav folder and put it in you project folder.
+- Rename the Grav directory to `grav-admin`
 - Open the grav-admin folder
-- Cut the user folder and paste it right next to grav-admin so it looks like this:
+- Cut the user folder and paste it right next to grav-admin.
+  
+At this point, it should looks like this:
 
 ```
 myProject
@@ -30,7 +34,7 @@ myProject
     grav-theme-wheat
 	user
 ```
-- Now that's it for the folders, now we only have to symlink everything togeter. You will, of course, need to find and replace the paths with your own.
+- That's it for the directory. Now we only have to symlink everything together. You will, of course, need to find and replace the paths with your own.
 
 1. Local webroot to Grav install (Skip this one if your project folder is in your webroot)
 mklink /D D:\xampp\htdocs\myproject D:\myproject\grav-admin
