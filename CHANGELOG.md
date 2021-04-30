@@ -1,3 +1,11 @@
+# v0.9.0
+##  28/04/2020
+
+1. [](#new)
+    * Bump to v0.9.0
+    * Added basic service worker
+    * Added Dialog system
+
 # v0.8.21
 ##  26/04/2020
 

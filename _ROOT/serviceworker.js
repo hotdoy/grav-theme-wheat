@@ -1,4 +1,4 @@
-const CACHE = 'wheat-v1';
+const CACHE = 'wheat-v0.9.0';
 
 self.addEventListener('install', function(evt) {
     skipWaiting();
@@ -13,7 +13,12 @@ self.addEventListener('fetch', function(evt) {
         return;
     }
 
-    // Ignore requests for JSON
+    // Ignore requests for Snipcart related URLs
+    if (request.url.includes('snipcart')) {
+        return;
+    }
+
+    // Ignore requests for JSON related URLs
     if (request.url.includes('.json')) {
         return;
     }
@@ -56,8 +61,7 @@ function precache() {
     return caches.open(CACHE).then(function (cache) {
         // Cache everything
         return cache.addAll([
-            '/offline/',
-            '/'
+            '/',
         ]);
     });
 }
