@@ -5,8 +5,8 @@
 [Live demo](https://getwheat.ca/)
 
 ## Description (WIP)
-Wheat is theme for Grav CMS with Snipcart at it's heart. While it could probably be used out of the box, it is meant as a starting point.
-It uses no build tool, no framework of any kind, only needs a basic LAMP setup for hosting and takes a couple of minutes to get development un and running.
+Wheat is a theme for Grav CMS with Snipcart at it's heart. While it could probably be used "out of the box", it is meant as a starting point.
+It uses no build tool, no framework of any kind, only needs a basic LAMP setup for hosting and takes a couple of minutes to get development up and running.
 
 ## Local Setup
 Setting up your local development setup should take you about 10 to 30 minutes, taking into account you already have basic knowledge of web development.
@@ -61,11 +61,11 @@ If everything goes well, Grav will prompt you to create an account. At this poin
 The theme comes with a Github Action you can easily setup to deploy to FTP on release. You will need to add the required Github Secret to use it, othewise, you should probably delete the `/.github` folder if you do not plan on using the action.
 
 ## _ROOT folder (WIP)
-The theme contains a _ROOT directory where you should keep everything that will eventually go in you webroot. Doing this, you can be certain it follows the theme when using the Github Action or when you move you theme around. Don't forget to manually move those files after you make a new release from the _ROOT folder to you webroot. This usually contains favicons, webmanifest, Service Workers and stuff like that.
+The theme contains a _ROOT directory where you should keep everything that will eventually go in you production webroot. Doing this, you can be certain it follows the theme when using the Github Action or when you move you theme around. Don't forget to manually move those files after you make a new release from the _ROOT folder to you webroot. This usually contains favicons, webmanifest, Service Workers and stuff like that.
 
 ## PWA (WIP)
-The theme comes with a Service Worker ready to be rolled-out. If you followed the "Going Live" part of this README, it should already be at the root of your server. Now you just need to make sure PWA is enabled in the theme settings.
-Make sure you change the cache name when you release new version so your users get the new assets!
+The theme comes with a Service Worker ready to be rolled-out. If you followed the "Going Live" part of this README, it should already be at the root of your server. Now you just need to make sure PWA is enabled in the theme settings (0.9.1).
+Make sure you change the cache name when you release a new version so your users get the new assets!
 
 ## What's in the theme?
 ### Pages
