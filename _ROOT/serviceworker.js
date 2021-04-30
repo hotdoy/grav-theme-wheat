@@ -13,6 +13,11 @@ self.addEventListener('fetch', function(evt) {
         return;
     }
 
+    // Ignore requests for Snipcart related URLs
+    if (request.url.includes('snipcart')) {
+        return;
+    }
+
     // Ignore requests for JSON related URLs
     if (request.url.includes('.json')) {
         return;
