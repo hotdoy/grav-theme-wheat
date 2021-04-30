@@ -31,7 +31,7 @@ myProject
 ```
 myProject
 	grav-admin
-    grav-theme-wheat
+	grav-theme-wheat
 	user
 ```
 - That's it for the directory. Now we only have to symlink everything together. You will, of course, need to find and replace the paths with your own.
