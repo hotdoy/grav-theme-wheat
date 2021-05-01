@@ -14,16 +14,16 @@ document.addEventListener("snipcart.ready", () => {
     });
 
     Snipcart.events.on('customer.signedin', (customer) => {
-        console.log(`Customer ${customer.email} signed in.`);
-        Dialog.openByHash('dialog-welcomeback', 1000);
+        Dialog.openByHash('dialog-signin', 1000);
     });
 
     Snipcart.events.on('customer.signedout', () => {
-        console.log('Customer signed out');
+        window.location.hash = '';
+        Dialog.openByHash('dialog-signout', 1000);
     });
 
-    Snipcart.events.on('snipcart.initialized', (snipcartState) => {
-        console.log('Snipcart Initialized');
-    });
+    // Snipcart.events.on('snipcart.initialized', (snipcartState) => {
+    //     console.log('Snipcart Initialized');
+    // });
 
 });

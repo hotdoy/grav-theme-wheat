@@ -1,3 +1,13 @@
+# v0.9.1
+##  01/05/2020
+
+1. [](#improved)
+    * Serviceworker can be switched on of off in theme settings.
+    * Signin and off now triggers demo dialogs.
+    * Dialog can now be closed using a "close" button.
+    * Page-state Navigating (LICN) now fire Dialog.closeAll().
+    * Minor style fixes.
+
 # v0.9.0
 ##  28/04/2020
 

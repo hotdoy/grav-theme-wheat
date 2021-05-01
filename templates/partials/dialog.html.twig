@@ -1,28 +1,13 @@
-{% set content = content|default('<strong>You just found a Dialog from the future!</strong><br>(available in v0.9.0)') %}
+{% import "partials/svg.html.twig" as svg %}
+{% set id = id|default('dialog') %}
+{% set content = content|default('<strong>This is a dialog!</strong><br>You can add content using the <code>content</code> variable.') %}
 
-<div class="dialog" id="dialog">
+<div class="dialog" id="{{ id }}">
 	<div class="dialog__veil"></div>
 	<div class="dialog__box">
+		<button class="dialog__close">{{ svg.close() }}</button>
 		<div class="dialog__content text small">
-			{{ content|raw }}
-		</div>
-	</div>
-</div>
-
-<div class="dialog" id="dialog-welcomeback">
-	<div class="dialog__veil"></div>
-	<div class="dialog__box">
-		<div class="dialog__content text small">
-			Welcome back!
-		</div>
-	</div>
-</div>
-
-<div class="dialog" id="dialog-error">
-	<div class="dialog__veil"></div>
-	<div class="dialog__box">
-		<div class="dialog__content text small">
-			Error!
+			{{ content|markdown|raw }}
 		</div>
 	</div>
 </div>

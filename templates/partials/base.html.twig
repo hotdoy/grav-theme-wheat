@@ -34,7 +34,11 @@
 		{% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %}
 
 		{% block snipcart %}{% include 'partials/snipcart.html.twig' %}{% endblock %}
+		
 		{% include 'partials/dialog.html.twig' %}
+		{% include 'partials/dialog.html.twig' with {id: 'dialog-signin', content: 'THEME.DIALOG.SIGNIN'|t } %}
+		{% include 'partials/dialog.html.twig' with {id: 'dialog-signout', content: 'THEME.DIALOG.SIGNOUT'|t } %}
+		
 		{{ assets.js('bottom')|raw }}
 		{% if theme.snipcart %}<script async src="https://cdn.snipcart.com/themes/v3.1.0/default/snipcart.js"></script>{% endif %}
 		{% block serviceworker %}{% include 'partials/serviceworker.html.twig' %}{% endblock %}

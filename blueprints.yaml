@@ -1,7 +1,7 @@
 name: Wheat
 slug: wheat
 type: theme
-version: 0.9.0
+version: 0.9.1
 description: Wheat, a starter-kit for Grav CMS with Snipcart at it's heart.
 icon: rebel
 author:
@@ -99,6 +99,23 @@ form:
       label: Allow Guests Only
       description: Activate this option to remove the login / registration step from the menu. Make sure this value is the same in Snipcart, under Checkout & Cart.
       highlight: 0
+      default: 0
+      options:
+        0: PLUGIN_ADMIN.DISABLED
+        1: PLUGIN_ADMIN.ENABLED
+      validate:
+        type: bool
+
+    pwa_section:
+      type: section
+      title: PWA
+      underline: true 
+
+    pwa_allow_install:
+      type: toggle
+      label: Allow Installation
+      help: Allow the installation of service worker on users devices (if serviceworker.js is properly hosted).
+      highlight: 1
       default: 0
       options:
         0: PLUGIN_ADMIN.DISABLED
