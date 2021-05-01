@@ -3,7 +3,6 @@ const Dialog = {
     initialized: false,
     resetDelay: 200,
     initDelay: 1000,
-    lastHash:'',
     
     open: function(id) {
         const e = document.getElementById(id);
@@ -11,6 +10,7 @@ const Dialog = {
             e.classList.add('dialog--active');
             Dialog.closeOnOutsideClick(e);
             Dialog.closeOnEscapeKey(e);
+            Dialog.closeOnCloseClick(e);
         }
     },
 
@@ -33,6 +33,13 @@ const Dialog = {
         const v = e.querySelector('.dialog__veil');
         v.addEventListener('click', function(event) {
             Dialog.closeAll();
+        })
+    },
+
+    closeOnCloseClick: function(e) {
+        const btn = e.querySelector('.dialog__close');
+        btn.addEventListener('click', function(event) {
+            Dialog.close(e.id);
         })
     },
 

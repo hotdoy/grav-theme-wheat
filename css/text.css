@@ -58,7 +58,7 @@
 .text.small,
 .text.small p {
     font-size: small;
-    line-height: 1.5rem;
+    line-height: 1.2rem;
 }
 
 .text.small h3, 
@@ -140,6 +140,13 @@
 
 .text a {
     color: inherit;
-    text-decoration: none;
+    text-decoration: underline;
     color: var(--c-hl);
+}
+
+.text code {
+    background-color: #f1f1f1;
+    padding: 1px 5px;
+    border: 1px solid #dedede;
+    border-radius: 4px;
 }

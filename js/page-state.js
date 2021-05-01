@@ -44,6 +44,7 @@ const PageState = {
             case 'LIC':
                 PageState.state = 'LICN';
                 PageState.UpdateStateAttr();
+                Dialog.closeAll();
                 break;
         }
 

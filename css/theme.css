@@ -30,11 +30,10 @@
   font-family: var(--ff-base);
 
   --c-bg: white;
-  --c-fg: #2d333a;
+  --c-fg: #242424;
   --c-hl: #4285F4;
-  --c-ph: #e1e1e1;
 
-  --c-border: #e4e4e4;
+  --c-border: #dedede;
   --c-ph: #ced4da;
 
   --w-text: 735px;

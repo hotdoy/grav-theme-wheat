@@ -7,6 +7,7 @@
 
 #footer a {
     color: inherit;
+    text-decoration: none;
 }
 
 #footer * {
@@ -32,14 +33,6 @@
     width: 100%;
     margin-top: var(--rhythm);
     text-align: center;
-}
-
-#footer .contact .logo {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 0.5rem;
-    width: 35px;
-    height: auto;
 }
 
 #footer .contact svg {
