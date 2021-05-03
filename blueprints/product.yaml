@@ -121,6 +121,13 @@ form:
                 type: number
                 min: 0
 
+            header.length:
+              type: text
+              label: "Length (cm)"
+              validate:
+                type: number
+                min: 0
+                
             header.width:
               type: text
               label: "width (cm)"
