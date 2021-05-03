@@ -6,7 +6,6 @@
 	  		slidesPerView: "auto",
 	  		scrollbar: {
 		        el: '.swiper-scrollbar',
-		        hide: true,
 		     },
 	  		spaceBetween: 10,
 	  		breakpoints: {
