@@ -146,7 +146,7 @@
 
 .text code {
     background-color: #f1f1f1;
-    padding: 1px 5px;
+    padding: 0px 5px 2px 5px;
     border: 1px solid #dedede;
     border-radius: 4px;
 }
