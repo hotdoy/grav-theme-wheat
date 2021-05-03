@@ -1,9 +1,18 @@
+# v0.9.2
+##  03/05/2020
+
+1. [](#improved)
+    * Added Snipcart version overwrite in theme comfig.
+    * Added length attribute to products.
+    * Fixed typo in data-item-file-guid attribute.
+    * Minor style fixes.
+
 # v0.9.1
 ##  01/05/2020
 
 1. [](#improved)
-    * Serviceworker can be switched on of off in theme settings.
-    * Signin and off now triggers demo dialogs.
+    * Serviceworker can be switched on and off in theme settings.
+    * Signin and off now triggers a demo dialog.
     * Dialog can now be closed using a "close" button.
     * Page-state Navigating (LICN) now fire Dialog.closeAll().
     * Minor style fixes.

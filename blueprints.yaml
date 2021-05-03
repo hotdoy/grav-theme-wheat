@@ -1,7 +1,7 @@
 name: Wheat
 slug: wheat
 type: theme
-version: 0.9.1
+version: 0.9.2
 description: Wheat, a starter-kit for Grav CMS with Snipcart at it's heart.
 icon: rebel
 author:
@@ -61,6 +61,12 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
+
+    snipcart_version:
+      type: text
+      label: Snipcart Version Overwite
+      placeholder: 3.1.1
+      description: 'change at your own risk!'
 
     snipcart_mode:
       type: toggle
