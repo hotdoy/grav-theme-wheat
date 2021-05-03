@@ -16,6 +16,7 @@
 
 .default__header .breadcrumbs a {
     color: var(--c-fg);
+    text-decoration: none;
 }
 
 .default__header time {

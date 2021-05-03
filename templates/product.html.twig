@@ -88,7 +88,7 @@
 						data-item-name="{{ page.header.name }}"
 						data-item-stackable="{{ page.header.stackable ? 'auto' : 'never' }}"
 						{% if page.header.digital_good_guid %}
-							data-itemfile-guid="{{ page.header.digital_good_guid }}"
+							data-item-file-guid="{{ page.header.digital_good_guid }}"
 						{% endif %}
 						{% for field in page.header.custom_fields %}
 							data-item-custom{{ loop.index }}-name="{{ field.name }}"
@@ -101,14 +101,17 @@
 								{% endif %}
 							{% endif %}
 						{% endfor %}
-						{% if page.header.width %}
-							data-item-width="{{ page.header.width }}"
+						{% if page.header.weight %}
+							data-item-weight="{{ page.header.weight }}"
+						{% endif %}
+						{% if page.header.length %}
+							data-item-length="{{ page.header.length }}"
 						{% endif %}
 						{% if page.header.height %}
 							data-item-height="{{ page.header.height }}"
 						{% endif %}
-						{% if page.header.weight %}
-							data-item-weight="{{ page.header.weight }}"
+						{% if page.header.width %}
+							data-item-width="{{ page.header.width }}"
 						{% endif %}
 						>
 						{{ 'THEME.CART.ADD'|t }}

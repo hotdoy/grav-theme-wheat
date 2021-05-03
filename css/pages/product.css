@@ -87,6 +87,10 @@
         margin-top: 0;
     }
 }
+.product__showcase .breadcrumbs a {
+    text-decoration: none;
+}
+
 
 .product__showcase .name {
     margin-top: 0.5rem;
