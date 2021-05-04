@@ -1,5 +1,15 @@
+# v0.9.2 WIP
+##  dd/mm/2021
+
+1. [](#improved)
+    * Added Snipcart taxable, and shippable attributes.
+    * digital_good_guid is no file_guid
+    * short_description is now description
+    * removed alt from main image for conveinience
+    * cleaning product.yaml in general (WIP)
+
 # v0.9.2
-##  03/05/2020
+##  03/05/2021
 
 1. [](#improved)
     * Added Snipcart version overwrite in theme comfig.
@@ -8,7 +18,7 @@
     * Minor style fixes.
 
 # v0.9.1
-##  01/05/2020
+##  01/05/2021
 
 1. [](#improved)
     * Serviceworker can be switched on and off in theme settings.
@@ -18,7 +28,7 @@
     * Minor style fixes.
 
 # v0.9.0
-##  28/04/2020
+##  28/04/2021
 
 1. [](#new)
     * Bump to v0.9.0
@@ -26,21 +36,21 @@
     * Added Dialog system
 
 # v0.8.21
-##  26/04/2020
+##  26/04/2021
 
 1. [](#improved)
     * Pre shipping v0.9 dialog prototype
     * Styles and stuff
 
 # v0.8.20
-##  20/04/2020
+##  20/04/2021
 
 1. [](#improved)
     * Rolled back Gordita
     * Simplified font-size
 
 # v0.8.19
-##  19/04/2020
+##  19/04/2021
 
 1. [](#improved)
     * Multiple visual fixes and changes
@@ -50,7 +60,7 @@
     * Added micro animation to Details
 
 # v0.8.18
-##  15/04/2020
+##  15/04/2021
 
 1. [](#improved)
     * Multiple visual fixes and changes
@@ -58,25 +68,25 @@
     * Removed Snipcart from the assets pipeline
 
 # v0.8.17
-##  14/04/2020
+##  14/04/2021
 
 1. [](#improved)
     * I don't know at this point.
 
 # v0.8.16
-##  13/04/2020
+##  13/04/2021
 
 1. [](#improved)
     * WIP new header is getting somewhere
 
 # v0.8.15
-##  12/04/2020
+##  12/04/2021
 
 1. [](#improved)
     * Experimenting with new fonts
 
 # v0.8.14
-##  12/04/2020
+##  12/04/2021
 
 1. [](#improved)
     * Footer link padding and border
@@ -86,33 +96,33 @@
     * Commented out some theme color options for upcoming changes
 
 # v0.8.13
-##  08/04/2020
+##  08/04/2021
 
 1. [](#improved)
     * Smaller gutter on sub 400px devices
     * Mostly cleaning
 
 # v0.8.12
-##  06/04/2020
+##  06/04/2021
 
 1. [](#improved)
     * Brand new footer
 
 # v0.8.11
-##  06/04/2020
+##  06/04/2021
 
 1. [](#improved)
     * Minor stuff
 
 # v0.8.10
-##  02/04/2020
+##  02/04/2021
 
 1. [](#improved)
     * Basic variant selector (price adjustment not supported).
     * Minor style adjustments to product.
 
 # v0.8.9
-##  31/03/2020
+##  31/03/2021
 
 1. [](#improved)
     * Improved CLS (Cumulative layout shit) of mediatext and media modular.
@@ -120,33 +130,33 @@
     * Improved page-state delay management.
 
 # v0.8.8
-##  30/03/2020
+##  30/03/2021
 
 1. [](#improved)
     * Moving everything from page-state: complete to interactive.
     * page-state values uses a number from 0 being loading to 3 being complete-navigating. Number must be concatenated so the state of a complete page should be 012.
 
 # v0.8.7
-##  27/03/2020
+##  27/03/2021
 
 1. [](#improved)
     * Better FXdelay handling
 
 # v0.8.6
-##  27/03/2020
+##  27/03/2021
 
 1. [](#improved)
     * Map modular
     * Monstly invisible stuff
 
 # v0.8.5
-##  24/03/2020
+##  24/03/2021
 
 1. [](#improved)
     * Images loading, compression and resizing
 
 # v0.8.4
-##  23/03/2020
+##  23/03/2021
 
 1. [](#improved)
     * Hero renamed to Promo
@@ -154,7 +164,7 @@
     * Cleaned collection classes
 
 # v0.8.3
-##  20/03/2020
+##  20/03/2021
 
 1. [](#improved)
     * All card template
@@ -167,20 +177,20 @@
     * Post card
 
 # v0.8.2
-##  15/03/2020
+##  15/03/2021
 
 1. [](#improved)
     * Loading no has a "skeleton"
     * Carousel and Collection have smaller grid-gap on mobile
 
 # v0.8.1
-##  14/03/2020
+##  14/03/2021
 
 1. [](#bugfix)
     * Fixed js not inlining properly
 
 # v0.8.0
-##  14/03/2020
+##  14/03/2021
 
 1. [](#improved)
     * Colors are now a setting in theme blueprint
@@ -194,7 +204,7 @@
     * Moved Snipcart js  outside of pipeline. (for some reason it blows the the bundle to 1.4mb when included)
 
 # v0.7.9
-##  12/03/2020
+##  12/03/2021
 
 1. [](#improved)
     * Removed Announcement
@@ -203,13 +213,13 @@
     * yt-lite: added support for custom thumbnail
 
 # v0.7.8
-##  11/03/2020
+##  11/03/2021
 
 1. [](#improved)
     * Cleaning and breaking stuff
     
 # v0.7.7
-##  10/03/2020
+##  10/03/2021
 
 1. [](#new)
     * Media modular youtube support.
@@ -218,7 +228,7 @@
     * Force lite-youtube hi-res thumbnail (WIP)
     
 # v0.7.6
-##  08/03/2020
+##  08/03/2021
 
 1. [](#new)
     * Module Media (WIP)
@@ -229,7 +239,7 @@
     * Improved line-height of hero module
     
 # v0.7.5
-##  05/03/2020
+##  05/03/2021
 
 1. [](#improved)
     * Hero modular no longer has content
@@ -239,7 +249,7 @@
     * Hero modular is now 16:9 landscape and 1:1 portrait
 
 # v0.7.4
-##  04/03/2020
+##  04/03/2021
 
 1. [](#improved)
     * cleaning collection and pagination WIP
@@ -248,13 +258,13 @@
     * default card bg color
 
 # v0.7.3
-##  28/02/2020
+##  28/02/2021
 
 1. [](#improved)
     * FX handling
 
 # v0.7.2
-##  28/02/2020
+##  28/02/2021
 
 1. [](#improved)
     * Custom property usage
@@ -264,14 +274,14 @@
     * Fixed caroussel modular edge gradients
 
 # v0.7.1
-##  26/02/2020
+##  26/02/2021
 
 1. [](#improved)
     * Enabled snipcart
 * Fixed some snipcart related styles
 
 # v0.7.0
-##  16/02/2020
+##  16/02/2021
 
 1. [](#improved)
     * Getting up to speed with GRAV 1.7
@@ -279,13 +289,13 @@
     
 
 # v0.6.1
-##  15/09/2020
+##  15/09/2021
 
 1. [](#improved)
     * Improved assets positions fixing some cascade issues with external css.
 
 # v0.6.0
-##  14/09/2020
+##  14/09/2021
 
 1. [](#new)
     * Added ScrollOut
@@ -295,21 +305,21 @@
     * Fixed Snipcart z-index
 
 # v0.5.2
-##  12/09/2020
+##  12/09/2021
 
 1. [](#improved)
     * Dramatically improved Youtube load times.
     * Slowly moving the site nav to a macro patern. 
 
 # v0.5.1
-##  12/02/2020
+##  12/02/2021
 
 1. [](#improved)
     * Module base blueprint now extends but reduce default.yaml preventing potential bugs.
     * Mediatext no longer has desktop specific font-size.
 
 # v0.5.0
-##  12/01/2020
+##  12/01/2021
 
 1. [](#new)
     * Added Features module.
@@ -317,7 +327,7 @@
     * section-state now initiated by page-state removing the need to use the the page-state="complete" css selector.
 
 # v0.4.3
-##  12/01/2020
+##  12/01/2021
 
 1. [](#improved)
     * Improved section-state and page-state syntax.

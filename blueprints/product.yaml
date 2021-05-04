@@ -8,33 +8,29 @@ form:
         content:
           fields:
 
-            content:
-              ordering@: header.short_description
-              label: Description
-
-            header.product:
+            header.section_product:
               type: section
               title: Product
               underline: true
 
-            header.id:
+            header.name:
               type: text
-              label: id
-              help: Product's unique ID
+              label: Name
+              help: Product's name to be used by Snipcart.
               validate:
                 required: true
 
-            header.name:
+            header.id:
               type: text
-              label: name
-              help: Product's name
+              label: Id
+              help: Product's unique ID to be used by Snipcart.
               validate:
                 required: true
 
             header.price:
               type: text
-              label: price
-              help: Product's price. You must use a . as decimal separator.
+              label: Price
+              help: Product's price, using "." as decimal separator.
               validate:
                 type: number
                 min: 0
@@ -42,19 +38,70 @@ form:
 
             header.image:
               type: pagemediaselect
-              label: image
-              help: Main image representing the product (will also appear in the cart).
+              label: Image
+              help: The main image of the product (must be a jpg).
               accept:
                 - jpg
 
-            header.image_alt:
+            header.description:
               type: text
-              label: image_alt
+              label: Description
+              help: A short description to appear inside the cart.
 
-            header.short_description:
+            header.taxable:
+              type: toggle
+              label: Taxable
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.YES
+                0: PLUGIN_ADMIN.NO
+              validate:
+                type: bool
+
+            header.section_shipping:
+              type: section
+              title: Shipping
+              underline: true
+
+            header.shippable:
+              type: toggle
+              label: Shippable
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.YES
+                0: PLUGIN_ADMIN.NO
+              validate:
+                type: bool
+
+            header.weight:
               type: text
-              label: short_description
-              help: The Product's description showing in the cart.
+              label: Weight (g)
+              validate:
+                type: number
+                min: 0
+
+            header.length:
+              type: text
+              label: Length (cm)
+              validate:
+                type: number
+                min: 0
+                
+            header.width:
+              type: text
+              label: Width (cm)
+              validate:
+                type: number
+                min: 0
+
+            header.height:
+              type: text
+              label: Height (cm)
+              validate:
+                type: number
+                min: 0
                
             header.section_custom_fields:
               type: section
@@ -80,69 +127,11 @@ form:
                     checkbox: checkbox
                 .options:
                   type: text
-                  label: options
+                  label: Options
                   markdown: true
                   description: "A list of | separeted values to be used by the SELECT field type. ex: `S|M|L`"
-            
-            # header.initial_stock:
-            #   type: section
-            #   title: Initial Stock
-            #   markdown: true
-            #   underline: true
 
-            # header.variants:
-            #   name: variants
-            #   type: list
-            #   style: vertical
-            #   label: Variants
-            #   fields:
-            #     .options:
-            #       type: selectize
-            #       label: Options
-            #       validate:
-            #           type: commalist
-            #     .initial_stock:
-            #       type: text
-            #       label: Initial Stock
-            #       description: Initial stock should only be used when adding a new product to the store and using the Snipcart JSON crawler.
-            #       validate:
-            #         type: number
-            #         min: 0
-
-            header.shipping:
-              type: section
-              title: Shipping
-              underline: true
-
-            header.weight:
-              type: text
-              label: "weight (g)"
-              validate:
-                type: number
-                min: 0
-
-            header.length:
-              type: text
-              label: "Length (cm)"
-              validate:
-                type: number
-                min: 0
-                
-            header.width:
-              type: text
-              label: "width (cm)"
-              validate:
-                type: number
-                min: 0
-
-            header.height:
-              type: text
-              label: "height (cm)"
-              validate:
-                type: number
-                min: 0
-
-            header.gallery:
+            header.section_gallery:
               type: section
               title: Gallery
               underline: true
@@ -175,11 +164,12 @@ form:
               highlight: 1
               default: 0
               options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
+                1: Auto
+                0: Never
               validate:
                 type: bool
 
-            header.digital_good_guid:
+            header.file_guid:
               type: text
-              label: Digital Good GUID
+              label: File GUID
+              description: To be used if your product is related to a digital good uploaded via our dashboard. You will find the file GUID in the dashboard once the digital good is created.
