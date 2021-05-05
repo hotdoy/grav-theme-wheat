@@ -1,12 +1,15 @@
-# v0.9.2 WIP
+# v0.10.0
 ##  dd/mm/2021
 
 1. [](#improved)
+    * Refactored theme.
+    * Added dark-mode support.
+    * Removed color hl from theme settings.
     * Added Snipcart taxable, and shippable attributes.
-    * digital_good_guid is no file_guid
-    * short_description is now description
-    * removed alt from main image for conveinience
-    * cleaning product.yaml in general (WIP)
+    * Product digital_good_guid is now file_guid
+    * Product short_description is now description
+    * Removed alt from main image for conveinience
+    * Cleaned product blueprint
 
 # v0.9.2
 ##  03/05/2021
