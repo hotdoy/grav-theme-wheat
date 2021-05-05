@@ -141,6 +141,7 @@
     padding: 10px 5px;
     border-color: var(--c-guide);
     background-color: transparent;
+    color: var(--c-fg);
 }
 
 .product__showcase .price {

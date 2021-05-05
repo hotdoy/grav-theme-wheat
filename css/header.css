@@ -195,8 +195,8 @@ body.header-panel--open #header .header-panel {
     text-align: center;
     font-size: small;
     padding: 10px var(--gutter);
-    background-color: var(--c-hl);
-    color: var(--c-bg);
+    background-color: var(--c-material);
+    color: var(--c-fg);
     position: relative;
     z-index: 5000;
 }

@@ -7,11 +7,7 @@
 
     {# MARQUEE #}
     {% if root_params.header.marquee %}
-    {% set marquee_styles %}
-    {% if root_params.header.marquee_color_bg %}--c-hl:{{ root_params.header.marquee_color_bg }};{% endif %}
-    {% if root_params.header.marquee_color_fg %}--c-gb:{{ root_params.header.marquee_color_fg }};{% endif %}
-    {% endset %}
-    <section class="marquee"{% if marquee_styles %} style="{{ marquee_styles }}"{% endif %}>{{ root_params.header.marquee_content|markdown|raw }}</section>
+    <section class="marquee">{{ root_params.header.marquee_content|markdown|raw }}</section>
     {% endif %}
 
     <div class="header">

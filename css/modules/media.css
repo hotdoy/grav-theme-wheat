@@ -4,13 +4,14 @@
     width: 100%;
     max-width: var(--w-body);
     margin: 0 auto;
-    padding: 0 var(--gutter);
+    padding: 0 var(--gutter);   
 }
 
 .module.media>.wrapper>* {
     width: 100%;
     height: auto;
     margin: 0 auto;
+    border-radius: 6px;
 }
 
 .module.media>.wrapper video {
