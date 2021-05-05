@@ -47,7 +47,7 @@
 
 .module.mediatext .media-ctn img[src$='.jpg'],
 .module.mediatext .media-ctn img[src$='.jpeg'] {
-    background-color: var(--c-ph);
+    background-color: var(--c-fg);
 }
 
 .module.mediatext h1,

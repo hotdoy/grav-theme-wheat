@@ -31,7 +31,10 @@
 
   --c-bg: white;
   --c-fg: #242424;
-  --c-hl: #4285F4;
+  --c-hl: blue;
+  --c-ia-bg: rgb(36 36 36 / 20%);
+  --c-ia-fg: #242424;
+  --c-guide: rgb(36 36 36 / 20%);
 
   --c-border: #dedede;
   --c-ph: #ced4da;
@@ -49,6 +52,15 @@
 
   --header-heigth: 48px;
 }
+
+
+.theme-alt {
+  --c-bg: #EAEAEB;
+  --c-fg: #242424;
+}
+
+.theme-dark {}
+
 
 @media (max-width: 400px) {
   :root{

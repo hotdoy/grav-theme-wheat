@@ -50,7 +50,7 @@
 .product__showcase .single-image {
     position: relative;
     padding-top: 133%;
-    background-color: var(--c-ph);
+    background-color: var(--c-fg);
     overflow: hidden;
 }
 
@@ -134,7 +134,7 @@
     width: 100%;
     border-radius: 4px;
     padding: 10px 5px;
-    border-color: var(--c-border);
+    border-color: var(--c-guide);
     background-color: transparent;
 }
 
@@ -164,7 +164,7 @@
 
 .product__divider>hr {
     border: 0;
-    border-top: 1px solid var(--c-border);
+    border-top: 1px solid var(--c-guide);
     margin: 0 var(--gutter);
 }
 
@@ -179,7 +179,7 @@
 .product__card .media-ctn {
     position: relative;
     padding-top: 133%;
-    background-color: var(--c-ph);
+    background-color: var(--c-interactive);
     border-radius: 4px;
     overflow: hidden;
 }
