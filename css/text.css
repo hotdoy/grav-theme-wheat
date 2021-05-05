@@ -144,7 +144,6 @@
 .text a {
     color: inherit;
     text-decoration: underline;
-    color: var(--c-hl);
 }
 
 .text code {

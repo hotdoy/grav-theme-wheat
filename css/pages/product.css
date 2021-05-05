@@ -92,10 +92,6 @@
         margin-top: 0;
     }
 }
-.product__showcase .breadcrumbs a {
-    text-decoration: none;
-}
-
 
 .product__showcase .name {
     margin-top: 0.5rem;
@@ -140,7 +136,7 @@
     border-radius: 4px;
     padding: 10px 5px;
     border-color: var(--c-guide);
-    background-color: transparent;
+    background-color: var(--c-bg);
     color: var(--c-fg);
 }
 

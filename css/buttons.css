@@ -41,7 +41,7 @@ button.button:hover:active {
     position: absolute;
     top: calc(50% - 4px);
     left: calc(50% - 4px);
-    background-color: var(--c-bg);
+    background-color: var(--c-fg);
     animation-name: button_waiting;
     animation-duration: 1s;
     animation-iteration-count: infinite;

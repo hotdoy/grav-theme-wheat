@@ -1,9 +1,9 @@
 # v0.10.0
-##  dd/mm/2021
+##  05/05/2021
 
 1. [](#improved)
     * Refactored theme.
-    * Added dark-mode support.
+    * Added dark-mode support (waiting on Snipcart 3.2.0).
     * Removed color hl from theme settings.
     * Added Snipcart taxable, and shippable attributes.
     * Product digital_good_guid is now file_guid

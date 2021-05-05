@@ -181,7 +181,7 @@ body.header-panel--open {
     overflow-y: hidden;
 }
 
-body.header-panel--open #header .header-panel {
+.header-panel--open #header .header-panel {
     visibility: visible;
     opacity: 1;
 }
