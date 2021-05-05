@@ -11,9 +11,9 @@
     right: 0;
 
     height: var(--header-heigth);
-    background-color: rgb(253 254 254 / 90%);
+    background-color: var(--c-header-bg);
     backdrop-filter: blur(10px);
-    color: var(--c-fg);
+    color: var(--c-header-fg);
     border-bottom: 1px solid var(--c-guide);
     z-index: 5000;
 }

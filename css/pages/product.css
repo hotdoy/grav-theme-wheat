@@ -60,13 +60,18 @@
     object-fit: cover;
 }
 
-.product__showcase .swiper-container-horizontal>.swiper-scrollbar {
+.product__showcase .swiper-scrollbar {
     position: relative; 
     margin-top: calc(1rem + 5px);
     left: 0;
     height: 5px;
     width: 100%;
+    background: var(--c-material);
     z-index: 50;
+}
+
+.product__showcase .swiper-scrollbar .swiper-scrollbar-drag{
+    background: var(--c-btn-bg);
 }
 
 @media (min-width: 735px) {

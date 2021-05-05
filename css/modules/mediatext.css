@@ -1,13 +1,16 @@
-/*.module.mediatext {}*/
+.module.mediatext {
+   background-color: var(--c-bg);
+   color: var(--c-fg);
+}
 
 .module.mediatext>.wrapper {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
     width: 100%;
     max-width: var(--w-body);
-    margin: 0 auto;
     padding: 0 var(--gutter);
-    align-items: center;
 }
 
 .module.mediatext>.wrapper.right {

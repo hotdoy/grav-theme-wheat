@@ -2,9 +2,9 @@
 
 .text, 
 .text p {
-    color: inherit;
     font-size: 1rem;
     line-height: 1.9rem;
+    color: inherit;
 }
 
 .text h3, 
@@ -21,6 +21,7 @@
 .h6 {
     font-size: large;
     line-height: 2rem;
+    color: inherit;
 }
 
 .text h2, 
@@ -29,6 +30,7 @@
     font-size: x-large;
     line-height: 2.1rem;
     font-weight: var(--fw-bold);
+    color: inherit;
 }
 
 .text h1, 
@@ -37,6 +39,7 @@
     font-size: xx-large;
     line-height: 2.5rem;
     font-weight: var(--fw-bold);
+    color: inherit;
 }
 
 .prose p {margin-top: 1rem;}
