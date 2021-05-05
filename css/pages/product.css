@@ -50,7 +50,7 @@
 .product__showcase .single-image {
     position: relative;
     padding-top: 133%;
-    background-color: var(--c-ph);
+    background-color: var(--c-fg);
     overflow: hidden;
 }
 
@@ -60,13 +60,18 @@
     object-fit: cover;
 }
 
-.product__showcase .swiper-container-horizontal>.swiper-scrollbar {
+.product__showcase .swiper-scrollbar {
     position: relative; 
     margin-top: calc(1rem + 5px);
     left: 0;
     height: 5px;
     width: 100%;
+    background: var(--c-material);
     z-index: 50;
+}
+
+.product__showcase .swiper-scrollbar .swiper-scrollbar-drag{
+    background: var(--c-btn-bg);
 }
 
 @media (min-width: 735px) {
@@ -87,10 +92,6 @@
         margin-top: 0;
     }
 }
-.product__showcase .breadcrumbs a {
-    text-decoration: none;
-}
-
 
 .product__showcase .name {
     margin-top: 0.5rem;
@@ -134,8 +135,9 @@
     width: 100%;
     border-radius: 4px;
     padding: 10px 5px;
-    border-color: var(--c-border);
-    background-color: transparent;
+    border-color: var(--c-guide);
+    background-color: var(--c-bg);
+    color: var(--c-fg);
 }
 
 .product__showcase .price {
@@ -164,7 +166,7 @@
 
 .product__divider>hr {
     border: 0;
-    border-top: 1px solid var(--c-border);
+    border-top: 1px solid var(--c-guide);
     margin: 0 var(--gutter);
 }
 
@@ -179,8 +181,8 @@
 .product__card .media-ctn {
     position: relative;
     padding-top: 133%;
-    background-color: var(--c-ph);
-    border-radius: 4px;
+    background-color: var(--c-material);
+    border-radius: 6px;
     overflow: hidden;
 }
 

@@ -4,28 +4,23 @@
     width: 100%;
     max-width: var(--w-body);
     margin: 0 auto;
-    padding: 0 var(--gutter);
+    padding: 0 var(--gutter);   
 }
 
-/*@media (min-width: 1240px) {
-    .module.media>.wrapper {
-        padding: 0 var(--gutter);
-    }
-}
-*/
 .module.media>.wrapper>* {
     width: 100%;
     height: auto;
     margin: 0 auto;
+    border-radius: 6px;
 }
 
 .module.media>.wrapper video {
-	background-color: var(--c-ph);
+	background-color: var(--c-fg);
 }
 
 .module.media img[src$='.jpg'],
 .module.media img[src$='.jpeg'] {
-    background-color: var(--c-ph);
+    background-color: var(--c-fg);
 }
 
 .module.media:first-child {

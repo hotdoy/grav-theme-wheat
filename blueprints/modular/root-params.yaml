@@ -13,8 +13,7 @@ form:
             title: Header
             fields:
 
-
-              marquee_section:
+              section_marquee:
                 type: section
                 title: Marquee
                 underline: true
@@ -33,14 +32,6 @@ form:
               header.marquee_content:
                 type: text
                 label: Content
-
-              header.marquee_color_bg:
-                type: colorpicker
-                label: Background Color
-
-              header.marquee_color_fg:
-                type: colorpicker
-                label: Foreground Color
 
               header.header_link_section:
                 type: section

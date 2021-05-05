@@ -4,6 +4,10 @@
   z-index: 1000;
 }
 
-.module-header + .module {
-  margin-top: var(--gutter);
+.module.padded {
+	padding: var(--rhythm) 0;
+}
+
+.module.padded + .module.padded{
+	padding-bottom: 0;
 }

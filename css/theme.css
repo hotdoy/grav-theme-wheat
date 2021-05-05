@@ -20,33 +20,59 @@
     url("../fonts/inter-v2-latin-700.woff") format("woff");
 }
 
-/*===========================================
-					ROOT 
-============================================*/
-
 :root {
   --ff-base: 'Inter', sans-serif;
-  font-size: 16px;
-  font-family: var(--ff-base);
-
-  --c-bg: white;
-  --c-fg: #242424;
-  --c-hl: #4285F4;
-
-  --c-border: #dedede;
-  --c-ph: #ced4da;
-
-  --w-text: 735px;
-  --w-body: 1200px;
-  --w-full: 1920px;
-
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-bold: 700;
+  font-size: 16px;
+  font-family: var(--ff-base);
+}
 
+
+
+
+
+/*===========================================
+					COLORS 
+============================================*/
+
+:root, .light {
+  --c-bg: white;
+  --c-fg: #242424;
+  --c-hl: #625df5;
+  --c-btn-bg: rgb(36 36 36 / 20%);
+  --c-btn-fg: #242424;
+  --c-material: #EAEAEB;
+  --c-guide: rgb(36 36 36 / 20%);
+  --c-header-bg: rgb(253 254 254 / 90%);
+  --c-header-fg: #242424;
+}
+
+.dark {
+  --c-bg: #121212;
+  --c-fg: #FFFFFF;
+  --c-hl: #625df5;
+  --c-btn-bg: rgb(255 255 255 / 15%);
+  --c-btn-fg: #FFFFFF;
+  --c-material: #242424;
+  --c-guide: rgb(255 255 255 / 15%);
+  --c-header-bg: rgb(0 0 0 / 80%);
+  --c-header-fg: #FFFFFF;
+}
+
+
+
+
+/*===========================================
+          DIMENSIONS 
+============================================*/
+:root {
+  --w-text: 735px;
+  --w-body: 1200px;
+  --w-full: 1920px;
   --gutter: 20px;
   --rhythm: 80px;
-
   --header-heigth: 48px;
 }
 
@@ -61,6 +87,10 @@
     --rhythm: 160px;
   }
 }
+
+
+
+
 
 /*===========================================
 					MISC 

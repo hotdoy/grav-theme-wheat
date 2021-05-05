@@ -36,14 +36,14 @@ myProject
 ```
 - That's it for the directory. Now we only have to symlink everything together. You will, of course, need to find and replace the paths with your own.
 
-1. Local webroot to Grav install (Skip this one if your project folder is in your webroot)
-mklink /D D:\xampp\htdocs\myproject D:\myproject\grav-admin
+1. Local webroot to Grav install (Skip this one if your project folder is in your webroot)  
+`mklink /D D:\xampp\htdocs\myproject D:\myproject\grav-admin`
 
-1. grav-admin to user
-mklink /D D:\myproject\grav-admin\user D:\myproject\user
+1. grav-admin to user  
+`mklink /D D:\myproject\grav-admin\user D:\myproject\user`
 
-3. user to theme
-mklink /D D:\myproject\user\themes\dream D:\myproject\grav-theme-wheat
+3. user to theme  
+`mklink /D D:\myproject\user\themes\dream D:\myproject\grav-theme-wheat`
 
 That should be it! You can now test your setup by opening your browser and going to your local webroot (something like `127.0.0.1/myproject`).
 If everything goes well, Grav will prompt you to create an account. At this point, you can concider the whole operation a success, and should be able to go to the Themes section of Grav to select Wheat as your main theme.

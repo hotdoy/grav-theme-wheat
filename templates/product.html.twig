@@ -1,7 +1,6 @@
 {% extends 'partials/base.html.twig' %}
 
 {% set image = page.header.image ? page.media[page.header.image] %}
-{% set image_alt = page.header.image_alt ?? '' %}
 {% set gallery_images = page.header.gallery_images %}
 {% set price = page.header.price|number_format(2, ',', ' ') %}
 
@@ -43,7 +42,7 @@
 				{# SINGLE IMAGE	 #}
 				{% elseif image %}
 				<div class="single-image">
-					<div class="fill">{{ image.cropResize(1000).loading.html('', image_alt)|raw }}</div>
+					<div class="fill">{{ image.cropResize(1000).loading.html('', page.header.name)|raw }}</div>
 				</div>
 				{% endif %}
 
@@ -83,12 +82,12 @@
 						data-item-id="{{ page.header.id }}"
 						data-item-price="{{ page.header.price }}"
 						data-item-url="{{ page.url(true, true) }}"
-						data-item-description="{{ page.header.short_description }}"
+						data-item-description="{{ page.header.description }}"
 						data-item-image="{{ image ? uri.base() ~ image.url : '' }}"
 						data-item-name="{{ page.header.name }}"
 						data-item-stackable="{{ page.header.stackable ? 'auto' : 'never' }}"
-						{% if page.header.digital_good_guid %}
-							data-item-file-guid="{{ page.header.digital_good_guid }}"
+						{% if page.header.file_guid %}
+							data-item-file-guid="{{ page.header.file_guid }}"
 						{% endif %}
 						{% for field in page.header.custom_fields %}
 							data-item-custom{{ loop.index }}-name="{{ field.name }}"
@@ -101,6 +100,8 @@
 								{% endif %}
 							{% endif %}
 						{% endfor %}
+						data-item-taxable="{{ page.header.taxable ? 'true' : 'false' }}"
+						data-item-shippable="{{ page.header.shippable ? 'true' : 'false' }}"
 						{% if page.header.weight %}
 							data-item-weight="{{ page.header.weight }}"
 						{% endif %}
@@ -112,10 +113,7 @@
 						{% endif %}
 						{% if page.header.width %}
 							data-item-width="{{ page.header.width }}"
-						{% endif %}
-						>
-						{{ 'THEME.CART.ADD'|t }}
-						</button>
+						{% endif -%}>{{ 'THEME.CART.ADD'|t }}</button>
 						{% else %}
 						<div class="button disabled snipcart-add-item">{{ 'THEME.CART.DISABLED'|t }}</div>
 					{% endif %}

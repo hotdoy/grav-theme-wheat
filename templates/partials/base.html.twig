@@ -23,8 +23,6 @@
 	</head>
 
     {% set theme_style -%}
-    {%- if theme.color_bg %}--c-bg:{{ theme.color_bg }};{% endif -%}
-    {%- if theme.color_fg %}--c-fg:{{ theme.color_fg }};{% endif -%}
     {%- if theme.color_hl %}--c-hl:{{ theme.color_hl }};{% endif -%}
     {% endset -%}
 

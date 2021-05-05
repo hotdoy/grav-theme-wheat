@@ -12,7 +12,7 @@
 .post__card .media-ctn {
     position: relative;
     padding-top: 100%;
-    background-color: var(--c-ph);
+    background-color: var(--c-fg);
     border-radius: 4px;
     overflow: hidden;
 }

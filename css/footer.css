@@ -1,7 +1,9 @@
 #footer {
     position: relative;
     margin: var(--rhythm) 0 0 0;
-    background-color: var(--c-hl);
+    background-color: var(--c-bg);
+    color: var(--c-fg);
+    border-top: 1px solid var(--c-guide);
     z-index: 1000;
 }
 
@@ -11,8 +13,8 @@
 }
 
 #footer * {
-    color: #fff;
-    border-color: #fff;
+    color: var(--c-fg);
+    border-color: var(--c-guide);
 }
 
 #footer .wrapper {
@@ -93,8 +95,8 @@
 /*DETAILS/SUMMARY*/
 #footer details {
     width: 100%;
-    border-top: 1px solid ;
-    border-bottom: 1px solid ;
+    border-top: 1px solid var(--c-guide);
+    border-bottom: 1px solid var(--c-guide);
 }
 
 #footer details summary {
@@ -121,7 +123,7 @@
     content: ' ';
     height: 20px;
     width: 1px;
-    background-color: #fff;
+    background-color: var(--c-guide);
     transition: transform 0.2s;
 }
 
