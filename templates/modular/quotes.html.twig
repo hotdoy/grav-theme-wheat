@@ -1,17 +1,8 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'quotes' %}
 
-{% set color_panel_bg = page.header.color_panel_bg %}
-{% set color_panel_fg = page.header.color_panel_fg %}
-{% set color_pagination_bg = page.header.color_pagination_bg %}
-
-{% set styles %}
-{% if color_panel_bg %}--c-panel-bg:{{ color_panel_bg }};{% endif %}
-{% if color_panel_fg %}--c-panel-fg:{{ color_panel_fg }};{% endif %}
-{% endset %}
-
 {% block content %}
-<div class="wrapper"{% if styles %} style="{{ styles }}"{% endif %}>
+<div class="wrapper">
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
 			{% for item in page.header.items %}

@@ -6,36 +6,23 @@ button.button {
   position: relative;
   align-items: center;
   justify-content: center;
-  padding: 10px 24px;
+  padding: 8px 12px;
   border-radius: 4px;
   border: none;
   text-align: center;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 100%;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--c-ia-fg);
-  background-color: var(--c-ia-bg);
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  font-weight: var(--fw-regular);
+  color: var(--c-btn-fg);
+  background-color: var(--c-btn-bg);
   text-decoration: none;
   transition-property: transform, box-shadow;
   outline: none;
 }
 
-a.button:hover,
-button.button:hover {
-  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
-}
-
 a.button:hover:active,
 button.button:hover:active {
   transform: translateY(1px);
-}
-
-.button.inverted {
-  color: var(--c-hl);
-  background-color: var(--c-bg);
 }
 
 .button.disabled {

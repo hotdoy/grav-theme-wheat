@@ -20,47 +20,48 @@
     url("../fonts/inter-v2-latin-700.woff") format("woff");
 }
 
-/*===========================================
-					ROOT 
-============================================*/
-
 :root {
   --ff-base: 'Inter', sans-serif;
-  font-size: 16px;
-  font-family: var(--ff-base);
-
-  --c-bg: white;
-  --c-fg: #242424;
-  --c-hl: blue;
-  --c-ia-bg: rgb(36 36 36 / 20%);
-  --c-ia-fg: #242424;
-  --c-guide: rgb(36 36 36 / 20%);
-
-  --c-border: #dedede;
-  --c-ph: #ced4da;
-
-  --w-text: 735px;
-  --w-body: 1200px;
-  --w-full: 1920px;
-
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-bold: 700;
+  font-size: 16px;
+  font-family: var(--ff-base);
+}
 
+
+
+
+
+/*===========================================
+					COLORS 
+============================================*/
+
+:root {
+  --c-bg: white;
+  --c-fg: #242424;
+  --c-hl: blue;
+  --c-btn-bg: rgb(36 36 36 / 20%);
+  --c-btn-fg: #242424;
+  --c-material: #EAEAEB;
+  --c-guide: rgb(36 36 36 / 20%);
+}
+
+
+
+
+
+/*===========================================
+          DIMENSIONS 
+============================================*/
+:root {
+  --w-text: 735px;
+  --w-body: 1200px;
+  --w-full: 1920px;
   --gutter: 20px;
   --rhythm: 80px;
-
   --header-heigth: 48px;
 }
-
-
-.theme-alt {
-  --c-bg: #EAEAEB;
-  --c-fg: #242424;
-}
-
-.theme-dark {}
-
 
 @media (max-width: 400px) {
   :root{
@@ -73,6 +74,10 @@
     --rhythm: 160px;
   }
 }
+
+
+
+
 
 /*===========================================
 					MISC 

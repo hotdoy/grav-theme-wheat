@@ -11,9 +11,10 @@
     right: 0;
 
     height: var(--header-heigth);
-    background-color: var(--c-bg);
+    background-color: rgb(253 254 254 / 90%);
+    backdrop-filter: blur(10px);
     color: var(--c-fg);
-    border-bottom: 1px solid var(--c-border);
+    border-bottom: 1px solid var(--c-guide);
     z-index: 5000;
 }
 
@@ -168,7 +169,7 @@
 #header .header-panel nav li {
     margin: 0 var(--gutter);
     list-style: none;
-    border-bottom: 1px solid var(--c-border);
+    border-bottom: 1px solid var(--c-guide);
 }
 
 #header .header-panel nav li a {
