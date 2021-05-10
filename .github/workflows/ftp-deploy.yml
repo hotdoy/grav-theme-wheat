@@ -3,6 +3,8 @@ name: FTP Deploy
 on: 
   release:
     branches: [master]
+  workflow_dispatch:
+    branches: [master]
 
 jobs:
   FTP-Deploy-Action:
