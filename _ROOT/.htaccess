@@ -2,12 +2,6 @@
 
 RewriteEngine On
 
-# Force HTTPS, non-www and trailing slash
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} ^www\. [NC]
-RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
-RewriteRule ^ https://%1%{REQUEST_URI} [L,NE,R=301]
-
 ## Begin RewriteBase
 # If you are getting 500 or 404 errors on subpages, you may have to uncomment the RewriteBase entry
 # You should change the '/' to your appropriate subfolder. For example if you have
@@ -16,6 +10,11 @@ RewriteRule ^ https://%1%{REQUEST_URI} [L,NE,R=301]
 ##
 
 # RewriteBase /
+
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,NE,R=301]
 
 ## End - RewriteBase
 
@@ -33,6 +32,9 @@ RewriteRule ^ https://%1%{REQUEST_URI} [L,NE,R=301]
 # If you experience problems on your site block out the operations listed below
 # This attempts to block the most common type of exploit `attempts` to Grav
 #
+# Block out any script trying to use twig tags in URL.
+RewriteCond %{REQUEST_URI} ({{|}}|{%|%}) [OR]
+RewriteCond %{QUERY_STRING} ({{|}}|{%25|%25}) [OR]
 # Block out any script trying to base64_encode data within the URL.
 RewriteCond %{QUERY_STRING} base64_encode[^(]*\([^)]*\) [OR]
 # Block out any script that includes a <script> tag in URL.
@@ -71,19 +73,6 @@ RewriteRule \.md$ error [F]
 RewriteRule (^|/)\.(?!well-known) - [F]
 # Block access to specific files in the root folder
 RewriteRule ^(LICENSE\.txt|composer\.lock|composer\.json|\.htaccess)$ error [F]
-
-<IfModule mod_headers.c>
-Header unset Server
-Header unset X-Powered-By
-Header set Access-Control-Allow-Origin "*"
-Header set Access-Control-Allow-Credentials true
-Header set Access-Control-Allow-Methods "GET, PUT, POST, DELETE, HEAD, OPTIONS"
-Header set X-XSS-Protection "1; mode=block"
-Header set X-Content-Type-Options nosniff
-Header append X-Frame-Options SAMEORIGIN
-Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
-</IfModule>
-
 ## End - Security
 
 </IfModule>
