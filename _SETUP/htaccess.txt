@@ -1,16 +1,11 @@
 
 THINGS YOU MIGHT WANT TO ADD TO HTACESS...
 
-# Force HTTPS, non-www and trailing slash
+# Force HTTPS non-www
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [L,NE,R=301]
-
-# Force trailing slash
-RewriteCond %{REQUEST_URI} !(/$|\.) 
-RewriteCond %{REQUEST_URI} !/admin
-RewriteRule (.*) %{REQUEST_URI}/ [R=301,L]
 
 ## Security
 <IfModule mod_headers.c>

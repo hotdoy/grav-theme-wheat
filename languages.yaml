@@ -8,10 +8,10 @@ en:
     CART:
       DISABLED: Cart is disabled
       ADD: Add to cart
-      INSTRUCTION: Product variant availability and discount will be confirmed during the checkout process.
+      INSTRUCTION: Product availability and discount will be confirmed during the checkout process.
     DIALOG:
-      SIGNIN: 🥰<br><strong>Welcome back!</strong><br>[Go straight to the product section.](/collection)
-      SIGNOUT: 👋<br><strong>You've been logged out.</strong><br>See you next time!
+      SIGNIN: 🥰<br><strong>Welcome back!</strong>
+      SIGNOUT: 👋<br><strong>You've been logged out.</strong>
 
 
 fr:
@@ -24,8 +24,8 @@ fr:
     CART:
       DISABLED: Panier désactivé
       ADD: Ajouter au panier
-      INSTRUCTION: Les variantes et la disponibilité du produit seront confirmées lors du processus de commande.
+      INSTRUCTION: La disponibilité et rabias sur les produits seront confirmées lors du processus de commande.
     DIALOG:
-      SIGNIN: <strong>Welcome back! 🥰</strong><br>[Go straight to the product section.](/collection)
-      SIGNOUT: 👋<br><strong>You've been logged out.</strong><br>See you next time!
+      SIGNIN: 🥰<br><strong>Content de vous revoir!</strong>
+      SIGNOUT: 👋<br><strong>Vous avez été déconnecté.</strong>
 
