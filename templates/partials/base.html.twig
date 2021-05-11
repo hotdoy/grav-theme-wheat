@@ -42,6 +42,7 @@
 		{% if theme.snipcart %}<script async src="https://cdn.snipcart.com/themes/v{{ snipcart_version }}/default/snipcart.js"></script>{% endif %}
 		{% block serviceworker %}{% include 'partials/serviceworker.html.twig' %}{% endblock %}
 		{% block gtm_body %}{% include 'partials/gtm-body.html.twig' %}{% endblock %}
+		<script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
 		<!-- {{ grav.theme.getBlueprint().name }} {{ grav.theme.getBlueprint().version }} -->
 	</body>
 </html>
