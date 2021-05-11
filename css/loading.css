@@ -1,4 +1,4 @@
-.loading {
+/*.loading {
     position: fixed;
     top: 0;
     right: 0;
@@ -10,24 +10,27 @@
     background-color: var(--c-bg);
     transition-property: opacity, visibility;
     transition-duration: 0.2s;
-    z-index: 4000;
-}
+    z-index: 9999;
+}*/
 
 /*HIDE LOADER ON INTERACTIVE*/
-[data-page-state^='LI'] .loading {
+/*[data-page-state^='LI'] .loading {
     opacity: 0;
     visibility: hidden;
-}
+}*/
 
 /*DISPLAY LOADER ON NAVIGATING*/
-[data-page-state^='LICN'] .loading {
+/*[data-page-state^='LICN'] .loading {
     opacity: 1;
     visibility: visible;
-}
+}*/
 
-[data-page-state^='LICN'] main {
+/*HIDE MAIN ON NAVIGATION*/
+/*[data-page-state^='LICN'] main {
     transform: translateY(15px);
+    opacity: 0;
     transition-duration: 0.2s;
     transition-property: opacity, transform;
     transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
+*/
