@@ -1,9 +1,14 @@
-{# PRE PAGE-STATE #}
-{% do assets.addJs('https://unpkg.com/swiper/swiper-bundle.min.js', { group:'bottom' }) %}
-{% do assets.addJs('https://unpkg.com/scroll-out/dist/scroll-out.min.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/fx.js', { group:'bottom' }) %}
+{# BEFORE #}
+{% do assets.addJs('https://unpkg.com/swiper/swiper-bundle.min.js', { group:'bottom', position: 'before'}) %}
+{% do assets.addJs('https://unpkg.com/scroll-out/dist/scroll-out.min.js', { group:'bottom', position: 'before'}) %}
+{% do assets.addJs('https://unpkg.com/quicklink@2.1.0/dist/quicklink.umd.js', { group:'bottom', position: 'before'}) %}
+{% if theme.snipcart %}
+{% do assets.addJs('https://cdn.snipcart.com/themes/v' ~ snipcart_version ~ '/default/snipcart.js', { group:'bottom', position: 'before', loading: 'async'}) %}
+{% do assets.addJs('theme://js/snipcart.js', { group:'bottom' }) %}
+{% endif %}
 
-{# POST PAGE-STATE #}
+{# PIPELINE #}
+{% do assets.addJs('theme://js/fx.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/page-state.js', { group: 'bottom'}) %}
 {% do assets.addJs('theme://js/links.js', { group:'bottom'}) %}
 {% do assets.addJs('theme://js/header.js', { group:'bottom' }) %}
@@ -12,19 +17,13 @@
 {# {% do assets.addJs('theme://js/share.js', { group:'bottom' }) %} #}
 {% do assets.addJs('theme://js/dialog.js', { group:'bottom' }) %}
 
-{# MODULES #}
+{# PIPELINE - MODULES #}
 {% do assets.addJs('theme://js/map.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/quotes.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/carousel.js', { group:'bottom' }) %}
 
-{# PAGES #}
+{# PIPELINE - PAGES #}
 {% do assets.addJs('theme://js/product.js', { group:'bottom' }) %}
 
 {# MISC #}
-{% if theme.snipcart %}
-<script async src="https://cdn.snipcart.com/themes/v{{ snipcart_version }}/default/snipcart.js"></script>	
-{% do assets.addJs('theme://js/snipcart.js', { group:'bottom' }) %}
-{% endif %}
-
-{% do assets.addJs('https://unpkg.com/quicklink@2.1.0/dist/quicklink.umd.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/custom.js', { group:'bottom' }) %}

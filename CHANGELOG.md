@@ -3,7 +3,7 @@
 
 1. [](#improved)
     * Refactored page-state (breaking)
-    * Lots of moving lines around in js and css assets templates
+    * Better use of Grav assets pipeline.
     * Replaced instant.page with Google's Quicklink.
     * Probalby more? 
 
