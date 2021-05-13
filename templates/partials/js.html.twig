@@ -1,12 +1,10 @@
-{# INLINE #}
-{% do assets.addJs('theme://js/page-state.js', {loading : 'inline', position: 'before', group: 'top'}) %}
-
-{# CDN #}
+{# PRE PAGE-STATE #}
 {% do assets.addJs('https://unpkg.com/swiper/swiper-bundle.min.js', { group:'bottom' }) %}
 {% do assets.addJs('https://unpkg.com/scroll-out/dist/scroll-out.min.js', { group:'bottom' }) %}
-
-{# SITE #}
 {% do assets.addJs('theme://js/fx.js', { group:'bottom' }) %}
+
+{# POST PAGE-STATE #}
+{% do assets.addJs('theme://js/page-state.js', { group: 'bottom'}) %}
 {% do assets.addJs('theme://js/links.js', { group:'bottom'}) %}
 {% do assets.addJs('theme://js/header.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/pagination.js', { group:'bottom' }) %}
@@ -24,8 +22,9 @@
 
 {# MISC #}
 {% if theme.snipcart %}
-	{% do assets.addJs('theme://js/snipcart.js', { group:'bottom' }) %}
+<script async src="https://cdn.snipcart.com/themes/v{{ snipcart_version }}/default/snipcart.js"></script>	
+{% do assets.addJs('theme://js/snipcart.js', { group:'bottom' }) %}
 {% endif %}
+
+{% do assets.addJs('https://unpkg.com/quicklink@2.1.0/dist/quicklink.umd.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/custom.js', { group:'bottom' }) %}
-
-
