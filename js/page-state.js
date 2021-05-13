@@ -1,5 +1,5 @@
 const PageState = {
-    state: 'L',
+    state: 'loading',
     Idelay: 0,
     Cdelay: 0,
     Ndelay: 0,
@@ -7,7 +7,7 @@ const PageState = {
     t: performance.now(),
 
     Log: function(message) {
-        console.log('%c PAGESTATE: ' + PageState.state + '\t\t' + PageState.t, 'color:green;');
+        console.log('%c page-state: ' + PageState.state + ' - ' + PageState.t, 'color:green;');
     },
 
     GetAdjustDelay: function(delay) {
@@ -24,8 +24,8 @@ const PageState = {
         switch(PageState.state) {
 
             // INTERACTIVE
-            case 'L':
-                PageState.state = 'LI';
+            case 'loading':
+                PageState.state = 'interactive';
                 PageState.t = performance.now();
                 setTimeout(function(){ 
                     FX.Init();
@@ -33,16 +33,9 @@ const PageState = {
                 PageState.UpdateStateAttr();
                 break;
 
-            // COMPLETE
-            case 'LI':
-                PageState.state = 'LIC';
-                PageState.t = performance.now();
-                PageState.UpdateStateAttr(PageState.Cdelay);
-                break;
-
             // NAVIGATING
-            case 'LIC':
-                PageState.state = 'LICN';
+            case 'interactive':
+                PageState.state = 'navigating';
                 PageState.UpdateStateAttr();
                 Dialog.closeAll();
                 break;
@@ -58,7 +51,4 @@ const PageState = {
     },
 };
 
-PageState.Log();
-document.onreadystatechange = function() {
-    PageState.UpdateState(); 
-}
+PageState.UpdateState(); 
