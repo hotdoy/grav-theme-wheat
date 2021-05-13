@@ -1,13 +1,13 @@
-{# BEFORE #}
-{% do assets.addJs('https://unpkg.com/swiper/swiper-bundle.min.js', { group:'bottom', position: 'before'}) %}
-{% do assets.addJs('https://unpkg.com/scroll-out/dist/scroll-out.min.js', { group:'bottom', position: 'before'}) %}
-{% do assets.addJs('https://unpkg.com/quicklink@2.1.0/dist/quicklink.umd.js', { group:'bottom', position: 'before'}) %}
+{# SNIPCART #}
 {% if theme.snipcart %}
-{% do assets.addJs('https://cdn.snipcart.com/themes/v' ~ snipcart_version ~ '/default/snipcart.js', { group:'bottom', position: 'before', loading: 'async'}) %}
+{# {% do assets.addJs('https://cdn.snipcart.com/themes/v' ~ snipcart_version ~ '/default/snipcart.js', { group:'bottom', position: 'before', loading: 'async'}) %} #}
+{% do assets.addJs('https://cdn.snipcart.com/themes/v' ~ snipcart_version ~ '/default/snipcart.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/snipcart.js', { group:'bottom' }) %}
 {% endif %}
 
-{# PIPELINE #}
+{# SITE #}
+{% do assets.addJs('theme://libs/swiper-bundle.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://libs/scroll-out.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/fx.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/page-state.js', { group: 'bottom'}) %}
 {% do assets.addJs('theme://js/links.js', { group:'bottom'}) %}
@@ -16,13 +16,14 @@
 {% do assets.addJs('theme://js/lite-yt-embed.js', { group:'bottom' }) %}
 {# {% do assets.addJs('theme://js/share.js', { group:'bottom' }) %} #}
 {% do assets.addJs('theme://js/dialog.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://libs/quicklink.js', { group:'bottom'}) %}
 
-{# PIPELINE - MODULES #}
+{# MODULES #}
 {% do assets.addJs('theme://js/map.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/quotes.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/carousel.js', { group:'bottom' }) %}
 
-{# PIPELINE - PAGES #}
+{# PAGES #}
 {% do assets.addJs('theme://js/product.js', { group:'bottom' }) %}
 
 {# MISC #}

@@ -1,15 +1,15 @@
 {# INLINE #}
 {% do assets.addCss('theme://css/loading.css', {loading : 'inline', position: 'before'}) %}
 
-{# BEFORE #}
+{# SNIPCART #}
 {% if theme.snipcart %}
-{% do assets.addCss('https://cdn.snipcart.com/themes/v' ~ snipcart_version ~ '/default/snipcart.css', { position: 'before'}) %}
-{% do assets.addCss('theme://css/snipcart.css', { position: 'before'}) %}
+{% do assets.addCss('https://cdn.snipcart.com/themes/v' ~ snipcart_version ~ '/default/snipcart.css', { priority: '100'}) %}
+{% do assets.addCss('theme://css/snipcart.css', { priority: '100'}) %}
 {% endif %}
-{% do assets.addCss('https://unpkg.com/swiper/swiper-bundle.min.css', { position: 'before'}) %}
 
 {# THEME #}
 {% do assets.addCss('theme://css/reset.css') %}
+{% do assets.addCss('theme://libs/swiper-bundle.css') %}
 {% do assets.addCss('theme://css/text.css') %}
 {% do assets.addCss('theme://css/theme.css') %}
 {% do assets.addCss('theme://css/fx.css') %}

@@ -3,7 +3,7 @@
 
 1. [](#improved)
     * Refactored page-state (breaking)
-    * Better use of Grav assets pipeline.
+    * Better use of Grav assets pipeline (WIP).
     * Replaced instant.page with Google's Quicklink.
     * Probalby more? 
 
