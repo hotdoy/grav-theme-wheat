@@ -1,8 +1,17 @@
+# v0.10.2
+##  12/05/2021
+
+1. [](#improved)
+    * Refactored page-state (breaking)
+    * Lots of moving lines around in js and css assets templates
+    * Replaced instant.page with Google's Quicklink.
+    * Probalby more? 
+
 # v0.10.1b
 ##  11/05/2021
 
 1. [](#improved)
-    * Test release with no loader and instant.oage
+    * Test release with no loader and instant.page
 
 # v0.10.1
 ##  10/05/2021
