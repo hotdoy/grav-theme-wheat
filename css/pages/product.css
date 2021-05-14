@@ -50,7 +50,7 @@
 .product__showcase .single-image {
     position: relative;
     padding-top: 133%;
-    background-color: var(--c-fg);
+    background-color: var(--c-material);
     overflow: hidden;
 }
 
