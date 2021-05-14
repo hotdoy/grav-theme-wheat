@@ -18,8 +18,6 @@ const Links = {
 
     Crawl: function(links) {
         for (let link of links) {
-
-            // HREF
             const href = link.getAttribute("href");
 
             // EXTERNAL
@@ -35,10 +33,8 @@ const Links = {
                     PageState.UpdateState();
                     setTimeout(function(){ 
                         window.location.href = href;
-                    }, PageState.Ndelay);
-
-                  },
-                  false);
+                    }, PageState.navigationDelay);
+                }, false);
             }
         }
     },

@@ -1,8 +1,7 @@
 const PageState = {
     state: 'loading',
-    Idelay: 0,
-    Cdelay: 0,
-    Ndelay: 0,
+    interactiveDelay: 0,
+    navigationDelay: 0,
     fxDelay: 0,
     t: performance.now(),
 
@@ -18,7 +17,6 @@ const PageState = {
         }
     },
 
-
     UpdateState: function(state) {
 
         switch(PageState.state) {
@@ -30,7 +28,7 @@ const PageState = {
                 setTimeout(function(){ 
                     FX.Init();
                 }, PageState.GetAdjustDelay(PageState.fxDelay)); 
-                PageState.UpdateStateAttr();
+                PageState.UpdateStateAttr(PageState.GetAdjustDelay(PageState.interactiveDelay));
                 break;
 
             // NAVIGATING

@@ -1,20 +1,12 @@
 {# INLINE #}
-{% do assets.addCss('theme://css/loading.css', {loading : 'inline', position: 'before'}) %}
-
-{# BEFORE #}
-{% if theme.snipcart %}
-{% do assets.addCss('https://cdn.snipcart.com/themes/v' ~ snipcart_version ~ '/default/snipcart.css', { position: 'before'}) %}
-{% do assets.addCss('theme://css/snipcart.css', { position: 'before'}) %}
-{% endif %}
-{% do assets.addCss('https://unpkg.com/swiper/swiper-bundle.min.css', { position: 'before'}) %}
+{# {% do assets.addCss('theme://css/loading.css', {loading : 'inline', position: 'before'}) %} #}
 
 {# THEME #}
 {% do assets.addCss('theme://css/reset.css') %}
+{% do assets.addCss('theme://libs/swiper-bundle.css') %}
 {% do assets.addCss('theme://css/text.css') %}
 {% do assets.addCss('theme://css/theme.css') %}
 {% do assets.addCss('theme://css/fx.css') %}
-
-{# MISC #}
 {% do assets.addCss('theme://css/header.css') %}
 {% do assets.addCss('theme://css/footer.css') %}
 {% do assets.addCss('theme://css/buttons.css') %}
@@ -23,6 +15,12 @@
 {% do assets.addCss('theme://css/dialog.css') %}
 {% do assets.addCss('theme://css/lite-yt-embed.css') %}
 {# {% do assets.addCss('theme://css/share.css') %} #}
+
+{# SNIPCART #}
+{% if theme.snipcart %}
+{% do assets.addCss('https://cdn.snipcart.com/themes/v' ~ snipcart_version ~ '/default/snipcart.css', { priority: '100'}) %}
+{% do assets.addCss('theme://css/snipcart.css', { priority: '100'}) %}
+{% endif %}
 
 {# MODULES #}
 {% do assets.addCss('theme://css/modules/module.css') %}
