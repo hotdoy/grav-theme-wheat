@@ -1,5 +1,13 @@
+# v0.10.3
+## 13/05/2021
+
+1. [](#improved)
+    * Most libs are now part of the source instead of pulling from CDNs
+    * Cleaned up assets and pipeline
+    * Commented out the loader since its so freakin fast
+
 # v0.10.2
-##  12/05/2021
+## 12/05/2021
 
 1. [](#improved)
     * Refactored page-state (breaking)

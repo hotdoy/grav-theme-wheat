@@ -1,10 +1,3 @@
-{# SNIPCART #}
-{% if theme.snipcart %}
-{# {% do assets.addJs('https://cdn.snipcart.com/themes/v' ~ snipcart_version ~ '/default/snipcart.js', { group:'bottom', position: 'before', loading: 'async'}) %} #}
-{% do assets.addJs('https://cdn.snipcart.com/themes/v' ~ snipcart_version ~ '/default/snipcart.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/snipcart.js', { group:'bottom' }) %}
-{% endif %}
-
 {# SITE #}
 {% do assets.addJs('theme://libs/swiper-bundle.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://libs/scroll-out.js', { group:'bottom' }) %}
@@ -25,6 +18,12 @@
 
 {# PAGES #}
 {% do assets.addJs('theme://js/product.js', { group:'bottom' }) %}
+
+{# SNIPCART #}
+{% if theme.snipcart %}
+{% do assets.addJs('https://cdn.snipcart.com/themes/v' ~ snipcart_version ~ '/default/snipcart.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/snipcart.js', { group:'bottom' }) %}
+{% endif %}
 
 {# MISC #}
 {% do assets.addJs('theme://js/custom.js', { group:'bottom' }) %}
