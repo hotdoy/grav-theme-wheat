@@ -5,6 +5,7 @@
     * Most libs are now part of the source instead of pulling from CDNs
     * Cleaned up assets and pipeline
     * Commented out the loader since its so freakin fast
+    * Bumped Snipcart to 3.2.0 with complete but unstyled theme
 
 # v0.10.2
 ## 12/05/2021
