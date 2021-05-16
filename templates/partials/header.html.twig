@@ -17,8 +17,7 @@
             <div class="links">
                 <nav>
                     {% for link in root_params.header.header_links %}
-                    {% set p = page.find(link.page) %}
-                    <li class="{{ (p.active or p.activeChild) ? ' active' : '' }}"><a href="{{ p.url }}">{{ link.label }}</a></li>
+                    <li><a href="{{ link.url }}">{{ link.label }}</a></li>
                     {% endfor %}
                     {% include 'partials/langswitcher.html.twig' %}
                 </nav>
@@ -51,8 +50,7 @@
     <div class="header-panel">
         <nav>
             {% for link in root_params.header.header_links %}
-            {% set p = page.find(link.page) %}
-            <li class="{{ (p.active or p.activeChild) ? ' active' : '' }}"><a href="{{ p.url }}">{{ link.label }}</a></li>
+            <li><a href="{{ link.url }}">{{ link.label }}</a></li>
             {% endfor %}
             {% include 'partials/langswitcher.html.twig' %}
         </nav>

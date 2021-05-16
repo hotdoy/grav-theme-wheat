@@ -21,7 +21,7 @@
 
 /*DISPLAY LOADER ON NAVIGATING*/
 [data-page-state^='navigating'] .loading {
-    opacity: 0;
+    opacity: 0.5;
     visibility: hidden;
 }
 
