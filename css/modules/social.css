@@ -1,0 +1,36 @@
+.module.social {}
+
+.module.social .wrapper {
+    position: relative;
+    width: 100%;
+    max-width: var(--w-body);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+}
+
+.module.social .panel {
+    width: 100%;
+    min-height: var(--rhythm);
+    background-color: var(--c-material);
+    border-radius: 4px;
+}
+
+.module.social .layout {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.module.social h2 {
+    width: 100%;
+}
+
+.module.social .newsletter {
+    padding: var(--gutter);
+    width: 66.66%;
+}
+
+.module.social .sameas {
+    padding: var(--gutter);
+    width: 33.33%;
+    border-left: 1px solid var(--c-guide);
+}
