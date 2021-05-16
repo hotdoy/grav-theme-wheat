@@ -1,3 +1,13 @@
+# v0.11.0
+## 16/05/2021
+
+1. [](#improved)
+    * Brand new footer
+    * New Social component for sameas and newsletter
+    * Navs now use simple string for URL instead of pages
+    * Cleaned up root_params blueprint
+    * Oh and BTW, this release will break header and footer navs.
+
 # v0.10.3
 ## 13/05/2021
 

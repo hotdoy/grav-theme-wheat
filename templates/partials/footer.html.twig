@@ -1,9 +1,9 @@
 {% import "partials/svg.html.twig" as svg %}
 
 <footer id="footer">
-	<div class="wrapper text small">
+	<div class="wrapper">
 
-		<div class="top">
+		<div class="top text small">
 
 			<div class="contact">
 				{{ root_params.header.contact|markdown|raw }}
@@ -20,7 +20,7 @@
 			</nav>			
 		</div>
 
-		<div class="bottom">
+		<div class="bottom text small">
 			<div class="copyright">© {{ site.title }} {{ "now"|date("Y") }}</div>
 			<a class="credit" href="https://calotte.ca">{{ svg.calotte() }}</a>			
 		</div>

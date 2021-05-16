@@ -24,6 +24,10 @@
     width: 100%;
 }
 
+.module.social p {
+    max-width: 75%;
+}
+
 .module.social .newsletter {
     padding: var(--gutter);
     width: 100%;
@@ -67,14 +71,11 @@ margin-top: calc(var(--rhythm)/2);
     }
 }
 
-
 .module.social .sameas-ctn {
     display: flex;
     flex-wrap: wrap;
     margin-top: calc(var(--rhythm)/2);
 }
-
-
 
 .module.social .sameas-ctn a {
     width: 50%;

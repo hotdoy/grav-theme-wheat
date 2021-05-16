@@ -127,10 +127,10 @@
     list-style-type: decimal;
 }
 
-.text li {
+.text li,
+.text ul {
     font-size: inherit;
     line-height: inherit;
-
 }
 
 
