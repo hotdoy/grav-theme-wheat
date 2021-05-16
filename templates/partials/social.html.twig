@@ -3,20 +3,20 @@
 
 {% block content %}
 <div class="wrapper">
-	<div class="panel dark">
+	<div class="panel">
         <div class="layout text">
 
             <div class="newsletter">
-                <h2>Newsletter</h2>
-                <p>Newsletter Subtitle</p>
+                <h2>{{ 'THEME.NEWSLETTER.TITLE'|t }}</h2>
+                <p>{{ 'THEME.NEWSLETTER.SUBTITLE'|t }}</p>
                 <div class="newsletter-ctn">
                     {{ root_params.header.mailchimp_form|raw }}
                 </div>
             </div>
 
             <div class="sameas">
-                <h2>SameAs</h2>
-                <p>SameAs Subtitle</p>
+                <h2>{{ 'THEME.SAMEAS.TITLE'|t }}</h2>
+                <p>{{ 'THEME.SAMEAS.TITLE'|t }}</p>
                 <div class="sameas-ctn">
                     {% for item in root_params.header.sameas %}
                     <a href="{{ item.url }}">{{ item.label }}</a>

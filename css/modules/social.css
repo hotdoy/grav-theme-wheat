@@ -26,7 +26,13 @@
 
 .module.social .newsletter {
     padding: var(--gutter);
-    width: 66.66%;
+    width: 100%;
+}
+@media (min-width: 735px) {
+    .module.social .newsletter {
+        padding: var(--gutter);
+        width: 66.66%;
+    }
 }
 
 .module.social .newsletter-ctn {
@@ -49,15 +55,26 @@ margin-top: calc(var(--rhythm)/2);
 
 .module.social .sameas {
     padding: var(--gutter);
-    width: 33.33%;
-    border-left: 1px solid var(--c-guide);
+    width: 100%;
+    border-top: ;
+    border-top: 1px solid var(--c-guide);
 }
+@media (min-width: 735px) {
+    .module.social .sameas {
+        width: 33.33%;
+        border-left: 1px solid var(--c-guide);
+        border-top: none;
+    }
+}
+
 
 .module.social .sameas-ctn {
     display: flex;
     flex-wrap: wrap;
     margin-top: calc(var(--rhythm)/2);
 }
+
+
 
 .module.social .sameas-ctn a {
     width: 50%;

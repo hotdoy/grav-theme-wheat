@@ -12,7 +12,12 @@ en:
     DIALOG:
       SIGNIN: 🥰<br><strong>Welcome back!</strong>
       SIGNOUT: 👋<br><strong>You've been logged out.</strong>
-
+    NEWSLETTER:
+      TITLE: Sign Up
+      SUBTITLE: Jump in the bandwagon and receive stuff straight in your inbox.
+    SAMEAS:
+      TITLE: Follow Us
+      SUBTITLE: Don't miss a beat and check us out on your favorite platform.
 
 fr:
   THEME:
@@ -28,4 +33,10 @@ fr:
     DIALOG:
       SIGNIN: 🥰<br><strong>Content de vous revoir!</strong>
       SIGNOUT: 👋<br><strong>Vous avez été déconnecté.</strong>
+    NEWSLETTER:
+      TITLE: Sign Up
+      SUBTITLE: Jump in the bandwagon and receive stuff straight in your inbox.
+    SAMEAS:
+      TITLE: Follow Us
+      SUBTITLE: Don't miss a beat and check us out on your favorite platform.
 

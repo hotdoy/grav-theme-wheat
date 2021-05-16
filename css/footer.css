@@ -36,19 +36,12 @@
     text-align: center;
 }
 
-#footer .contact svg {
-    width: 100%;
-    height: auto;
-}
 @media (min-width: 735px) {
     #footer .contact {
         width: 33.33%;
+        padding-right: 10%;
         text-align: left;
         margin-top: 0;
-    }
-
-    #footer .contact .logo {
-        margin-left: 0;
     }
 }
 
@@ -64,6 +57,8 @@
 }
 
 #footer nav ul {
+    margin: 0;
+    padding: 0;
     margin-top: 1rem;
     min-width: 50%;
 }
@@ -83,7 +78,8 @@
 }
 
 #footer .bottom {
-    margin-top: var(--rhythm);
+    margin-top: calc(var(--rhythm)/2);
+    margin-bottom: var(--gutter);
     display: flex;
     justify-content: space-between;
 }
