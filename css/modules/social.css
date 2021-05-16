@@ -29,8 +29,36 @@
     width: 66.66%;
 }
 
+.module.social .newsletter-ctn {
+margin-top: calc(var(--rhythm)/2);
+}
+
+.module.social input[type="email"] {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: var(--c-fg);
+    background-color: var(--c-guide);
+}
+
+.module.social input.button {
+    margin-top: 10px;
+}
+
 .module.social .sameas {
     padding: var(--gutter);
     width: 33.33%;
     border-left: 1px solid var(--c-guide);
+}
+
+.module.social .sameas-ctn {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--rhythm)/2);
+}
+
+.module.social .sameas-ctn a {
+    width: 50%;
 }

@@ -4,7 +4,7 @@
 .text p {
     font-size: 1rem;
     line-height: 1.9rem;
-    color: inherit;
+    color: var(--c-fg);
 }
 
 .text h3, 
@@ -21,7 +21,7 @@
 .h6 {
     font-size: large;
     line-height: 2rem;
-    color: inherit;
+    color: var(--c-fg);
 }
 
 .text h2, 
@@ -30,7 +30,7 @@
     font-size: x-large;
     line-height: 2.1rem;
     font-weight: var(--fw-bold);
-    color: inherit;
+    color: var(--c-fg);
 }
 
 .text h1, 
@@ -39,7 +39,7 @@
     font-size: xx-large;
     line-height: 2.5rem;
     font-weight: var(--fw-bold);
-    color: inherit;
+    color: var(--c-fg);
 }
 
 .prose p {margin-top: 1rem;}
@@ -105,7 +105,7 @@
 
 .text blockquote,
 .text blockquote p {
-    color: inherit;
+    color: var(--c-fg);
     font-size: 1rem;
     line-height: 1.9rem;
 }
@@ -142,7 +142,7 @@
 }
 
 .text a {
-    color: inherit;
+    color: var(--c-fg);
     text-decoration: underline;
 }
 

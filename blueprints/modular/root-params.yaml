@@ -8,9 +8,9 @@ form:
       active: 1
       fields:
 
-        header:
+        navigation:
             type: tab
-            title: Header
+            title: Navigation
             fields:
 
               section_marquee:
@@ -31,11 +31,11 @@ form:
 
               header.marquee_content:
                 type: text
-                label: Content
+                label: Marquee Content
 
-              header.header_link_section:
+              header.section_header:
                 type: section
-                title: Header Links
+                title: Header
                 underline: true
 
               header.header_links:
@@ -46,39 +46,75 @@ form:
                   .label:
                     type: text
                     label: Label
-                  .page:
-                    type: pages
-                    label: Page
-                    show_all: false
-                    show_modular: false
-                    show_root: false
+                  .url:
+                    type: text
+                    label: Url
 
-        footer:
-          type: tab
-          title: Footer
-          fields:
-            header.contact:
-              label: Contact
-              type: editor
-            header.footer_nav:
-              name: footer_nav
-              type: list
-              label: Footer Nav
-              fields:
-                .label:
-                  type: text
-                  label: Label
-                .links:
-                  name: links
-                  type: list
-                  label: Links
-                  fields:
-                    .label:
-                      type: text
-                      label: Label
-                    .page:
-                      type: pages
-                      label: Page
-                      show_all: false
-                      show_modular: false
-                      show_root: false
+              header.section_footer:
+                type: section
+                title: Footer
+                underline: true
+
+              header.contact:
+                label: Contact
+                type: editor
+              
+              header.footer_links:
+                name: footer_nav
+                type: list
+                label: Footer Links
+                fields:
+                  .label:
+                    type: text
+                    label: Label
+                  .links:
+                    name: links
+                    type: list
+                    label: Links
+                    fields:
+                      .label:
+                        type: text
+                        label: Label
+                      .url:
+                        type: text
+                        label: Url
+        Social:
+            type: tab
+            title: Social
+            fields:
+
+              section_newsletter:
+                type: section
+                title: Newsletter
+                underline: true
+
+              header.mailchimp_form:
+                type: textarea
+                label: Mailchimp Form
+                description: Copy and paste the Mailchimp generated unstyled form.
+
+              header.section_sameas:
+                type: section
+                title: SameAs
+                underline: true
+
+              header.sameas:
+                name: sameas
+                type: list
+                label: SameAs
+                fields:
+                  .label:
+                    type: text
+                    label: Label
+                  .url:
+                    type: text
+                    label: Url
+
+              header.section_misc:
+                type: section
+                title: MISC
+                underline: true
+
+              header.contact:
+                label: Contact
+                type: editor
