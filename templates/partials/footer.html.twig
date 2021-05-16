@@ -9,16 +9,13 @@
 				{{ root_params.header.contact|markdown|raw }}
 			</div>
 			<nav>
-				{% for drawer in root_params.header.footer_nav %}
-					<details>
-						<summary class="h3">{{ drawer.label }}</summary>
-							<ul>	
-							{% for link in drawer.links %}
-								{% set p = page.find(link.page) %}
-								<li><a href="{{ p.url }}">{{ link.label }}</a></li>
-							{% endfor %}							
-							</ul>
-					</details>
+				{% for group in root_params.header.footer_links %}
+				<ul>
+					<li>{{ group.label }}</li>
+					{% for link in group.links %}
+					<li><a href="{{ link.url }}"}>{{ link.label }}</a></li>
+					{% endfor %}
+				</ul>
 				{% endfor %}
 			</nav>			
 		</div>
