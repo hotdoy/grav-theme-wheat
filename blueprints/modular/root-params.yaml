@@ -54,10 +54,6 @@ form:
                 type: section
                 title: Footer
                 underline: true
-
-              header.contact:
-                label: Contact
-                type: editor
               
               header.footer_links:
                 name: footer_nav
@@ -115,6 +111,3 @@ form:
                 title: MISC
                 underline: true
 
-              header.contact:
-                label: Contact
-                type: editor

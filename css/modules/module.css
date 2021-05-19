@@ -1,13 +1,45 @@
 .module {
   position: relative;
   margin-top: var(--rhythm);
+  background-color: var(--c-bg);
   z-index: 1000;
 }
 
 .module.padded {
-	padding: var(--rhythm) 0;
+	padding-top: var(--rhythm);
+  padding-bottom: var(--rhythm);
+}
+.module.mt-rhythm {
+  margin-top: var(--rhythm);
 }
 
-.module.padded + .module.padded{
-	padding-bottom: 0;
+.module.mt-half {
+  margin-top: calc(var(--rhythm) / 2);
+}
+.module.mt-none {
+  margin-top: 0;
+}
+
+.module.pt-rhythm {
+  padding-top: var(--rhythm);
+}
+
+.module.pt-half {
+  padding-top: calc(var(--rhythm) / 2);
+}
+
+.module.pt-none {
+  padding-top: 0;
+}
+
+.module.pb-rhythm {
+  padding-bottom: var(--rhythm);
+}
+
+.module.pb-half {
+  padding-bottom: calc(var(--rhythm) / 2);
+}
+
+.module.pb-none {
+  padding-bottom: 0;
 }
