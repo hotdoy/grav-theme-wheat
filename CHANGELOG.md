@@ -1,3 +1,11 @@
+# v0.11.1
+## 19/05/2021
+
+1. [](#improved)
+    * Removed contact from footer.
+    * Social and newsletter are now part of the footer.
+    * Add to cart button now use c-hl color.
+
 # v0.11.0
 ## 16/05/2021
 

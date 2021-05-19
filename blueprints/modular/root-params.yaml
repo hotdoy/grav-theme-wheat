@@ -111,6 +111,3 @@ form:
                 title: MISC
                 underline: true
 
-              header.contact:
-                label: Contact
-                type: editor

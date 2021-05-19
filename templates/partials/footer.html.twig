@@ -3,11 +3,28 @@
 <footer id="footer">
 	<div class="wrapper">
 
-		<div class="top text small">
-
-			<div class="contact">
-				{{ root_params.header.contact|markdown|raw }}
+		<div class="social">
+			<div class="layout text">
+				<div class="newsletter">
+					<h2>{{ 'THEME.NEWSLETTER.TITLE'|t }}</h2>
+					<p>{{ 'THEME.NEWSLETTER.SUBTITLE'|t }}</p>
+					<div class="newsletter-ctn">
+						{{ root_params.header.mailchimp_form|raw }}
+					</div>
+				</div>
+				<div class="sameas">
+					<h2>{{ 'THEME.SAMEAS.TITLE'|t }}</h2>
+					<p>{{ 'THEME.SAMEAS.SUBTITLE'|t }}</p>
+					<div class="sameas-ctn">
+						{% for item in root_params.header.sameas %}
+						<a href="{{ item.url }}">{{ item.label }}</a>
+						{% endfor %}
+					</div>
+				</div>
 			</div>
+		</div>
+
+		<div class="links text">
 			<nav>
 				{% for group in root_params.header.footer_links %}
 				<ul>
@@ -20,7 +37,7 @@
 			</nav>			
 		</div>
 
-		<div class="bottom text small">
+		<div class="legal text small">
 			<div class="copyright">© {{ site.title }} {{ "now"|date("Y") }}</div>
 			<a class="credit" href="https://calotte.ca">{{ svg.calotte() }}</a>			
 		</div>
