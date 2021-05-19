@@ -1,7 +1,6 @@
 #footer {
     position: relative;
     margin-top: var(--rhythm);
-    padding: 0 var(--gutter);
     padding-bottom: var(--gutter);
     background-color: var(--c-bg);
     color: var(--c-fg);
