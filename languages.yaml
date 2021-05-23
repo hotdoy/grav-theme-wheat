@@ -14,10 +14,10 @@ en:
       SIGNOUT: 👋<br><strong>You've been logged out.</strong>
     NEWSLETTER:
       TITLE: Sign Up
-      SUBTITLE: Jump in the bandwagon and receive stuff straight in your inbox.
+      SUBTITLE: I probably won't have time to send anything but who knows.
     SAMEAS:
-      TITLE: Follow Us
-      SUBTITLE: A nice spot to flex your social presence.
+      TITLE: Follow Me
+      SUBTITLE: I mean, why not?
 
 fr:
   THEME:
@@ -35,8 +35,8 @@ fr:
       SIGNOUT: 👋<br><strong>Vous avez été déconnecté.</strong>
     NEWSLETTER:
       TITLE: Sign Up
-      SUBTITLE: Jump in the bandwagon and receive stuff straight in your inbox.
+      SUBTITLE: I probably won't have time to send anything but who knows.
     SAMEAS:
-      TITLE: Follow Us
-      SUBTITLE: A nice spot to flex your social presence.
+      TITLE: Follow Me
+      SUBTITLE: I mean, why not?
 

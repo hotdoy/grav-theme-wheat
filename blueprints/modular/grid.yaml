@@ -1,4 +1,4 @@
-title: features
+title: grid
 "@extends": modular/module
 
 form:
@@ -7,8 +7,11 @@ form:
       fields:
         content:
           fields:
+
             content:
               unset@: true
+            header.media_order:
+              ordering@: +99
 
             header.items:
               name: items
@@ -30,5 +33,5 @@ form:
                   label: title
 
                 .text:
-                  type: text
+                  type: textarea
                   label: text

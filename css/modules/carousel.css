@@ -1,6 +1,6 @@
 /*.module.carousel {}*/
 
-.module.carousel>.wrapper {
+.module.carousel > .wrapper {
     position: relative;
     width: 100%;
     max-width: var(--w-body);
@@ -10,18 +10,14 @@
     overflow: hidden;
 }
 
-.module.carousel>.wrapper>.title {
+.module.carousel > .wrapper > .h2 {
     width: 100%;
     max-width: var(--w-body);
     margin-bottom: 1rem;
 }
 
-.module.carousel .title h2 {
-    margin-top: 0;
-}
-
 /*left gradient*/
-.module.carousel>.wrapper::before {
+.module.carousel > .wrapper::before {
     content: "";
     position: absolute;
     left: -1px;
