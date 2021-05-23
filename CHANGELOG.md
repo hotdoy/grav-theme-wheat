@@ -1,3 +1,10 @@
+# v0.12.0
+## 23/05/2021
+
+1. [](#improved)
+    * Added Grid modular
+    * Added references for quick local domain setup (WIP)
+
 # v0.11.1
 ## 19/05/2021
 

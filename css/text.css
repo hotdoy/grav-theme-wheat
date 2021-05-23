@@ -63,22 +63,34 @@
     font-size: small;
     line-height: 1.2rem;
 }
+.text .small.prose,
+.text.small.prose p {
+    margin-top: 0.5rem;
+}
 
 .text.small h3, 
-.text.h3.small {
+.text.small .h3 {
     font-size: medium;
     line-height: 1.5rem;
     font-weight: var(--fw-bold);
 }
+.text.small.prose h3, 
+.text.small.prose .h3 {
+    margin-top: 1rem;
+}
 
-.text h2 .small, 
-.text .h2,
+
+.text.small h2, 
+.text.small .h2,
 .h2 .small {
     font-size: large;
     line-height: 1.5rem;
     font-weight: var(--fw-bold);
 }
-
+.text.small.prose h2, 
+.text.small.prose .h2 {
+    margin-top: 1rem;
+}
 
 
 

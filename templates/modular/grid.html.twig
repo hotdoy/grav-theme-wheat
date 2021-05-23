@@ -1,0 +1,34 @@
+{% extends 'modular/module.html.twig' %}
+{% set name = 'grid' %}
+{% set display_title = page.header.display_title %}
+{% set items = items|default(page.header.items) %}
+
+{% block content %}
+<div class="wrapper">
+
+    {% if display_title %}
+	<h2 class="h2">{{ display_title }}</h2>
+	{% endif %}
+
+    <div class="grid">
+        {% for item in items %}
+        <div class="item text prose small">
+            {% set title = item.title %}
+            {% set image = item.image ? page.media[item.image] %}
+            {% set image_alt = item.image_alt %}
+            {% set text = item.text %}
+    
+            {% if image %}
+            {{ image.cropResize(250).loading.html('', image_alt)|raw }}
+            {% endif %}
+    
+            {% if title %}
+            <h3>{{ title }}</h3>
+            <p>{{ text }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}
