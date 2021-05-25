@@ -6,7 +6,6 @@
     line-height: 1.9rem;
     color: var(--c-fg);
 }
-.text.prose, 
 .text.prose p {
     margin-top: 1rem;
 }
