@@ -7,6 +7,11 @@
     z-index: 1000;
 }
 
+#footer ul,
+#footer li {
+    list-style: none;
+}
+
 #footer .wrapper {
     max-width: var(--w-body);
     margin: 0 auto;
@@ -71,7 +76,6 @@ margin-top: calc(var(--rhythm)/2);
     justify-content: space-between;
     padding: var(--gutter);
     width: 100%;
-    border-top: ;
     border-top: 1px solid var(--c-guide);
 }
 @media (min-width: 735px) {

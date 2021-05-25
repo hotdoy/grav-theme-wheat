@@ -7,14 +7,19 @@
     padding: 0 var(--gutter);   
 }
 
-.module.media>.wrapper>* {
+.module.media .wrapper > * {
     width: 100%;
     height: auto;
     margin: 0 auto;
     border-radius: 6px;
 }
 
-.module.media>.wrapper video {
+.module.media .caption {
+    margin-top: 0.5rem;
+    padding-right: 20%;
+}
+
+.module.media video {
 	background-color: var(--c-fg);
 }
 

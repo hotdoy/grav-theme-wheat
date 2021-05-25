@@ -6,22 +6,65 @@
     line-height: 1.9rem;
     color: var(--c-fg);
 }
+.text.prose, 
+.text.prose p {
+    margin-top: 1rem;
+}
 
-.text h3, 
-.text .h3,
-.h3,
-.text h4,
-.text .h4,
-.h4,
-.text h5,
-.text .h5,
-.h5,
 .text h6,
 .text .h6,
 .h6 {
     font-size: large;
     line-height: 2rem;
+    font-weight: var(--fw-bold);
     color: var(--c-fg);
+}
+.text.prose h6,
+.text.prose .h6,
+.h6.prose {
+    margin-top: 1rem;
+}
+
+.text h5,
+.text .h5,
+.h5 {
+    font-size: large;
+    line-height: 2rem;
+    font-weight: var(--fw-bold);
+    color: var(--c-fg);
+}
+.text.prose h5,
+.text.prose .h5,
+.h5.prose {
+    margin-top: 1rem;
+}
+
+.text h4,
+.text .h4,
+.h4 {
+    font-size: large;
+    line-height: 2rem;
+    font-weight: var(--fw-bold);
+    color: var(--c-fg);
+}
+.text.prose h4,
+.text.prose .h4,
+.h4.prose {
+    margin-top: 1rem;
+}
+
+.text h3,
+.text .h3,
+.h3 {
+    font-size: large;
+    line-height: 2rem;
+    font-weight: var(--fw-bold);
+    color: var(--c-fg);
+}
+.text.prose h3,
+.text.prose .h3,
+.h3.prose {
+    margin-top: 1rem;
 }
 
 .text h2, 
@@ -32,6 +75,11 @@
     font-weight: var(--fw-bold);
     color: var(--c-fg);
 }
+.text.prose h2, 
+.text.prose .h2,
+.h2.prose {
+    margin-top: 2rem;
+}
 
 .text h1, 
 .text .h1,
@@ -41,14 +89,12 @@
     font-weight: var(--fw-bold);
     color: var(--c-fg);
 }
+.text.prose h1, 
+.text.prose .h1,
+.h1.prose {
+    margin-top: 2rem;
+}
 
-.prose p {margin-top: 1rem;}
-.prose h6, .prose .h6 {margin-top: 1rem;}
-.prose h5, .prose .h5 {margin-top: 1rem;}
-.prose h4, .prose .h4 {margin-top: 1rem;}
-.prose h3, .prose .h3 {margin-top: 1rem;}
-.prose h2, .prose .h2 {margin-top: 2rem;}
-.prose h1, .prose .h1 {margin-top: 2rem;}
 .prose>:first-child {margin-top: 0;}
 .prose>:last-child {margin-bottom: 0;}
 
@@ -141,6 +187,8 @@
 
 .text li,
 .text ul {
+    margin-left: 0px;
+    list-style: disc;
     font-size: inherit;
     line-height: inherit;
 }

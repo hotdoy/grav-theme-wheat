@@ -10,10 +10,6 @@
     width: 100%;
 }
 
-.module.editor ul li {
-    margin-left: 18px;
-}
-
 /* REMOVE MARGIN FOR FIRST ELEMENT */
 .module.editor>*:first-child {
     margin-top: 0;

@@ -34,6 +34,5 @@ form:
               type: text
 
             header.caption:
-              type: text
-              label: Caption (TODO)
-
+              type: textarea
+              label: Caption

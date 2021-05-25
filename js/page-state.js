@@ -1,7 +1,7 @@
 const PageState = {
     state: 'loading',
     interactiveDelay: 0,
-    navigationDelay: 0,
+    navigationDelay: 200,
     fxDelay: 0,
     t: performance.now(),
 
@@ -13,7 +13,7 @@ const PageState = {
         if (delay <= 0) {
             return delay;
         } else {
-             return delay - PageState.t;             
+            return delay - PageState.t;             
         }
     },
 
