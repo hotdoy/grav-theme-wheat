@@ -1,3 +1,11 @@
+# v0.12.1
+## 25/05/2021
+
+1. [](#improved)
+    * Fixed unordered list in text.
+    * Added caption to media modular
+    * Removed some transitions on page-state navigating
+
 # v0.12.0
 ## 23/05/2021
 
