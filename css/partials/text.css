@@ -1,97 +1,69 @@
 /*REGULAR*/
 
-.text, 
-.text p {
-    font-size: 1rem;
-    line-height: 1.9rem;
-    color: var(--c-fg);
+.text h1, 
+.text .h1 {
+    font-size: var(--fs-xxlarge);
+    line-height: var(--lh-large);
+    font-weight: var(--fw-bold);
+    letter-spacing: normal;
+    color: var(--c-title);
 }
-.text.prose p {
-    margin-top: 1rem;
+.text.prose h1, 
+.text.prose .h1 {
+    margin-top: 67px;
+    margin-bottom: 67px;
 }
 
-.text h6,
-.text .h6,
-.h6 {
-    font-size: large;
-    line-height: 2rem;
+.text h2, 
+.text .h2 {
+    font-size: var(--fs-xlarge);
+    line-height: var(--lh-large);
     font-weight: var(--fw-bold);
-    color: var(--c-fg);
+    letter-spacing: normal;
+    color: var(--c-title);
 }
-.text.prose h6,
-.text.prose .h6,
-.h6.prose {
-    margin-top: 1rem;
-}
-
-.text h5,
-.text .h5,
-.h5 {
-    font-size: large;
-    line-height: 2rem;
-    font-weight: var(--fw-bold);
-    color: var(--c-fg);
-}
-.text.prose h5,
-.text.prose .h5,
-.h5.prose {
-    margin-top: 1rem;
-}
-
-.text h4,
-.text .h4,
-.h4 {
-    font-size: large;
-    line-height: 2rem;
-    font-weight: var(--fw-bold);
-    color: var(--c-fg);
-}
-.text.prose h4,
-.text.prose .h4,
-.h4.prose {
-    margin-top: 1rem;
+.text.prose h2, 
+.text.prose .h2 {
+    margin-top: 38px;
+    margin-bottom: 28px;
 }
 
 .text h3,
 .text .h3,
-.h3 {
-    font-size: large;
-    line-height: 2rem;
+.text h4,
+.text .h4,
+.text h5,
+.text .h5,
+.text h6,
+.text .h6 {
+    font-size: var(--fs-large);
+    line-height: var(--lh-large);
     font-weight: var(--fw-bold);
-    color: var(--c-fg);
+    letter-spacing: normal;
+    color: var(--c-title);
 }
 .text.prose h3,
 .text.prose .h3,
-.h3.prose {
-    margin-top: 1rem;
+.text.prose h4,
+.text.prose .h4,
+.text.prose h5,
+.text.prose .h5,
+.text.prose h6,
+.text.prose .h6 {
+    margin-top: 38px;
+    margin-bottom: 28px;
 }
 
-.text h2, 
-.text .h2,
-.h2 {
-    font-size: x-large;
-    line-height: 2.1rem;
-    font-weight: var(--fw-bold);
-    color: var(--c-fg);
+.text, 
+.text p {
+    font-size: var(--fs-medium);
+    line-height: var(--lh-medium);
+    letter-spacing: 0.02em;
+    color: var(--c-text);
 }
-.text.prose h2, 
-.text.prose .h2,
-.h2.prose {
-    margin-top: 2rem;
-}
-
-.text h1, 
-.text .h1,
-.h1 {
-    font-size: xx-large;
-    line-height: 2.5rem;
-    font-weight: var(--fw-bold);
-    color: var(--c-fg);
-}
-.text.prose h1, 
-.text.prose .h1,
-.h1.prose {
-    margin-top: 2rem;
+.text.prose p {
+    margin-top: 28px;
+    margin-bottom: 28px;
 }
 
 .prose>:first-child {margin-top: 0;}

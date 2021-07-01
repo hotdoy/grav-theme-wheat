@@ -7,8 +7,8 @@
 		{% block metadata %}{% include 'partials/metadata.html.twig' %}{% endblock %}
 		{% block canonical %}<link rel="canonical" href="{{ page.url(true, true) }}" />{% endblock %}
 		{% block favicon %}{% include 'partials/favicon.html.twig' %}{% endblock %}
-		<link rel="preload" href="{{ url('theme://fonts/inter-v1-latin-regular.woff2', true) }}" as="font" crossorigin>
-		<link rel="preload" href="{{ url('theme://fonts/inter-v2-latin-700.woff2', true) }}" as="font" crossorigin>
+		<link rel="preload" href="{{ url('theme://fonts/Helvetica.woff2', true) }}" as="font" crossorigin>
+		<link rel="preload" href="{{ url('theme://fonts/Helvetica-Bold.woff2', true) }}" as="font" crossorigin>
 		{% include 'partials/js.html.twig' %}
 		{% include 'partials/css.html.twig' %}
 		{% block assets deferred %}

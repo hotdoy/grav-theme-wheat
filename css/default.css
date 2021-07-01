@@ -1,28 +1,27 @@
 /*body.default {}*/
 
-.default__header {
-    margin-left: auto;
-    margin-right: auto;
+
+
+
+
+/* .default__header {} */
+
+.default__header > .wrapper {
     padding: 0 var(--gutter);
+    margin: 0 auto;
     max-width: var(--w-text);
+    width: 100%;
     text-align: center;
 }
 
 .default__header .breadcrumbs {
     display: block;
     margin-bottom: var(--gutter);
-    color: var(--c-fg);
+    color: var(--c-text);
 }
 
 .default__header .breadcrumbs a {
-    color: var(--c-fg);
-    text-decoration: none;
-}
-
-.default__header time {
-    display: block;
-    margin-top: var(--gutter);
-    color: var(--c-hl);
+    color: var(--c-text);
 }
 
 

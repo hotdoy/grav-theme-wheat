@@ -1,14 +1,12 @@
 {% set title = title|default(page.header.display_title) %}
-{% set date = date|default('') %}
 
 {% if title %}
-<section class="module default__header text">
-	{% if config.plugins.breadcrumbs.enabled %}
-	{% include 'partials/breadcrumbs.html.twig' %}
-	{% endif %}
-    <h1>{{ title }}</h1>
-    {% if date %}
-	<time dateime="{{ date|date('U') }}">{{ date|date('Y/m/d') }}</time>
-    {% endif %}
+<section class="module default__header">
+	<div class="wrapper text">
+		{% if config.plugins.breadcrumbs.enabled %}
+		{% include 'partials/breadcrumbs.html.twig' %}
+		{% endif %}
+		<h1>{{ title }}</h1>
+	</div>
 </section>
 {% endif %}
