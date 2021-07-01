@@ -1,20 +1,23 @@
-{# SITE #}
+{# LIBS #}
 {% do assets.addJs('theme://libs/swiper-bundle.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://libs/scroll-out.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/fx.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/page-state.js', { group: 'bottom'}) %}
-{% do assets.addJs('theme://js/links.js', { group:'bottom'}) %}
-{% do assets.addJs('theme://js/header.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/pagination.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/lite-yt-embed.js', { group:'bottom' }) %}
-{# {% do assets.addJs('theme://js/share.js', { group:'bottom' }) %} #}
-{% do assets.addJs('theme://js/dialog.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://libs/quicklink.js', { group:'bottom'}) %}
 
+{# PAGE-STATE #}
+{% do assets.addJs('theme://js/page-state/fx.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/page-state/page-state.js', { group: 'bottom'}) %}
+{% do assets.addJs('theme://js/page-state/links.js', { group:'bottom'}) %}
+
+{# PARTIALS #}
+{% do assets.addJs('theme://js/partials/header.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/partials/pagination.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/partials/lite-yt-embed.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/partials/dialog.js', { group:'bottom' }) %}
+
 {# MODULES #}
-{% do assets.addJs('theme://js/map.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/quotes.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/carousel.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/modular/map.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/modular/quotes.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/modular/carousel.js', { group:'bottom' }) %}
 
 {# PAGES #}
 {% do assets.addJs('theme://js/product.js', { group:'bottom' }) %}

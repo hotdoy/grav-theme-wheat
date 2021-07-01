@@ -1,6 +1,3 @@
-{# INLINE #}
-{% do assets.addCss('theme://css/loading.css', {loading : 'inline', position: 'before'}) %}
-
 {# SNIPCART #}
 {% if theme.snipcart %}
 {% do assets.addCss('https://cdn.snipcart.com/themes/v' ~ snipcart_version ~ '/default/snipcart.css', {position: 'before'}) %}
@@ -8,41 +5,41 @@
 {% endif %}
 
 {# THEME #}
-{% do assets.addCss('theme://css/reset.css') %}
 {% do assets.addCss('theme://libs/swiper-bundle.css') %}
-{% do assets.addCss('theme://css/text.css') %}
-{% do assets.addCss('theme://css/theme.css') %}
-{% do assets.addCss('theme://css/fx.css') %}
-{% do assets.addCss('theme://css/header.css') %}
-{% do assets.addCss('theme://css/footer.css') %}
-{% do assets.addCss('theme://css/buttons.css') %}
-{% do assets.addCss('theme://css/notices.css') %}
-{% do assets.addCss('theme://css/pagination.css') %}
-{% do assets.addCss('theme://css/dialog.css') %}
-{% do assets.addCss('theme://css/lite-yt-embed.css') %}
+{% do assets.addCss('theme://css/partials/reset.css') %}
+{% do assets.addCss('theme://css/partials/page-state.css') %}
+{% do assets.addCss('theme://css/partials/text.css') %}
+{% do assets.addCss('theme://css/partials/theme.css') %}
+{% do assets.addCss('theme://css/partials/header.css') %}
+{% do assets.addCss('theme://css/partials/footer.css') %}
+{% do assets.addCss('theme://css/partials/buttons.css') %}
+{% do assets.addCss('theme://css/partials/notices.css') %}
+{% do assets.addCss('theme://css/partials/pagination.css') %}
+{% do assets.addCss('theme://css/partials/dialog.css') %}
+{% do assets.addCss('theme://css/partials/lite-yt-embed.css') %}
 {# {% do assets.addCss('theme://css/share.css') %} #}
 
-{# MODULES #}
-{% do assets.addCss('theme://css/modules/module.css') %}
-{% do assets.addCss('theme://css/modules/editor.css') %}
-{% do assets.addCss('theme://css/modules/mediatext.css') %}
-{% do assets.addCss('theme://css/modules/map.css') %}
-{% do assets.addCss('theme://css/modules/quotes.css') %}
-{% do assets.addCss('theme://css/modules/promo.css') %}
-{% do assets.addCss('theme://css/modules/carousel.css') %}
-{% do assets.addCss('theme://css/modules/features.css') %}
-{% do assets.addCss('theme://css/modules/media.css') %}
-{% do assets.addCss('theme://css/modules/grid.css') %}
+{# MODULAR #}
+{% do assets.addCss('theme://css/modular/module.css') %}
+{% do assets.addCss('theme://css/modular/editor.css') %}
+{% do assets.addCss('theme://css/modular/mediatext.css') %}
+{% do assets.addCss('theme://css/modular/map.css') %}
+{% do assets.addCss('theme://css/modular/quotes.css') %}
+{% do assets.addCss('theme://css/modular/promo.css') %}
+{% do assets.addCss('theme://css/modular/carousel.css') %}
+{% do assets.addCss('theme://css/modular/features.css') %}
+{% do assets.addCss('theme://css/modular/media.css') %}
+{% do assets.addCss('theme://css/modular/grid.css') %}
 
 {# PAGES #}
-{% do assets.addCss('theme://css/pages/default.css') %}
-{% do assets.addCss('theme://css/pages/error.css') %}
-{% do assets.addCss('theme://css/pages/collection.css') %}
-{% do assets.addCss('theme://css/pages/product.css') %}
-{% do assets.addCss('theme://css/pages/landing.css') %}
-{% do assets.addCss('theme://css/pages/form.css') %}
-{% do assets.addCss('theme://css/pages/post.css') %}
+{% do assets.addCss('theme://css/default.css') %}
+{% do assets.addCss('theme://css/error.css') %}
+{% do assets.addCss('theme://css/collection.css') %}
+{% do assets.addCss('theme://css/product.css') %}
+{% do assets.addCss('theme://css/landing.css') %}
+{% do assets.addCss('theme://css/form.css') %}
+{% do assets.addCss('theme://css/post.css') %}
 
 {# MISC #}
-{% do assets.addCss('theme://css/utils.css') %}
-{% do assets.addCss('theme://css/custom.css') %}
+{% do assets.addCss('theme://css/partials/utils.css') %}
+{% do assets.addCss('theme://css/partials/custom.css') %}

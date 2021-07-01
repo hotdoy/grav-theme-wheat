@@ -30,10 +30,12 @@ const Links = {
             else if (!!href && href.match("^/")) {
                 link.addEventListener("click", function (event) {
                     event.preventDefault();
+                    PageState.destination = href;
+                    PageState.SetDestinationDepth();
                     PageState.UpdateState();
                     setTimeout(function(){ 
                         window.location.href = href;
-                    }, PageState.navigationDelay);
+                    }, PageState.navDelay);
                 }, false);
             }
         }
