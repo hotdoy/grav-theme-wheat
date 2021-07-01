@@ -1,0 +1,50 @@
+.loading {
+    opacity: 0;
+    visibility: hidden;
+    /* position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transition-property: opacity, visibility;
+    transition-duration: 0.09s;
+    z-index: 9999; */
+}
+
+[data-page-state^='interactive'] .loading {
+    opacity: 0;
+    visibility: hidden;
+}
+
+[data-page-state^='navigating'] .loading {
+    opacity: 0;
+    visibility: hidden;
+}
+
+[data-page-state^='navigating'] main {
+    transform: translateY(-15px);
+    opacity: 0;
+    transition-duration: 0.2s;
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+[data-page-state^='navigating-forward'] main {
+    transform: translateX(15px);
+    opacity: 0;
+    transition-duration: 0.2s;
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+[data-page-state^='navigating-backward'] main {
+    transform: translateX(-15px);
+    opacity: 0;
+    transition-duration: 0.2s;
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
