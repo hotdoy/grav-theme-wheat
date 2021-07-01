@@ -26,7 +26,7 @@
 }
 
 [data-page-state^='navigating'] main {
-    transform: translateY(-15px);
+    transform: translateY(15px);
     opacity: 0;
     transition-duration: 0.2s;
     transition-property: opacity, transform;
@@ -34,7 +34,7 @@
 }
 
 [data-page-state^='navigating-forward'] main {
-    transform: translateX(15px);
+    transform: translateX(50px);
     opacity: 0;
     transition-duration: 0.2s;
     transition-property: opacity, transform;
@@ -42,7 +42,7 @@
 }
 
 [data-page-state^='navigating-backward'] main {
-    transform: translateX(-15px);
+    transform: translateX(-50px);
     opacity: 0;
     transition-duration: 0.2s;
     transition-property: opacity, transform;
