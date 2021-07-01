@@ -7,7 +7,7 @@ const PageState = {
     currentDepth: '',
     destinationDepth: 0,
     intDelay: 0,
-    navDelay: 200,
+    navDelay: 50,
     fxDelay: 0,
     t: performance.now(),
 

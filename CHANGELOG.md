@@ -1,3 +1,12 @@
+# v0.12.2
+## 01/07/2021
+
+1. [](#improved)
+    * Re-organized js and css folders.
+    * Page-state now has navigating-forward and navigating-backward states.
+    * Added some new transitions for navigating-forward and navigating-backward.
+    * Hide loading by default.
+
 # v0.12.1
 ## 25/05/2021
 
