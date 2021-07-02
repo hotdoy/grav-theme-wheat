@@ -1,7 +1,4 @@
- .module.editor {
-    background-color: var(--c-bg);
-    color: var(--c-fg);
- } 
+ /* .module.editor {}  */
 
 .module.editor>.wrapper {
     padding: 0 var(--gutter);

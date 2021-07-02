@@ -1,3 +1,12 @@
+# v0.12.3
+## 02/07/2021
+
+1. [](#improved)
+    * Main font changed from Inter to Helvetica
+    * WIP text refactoring (some changes ares still to come)
+    * Toned down page transition.
+    * I'm comming back from another project and it's that time when I change everything.
+    
 # v0.12.2
 ## 01/07/2021
 
