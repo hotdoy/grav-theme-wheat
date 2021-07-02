@@ -1,3 +1,12 @@
+# v0.12.4
+## 02/07/2021
+
+1. [](#improved)
+    * New button
+    * Simpler footer
+    * A bunch of fixes in text styles
+    * etc.
+
 # v0.12.3
 ## 02/07/2021
 

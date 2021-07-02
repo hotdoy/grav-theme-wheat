@@ -3,7 +3,7 @@ const FX = {
     Module: function() {
         ScrollOut({
             targets: ['.module'],
-            once: true,
+            // once: true,
         });
     },
 

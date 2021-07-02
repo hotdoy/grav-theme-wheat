@@ -10,9 +10,8 @@
     overflow: hidden;
 }
 
-.module.carousel > .wrapper > .h2 {
+.module.carousel > .wrapper > h2 {
     width: 100%;
-    max-width: var(--w-body);
     margin-bottom: 1rem;
 }
 

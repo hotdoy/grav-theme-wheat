@@ -50,13 +50,20 @@
 .product__showcase .single-image {
     position: relative;
     padding-top: 133%;
-    background-color: var(--c-material);
+    border-radius: 4px;
     overflow: hidden;
+}
+
+.product__showcase .swiper-slide .fill,
+.product__showcase .single-image .fill {
+    background-color: var(--c-text);
 }
 
 .product__showcase .swiper-slide img,
 .product__showcase .single-image img {
     position: absolute;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -149,17 +156,15 @@
 .product__showcase .button {
     width: 100%;
     margin-top: 1rem;
-    background-color: var(--c-hl);
-    color: white;
+    padding: 12px 12px;
 }
 
 .product__showcase .instruction {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
-    max-width: 80%;
+    max-width: 90%;
     text-align: center;
-    opacity: 0.7;
 }
 
 .product__divider {

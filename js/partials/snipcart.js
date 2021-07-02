@@ -1,16 +1,14 @@
 document.addEventListener("snipcart.ready", () => {
 
     Snipcart.events.on("item.added", (cartItem) => {
+        console.log('Item added!')
         window.navigator.vibrate(10);
-        let snipcartPulses = document.getElementsByClassName("snipcart-pulse");
-
-        for (let snipcartPulse of snipcartPulses) {
-            snipcartPulse.classList.add("active");
-            snipcartPulse.addEventListener("animationend", () => {
-                snipcartPulse.classList.remove("active");
+        document.querySelectorAll(".snipcart-pulse").forEach( pulse => {
+            pulse.addEventListener("animationend", () => {
+                pulse.classList.remove("pulse");
             });
-        }
-        return;
+            pulse.classList.add("pulse");
+        });
     });
 
     Snipcart.events.on('customer.signedin', (customer) => {
