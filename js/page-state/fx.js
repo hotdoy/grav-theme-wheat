@@ -1,6 +1,6 @@
 const FX = {
 
-    Modules: function() {
+    Module: function() {
         ScrollOut({
             targets: ['.module'],
             once: true,
@@ -8,6 +8,7 @@ const FX = {
     },
 
     Init: function() {
-        FX.Modules(); 
+        FX.Module(); 
     },
 };
+
