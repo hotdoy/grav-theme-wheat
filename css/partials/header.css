@@ -77,7 +77,9 @@
 }
 
 #header .grid .burger {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding-left: var(--gutter);
     height: 100%;
 }
@@ -93,6 +95,9 @@
 
 /*TOGGLES*/
 #header .grid .snipcart-checkout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     padding-right: var(--gutter);
     height: 100%;
@@ -115,8 +120,6 @@
 
 #header .snipcart-pulse {
     position: absolute;
-    top: -3px;
-    right: -6px;
     width: 15px;
     height: 15px;
     opacity: 0;
@@ -124,7 +127,7 @@
     background-color: var(--c-hl);
 }
 
-#header .snipcart-pulse.active {
+#header .snipcart-pulse.pulse {
     opacity: 1;
     animation-name: snipcart-pulse;
     animation-duration: 2s;
@@ -143,6 +146,9 @@
 }
 
 #header .grid .snipcart-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     padding-right: var(--gutter);
     height: 100%;
@@ -169,12 +175,11 @@
 #header .header-panel nav li {
     margin: 0 var(--gutter);
     list-style: none;
-    border-bottom: 1px solid var(--c-guide);
 }
 
 #header .header-panel nav li a {
     display: block;
-    padding: 20px 0;
+    padding-top: 20px;
 }
 
 body.header-panel--open {

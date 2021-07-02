@@ -3,6 +3,7 @@ const Product = {
     InitSwiper: function() {
         const e = new Swiper(".product .product__showcase .swiper-container", {
             centeredSlides: true,
+            spaceBetween: 5,
             scrollbar: {
                 el: '.swiper-scrollbar',
              },

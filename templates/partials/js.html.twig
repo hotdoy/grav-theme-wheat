@@ -25,7 +25,7 @@
 {# SNIPCART #}
 {% if theme.snipcart %}
 {% do assets.addJs('https://cdn.snipcart.com/themes/v' ~ snipcart_version ~ '/default/snipcart.js', { group:'bottom', position: 'after', loading: 'async' }) %}
-{% do assets.addJs('theme://js/snipcart.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/partials/snipcart.js', { group:'bottom' }) %}
 {% endif %}
 
 {# CUSTOM #}

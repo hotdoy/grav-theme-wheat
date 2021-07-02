@@ -6,7 +6,7 @@ const Pagination = {
     result: {},
 
     Request: function() {
-        Pagination.btn.classList.add("waiting");
+        Pagination.btn.classList.add('disabled', 'waiting');
         let request = new XMLHttpRequest();
         request.responseType = "document";
         request.open("GET", Pagination.url, true);

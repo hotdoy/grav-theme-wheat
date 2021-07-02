@@ -1,9 +1,8 @@
 #footer {
-    position: relative;
     margin-top: var(--rhythm);
+    padding-top: var(--rhythm);
     padding-bottom: var(--gutter);
-    background-color: var(--c-bg);
-    color: var(--c-fg);
+    background-color: var(--c-material);
     z-index: 1000;
 }
 
@@ -16,84 +15,6 @@
     max-width: var(--w-body);
     margin: 0 auto;
     padding: 0 var(--gutter);
-}
-
-#footer .social {
-    width: 100%;
-    min-height: var(--rhythm);
-    background-color: var(--c-material);
-    border-radius: 4px;
-}
-
-#footer .social .layout {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#footer .social h2 {
-    width: 100%;
-}
-
-#footer .social p {
-    max-width: 75%;
-}
-
-#footer .social .newsletter {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: var(--gutter);
-    width: 100%;
-}
-@media (min-width: 735px) {
-    #footer .social .newsletter {
-        padding: var(--gutter);
-        width: 66.66%;
-    }
-}
-
-#footer .social .newsletter-ctn {
-margin-top: calc(var(--rhythm)/2);
-}
-
-#footer .social input[type="email"] {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    color: var(--c-fg);
-    background-color: var(--c-guide);
-}
-
-#footer .social input.button {
-    margin-top: 10px;
-}
-
-#footer .social .sameas {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: var(--gutter);
-    width: 100%;
-    border-top: 1px solid var(--c-guide);
-}
-@media (min-width: 735px) {
-    #footer .social .sameas {
-        width: 33.33%;
-        border-left: 1px solid var(--c-guide);
-        border-top: none;
-    }
-}
-
-#footer .social .sameas-ctn {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(var(--rhythm)/2);
-}
-
-#footer .social .sameas-ctn a {
-    width: 50%;
 }
 
 #footer .links {
@@ -133,17 +54,23 @@ margin-top: calc(var(--rhythm)/2);
     }
 }
 
-#footer .links nav ul li:first-child {
+#footer .links ul li:first-child {
     font-weight: var(--fw-bold);
     margin-top: var(--gutter);
 }
 
-#footer .links nav a {
- text-decoration: none;
+#footer .links li {
+    padding-top: 5px;
+    color: var(--c-fg);
+}
+
+#footer .links a {
+    text-decoration: none;
+    color: var(--c-text);
 }
 
 #footer .legal {
-    margin-top: calc(var(--rhythm)/2);
+    margin-top: var(--rhythm);
     display: flex;
     justify-content: space-between;
 }
