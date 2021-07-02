@@ -54,7 +54,6 @@
     margin-bottom: 28px;
 }
 
-.text, 
 .text p {
     font-size: var(--fs-medium);
     line-height: var(--lh-medium);
@@ -75,12 +74,10 @@
 
 /*SMALL*/
 
-.text.small,
 .text.small p {
     font-size: small;
     line-height: 1.2rem;
 }
-.text .small.prose,
 .text.small.prose p {
     margin-top: 0.5rem;
 }
