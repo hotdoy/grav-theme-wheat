@@ -5,7 +5,7 @@
 
   transform: translateY(15px);
 	opacity: 0;
-	transition-duration: 0.4s;
+	transition-duration: 0.5s;
 	transition-property: opacity, transform;
 	transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
