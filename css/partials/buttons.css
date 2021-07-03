@@ -9,7 +9,7 @@ button.button {
     border-radius: 9999px;
     text-align: center;
     font-size: 16px;
-    line-height: 17px;
+    line-height: 16px;
     font-weight: var(--fw-regular);
     background-color: var(--c-hl);
     color: white;

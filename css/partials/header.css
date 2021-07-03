@@ -113,6 +113,7 @@
     height: 15px;
     width: 15px;
     font-size: 9px;
+    line-height: 9px;
     border-radius: 100%;
     background-color: var(--c-hl);
     color: white;

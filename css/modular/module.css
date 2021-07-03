@@ -1,7 +1,6 @@
 .module {
   position: relative;
   margin-top: var(--rhythm);
-  background-color: var(--c-bg);
   z-index: 1000;
 
   transform: translateY(15px);
