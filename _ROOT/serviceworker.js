@@ -9,7 +9,7 @@ self.addEventListener('fetch', function(evt) {
     const request = evt.request;
 
     // Ignore requests for admin-related URLs
-    if (request.url.includes('/admin')) {
+    if (request.url.includes('admin')) {
         return;
     }
 
