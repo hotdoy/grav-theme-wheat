@@ -1,3 +1,11 @@
+# v0.12.5
+## 03/07/2021
+
+1. [](#improved)
+    * Fixed breaking typo in serviceworker.
+    * Added splitting lib for future use.
+    * Added a cascade effect on some cards.
+
 # v0.12.4
 ## 02/07/2021
 

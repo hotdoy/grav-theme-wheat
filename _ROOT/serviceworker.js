@@ -1,4 +1,4 @@
-const CACHE = 'wheat-v0.12.4';
+const CACHE = 'wheat-v0.12.5';
 
 self.addEventListener('install', function(evt) {
     skipWaiting();
@@ -9,7 +9,7 @@ self.addEventListener('fetch', function(evt) {
     const request = evt.request;
 
     // Ignore requests for admin-related URLs
-    if (request.url.includes('/admin')) {
+    if (request.url.includes('admin')) {
         return;
     }
 
