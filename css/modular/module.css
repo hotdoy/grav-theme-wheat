@@ -2,17 +2,6 @@
   position: relative;
   margin-top: var(--rhythm);
   z-index: 1000;
-
-  transform: translateY(15px);
-	opacity: 0;
-	transition-duration: 0.5s;
-	transition-property: opacity, transform;
-	transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-}
-
-.module[data-scroll="in"] {
-	transform: translateY(0px);
-	opacity: 1;
 }
 
 .module.padded {

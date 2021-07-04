@@ -186,18 +186,7 @@
 
 /*CARD*/
 
-.product__card {
-    opacity: 0;
-    animation-delay: calc(0.04s * var(--index));
-    animation-duration: 0.3s;
-    animation-name: product-card;
-    animation-fill-mode: forwards;
-}
-
-@keyframes product-card {
-    from { opacity: 0; }
-    to {opacity: 1;}
-}
+/* .product__card {} */
 
 .product__card a {
     text-decoration: none;

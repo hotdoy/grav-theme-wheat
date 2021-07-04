@@ -1,0 +1,34 @@
+/* FADEIN ALL MODULE ON SCROLL */
+.module {
+    transform: translateY(15px);
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  
+.module[data-scroll="in"] {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+
+
+
+/* FADEIN AL CARD USING THEIR INDEX AS DELAY */
+.module [class$='__card'] {
+    opacity: 0;
+    animation-delay: calc(0.04s * var(--index));
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.module[data-scroll="in"] [class$='__card'] {
+    animation-name: card;
+}
+
+@keyframes card {
+    from { opacity: 0; }
+    to {opacity: 1;}
+}
