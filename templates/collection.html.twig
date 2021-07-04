@@ -29,7 +29,7 @@
                 {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item} %}
                 {% endfor %} #}
                 {% for item in computed_collection %}
-                {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item} %}
+                {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item, 'loop': loop} only %}
                 {% endfor %}
             </div>
         </div>
