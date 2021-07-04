@@ -1,3 +1,9 @@
+# v0.12.7
+## 04/07/2021
+
+1. [](#improved)
+    * Expose img loading state when `loading=lazy` attribute exist.
+
 # v0.12.6
 ## 04/07/2021
 
