@@ -1,15 +1,15 @@
-name: Deploy
+on:
+  release:
+    branches: 
+      - master
+  workflow_dispatch:
+    branches: 
+      - master
 
-  on:
-    release:
-      branches: [master]
-    workflow_dispatch:
-      branches: [master]
+jobs:
 
-  jobs:
-  
-    # https://github.com/SamKirkland/FTP-Deploy-Action
-    name: FTP-Deploy-Action
+  # https://github.com/SamKirkland/FTP-Deploy-Action
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.1.0
@@ -22,9 +22,11 @@ name: Deploy
         ftp-username: ${{ secrets.WHEAT_DEPLOY_USER }}
         ftp-password: ${{ secrets.WHEAT_DEPLOY_PASSWORD }}
 
-    # https://github.com/marketplace/actions/cloudflare-purge-cache
-    - name: Purge cache
-      uses: jakejarvis/cloudflare-purge-action@master
-      env:
-        CLOUDFLARE_ZONE: ${{ secrets.WHEAT_CLOUDFLARE_ZONE }}
-        CLOUDFLARE_TOKEN: ${{ secrets.WHEAT_CLOUDFLARE_TOKEN }}
+  # https://github.com/marketplace/actions/cloudflare-purge-cache
+  purge-cloudflare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jakejarvis/cloudflare-purge-action@master
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.WHEAT_CLOUDFLARE_ZONE }}
+          CLOUDFLARE_TOKEN: ${{ secrets.WHEAT_CLOUDFLARE_TOKEN }}
