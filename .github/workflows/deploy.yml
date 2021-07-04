@@ -7,7 +7,6 @@ on:
       - master
 
 jobs:
-
   # https://github.com/SamKirkland/FTP-Deploy-Action
   deploy:
     runs-on: ubuntu-latest
