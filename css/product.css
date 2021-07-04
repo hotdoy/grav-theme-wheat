@@ -26,18 +26,6 @@
     }
 }
 
-.product__showcase .swiper-pagination {
-    padding-bottom: 1rem;
-}
-
-.product__showcase .swiper-pagination-bullet {
-    background: var(--c-hl);
-}
-
-.product__showcase .swiper-pagination-bullet-active {
-    background: var(--c-hl);
-}
-
 .product__showcase .media-ctn img {
     display: block;
     margin: 0 auto;
@@ -56,7 +44,7 @@
 
 .product__showcase .swiper-slide .fill,
 .product__showcase .single-image .fill {
-    background-color: var(--c-text);
+    background-color: var(--c-material);
 }
 
 .product__showcase .swiper-slide img,

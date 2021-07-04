@@ -10,9 +10,9 @@
 	<h2>{{ display_title }}</h2>
 	{% endif %}
 
-    <div class="grid">
+    <div class="layout">
         {% for item in items %}
-        <div class="item text prose small">
+        <div class="item text prose small" style="--index:{{ loop.index }}">
             {% set title = item.title %}
             {% set image = item.image ? page.media[item.image] %}
             {% set image_alt = item.image_alt %}

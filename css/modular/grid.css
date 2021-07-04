@@ -12,7 +12,7 @@
     margin-bottom: 1rem;
 }
 
-.module.grid .grid {
+.module.grid .layout {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     row-gap: var(--gutter);
@@ -20,7 +20,7 @@
 }
 
 @media (min-width: 735px) {
-    .module.grid .grid {
+    .module.grid .layout {
         grid-template-columns: repeat(3, 1fr);
     }
 }
