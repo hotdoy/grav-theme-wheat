@@ -1,8 +1,13 @@
 # v0.12.6
-## XX/07/2021
+## 04/07/2021
 
 1. [](#improved)
-    * Put all FX css in the actual FX css file.
+    * Moved all FX css in the actual FX css file.
+    * Added fx to .module.grid.
+    * Added fx tu product image.
+    * Added css reduced-motion support.
+    * Removed default value of theme logo field.
+    * Github Actions purge Cloudflare.
 
 # v0.12.5
 ## 03/07/2021
