@@ -1,0 +1,11 @@
+img[loading="lazy"] {
+    opacity: 0;
+    transition-property: opacity;
+    transition-delay: 0.2s;
+    transition-duration: 0.2s;
+}
+
+img[loading="lazy"][data-loading-state="complete"] {
+    opacity: 1;
+}
+
