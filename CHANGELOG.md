@@ -1,3 +1,10 @@
+# v0.12.8
+## 04/07/2021
+
+1. [](#improved)
+    * Fixed scope on some includes
+    * Remved delay on img data-loading-state.
+
 # v0.12.7
 ## 04/07/2021
 
