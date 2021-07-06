@@ -10,6 +10,14 @@ const DomState = {
     navDelay: 0,
     fxDelay: 0,
     t: performance.now(),
+    events: {
+        ready: new Event('domstate-ready'),
+        update: new Event('domstate-update'),
+        interactive: new Event('domstate-interactive'),
+        fx: new Event('domstate-fx'),
+        navigating: new Event('domstate-navigating'),
+    },
+
 
     Log: function(message) {
         console.log('%c DOMSTATE: ' + message, 'color:green;');
@@ -61,6 +69,9 @@ const DomState = {
         if (this.state == 'loading') {
             this.state = 'interactive';
             this.t = performance.now();
+
+            document.dispatchEvent(DomState.events.interactive);
+
             setTimeout(function(){ FX.Init();}, this.GetFxDelay());
             setTimeout(function(){ DomState.UpdateStateAttr();}, this.GetIntDelay());
         } else if (this.state == 'interactive') {
@@ -73,12 +84,24 @@ const DomState = {
                 this.state = 'navigating';   
             }
 
-            Dialog.closeAll();
             this.UpdateStateAttr();
+            document.dispatchEvent(this.events.navigating);
         }
         this.Log(this.state + ' - ' + this.t);
     },
 
+    Init: function() {
+        document.addEventListener('domstate-update', () => {
+            this.UpdateState(); 
+        });
+        document.addEventListener('domstate-ready', () => {
+            this.Log('ready');
+        });
+        document.dispatchEvent(this.events.ready);
+        document.dispatchEvent(this.events.update);
+    }
 };
 
-DomState.UpdateState(); 
+
+DomState.Init();
+
