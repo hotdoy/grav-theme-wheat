@@ -13,6 +13,7 @@ const DomState = {
     events: {
         ready: new Event('domstate-ready'),
         update: new Event('domstate-update'),
+        updateAttr: new Event('domstate-update-attr'),
         interactive: new Event('domstate-interactive'),
         fx: new Event('domstate-fx'),
         navigating: new Event('domstate-navigating'),
@@ -71,9 +72,16 @@ const DomState = {
             this.t = performance.now();
 
             document.dispatchEvent(DomState.events.interactive);
+            this.Log(this.state + ' - ' + this.t);
+            
+            setTimeout(function(){
+                document.dispatchEvent(DomState.events.updateAttr);
+            }, this.GetIntDelay());
 
-            setTimeout(function(){ FX.Init();}, this.GetFxDelay());
-            setTimeout(function(){ DomState.UpdateStateAttr();}, this.GetIntDelay());
+            setTimeout(function(){
+                document.dispatchEvent(DomState.events.fx);
+            }, this.GetFxDelay());
+
         } else if (this.state == 'interactive') {
 
             if (this.destinationDepth < this.currentDepth) {
@@ -83,25 +91,20 @@ const DomState = {
             } else {
                 this.state = 'navigating';   
             }
-
             this.UpdateStateAttr();
             document.dispatchEvent(this.events.navigating);
+            this.Log(this.state);
         }
-        this.Log(this.state + ' - ' + this.t);
     },
 
     Init: function() {
-        document.addEventListener('domstate-update', () => {
-            this.UpdateState(); 
-        });
-        document.addEventListener('domstate-ready', () => {
-            this.Log('ready');
-        });
+        document.addEventListener('domstate-ready', () => {this.Log('ready');});
+        document.addEventListener('domstate-update', () => {this.UpdateState();});
+        document.addEventListener('domstate-update-attr', () => {this.UpdateStateAttr();});
         document.dispatchEvent(this.events.ready);
         document.dispatchEvent(this.events.update);
     }
 };
-
 
 DomState.Init();
 
