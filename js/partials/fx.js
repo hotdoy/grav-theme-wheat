@@ -1,14 +1,8 @@
-const FX = {
+document.addEventListener('domstate-fx', () => {
+    DomState.Log('fx');
 
-    Module: function() {
-        ScrollOut({
-            targets: ['.module'],
-            once: true,
-        });
-    },
-
-    Init: function() {
-        FX.Module(); 
-    },
-};
-
+    ScrollOut({
+        targets: ['.module'],
+        once: true,
+    });
+});
