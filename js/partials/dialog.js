@@ -72,7 +72,7 @@ const Dialog = {
 
     reset: function(id) {
         const e = document.getElementById(id);
-        if (!!e) {
+        if (e.length) {
             setTimeout(function() {
                 const clone = e.cloneNode(true);
                 e.parentNode.replaceChild(clone, e);
@@ -96,3 +96,7 @@ const Dialog = {
 };
 
 Dialog.init();
+
+document.addEventListener('domstate-navigating', () => {
+    Dialog.closeAll(); 
+});
