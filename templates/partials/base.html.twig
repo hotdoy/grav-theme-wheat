@@ -23,7 +23,6 @@
     {% endset -%}
 
 	<body class="{{ page.template }}{% if page.header.body_classes %} {{ page.header.body_classes }}{% endif %}"{% if theme_style %} style="{{ theme_style }}"{% endif %}>
-		{% block loading %}{% include 'partials/loading.html.twig' %}{% endblock %}
 		{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
 		<main id="main">{% block content %}{% endblock %}</main>
 		{% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %}
