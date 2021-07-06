@@ -9,7 +9,7 @@ const DomStateImg = {
     },
 
     SetAttr: function(el, state) {
-        el.setAttribute('data-img-state', state);
+        el.setAttribute('data-domstate', state);
     },
 
     Init: function() {
