@@ -16,18 +16,18 @@
     z-index: 9999;
 }
 
-[data-page-state^='interactive'] .loading {
+[data-domstate^='interactive'] .loading {
     opacity: 0;
     visibility: hidden;
 }
 
-[data-page-state^='navigating'] .loading {
+[data-domstate^='navigating'] .loading {
     opacity: 0;
     visibility: hidden;
 }
 
-[data-page-state^='navigating'] {}
+/* [data-domstate^='navigating'] {} */
 
-[data-page-state^='navigating-forward'] {}
+/* [data-domstate^='navigating-forward'] {} */
 
-[data-page-state^='navigating-backward'] {}
+/* [data-domstate^='navigating-backward'] {} */
