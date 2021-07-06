@@ -46,7 +46,7 @@ const DomStateLink = {
                     event.preventDefault();
                     DomStateLink.SetDestination(href);
                     DomStateLink.SetDestinationDepth();
-                    DomState.UpdateState();
+                    document.dispatchEvent(DomState.events.update);
                     DomStateLink.Navigate();
                 }, false);
             }
