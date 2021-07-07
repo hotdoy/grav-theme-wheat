@@ -1,47 +1,44 @@
 const DomState = {
+
+    // Current active state
     state: 'loading',
-    href: window.location.href,
-    hostname: window.location.hostname,
-    path: window.location.pathname,
-    destination: '',
-    currentDepth: '',
-    destinationDepth: 0,
-    intDelay: 0,
-    navDelay: 0,
-    fxDelay: 0,
-    t: performance.now(),
-    events: {
-        ready: new Event('domstate-ready'),
-        update: new Event('domstate-update'),
-        updateAttr: new Event('domstate-update-attr'),
-        interactive: new Event('domstate-interactive'),
-        fx: new Event('domstate-fx'),
-        navigating: new Event('domstate-navigating'),
+
+    // Current interactive page
+    interactive: {
+        path: '',
+        depth: 0,
+        delay: 0,
     },
 
+    // Page navigating to
+    navigating: {
+        path: '',
+        depth: 0,
+        delay: 0,
+    },
+
+    // Perceived Delay
+    perceivedDelay: 0,
+
+    // Events
+    events: {
+        ready: new Event('domstateReady'),
+        update: new Event('domstateUpdate'),
+        updateAttr: new Event('domstateUpdateAttr'),
+        interactive: new Event('domstateInteractive'),
+        navigating: new Event('domstateNavigating'),
+    },
 
     Log: function(message) {
         console.log('%c DOMSTATE: ' + message, 'color:green;');
     },
 
-    GetDelay: function(delay) {
+    GetAdjustedDelay: function(delay) {
         if (delay <= 0) {
             return delay;
         } else {
-            return delay - this.t;             
+            return delay - this.perceivedDelay;             
         }
-    },
-
-    GetIntDelay: function() {
-        return this.GetDelay(this.intDelay);
-    },
-
-    GetFxDelay: function() {
-        return this.GetDelay(this.FxDelay);
-    },
-
-    GetDirection: function() {
-        return 0;
     },
 
     GetDepth: function(url) {
@@ -52,59 +49,40 @@ const DomState = {
         }
     },
 
-    SetDestinationDepth: function() {
-        this.destinationDepth = this.GetDepth(this.destination);
-    },
-
-    SetCurrentDepth: function() {
-        this.currentDepth = this.GetDepth(this.path);
-    },
-
     UpdateStateAttr: function() {
         document.body.setAttribute('data-domstate', this.state);
+        document.dispatchEvent(this.events.updateAttr);
     },
 
-    UpdateState: function() {
-        this.SetCurrentDepth();
-
-        if (this.state == 'loading') {
-            this.state = 'interactive';
-            this.t = performance.now();
-
-            document.dispatchEvent(DomState.events.interactive);
-            this.Log(this.state + ' - ' + this.t);
-            
+    UpdateState: function(state, delay, event) {
+    
+        if (state == 'interactive') {
             setTimeout(function(){
-                document.dispatchEvent(DomState.events.updateAttr);
-            }, this.GetIntDelay());
-
+                DomState.state = state;
+                DomState.UpdateStateAttr();
+                DomState.Log(DomState.state);
+                document.dispatchEvent(DomState.events.interactive);
+            }, this.GetAdjustedDelay(this.interactive.delay));
+        } else {
             setTimeout(function(){
-                document.dispatchEvent(DomState.events.fx);
-            }, this.GetFxDelay());
-
-        } else if (this.state == 'interactive') {
-
-            if (this.destinationDepth < this.currentDepth) {
-                this.state = 'navigating-backward';
-            } else if(this.destinationDepth > this.currentDepth) {
-                this.state = 'navigating-forward';   
-            } else {
-                this.state = 'navigating';   
-            }
-            this.UpdateStateAttr();
-            document.dispatchEvent(this.events.navigating);
-            this.Log(this.state);
+                DomState.state = state;
+                DomState.UpdateStateAttr();
+                DomState.Log(DomState.state);
+                if (event) {
+                     document.dispatchEvent(event);   
+                }
+            }, delay);
         }
     },
 
     Init: function() {
-        document.addEventListener('domstate-ready', () => {this.Log('ready');});
-        document.addEventListener('domstate-update', () => {this.UpdateState();});
-        document.addEventListener('domstate-update-attr', () => {this.UpdateStateAttr();});
+        this.perceivedDelay = performance.now();
+        this.interactive.path = window.location.pathname;
+        this.interactive.depth = this.GetDepth(this.interactive.path);
+        document.addEventListener('domstateReady', () => {this.Log('ready');});
         document.dispatchEvent(this.events.ready);
-        document.dispatchEvent(this.events.update);
+        this.UpdateState('interactive');
     }
 };
 
 DomState.Init();
-

@@ -3,12 +3,11 @@
 {% do assets.addJs('theme://libs/scroll-out/scroll-out.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://libs/splitting/splitting.js', { group:'bottom'}) %}
 {% do assets.addJs('theme://libs/quicklink/quicklink.js', { group:'bottom'}) %}
-{% do assets.addJs('theme://libs/domstate/domstate.js', { group: 'bottom'}) %}
+{% do assets.addJs('theme://js/partials/fx.js', { group:'bottom' }) %}
+
 {% do assets.addJs('theme://libs/domstate/domstate-link.js', { group:'bottom'}) %}
 {% do assets.addJs('theme://libs/domstate/domstate-img.js', { group:'bottom'}) %}
-
-{# PAGE-STATE #}
-{% do assets.addJs('theme://js/partials/fx.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://libs/domstate/domstate.js', { group: 'bottom'}) %}
 
 {# PARTIALS #}
 {% do assets.addJs('theme://js/partials/header.js', { group:'bottom' }) %}

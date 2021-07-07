@@ -1,4 +1,5 @@
 const DomStateLink = {
+
     ObserveMutation: function() {
         const target = document.querySelector("#main");
         const config = { childList: true, subtree: true };
@@ -8,45 +9,36 @@ const DomStateLink = {
         observer.observe(target, config);
     },
 
-    SetTargetBlank: function(el) {
-        el.setAttribute("target", "_blank");
-    },
-
-    SetNoopener: function(el) {
-        el.setAttribute("rel", "noopener");
-    },
-
-    SetDestination: function(href) {
-        DomState.destination = href;
-    },
-
-    SetDestinationDepth: function() {
-        DomState.SetDestinationDepth();
-    },
-
     Navigate: function() {
         setTimeout(function(){ 
-            window.location.href = DomState.destination;
-        }, DomState.navDelay);
+            window.location.href = DomState.navigating.path;
+        }, DomState.navigating.delay);
     },
 
     UpdateLink: function(els) {
         for (let el of els) {
+
             const href = el.getAttribute("href");
 
             // EXTERNAL
             if (!!href && href.match("^http")) {
-                DomStateLink.SetTargetBlank(el);
-                DomStateLink.SetNoopener(el);
+                el.setAttribute("target", "_blank");
+                el.setAttribute("rel", "noopener");
             }
 
             // NAVIGATION
             else if (!!href && href.match("^/")) {
                 el.addEventListener("click", function(event) {
                     event.preventDefault();
-                    DomStateLink.SetDestination(href);
-                    DomStateLink.SetDestinationDepth();
-                    document.dispatchEvent(DomState.events.update);
+                    DomState.navigating.path = href;                    
+                    DomState.navigating.depth = DomState.GetDepth(DomState.navigating.path);
+                    if (DomState.navigating.depth < DomState.interactive.depth) {
+                        DomState.UpdateState('navigating-backward', 0);
+                    } else if(DomState.navigating.depth > DomState.interactive.depth) {
+                        DomState.UpdateState('navigating-forward', 0);
+                    } else {
+                        DomState.UpdateState('navigating', 0);
+                    }
                     DomStateLink.Navigate();
                 }, false);
             }

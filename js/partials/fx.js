@@ -1,8 +1,13 @@
-document.addEventListener('domstate-fx', () => {
-    DomState.Log('fx');
+document.addEventListener('domstateInteractive', () => {
+    
+    const delay = 0;
 
-    ScrollOut({
-        targets: ['.module'],
-        once: true,
-    });
+    DomState.Log('fx');
+    setTimeout(function(){
+        ScrollOut({
+            targets: ['.module'],
+            once: true,
+        });
+    }, delay);
+
 });
