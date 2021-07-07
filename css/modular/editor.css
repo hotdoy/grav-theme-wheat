@@ -133,13 +133,13 @@
 }
 
 .module.editor details[open] *:not(summary) {
-    animation-name: editor-details;
+    animation-name: details;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
 
-@keyframes editor-details {
+@keyframes details {
     from {opacity: 0.5; transform: translateY(-5px);}
     to {opacity: 1; transform: translateY(0px);}
 }

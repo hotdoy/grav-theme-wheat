@@ -1,0 +1,9 @@
+/* body[data-domstate^='loading'] {} */
+
+/* body[data-domstate^='interactive'] {} */
+
+/* body[data-domstate^='navigating'] {} */
+
+/* body[data-domstate^='navigating-forward'] {} */
+
+/* body[data-domstate^='navigating-backward'] {} */
