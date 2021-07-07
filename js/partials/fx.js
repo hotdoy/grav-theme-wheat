@@ -9,9 +9,9 @@ document.addEventListener('domstateInteractive', () => {
             once: true,
         });
 
-        // Splitting({
-        //     target: ".default__header h1",
-        //   });
+        Splitting({
+            target: "h1",
+          });
 
 
 

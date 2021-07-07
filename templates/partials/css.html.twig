@@ -5,9 +5,11 @@
 {% endif %}
 
 {# LIBS #}
+{% do assets.addCss('theme://libs/splitting/splitting.css') %}
 {% do assets.addCss('theme://libs/swiper/swiper-bundle.css') %}
 {% do assets.addCss('theme://libs/domstate/domstate.css') %}
 {% do assets.addCss('theme://libs/domstate/domstate-img.css') %}
+
 
 {# THEME #}
 {% do assets.addCss('theme://css/partials/reset.css') %}
