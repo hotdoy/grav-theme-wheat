@@ -4,7 +4,7 @@ button.button {
     display: inline-block;
     position: relative;
     white-space: nowrap;
-    padding: 9px 16px;
+    padding: 10px 16px 9px 16px;
     border: none;
     border-radius: 9999px;
     text-align: center;
