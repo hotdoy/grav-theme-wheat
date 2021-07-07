@@ -14,10 +14,6 @@
         opacity: 1;
     }
 
-
-
-
-
     /* FADEIN CARD USING THEIR INDEX AS DELAY */
     .module [class$='__card'],
     .module.grid .item {
