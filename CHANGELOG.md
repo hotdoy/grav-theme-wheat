@@ -1,5 +1,13 @@
+# v0.13.1
+## 07/07/2021
+
+1. [](#improved)
+    * added char animation demo.
+    * moved some stuff between damstate and domstatelink
+    * mino style changes
+
 # v0.13.0
-## 04/07/2021
+## 07/07/2021
 
 1. [](#improved)
     * removed page-state
