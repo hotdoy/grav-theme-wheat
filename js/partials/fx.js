@@ -1,8 +1,9 @@
 document.addEventListener('domstateInteractive', () => {
     const delay = 0;
-    setTimeout(function(){
-        DomState.Log('fx');
 
+    setTimeout(function(){
+
+        DomState.Log('firing fx');
 
         ScrollOut({
             targets: ['.module'],
@@ -13,9 +14,5 @@ document.addEventListener('domstateInteractive', () => {
             target: "h1",
           });
 
-
-
-
     }, delay);
-
 });

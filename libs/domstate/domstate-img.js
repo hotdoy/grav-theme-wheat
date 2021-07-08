@@ -13,7 +13,6 @@ const DomStateImg = {
     },
 
     Init: function() {
-        DomState.Log('img');
         this.ObserveMutation();
         document.querySelectorAll('img').forEach(el => {
             el.onload = () =>  this.SetAttr(el, 'complete');
@@ -24,6 +23,6 @@ const DomStateImg = {
     },
 };
 
-document.addEventListener('domstateInteractive', () => {
+document.addEventListener('domstateReady', () => {
     DomStateImg.Init();
 });

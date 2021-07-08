@@ -22,7 +22,7 @@
 .post__card .media-ctn {
     position: relative;
     padding-top: 100%;
-    background-color: var(--c-fg);
+    background-color: var(--c-material);
     border-radius: 4px;
     overflow: hidden;
 }
