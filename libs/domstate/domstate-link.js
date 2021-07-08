@@ -20,42 +20,29 @@ const DomStateLink = {
     },
 
     UpdateLink: function(els) {
-        for (let el of els) {
-
+        els.forEach(el => {
             const href = el.getAttribute("href");
-
-            // EXTERNAL
             if (!!href && href.match("^http")) {
                 el.setAttribute("target", "_blank");
                 el.setAttribute("rel", "noopener");
-            }
-
-            // NAVIGATION
-            else if (!!href && href.match("^/")) {
-
+            } else if (!!href && href.match("^/")) {
                 el.addEventListener("click", function(event) {
                     event.preventDefault();
                     DomStateLink.path = href;                    
                     DomStateLink.depth = DomState.GetDepth(DomStateLink.path);
-
                     if (DomStateLink.depth < DomState.depth) {
-                        DomState.UpdateState('navigating-backward', 0);
-                        document.dispatchEvent(DomStateLink.events.navigatingBackward);
+                        DomState.UpdateState('navigating-backward', 0, [DomStateLink.events.navigating, DomStateLink.events.navigatingBackward]);
                     } else if(DomStateLink.depth > DomState.depth) {
-                        DomState.UpdateState('navigating-forward', 0);
-                        document.dispatchEvent(DomStateLink.events.navigatingForward);
+                        DomState.UpdateState('navigating-forward', 0, [DomStateLink.events.navigating, DomStateLink.events.navigatingForward]);
                     } else {
-                        DomState.UpdateState('navigating', 0);
-                        document.dispatchEvent(DomStateLink.events.navigating);
+                        DomState.UpdateState('navigating', 0, [DomStateLink.events.navigating]);
                     }
-
                     setTimeout(function(){ 
                         window.location.href = DomStateLink.path;
                     }, DomStateLink.delay);
-
                 }, false);
             }
-        }
+        });
     },
 
     Init: function() {

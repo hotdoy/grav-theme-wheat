@@ -1,10 +1,21 @@
+# v0.13.2
+## 07/08/2021
+
+1. [](#improved)
+    * domstate complete event
+    * domstate now fires array of events instead of a single one.
+    * domstate-img fires on ready instead of interactive.
+    * streamlined domstate.
+    * minor style changes
+    * fixed date format in changelog
+
 # v0.13.1
 ## 07/07/2021
 
 1. [](#improved)
     * added char animation demo.
     * moved some stuff between damstate and domstatelink
-    * mino style changes
+    * minor style changes
 
 # v0.13.0
 ## 07/07/2021
@@ -16,20 +27,20 @@
     * added domstate-link
 
 # v0.12.8
-## 04/07/2021
+## 07/04/2021
 
 1. [](#improved)
     * Fixed scope on some includes
     * Removed delay on img data-loading-state.
 
 # v0.12.7
-## 04/07/2021
+## 07/04/2021
 
 1. [](#improved)
     * Expose img loading state when `loading=lazy` attribute exist.
 
 # v0.12.6
-## 04/07/2021
+## 07/04/2021
 
 1. [](#improved)
     * Moved all FX css in the actual FX css file.
@@ -40,7 +51,7 @@
     * Github Actions purge Cloudflare.
 
 # v0.12.5
-## 03/07/2021
+## 07/03/2021
 
 1. [](#improved)
     * Fixed breaking typo in serviceworker.
@@ -48,7 +59,7 @@
     * Added a cascade effect on some cards.
 
 # v0.12.4
-## 02/07/2021
+## 07/02/2021
 
 1. [](#improved)
     * New button
@@ -57,7 +68,7 @@
     * etc.
 
 # v0.12.3
-## 02/07/2021
+## 07/02/2021
 
 1. [](#improved)
     * Main font changed from Inter to Helvetica
@@ -75,7 +86,7 @@
     * Hide loading by default.
 
 # v0.12.1
-## 25/05/2021
+## 05/25/2021
 
 1. [](#improved)
     * Fixed unordered list in text.
@@ -83,14 +94,14 @@
     * Removed some transitions on page-state navigating
 
 # v0.12.0
-## 23/05/2021
+## 05/23/2021
 
 1. [](#improved)
     * Added Grid modular
     * Added references for quick local domain setup (WIP)
 
 # v0.11.1
-## 19/05/2021
+## 05/19/2021
 
 1. [](#improved)
     * Removed contact from footer.
@@ -98,7 +109,7 @@
     * Add to cart button now use c-hl color.
 
 # v0.11.0
-## 16/05/2021
+## 05/16/2021
 
 1. [](#improved)
     * Brand new footer
@@ -108,7 +119,7 @@
     * Oh and BTW, this release will break header and footer navs.
 
 # v0.10.3
-## 13/05/2021
+## 05/13/2021
 
 1. [](#improved)
     * Most libs are now part of the source instead of pulling from CDNs
@@ -117,7 +128,7 @@
     * Bumped Snipcart to 3.2.0 with complete but unstyled theme
 
 # v0.10.2
-## 12/05/2021
+## 05/12/2021
 
 1. [](#improved)
     * Refactored page-state (breaking)
@@ -126,13 +137,13 @@
     * Probalby more? 
 
 # v0.10.1b
-##  11/05/2021
+##  05/11/2021
 
 1. [](#improved)
     * Test release with no loader and instant.page
 
 # v0.10.1
-##  10/05/2021
+##  05/10/2021
 
 1. [](#improved)
     * Dialog translations
@@ -152,7 +163,7 @@
     * Cleaned product blueprint
 
 # v0.9.2
-##  03/05/2021
+##  05/03/2021
 
 1. [](#improved)
     * Added Snipcart version overwrite in theme comfig.
@@ -161,7 +172,7 @@
     * Minor style fixes.
 
 # v0.9.1
-##  01/05/2021
+##  05/01/2021
 
 1. [](#improved)
     * Serviceworker can be switched on and off in theme settings.
@@ -171,7 +182,7 @@
     * Minor style fixes.
 
 # v0.9.0
-##  28/04/2021
+##  04/28/2021
 
 1. [](#new)
     * Bump to v0.9.0
@@ -179,21 +190,21 @@
     * Added Dialog system
 
 # v0.8.21
-##  26/04/2021
+##  04/26/2021
 
 1. [](#improved)
     * Pre shipping v0.9 dialog prototype
     * Styles and stuff
 
 # v0.8.20
-##  20/04/2021
+##  04/20/2021
 
 1. [](#improved)
     * Rolled back Gordita
     * Simplified font-size
 
 # v0.8.19
-##  19/04/2021
+##  04/19/2021
 
 1. [](#improved)
     * Multiple visual fixes and changes
@@ -203,7 +214,7 @@
     * Added micro animation to Details
 
 # v0.8.18
-##  15/04/2021
+##  04/15/2021
 
 1. [](#improved)
     * Multiple visual fixes and changes
@@ -211,25 +222,25 @@
     * Removed Snipcart from the assets pipeline
 
 # v0.8.17
-##  14/04/2021
+##  04/14/2021
 
 1. [](#improved)
     * I don't know at this point.
 
 # v0.8.16
-##  13/04/2021
+##  04/13/2021
 
 1. [](#improved)
     * WIP new header is getting somewhere
 
 # v0.8.15
-##  12/04/2021
+##  04/12/2021
 
 1. [](#improved)
     * Experimenting with new fonts
 
 # v0.8.14
-##  12/04/2021
+##  04/12/2021
 
 1. [](#improved)
     * Footer link padding and border
@@ -239,33 +250,33 @@
     * Commented out some theme color options for upcoming changes
 
 # v0.8.13
-##  08/04/2021
+##  04/08/2021
 
 1. [](#improved)
     * Smaller gutter on sub 400px devices
     * Mostly cleaning
 
 # v0.8.12
-##  06/04/2021
+##  04/06/2021
 
 1. [](#improved)
     * Brand new footer
 
 # v0.8.11
-##  06/04/2021
+##  04/06/2021
 
 1. [](#improved)
     * Minor stuff
 
 # v0.8.10
-##  02/04/2021
+##  04/02/2021
 
 1. [](#improved)
     * Basic variant selector (price adjustment not supported).
     * Minor style adjustments to product.
 
 # v0.8.9
-##  31/03/2021
+##  03/31/2021
 
 1. [](#improved)
     * Improved CLS (Cumulative layout shit) of mediatext and media modular.
@@ -273,33 +284,33 @@
     * Improved page-state delay management.
 
 # v0.8.8
-##  30/03/2021
+##  03/30/2021
 
 1. [](#improved)
     * Moving everything from page-state: complete to interactive.
     * page-state values uses a number from 0 being loading to 3 being complete-navigating. Number must be concatenated so the state of a complete page should be 012.
 
 # v0.8.7
-##  27/03/2021
+##  03/27/2021
 
 1. [](#improved)
     * Better FXdelay handling
 
 # v0.8.6
-##  27/03/2021
+##  03/27/2021
 
 1. [](#improved)
     * Map modular
     * Monstly invisible stuff
 
 # v0.8.5
-##  24/03/2021
+##  03/24/2021
 
 1. [](#improved)
     * Images loading, compression and resizing
 
 # v0.8.4
-##  23/03/2021
+##  03/23/2021
 
 1. [](#improved)
     * Hero renamed to Promo
@@ -307,7 +318,7 @@
     * Cleaned collection classes
 
 # v0.8.3
-##  20/03/2021
+##  03/20/2021
 
 1. [](#improved)
     * All card template
@@ -320,7 +331,7 @@
     * Post card
 
 # v0.8.2
-##  15/03/2021
+##  03/15/2021
 
 1. [](#improved)
     * Loading no has a "skeleton"
@@ -333,7 +344,7 @@
     * Fixed js not inlining properly
 
 # v0.8.0
-##  14/03/2021
+##  03/14/2021
 
 1. [](#improved)
     * Colors are now a setting in theme blueprint
@@ -347,7 +358,7 @@
     * Moved Snipcart js  outside of pipeline. (for some reason it blows the the bundle to 1.4mb when included)
 
 # v0.7.9
-##  12/03/2021
+##  03/12/2021
 
 1. [](#improved)
     * Removed Announcement
@@ -356,13 +367,13 @@
     * yt-lite: added support for custom thumbnail
 
 # v0.7.8
-##  11/03/2021
+##  03/11/2021
 
 1. [](#improved)
     * Cleaning and breaking stuff
     
 # v0.7.7
-##  10/03/2021
+##  03/10/2021
 
 1. [](#new)
     * Media modular youtube support.
@@ -371,7 +382,7 @@
     * Force lite-youtube hi-res thumbnail (WIP)
     
 # v0.7.6
-##  08/03/2021
+##  03/08/2021
 
 1. [](#new)
     * Module Media (WIP)
@@ -382,7 +393,7 @@
     * Improved line-height of hero module
     
 # v0.7.5
-##  05/03/2021
+##  03/05/2021
 
 1. [](#improved)
     * Hero modular no longer has content
@@ -392,7 +403,7 @@
     * Hero modular is now 16:9 landscape and 1:1 portrait
 
 # v0.7.4
-##  04/03/2021
+##  03/04/2021
 
 1. [](#improved)
     * cleaning collection and pagination WIP
@@ -401,13 +412,13 @@
     * default card bg color
 
 # v0.7.3
-##  28/02/2021
+##  02/28/2021
 
 1. [](#improved)
     * FX handling
 
 # v0.7.2
-##  28/02/2021
+##  02/28/2021
 
 1. [](#improved)
     * Custom property usage
@@ -417,14 +428,14 @@
     * Fixed caroussel modular edge gradients
 
 # v0.7.1
-##  26/02/2021
+##  02/26/2021
 
 1. [](#improved)
     * Enabled snipcart
 * Fixed some snipcart related styles
 
 # v0.7.0
-##  16/02/2021
+##  02/16/2021
 
 1. [](#improved)
     * Getting up to speed with GRAV 1.7
