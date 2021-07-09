@@ -4,9 +4,9 @@
 
 
 
-/* .default__header {} */
+/* .default__heading {} */
 
-.default__header > .wrapper {
+.default__heading > .wrapper {
     padding: 0 var(--gutter);
     margin: 0 auto;
     max-width: var(--w-text);
@@ -14,13 +14,13 @@
     text-align: center;
 }
 
-.default__header .breadcrumbs {
+.default__heading .breadcrumbs {
     display: block;
     margin-bottom: var(--gutter);
     color: var(--c-text);
 }
 
-.default__header .breadcrumbs a {
+.default__heading .breadcrumbs a {
     color: var(--c-text);
 }
 
@@ -29,34 +29,33 @@
 
 
 /*CARD*/
-.default__card {
-    position: relative;
-    height: auto;
-    font-size: large;
-    font-weight: 700;
-    line-height: 1.4;
-    background-color: var(--c-hl);
-    color: white;
-    transition-duration: 0.2s;
-    transition-property: transform;
+
+/* .default__card {} */
+
+.default__card a {
+    text-decoration: none;
 }
 
-@media (min-width: 835px) {
-    .default__card {
-        font-size: x-large;
-        line-height: 1.4;
-    }
-}
-
-.default__card>a>.wrapper {
+.default__card .media-ctn {
     position: relative;
     padding-top: 133%;
+    background-color: var(--c-material);
+    border-radius: 6px;
+    overflow: hidden;
 }
 
-.default__card>a>.wrapper>.fill {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: var(--gutter);
+.default__card img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.default__card h3 {
+    margin-top: 0.5rem;
 }

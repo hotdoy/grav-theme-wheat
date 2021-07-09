@@ -2,7 +2,6 @@
 {% set name = 'carousel' %}
 
 {% set title = title|default(page.header.display_title) %}
-{% set collection = collection|default() %}
 {% set list = list|default(page.header.items) %}
 
 {% block content %}
@@ -15,23 +14,14 @@
 	
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
-
-			{# COLLECTION #}
-			{% for item in collection %}
-			<div class="swiper-slide">
-				 {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item, 'loop': loop} only %}
-			</div>
-			{% endfor %}
-
 			{# PAGES #}
 			{% for item in list %}
 			{% set item = page.find(item.page) %}	
 			<div class="swiper-slide">
-				 {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item, 'loop': loop} only %}
+				{% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item, 'loop': loop} only %}
 			</div>
 			{% endfor %}
 		</div>
-
 		{# SCROLLBAR #}
 		<div class="swiper-scrollbar"></div>
 	</div>	

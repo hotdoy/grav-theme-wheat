@@ -5,18 +5,11 @@
 
 
 /*CARD*/
-.post__card {
-    position: relative;
-    opacity: 0;
-    animation-delay: calc(0.04s * var(--index));
-    animation-duration: 0.3s;
-    animation-name: product-card;
-    animation-fill-mode: forwards;
-}
 
-@keyframes post-card {
-    from { opacity: 0; }
-    to {opacity: 1;}
+/* .post__card {} */
+
+.post__card a {
+    text-decoration: none;
 }
 
 .post__card .media-ctn {
@@ -30,6 +23,9 @@
 .post__card .media-ctn img {
     position: absolute;
     top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -37,8 +33,4 @@
 
 .post__card h3 {
 	margin-top: 0.5rem;
-}
-
-.post__card time {
-	color: var(--c-hl);
 }

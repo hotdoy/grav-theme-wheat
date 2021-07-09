@@ -12,7 +12,7 @@
 	{% if yt_videoid %}
 	<lite-youtube videoid="{{ yt_videoid }}" params="modestbranding=1&rel=0" style="background-image: url('{{ image.url }}');"></lite-youtube>
 	{% elseif mp4 %}
-	<video autoplay loop muted poster="{{ image.url }}">
+	<video autoplay loop muted poster="{{ image.url }}" height="{{ image.height }}" width="{{ image.width }}">
 		{% if mp4 %} <source type="video/mp4" src="{{ mp4.url }}">{% endif %}
 		{% if webm %} <source type="video/webm" src="{{ webm.url }}">{% endif %}
 	</video>

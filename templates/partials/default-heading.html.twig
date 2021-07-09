@@ -1,12 +1,12 @@
 {% set title = title|default(page.header.display_title) %}
 
 {% if title %}
-<section class="module default__header">
+<section class="module default__heading">
 	<div class="wrapper text">
 		{% if config.plugins.breadcrumbs.enabled %}
 		{% include 'partials/breadcrumbs.html.twig' %}
 		{% endif %}
-		<h1>{{ title }}</h1>
+		<h1>{{ title|raw }}</h1>
 	</div>
 </section>
 {% endif %}

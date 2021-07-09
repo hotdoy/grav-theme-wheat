@@ -1,9 +1,17 @@
 {% set item = item|default(item) %}
+{% set image = image|default(item.media.images|first) %}
+{% set title = title|default(item.title) %}
+{% set loop = loop|default(loop) %}
 
-<article class="default__card">
+<article class="default__card" style="--index:{{ loop.index }}">
 	<a href="{{ item.url }}">
-		<div class="wrapper">
-			<div class="fill">{{ item.header.title }}</div>
+		<div class="media-ctn">
+			{% if image %}
+			{{ image.cropResize(800).loading.html('', '')|raw }}
+			{% endif %}
+		</div>
+		<div class="text small">
+			<h3>{{ title }}</h3>
 		</div>
 	</a>
 </article>
