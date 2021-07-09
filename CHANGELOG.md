@@ -1,3 +1,13 @@
+# v0.13.3
+## 07/09/2021
+
+1. [](#improved)
+    * default-header renamed to default-heading
+    * default-heading now uses raw output
+    * improved default-card
+    * cleaned post, default and product cards.
+    * added height and width to video in media module.
+
 # v0.13.2
 ## 07/08/2021
 

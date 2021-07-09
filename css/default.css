@@ -4,9 +4,9 @@
 
 
 
-/* .default__header {} */
+/* .default__heading {} */
 
-.default__header > .wrapper {
+.default__heading > .wrapper {
     padding: 0 var(--gutter);
     margin: 0 auto;
     max-width: var(--w-text);
@@ -14,13 +14,13 @@
     text-align: center;
 }
 
-.default__header .breadcrumbs {
+.default__heading .breadcrumbs {
     display: block;
     margin-bottom: var(--gutter);
     color: var(--c-text);
 }
 
-.default__header .breadcrumbs a {
+.default__heading .breadcrumbs a {
     color: var(--c-text);
 }
 
