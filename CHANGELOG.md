@@ -1,3 +1,9 @@
+# v0.13.4
+## 07/09/2021
+
+1. [](#improved)
+    * fixed carousel items when using from a collection
+
 # v0.13.3
 ## 07/09/2021
 

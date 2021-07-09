@@ -1,8 +1,8 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'carousel' %}
-
 {% set title = title|default(page.header.display_title) %}
-{% set list = list|default(page.header.items) %}
+{% set items = items|default(page.header.items) %}
+{% set item_type = '' %}
 
 {% block content %}
 
@@ -15,11 +15,13 @@
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
 			{# PAGES #}
-			{% for item in list %}
-			{% set item = page.find(item.page) %}	
-			<div class="swiper-slide">
-				{% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item, 'loop': loop} only %}
-			</div>
+			{% for item in items %}
+				{% if item_type == 'page' %}
+					{% set item = page.find(item.page) %}	
+				{% endif %}
+				<div class="swiper-slide">
+					{% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item, 'loop': loop} only %}
+				</div>
 			{% endfor %}
 		</div>
 		{# SCROLLBAR #}
