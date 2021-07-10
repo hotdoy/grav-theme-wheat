@@ -3,6 +3,7 @@ a.button,
 button.button {
     display: inline-block;
     position: relative;
+    margin-top: 0.5rem;
     white-space: nowrap;
     padding: 10px 16px 9px 16px;
     border: none;

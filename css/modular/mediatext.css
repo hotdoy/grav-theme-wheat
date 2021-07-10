@@ -58,10 +58,6 @@
     margin-top: 1.5rem;
 }
 
-.module.mediatext .button {
-    margin-top: 0.5rem;
-}
-
 @media (min-width: 735px) {
     .module.mediatext .content-ctn > *:first-child {
         margin-top: 0;

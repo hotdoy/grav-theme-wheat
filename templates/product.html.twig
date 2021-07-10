@@ -135,6 +135,6 @@
 	{# RELATED #}
     {% set related_options = { items: {'@self.siblings':''}, 'limit': 6, 'order': {'by': 'random'}} %}
     {% set related_items = page.collection(related_options) %}
-    {% include 'modular/carousel.html.twig' with { 'title': 'THEME.PRODUCT.RELATED'|t, 'items': related_items } only %}
+    {% include 'modular/carousel.html.twig' with { 'title': 'THEME.PRODUCT.RELATED'|t, 'collection': related_items } only %}
 
 {% endblock %}
