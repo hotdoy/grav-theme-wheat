@@ -1,13 +1,12 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'carousel' %}
 {% set title = title|default(page.header.display_title) %}
-{% set items = items|default(page.header.items) %}
-{% set item_type = '' %}
-
+{% set collection = collection|default(null) %}
+{% set items = items ?? page.header.items ?? collection  %}
 {% block content %}
 
 <div class="wrapper text">
-	
+
 	{% if title %}
 	<h2>{{ title }}</h2>
 	{% endif %}
@@ -16,9 +15,9 @@
 		<div class="swiper-wrapper">
 			{# PAGES #}
 			{% for item in items %}
-				{% if item_type == 'page' %}
-					{% set item = page.find(item.page) %}	
-				{% endif %}
+				{% if not collection %}
+				{% set item = page.find(item.page) %}
+				{% endif %}	
 				<div class="swiper-slide">
 					{% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item, 'loop': loop} only %}
 				</div>
@@ -28,4 +27,5 @@
 		<div class="swiper-scrollbar"></div>
 	</div>	
 </div>
+
 {% endblock %}

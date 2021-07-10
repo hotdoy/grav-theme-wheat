@@ -1,3 +1,11 @@
+# v0.13.5
+## 07/10/2021
+
+1. [](#improved)
+    * fixed carousel items when using from a collection (for real)
+    * added some margin when using more than one button
+    * removed page dump from base
+
 # v0.13.4
 ## 07/09/2021
 
