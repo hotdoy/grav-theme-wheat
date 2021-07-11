@@ -49,11 +49,28 @@ myProject
 `mklink /D D:\myproject\user\themes\wheat D:\myproject\grav-theme-wheat`
 
 That should be it! You can now test your setup by opening your browser and going to your local webroot (something like `127.0.0.1/myproject`).
-If everything goes well, Grav will prompt you to create an account. At this point, you can concider the whole operation a success, and should be able to go to the Themes section of Grav to select Wheat as your main theme.
+If everything goes well, Grav will prompt you to create an account. At this point, you can consider the whole operation a success, and should be able to go to the Themes section of Grav to select Wheat as your main theme.
 
 ### Setting up a domain on your localhost and virtualhost (WIP)
 
-todo
+Adding a domain to your localhost
+
+`windows\system32\drivers\etc\hosts`
+
+```
+127.0.0.1       wheat.localhost.com
+```
+
+Adding a virtual host to xampp
+
+`xampp\apache\conf\extra\httpd-vhostconf`
+
+```
+<VirtualHost *:80>
+	DocumentRoot "C:/xampp/htdocs/wheat"
+	ServerName wheat.localhost.com
+</VirtualHost>
+```
 
 ## Going Live (WIP)
 
