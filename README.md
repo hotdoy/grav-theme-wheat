@@ -10,6 +10,40 @@
 Wheat is a starter theme for Grav CMS. It contains common patterns used by Calotte, a Snipcart integration allowing you to sell physical or digital products in minutes, commonly used libraries for animating elements and text on scroll (with exemples) and a neat little thing called DOMstate to expose various states of the document you can then use with CSS for a modern and app like feel.
 It uses no build tool, no framework of any kind, only needs a basic LAMP setup, uses Github Actions for automatic deployment and only takes a couple of minutes to get development up and running.
 
+## What's in the theme?
+
+### Page templates
+
+- Default
+- Collection
+- Product
+- Post
+
+### Modular templates
+
+- Editor
+- Media
+- Mediatext
+- Quotes
+- Map
+- Grid
+- Carousel
+
+### Plugins (... you should install)
+
+- Breadcrumbs `[built-in-css: false, include-home: false, include-current-page: false, link-trailing: false]`
+- Shortcode Core `[custom-shortcodes: /user/themes/wheat/shortcodes, load-fontawesome: false]`
+- Markdown Notices `[built-in-css: false]`
+- Precache `[admin-enabled: false]`
+- Custom CSS (for quick fixes)
+
+### Libraries
+
+- [Scroll-out](https://scroll-out.github.io/) 
+- [Splitting](https://splitting.js.org/)
+- [Swipper](https://swiperjs.com/)
+- DOMstate (WIP)  
+
 ## Local Setup
 
 Setting up your local development setup should take you about 10 to 30 minutes, taking into account you already have basic knowledge of web development.
@@ -29,6 +63,7 @@ myProject
 	grav-admin
 	user
 ```
+
 - Clone or move grav-theme-wheat right next to the 2 other folders.
 
 ```
@@ -37,7 +72,11 @@ myProject
 	grav-theme-wheat
 	user
 ```
-- That's it for the directory. Now we only have to symlink everything together. You will, of course, need to find and replace the paths with your own.
+
+- We should now rename things to give our new site it's own personality.
+`list of things to rename todo`
+
+- Now we symlink everything together. You will, of course, need to find and replace the paths with your own.
 
 1. Local webroot to Grav install (Skip this one if your project folder is in your webroot)  
 `mklink /D D:\xampp\htdocs\myproject D:\myproject\grav-admin`
@@ -72,6 +111,10 @@ Adding a virtual host to xampp
 </VirtualHost>
 ```
 
+## _ROOT folder (WIP)
+
+The theme contains a `_ROOT` directory where you should keep everything that will eventually go in you production webroot. Doing this, you can be certain it follows the theme when using the Github Action or when you move you theme around. Don't forget to manually move those files after you make a new release from the _ROOT folder to you webroot. This usually contains favicons, webmanifest, Service Workers and stuff like that.
+
 ## Going Live (WIP)
 
 - From the Grav Admin Dashboard: Use the backup generator to create a ZIP of the whole site.
@@ -84,11 +127,9 @@ Adding a virtual host to xampp
 
 ## Github Actions
 
-The theme comes with Github Actions already setup for deploying and purging Cloudflare on release.
+The theme comes with some Github Actions for deploying and purging Cloudflare on release.
 
-In order to get them up and running, all you need to do is create the necessary Github Secrets.
-
-You can then create a new ftp account trough cPanel, with the root folder pointing to the location of the theme and add the credentials as Github Secrets (from your repo, go to settings, then Secret from the sidebar).
+To get the deployment up and running, you need to create a new ftp account trough cPanel, with the root folder pointing to the location of the theme and add the credentials as Github Secrets (from your repo, go to settings, then Secrets from the sidebar).
 
 [more...](https://github.com/SamKirkland/FTP-Deploy-Action)
 
@@ -96,56 +137,20 @@ You can then create a new ftp account trough cPanel, with the root folder pointi
 - `WHEAT_DEPLOY_USER`
 - `WHEAT_DEPLOY_PASSWORD`
 
-Cloudflare cache can also be purged at the same time if you provide these.
+Cloudflare cache can also be purged at the same time if you need it, given you have access to an API token and the zone.
 
 [more...](https://github.com/marketplace/actions/cloudflare-purge-cache)
 
 - `WHEAT_CLOUDFLARE_TOKEN`
 - `WHEAT_CLOUDFLARE_ZONE`
 
-
-## _ROOT folder (WIP)
-
-The theme contains a `_ROOT` directory where you should keep everything that will eventually go in you production webroot. Doing this, you can be certain it follows the theme when using the Github Action or when you move you theme around. Don't forget to manually move those files after you make a new release from the _ROOT folder to you webroot. This usually contains favicons, webmanifest, Service Workers and stuff like that.
-
 ## PWA
 
 The theme comes with a Service Worker ready to be rolled-out. If you followed the "Going Live" part of this README, it should already be at the root of your server. Now you just need to make sure PWA is enabled in the theme settings.
 
-## What's in the theme?
+## Releases
 
-### Page templates
-
-- Default
-- Collection
-- Product
-- Post
-- Form
-
-### Modular templates
-
-- Editor
-- Media
-- Mediatext
-- Quotes
-- Map
-- Grid
-- Carousel
-
-### Plugins (... you should install)
-
-- Breadcrumbs `[built-in-css: false, include-home: false, include-current-page: false, link-trailing: false]`
-- Shortcode Core `[custom-shortcodes: /user/themes/wheat/shortcodes, load-fontawesome: false]`
-- Markdown Notices `[built-in-css: false]`
-- Precache `[admin-enabled: false]`
-- Custom CSS (for quick fixes)
-
-### Libraries
-
-- [Scroll-out](https://scroll-out.github.io/) 
-- [Splitting](https://splitting.js.org/)
-- [Swipper](https://swiperjs.com/)
-- DOMstate (WIP)  
+todo
 
 ## Tenets
 
