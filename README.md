@@ -44,6 +44,19 @@ It uses no build tool, no framework of any kind, only needs a basic LAMP setup, 
 - [Swipper](https://swiperjs.com/)
 - DOMstate (WIP)  
 
+## Creating a new project
+
+While my way of doing thing is one of many, I've found it to be more approacheable.
+
+- Find a cool name for your project.
+- Create a folder named after your project somewhere on your computer.
+- Go on Github and create a new repo named `grav-theme-mycoolname` (replace `mycoolname` with your project name), in lowercase. (The `grav-theme` prefix is not required but is good practice in Grav development. It is also required if you plan on releasing on the GPM.)
+- Using Github Desktop, clone your repo (Files -> Clone repository) in the folder you created earlier.
+- Go to current branch (usually `master`) and create a new branch named `develop`.
+- todo publish branch...
+- Now that your project now "exists". You can now proceed to the setup.  
+
+
 ## Local Setup
 
 Setting up your local development setup should take you about 10 to 30 minutes, taking into account you already have basic knowledge of web development.
@@ -73,10 +86,18 @@ myProject
 	user
 ```
 
-- We should now rename things to give our new site it's own personality.
-`list of things to rename todo`
+### Renaming things (if you are starting a new project)
 
-- Now we symlink everything together. You will, of course, need to find and replace the paths with your own.
+- `wheat.yaml` should be `yourthemename.yaml`
+- `wheat.php` file name and any reference to the theme inside the PHP code (make sure you follow capitalization).
+- Erase the content of CHANGELOG.md and start fresh with version v0.1.0 (or whatever you think is best).
+- Replace references to Wheat in `blueprints.yaml`.
+- Adjust `_ROOT/site.webmanifest` values (I usually do it just before putting a site in production or staging).
+- Adjust `_ROOT/serviceworker` `CACHE` variable name using your theme's name.
+
+### Symlinking
+
+You will, of course, need to find and replace the paths with your own.
 
 1. Local webroot to Grav install (Skip this one if your project folder is in your webroot)  
 `mklink /D D:\xampp\htdocs\myproject D:\myproject\grav-admin`
