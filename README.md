@@ -7,7 +7,12 @@
 
 ## Description (WIP)
 
-Wheat is a starter theme for Grav CMS. It contains common patterns used by Calotte, a Snipcart integration allowing you to sell physical or digital products in minutes, commonly used libraries for animating elements and text on scroll (with exemples) and a neat little thing called DOMstate to expose various states of the document you can then use with CSS for a modern and app like feel.
+Wheat is a starter theme for Grav CMS. It contains...
+- Common patterns used by [Calotte](https://calotte.ca/).
+- A Snipcart integration allowing you to sell physical or digital products in minutes.
+- Commonly used libraries for animating elements and text on scroll.
+- A neat little thing called **DOMstate** to expose various states of the document you can then use with CSS for a modern and app-like feel.
+
 It uses no build tool, no framework of any kind, only needs a basic LAMP setup, uses Github Actions for automatic deployment and only takes a couple of minutes to get development up and running.
 
 ## What's in the theme?
@@ -29,7 +34,7 @@ It uses no build tool, no framework of any kind, only needs a basic LAMP setup, 
 - Grid
 - Carousel
 
-### Plugins (... you should install) and their settings
+### Plugins config
 
 - Breadcrumbs `[built-in-css: false, include-home: false, include-current-page: false, link-trailing: false]`
 - Shortcode Core `[custom-shortcodes: /user/themes/wheat/shortcodes, load-fontawesome: false]`
@@ -69,10 +74,14 @@ myProject
 ```bash
 myProject
   grav-admin
-  grav-theme-wheat
+  grav-theme-mytheme
   user
 ```
 
+- Delete the content of `grav-theme-mytheme`.
+- Download Wheat [latest release](https://github.com/hotdoy/grav-theme-wheat/releases) `Source code (zip)`.
+- Unzip the downloaded `grav-theme-wheat-vx.x.x`.
+- Dump the entire content of `grav-theme-wheat-vx.x.x` in your `grav-theme-mytheme` folder.
 - Clean and rename the following files.
 
   - `wheat.yaml` should be `mytheme.yaml`
@@ -81,7 +90,9 @@ myProject
   - Replace references to Wheat in `blueprints.yaml`.
   - Adjust `_ROOT/site.webmanifest` values (I usually do it just before putting a site in production or staging).
   - Adjust `_ROOT/serviceworker` `CACHE` variable name using your theme's name.
-- You can now skip to the "Symlinking" setion of this README.
+- Create a new branch named `develop` and publish it.
+- Commit your changes in the `develop` branch.
+- You can now go to the "Symlinking" setion of this README.
 
 ## Contributing to an existing project
 
@@ -109,6 +120,7 @@ myProject
   user
 ```
 
+- Make sure you are always working in the `develop` branch.
 - You can now skip to the "Symlinking" setion of this README.
 
 ## Symlinking
@@ -124,7 +136,6 @@ You will, of course, need to find and replace the paths with your own.
 - Test your setup using your favorite browser and going to your local webroot (something like `127.0.0.1/myproject`).
 If everything goes well, Grav will prompt you to create an account. At this point, you can consider the whole operation a success.
 - Login into the admin panel, go to "Themes" and activate your new theme.
-- Create a new branch named `develop` and publish it.
 
 ## Setting up a domain on your localhost and virtualhost
 
@@ -137,26 +148,27 @@ Go to `windows\system32\drivers\etc\hosts` and add...
 ```bash
 127.0.0.1       wheat.localhost.com
 ```
+
 ... at the end of the file.
 
 ### Adding a virtual host to xampp.
+
 Go to `xampp\apache\conf\extra\httpd-vhostconf` and add...
 
 ```bash
 <VirtualHost *:80>
-	DocumentRoot "C:/xampp/htdocs/wheat"
-	ServerName wheat.localhost.com
+  DocumentRoot "C:/xampp/htdocs/wheat"
+  ServerName wheat.localhost.com
 </VirtualHost>
 ```
+
 ... at the end of the file.
 
-Reset XAMP Apache module and test your new domain!
+Reset XAMPP Apache module (or the whole thing if you prefer) and test your new domain!
 
 ## _ROOT folder (WIP)
 
-The theme contains a `_ROOT` directory where you should keep everything that will eventually go in your production webroot. Doing this, you can be certain it follows the theme when using the Github Actions or when you move you theme around. Don't forget to manually move those files after you make a new release from the _ROOT folder to you webroot. This usually contains favicons, webmanifest, Service Workers, etc.
-
-todo - security tips and htaccess snippet.
+The theme contains a `_ROOT` directory where you should keep everything that will eventually go in your production webroot. Doing this, you can be certain it follows the theme when using the Github Actions or when you move you theme around. Don't forget to manually move those files after you make a new release from the _ROOT folder to you webroot. This usually contains favicons, webmanifest, serviceworker.js, etc.
 
 ## Going Live (WIP)
 
@@ -191,19 +203,30 @@ Cloudflare cache can also be purged at the same time if you need it, given you h
 
 The theme comes with a Service Worker ready to be rolled-out. If you followed the "Going Live" part of this README, it should already be at the root of your server. Now you just need to make sure PWA is enabled in the theme settings.
 
-### A word of warning
+### A word of warning of service workers
 
 Serviceworker will make the cache extremely hard to bust. You should always make sure your project is in a stable and tested state before releasing a worker. You can prevent installation from the theme settings by simply switcing it off until ready.
 
-## Release process (WIP)
+## Release process
 
-todo
+Releasing is a pretty straightforward process once your Github Actions are properly configured.
+
+- Make sure all of your changes are commited.
+- Upadate the version number in `blueprint.yaml`.
+- Add an entry to `CHANGELOG.md` with a short description of your changes (Grav will show the changelog to the user in various locations).
+- Update the `CACHE` variable in `_ROOT/sericeworker.js` (you can skip this if youdon't plan on using a PWA).
+- Commit the changes using the new version number as summary.
+- Push to origin.
+- Create a pull request.
+- Merge the pull request into master.
+- Create a new release using the version number as tag.
+- Github Actions should take over and push your changes.
 
 ## Tenets
 
 - Stick to mobile
-- Always choose the maintainable solution. 
-- Keep it light and fast. Time is money.
-- Think about the added value all the time. If something does not add value, ditch it.
+- Always choose the maintainable solution.
+- Time is money, so keep it light and fast.
+- Think about the added value. If something does not add value, ditch it.
 - Never block the user's journey unless it prints money.
-- Your site must be like a Call of Duty map. If your users get trapped in a corner, they are dead.
+- Your site should be like a Call of Duty map. User should never get trapped in a corner.
