@@ -115,18 +115,15 @@ myProject
 
 You will, of course, need to find and replace the paths with your own.
 
-1. Local webroot to Grav install (Skip this one if your project folder is in your webroot)  
+- Local webroot to Grav install  
 `mklink /D D:\xampp\htdocs\myproject D:\myproject\grav-admin`
-
-2. grav-admin to user  
+- grav-admin to user  
 `mklink /D D:\myproject\grav-admin\user D:\myproject\user`
-
-3. user to theme  
+- user to theme  
 `mklink /D D:\myproject\user\themes\mytheme D:\myproject\grav-theme-mytheme`
-
-- You can now test your setup by opening your browser and going to your local webroot (something like `127.0.0.1/myproject`).
-If everything goes well, Grav will prompt you to create an account. At this point, you can consider the whole operation a success. Login into the admin panel, go to "Themes" and activate your new theme.
-
+- Test your setup using your favorite browser and going to your local webroot (something like `127.0.0.1/myproject`).
+If everything goes well, Grav will prompt you to create an account. At this point, you can consider the whole operation a success.
+- Login into the admin panel, go to "Themes" and activate your new theme.
 - Create a new branch named `develop` and publish it.
 
 ## Setting up a domain on your localhost and virtualhost
@@ -177,7 +174,7 @@ The theme comes with some Github Actions for deploying and purging Cloudflare on
 
 To get the deployment up and running, you need to create a new ftp account trough cPanel, with the root folder pointing to the location of the theme and add the credentials as Github Secrets (from your repo, go to settings, then Secrets from the sidebar).
 
-[more...](https://github.com/SamKirkland/FTP-Deploy-Action)
+[Check the official docs](https://github.com/SamKirkland/FTP-Deploy-Action)
 
 - `WHEAT_DEPLOY_HOST`
 - `WHEAT_DEPLOY_USER`
@@ -185,14 +182,18 @@ To get the deployment up and running, you need to create a new ftp account troug
 
 Cloudflare cache can also be purged at the same time if you need it, given you have access to an API token and the zone.
 
-[more...](https://github.com/marketplace/actions/cloudflare-purge-cache)
+[Check the official docs](https://github.com/marketplace/actions/cloudflare-purge-cache)
 
 - `WHEAT_CLOUDFLARE_TOKEN`
 - `WHEAT_CLOUDFLARE_ZONE`
 
-## PWA
+## PWA & serviceworker
 
 The theme comes with a Service Worker ready to be rolled-out. If you followed the "Going Live" part of this README, it should already be at the root of your server. Now you just need to make sure PWA is enabled in the theme settings.
+
+### A word of warning
+
+Serviceworker will make the cache extremely hard to bust. You should always make sure your project is in a stable and tested state before releasing a worker. You can prevent installation from the theme settings by simply switcing it off until ready.
 
 ## Release process (WIP)
 
