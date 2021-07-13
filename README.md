@@ -29,7 +29,7 @@ It uses no build tool, no framework of any kind, only needs a basic LAMP setup, 
 - Grid
 - Carousel
 
-### Plugins (... you should install)
+### Plugins (... you should install) and their settings
 
 - Breadcrumbs `[built-in-css: false, include-home: false, include-current-page: false, link-trailing: false]`
 - Shortcode Core `[custom-shortcodes: /user/themes/wheat/shortcodes, load-fontawesome: false]`
@@ -39,63 +39,79 @@ It uses no build tool, no framework of any kind, only needs a basic LAMP setup, 
 
 ### Libraries
 
-- [Scroll-out](https://scroll-out.github.io/) 
+- [Scroll-out](https://scroll-out.github.io/)
 - [Splitting](https://splitting.js.org/)
 - [Swipper](https://swiperjs.com/)
 - DOMstate (WIP)  
 
-## Creating a new project
+## Starting a new project
 
-While my way of doing thing is one of many, I've found it to be more approacheable.
+While my way of doing thing is one of many, I've found it to be more approacheable and should take about 30 minutes to an hour.
 
 - Find a cool name for your project.
-- Create a folder named after your project somewhere on your computer.
-- Go on Github and create a new repo named `grav-theme-mycoolname` (replace `mycoolname` with your project name), in lowercase. (The `grav-theme` prefix is not required but is good practice in Grav development. It is also required if you plan on releasing on the GPM.)
-- Using Github Desktop, clone your repo (Files -> Clone repository) in the folder you created earlier.
-- Go to current branch (usually `master`) and create a new branch named `develop`.
-- todo publish branch...
-- Now that your project now "exists". You can now proceed to the setup.  
+- Go on Github and create a new repo named `grav-theme-mytheme` (replace `mytheme` with your project name), in lowercase. (The `grav-theme-` prefix is not required but is good practice in Grav development. It is also required if you plan on releasing on the GPM.)
+- Create a folder named after your project on your computer.
+- [Download](https://getgrav.org/downloads) the latest version of GRAV Core + ADMIN.
+- Unzip the downloaded Grav folder and put it in you project folder.
+- Rename the Grav directory to `grav-admin`.
+- From inside `grav-admin`, cut the `user` folder and paste it right next to grav-admin.
 
+- At this point, it should looks like this:
 
-## Local Setup
+```bash
+myProject
+  grav-admin
+  user
+```
 
-Setting up your local development setup should take you about 10 to 30 minutes, taking into account you already have basic knowledge of web development.
+- Clone the theme repo in the project folder, next to the other ones so it looks like that...
+
+```bash
+myProject
+  grav-admin
+  grav-theme-wheat
+  user
+```
+
+- Clean and rename the following files.
+
+  - `wheat.yaml` should be `mytheme.yaml`
+  - `wheat.php` file name and any reference to the theme inside the PHP code (make sure you follow capitalization).
+  - Erase the content of CHANGELOG.md and start fresh with version v0.1.0 (or whatever you think is best).
+  - Replace references to Wheat in `blueprints.yaml`.
+  - Adjust `_ROOT/site.webmanifest` values (I usually do it just before putting a site in production or staging).
+  - Adjust `_ROOT/serviceworker` `CACHE` variable name using your theme's name.
+- You can now skip to the "Symlinking" setion of this README.
+
+## Contributing to an existing project
 
 - Make sure you have your favorite local LAMP setup up and running (xampp, wamp, etc).
+- Create a folder named after the project on your computer.
 - [Download](https://getgrav.org/downloads) the latest version of GRAV Core + ADMIN.
-- Create an empty directory for your project.
 - Unzip the downloaded Grav folder and put it in you project folder.
-- Rename the Grav directory to `grav-admin`
-- Open the grav-admin folder
-- Cut the user folder and paste it right next to grav-admin.
-  
-At this point, it should looks like this:
+- Rename the Grav directory to `grav-admin`.
+- From inside `grav-admin`, cut the `user` folder and paste it right next to grav-admin.
 
-```
+- At this point, it should looks like this:
+
+```bash
 myProject
-	grav-admin
-	user
+  grav-admin
+  user
 ```
 
-- Clone or move grav-theme-wheat right next to the 2 other folders.
+- Clone the theme repo in the project folder, next to the other ones so it looks like that...
 
-```
+```bash
 myProject
-	grav-admin
-	grav-theme-wheat
-	user
+  grav-admin
+  grav-theme-wheat
+  user
 ```
 
-### Renaming things (if you are starting a new project)
+- You can now skip to the "Symlinking" setion of this README.
 
-- `wheat.yaml` should be `yourthemename.yaml`
-- `wheat.php` file name and any reference to the theme inside the PHP code (make sure you follow capitalization).
-- Erase the content of CHANGELOG.md and start fresh with version v0.1.0 (or whatever you think is best).
-- Replace references to Wheat in `blueprints.yaml`.
-- Adjust `_ROOT/site.webmanifest` values (I usually do it just before putting a site in production or staging).
-- Adjust `_ROOT/serviceworker` `CACHE` variable name using your theme's name.
-
-### Symlinking
+## Symlinking
 
 You will, of course, need to find and replace the paths with your own.
 
@@ -106,35 +122,44 @@ You will, of course, need to find and replace the paths with your own.
 `mklink /D D:\myproject\grav-admin\user D:\myproject\user`
 
 3. user to theme  
-`mklink /D D:\myproject\user\themes\wheat D:\myproject\grav-theme-wheat`
+`mklink /D D:\myproject\user\themes\mytheme D:\myproject\grav-theme-mytheme`
 
-That should be it! You can now test your setup by opening your browser and going to your local webroot (something like `127.0.0.1/myproject`).
-If everything goes well, Grav will prompt you to create an account. At this point, you can consider the whole operation a success, and should be able to go to the Themes section of Grav to select Wheat as your main theme.
+- You can now test your setup by opening your browser and going to your local webroot (something like `127.0.0.1/myproject`).
+If everything goes well, Grav will prompt you to create an account. At this point, you can consider the whole operation a success. Login into the admin panel, go to "Themes" and activate your new theme.
 
-### Setting up a domain on your localhost and virtualhost (WIP)
+- Create a new branch named `develop` and publish it.
 
-Adding a domain to your localhost
+## Setting up a domain on your localhost and virtualhost
 
-`windows\system32\drivers\etc\hosts`
+While this is totally optional, I strongly suggest that you setup a domain on your localhost (and virtualhost). This will allow you to work in a more realistic environment and prevent URL shenanigans.
 
-```
+### Adding a domain to your localhost.
+
+Go to `windows\system32\drivers\etc\hosts` and add...
+
+```bash
 127.0.0.1       wheat.localhost.com
 ```
+... at the end of the file.
 
-Adding a virtual host to xampp
+### Adding a virtual host to xampp.
+Go to `xampp\apache\conf\extra\httpd-vhostconf` and add...
 
-`xampp\apache\conf\extra\httpd-vhostconf`
-
-```
+```bash
 <VirtualHost *:80>
 	DocumentRoot "C:/xampp/htdocs/wheat"
 	ServerName wheat.localhost.com
 </VirtualHost>
 ```
+... at the end of the file.
+
+Reset XAMP Apache module and test your new domain!
 
 ## _ROOT folder (WIP)
 
-The theme contains a `_ROOT` directory where you should keep everything that will eventually go in you production webroot. Doing this, you can be certain it follows the theme when using the Github Action or when you move you theme around. Don't forget to manually move those files after you make a new release from the _ROOT folder to you webroot. This usually contains favicons, webmanifest, Service Workers and stuff like that.
+The theme contains a `_ROOT` directory where you should keep everything that will eventually go in your production webroot. Doing this, you can be certain it follows the theme when using the Github Actions or when you move you theme around. Don't forget to manually move those files after you make a new release from the _ROOT folder to you webroot. This usually contains favicons, webmanifest, Service Workers, etc.
+
+todo - security tips and htaccess snippet.
 
 ## Going Live (WIP)
 
@@ -169,7 +194,7 @@ Cloudflare cache can also be purged at the same time if you need it, given you h
 
 The theme comes with a Service Worker ready to be rolled-out. If you followed the "Going Live" part of this README, it should already be at the root of your server. Now you just need to make sure PWA is enabled in the theme settings.
 
-## Releases
+## Release process (WIP)
 
 todo
 
