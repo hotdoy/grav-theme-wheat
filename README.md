@@ -8,6 +8,7 @@
 ## Description (WIP)
 
 Wheat is a starter theme for Grav CMS. It contains...
+
 - Common patterns used by [Calotte](https://calotte.ca/).
 - A Snipcart integration allowing you to sell physical or digital products in minutes.
 - Commonly used libraries for animating elements and text on scroll.
