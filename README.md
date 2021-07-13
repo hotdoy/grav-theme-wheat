@@ -52,7 +52,7 @@ It uses no build tool, no framework of any kind, only needs a basic LAMP setup, 
 
 ## Starting a new project
 
-While my way of doing thing is one of many, I've found it to be more approacheable and should take about 30 minutes to an hour.
+While my way of doing thing is one of many, I've found it to be more approachable and should take about 30 minutes to an hour.
 
 - Find a cool name for your project.
 - Go on Github and create a new repo named `grav-theme-mytheme` (replace `mytheme` with your project name), in lowercase. (The `grav-theme-` prefix is not required but is good practice in Grav development. It is also required if you plan on releasing on the GPM.)
@@ -65,7 +65,7 @@ While my way of doing thing is one of many, I've found it to be more approacheab
 - At this point, it should looks like this:
 
 ```bash
-myProject
+myproject
   grav-admin
   user
 ```
@@ -73,7 +73,7 @@ myProject
 - Clone the theme repo in the project folder, next to the other ones so it looks like that...
 
 ```bash
-myProject
+myproject
   grav-admin
   grav-theme-mytheme
   user
@@ -212,8 +212,8 @@ Serviceworker will make the cache extremely hard to bust. You should always make
 
 Releasing is a pretty straightforward process once your Github Actions are properly configured.
 
-- Make sure all of your changes are commited.
-- Upadate the version number in `blueprint.yaml`.
+- Make sure all of your changes are committed.
+- Update the version number in `blueprint.yaml`.
 - Add an entry to `CHANGELOG.md` with a short description of your changes (Grav will show the changelog to the user in various locations).
 - Update the `CACHE` variable in `_ROOT/sericeworker.js` (you can skip this if youdon't plan on using a PWA).
 - Commit the changes using the new version number as summary.
