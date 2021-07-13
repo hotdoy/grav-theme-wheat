@@ -2,6 +2,8 @@
 
 /* body[data-domstate^='interactive'] {} */
 
+/* body[data-domstate^='complete'] {} */
+
 /* body[data-domstate^='navigating'] {} */
 
 /* body[data-domstate^='navigating-forward'] {} */

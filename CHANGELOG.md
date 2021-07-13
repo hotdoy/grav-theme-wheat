@@ -1,3 +1,9 @@
+# v0.13.7
+## 07/13/2021
+
+1. [](#improved)
+    * updated README with release process
+
 # v0.13.6
 ## 07/11/2021
 

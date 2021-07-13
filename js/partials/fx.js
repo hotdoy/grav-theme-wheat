@@ -12,7 +12,7 @@ document.addEventListener('domstateInteractive', () => {
 
         Splitting({
             target: "h1",
-          });
+        });
 
     }, delay);
 });
