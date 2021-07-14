@@ -27,7 +27,10 @@
     padding: 0;
 }
 
-
+.module.editor ul li {
+    margin-left: 0px;
+    list-style: disc;
+}
 
 
 
@@ -53,21 +56,7 @@
 
 
 
-/*DROPCAP*/
-.module.editor span.dropcap {
-    float: left;
-    font-size: xx-large;
-    font-weight: 700;
-    line-height: 1;
-    padding-top: 2px;
-    padding-right: 8px;
-}
-
-
-
-
-
-/*DETAILS/SUMMARY*/
+/*DETAILS*/
 .module.editor details {
     margin-top: 2rem;
     padding: 1rem 0;
@@ -127,7 +116,6 @@
     border-top: none;
 }
 
-
 .module.editor details + *:not(details) {
     margin-top: 2rem;
 }
@@ -143,6 +131,9 @@
     from {opacity: 0.5; transform: translateY(-5px);}
     to {opacity: 1; transform: translateY(0px);}
 }
+
+
+
 
 
 /*LITE-YOUTUBE*/
@@ -164,10 +155,22 @@
 
 
 
+
 /*INLINE CODE*/
-.module.editor code {
-    background-color: #f1f1f1;
+.module.editor :where(:not(pre)) > code {
+    padding: 0 4px 2px 4px;
     font-family: monospace;
+    background-color: var(--c-material);
+    border: 1px solid var(--c-guide);
     border-radius: 4px;
-    padding: 1px 4px;
+}
+
+/* CODE BLOCK */
+.module.editor pre {
+    margin: 1rem 0;
+    padding: 1rem;
+    font-family: monospace;
+    background-color: var(--c-material);
+    border: 1px solid var(--c-guide);
+    border-radius: 4px;
 }

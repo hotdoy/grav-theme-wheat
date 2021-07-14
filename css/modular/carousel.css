@@ -73,5 +73,10 @@
 }
 
 .module.carousel .swiper-scrollbar .swiper-scrollbar-drag{
-    background: var(--c-btn-bg);
+    background: var(--c-guide);
+    cursor: grab;
+}
+
+.module.carousel .swiper-scrollbar .swiper-scrollbar-drag:active{
+    cursor: grabbing;
 }
