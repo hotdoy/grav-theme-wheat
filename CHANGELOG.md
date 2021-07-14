@@ -1,3 +1,13 @@
+# v0.13.8
+## 07/13/2021
+
+1. [](#improved)
+    * streamlined text margins
+    * use guide color for carousel draggable handle
+    * cleaned up theme.css
+    * better handling of code block and inline code snippets
+    * swiper scrollbar are now draggable
+
 # v0.13.7
 ## 07/13/2021
 

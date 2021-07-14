@@ -10,8 +10,7 @@
 }
 .text.prose h1, 
 .text.prose .h1 {
-    margin-top: var(--text-mt-xxlarge);
-    margin-bottom: var(--text-mb-xxlarge);
+    margin: var(--text-m-xxlarge);
 }
 
 .text h2, 
@@ -24,8 +23,7 @@
 }
 .text.prose h2, 
 .text.prose .h2 {
-    margin-top: var(--text-mt-xlarge);
-    margin-bottom: var(--text-mb-xlarge);
+    margin: var(--text-m-xlarge);
 }
 
 .text h3,
@@ -50,8 +48,7 @@
 .text.prose .h5,
 .text.prose h6,
 .text.prose .h6 {
-    margin-top: var(--text-mt-large);
-    margin-bottom: var(--text-mt-large);
+    margin: var(--text-m-large);
 }
 
 .text p {
@@ -61,8 +58,7 @@
     color: var(--c-text);
 }
 .text.prose p {
-    margin-top: var(--text-mt-medium);
-    margin-bottom: var(--text-mt-medium);
+    margin: var(--text-m-medium);
 }
 
 .prose > :first-child {margin-top: 0;}
@@ -194,9 +190,3 @@
     text-decoration: underline;
 }
 
-.text code {
-    background-color: var(--c-material);
-    padding: 0px 5px 2px 5px;
-    border: 1px solid #dedede;
-    border-radius: 4px;
-}

@@ -66,7 +66,12 @@
 }
 
 .product__showcase .swiper-scrollbar .swiper-scrollbar-drag{
-    background: var(--c-btn-bg);
+    background: var(--c-guide);
+    cursor: grab;
+}
+
+.product__showcase .swiper-scrollbar .swiper-scrollbar-drag:active{
+    cursor: grabbing;
 }
 
 @media (min-width: 735px) {

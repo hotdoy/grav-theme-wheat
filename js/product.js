@@ -6,6 +6,7 @@ const Product = {
             spaceBetween: 5,
             scrollbar: {
                 el: '.swiper-scrollbar',
+                draggable: true,
              },
         });
     },

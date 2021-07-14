@@ -34,39 +34,21 @@
 		url("../../fonts/Helvetica-BoldOblique.woff2") format("woff2")
 }
 
+
+
+
+
+/*===========================================
+          		TEXT 
+============================================*/
+
 :root {
 	--fs-small: small;
 	--fs-medium: normal;
 	--fs-large: large;
 	--fs-xlarge: x-large;
 	--fs-xxlarge: xx-large;
-
-	/* --text-mt-small: 14px; */
-	/* --text-mb-small: 14px; */
-	--text-mt-medium: 28px;
-	--text-mb-medium: 28px;
-	--text-mt-large: 28px;
-	--text-mb-large: 28px;
-	--text-mt-xlarge: 38px;
-	--text-mb-xlarge: 28px;
-	--text-mt-xxlarge: 67px;
-	--text-mb-xxlarge: 67px;
-  
-	/* --lh-small: 1.5; */
-	--lh-medium: 1.5;
-	--lh-large: 1.2;
-	/* --lh-xlarge: 1.2; */
-	/* --lh-xxlarge: 1.2; */
-
-	--fw-regular: 400;
-	--fw-bold: 700;
-	--ff-base: "Helvetica";
-
-	font-family: var(--ff-base),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue", sans-serif;
-	font-size: var(--fs-medium);
-	line-height: var(--lh-medium);
 }
-
 @media (min-width: 635px) {
 	:root {
 		--fs-small: 14px;
@@ -76,6 +58,29 @@
 		--fs-xxlarge: 48px;
 	}
 }
+
+/* TEXT MARGINS */
+:root {
+	--text-m-small: 14px 0;
+	--text-m-medium: 28px 0;
+	--text-m-large: 28px 0;
+	--text-m-xlarge: 38px 0 28px 0;
+	--text-m-xxlarge: 67px 0;
+}
+
+/* LINE-HEIGHT */
+:root {
+	--lh-medium: 1.5;
+	--lh-large: 1.2;
+}
+
+/* FONT-WEIGHT */
+:root {
+	--fw-regular: 400;
+	--fw-bold: 700;
+	--ff-base: "Helvetica";
+}
+
 
 
 
@@ -92,10 +97,8 @@
   --c-bg: white;
   --c-fg: #242424;
   --c-hl: #625df5;
-  --c-btn-bg: rgb(36 36 36 / 20%);
-  --c-btn-fg: #242424;
   --c-material: #f6f9fc;
-  --c-guide: rgb(36 36 36 / 20%);
+  --c-guide: rgb(195 198 204 / 50%);
   --c-header-bg: rgb(253 254 254 / 90%);
   --c-header-fg: #242424;
 }
@@ -105,21 +108,21 @@
 
 
 /*===========================================
-          DIMENSIONS 
+         		DIMENSIONS 
 ============================================*/
 :root {
   --w-text: 640px;
   --w-main: 1200px;
   --w-body: 1200px;
   --w-full: 1920px;
-  --gutter: 20px;
+  --gutter: 10px;
   --rhythm: 80px;
   --header-heigth: 48px;
 }
 
-@media (max-width: 400px) {
+@media (min-width: 411px) {
   :root{
-    --gutter: 10px;
+    --gutter: 20px;
   }
 }
 
@@ -134,8 +137,13 @@
 
 
 /*===========================================
-					MISC 
+        			BASE 
 ============================================*/
+:root {
+	font-family: var(--ff-base),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue", sans-serif;
+	font-size: var(--fs-medium);
+	line-height: var(--lh-medium);	
+}
 
 body {
   color: var(--c-fg);
@@ -143,5 +151,6 @@ body {
 }
 
 ::selection {
-  background-color: #ffeb3b;
+  background-color: var(--c-hl);
+  color: white;
 }
