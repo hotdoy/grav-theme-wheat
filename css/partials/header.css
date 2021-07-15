@@ -18,32 +18,33 @@
     z-index: 5000;
 }
 
-#header .grid {
-    display: grid;
-    grid-template-columns: 40% 20% 40%;
+#header .layout {
+    display: flex;
+    justify-content: space-between;
     margin: 0 auto;
     max-width: var(--w-full);
     height: 100%;
 }
 
-#header .grid .links {
+#header .layout .toggles {
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-#header .grid .logo {
+#header .layout .logo {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: var(--gutter);
 }
 
-#header .grid .logo svg {
+#header .layout .logo svg {
     height: calc(var(--header-heigth) - 20px);
     width: 100%;
 }
 
-#header .grid .toggles {
+#header .layout .toggles {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -54,21 +55,28 @@
 
 
 /*LINKS AND BURGER*/
-#header .grid nav {
+#header .layout nav {
     display: none;
 }
 
 @media (min-width: 1200px) {
-    #header .grid nav {
+    #header .layout nav {
         display: flex;
     }
 }
 
-#header .grid nav li {
-    margin-left: 20px;
+#header .layout nav a {
+    padding: 4px 6px;
+    border-radius: 4px;
+    background-color: var(--c-hl);
+    color: white
 }
 
-#header .grid nav li ul {
+#header .layout nav li {
+    margin-right: var(--gutter);
+}
+
+#header .layout nav li ul {
     display: none;
 }
 
@@ -76,16 +84,16 @@
     opacity: 0.7;
 }
 
-#header .grid .burger {
+#header .layout .burger {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: var(--gutter);
+    padding-right: var(--gutter);
     height: 100%;
 }
 
 @media (min-width: 1200px) {
-    #header .grid .burger {
+    #header .layout .burger {
         display: none;
     }
 }
@@ -94,7 +102,7 @@
 
 
 /*TOGGLES*/
-#header .grid .snipcart-checkout {
+#header .layout .snipcart-checkout {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,7 +154,7 @@
     }
 }
 
-#header .grid .snipcart-account {
+#header .layout .snipcart-account {
     display: flex;
     align-items: center;
     justify-content: center;
