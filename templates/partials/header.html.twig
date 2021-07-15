@@ -11,11 +11,14 @@
     {% endif %}
 
     <div class="header">
-        <div class="grid">
+        <div class="layout">
 
-            {# LINKS #}
-            <div class="links">
-                <nav>
+            {# LEFT - LOGO #}
+            <a class="logo" href="{{ home_url }}" aria-label="Site logo">{% include 'partials/logo.html.twig' %}</a>
+
+            {# RIGHT - LINKS & TOGGLES #}
+            <div class="toggles">
+                <nav class="nav">
                     {% for link in root_params.header.header_links %}
                     <li><a href="{{ link.url }}">{{ link.label }}</a></li>
                     {% endfor %}
@@ -24,13 +27,6 @@
                 <button class="burger js-panel-open" aria-label="open menu">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"></path><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
                 </button>
-            </div>
-
-            {# LOGO #}
-            <a class="logo" href="{{ home_url }}" aria-label="Site logo">{% include 'partials/logo.html.twig' %}</a>
-
-            {# TOGGLES #}
-            <div class="toggles">
                 {% if theme.snipcart %}
                 {% if not theme.snipcart_allow_guests_only %}
                 <button class="snipcart-account snipcart-customer-signin">{{ svg.user() }}</button>

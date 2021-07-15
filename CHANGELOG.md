@@ -1,3 +1,9 @@
+# v0.13.9
+## 07/15/2021
+
+1. [](#improved)
+    * Starting site header refactor (very WIP).
+
 # v0.13.8
 ## 07/13/2021
 
