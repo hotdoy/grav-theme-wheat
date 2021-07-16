@@ -20,18 +20,35 @@
 }
 
 .liteslider-container {
+  display: flex;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   overflow-x: scroll;
   overflow-y: hidden;
-  display: flex;
+  padding-bottom: var(--gutter);
   
   /* Enable Safari touch scrolling physics which is needed for scroll snap */
   -webkit-overflow-scrolling: touch;
 }
 
+.liteslider-container::-webkit-scrollbar-track {
+	background-color: var(--c-material);
+}
+
+.liteslider-container::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color:var(--c-guide);
+  border-radius: 9999px;
+}
+
+.liteslider-container::-webkit-scrollbar-thumb {
+  background-color: var(--c-material);
+}
+
 .liteslider-slide {
     scroll-snap-align: center;
-    margin: 10px;
+    margin-left: 10px;
     position: relative;
 }
 
