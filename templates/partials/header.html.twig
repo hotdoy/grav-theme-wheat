@@ -24,9 +24,9 @@
                     {% endfor %}
                     {% include 'partials/langswitcher.html.twig' %}
                 </nav>
-                <button class="burger js-panel-open" aria-label="open menu">
+                {#<button class="burger js-panel-open" aria-label="open menu">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"></path><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
-                </button>
+                </button>#}
                 {% if theme.snipcart %}
                 {% if not theme.snipcart_allow_guests_only %}
                 <button class="snipcart-account snipcart-customer-signin">{{ svg.user() }}</button>
@@ -43,13 +43,13 @@
     </div>
 
     {# PANEL #}
-    <div class="header-panel">
+    {#<div class="header-panel">
         <nav>
             {% for link in root_params.header.header_links %}
             <li><a href="{{ link.url }}">{{ link.label }}</a></li>
             {% endfor %}
             {% include 'partials/langswitcher.html.twig' %}
         </nav>
-    </div>
+    </div>#}
 
 </header>

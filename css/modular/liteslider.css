@@ -1,0 +1,16 @@
+/* .module.liteslider {} */
+
+.module.liteslider > .wrapper {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    padding-top: 2px;
+    width: 100%;
+    max-width: var(--w-body);
+    overflow: hidden;
+}
+
+.module.liteslider > .wrapper > h2 {
+    margin-bottom: 1rem;
+    width: 100%;
+}
