@@ -14,3 +14,70 @@
     margin-bottom: 1rem;
     width: 100%;
 }
+
+.liteslider {
+  position: relative;
+}
+
+.liteslider-container {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  
+  /* Enable Safari touch scrolling physics which is needed for scroll snap */
+  -webkit-overflow-scrolling: touch;
+}
+
+.liteslider-slide {
+    scroll-snap-align: center;
+    margin: 10px;
+    position: relative;
+}
+
+.liteslider-slide {
+    min-width: 60%;
+    max-width: 60%;
+}
+
+@media (min-width: 735px) {
+    .liteslider-slide {
+        min-width: 39%;
+        max-width: 39%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .liteslider-slide {
+        min-width: 29%;
+        max-width: 29%;
+    }
+}
+
+.liteslider-prev,
+.liteslider-next {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  height: 30px;
+  width: 30px;
+
+  border-radius: 2px;
+  background-color: rgba(0,0,0,0.5);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  z-index: 1;
+}
+
+.liteslider-next {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Shape</title><path d="M25.557 14.7L13.818 2.961 16.8 0l16.8 16.8-16.8 16.8-2.961-2.961L25.557 18.9H0v-4.2z" fill="%23FFF" fill-rule="evenodd"/></svg>');
+  right: 10px;
+}
+
+.liteslider-prev {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Shape</title><path d="M33.6 14.7H8.043L19.782 2.961 16.8 0 0 16.8l16.8 16.8 2.961-2.961L8.043 18.9H33.6z" fill="%23FFF" fill-rule="evenodd"/></svg>');
+  left: 10px;
+}
