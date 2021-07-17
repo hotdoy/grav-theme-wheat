@@ -1,3 +1,9 @@
+# v0.14.0
+## 07/17/2021
+
+1. [](#improved)
+    * scroller modular release
+
 # v0.13.11
 ## 07/17/2021
 

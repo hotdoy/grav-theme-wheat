@@ -1,7 +1,7 @@
 name: Wheat
 slug: wheat
 type: theme
-version: 0.13.11
+version: 0.14.0
 description: "Wheat is a starter theme for Grav CMS. It contains common patterns used by Calotte, a Snipcart integration allowing you to sell physical or digital products in minutes, commonly used libraries for animating elements and text on scroll (with exemples) and a neat little thing called DOMstate to expose various states of the document you can then use with CSS for a modern and app like feel.
 It uses no build tool, no framework of any kind, only needs a basic LAMP setup, uses Github Actions for automatic deployment and only takes a couple of minutes to get development up and running."
 icon: rebel
