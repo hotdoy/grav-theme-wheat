@@ -1,28 +1,58 @@
-const scroller = document.querySelector('.scroller');
-const scrollerContainer = scroller.querySelector('.container');
-const step = scroller.querySelector('.slide').clientWidth;
+const Scroller = {
 
-console.log(step);
+	Init: function() {
+		document.querySelectorAll('.scroller').forEach(el => {
 
-scroller.querySelector('.next').addEventListener('click', scrollToNextPage);
-scroller.querySelector('.prev').addEventListener('click', scrollToPrevPage);
+			let step = el.querySelector('.slide').clientWidth;
+			const next = el.querySelector('.next');
+			const prev = el.querySelector('.prev');
+			const scrollCtn = el.querySelector('.container');
 
-// For paginated scrolling, simply scroll the gallery one item in the given
-// direction and let css scroll snaping handle the specific alignment.
-function scrollToNextPage() {
-  scrollerContainer.scrollBy(step, 0);
-}
-function scrollToPrevPage() {
-  scrollerContainer.scrollBy(-step, 0);
-}
+			let scroll = 100 * scrollCtn.scrollLeft / (scrollCtn.scrollWidth-scrollCtn.clientWidth); 
+			console.log(scroll);
+			if (scroll <= 1) {
+				prev.classList.add('max');
+			} else {
+				prev.classList.remove('max');
+			}
+			if (scroll >= 99) {
+				next.classList.add('max');
+			} else {
+				next.classList.remove('max');
+			}
 
-function updateAlignment(event) {
-  const alignment = event.target.value;
-  for (item of scroller.querySelectorAll('.slide'))
-    item.style.scrollSnapAlign = alignment;
+			scrollCtn.addEventListener('scroll', () => {
+				let scroll = 100 * scrollCtn.scrollLeft / (scrollCtn.scrollWidth-scrollCtn.clientWidth); 
+				console.log(scroll);
+				if (scroll <= 1) {
+					prev.classList.add('max');
+				} else {
+					prev.classList.remove('max');
+				}
+				if (scroll >= 99) {
+					next.classList.add('max');
+				} else {
+					next.classList.remove('max');
+				}
+			});
 
-  // Currently changing scroll alignment does not force a re-snap in Chrome.
-  // This is a bug: http://crbug.com/866127
-  // In meantime, if desired a scroll snap can be triggered using a small 
-  // scripted scroll e.g.: `scrollerContainer.scrollBy(1, 0);`
-}
+
+
+			window.addEventListener('resize', () => {
+				step = el.querySelector('.slide').clientWidth;
+			});
+
+			next.addEventListener('click', () => {
+				scrollCtn.scrollBy(step, 0);
+			});
+			
+			prev.addEventListener('click', () => {
+				scrollCtn.scrollBy(-step, 0);
+			});
+
+
+		});
+	},
+};
+
+Scroller.Init();

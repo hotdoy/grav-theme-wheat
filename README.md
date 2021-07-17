@@ -33,7 +33,8 @@ It uses no build tool, no framework of any kind, only needs a basic LAMP setup, 
 - Quotes
 - Map
 - Grid
-- Carousel
+- Swiper
+- Scroller
 
 ### Plugins config
 
