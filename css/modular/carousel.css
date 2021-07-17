@@ -15,29 +15,31 @@
     width: 100%;
 }
 
-/*left gradient*/
-.module.carousel > .wrapper::before {
-    content: "";
-    position: absolute;
-    left: -1px;
-    top: 0;
-    bottom: 0;
-    width: var(--gutter);
-    background-image: linear-gradient(90deg, var(--c-bg), transparent);
-    z-index: 2;
+@media (min-width: 735px) {
+    /*left gradient*/
+    .module.carousel > .wrapper::before {
+        content: "";
+        position: absolute;
+        left: -1px;
+        top: 0;
+        bottom: 0;
+        width: var(--gutter);
+        background-image: linear-gradient(90deg, var(--c-bg), transparent);
+        z-index: 2;
+    }
+    /*right gradient*/
+    .module.carousel>.wrapper::after {
+        content: "";
+        position: absolute;
+        right: -1px;
+        top: 0;
+        bottom: 0;
+        width: var(--gutter);
+        background-image: linear-gradient(-90deg, var(--c-bg), transparent);
+        z-index: 1;
+    }
 }
 
-/*right gradient*/
-.module.carousel>.wrapper::after {
-    content: "";
-    position: absolute;
-    right: -1px;
-    top: 0;
-    bottom: 0;
-    width: var(--gutter);
-    background-image: linear-gradient(-90deg, var(--c-bg), transparent);
-    z-index: 1;
-}
 
 .module.carousel .swiper-container {
     overflow: visible;
