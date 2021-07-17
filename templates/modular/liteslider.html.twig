@@ -14,9 +14,7 @@
 	<a href=""></a>
 	<pre style="color: red; font-family:monospace;font-size:12px;">
 		<code>
-Liteslider is not ready yet but here is some inspiring stuff.
-https://developers.google.com/web/updates/2018/07/css-scroll-snap
-https://snap.glitch.me/carousel.html
+Liteslider is a work in progress. Do not load more than one per page.
 		</code>
 	</pre>
 	{% endif %}
@@ -31,7 +29,6 @@ https://snap.glitch.me/carousel.html
 				{% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item, 'loop': loop} only %}
 			</div>
 			{% endfor %}
-			<div class="liteslider-slide"></div>
 		</div>
 		<span class="liteslider-prev"></span>
 		<span class="liteslider-next"></span>
