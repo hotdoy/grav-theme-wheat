@@ -1,42 +1,34 @@
 const Scroller = {
 
+	UpdateNav: function(scrollCtn, prev, next) {
+		const scroll = 100 * scrollCtn.scrollLeft / (scrollCtn.scrollWidth-scrollCtn.clientWidth); 
+
+		if (scroll <= 1) {
+			prev.classList.add('max');
+		} else {
+			prev.classList.remove('max');
+		}
+
+		if (scroll >= 99) {
+			next.classList.add('max');
+		} else {
+			next.classList.remove('max');
+		}
+
+		return;
+	},
+
 	Init: function() {
 		document.querySelectorAll('.scroller').forEach(el => {
 
 			let step = el.querySelector('.slide').clientWidth;
-			const next = el.querySelector('.next');
 			const prev = el.querySelector('.prev');
+			const next = el.querySelector('.next');
 			const scrollCtn = el.querySelector('.container');
-
-			let scroll = 100 * scrollCtn.scrollLeft / (scrollCtn.scrollWidth-scrollCtn.clientWidth); 
-			console.log(scroll);
-			if (scroll <= 1) {
-				prev.classList.add('max');
-			} else {
-				prev.classList.remove('max');
-			}
-			if (scroll >= 99) {
-				next.classList.add('max');
-			} else {
-				next.classList.remove('max');
-			}
-
+			this.UpdateNav(scrollCtn, prev, next);
 			scrollCtn.addEventListener('scroll', () => {
-				let scroll = 100 * scrollCtn.scrollLeft / (scrollCtn.scrollWidth-scrollCtn.clientWidth); 
-				console.log(scroll);
-				if (scroll <= 1) {
-					prev.classList.add('max');
-				} else {
-					prev.classList.remove('max');
-				}
-				if (scroll >= 99) {
-					next.classList.add('max');
-				} else {
-					next.classList.remove('max');
-				}
+				this.UpdateNav(scrollCtn, prev, next);
 			});
-
-
 
 			window.addEventListener('resize', () => {
 				step = el.querySelector('.slide').clientWidth;
@@ -49,7 +41,6 @@ const Scroller = {
 			prev.addEventListener('click', () => {
 				scrollCtn.scrollBy(-step, 0);
 			});
-
 
 		});
 	},
