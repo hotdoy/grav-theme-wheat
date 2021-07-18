@@ -1,3 +1,9 @@
+# v0.14.1
+## 07/18/2021
+
+1. [](#improved)
+    * cleaned scroller js (and that should be it)
+
 # v0.14.0
 ## 07/17/2021
 
