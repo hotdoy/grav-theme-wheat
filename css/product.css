@@ -34,20 +34,23 @@
     object-fit: contain;
 }
 
-.product__showcase .swiper-slide,
+.product__showcase .scroller__slide,
 .product__showcase .single-image {
     position: relative;
+    flex-shrink: 0;
+    scroll-margin-left: 0;
     padding-top: 133%;
+    width: 100%;
     border-radius: 4px;
     overflow: hidden;
 }
 
-.product__showcase .swiper-slide .fill,
+.product__showcase .scroller__slide .fill,
 .product__showcase .single-image .fill {
     background-color: var(--c-material);
 }
 
-.product__showcase .swiper-slide img,
+.product__showcase .scroller__slide img,
 .product__showcase .single-image img {
     position: absolute;
     width: 100%;
@@ -55,7 +58,7 @@
     object-fit: cover;
 }
 
-.product__showcase .swiper-scrollbar {
+/* .product__showcase .swiper-scrollbar {
     position: relative; 
     margin-top: calc(1rem + 5px);
     left: 0;
@@ -63,16 +66,16 @@
     width: 100%;
     background: var(--c-material);
     z-index: 50;
-}
+} */
 
-.product__showcase .swiper-scrollbar .swiper-scrollbar-drag{
+/* .product__showcase .swiper-scrollbar .swiper-scrollbar-drag{
     background: var(--c-guide);
     cursor: grab;
-}
+} */
 
-.product__showcase .swiper-scrollbar .swiper-scrollbar-drag:active{
+/* .product__showcase .swiper-scrollbar .swiper-scrollbar-drag:active{
     cursor: grabbing;
-}
+} */
 
 @media (min-width: 735px) {
     .product__showcase .sticky-ctn {
