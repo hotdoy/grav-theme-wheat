@@ -1,3 +1,10 @@
+# v0.14.4
+## 07/19/2021
+
+1. [](#improved)
+    * new favicons
+    * better share metas
+
 # v0.14.3
 ## 07/19/2021
 

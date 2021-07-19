@@ -19,14 +19,14 @@ form:
           fields:
             publishing:
               fields:
-                header.meta_title:
+                header.page_title:
                   type: text
-                  label: Meta Title
+                  label: Page Title
 
-                header.meta_description:
+                header.page_description:
                   type: text
-                  label: Meta Description
+                  label: Page Description
 
-                header.meta_image:
-                  label: Meta Image
+                header.page_image:
+                  label: Page Image
                   type: pagemediaselect
