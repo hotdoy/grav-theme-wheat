@@ -21,17 +21,17 @@ const Scroller = {
 	Init: function() {
 		document.querySelectorAll('.scroller').forEach(el => {
 
-			let step = el.querySelector('.slide').clientWidth;
-			const prev = el.querySelector('.prev');
-			const next = el.querySelector('.next');
-			const scrollCtn = el.querySelector('.container');
+			let step = el.querySelector('.scroller__slide').clientWidth;
+			const prev = el.querySelector('.scroller__prev');
+			const next = el.querySelector('.scroller__next');
+			const scrollCtn = el.querySelector('.scroller__scrollctn');
 			this.UpdateNav(scrollCtn, prev, next);
 			scrollCtn.addEventListener('scroll', () => {
 				this.UpdateNav(scrollCtn, prev, next);
 			});
 
 			window.addEventListener('resize', () => {
-				step = el.querySelector('.slide').clientWidth;
+				step = el.querySelector('.scroller__slide').clientWidth;
 			});
 
 			next.addEventListener('click', () => {

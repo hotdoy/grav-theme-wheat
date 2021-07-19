@@ -16,17 +16,19 @@
 
 			<div class="media-ctn">
 
-				{# SWIPER #}
+
+
+				{# SWIPER - TODO REPLACE WITH SCROLLER #}
 				{% if gallery_images %}
-				<div class="swiper-container">
-					<div class="swiper-wrapper">
+				<div class="scroller">
+					<div class="scroller__scrollctn">
 						{% if image %}
-						<div class="swiper-slide">
+						<div class="scroller__slide">
 							<div class="fill">{{ image.cropResize(1000).loading.html('', image_alt)|raw }}</div>
 						</div>
 						{% endif %}
 						{% for item in gallery_images %}
-						<div class="swiper-slide">
+						<div class="scroller__slide">
 							{% set image = item.image ? page.media[item.image] %}
 							{% set image_alt = item.image_alt ?? '' %}
 							{% if image %}
@@ -35,9 +37,11 @@
 						</div>
 						{% endfor %}
 					</div>
-					{# SCROLLBAR #}
-					<div class="swiper-scrollbar"></div>
+					<span class="scroller__prev"></span>
+					<span class="scroller__next"></span>
 				</div>
+
+
 
 				{# SINGLE IMAGE	 #}
 				{% elseif image %}
@@ -135,6 +139,6 @@
 	{# RELATED #}
     {% set related_options = { items: {'@self.siblings':''}, 'limit': 6, 'order': {'by': 'random'}} %}
     {% set related_items = page.collection(related_options) %}
-    {% include 'modular/scroller.html.twig' with { 'title': 'THEME.PRODUCT.RELATED'|t, 'collection': related_items } only %}
+    {% include 'modular/carousel.html.twig' with { 'title': 'THEME.PRODUCT.RELATED'|t, 'collection': related_items } only %}
 
 {% endblock %}

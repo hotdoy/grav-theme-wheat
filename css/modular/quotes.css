@@ -8,22 +8,25 @@
   padding: 0 var(--gutter);
 }
 
-.module.quotes .swiper-container {
+.module.quotes .scroller__scrollctn {
   height: auto;
   width: 100%;
-  background-color: var(--c-material);
-  border-radius: 6px;
+
 }
 
-.module.quotes .swiper-slide {
+.module.quotes .scroller__slide {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  flex-shrink: 0;
+  scroll-margin-left: 0;
+  width: 100%;
   height: auto;
   padding: var(--rhythm) 2rem;
   text-align: center;
   background-color: var(--c-material);
+  border-radius: 6px;
 }
 
 .module.quotes blockquote {
@@ -52,16 +55,4 @@
   width: 250px;
   font-size: small;
   line-height: 1.6;
-}
-
-.module.quotes .swiper-pagination {
-  padding-bottom: 1rem;
-}
-
-.module.quotes .swiper-pagination-bullet {
-  background: var(--c-fg);
-}
-
-.module.quotes .swiper-pagination-bullet-active {
-  background: var(--c-fg);
 }

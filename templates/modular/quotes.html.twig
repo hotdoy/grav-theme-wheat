@@ -3,11 +3,11 @@
 
 {% block content %}
 <div class="wrapper">
-	<div class="swiper-container">
-		<div class="swiper-wrapper">
+	<div class="scroller">
+		<div class="scroller__scrollctn">
 			{% for item in page.header.items %}
 			{% set portrait = item.portrait ? page.media[item.portrait] %}
-			<div class="text swiper-slide">
+			<div class="scroller__slide text">
 				<blockquote class="h3">{{ item.quote }}</blockquote>
 				{% if portrait %}
 				<div class="portrait">{{ portrait.cropResize(150).loading.attribute('width', portrait.width).attribute('height', portrait.height).html('', item.alt)|raw }}</div>
@@ -17,7 +17,8 @@
 			{% endfor %}
 		</div>
 		{% if page.header.items|length > 1 %}
-		<div class="swiper-pagination"></div>
+		<span class="scroller__prev"></span>
+		<span class="scroller__next"></span>
 		{% endif %}
 	</div>	
 </div>

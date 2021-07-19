@@ -1,3 +1,10 @@
+# v0.14.2
+## 07/19/2021
+
+1. [](#improved)
+    * replaced all swipers with new vanilla scroller.
+    * commented swiper's assets
+    
 # v0.14.1
 ## 07/18/2021
 
