@@ -45,10 +45,6 @@ border-radius: 9999px;
     margin-left: 0;
 }
 
-.scroller__slide:last-child {
-    margin-right: 10px;
-}
-
 .scroller__prev,
 .scroller__next {
     display: none;
