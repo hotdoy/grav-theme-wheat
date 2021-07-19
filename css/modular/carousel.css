@@ -1,84 +1,34 @@
-/*.module.carousel {}*/
+/* .module.carousel {} */
 
 .module.carousel > .wrapper {
-    position: relative;
-    margin: 0 auto;
-    padding: 0 var(--gutter);
-    padding-top: 2px;
-    width: 100%;
-    max-width: var(--w-body);
-    overflow: hidden;
+		position: relative;
+		margin: 0 auto;
+		padding: 0 var(--gutter);
+		width: 100%;
+		max-width: var(--w-body);
+		overflow: hidden;
 }
 
 .module.carousel > .wrapper > h2 {
-    margin-bottom: 1rem;
-    width: 100%;
+		margin-bottom: 1rem;
+		width: 100%;
+}
+
+.module.carousel .scroller__slide {
+		min-width: 60%;
+		max-width: 60%;
 }
 
 @media (min-width: 735px) {
-    /*left gradient*/
-    .module.carousel > .wrapper::before {
-        content: "";
-        position: absolute;
-        left: -1px;
-        top: 0;
-        bottom: 0;
-        width: var(--gutter);
-        background-image: linear-gradient(90deg, var(--c-bg), transparent);
-        z-index: 2;
-    }
-    /*right gradient*/
-    .module.carousel>.wrapper::after {
-        content: "";
-        position: absolute;
-        right: -1px;
-        top: 0;
-        bottom: 0;
-        width: var(--gutter);
-        background-image: linear-gradient(-90deg, var(--c-bg), transparent);
-        z-index: 1;
-    }
-}
-
-
-.module.carousel .swiper-container {
-    overflow: visible;
-    height: auto;
-    width: 100%;
-}
-
-.module.carousel .swiper-slide {
-    overflow: visible;
-    width: 60%;
-}
-
-@media (min-width: 735px) {
-    .module.carousel .swiper-slide {
-        width: 39%;
-    }
+		.module.carousel .scroller__slide {
+				min-width: 39%;
+				max-width: 39%;
+		}
 }
 
 @media (min-width: 1200px) {
-    .module.carousel .swiper-slide {
-        width: 29%;
-    }
-}
-
-.module.carousel .swiper-scrollbar {
-    position: relative; 
-    margin-top: 1rem;
-    left: 0;
-    height: 5px;
-    width: 100%;
-    background: var(--c-material);
-    z-index: 50;
-}
-
-.module.carousel .swiper-scrollbar .swiper-scrollbar-drag{
-    background: var(--c-guide);
-    cursor: grab;
-}
-
-.module.carousel .swiper-scrollbar .swiper-scrollbar-drag:active{
-    cursor: grabbing;
+		.module.carousel .scroller__slide {
+				min-width: 29%;
+				max-width: 29%;
+		}
 }

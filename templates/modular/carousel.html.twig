@@ -11,21 +11,23 @@
 	<h2>{{ title }}</h2>
 	{% endif %}
 	
-	<div class="swiper-container">
-		<div class="swiper-wrapper">
-			{# PAGES #}
+	<div class="scroller">
+		<div class="scroller__scrollctn">
 			{% for item in items %}
-				{% if not collection %}
-				{% set item = page.find(item.page) %}
-				{% endif %}	
-				<div class="swiper-slide">
-					{% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item, 'loop': loop} only %}
-				</div>
+			{% if not collection %}
+			{% set item = page.find(item.page) %}
+			{% endif %}	
+			<div class="scroller__slide">
+				{% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item, 'loop': loop} only %}
+			</div>
 			{% endfor %}
 		</div>
-		{# SCROLLBAR #}
-		<div class="swiper-scrollbar"></div>
-	</div>	
+		<span class="scroller__prev"></span>
+		<span class="scroller__next"></span>
+	</div>
+
+
+
 </div>
 
 {% endblock %}
