@@ -83,8 +83,9 @@ border-radius: 9999px;
 
     .scroller__next.max,
     .scroller__prev.max {
-        visibility: hidden;
-        opacity: 0;
+        opacity: 0.5;
+        cursor: default;
+        box-shadow: none;
     }
 
 }

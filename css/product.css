@@ -45,6 +45,10 @@
     overflow: hidden;
 }
 
+.product__showcase .scroller__slide:last-child {
+    margin-right: 0;
+}
+
 .product__showcase .scroller__slide .fill,
 .product__showcase .single-image .fill {
     background-color: var(--c-material);
