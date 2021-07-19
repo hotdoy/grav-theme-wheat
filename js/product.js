@@ -1,16 +1,5 @@
 const Product = {
 
-    InitSwiper: function() {
-        const e = new Swiper(".product .product__showcase .swiper-container", {
-            centeredSlides: true,
-            spaceBetween: 5,
-            scrollbar: {
-                el: '.swiper-scrollbar',
-                draggable: true,
-             },
-        });
-    },
-
     InitVariant: function() {
         const selects = document.querySelectorAll(".product .variant select");
         for (let select of selects) {
@@ -24,5 +13,4 @@ const Product = {
 
 };
 
-Product.InitSwiper();
 Product.InitVariant();
