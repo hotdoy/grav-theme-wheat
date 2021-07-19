@@ -1,26 +1,28 @@
-{% set title %}
-{% if page.header.page_title %}
-{{- page.header.page_title -}}
-{% elseif page.header.title and page.url != base_url %}
-{{- page.header.title|e('html') }} - {{ site.title|e('html') -}}
-{% else %}
-{{- site.title|e('html') -}}
-{% endif %}
-{% endset %}
+{%- set site_title = root_params.header.site_title ?? site.title -%}
 
-{% set description %}
-{% if page.header.meta_description %}
-{{- page.header.meta_description -}}
-{% else %}
-{% for meta in page.metadata if meta.name == 'description' %}
-{{- meta.content -}}
-{% endfor %}
-{% endif %}
-{% endset %}
+{%- set title -%}
+    {% if page.header.page_title %}
+        {{- page.header.page_title -}}
+    {% elseif page.header.title and page.url != base_url %}
+        {{- page.header.title }} - {{ site_title -}}
+    {% else %}
+        {{- site_title -}}
+    {% endif %}
+{%- endset -%}
 
-{% set og_type = 'website' %}
-{% set url = page.url(true, true) %}
-{% set image = page.header.meta_image ? uri.base() ~ page.media[page.header.meta_image].url : '' %}
+{%- set description -%}
+    {% if page.header.meta_description %}
+        {{- page.header.meta_description -}}
+    {% elseif root_params.header.site_description %}
+        {{- root_params.header.site_description -}}
+    {% endif %}
+{%- endset -%}
+
+{%- set og_type = 'website' -%}
+{%- set url = page.url(true, true) -%}
+
+{%- set image_path = page.header.meta_image ? page.media[page.header.meta_image].url : root_params.header.site_image ? root_params.media[root_params.header.site_image].url -%}
+{%- set image_url = image_path ? uri.base() ~ image_path : '' -%}
 	
 <meta charset="utf-8" />
 <title>{{ title }}</title>
@@ -48,12 +50,12 @@
 <meta property="og:type" content="{{ og_type }}" />
 <meta property="og:title" content="{{ title }}" />
 <meta property="og:description" content="{{ description }}" />
-{% if image %}<meta property="og:image" content="{{ image }}" />{% endif %}
+{% if image_url %}<meta property="og:image" content="{{ image_url }}" />{% endif %}
 
 {% if theme.twitter_site %}
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="{{ theme.twitter_site }}">
 <meta name="twitter:title" content="{{ title }}" />
 <meta name="twitter:description" content="{{ description }}" />
-{% if image %}<meta name="twitter:image" content="{{ image }}" />{% endif %}
+{% if image_url %}<meta name="twitter:image" content="{{ image_url }}" />{% endif %}
 {% endif %}

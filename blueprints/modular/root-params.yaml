@@ -74,40 +74,30 @@ form:
                       .url:
                         type: text
                         label: Url
-        Social:
-            type: tab
-            title: Social
-            fields:
-
-              section_newsletter:
+    
+              section_share:
                 type: section
-                title: Newsletter
+                title: Share
                 underline: true
 
-              header.mailchimp_form:
-                type: textarea
-                label: Mailchimp Form
-                description: Copy and paste the Mailchimp generated unstyled form.
+              header.site_title:
+                type: text
+                label: Site Title
 
-              header.section_sameas:
+              header.site_description:
+                type: text
+                label: Site Description
+
+              header.site_image:
+                label: Site Image
+                type: pagemediaselect
+
+              section_media:
                 type: section
-                title: SameAs
+                title: Media
                 underline: true
 
-              header.sameas:
-                name: sameas
-                type: list
-                label: SameAs
-                fields:
-                  .label:
-                    type: text
-                    label: Label
-                  .url:
-                    type: text
-                    label: Url
-
-              header.section_misc:
-                type: section
-                title: MISC
-                underline: true
+              header.media_order:
+                type: pagemedia
+                label: PLUGIN_ADMIN.PAGE_MEDIA
 
