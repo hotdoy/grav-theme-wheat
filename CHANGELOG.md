@@ -1,3 +1,10 @@
+# v0.14.3
+## 07/19/2021
+
+1. [](#improved)
+    * scroller navigation fades out on max
+    * improved scroller ux in general
+
 # v0.14.2
 ## 07/19/2021
 
