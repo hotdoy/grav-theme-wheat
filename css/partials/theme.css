@@ -148,7 +148,6 @@ body {
   background-color: var(--c-bg);
 }
 
-::selection {
-  background-color: var(--c-hl);
-  color: white;
+::selection{
+	background-color:#FFE801;
 }

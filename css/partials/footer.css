@@ -75,7 +75,9 @@
     justify-content: space-between;
 }
 
-/*#footer .copyright {}*/
+#footer .copyright {
+    font-size: var(--fs-small);
+}
 
 /*#footer .credit {}*/
 

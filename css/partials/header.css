@@ -53,7 +53,7 @@
 
 
 
-/*LINKS AND BURGER*/
+/*LINKS*/
 #header .layout nav {
     display: flex;
 }
@@ -69,26 +69,8 @@
     margin-right: var(--gutter);
 }
 
-#header .layout nav li ul {
-    display: none;
-}
-
-#header .langswitcher {
+#header .layout nav .langswitcher {
     opacity: 0.7;
-}
-
-#header .layout .burger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-right: var(--gutter);
-    height: 100%;
-}
-
-@media (min-width: 1200px) {
-    #header .layout .burger {
-        display: none;
-    }
 }
 
 

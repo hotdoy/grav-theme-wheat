@@ -1,4 +1,4 @@
-const CACHE = 'wheat-v0.14.4';
+const CACHE = 'wheat-v0.14.5';
 
 self.addEventListener('install', function(evt) {
     skipWaiting();
