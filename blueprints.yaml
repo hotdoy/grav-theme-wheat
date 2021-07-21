@@ -27,11 +27,6 @@ form:
       title: Theme
       underline: true
 
-    logo:
-      type: textarea
-      rows: 13
-      label: logo
-
     color_hl:
       type: colorpicker
       label: Highlight Color

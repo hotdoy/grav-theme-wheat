@@ -1,27 +1,29 @@
 const Header = {
-    els: document.querySelectorAll("#header .burger"),
-    b: document.body.classList,
+    toggles: document.querySelectorAll("#header .burger"),
+    maxWidth: 735,
 
     Init: function() {
-        Header.els.forEach((el) => {
+        this.toggles.forEach((el) => {
             el.addEventListener("click", function() {
-                if (Header.b.contains('header-panel--open')) {
-                    Header.b.remove("header-panel--open");
+                let state = document.body.getAttribute('data-navpanel');
+                console.log(state);
+                if (state != '1') {
+                    document.body.setAttribute('data-navpanel', '1');
                 } else {
-                    Header.b.add("header-panel--open");
-                } 
+                    document.body.setAttribute('data-navpanel', '0');
+                }
             });
         });
+        this.Watch();
     },
 
     Watch: function() {
         window.addEventListener("resize", function() {
-            if (window.innerWidth > 735 && Header.b.contains("header-panel--open")) {
-                Header.b.remove("header-panel--open");
+            if (window.innerWidth > Header.maxWidth) {
+                document.body.setAttribute('data-navpanel', '0');
             }
         });
     },
 };
 
 Header.Init();
-Header.Watch();
