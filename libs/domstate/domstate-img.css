@@ -1,7 +1,7 @@
 img {
     opacity: 0;
     transition-property: opacity;
-    transition-delay: 0s;
+    transition-delay:0s;
     transition-duration: 0.2s;
 }
 
