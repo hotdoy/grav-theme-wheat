@@ -1,3 +1,13 @@
+# v0.14.6
+## 07/21/2021
+
+1. [](#improved)
+    * new thumbnail
+    * new screenshot
+    * larger footer nav
+    * updated hl color
+    * grid modular now uses 2 cols on mobile
+
 # v0.14.5
 ## 07/21/2021
 

@@ -14,14 +14,13 @@
 
 .module.grid .layout {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: var(--gutter);
-    column-gap: var(--gutter);
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
 }
-
 @media (min-width: 735px) {
     .module.grid .layout {
         grid-template-columns: repeat(3, 1fr);
+        gap: var(--gutter);
     }
 }
 

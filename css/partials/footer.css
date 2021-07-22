@@ -35,11 +35,6 @@
     display: flex;
     flex-wrap: wrap;
 }
-@media (min-width: 735px) {
-    #footer .links nav {
-        width: 66.66%;
-    }
-}
 
 #footer .links nav ul {
     margin: 0;
@@ -50,7 +45,7 @@
 @media (min-width: 735px) {
     #footer .links nav ul {
         margin-top: 0;
-        min-width: 25%;
+        min-width: 20%;
     }
 }
 
