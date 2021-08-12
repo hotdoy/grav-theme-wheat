@@ -1,15 +1,15 @@
-const DomStateImg = {
+const stateImg = {
     ObserveMutation: function() {
         const target = document.querySelector("#main");
         const config = { childList: true, subtree: true };
         const observer = new MutationObserver(function() {
-            DomStateImg.Init();
+            stateImg.Init();
         });
         observer.observe(target, config);
     },
 
     SetAttr: function(el, state) {
-        el.setAttribute('data-domstate', state);
+        el.setAttribute('data-state', state);
     },
 
     Init: function() {
@@ -24,5 +24,5 @@ const DomStateImg = {
 };
 
 document.addEventListener('domstateReady', () => {
-    DomStateImg.Init();
+    stateImg.Init();
 });

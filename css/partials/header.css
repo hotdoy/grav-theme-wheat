@@ -1,6 +1,10 @@
+#header {
+    --h-header: 48px;
+}
+
 #header .shim {
     position: relative;
-    height: var(--header-heigth);
+    height: var(--h-header);
 }
 
 #header .header {
@@ -9,7 +13,7 @@
     left: 0;
     right: 0;
 
-    height: var(--header-heigth);
+    height: var(--h-header);
     background-color: var(--c-bg);
     backdrop-filter: blur(10px);
     color: var(--c-fg);

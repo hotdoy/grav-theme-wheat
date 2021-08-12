@@ -1,8 +1,7 @@
 const DomStateLink = {
-
     path: '',
     depth: 0,
-    delay: 0,
+    delay: 100,
 
     events: {
         navigating: new Event('domstateNavigating'),

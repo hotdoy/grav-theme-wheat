@@ -1,0 +1,11 @@
+/* body[data-state='loading'] {} */
+
+/* body[data-state='interactive'] {} */
+
+/* body[data-state='complete'] {} */
+
+/* body[data-state^='navigating'] {} */
+
+/* body[data-state^='navigating-forward'] {} */
+
+/* body[data-state^='navigating-backward'] {} */

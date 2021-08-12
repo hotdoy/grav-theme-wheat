@@ -20,17 +20,10 @@ form:
                 .quote:
                   type: textarea
                   label: Quote
-                .portrait:
+                .image:
                   type: pagemediaselect
-                  label: Portrait
+                  label: Image
                 .source:
                   type: text
                   label: Source
 
-            header.color_panel_bg:
-              type: colorpicker
-              label: Color - Background
-
-            header.color_panel_fg:
-              type: colorpicker
-              label: Color - Foreground

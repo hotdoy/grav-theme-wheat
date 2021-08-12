@@ -2,7 +2,7 @@
 
 .module.map > .wrapper {
   width: 100%;
-  max-width: var(--w-body);
+  max-width: var(--w-main);
   margin: 0 auto;
   padding: 0 var(--gutter);
 }

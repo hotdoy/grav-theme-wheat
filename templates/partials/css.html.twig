@@ -1,21 +1,17 @@
+{# THEME #}
+{% do assets.addCss('theme://css/partials/theme.css') %}
+
 {# SNIPCART #}
 {% if theme.snipcart %}
 {% do assets.addCss('https://cdn.snipcart.com/themes/v' ~ snipcart_version ~ '/default/snipcart.css', {position: 'before'}) %}
 {% do assets.addCss('theme://css/partials/snipcart.css') %}
 {% endif %}
 
-{# LIBS #}
-{% do assets.addCss('theme://libs/splitting/splitting.css') %}
-{# {% do assets.addCss('theme://libs/swiper/swiper-bundle.css') %} #}
-{% do assets.addCss('theme://libs/domstate/domstate.css') %}
-{% do assets.addCss('theme://libs/domstate/domstate-img.css') %}
-
-
-{# THEME #}
+{# SITE #}
 {% do assets.addCss('theme://css/partials/reset.css') %}
-{% do assets.addCss('theme://css/partials/fx.css') %}
 {% do assets.addCss('theme://css/partials/text.css') %}
-{% do assets.addCss('theme://css/partials/theme.css') %}
+{% do assets.addCss('theme://css/partials/domstate.css') %}
+{% do assets.addCss('theme://css/partials/domstate-img.css') %}
 {% do assets.addCss('theme://css/partials/header.css') %}
 {% do assets.addCss('theme://css/partials/footer.css') %}
 {% do assets.addCss('theme://css/partials/buttons.css') %}
@@ -25,7 +21,6 @@
 {% do assets.addCss('theme://css/partials/lite-yt-embed.css') %}
 {% do assets.addCss('theme://css/partials/scroller.css') %}
 {% do assets.addCss('theme://css/partials/sticky.css') %}
-{# {% do assets.addCss('theme://css/share.css') %} #}
 
 {# MODULAR #}
 {% do assets.addCss('theme://css/modular/module.css') %}
@@ -33,8 +28,6 @@
 {% do assets.addCss('theme://css/modular/mediatext.css') %}
 {% do assets.addCss('theme://css/modular/map.css') %}
 {% do assets.addCss('theme://css/modular/quotes.css') %}
-{% do assets.addCss('theme://css/modular/promo.css') %}
-{% do assets.addCss('theme://css/modular/features.css') %}
 {% do assets.addCss('theme://css/modular/media.css') %}
 {% do assets.addCss('theme://css/modular/grid.css') %}
 {% do assets.addCss('theme://css/modular/carousel.css') %}
@@ -49,5 +42,6 @@
 {% do assets.addCss('theme://css/post.css') %}
 
 {# MISC #}
+{% do assets.addCss('theme://css/partials/fx.css') %}
 {% do assets.addCss('theme://css/partials/utils.css') %}
 {% do assets.addCss('theme://css/partials/custom.css') %}

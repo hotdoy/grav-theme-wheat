@@ -1,29 +1,174 @@
-/*REGULAR*/
+/*===========================================
+				FONT-FACE 
+============================================*/
 
-.text h1, 
-.text .h1 {
+/* ibm-plex-mono-regular - latin */
+@font-face {
+	font-family: 'IBM Plex Mono';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		 url('../../fonts/ibm-plex-mono-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../../fonts/ibm-plex-mono-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* ibm-plex-sans-regular - latin */
+@font-face {
+	font-family: 'IBM Plex Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		 url('../../fonts/ibm-plex-sans-v8-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../../fonts/ibm-plex-sans-v8-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* ibm-plex-sans-italic - latin */
+@font-face {
+	font-family: 'IBM Plex Sans';
+	font-style: italic;
+	font-weight: 400;
+	src: local(''),
+			url('../../fonts/ibm-plex-sans-v8-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+			url('../../fonts/ibm-plex-sans-v8-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* ibm-plex-sans-600 - latin */
+@font-face {
+	font-family: 'IBM Plex Sans';
+	font-style: normal;
+	font-weight: 600;
+	src: local(''),
+			url('../../fonts/ibm-plex-sans-v8-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+			url('../../fonts/ibm-plex-sans-v8-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* ibm-plex-sans-600italic - latin */
+@font-face {
+	font-family: 'IBM Plex Sans';
+	font-style: italic;
+	font-weight: 600;
+	src: local(''),
+			url('../../fonts/ibm-plex-sans-v8-latin-600italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+			url('../../fonts/ibm-plex-sans-v8-latin-600italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* ibm-plex-serif-regular - latin */
+@font-face {
+	font-family: 'IBM Plex Serif';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		 url('../../fonts/ibm-plex-serif-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../../fonts/ibm-plex-serif-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+/* ibm-plex-serif-italic - latin */
+@font-face {
+	font-family: 'IBM Plex Serif';
+	font-style: italic;
+	font-weight: 400;
+	src: local(''),
+			url('../../fonts/ibm-plex-serif-v9-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+			url('../../fonts/ibm-plex-serif-v9-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* ibm-plex-serif-600 - latin */
+@font-face {
+	font-family: 'IBM Plex Serif';
+	font-style: normal;
+	font-weight: 600;
+	src: local(''),
+			url('../../fonts/ibm-plex-serif-v9-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+			url('../../fonts/ibm-plex-serif-v9-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* ibm-plex-serif-600italic - latin */
+@font-face {
+	font-family: 'IBM Plex Serif';
+	font-style: italic;
+	font-weight: 600;
+	src: local(''),
+			url('../../fonts/ibm-plex-serif-v9-latin-600italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+			url('../../fonts/ibm-plex-serif-v9-latin-600italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+
+
+
+/*===========================================
+				    FAMILY 
+============================================*/
+
+:root {
+	--ff-mono: "IBM Plex Mono";
+	--ff-sans: "IBM Plex Sans";
+	--ff-serif: "IBM Plex Serif";
+	--fw-regular: 400;
+	--fw-bold: 600;
+}
+
+
+
+
+
+/*===========================================
+				SIZES 
+============================================*/
+
+:root {
+	--fs-small: small;
+	--fs-medium: normal;
+	--fs-large: large;
+	--fs-xlarge: x-large;
+	--fs-xxlarge: xx-large;
+}
+@media (min-width: 635px) {
+	:root {
+		--fs-small: 14px;
+		--fs-medium: 16px;
+		--fs-large: 24px;
+		--fs-xlarge: 32px;
+		--fs-xxlarge: 48px;
+	}
+}
+
+
+
+
+
+/*===========================================
+				DOCUMENT 
+============================================*/
+:root {
+	font-family: var(--ff-sans),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue", sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+::selection{
+    background-color:#ffee00;
+    color: black;
+}
+
+
+
+
+
+/*===========================================
+        	    REGULAR 
+============================================*/
+
+.text h1 {
+	font-family: var(--ff-mono);
     font-size: var(--fs-xxlarge);
-    line-height: var(--lh-large);
-    font-weight: var(--fw-bold);
+    line-height: 1.2;
     letter-spacing: normal;
-    color: var(--c-title);
 }
-.text.prose h1, 
-.text.prose .h1 {
-    margin: var(--text-m-xxlarge);
+.text.prose h1 {
+    margin: 67px 0;
 }
 
-.text h2, 
-.text .h2 {
+.text h2 {
     font-size: var(--fs-xlarge);
-    line-height: var(--lh-large);
-    font-weight: var(--fw-bold);
+    line-height: 1.2;
     letter-spacing: normal;
-    color: var(--c-title);
 }
 .text.prose h2, 
 .text.prose .h2 {
-    margin: var(--text-m-xlarge);
+    margin: 38px 0 28px 0;
 }
 
 .text h3,
@@ -35,10 +180,9 @@
 .text h6,
 .text .h6 {
     font-size: var(--fs-large);
-    line-height: var(--lh-large);
+    line-height: 1.2;
     font-weight: var(--fw-bold);
     letter-spacing: normal;
-    color: var(--c-title);
 }
 .text.prose h3,
 .text.prose .h3,
@@ -48,27 +192,26 @@
 .text.prose .h5,
 .text.prose h6,
 .text.prose .h6 {
-    margin: var(--text-m-large);
+    margin: 28px 0;
 }
 
 .text p {
     font-size: var(--fs-medium);
-    line-height: var(--lh-medium);
+    line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--c-text);
+    color: var(--c-fg);
 }
 .text.prose p {
-    margin: var(--text-m-medium);
+    margin: 28px 0;
 }
 
-.prose > :first-child {margin-top: 0;}
-.prose > :last-child {margin-bottom: 0;}
 
 
 
 
-
-/*SMALL*/
+/*===========================================
+        	    SMALL 
+============================================*/
 
 .text.small p {
     font-size: small;
@@ -123,7 +266,13 @@
 
 
 
-/*MISC*/
+
+/*===========================================
+        	    MISC 
+============================================*/
+
+.prose > :first-child {margin-top: 0;}
+.prose > :last-child {margin-bottom: 0;}
 
 .text p:empty {
     display: none;
@@ -140,39 +289,29 @@
 }
 
 .text sup {
-    font-size: x-small;
+    font-size: 0.5em;
 }
 
 .text blockquote,
 .text blockquote p {
     color: var(--c-fg);
     font-size: 1rem;
-    line-height: 1.9rem;
+    line-height: 1.2;
 }
 
-.text ul {
+.text ul,
+.text ol {
     margin-top: 1rem;
     padding-left: 1rem;
     font-size: 1rem;
-    color: var(--c-text);
+    color: var(--c-fg);
     line-height: inherit;
     list-style-position: outside;
-    list-style-type: disc;
-}
-
-.text ol {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: var(--c-text);
-    line-height: inherit;
-    list-style-position: inside;
-    list-style-type: decimal;
 }
 
 .text li,
 .text ul {
     margin-left: 0px;
-    list-style: disc;
     font-size: inherit;
     line-height: inherit;
 }

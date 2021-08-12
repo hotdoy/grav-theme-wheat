@@ -3,7 +3,7 @@
 .module.grid  > .wrapper {
     margin: 0 auto;
     width: 100%;
-    max-width: var(--w-body);
+    max-width: var(--w-main);
     padding: 0 var(--gutter);
 }
 
