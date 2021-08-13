@@ -18,9 +18,9 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
-        server: ${{ secrets.WHEAT_DEPLOY_SERVER }}
-        username: ${{ secrets.WHEAT_DEPLOY_USERNAME }}
-        password: ${{ secrets.WHEAT_DEPLOY_PASSWORD }}
+        server: ${{ secrets.WHEAT_SERVER }}
+        username: ${{ secrets.WHEAT_USERNAME }}
+        password: ${{ secrets.WHEAT_PASSWORD }}
 
   # https://github.com/marketplace/actions/cloudflare-purge-cache
   purge-cloudflare:
