@@ -6,7 +6,7 @@
         opacity: 0;
         transition-duration: 0.5s;
         transition-property: opacity, transform;
-        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1);
     }
     
     .module[data-scroll="in"] {
@@ -31,25 +31,5 @@
     @keyframes fxcard {
         from { opacity: 0; }
         to {opacity: 1;}
-    }
-
-    /* TITLES CHAR ANIMATIONS */
-
-    h1 .word {
-        overflow: hidden;
-    }
-
-    [data-scroll="in"] h1 .char {
-        transform: translateY(100%);
-        animation-name: slide-in;
-        animation-delay: calc(10ms * var(--char-index));
-        animation-duration: 0.5s;
-        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        animation-fill-mode: forwards;
-    }
-    
-    @keyframes slide-in {
-        from {transform: translateY(100%);}
-        to {transform: translateY(0)}
     }
 }

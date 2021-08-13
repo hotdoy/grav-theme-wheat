@@ -8,20 +8,21 @@ on:
 
 jobs:
   # https://github.com/SamKirkland/FTP-Deploy-Action
-  deploy:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.1.0
-      with:
-        fetch-depth: WHEAT_2
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
-      with:
-        ftp-server: ${{ secrets.WHEAT_DEPLOY_HOST }}
-        ftp-username: ${{ secrets.WHEAT_DEPLOY_USER }}
-        ftp-password: ${{ secrets.WHEAT_DEPLOY_PASSWORD }}
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
 
-  # https://github.com/marketplace/actions/cloudflare-purge-cache
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
+        server: ${{ secrets.WHEAT_DEPLOY_SERVER }}
+        username: ${{ secrets.WHEAT_DEPLOY_USERNAME }}
+        password: ${{ secrets.WHEAT_DEPLOY_PASSWORD }}
+
+  https://github.com/marketplace/actions/cloudflare-purge-cache
   purge-cloudflare:
     runs-on: ubuntu-latest
     steps:

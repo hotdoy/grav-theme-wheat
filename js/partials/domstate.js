@@ -36,7 +36,7 @@ const DomState = {
     },
 
     UpdateStateAttr: function() {
-        document.body.setAttribute('data-domstate', this.state);
+        document.body.setAttribute('data-state', this.state);
     },
 
     UpdateState: function(state, delay, events) {
@@ -56,7 +56,6 @@ const DomState = {
         this.perceivedDelay = performance.now();
         this.depth = this.GetDepth(this.path);
         document.addEventListener('domstateReady', () => {this.Log('ready');});
-
         document.addEventListener('readystatechange', e => {
             if (e.target.readyState === 'complete') {
                 this.UpdateState('complete', this.GetAdjustedDelay(this.delay), [this.events.complete]);

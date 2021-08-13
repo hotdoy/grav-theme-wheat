@@ -4,7 +4,7 @@
 
 .collection__grid .wrapper {
   padding: 0 var(--gutter);
-  max-width: var(--w-body);
+  max-width: var(--w-main);
   margin: 0 auto;
 }
 

@@ -9,7 +9,7 @@
 	<a href="{{ item.url }}">
 		<div class="media-ctn">
 			{% if image %}
-			{{ image.cropResize(800).loading.html('', image_alt)|raw }}
+			{% include "partials/img.html.twig" with {img: image, alt: image_alt} %}
 			{% endif %}
 		</div>
 		<div class="text small">

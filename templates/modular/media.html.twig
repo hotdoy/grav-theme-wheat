@@ -8,7 +8,6 @@
 
 {% block content %}
 <div class="wrapper">
-
 	{% if yt_videoid %}
 	<lite-youtube videoid="{{ yt_videoid }}" params="modestbranding=1&rel=0" style="background-image: url('{{ image.url }}');"></lite-youtube>
 	{% elseif mp4 %}
@@ -17,12 +16,10 @@
 		{% if webm %} <source type="video/webm" src="{{ webm.url }}">{% endif %}
 	</video>
 	{% elseif image %}
-	{{ image.cropResize(1920).loading.attribute('width', image.width).attribute('height', image.height).html('', image_alt)|raw }}
+	{% include "partials/img.html.twig" with {img: image, alt: image_alt} %}
 	{% endif %}
-
 	{% if page.header.caption %}
 	<div class="caption text small">{{ page.header.caption|markdown }}</div>
 	{% endif %}
-	
 </div>
 {% endblock %}

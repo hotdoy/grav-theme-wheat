@@ -1,19 +1,15 @@
-{# LIBS #}
-{# {% do assets.addJs('theme://libs/swiper/swiper-bundle.js', { group:'bottom' }) %} #}
-{% do assets.addJs('theme://libs/scroll-out/scroll-out.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://libs/splitting/splitting.js', { group:'bottom'}) %}
-{% do assets.addJs('theme://libs/quicklink/quicklink.js', { group:'bottom'}) %}
+{# SITE #}
+{% do assets.addJs('theme://js/partials/scroll-out.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/partials/fx.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://libs/domstate/domstate-link.js', { group:'bottom'}) %}
-{% do assets.addJs('theme://libs/domstate/domstate-img.js', { group:'bottom'}) %}
-{% do assets.addJs('theme://libs/domstate/domstate.js', { group: 'bottom'}) %}
-
-{# PARTIALS #}
+{% do assets.addJs('theme://js/partials/domstate-link.js', { group:'bottom'}) %}
+{% do assets.addJs('theme://js/partials/domstate-img.js', { group:'bottom'}) %}
+{% do assets.addJs('theme://js/partials/domstate.js', { group: 'bottom'}) %}
 {% do assets.addJs('theme://js/partials/header.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/partials/pagination.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/partials/lite-yt-embed.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/partials/dialog.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/partials/scroller.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/partials/sticky.js', { group:'bottom' }) %}
 
 {# MODULES #}
 {% do assets.addJs('theme://js/modular/map.js', { group:'bottom' }) %}
@@ -27,5 +23,6 @@
 {% do assets.addJs('theme://js/partials/snipcart.js', { group:'bottom' }) %}
 {% endif %}
 
-{# CUSTOM #}
+{# MISC #}
+{% do assets.addJs('theme://libs/quicklink/quicklink.js', { group:'bottom'}) %}
 {% do assets.addJs('theme://js/custom.js', { group:'bottom' }) %}

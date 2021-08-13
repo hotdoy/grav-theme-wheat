@@ -6,11 +6,13 @@
 	<div class="scroller">
 		<div class="scroller__scrollctn">
 			{% for item in page.header.items %}
-			{% set portrait = item.portrait ? page.media[item.portrait] %}
+			{% set image = item.image ? page.media[item.image] %}
 			<div class="scroller__slide text">
 				<blockquote class="h3">{{ item.quote }}</blockquote>
-				{% if portrait %}
-				<div class="portrait">{{ portrait.cropResize(150).loading.attribute('width', portrait.width).attribute('height', portrait.height).html('', item.alt)|raw }}</div>
+				{% if image %}
+				<div class="portrait">
+					{% include "partials/img.html.twig" with {img: image} %}
+				</div>
 				{% endif %}
 				<div class="source small">{{ item.source }}</div>
 			</div>

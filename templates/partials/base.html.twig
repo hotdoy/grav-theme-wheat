@@ -7,20 +7,17 @@
 		{% block metadata %}{% include 'partials/metadata.html.twig' %}{% endblock %}
 		{% block canonical %}<link rel="canonical" href="{{ page.url(true, true) }}" />{% endblock %}
 		{% block favicon %}{% include 'partials/favicon.html.twig' %}{% endblock %}
-		<link rel="preload" href="{{ url('theme://fonts/Helvetica.woff2', true) }}" as="font" crossorigin>
-		<link rel="preload" href="{{ url('theme://fonts/Helvetica-Bold.woff2', true) }}" as="font" crossorigin>
+		<link rel="preload" href="{{ url('theme://fonts/ibm-plex-mono-v6-latin-regular.woff2', true) }}" as="font" crossorigin>
+		<link rel="preload" href="{{ url('theme://fonts/ibm-plex-sans-v8-latin-regular.woff2', true) }}" as="font" crossorigin>
 		{% include 'partials/js.html.twig' %}
 		{% include 'partials/css.html.twig' %}
 		{% block assets deferred %}
 		{{ assets.css()|raw }}
 		{{ assets.js('top')|raw }}
 		{% endblock %}
-		{% block gtm_head %}{% include 'partials/gtm-head.html.twig' %}{% endblock %}
+		{% if theme.inline_css -%}<style>{{ theme.inline_css|raw }}</style>{%- endif %}
+		{% if theme.inline_head_script %}{{ theme.inline_head_script|raw }}{% endif %}
 	</head>
-
-    {% set theme_style -%}
-    {%- if theme.color_hl %}--c-hl:{{ theme.color_hl }};{% endif -%}
-    {% endset -%}
 
 	<body class="{{ page.template }}{% if page.header.body_classes %} {{ page.header.body_classes }}{% endif %}"{% if theme_style %} style="{{ theme_style }}"{% endif %}>
 		{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
@@ -31,7 +28,7 @@
 		{% include 'partials/dialog.html.twig' with {id: 'dialog-signin', content: 'THEME.DIALOG.SIGNIN'|t } %}
 		{% include 'partials/dialog.html.twig' with {id: 'dialog-signout', content: 'THEME.DIALOG.SIGNOUT'|t } %}
 		{{ assets.js('bottom')|raw }}
-		{% include 'partials/gtm-body.html.twig' %}
+		{% if theme.inline_body_script %}{{ theme.inline_body_script|raw }}{% endif %}
 		{% include 'partials/serviceworker.html.twig' %}
 		<!-- {{ grav.theme.getBlueprint().name }} {{ grav.theme.getBlueprint().version }} -->
 	</body>

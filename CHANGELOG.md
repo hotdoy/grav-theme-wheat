@@ -1,3 +1,9 @@
+# v0.15.0
+## 08/13/2021
+
+1. [](#improved)
+    * Upstream improvements from calotte3 theme
+
 # v0.14.6
 ## 07/21/2021
 

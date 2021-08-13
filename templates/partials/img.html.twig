@@ -1,0 +1,14 @@
+{% set img = img ?? null %}
+{% set alt = alt ?? null %}
+{% set title = title ?? null %}
+{% set width = img ? img.width : null %}
+{% set height = img ? img.height : null %}
+{% set type =  img ? img.url|split('.')|last : null %}
+{% set loading = system.images.defaults.loading ?? 'auto' %}
+{# {% set ph = img.cropResize(16, 16).url %} #}
+{# {% set ph_64 = read_file(img.cropResize(16, 16).url)|base64_encode %} #}
+{# {% set style = 'background-size:cover;background-image:url(data:image/' ~ type ~ ';base64,' ~ ph_64 ~ ');'  %} #}
+{% if img %}
+{{ img.attribute('width', width).attribute('height', height).attribute('style', style).loading.html(title, alt)|raw }}
+{% endif %}
+
