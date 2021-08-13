@@ -150,12 +150,24 @@
 /*===========================================
         	    REGULAR 
 ============================================*/
+.text {
+    font-size: var(--fs-medium);
+    line-height: 1.5;
+}
+
+.text p {
+    font-size: inherit;
+    line-height: inherit;
+    color: var(--c-fg);
+}
+.text.prose p {
+    margin: 28px 0;
+}
 
 .text h1 {
 	font-family: var(--ff-mono);
     font-size: var(--fs-xxlarge);
     line-height: 1.2;
-    letter-spacing: normal;
 }
 .text.prose h1 {
     margin: 67px 0;
@@ -164,7 +176,6 @@
 .text h2 {
     font-size: var(--fs-xlarge);
     line-height: 1.2;
-    letter-spacing: normal;
 }
 .text.prose h2, 
 .text.prose .h2 {
@@ -182,7 +193,6 @@
     font-size: var(--fs-large);
     line-height: 1.2;
     font-weight: var(--fw-bold);
-    letter-spacing: normal;
 }
 .text.prose h3,
 .text.prose .h3,
@@ -195,16 +205,6 @@
     margin: 28px 0;
 }
 
-.text p {
-    font-size: var(--fs-medium);
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--c-fg);
-}
-.text.prose p {
-    margin: 28px 0;
-}
-
 
 
 
@@ -212,10 +212,14 @@
 /*===========================================
         	    SMALL 
 ============================================*/
-
-.text.small p {
+.text.small {
     font-size: small;
     line-height: 1.2rem;
+}
+
+.text.small p {
+    font-size: inherit;
+    line-height: inherit;
 }
 .text.small.prose p {
     margin-top: 1rem;
@@ -303,19 +307,15 @@
 .text ol {
     margin-top: 1rem;
     padding-left: 1rem;
-    font-size: 1rem;
+    font-size: inherit;
     color: var(--c-fg);
     line-height: inherit;
     list-style-position: outside;
 }
 
-.text li,
-.text ul {
-    margin-left: 0px;
-    font-size: inherit;
-    line-height: inherit;
+.text li {
+	font-size: inherit;
 }
-
 
 .text li > p {
     display: inline;

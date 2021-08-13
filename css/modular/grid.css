@@ -31,5 +31,9 @@
 }
 
 .module.grid .item img {
-    width: 50px;
+    width: 30px;
+    padding: 6px;
+    background-color: var(--c-material);
+    border-radius: 4px;
+    box-sizing: content-box;
 }

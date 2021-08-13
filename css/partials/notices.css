@@ -5,14 +5,15 @@ Make sure to disable built-in CSS.
 
 .notices {
   position: relative;
-  width: 100%;
-  max-width: var(--w-text);
   margin: 2rem 0;
   padding: 1rem;
+  width: 100%;
+  max-width: var(--w-text);
   border-radius: 4px;
+  text-align: center;
 }
 
-.notices > *:nth-child(1) {
+.notices:first-child {
   margin-top: 0;
 }
 
