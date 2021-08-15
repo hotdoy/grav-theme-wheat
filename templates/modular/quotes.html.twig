@@ -11,7 +11,7 @@
 				<blockquote class="h3">{{ item.quote }}</blockquote>
 				{% if image %}
 				<div class="portrait">
-					{% include "partials/img.html.twig" with {img: image} %}
+					{% include "partials/img.html.twig" with {image: image} only %}
 				</div>
 				{% endif %}
 				<div class="source small">{{ item.source }}</div>
