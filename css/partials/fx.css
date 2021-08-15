@@ -14,22 +14,4 @@
         opacity: 1;
     }
 
-    /* FADEIN CARD USING THEIR INDEX AS DELAY */
-    .module [class$='__card'],
-    .module.grid .item {
-        opacity: 0;
-        animation-delay: calc(0.04s * var(--index));
-        animation-duration: 0.3s;
-        animation-fill-mode: forwards;
-    }
-
-    .module[data-scroll="in"] [class$='__card'],
-    .module.grid[data-scroll="in"] .item {
-        animation-name: fxcard;
-    }
-
-    @keyframes fxcard {
-        from { opacity: 0; }
-        to {opacity: 1;}
-    }
 }
