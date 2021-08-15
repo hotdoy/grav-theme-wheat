@@ -1,3 +1,9 @@
+# v0.15.1
+## 08/15/2021
+
+1. [](#improved)
+    * System image quality is now always used if image quality is larger than system defined value
+
 # v0.15.0
 ## 08/13/2021
 
