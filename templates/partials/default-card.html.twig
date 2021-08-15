@@ -1,12 +1,11 @@
 {% set item = item|default(item) %}
 {% set image = image|default(item.media.images|first) %}
 {% set title = title|default(item.title) %}
-{% set loop = loop|default(loop) %}
 
-<article class="default__card" style="--index:{{ loop.index }}">
+<article class="default__card">
 	<a href="{{ item.url }}">
 		<div class="media-ctn">
-			{% include "partials/img.html.twig" with {image: image} %}
+			{% include "partials/img.html.twig" with {image: image} only %}
 		</div>
 		<div class="text small">
 			<h3>{{ title }}</h3>

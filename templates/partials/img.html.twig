@@ -4,10 +4,9 @@
 {% set width = image ? image.width : null %}
 {% set height = image ? image.height : null %}
 {% set type =  image ? image.url|split('.')|last : null %}
-{% set system_quality = system.images.default_image_quality %}
+{% set system_quality = system.images.default_image_quality ?? '85' %}
 {% set quality = image.quality > system_quality ? system_quality : image.quality %}
 
 {% if image %}
-{{ dump(image) }}
 {{ image.attribute('width', width).attribute('height', height).quality(quality).loading.html(title, alt)|raw }}
 {% endif %}

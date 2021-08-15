@@ -3,9 +3,8 @@
 {% set image_alt = image_alt|default(item.header.image_alt ?? '') %}
 {% set title = title|default(item.header.title) %}
 {% set date = date|default(item.header.date) %}
-{% set loop = loop|default(loop) %}
 
-<article class="post__card" style="--index:{{ loop.index }}">
+<article class="post__card">
 	<a href="{{ item.url }}">
 		<div class="media-ctn">
 			{% include "partials/img.html.twig" with {image: image, alt: image_alt} only %}
