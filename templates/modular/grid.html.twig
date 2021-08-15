@@ -17,7 +17,7 @@
             {% set image = item.image ? page.media[item.image] %}
             {% set image_alt = item.image_alt %}
             {% set text = item.text %}
-            {% include "partials/img.html.twig" with {img: image, alt: image_alt} %}
+            {% include "partials/img.html.twig" with {image: image, alt: image_alt} only %}
             {% if title %}
             <h3>{{ title }}</h3>
             <p>{{ text }}</p>

@@ -26,7 +26,7 @@
                 </nav>
                 {% if theme.snipcart %}
                 {% if not theme.snipcart_allow_guests_only %}
-                <button class="snipcart-account snipcart-customer-signin">{{ svg.user() }}</button>
+                <button class="snipcart-account snipcart-customer-signin" aria-label="customer sign in">{{ svg.user() }}</button>
                 {% endif %}
                 <button class="snipcart-checkout" aria-label="open cart">
                     {{ svg.bag() }}

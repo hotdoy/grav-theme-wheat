@@ -8,7 +8,7 @@
 <article class="post__card" style="--index:{{ loop.index }}">
 	<a href="{{ item.url }}">
 		<div class="media-ctn">
-			{% include "partials/img.html.twig" with {img: image, alt: image_alt} %}
+			{% include "partials/img.html.twig" with {image: image, alt: image_alt} only %}
 		</div>
 		<div class="text small">
 			<h3>{{ title }}</h3>

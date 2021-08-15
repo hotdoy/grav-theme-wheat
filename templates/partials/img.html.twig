@@ -1,14 +1,13 @@
-{% set img = img ?? null %}
+{% set image = image ?? null %}
 {% set alt = alt ?? null %}
 {% set title = title ?? null %}
-{% set width = img ? img.width : null %}
-{% set height = img ? img.height : null %}
-{% set type =  img ? img.url|split('.')|last : null %}
-{% set loading = system.images.defaults.loading ?? 'auto' %}
-{# {% set ph = img.cropResize(16, 16).url %} #}
-{# {% set ph_64 = read_file(img.cropResize(16, 16).url)|base64_encode %} #}
-{# {% set style = 'background-size:cover;background-image:url(data:image/' ~ type ~ ';base64,' ~ ph_64 ~ ');'  %} #}
-{% if img %}
-{{ img.attribute('width', width).attribute('height', height).attribute('style', style).loading.html(title, alt)|raw }}
-{% endif %}
+{% set width = image ? image.width : null %}
+{% set height = image ? image.height : null %}
+{% set type =  image ? image.url|split('.')|last : null %}
+{% set system_quality = system.images.default_image_quality %}
+{% set quality = image.quality > system_quality ? system_quality : image.quality %}
 
+{% if image %}
+{{ dump(image) }}
+{{ image.attribute('width', width).attribute('height', height).quality(quality).loading.html(title, alt)|raw }}
+{% endif %}

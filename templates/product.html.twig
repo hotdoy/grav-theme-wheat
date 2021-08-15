@@ -24,7 +24,9 @@
 					<div class="scroller__scrollctn">
 						{% if image %}
 						<div class="scroller__slide">
-							<div class="fill">{{ image.cropResize(1000).loading.html('', image_alt)|raw }}</div>
+							<div class="fill">
+								{% include "partials/img.html.twig" with {'image': image, 'alt': image_alt} only %}
+							</div>
 						</div>
 						{% endif %}
 						{% for item in gallery_images %}
@@ -32,7 +34,9 @@
 							{% set image = item.image ? page.media[item.image] %}
 							{% set image_alt = item.image_alt ?? '' %}
 							{% if image %}
-							<div class="fill">{{ image.cropResize(1000).loading.html('', image_alt)|raw }}</div>
+							<div class="fill">
+								{% include "partials/img.html.twig" with {'image': image, 'alt': image_alt} only %}
+							</div>
 							{% endif %}
 						</div>
 						{% endfor %}
@@ -46,7 +50,9 @@
 				{# SINGLE IMAGE	 #}
 				{% elseif image %}
 				<div class="single-image">
-					<div class="fill">{{ image.cropResize(1000).loading.html('', page.header.name)|raw }}</div>
+					<div class="fill">
+						{% include "partials/img.html.twig" with {'image': image, 'alt': page.header.name} only %}
+					</div>
 				</div>
 				{% endif %}
 
