@@ -19,10 +19,12 @@
             {# RIGHT - LINKS & TOGGLES #}
             <div class="toggles">
                 <nav class="nav">
-                    {% for link in root_params.header.header_links %}
-                    <li><a href="{{ link.url }}">{{ link.label }}</a></li>
-                    {% endfor %}
-                    {% include 'partials/langswitcher.html.twig' %}
+                    <ul>
+                        {% for link in root_params.header.header_links %}
+                        <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+                        {% endfor %}
+                        {% include 'partials/langswitcher.html.twig' %}
+                    </ul>
                 </nav>
                 {% if theme.snipcart %}
                 {% if not theme.snipcart_allow_guests_only %}
