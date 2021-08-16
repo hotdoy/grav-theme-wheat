@@ -1,3 +1,10 @@
+# v0.15.2
+## 08/16/2021
+
+1. [](#improved)
+    * Added missing ul
+    * Added quicklink (had slipped under my radar for a while)
+
 # v0.15.1
 ## 08/15/2021
 
