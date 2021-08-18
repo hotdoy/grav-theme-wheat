@@ -1,3 +1,10 @@
+# v0.15.3
+## 08/17/2021
+
+1. [](#improved)
+    * Simpler legal mentions
+    * Added website carbon calculator
+    
 # v0.15.2
 ## 08/16/2021
 
