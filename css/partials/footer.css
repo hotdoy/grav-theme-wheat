@@ -67,9 +67,3 @@
 #footer .legal {
     margin-top: var(--rhythm);
 }
-
-#footer #wcb {
-    margin-top: 0.5em;
-    font-size: x-small !important;
-    text-align: left !important;
-}
