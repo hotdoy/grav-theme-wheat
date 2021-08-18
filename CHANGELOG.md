@@ -1,3 +1,9 @@
+# v0.15.4
+## 08/18/2021
+
+1. [](#improved)
+    * replaced Wholegrain Digital Carbon Calculator with my own fork
+
 # v0.15.3
 ## 08/17/2021
 
