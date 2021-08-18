@@ -67,3 +67,7 @@
 #footer .legal {
     margin-top: var(--rhythm);
 }
+
+#footer #carbonbadge {
+    color: #29c768;
+}
