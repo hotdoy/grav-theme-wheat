@@ -66,17 +66,10 @@
 
 #footer .legal {
     margin-top: var(--rhythm);
-    display: flex;
-    justify-content: space-between;
 }
 
-#footer .copyright {
-    font-size: var(--fs-small);
-}
-
-/*#footer .credit {}*/
-
-#footer .credit svg {
-    width: 49px;
-    height: auto;
+#footer #wcb {
+    margin-top: 0.5em;
+    font-size: x-small !important;
+    text-align: left !important;
 }
