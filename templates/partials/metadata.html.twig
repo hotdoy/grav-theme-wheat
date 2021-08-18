@@ -11,8 +11,8 @@
 {%- endset -%}
 
 {%- set description -%}
-    {% if page.header.meta_description %}
-        {{- page.header.meta_description -}}
+    {% if page.header.page_description %}
+        {{- page.header.page_description -}}
     {% elseif root_params.header.site_description %}
         {{- root_params.header.site_description -}}
     {% endif %}

@@ -1,4 +1,11 @@
-# v0.15.4
+# v0.15.5
+## 08/18/2021
+
+1. [](#improved)
+    * More verbose cabon footprint
+    * Fixed page description using old meta_description field.
+
+    # v0.15.4
 ## 08/18/2021
 
 1. [](#improved)
