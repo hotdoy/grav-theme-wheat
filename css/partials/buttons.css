@@ -7,7 +7,7 @@ button.button {
     white-space: nowrap;
     padding: 9px 16px 9px 16px;
     border: none;
-    border-radius: 9999px;
+    border-radius: 4px;
     text-align: center;
     font-size: 14px;
     line-height: 1;
