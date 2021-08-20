@@ -68,6 +68,10 @@
     margin-top: var(--rhythm);
 }
 
-#footer #carbonbadge {
+#footer #carbonfootprint {
+    color: #29c768;
+}
+
+#footer .timeto-complete {
     color: #29c768;
 }

@@ -1,3 +1,9 @@
+# v0.16.1
+## 08/19/2021
+
+1. [](#improved)
+    * Added domstate-log.js WIP
+
 # v0.16.0
 ## 08/18/2021
 
