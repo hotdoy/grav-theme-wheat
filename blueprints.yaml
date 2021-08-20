@@ -36,19 +36,19 @@ form:
       type: editor
       codemirror:
         mode: css
-      label: Inline CSS
+      label: Inline CSS (omit style tag)
 
     inline_head_script:
       type: editor
       codemirror:
         mode: js
-      label: Inline Head Script
+      label: Inline Head Script (include script tag)
   
     inline_body_script:
       type: editor
       codemirror:
         mode: js
-      label: Inline Body Script
+      label: Inline Body Script (include script tag)
 
     snipcart_section:
       type: section
@@ -152,6 +152,17 @@ form:
       type: text
       label: Twitter Site
       placeholder: "@twitter_handle"
+
+    monetization_section:
+      type: section
+      title: Monetization
+      underline: true
+
+    monetization_payment_pointer:
+      type: text
+      label: Payment Pointer
+      placeholder: $payment.pointer.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      description: Experimental web monetization using Coil (coil.com)
 
     gmaps_section:
       type: section

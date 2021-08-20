@@ -26,6 +26,7 @@
 		{% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %}
 		{% include 'partials/snipcart.html.twig' %}
 		{% include 'partials/dialog.html.twig' %}
+		{% include 'partials/dialog.html.twig' with {id: 'dialog-monetization', content: '🤑 Monetization detected! 🤑'} %}
 		{% include 'partials/dialog.html.twig' with {id: 'dialog-signin', content: 'THEME.DIALOG.SIGNIN'|t } %}
 		{% include 'partials/dialog.html.twig' with {id: 'dialog-signout', content: 'THEME.DIALOG.SIGNOUT'|t } %}
 		{{ assets.js('bottom')|raw }}
