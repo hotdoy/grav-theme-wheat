@@ -59,3 +59,7 @@
 <meta name="twitter:description" content="{{ description }}" />
 {% if image_url %}<meta name="twitter:image" content="{{ image_url }}" />{% endif %}
 {% endif %}
+
+{% if theme.monetization_payment_pointer %}
+<meta name="monetization" content="{{ theme.monetization_payment_pointer }}"
+{% endif %}

@@ -1,3 +1,12 @@
+# v0.16.2
+## 08/20/2021
+
+1. [](#improved)
+    * added font-display: swap
+    * removed a log from domstate-log
+    * added monetization feedback dialog
+    * added monetization meta and related theme variable
+
 # v0.16.1
 ## 08/19/2021
 
