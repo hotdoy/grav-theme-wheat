@@ -7,8 +7,9 @@
 		{% block metadata %}{% include 'partials/metadata.html.twig' %}{% endblock %}
 		{% block canonical %}<link rel="canonical" href="{{ page.url(true, true) }}" />{% endblock %}
 		{% block favicon %}{% include 'partials/favicon.html.twig' %}{% endblock %}
-		<link rel="preload" href="{{ url('theme://fonts/ibm-plex-mono-v6-latin-regular.woff2', true) }}" as="font" crossorigin>
-		<link rel="preload" href="{{ url('theme://fonts/ibm-plex-sans-v8-latin-regular.woff2', true) }}" as="font" crossorigin>
+		<link rel="preload" href="{{ url('theme://fonts/inter-v3-latin-regular.woff2', true) }}" as="font" crossorigin>
+		<link rel="preload" href="{{ url('theme://fonts/inter-v3-latin-600.woff2', true) }}" as="font" crossorigin>
+		<link rel="preload" href="{{ url('theme://fonts/inter-v3-latin-900.woff2', true) }}" as="font" crossorigin>
 		{% include 'partials/js.html.twig' %}
 		{% include 'partials/css.html.twig' %}
 		{% block assets deferred %}
