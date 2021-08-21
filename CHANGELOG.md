@@ -1,4 +1,13 @@
-# v0.16.2
+# v0.16.3
+## 08/21/2021
+
+1. [](#improved)
+    * notify monetizationstart once a day
+    * img now properly support vector
+    * img can now bypass optimization if _bypass is in filename
+    * fixed an unclosed metatag
+    
+    # v0.16.2
 ## 08/20/2021
 
 1. [](#improved)

@@ -12,7 +12,7 @@
 
     <div class="layout">
         {% for item in items %}
-        <div class="item text prose small" style="--index:{{ loop.index }}">
+        <div class="item text prose small">
             {% set title = item.title %}
             {% set image = item.image ? page.media[item.image] %}
             {% set image_alt = item.image_alt %}
