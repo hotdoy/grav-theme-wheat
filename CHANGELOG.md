@@ -1,3 +1,9 @@
+# v0.16.4
+## 08/21/2021
+
+1. [](#improved)
+    * base64 image placeholder WIP
+
 # v0.16.3
 ## 08/21/2021
 
