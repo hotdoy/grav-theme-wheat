@@ -1,4 +1,5 @@
 {% set image = image ?? null %}
+
 {% if image %}
     {% set alt = alt ?? null %}
     {% set title = title ?? null %}
@@ -9,17 +10,22 @@
     {% set quality = image.quality matches '/^\\d+$/' ? image.quality > system_quality ? system_quality : image.quality %}
     {% set bypass = image ? '_bypass' in image.filename : false %}
 
-    {% if type != 'vector' %}
-    {% set ph = 'data:' ~ image.mime ~ ';base64,' ~ filecontent(image.cropResize(128,128).url)|base64_encode %}
-    {% set style = 'background-image:url(' ~ ph ~ ');background-size:cover;background-position:center;' %}
+    {% if type != 'vector' -%}
+        {% set base64 = 'data:' ~ image.mime ~ ';base64,' ~ filecontent(image.cropResize(16,16).url)|base64_encode %}
+        {%- set style -%}
+        background-image:url('{{ base64 }}');background-size:cover;background-position:center;filter:blur(20px);
+        {%- endset -%}
     {% endif %}
 
     {% if type == 'vector' %}
-    {{ image.loading.html(title, alt)|raw }}
+        {{ image.loading.html(title, alt)|raw }}
+
     {% elseif bypass %}
-    {{ image.attribute('style', style).attribute('width', width).attribute('height', height).loading.html(title, alt)|raw }}
+        {{ image.attribute('style', style).attribute('width', width).attribute('height', height).loading.html(title, alt)|raw }}
+    
     {% else %}
-    {{ image.attribute('style', style).attribute('width', width).attribute('height', height).quality(quality).loading.html(title, alt)|raw }}
+        {{ image.attribute('style', style).attribute('width', width).attribute('height', height).quality(quality).loading.html(title, alt)|raw }}
     {% endif %}
+
 {% endif %}
 

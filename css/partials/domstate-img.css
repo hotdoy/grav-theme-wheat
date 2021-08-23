@@ -1,21 +1,3 @@
-img {
-    filter: blur(10px);
-}
+/* img {} */
 
-img[data-state="complete"] {
-    background-image: none!important;
-    background-position: unset;
-    background-position: unset;
-
-    animation-name: img;
-    animation-delay: 0s;
-    animation-duration: 0s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-}
-
-@keyframes img {
-    to {
-        filter: blur(0px);
-    }
-}
+/* img[data-state="complete"] {} */
