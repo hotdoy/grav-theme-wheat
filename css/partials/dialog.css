@@ -5,12 +5,12 @@
 	bottom: 0;
 	left: 0;
 	z-index: 6000;
-	backdrop-filter: blur(10px);
-    transition-property: opacity, visibility;
-    transition-duration: 0.2s;
 
     opacity: 0;
     visibility: hidden;
+	backdrop-filter: blur(10px);
+    transition-property: opacity, visibility;
+    transition-duration: 0.2s;
 }
 
 .dialog.dialog--active {
