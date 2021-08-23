@@ -1,3 +1,9 @@
+# v0.16.5
+## 08/23/2021
+
+1. [](#improved)
+    * Complete image loading solution with base64 inline placeholder.
+
 # v0.16.4
 ## 08/21/2021
 
