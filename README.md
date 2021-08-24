@@ -35,20 +35,17 @@ It uses no build tool, no framework of any kind, only needs a basic LAMP setup, 
 - Grid
 - Carousel
 
-### Plugins config
+### Required plugins
 
-- Breadcrumbs `[built-in-css: false, include-home: false, include-current-page: false, link-trailing: false]`
-- Shortcode Core `[custom-shortcodes: /user/themes/wheat/shortcodes, load-fontawesome: false]`
-- Markdown Notices `[built-in-css: false]`
-- Precache `[admin-enabled: false]`
-- Custom CSS (for quick fixes)
+- Breadcrumbs
+- Shortcode core (with `custom shortcode` pointing to `/user/themes/wheat/shortcodes`)
+- File content (Allowed extensions: `txt, html, jpg, jpeg, png`)
 
-### Libraries
+### External libraries shipped with Wheat
 
 - [Scroll-out](https://scroll-out.github.io/)
-- [Splitting](https://splitting.js.org/)
-- [Swipper](https://swiperjs.com/)
-- DOMstate (WIP)  
+- [QuickLink](https://github.com/GoogleChromeLabs/quicklink)
+- [Snipcart](https://snipcart.com/)
 
 ## Starting a new project
 
