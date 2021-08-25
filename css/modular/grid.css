@@ -25,9 +25,15 @@
 }
 
 .module.grid .item {
-    padding: var(--gutter);
+    padding: 10px;
     border: 1px solid var(--c-guide);
     border-radius: 4px;
+}
+
+@media (min-width: 735px) {
+    .module.grid .item {
+        padding: var(--gutter);
+    }    
 }
 
 .module.grid .item img {
