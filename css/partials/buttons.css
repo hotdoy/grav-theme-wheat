@@ -28,6 +28,13 @@ button.button:hover {
     box-shadow: 0 4px 10px 0px #29c76873;
 }
 
+.button:hover:active,
+a.button:hover:active,
+button.button:hover:active {
+    transform: translateY(0px);
+    box-shadow: none;
+}
+
 .button.disabled {
     opacity: 0.7;
     box-shadow: 0;
