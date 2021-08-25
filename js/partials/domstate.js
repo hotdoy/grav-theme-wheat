@@ -15,10 +15,6 @@ const DomState = {
         complete: new Event('domstateComplete'),
     },
 
-    Log: function(message) {
-        console.log('%c DOMSTATE: ' + message, 'color:green;');
-    },
-
     GetAdjustedDelay: function(delay) {
         if (delay <= 0) {
             return delay;
@@ -48,14 +44,12 @@ const DomState = {
                     document.dispatchEvent(e);   
                 });
             }
-            DomState.Log(DomState.state);
         }, delay);
     },
 
     Init: function() {
         this.perceivedDelay = performance.now();
         this.depth = this.GetDepth(this.path);
-        document.addEventListener('domstateReady', () => {this.Log('ready');});
         document.addEventListener('readystatechange', e => {
             if (e.target.readyState === 'complete') {
                 this.UpdateState('complete', this.GetAdjustedDelay(this.delay), [this.events.complete]);

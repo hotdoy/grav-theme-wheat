@@ -72,6 +72,7 @@
     color: var(--c-hl);
 }
 
-#footer .timeto-complete {
+#footer .domstate-ttc,
+#footer .domstate-tti {
     color: var(--c-hl);
 }
