@@ -21,7 +21,7 @@
                 <nav class="nav">
                     <ul>
                         {% for link in root_params.header.header_links %}
-                        <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+                        <li><a href="{{ link.url }}" class="button">{{ link.label }}</a></li>
                         {% endfor %}
                         {% include 'partials/langswitcher.html.twig' %}
                     </ul>
