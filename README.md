@@ -1,4 +1,4 @@
-# Wheat theme for Grav CMS.
+# Wheat -  The sustainable theme for Grav CMS
 
 [![Discord](https://img.shields.io/discord/501836936584101899.svg?logo=discord&colorB=728ADA&label=Discord%20Chat)](https://chat.getgrav.org)
 [![Get Grav](https://img.shields.io/badge/get-grav-blueviolet)](https://getgrav.org/downloads)
@@ -7,14 +7,9 @@
 
 ## Description (WIP)
 
-Wheat is a starter theme for Grav CMS. It contains...
+Wheat is a theme for Grav CMS. It is aimed at building sustainable websites by limiting overheads and development tooling. It takes a responsible approach to web development and leads by examples by offering common patterns their related sustainable solutions.
 
-- Common patterns used by [Calotte](https://calotte.ca/).
-- A Snipcart integration allowing you to sell physical or digital products in minutes.
-- Commonly used libraries for animating elements and text on scroll.
-- A neat little thing called **DOMstate** to expose various states of the document you can then use with CSS for a modern and app-like feel.
-
-It uses no build tool, no framework of any kind, only needs a basic LAMP setup, uses Github Actions for automatic deployment and only takes a couple of minutes to get development up and running.
+It uses no build tool, no framework of any kind, only needs a basic LAMP setup, uses Github Actions for automatic deployment and takes a couple minutes to setup.
 
 ## What's in the theme?
 
@@ -23,6 +18,7 @@ It uses no build tool, no framework of any kind, only needs a basic LAMP setup, 
 - Default
 - Collection
 - Product
+- Blog (WIP)
 - Post
 
 ### Modular templates
@@ -34,21 +30,19 @@ It uses no build tool, no framework of any kind, only needs a basic LAMP setup, 
 - Map
 - Grid
 - Carousel
+- Tabs (WIP)
 
-### Plugins config
+### Required plugins
 
-- Breadcrumbs `[built-in-css: false, include-home: false, include-current-page: false, link-trailing: false]`
-- Shortcode Core `[custom-shortcodes: /user/themes/wheat/shortcodes, load-fontawesome: false]`
-- Markdown Notices `[built-in-css: false]`
-- Precache `[admin-enabled: false]`
-- Custom CSS (for quick fixes)
+- Breadcrumbs
+- Shortcode core (with `custom shortcode` pointing to `/user/themes/wheat/shortcodes`)
+- File content (Allowed extensions: `txt, html, jpg, jpeg, png`)
 
-### Libraries
+### External libraries shipped with Wheat
 
 - [Scroll-out](https://scroll-out.github.io/)
-- [Splitting](https://splitting.js.org/)
-- [Swipper](https://swiperjs.com/)
-- DOMstate (WIP)  
+- [QuickLink](https://github.com/GoogleChromeLabs/quicklink)
+- [Snipcart](https://snipcart.com/)
 
 ## Starting a new project
 
@@ -222,12 +216,3 @@ Releasing is a pretty straightforward process once your Github Actions are prope
 - Merge the pull request into master.
 - Create a new release using the version number as tag.
 - Github Actions should take over and push your changes.
-
-## Tenets
-
-- Stick to mobile
-- Always choose the maintainable solution.
-- Time is money, so keep it light and fast.
-- Think about the added value. If something does not add value, ditch it.
-- Never block the user's journey unless it prints money.
-- Your site should be like a Call of Duty map. User should never get trapped in a corner.

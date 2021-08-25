@@ -1,3 +1,9 @@
+# v0.16.6
+## 08/24/2021
+
+1. [](#improved)
+    * Temporary breadcrumb GSC fix
+
 # v0.16.5
 ## 08/23/2021
 
