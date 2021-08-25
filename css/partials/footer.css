@@ -69,9 +69,9 @@
 }
 
 #footer #carbonfootprint {
-    color: #29c768;
+    color: var(--c-hl);
 }
 
 #footer .timeto-complete {
-    color: #29c768;
+    color: var(--c-hl);
 }
