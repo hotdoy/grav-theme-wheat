@@ -17,12 +17,25 @@ button.button {
     color: var(--c-bg);
     text-decoration: none;
     transition-property: transform, box-shadow;
+    transition-duration: 100ms;
     outline: none;
     cursor: pointer;
 }
 
+.button:focus,
+.button:hover,
+a.button:focus,
+a.button:hover,
+button.button:focus,
+button.button:hover {
+    outline: none;
+    box-shadow: 0 0 0 4px rgb(0 86 255 / 28%);
+}
+
 a.button:hover:active,
 button.button:hover:active {
+    outline: none;
+    box-shadow: 0 0 0 4px rgb(0 86 255 / 28%);
     transform: translateY(1px);
 }
 

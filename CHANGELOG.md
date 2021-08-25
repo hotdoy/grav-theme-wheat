@@ -1,3 +1,10 @@
+# v0.16.7
+## 08/24/2021
+
+1. [](#improved)
+    * Breadcrumb removal. Will be re-implemented when a proper solution comes to mind.
+    * Added focus-ring on buttons
+
 # v0.16.6
 ## 08/24/2021
 
