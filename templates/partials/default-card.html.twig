@@ -1,6 +1,10 @@
 {% set item = item|default(item) %}
-{% set image = image|default(item.media.images|first) %}
 {% set title = title|default(item.title) %}
+{% set image = image|default(item.header.image ? item.media[item.header.image] : item.media.images|first) %}
+{% set image_alt = image_alt|default(item.header.image_alt ?? '') %}
+{% set title = title|default(item.header.title) %}
+{% set date = date|default(item.header.date ?? null) %}
+{% set price = price|default(item.header.price) %}
 
 <article class="default__card">
 	<a href="{{ item.url }}">
@@ -8,7 +12,17 @@
 			{% include "partials/img.html.twig" with {image: image} only %}
 		</div>
 		<div class="text small">
+			
 			<h3>{{ title }}</h3>
+			
+			{% if date %}
+			<p>{{ date|date('Y/m/d') }}</p>
+			{% endif %}
+
+			{% if price %}
+			<p>{{ price|number_format(2, ',', ' ') }} $</p>
+			{% endif %}
+
 		</div>
 	</a>
 </article>

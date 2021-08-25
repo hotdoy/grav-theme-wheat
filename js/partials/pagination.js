@@ -5,31 +5,35 @@ const Pagination = {
     url: {},
     result: {},
 
-    Request: function() {
+    Fetch: function() {
         Pagination.btn.classList.add('disabled', 'waiting');
-        let request = new XMLHttpRequest();
-        request.responseType = "document";
-        request.open("GET", Pagination.url, true);
-        request.onload = function() {
-            if (this.status >= 200 && this.status < 400) {
-                Pagination.result = this.response;
-                Pagination.AppendResult();
-            } else {
-                console.log("PAGINATION - SERVER STATUS: " + this.status);
-            }
-        };
-        request.onerror = function() {
-            console.log("PAGINATION - ERROR " + this.status);
-        };
-        request.send();
-    },
 
-    AppendResult: function() {
-        const articles = Pagination.result.querySelector("[data-pagination-list]")
-            .innerHTML;
-        Pagination.list.insertAdjacentHTML("beforeend", articles);
-        Pagination.UpdateUi();
-        Pagination.UpdateParams();
+        fetch(Pagination.url)
+
+        .then(function(r) {
+            // return response as text
+            return r.text();
+        })
+
+        .then(function (text) {
+
+            // init DOM parser
+            let parser = new DOMParser();
+            let doc = parser.parseFromString(text, 'text/html');
+
+
+            Pagination.result = doc;
+            let articles = doc.querySelector("[data-pagination-list]").innerHTML;
+            Pagination.list.insertAdjacentHTML("beforeend", articles);
+            Pagination.UpdateUi();
+            Pagination.UpdateParams();
+        })
+
+        // Handle error
+        .catch(function (e) {
+            console.log(e);
+        })
+        
     },
 
     UpdateUi: function() {
@@ -60,7 +64,7 @@ const Pagination = {
             if (!!Pagination.ui && !!Pagination.url && !!Pagination.list) {
                 Pagination.btn.addEventListener("click", (event) => {
                     event.preventDefault();
-                    Pagination.Request();
+                    Pagination.Fetch();
                 });
             }
         }

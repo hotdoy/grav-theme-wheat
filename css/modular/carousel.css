@@ -1,34 +1,40 @@
 /* .module.carousel {} */
 
 .module.carousel > .wrapper {
-		position: relative;
-		margin: 0 auto;
-		padding: 0 var(--gutter);
-		width: 100%;
-		max-width: var(--w-main);
-		overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	padding: 0 var(--gutter);
+	width: 100%;
+	max-width: var(--w-main);
+	overflow: hidden;
 }
 
 .module.carousel > .wrapper > h2 {
-		margin-bottom: 1rem;
-		width: 100%;
+	margin-bottom: 1rem;
+	width: 100%;
 }
 
 .module.carousel .scroller__slide {
-		min-width: 60%;
-		max-width: 60%;
+	min-width: 60%;
+	max-width: 60%;
 }
 
 @media (min-width: 735px) {
-		.module.carousel .scroller__slide {
-				min-width: 39%;
-				max-width: 39%;
-		}
+	.module.carousel .scroller__slide {
+		min-width: 39%;
+		max-width: 39%;
+	}
 }
 
 @media (min-width: 1200px) {
-		.module.carousel .scroller__slide {
-				min-width: 29%;
-				max-width: 29%;
-		}
+	.module.carousel .scroller__slide {
+		min-width: 29%;
+		max-width: 29%;
+	}
+}
+
+.module.carousel .scroller__slide a {
+    display: block;
+    text-decoration: none;
+    margin: 4px 4px 0 4px;
 }

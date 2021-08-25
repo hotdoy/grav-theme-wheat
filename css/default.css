@@ -33,6 +33,7 @@
 /* .default__card {} */
 
 .default__card a {
+    display: block;
     text-decoration: none;
 }
 
