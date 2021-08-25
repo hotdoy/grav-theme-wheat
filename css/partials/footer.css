@@ -69,9 +69,10 @@
 }
 
 #footer #carbonfootprint {
-    color: #29c768;
+    color: var(--c-hl);
 }
 
-#footer .timeto-complete {
-    color: #29c768;
+#footer .domstate-ttc,
+#footer .domstate-tti {
+    color: var(--c-hl);
 }
