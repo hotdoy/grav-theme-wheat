@@ -1,17 +1,18 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set pagination_key = 'articles' %}
-{% set pagination_start = 0 %}
-{% set pagination_step = 12 %}
-{% set pagination_value = uri.query(pagination_key) %}
-{% set pagination_end = pagination_value ?? pagination_step %}
-{% set new_pagination_start = pagination_end %}
-{% set new_pagination_end = new_pagination_start + pagination_step %}
-{% set raw_collection = page.collection({ items: {'@self.children':''}, 'order': {'by': 'folder', 'dir': 'asc'}}) %}
-{% set raw_collection_length = raw_collection|length %}
-{% set collection = page.collection({ items: {'@self.children':''}, 'limit': pagination_end, 'order': {'by': 'folder', 'dir': 'asc'}}) %}
-{% set computed_collection = collection|slice(pagination_start, pagination_end) %}
-{# {% set references = page.header.references %} #}
+{% set key = 'articles' %}
+{% set start = 0 %}
+{% set step = 12 %}
+{% set qsvalue = uri.query(key) ?? null %}
+{% set end = qsvalue ?? step %}
+
+{% set next_start = end %}
+{% set next_end = next_start + step %}
+
+{% set collection_raw = page.collection({ items: {'@self.children':''}, 'order': {'by': 'folder', 'dir': 'asc'}}) %}
+{% set collection_raw_length = collection_raw|length %}
+{% set collection = page.collection({ items: {'@self.children':''}, 'limit': end, 'order': {'by': 'folder', 'dir': 'asc'}}) %}
+{% set collection_slice = collection|slice(start, end) %}
 
 {% block content %}
 
@@ -22,7 +23,7 @@
     {# LIST #}
     <section class="module collection__list">
         <div class="wrapper">
-            {% for item in computed_collection %}
+            {% for item in collection_slice %}
             {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item} only %}
             {% endfor %}
         </div>
@@ -30,8 +31,8 @@
     
     {# PAGINATION #}
     <section class="collection__pagination">
-        {% if new_pagination_start + 1 <= raw_collection_length %}
-        {% set url = (page.url ~ '?' ~ pagination_key ~ '=' ~ new_pagination_end) %}
+        {% if next_start + 1 <= collection_raw_length %}
+        {% set url = (page.url ~ '?' ~ key ~ '=' ~ next_end) %}
         <button class="button" href="{{ url }}">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</button>
         {% endif %}
     </section>
