@@ -96,58 +96,57 @@
         	    REGULAR 
 ============================================*/
 .text {
-    font-size: var(--fs-medium);
+    font-size: 16px;
     line-height: 1.5;
 }
 
-.text p {
-    font-size: inherit;
-    line-height: inherit;
-    color: var(--c-fg);
-}
-.text.prose p {
-    margin: 28px 0;
+.text :where(p) {
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-.text h1 {
-    font-size: var(--fs-xxlarge);
+.text.prose :where(p) {
+    margin: 2rem 0;
+}
+
+.text :where(h1) {
+    font-size: 32px;
 	font-weight: var(--fw-black);
     line-height: 1.2;
 }
-.text.prose h1 {
-    margin: 67px 0;
+
+@media (min-width: 1024px) {
+    .text :where(h1) {
+        font-size: 48px;
+    }
 }
 
-.text h2 {
+.text.prose :where(h1) {
+    margin: 4rem 0;
+}
+
+.text :where(h2) {
     font-size: var(--fs-xlarge);
 	font-weight: var(--fw-bold);
     line-height: 1.2;
 }
-.text.prose h2, 
-.text.prose .h2 {
+.text.prose :where(h2) {
     margin: 38px 0 28px 0;
 }
 
-.text h3,
-.text .h3,
-.text h4,
-.text .h4,
-.text h5,
-.text .h5,
-.text h6,
-.text .h6 {
+.text :where(h3),
+.text :where(h4),
+.text :where(h5),
+.text :where(h6) {
     font-size: var(--fs-large);
     line-height: 1.2;
     font-weight: var(--fw-bold);
 }
-.text.prose h3,
-.text.prose .h3,
-.text.prose h4,
-.text.prose .h4,
-.text.prose h5,
-.text.prose .h5,
-.text.prose h6,
-.text.prose .h6 {
+
+.text.prose :where(h3),
+.text.prose :where(h4),
+.text.prose :where(h5),
+.text.prose :where(h6) {
     margin: 28px 0;
 }
 
