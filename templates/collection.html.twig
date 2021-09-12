@@ -1,41 +1,37 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set pagination_start = 0 %}
-{% set pagination_step = 12 %}
-{% set pagination_key = 'articles' %}
-{% set pagination_values = uri.query(pagination_key)|split('-') %}
-{% set pagination_start = pagination_values[0]|default(0) %}
-{% set pagination_end = pagination_values[1] ?? pagination_step %}
-{% set new_pagination_start = pagination_end %}
-{% set new_pagination_end = new_pagination_start + pagination_step %}
-{% set raw_collection = page.collection({ items: {'@self.children':''}, 'order': {'by': 'folder', 'dir': 'asc'}}) %}
-{% set raw_collection_length = raw_collection|length %}
-{% set collection = page.collection({ items: {'@self.children':''}, 'limit': pagination_end, 'order': {'by': 'folder', 'dir': 'asc'}}) %}
-{% set computed_collection = collection|slice(pagination_start, pagination_end) %}
-{# {% set references = page.header.references %} #}
+{% set key = 'articles' %}
+{% set step = 3 %}
+{% set qs = uri.query(key) ?? null %}
+{% set qs_start = qs ? qs|split('-')[0] : 0 %}
+{% set qs_end = qs ? qs|split('-')[1] : step %}
+{% set next_start = qs_end %}
+{% set next_end = next_start + step %}
+{% set collection_raw = page.collection({ items: {'@self.children':''}, 'order': {'by': 'folder', 'dir': 'asc'}}) %}
+{% set collection_raw_length = collection_raw|length %}
+{% set collection = page.collection({ items: {'@self.children':''}, 'limit': qs_end, 'order': {'by': 'folder', 'dir': 'asc'}}) %}
+{% set collection_slice = collection|slice(qs_start, qs_end) %}
 
 {% block content %}
 
     {# HEADER #}
     {% set title = page.header.display_title ?? page.title %}
     {% include 'partials/default-heading.html.twig' with {title: title} %}
-    
+   
     {# LIST #}
-    <section class="module collection__grid">
+    <section class="module collection__list">
         <div class="wrapper">
-            <div class="grid" data-pagination-list>
-                {% for item in computed_collection %}
-                {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item, 'loop': loop} only %}
-                {% endfor %}
-            </div>
+            {% for item in collection_slice %}
+            {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item} only %}
+            {% endfor %}
         </div>
     </section>
     
     {# PAGINATION #}
-    <section class="pagination" data-pagination-ui>
-        {% if new_pagination_start + 1 <= raw_collection_length %}
-        {% set url = (page.url ~ '?' ~ pagination_key ~ '=' ~ new_pagination_start ~ '-' ~ new_pagination_end) %}
-        <button class="button" href="{{ url }}" data-pagination-ui-btn>{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</button>
+    <section class="collection__pagination">
+        {% if next_start + 1 <= collection_raw_length %}
+        {% set url = (page.url ~ '?' ~ key ~ '=' ~ next_start ~ '-' ~ next_end) %}
+        <button class="button" href="{{ url }}">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</button>
         {% endif %}
     </section>
 

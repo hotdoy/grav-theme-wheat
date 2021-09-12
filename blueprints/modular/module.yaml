@@ -23,6 +23,18 @@ form:
               unset@: true
         advanced:
           fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    header.body_classes:
+                      unset@: true
+                    header.class:
+                      type: text
+                      label: Class
+                    header.id:
+                      type: text
+                      label: Id
             overrides:
               fields:
                 header.dateformat:

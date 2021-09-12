@@ -1,13 +1,12 @@
 {% set name = name|default() %}
-{% set body_classes = page.header.body_classes %}
-{% set extra_classes = extra_classes|default() %}
-{% set track_section_state = track_section_state|default(true) %}
+{% set id = id ?? page.header.id ?? null %}
+{% set class = class ?? page.header.class ?? null %}
+
 {% set computed_classes %}
 {{ name }}
-{%- if body_classes %} {{ body_classes }}{% endif %}
-{%- if extra_classes %} {{ extra_classes }}{% endif %}
+{%- if class %} {{ class }}{% endif %}
 {% endset -%}
 
-<section class="module {{ computed_classes }}">
+<section{% if id %} id="{{ id|url_encode|lower }}"{% endif %} class="module {{ computed_classes }}">
 {% block content %}{% endblock %}
 </section>

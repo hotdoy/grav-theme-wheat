@@ -10,7 +10,6 @@ const Product = {
             });
         };
     },
-
 };
 
 Product.InitVariant();
