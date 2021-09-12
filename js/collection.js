@@ -35,16 +35,16 @@ const Collection = {
                 Collection.pagination.remove();
             }
 
-            // Add new elements to existing list
+            // Add new articles to existing list
             Collection.list.insertAdjacentHTML('beforeend', el);
 
             // Update query-string value with current # of articles
             Collection.qsValue = Collection.list.children.length;
 
             // Build qs based on the real number of articles
-            Collection.qs.set(Collection.qsKey, Collection.qsValue);
+            Collection.qs.set(Collection.qsKey, '0-' + Collection.qsValue);
 
-            // Swap the current url with the one with the new query
+            // Swap the current url with the one including the new query
             window.history.replaceState({}, "", `${location.pathname}?${Collection.qs}`);
 
             // Restart the whole process

@@ -1,9 +1,17 @@
+
+# v0.16.9
+## 09/12/2021
+
+1. [](#improved)
+    * Pretty much fixed pagination
+    * Improved text sizes
+    
 # v0.16.8
 ## 08/25/2021
 
 1. [](#improved)
     * Improved focus and feedback for links and buttons
-    * Started pagination refactoring WIP. 
+    * Started pagination refactoring WIP.
 
 # v0.16.7
 ## 08/24/2021

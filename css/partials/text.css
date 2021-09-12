@@ -51,31 +51,6 @@
 
 
 /*===========================================
-				SIZES 
-============================================*/
-
-:root {
-	--fs-small: small;
-	--fs-medium: normal;
-	--fs-large: large;
-	--fs-xlarge: x-large;
-	--fs-xxlarge: xx-large;
-}
-@media (min-width: 635px) {
-	:root {
-		--fs-small: 14px;
-		--fs-medium: 16px;
-		--fs-large: 24px;
-		--fs-xlarge: 32px;
-		--fs-xxlarge: 48px;
-	}
-}
-
-
-
-
-
-/*===========================================
 				DOCUMENT 
 ============================================*/
 :root {
@@ -126,126 +101,62 @@
 }
 
 .text :where(h2) {
-    font-size: var(--fs-xlarge);
+    font-size: x-large;
 	font-weight: var(--fw-bold);
     line-height: 1.2;
 }
+
+@media (min-width: 1024px) {
+    .text :where(h2) {
+        font-size: 32px;
+    }
+}
+
 .text.prose :where(h2) {
-    margin: 38px 0 28px 0;
+    margin: 3rem 0 2rem 0;
 }
 
 .text :where(h3),
 .text :where(h4),
 .text :where(h5),
 .text :where(h6) {
-    font-size: var(--fs-large);
+    font-size: large;
     line-height: 1.2;
     font-weight: var(--fw-bold);
+}
+
+@media (min-width: 1024px) {
+    .text :where(h3),
+    .text :where(h4),
+    .text :where(h5),
+    .text :where(h6) {
+        font-size: 24px;
+    }
 }
 
 .text.prose :where(h3),
 .text.prose :where(h4),
 .text.prose :where(h5),
 .text.prose :where(h6) {
-    margin: 28px 0;
+    margin: 2rem 0;
 }
 
-
-
-
-
-/*===========================================
-        	    SMALL 
-============================================*/
-.text.small {
-    font-size: small;
-    line-height: 1.2rem;
-}
-
-.text.small p {
-    font-size: inherit;
-    line-height: inherit;
-}
-.text.small.prose p {
-    margin-top: 1rem;
-    margin-bottom: 0;
-}
-
-.text.small h3,
-.text.small .h3,
-.text.small h4,
-.text.small .h4,
-.text.small h5,
-.text.small .h5,
-.text.small h6,
-.text.small .h6 {
-    font-size: medium;
-    line-height: 1.5rem;
-    font-weight: var(--fw-bold);
-}
-.text.small.prose h3,
-.text.small.prose .h3,
-.text.small.prose h4,
-.text.small.prose .h4,
-.text.small.prose h5,
-.text.small.prose .h5,
-.text.small.prose h6,
-.text.small.prose .h6 {
-    margin-top: 1rem;
-    margin-bottom: 0;
-}
-
-
-.text.small h2, 
-.text.small .h2,
-.text.small h1, 
-.text.small .h1 {
-    font-size: large;
-    line-height: 1.5rem;
-    font-weight: var(--fw-bold);
-}
-.text.small.prose h2, 
-.text.small.prose .h2,
-.text.small.prose h1, 
-.text.small.prose .h1 {
-    margin-top: 2rem;
-    margin-bottom: 0;
-}
-
-
-
-
-
-/*===========================================
-        	 	   MISC 
-============================================*/
-
-.prose > :first-child {margin-top: 0;}
-.prose > :last-child {margin-bottom: 0;}
-
-.text p:empty {
-    display: none;
+.text blockquote,
+.text blockquote p {
+    font-size: 2rem;
+    line-height: 1.2;
 }
 
 .text strong {
-    font-size: inherit;
     font-weight: var(--fw-bold);
 }
 
 .text em {
-    font-size: inherit;
     font-style: italic;
 }
 
 .text sup {
     font-size: 0.5em;
-}
-
-.text blockquote,
-.text blockquote p {
-    color: var(--c-fg);
-    font-size: 1rem;
-    line-height: 1.2;
 }
 
 .text ul,
@@ -273,4 +184,75 @@
     color: var(--c-fg);
     text-decoration: underline;
 }
+
+
+
+
+
+/*===========================================
+        	    SMALL 
+============================================*/
+.text.small {
+    font-size: small;
+    line-height: 1.2rem;
+}
+
+.text.small :where(p) {
+    font-size: small;
+    line-height: 1.2rem;
+}
+
+.text.small.prose :where(p) {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.text.small :where(h2), 
+.text.small :where(h1) {
+    font-size: large;
+    line-height: 1.5rem;
+    font-weight: var(--fw-bold);
+}
+.text.small.prose :where(h2), 
+.text.small.prose :where(h1) {
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.text.small :whete(h3),
+.text.small :whete(h4),
+.text.small :whete(h5),
+.text.small :whete(h6) {
+    font-size: medium;
+    line-height: 1.5rem;
+    font-weight: var(--fw-bold);
+}
+
+.text.small.prose h3,
+.text.small.prose .h3,
+.text.small.prose h4,
+.text.small.prose .h4,
+.text.small.prose h5,
+.text.small.prose .h5,
+.text.small.prose h6,
+.text.small.prose .h6 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+
+
+
+
+/*===========================================
+        	 	   MISC 
+============================================*/
+
+.prose > :first-child {margin-top: 0;}
+.prose > :last-child {margin-bottom: 0;}
+
+.text p:empty {
+    display: none;
+}
+
 
