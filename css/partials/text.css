@@ -219,10 +219,10 @@
     margin-bottom: 0;
 }
 
-.text.small :whete(h3),
-.text.small :whete(h4),
-.text.small :whete(h5),
-.text.small :whete(h6) {
+.text.small :where(h3),
+.text.small :where(h4),
+.text.small :where(h5),
+.text.small :where(h6) {
     font-size: medium;
     line-height: 1.5rem;
     font-weight: var(--fw-bold);
