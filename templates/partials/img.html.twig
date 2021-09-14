@@ -19,10 +19,8 @@
 
     {% if type == 'vector' %}
         {{ image.loading.html(title, alt)|raw }}
-
     {% elseif bypass %}
         {{ image.attribute('style', style).attribute('width', width).attribute('height', height).loading.html(title, alt)|raw }}
-    
     {% else %}
         {{ image.attribute('style', style).attribute('width', width).attribute('height', height).quality(quality).loading.html(title, alt)|raw }}
     {% endif %}

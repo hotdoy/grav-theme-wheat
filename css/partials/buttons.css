@@ -24,15 +24,21 @@ button.button {
 .button:hover,
 a.button:hover,
 button.button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 10px 0px #29c76873;
+    outline: none;
+    opacity: 0.8;
 }
 
 .button:hover:active,
 a.button:hover:active,
 button.button:hover:active {
-    transform: translateY(0px);
-    box-shadow: none;
+    outline: none;
+    box-shadow: 0 0 0 4px rgb(0 255 43 / 34%);
+}
+
+a:focus,
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgb(0 255 43 / 34%);
 }
 
 .button.disabled {
@@ -75,8 +81,3 @@ button.button:hover:active {
     }
 }
 
-a:focus,
-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 4px rgb(0 86 255 / 28%);
-}

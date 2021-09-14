@@ -141,24 +141,6 @@
     margin: 2rem 0;
 }
 
-.text blockquote,
-.text blockquote p {
-    font-size: 2rem;
-    line-height: 1.2;
-}
-
-.text strong {
-    font-weight: var(--fw-bold);
-}
-
-.text em {
-    font-style: italic;
-}
-
-.text sup {
-    font-size: 0.5em;
-}
-
 .text ul,
 .text ol {
     margin-top: 1rem;
@@ -213,6 +195,7 @@
     line-height: 1.5rem;
     font-weight: var(--fw-bold);
 }
+
 .text.small.prose :where(h2), 
 .text.small.prose :where(h1) {
     margin-top: 2rem;
@@ -228,14 +211,10 @@
     font-weight: var(--fw-bold);
 }
 
-.text.small.prose h3,
-.text.small.prose .h3,
-.text.small.prose h4,
-.text.small.prose .h4,
-.text.small.prose h5,
-.text.small.prose .h5,
-.text.small.prose h6,
-.text.small.prose .h6 {
+.text.small.prose :where(h3),
+.text.small.prose :where(h4),
+.text.small.prose :where(h5),
+.text.small.prose :where(h6) {
     margin-top: 1rem;
     margin-bottom: 0;
 }
@@ -248,11 +227,28 @@
         	 	   MISC 
 ============================================*/
 
+.text :where(blockquote),
+.text :where(blockquote p) {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+}
+
+.text :where(strong) {
+    font-weight: var(--fw-bold);
+}
+
+.text :where(em) {
+    font-style: italic;
+}
+
+.text :where(sup) {
+    font-size: 0.5em;
+}
+
 .prose > :first-child {margin-top: 0;}
 .prose > :last-child {margin-bottom: 0;}
 
 .text p:empty {
     display: none;
 }
-
-
