@@ -1,8 +1,8 @@
 const Collection = {
-    list: {},
-    pagination: {},
-    trigger: {},
-    url: {},
+    list: null,
+    pagination: null,
+    trigger: null,
+    url: null,
     qsKey: 'articles',
     qsValue: 0,
     qs: new URLSearchParams(),
@@ -61,7 +61,7 @@ const Collection = {
     Init: function() {
         Collection.list = document.querySelector('.collection__list .wrapper');
         Collection.pagination = document.querySelector('.collection__pagination');
-        if (Collection.pagination) {
+        if (!!Collection.pagination) {
             Collection.trigger = Collection.pagination.querySelector('button');
             Collection.url = Collection.trigger.getAttribute('href');
             if (!!Collection.url) {
