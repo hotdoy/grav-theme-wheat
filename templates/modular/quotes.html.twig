@@ -7,14 +7,16 @@
 		<div class="scroller__scrollctn">
 			{% for item in page.header.items %}
 			{% set image = item.image ? page.media[item.image] %}
-			<div class="scroller__slide text">
-				<blockquote class="h3">{{ item.quote }}</blockquote>
+			<div class="scroller__slide">
+				<div class="quote text">
+					<blockquote>{{ item.quote }}</blockquote>
+				</div>
 				{% if image %}
 				<div class="portrait">
 					{% include "partials/img.html.twig" with {image: image} only %}
 				</div>
 				{% endif %}
-				<div class="source small">{{ item.source }}</div>
+				<div class="source text small">{{ item.source }}</div>
 			</div>
 			{% endfor %}
 		</div>

@@ -1,3 +1,9 @@
+# v0.16.10
+## 09/14/2021
+
+1. [](#improved)
+    * Immprooved pagination stability
+    * Improved text sizes
 
 # v0.16.9
 ## 09/12/2021

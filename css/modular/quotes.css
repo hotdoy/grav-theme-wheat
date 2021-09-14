@@ -32,6 +32,7 @@
 .module.quotes blockquote {
   margin: 0 auto;
   max-width: var(--w-text);
+  font-size: 1.5em;
 }
 
 .module.quotes .portrait {
@@ -53,6 +54,4 @@
 .module.quotes .source {
   margin-top: 10px;
   width: 250px;
-  font-size: small;
-  line-height: 1.6;
 }
