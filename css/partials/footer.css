@@ -66,10 +66,7 @@
 
 #footer .legal {
     margin-top: var(--rhythm);
-}
-
-#footer #carbonfootprint {
-    color: var(--c-hl);
+    max-width: 80%;
 }
 
 #footer .domstate-ttc,

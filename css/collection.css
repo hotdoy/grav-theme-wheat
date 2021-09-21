@@ -23,7 +23,7 @@
 	align-items: center;
 	justify-content: center;
 	padding: 0 var(--gutter);
-	max-width: var(--w-body);
+	max-width: var(--w-main);
 	margin: 0 auto;
 	margin-top: var(--gutter);
 }

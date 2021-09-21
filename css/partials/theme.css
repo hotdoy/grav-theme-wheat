@@ -32,8 +32,8 @@
 @media (min-width: 640px) {
 	:root {
 		--w-text: 500px;
-		--w-main: 800px;
-		--w-body: 800px;
+		--w-main: 100%;
+		--w-body: 100%;
 		--w-full: 100%;
 		--gutter: 20px;
 		--rhythm: 160px;
@@ -42,23 +42,36 @@
   
 @media (min-width: 1024px) {
 	:root {
-		--w-text: 640px;
-		--w-main: 1200px;
-		--w-body: 1200px;
+		--w-text: 500px;
+		--w-main: 900px;
+		--w-body: 100%;
 		--w-full: 100%;
+		--gutter: 20px;
+		--rhythm: 160px;
 	}
 }
   
 @media (min-width: 1280px) {
 	:root {
+		--w-text: 500px;
+		--w-main: 1200px;
+		--w-body: 1600px;
+		--w-full: 1920px;
+		--gutter: 20px;
+		--rhythm: 160px;
+	}
+}
+
+@media (min-width: 1440px) {
+	:root {
 		--w-text: 640px;
 		--w-main: 1200px;
 		--w-body: 1600px;
 		--w-full: 1920px;
+		--gutter: 20px;
+		--rhythm: 160px;
 	}
 }
-
-
 
 
 

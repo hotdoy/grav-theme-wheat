@@ -39,7 +39,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: var(--gutter);
+    padding: 0 var(--gutter);
 }
 
 #header .layout .logo svg {
@@ -65,7 +65,7 @@
 #header .layout nav a.button {
     margin-top: 0;
     padding: 7px 6px 7px 6px;
-    font-size: var(--fs-small);
+    font-size: small;
 }
 
 #header .layout nav li {
