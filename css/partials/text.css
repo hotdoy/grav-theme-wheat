@@ -41,7 +41,10 @@
 
 :root {
 	--ff-sans: "Inter";
+    /* --ff-serif: "Inter"; */
+
 	--fw-regular: 400;
+    --fw-medium: 500;
 	--fw-bold: 600;
 	--fw-black: 900;
 }
@@ -60,7 +63,7 @@
 }
 ::selection{
     background-color:#ffee00;
-    color: black;
+    color: var(--c-fg);
 }
 
 
@@ -163,7 +166,6 @@
 }
 
 .text a {
-    color: var(--c-fg);
     text-decoration: underline;
 }
 

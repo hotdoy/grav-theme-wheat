@@ -1,8 +1,18 @@
+# v0.16.11
+## 09/21/2021
+
+1. [](#improved)
+    * Improved breakpoints
+    * Improved hover and active state styles
+    * Monetization does not trigger a dialog anymore
+    * Monetization triggers a console log
+    * Improved header padding and font-size
+
 # v0.16.10
 ## 09/14/2021
 
 1. [](#improved)
-    * Immprooved pagination stability
+    * Improved pagination stability
     * Improved text sizes
 
 # v0.16.9

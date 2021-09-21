@@ -35,6 +35,7 @@
 .default__card a {
     display: block;
     text-decoration: none;
+    border-radius: 6px;
 }
 
 .default__card .media-ctn {

@@ -18,20 +18,21 @@ padding-bottom: var(--gutter);
 }
 
 .scroller__scrollctn::-webkit-scrollbar-track {
-background-color: var(--c-material);
-padding: 0 var(--gutter);
+    background-color: var(--c-material);
+    padding: 0 var(--gutter);
+    border-radius: 9999px;
 }
 
 .scroller__scrollctn::-webkit-scrollbar {
-width: 6px;
-height: 6px;
-background-color:var(--c-guide);
-border-radius: 9999px;
+    width: 6px;
+    height: 6px;
+    background-color:var(--c-guide);
+    border-radius: 9999px;
 }
 
 .scroller__scrollctn::-webkit-scrollbar-thumb {
-background-color: var(--c-guide);
-border-radius: 9999px;
+    background-color: var(--c-guide);
+    border-radius: 9999px;
 }
 
 .scroller__slide {
@@ -85,7 +86,7 @@ border-radius: 9999px;
 
 }
 
-/* Thats pretty much the optimal slide sizing */
+/* Thats pretty much the optimal slide/card sizing */
 
 /* .scroller__slide {
     min-width: 60%;

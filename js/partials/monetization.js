@@ -5,7 +5,7 @@ if (document.monetization) {
         const m = localStorage.getItem('monetization');
         if ((t - m) > (86400000)) {
             localStorage.setItem('monetization', t);
-            Dialog.open('dialog-monetization');
+            console.log('🤑 Coil monetization is active!')
         }
     })
 }
