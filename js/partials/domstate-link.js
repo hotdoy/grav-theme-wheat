@@ -1,7 +1,7 @@
 const DomStateLink = {
     path: '',
     depth: 0,
-    delay: 100,
+    delay: 0,
 
     events: {
         navigating: new Event('domstateNavigating'),
@@ -27,8 +27,20 @@ const DomStateLink = {
             } else if (!!href && href.match("^/")) {
                 el.addEventListener("click", function(event) {
                     event.preventDefault();
+
+                    // Store some values
                     DomStateLink.path = href;                    
                     DomStateLink.depth = DomState.GetDepth(DomStateLink.path);
+
+                    // Add link prerender
+                    if (DomStateLink.delay > 0) {
+                        const prefetch = document.createElement('link');
+                        prefetch.href = DomStateLink.path;
+                        prefetch.rel='prerender';
+                        document.getElementsByTagName('head')[0].appendChild(prefetch);                        
+                    }
+
+                    // Trigger navigation event
                     if (DomStateLink.depth < DomState.depth) {
                         DomState.UpdateState('navigating-backward', 0, [DomStateLink.events.navigating, DomStateLink.events.navigatingBackward]);
                     } else if(DomStateLink.depth > DomState.depth) {
@@ -36,9 +48,12 @@ const DomStateLink = {
                     } else {
                         DomState.UpdateState('navigating', 0, [DomStateLink.events.navigating]);
                     }
+
+                    // Navigate
                     setTimeout(function(){ 
                         window.location.href = DomStateLink.path;
                     }, DomStateLink.delay);
+
                 }, false);
             }
         });

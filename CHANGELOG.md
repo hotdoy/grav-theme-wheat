@@ -1,3 +1,10 @@
+# v0.16.12
+## 09/23/2021
+
+1. [](#improved)
+    * Added link rel prerender when artificial delay is applied to domstatelink.
+    * Removed 100ms domstatelink default delay.
+
 # v0.16.11
 ## 09/21/2021
 
