@@ -93,7 +93,13 @@
     line-height: 1.2;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 640px) {
+    .text :where(h1) {
+        font-size: clamp(32px, 5vw, 48px);
+    }
+}
+
+@media (min-width: 1440px) {
     .text :where(h1) {
         font-size: 48px;
     }
@@ -104,12 +110,18 @@
 }
 
 .text :where(h2) {
-    font-size: x-large;
+    font-size: 24px;
 	font-weight: var(--fw-bold);
     line-height: 1.2;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 640px) {
+    .text :where(h2) {
+        font-size: clamp(24px, 2vw, 32px);
+    }
+}
+
+@media (min-width: 1440px) {
     .text :where(h2) {
         font-size: 32px;
     }
@@ -123,12 +135,21 @@
 .text :where(h4),
 .text :where(h5),
 .text :where(h6) {
-    font-size: large;
+    font-size: 18px;
     line-height: 1.2;
     font-weight: var(--fw-bold);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 640px) {
+    .text :where(h3),
+    .text :where(h4),
+    .text :where(h5),
+    .text :where(h6) {
+        font-size: clamp(18px, 2vw, 24px);
+    } 
+}
+
+@media (min-width: 1440px) {
     .text :where(h3),
     .text :where(h4),
     .text :where(h5),
@@ -154,11 +175,11 @@
     list-style-position: outside;
 }
 
-.text li {
+.text ul li {
 	font-size: inherit;
 }
 
-.text li > p {
+.text ul li > p {
     display: inline;
     font-size: inherit;
     line-height: inherit;
@@ -176,6 +197,7 @@
 /*===========================================
         	    SMALL 
 ============================================*/
+
 .text.small {
     font-size: small;
     line-height: 1.2rem;
@@ -187,8 +209,7 @@
 }
 
 .text.small.prose :where(p) {
-    margin-top: 1rem;
-    margin-bottom: 0;
+    margin: 1rem 0;
 }
 
 .text.small :where(h2), 
@@ -200,8 +221,7 @@
 
 .text.small.prose :where(h2), 
 .text.small.prose :where(h1) {
-    margin-top: 2rem;
-    margin-bottom: 0;
+    margin: 1rem 0;
 }
 
 .text.small :where(h3),
@@ -217,8 +237,7 @@
 .text.small.prose :where(h4),
 .text.small.prose :where(h5),
 .text.small.prose :where(h6) {
-    margin-top: 1rem;
-    margin-bottom: 0;
+    margin: 1rem 0;
 }
 
 
@@ -248,9 +267,9 @@
     font-size: 0.5em;
 }
 
-.prose > :first-child {margin-top: 0;}
-.prose > :last-child {margin-bottom: 0;}
+.prose > *:first-child {margin-top: 0!important;}
+.prose > *:last-child {margin-bottom: 0!important;}
 
 .text p:empty {
-    display: none;
+    display: none!important;
 }
