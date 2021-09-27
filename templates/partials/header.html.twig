@@ -6,9 +6,7 @@
     <div class="shim"></div>
 
     {# MARQUEE #}
-    {% if root_params.header.marquee %}
-    <section class="marquee">{{ root_params.header.marquee_content|markdown|raw }}</section>
-    {% endif %}
+    <section class="marquee">v{{ grav.theme.getBlueprint().version }}</section>
 
     <div class="header">
         <div class="layout">

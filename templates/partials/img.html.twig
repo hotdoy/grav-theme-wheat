@@ -10,6 +10,7 @@
     {% set quality = image.quality matches '/^\\d+$/' ? image.quality > system_quality ? system_quality : image.quality %}
     {% set bypass = image ? '_bypass' in image.filename : false %}
 
+    {# PLACEHOLDER #}
     {% if type != 'vector' -%}
         {% set base64 = 'data:' ~ image.mime ~ ';base64,' ~ filecontent(image.cropResize(16,16).url)|base64_encode %}
         {%- set style -%}
@@ -17,6 +18,7 @@
         {%- endset -%}
     {% endif %}
 
+    {# IMAGE #}
     {% if type == 'vector' %}
         {{ image.loading.html(title, alt)|raw }}
     {% elseif bypass %}
