@@ -1,15 +1,10 @@
  /* .module.editor {}  */
 
-.module.editor>.wrapper {
+.module.editor > .wrapper {
     padding: 0 var(--gutter);
     margin: 0 auto;
     max-width: var(--w-text);
     width: 100%;
-}
-
-/* REMOVE MARGIN FOR FIRST ELEMENT */
-.module.editor>*:first-child {
-    margin-top: 0;
 }
 
 .module.editor hr {
@@ -23,17 +18,6 @@
     width: 100%;
 }
 
-.module.editor blockquote p {
-    padding: 0;
-}
-
-.module.editor ul li {
-    margin-left: 0px;
-    list-style: disc;
-}
-
-
-
 /*SPOTIFY*/
 .module.editor iframe[src*="spotify"] {
     display: block;
@@ -42,19 +26,11 @@
     margin-top: 2rem;
 }
 
-
-
-
-
 /*TWITTER*/
 .module.editor .twitter-tweet {
     margin: 0 auto;
     width: 100%;
 }
-
-
-
-
 
 /*DETAILS*/
 .module.editor details {
@@ -132,18 +108,11 @@
     to {opacity: 1; transform: translateY(0px);}
 }
 
-
-
-
-
 /*LITE-YOUTUBE*/
 .module.editor lite-youtube {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-
-
-
 
 /*TABLES*/
 .module.editor table {
@@ -151,10 +120,6 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-
-
-
-
 
 /*INLINE CODE*/
 .module.editor :where(:not(pre)) > code {
@@ -173,4 +138,5 @@
     background-color: var(--c-material);
     border: 1px solid var(--c-guide);
     border-radius: 4px;
+    overflow-x: auto;
 }
