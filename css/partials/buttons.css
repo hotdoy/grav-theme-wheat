@@ -32,13 +32,13 @@ button.button:hover {
 a.button:hover:active,
 button.button:hover:active {
     outline: none;
-    box-shadow: 0 0 0 4px rgb(0 255 43 / 34%);
+    box-shadow: 0 0 0 3px var(--c-focus);
 }
 
 a:focus,
 button:focus {
     outline: none;
-    box-shadow: 0 0 0 4px rgb(0 255 43 / 34%);
+    box-shadow: 0 0 0 3px var(--c-focus);
 }
 
 .button.disabled {
