@@ -101,7 +101,7 @@
     font-size: 9px;
     line-height: 9px;
     border-radius: 100%;
-    background-color: var(--c-hl);
+    background-color: var(--c-btn-bg);
     color: white;
 }
 
@@ -111,7 +111,7 @@
     height: 15px;
     opacity: 0;
     border-radius: 100%;
-    background-color: var(--c-hl);
+    background-color: var(--c-btn-bg);
 }
 
 #header .snipcart-pulse.pulse {

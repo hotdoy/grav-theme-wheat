@@ -13,8 +13,8 @@ button.button {
     line-height: 1;
     font-weight: var(--fw-medium);
     font-family: var(--ff-mono);
-    background-color: var(--c-hl);
-    color: var(--c-bg);
+    background-color: var(--c-btn-bg);
+    color: var(--c-btn-fg);
     text-decoration: none;
     outline: none;
     cursor: pointer;
