@@ -1,3 +1,18 @@
+# v0.16.13
+## 09/29/2021
+
+1. [](#new)
+    * Breadcrumbs markup macro
+    * Breadcrumbs schema (json-ld) macro.
+2. [](#improved)
+    * Button color now managed with theme variables
+    * Editor modular
+    * Focus colors
+    * Marquee is now managed by template and display version number
+    * Fluid typography in regular text
+    * Fixed list bullets
+    * pre and code tag overflow scroll
+
 # v0.16.12
 ## 09/23/2021
 
