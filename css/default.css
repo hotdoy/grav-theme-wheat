@@ -4,9 +4,13 @@
 
 
 
+/*===========================================
+				HEADING 
+============================================*/
+
 /* .default__heading {} */
 
-.default__heading > .wrapper {
+.default__heading .wrapper {
     padding: 0 var(--gutter);
     margin: 0 auto;
     max-width: var(--w-text);
@@ -15,20 +19,19 @@
 }
 
 .default__heading .breadcrumbs {
-    display: block;
     margin-bottom: var(--gutter);
-    color: var(--c-text);
+    opacity: 0.5;
 }
 
-.default__heading .breadcrumbs a {
-    color: var(--c-text);
-}
+/* .default__heading .title {} */
 
 
 
 
 
-/*CARD*/
+/*===========================================
+				    CARD 
+============================================*/
 
 /* .default__card {} */
 
