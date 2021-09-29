@@ -1,5 +1,7 @@
-{# USAGE #}
-{# {{ breadcrumbs.html(page, pages, page.collection({items: {'@self.page': ''}})) }} #}
+{# 
+USAGE
+{{ breadcrumbs.html(page, pages, page.collection({items: {'@self.page': ''}})) }} 
+#}
 
 {% macro html(page, pages, crumbs) %}
     {% import _self as breadcrumb %}
@@ -11,13 +13,15 @@
         {% endfor %}
         {{ breadcrumb.html(parent, pages, crumbs) }}
     {% else %}
-        {% for crumb in crumbs|reverse %}
-        {% if loop.last %}
-        <span href="{{ crumb.url }}">{{ crumb.title }}</span>
-        {% else %}
-        <a href="{{ crumb.url }}">{{ crumb.title }}</a>
-        {% endif %}
-        {% if not loop.last %}/{% endif %}
-        {% endfor %}
+        <div class="breadcrumbs text small">
+            {% for crumb in crumbs|reverse %}
+            {% if loop.last %}
+            <span href="{{ crumb.url }}">{{ crumb.title }}</span>
+            {% else %}
+            <a href="{{ crumb.url }}">{{ crumb.title }}</a>
+            {% endif %}
+            {% if not loop.last %} > {% endif %}
+            {% endfor %}            
+        </div>
     {% endif %}
 {% endmacro %}
