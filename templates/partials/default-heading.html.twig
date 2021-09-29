@@ -4,13 +4,10 @@
 {% if title %}
 <section class="module default__heading">
 	<div class="wrapper text">
-
 		{{ breadcrumbs.html(page, pages, page.collection({items: {'@self.page': ''}})) }}
-		
 		<div class="title text">
 			<h1>{{ title|raw }}</h1>
 		</div>
-		
 	</div>
 </section>
 {% endif %}
