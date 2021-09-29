@@ -4,11 +4,15 @@
 {% block content %}
 
 	{# HEADING #}
-	{% include 'partials/default-heading.html.twig' %}
-
+	{% if page.header.display_title %}
+		{% include 'partials/default-heading.html.twig' %}
+	{% endif %}
+	
 	{# CONTENT #}
+	{% if page.content %}
 	{% include 'modular/editor.html.twig' %}
-
+	{% endif %}
+	
 	{# MODULES #}
 	{% for module in modules %}
 	{{ module.content|raw }}
