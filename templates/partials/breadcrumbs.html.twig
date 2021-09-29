@@ -1,27 +1,63 @@
-{# 
-USAGE
-{{ breadcrumbs.html(page, pages, page.collection({items: {'@self.page': ''}})) }} 
-#}
-
 {% macro html(page, pages, crumbs) %}
-    {% import _self as breadcrumb %}
+{# {{ breadcrumbs.html(page, pages, page.collection({items: {'@self.page': ''}})) }}  #}
+    {% import _self as breadcrumbs %}
     {% set parent = page.collection({ items: {'@page.parent': page.url}}) %}
+    
     {% if parent %}
-        {% set crumbs = crumbs.merge(parent) %}
-        {% for p in parent %}
-            {% set parent = p %}
-        {% endfor %}
-        {{ breadcrumb.html(parent, pages, crumbs) }}
+    {% set crumbs = crumbs.merge(parent) %}
+    {% for p in parent %}
+        {% set parent = p %}
+    {% endfor %}
+    {{ breadcrumbs.html(parent, pages, crumbs) }}
+
     {% else %}
-        <div class="breadcrumbs text small">
-            {% for crumb in crumbs|reverse %}
-            {% if loop.last %}
-            <span href="{{ crumb.url }}">{{ crumb.title }}</span>
-            {% else %}
-            <a href="{{ crumb.url }}">{{ crumb.title }}</a>
-            {% endif %}
-            {% if not loop.last %} > {% endif %}
-            {% endfor %}            
-        </div>
+    <div class="breadcrumbs text small">
+        {% for crumb in crumbs|reverse %}
+        {% if loop.last %}
+        <span href="{{ crumb.url }}">{{ crumb.title }}</span>
+        {% else %}
+        <a href="{{ crumb.url }}">{{ crumb.title }}</a>
+        {% endif %}
+        {% if not loop.last %} > {% endif %}
+        {% endfor %}            
+    </div>
     {% endif %}
 {% endmacro %}
+
+{% macro schema(page, pages, crumbs) %}
+    {# {{ breadcrumbs.schema(page, pages, page.collection({items: {'@self.page': ''}})) }}  #}
+    {% import _self as breadcrumbs %}
+    {% set parent = page.collection({ items: {'@page.parent': page.url}}) %}
+    
+    {% if parent %}
+    {% set crumbs = crumbs.merge(parent) %}
+    
+    {% for p in parent %}
+        {% set parent = p %}
+    {% endfor %}
+    
+    {{ breadcrumbs.schema(parent, pages, crumbs) }}
+    
+    {% else %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+
+            {%- for crumb in crumbs|reverse -%}
+            {
+            "@type": "ListItem",
+            "position": {{ loop.index }},
+            "name": "{{ crumb.title }}",
+            "item": "{{ crumb.url(true) }}"
+            } 
+            {%- if not loop.last %},{% endif -%}
+            {%- endfor -%}
+            ]
+        }
+    </script>
+    {% endif %}
+{% endmacro %}
+
+

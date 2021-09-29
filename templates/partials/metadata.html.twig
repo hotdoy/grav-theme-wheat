@@ -1,3 +1,5 @@
+{% import "partials/breadcrumbs.html.twig" as breadcrumbs %} 
+
 {%- set site_title = root_params.header.site_title ?? site.title -%}
 
 {%- set title -%}
@@ -63,3 +65,5 @@
 {% if theme.monetization_payment_pointer %}
 <meta name="monetization" content="{{ theme.monetization_payment_pointer }}">
 {% endif %}
+
+{{ breadcrumbs.schema(page, pages, page.collection({items: {'@self.page': ''}})) }}
