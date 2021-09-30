@@ -1,3 +1,15 @@
+# v0.16.14
+## 09/30/2021
+
+1. [](#improved)
+    * Prevent empty pagination container.
+    * Only show parent pages in breadcrumbs
+    * _DEV dir is now _ROOT (just like before).
+    * Fixed some parts of Snipcart being loaded when disabled.
+    * Minor style fixes.
+    * Minor twig fixes.
+    * Bumped Serviceworker.
+
 # v0.16.13
 ## 09/29/2021
 

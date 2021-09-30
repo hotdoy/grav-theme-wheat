@@ -28,12 +28,12 @@
     </section>
     
     {# PAGINATION #}
+    {% if next_start + 1 <= collection_raw_length %}
     <section class="collection__pagination">
-        {% if next_start + 1 <= collection_raw_length %}
         {% set url = (page.url ~ '?' ~ key ~ '=' ~ next_start ~ '-' ~ next_end) %}
         <button class="button" href="{{ url }}">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</button>
-        {% endif %}
     </section>
+    {% endif %}
 
     {# MODULES #}
     {% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}

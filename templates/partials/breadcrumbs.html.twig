@@ -1,5 +1,5 @@
 {% macro html(page, pages, crumbs) %}
-{# {{ breadcrumbs.html(page, pages, page.collection({items: {'@self.page': ''}})) }}  #}
+{# USAGE - {{ breadcrumbs.html(page, pages, page.collection({items: {'@self.page': ''}})) }}  #}
     {% import _self as breadcrumbs %}
     {% set parent = page.collection({ items: {'@page.parent': page.url}}) %}
     
@@ -11,21 +11,23 @@
     {{ breadcrumbs.html(parent, pages, crumbs) }}
 
     {% else %}
+    {% set crumbs = crumbs|reverse %}
+
     <div class="breadcrumbs text small">
-        {% for crumb in crumbs|reverse %}
-        {% if loop.last %}
-        <span href="{{ crumb.url }}">{{ crumb.title }}</span>
-        {% else %}
+        {% for crumb in crumbs %}
+        
+        {% if loop.index < loop.length %}
         <a href="{{ crumb.url }}">{{ crumb.title }}</a>
         {% endif %}
-        {% if not loop.last %} > {% endif %}
+        
+        {% if loop.index < loop.length - 1 %} / {% endif %} 
         {% endfor %}            
     </div>
     {% endif %}
 {% endmacro %}
 
 {% macro schema(page, pages, crumbs) %}
-    {# {{ breadcrumbs.schema(page, pages, page.collection({items: {'@self.page': ''}})) }}  #}
+    {# USAGE - {{ breadcrumbs.schema(page, pages, page.collection({items: {'@self.page': ''}})) }}  #}
     {% import _self as breadcrumbs %}
     {% set parent = page.collection({ items: {'@page.parent': page.url}}) %}
     
