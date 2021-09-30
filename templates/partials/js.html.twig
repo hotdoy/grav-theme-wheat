@@ -22,7 +22,6 @@
 {% do assets.addJs('theme://js/product.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/collection.js', { group:'bottom' }) %}
 
-
 {# SNIPCART #}
 {% if theme.snipcart %}
 {% do assets.addJs('https://cdn.snipcart.com/themes/v' ~ snipcart_version ~ '/default/snipcart.js', { group:'bottom', position: 'after', loading: 'async' }) %}

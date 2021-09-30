@@ -1,10 +1,9 @@
-{% if theme.enabled %}
+{% if theme.snipcart %}
 {% set key = theme.snipcart_mode ? theme.snipcart_public_live_key : theme.snipcart_public_test_key %}
 <div 
 id="snipcart" 
 data-api-key="{{ key }}" 
-{% if not theme.snipcart_product_behavior %}data-config-add-product-behavior="none"
-{% endif %}
+{% if not theme.snipcart_product_behavior %}data-config-add-product-behavior="none"{% endif %}
 data-config-modal-style="side"
 hidden>
 </div>
