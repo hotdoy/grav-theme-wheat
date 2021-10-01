@@ -3,50 +3,83 @@ For Grav Plugin: Markdown Notices.
 Make sure to disable built-in CSS.
 */
 
+
+
+
+
+/*===========================================
+					BASE 
+============================================*/
+
 .notices {
-  position: relative;
-  margin: 2rem 0;
-  padding: 1rem;
-  width: 100%;
-  max-width: var(--w-text);
-  border-radius: 4px;
-  text-align: center;
+	position: relative;
+	margin: 2rem 0;
+	padding: 1rem;
+	width: 100%;
+	max-width: var(--w-text);
+	border-radius: 4px;
+	text-align: left;
+	font-size: small;
 }
 
 .notices:first-child {
-  margin-top: 0;
+	margin-top: 0;
 }
 
-.notices a,
-.content .notices a {
-  color: inherit;
-  text-decoration: underline;
-}
 
-/*====================================== 
-                THEMES
- ======================================*/
+
+
+
+/*===========================================
+					THEMES 
+============================================*/
 
 .notices.yellow {
-  background: #ffab00;
-  color: #172b4d;
+	background: #ffab00;
+	color: #172b4d;
 }
 
 .notices.red {
-  background-color: #de350b;
-  color: #fff;
+	background-color: #de350b;
+	color: #fff;
 }
 
 .notices.blue {
-  background: #e1f5fe;
-  color: #01579b;
+	padding-left: calc(2rem + 25px);
+	background: #e1f5fe;
+	color: #01579b;
+}
+
+.notices.notices.blue::before {
+    position: absolute;
+    left: 1rem;
+    content: " ";
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%2301579b'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z'/%3E%3C/svg%3E");
 }
 
 .notices.green {
-  background: #00875a;
-  color: #fff;
+	background: #00875a;
+	color: #fff;
 }
 
-.notices p {
-  color: inherit;
+
+
+
+
+/*===========================================
+					CONTENT 
+============================================*/
+
+
+.text.prose .notices :where(p) {
+	color: inherit;
+	font-size: inherit;
+	margin: 1rem 0;
 }
+
+.prose .notices > *:first-child {margin-top: 0!important;}
+.prose .notices > *:last-child {margin-bottom: 0!important;}
