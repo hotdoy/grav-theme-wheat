@@ -5,17 +5,17 @@
     {# HEADER #}
     <div class="shim"></div>
 
-    {# MARQUEE #}
-    <section class="marquee">v{{ grav.theme.getBlueprint().version }}</section>
-
     <div class="header">
         <div class="layout">
 
             {# LEFT - LOGO #}
-            <a class="logo" href="{{ home_url }}" aria-label="Site logo">{{ svg.wheat() }}</a>
+            <a class="logo" href="{{ home_url }}" aria-label="Site logo">
+                {{ svg.wheat() }}
+            </a> 
 
             {# RIGHT - LINKS & TOGGLES #}
             <div class="toggles">
+                <div class="version text small">v{{ grav.theme.getBlueprint().version }}</div>
                 <nav class="nav">
                     <ul>
                         {% for link in root_params.header.header_links %}

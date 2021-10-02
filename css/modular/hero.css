@@ -3,16 +3,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 80vh;
+    min-height: calc(100vh - var(--header));
 }
 
 .module.hero .wrapper {
     margin: 0 auto;
     width: 100%;
-    max-width: var(--w-tight);
     padding: 0 var(--gutter);
 }
 
+.module.hero .layout {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--gutter);
+    padding: var(--gutter);
+    background-color: var(--c-material);
+    border-radius: 8px;
+}
+
 .module.hero .title {
+    max-width: var(--w-tight);
     text-align: center;
+}
+
+.module.hero .title span {
+    color: var(--c-hl);
 }

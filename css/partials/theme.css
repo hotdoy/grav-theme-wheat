@@ -5,11 +5,11 @@
 :root {
 	--c-bg: white;
 	--c-fg: #1d1d1f;
-	--c-hl: #5d3dec;
-	--c-btn-bg: #5d3dec;
+	--c-hl: #008a70;
+	--c-btn-bg: #008a70;
 	--c-btn-fg: white;
 	--c-focus: rgb(98 1 244 / 20%);
-	--c-material: #f6f9fc;
+	--c-material: #f1f1f1;
 	--c-guide: rgb(195 198 204 / 50%);
 }
 
@@ -28,6 +28,7 @@
 	--w-full: 100%;
 	--gutter: 20px;
 	--rhythm: 120px;
+	--header: 48px;
 }
 
 @media (min-width: 640px) {
