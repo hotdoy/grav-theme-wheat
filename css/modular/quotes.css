@@ -31,7 +31,7 @@
 
 .module.quotes blockquote {
   margin: 0 auto;
-  max-width: var(--w-text);
+  max-width: var(--w-tight);
   font-size: 1.5em;
 }
 

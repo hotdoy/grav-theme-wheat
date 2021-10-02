@@ -5,11 +5,11 @@
 :root {
 	--c-bg: white;
 	--c-fg: #1d1d1f;
-	--c-hl: #5d3dec;
-	--c-btn-bg: #5d3dec;
+	--c-hl: #008a70;
+	--c-btn-bg: #008a70;
 	--c-btn-fg: white;
 	--c-focus: rgb(98 1 244 / 20%);
-	--c-material: #f6f9fc;
+	--c-material: #f1f1f1;
 	--c-guide: rgb(195 198 204 / 50%);
 }
 
@@ -22,17 +22,18 @@
 ============================================*/
 
 :root {
-	--w-text: 100%;
+	--w-tight: 100%;
 	--w-main: 100%;
 	--w-body: 100%;
 	--w-full: 100%;
 	--gutter: 20px;
 	--rhythm: 120px;
+	--header: 48px;
 }
 
 @media (min-width: 640px) {
 	:root {
-		--w-text: 500px;
+		--w-tight: 500px;
 		--w-main: 100%;
 		--w-body: 100%;
 		--w-full: 100%;
@@ -43,7 +44,7 @@
   
 @media (min-width: 1024px) {
 	:root {
-		--w-text: 500px;
+		--w-tight: 500px;
 		--w-main: 900px;
 		--w-body: 100%;
 		--w-full: 100%;
@@ -54,7 +55,7 @@
   
 @media (min-width: 1280px) {
 	:root {
-		--w-text: 500px;
+		--w-tight: 500px;
 		--w-main: 1200px;
 		--w-body: 1600px;
 		--w-full: 1920px;
@@ -65,7 +66,7 @@
 
 @media (min-width: 1440px) {
 	:root {
-		--w-text: 640px;
+		--w-tight: 640px;
 		--w-main: 1200px;
 		--w-body: 1600px;
 		--w-full: 1920px;

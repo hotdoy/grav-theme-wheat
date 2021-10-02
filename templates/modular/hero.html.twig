@@ -1,0 +1,14 @@
+{% extends 'modular/module.html.twig' %}
+{% set name = 'hero' %}
+
+{% set title = title ?? page.header.display_title ?? null %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="layout">
+        <div class="title text large">
+            <h1>{{ title|raw }}</h1>
+        </div>        
+    </div>
+</div>
+{% endblock %}

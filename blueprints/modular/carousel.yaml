@@ -4,12 +4,10 @@ title: carousel
 form:
   fields:
     tabs:
-      type: tabs
-      active: 1
-
       fields:
         content:
           fields:
+            
             content:
               unset@: true
             header.media_order:
