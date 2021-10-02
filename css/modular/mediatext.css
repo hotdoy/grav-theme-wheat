@@ -1,7 +1,4 @@
-.module.mediatext {
-   background-color: var(--c-bg);
-   color: var(--c-fg);
-}
+/* .module.mediatext {} */
 
 .module.mediatext>.wrapper {
     display: flex;

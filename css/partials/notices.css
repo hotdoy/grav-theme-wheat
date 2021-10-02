@@ -16,7 +16,7 @@ Make sure to disable built-in CSS.
 	margin: 2rem 0;
 	padding: 1rem;
 	width: 100%;
-	max-width: var(--w-text);
+	max-width: var(--w-tight);
 	border-radius: 4px;
 	text-align: left;
 	font-size: small;

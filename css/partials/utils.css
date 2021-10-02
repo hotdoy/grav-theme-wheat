@@ -6,10 +6,10 @@
   left: 0;
 }
 
-.width-text,
-.w-text {
+.width-tight,
+.w-tight {
   width: 100%;
-  max-width: var(--w-text);
+  max-width: var(--w-tight);
   padding: 0 var(--gutter);
   margin: 0 auto;
 }

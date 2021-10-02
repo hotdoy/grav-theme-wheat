@@ -22,7 +22,7 @@
 ============================================*/
 
 :root {
-	--w-text: 100%;
+	--w-tight: 100%;
 	--w-main: 100%;
 	--w-body: 100%;
 	--w-full: 100%;
@@ -32,7 +32,7 @@
 
 @media (min-width: 640px) {
 	:root {
-		--w-text: 500px;
+		--w-tight: 500px;
 		--w-main: 100%;
 		--w-body: 100%;
 		--w-full: 100%;
@@ -43,7 +43,7 @@
   
 @media (min-width: 1024px) {
 	:root {
-		--w-text: 500px;
+		--w-tight: 500px;
 		--w-main: 900px;
 		--w-body: 100%;
 		--w-full: 100%;
@@ -54,7 +54,7 @@
   
 @media (min-width: 1280px) {
 	:root {
-		--w-text: 500px;
+		--w-tight: 500px;
 		--w-main: 1200px;
 		--w-body: 1600px;
 		--w-full: 1920px;
@@ -65,7 +65,7 @@
 
 @media (min-width: 1440px) {
 	:root {
-		--w-text: 640px;
+		--w-tight: 640px;
 		--w-main: 1200px;
 		--w-body: 1600px;
 		--w-full: 1920px;
