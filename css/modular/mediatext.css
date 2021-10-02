@@ -38,36 +38,23 @@
 
 .module.mediatext .media-ctn video,
 .module.mediatext .media-ctn img {
-    display: block;
-    margin: 0 auto;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: auto;
+    border-radius: 8px;
 }
 
-.module.mediatext .media-ctn img[src$='.jpg'],
-.module.mediatext .media-ctn img[src$='.jpeg'] {
-    background-color: var(--c-fg);
-}
-
-.module.mediatext h1,
-.module.mediatext h2 {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+.module.mediatext .content-ctn {
+    margin-top: 2rem;
 }
 
 @media (min-width: 1024px) {
-    .module.mediatext .content-ctn > *:first-child {
+    .module.mediatext .content-ctn {
         margin-top: 0;
     }
 }
 
-.module.mediatext:first-child {
-    margin-top: var(--gutter);
-}
-
-@media (min-width: 1220px) {
-    .module.mediatext:first-child {
-        margin-top: calc(var(--rhythm)/2);
+@media (min-width: 1024px) {
+    .module.mediatext .content-ctn > :first-child {
+        margin-top: 0;
     }
 }
