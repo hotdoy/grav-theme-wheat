@@ -28,7 +28,7 @@
 	--w-full: 100%;
 	--gutter: 20px;
 	--rhythm: 120px;
-	--header: 48px;
+	--header: 47px;
 }
 
 @media (min-width: 640px) {
@@ -57,8 +57,8 @@
 	:root {
 		--w-tight: 500px;
 		--w-main: 1200px;
-		--w-body: 1600px;
-		--w-full: 1920px;
+		--w-body: 100%;
+		--w-full: 100%;
 		--gutter: 20px;
 		--rhythm: 160px;
 	}
