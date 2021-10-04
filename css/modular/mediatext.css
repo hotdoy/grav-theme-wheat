@@ -58,17 +58,3 @@
         margin-top: 0;
     }
 }
-
-
-
-
-
-/*===========================================
-         		SIBLINGS 
-============================================*/
-
-@media (max-width: 1024px) {
-    .module.hero + .module.mediatext {
-        margin-top: 0;
-    }
-}
