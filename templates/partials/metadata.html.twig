@@ -23,7 +23,8 @@
 {%- set og_type = 'website' -%}
 {%- set url = page.url(true, true) -%}
 
-{%- set image_path = page.header.meta_image ? page.media[page.header.meta_image].url : root_params.header.site_image ? root_params.media[root_params.header.site_image].url -%}
+{%- set image = page.header.page_image ? page.media[page.header.page_image] : root_params.header.site_image ? root_params.media[root_params.header.site_image] -%}
+{%- set image_path = image.url -%}
 {%- set image_url = image_path ? uri.base() ~ image_path : '' -%}
 	
 <meta charset="utf-8" />
@@ -52,7 +53,11 @@
 <meta property="og:type" content="{{ og_type }}" />
 <meta property="og:title" content="{{ title }}" />
 <meta property="og:description" content="{{ description }}" />
-{% if image_url %}<meta property="og:image" content="{{ image_url }}" />{% endif %}
+{% if image_url %}
+<meta property="og:image" content="{{ image_url }}" />
+<meta property="og:image:width" content="{{ image.width }}" />
+<meta property="og:image:height" content="{{ image.height }}" />
+{% endif %}
 
 {% if theme.twitter_site %}
 <meta name="twitter:card" content="summary" />
