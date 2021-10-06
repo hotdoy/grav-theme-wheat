@@ -77,9 +77,31 @@ Options -Indexes
 DirectoryIndex index.php index.html index.htm
 # End - Prevent Browsing and Set Default Resources
 
-# php -- BEGIN cPanel-generated handler, do not edit
-# Set the “ea-php74” package as the default “PHP” programming language.
-<IfModule mime_module>
-  AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
-</IfModule>
-# php -- END cPanel-generated handler, do not edit
+# Begin - Deny all but Cloudflare
+# https://www.cloudflare.com/ips-v4 
+# https://www.cloudflare.com/ips-v6
+deny from all
+allow from 173.245.48.0/20
+allow from 103.21.244.0/22
+allow from 103.22.200.0/22
+allow from 103.31.4.0/22
+allow from 141.101.64.0/18
+allow from 108.162.192.0/18
+allow from 190.93.240.0/20
+allow from 188.114.96.0/20
+allow from 197.234.240.0/22
+allow from 198.41.128.0/17
+allow from 162.158.0.0/15
+allow from 104.16.0.0/13
+allow from 104.24.0.0/14
+allow from 172.64.0.0/13 
+allow from 131.0.72.0/22
+allow from 2400:cb00::/32
+allow from 2606:4700::/32
+allow from 2803:f800::/32
+allow from 2405:b500::/32
+allow from 2405:8100::/32
+allow from 2a06:98c0::/29
+allow from 2c0f:f248::/32
+allow from 127.0.0.1
+# End - Deny all but Cloudflare
