@@ -2,7 +2,7 @@
 
 /*.collection__list {}*/
 
-.collection__list .wrapper {
+.collection__list > .wrapper {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 10px;
@@ -11,8 +11,8 @@
 	max-width: var(--w-main);
 }
 
-@media (min-width: 735px) {
-	.collection__list .wrapper {
+@media (min-width: 640px) {
+	.collection__list > .wrapper {
 		grid-template-columns:repeat(3, 1fr);
 		grid-gap: var(--gutter);
 	}
@@ -25,7 +25,7 @@
 	padding: 0 var(--gutter);
 	max-width: var(--w-main);
 	margin: 0 auto;
-	margin-top: var(--gutter);
+	margin-top: calc(var(--gutter)*2);
 }
   
 .collection__pagination button {
