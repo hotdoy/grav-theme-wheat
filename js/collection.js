@@ -23,10 +23,10 @@ const Collection = {
             r = parser.parseFromString(r, 'text/html');
 
             // Get content of new list
-            let el = r.querySelector('.collection__list .wrapper').innerHTML;
+            let el = r.querySelector('[data-list] .wrapper').innerHTML;
 
             // Get next trigger from response
-            let newTrigger = r.querySelector(".collection__pagination button");
+            let newTrigger = r.querySelector("[data-pagination] button");
 
             // Replace old trigger with new one or remove if none is available
             if (!!newTrigger) {
@@ -59,8 +59,8 @@ const Collection = {
     },
 
     Init: function() {
-        Collection.list = document.querySelector('.collection__list .wrapper');
-        Collection.pagination = document.querySelector('.collection__pagination');
+        Collection.list = document.querySelector('[data-list] .wrapper');
+        Collection.pagination = document.querySelector('[data-pagination]');
         if (!!Collection.pagination) {
             Collection.trigger = Collection.pagination.querySelector('button');
             Collection.url = Collection.trigger.getAttribute('href');

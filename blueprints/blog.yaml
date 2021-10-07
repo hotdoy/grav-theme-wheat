@@ -1,0 +1,11 @@
+title: blog
+"@extends": default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            content:
+              unset@: true
