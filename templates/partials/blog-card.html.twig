@@ -3,25 +3,29 @@
 {% set image = image|default(item.header.image ? item.media[item.header.image] : item.media.images|first) %}
 {% set image_alt = image_alt|default(item.header.image_alt ?? '') %}
 {% set date = date ?? item.header.date ?? null %}
+{% set summary = summary ?? item.summary ?? null %}
 
 <article class="blog__card">
 	<a href="{{ item.url }}">
 
-		<div class="blog__card__layout">
+		<div class="layout">
 
-			<div class="blog__card__content text small">
+			<div class="content text small">
 				<h3>{{ title }}</h3>
-				{% if date %}
-				<p>{{ date|date('Y/m/d') }}</p>
+
+				{% if summary %}
+				<p>{{ summary|striptags }}</p>
 				{% endif %}
+
+				{% if date %}
+				<time>{{ date|date('Y/m/d') }}</time>
+				{% endif %}
+
 			</div>
 			
-			{#
-			<div class="blog__card__media">
+			<div class="media">
 				{% include "partials/img.html.twig" with {image: image} only %}
 			</div>				
-			#}
-
 
 		</div>
 
