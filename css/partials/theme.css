@@ -44,7 +44,7 @@
   
 @media (min-width: 1024px) {
 	:root {
-		--w-tight: 500px;
+		--w-tight: 535px;
 		--w-main: 900px;
 		--w-body: 100%;
 		--w-full: 100%;
@@ -55,7 +55,7 @@
   
 @media (min-width: 1280px) {
 	:root {
-		--w-tight: 500px;
+		--w-tight: 535px;
 		--w-main: 1200px;
 		--w-body: 100%;
 		--w-full: 100%;

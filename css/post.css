@@ -1,1 +1,23 @@
 /*body.post {}*/
+
+
+/*===========================================
+				HEADING 
+============================================*/
+
+/* .post__heading {} */
+
+.post__heading .wrapper {
+    padding: 0 var(--gutter);
+    margin: 0 auto;
+    max-width: var(--w-main);
+    width: 100%;
+    text-align: center;
+}
+
+.post__heading .breadcrumbs {
+    margin-bottom: var(--gutter);
+    opacity: 0.5;
+}
+
+/* .post__heading .title {} */
