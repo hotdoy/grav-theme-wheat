@@ -43,9 +43,9 @@
 
 .default__card__media {
     position: relative;
-    padding-top: 133%;
+    padding-top: 100%;
     background-color: var(--c-material);
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
     overflow: hidden;
 }
 
@@ -61,6 +61,9 @@
     object-position: center;
 }
 
-.default__card h3 {
-    margin-top: 0.5rem;
+.default__card__content {
+    padding: 1rem;
+    background-color: var(--c-material);
+    min-height: 150px;
+    border-radius: 0 0 8px 8px;
 }
