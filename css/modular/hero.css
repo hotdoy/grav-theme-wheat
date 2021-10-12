@@ -1,6 +1,6 @@
 .module.hero {
     margin-top: 0;
-    height: 100vh;
+    height: calc(100vh - var(--header));
 }
 
 .module.hero .wrapper {

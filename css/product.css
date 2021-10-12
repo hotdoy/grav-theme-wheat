@@ -16,7 +16,6 @@
 .product__showcase .media-ctn {
     width: 100%;
     overflow: hidden;
-    border-radius: 4px;
 }
 
 @media (min-width: 735px) {
@@ -40,7 +39,6 @@
     scroll-margin-left: 0;
     padding-top: 133%;
     width: 100%;
-    border-radius: 4px;
     overflow: hidden;
 }
 
@@ -60,7 +58,7 @@
 @media (min-width: 735px) {
     .product__showcase .sticky-ctn {
         position: sticky;
-        top: calc(var(--header-heigth) + var(--gutter));
+        top: calc(var(--header) + var(--gutter));
     }
 }
 

@@ -1,9 +1,9 @@
 /* #header {} */
 
-/* #header .shim {
+#header .shim {
     position: relative;
     height: var(--header);
-} */
+}
 
 #header .header {
     position: fixed;
