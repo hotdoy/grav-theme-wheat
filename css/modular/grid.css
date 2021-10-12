@@ -15,18 +15,17 @@
 .module.grid .layout {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 5px;
+    gap: calc(var(--gutter)/2)
 }
 @media (min-width: 1024px) {
     .module.grid .layout {
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
     }
 }
 
 .module.grid .item {
     padding: 1rem;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     background-color: var(--c-material);
 }
 

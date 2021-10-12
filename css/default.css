@@ -38,14 +38,12 @@
 .default__card a {
     display: block;
     text-decoration: none;
-    border-radius: 8px;
 }
 
 .default__card__media {
     position: relative;
     padding-top: 100%;
     background-color: var(--c-material);
-    border-radius: 8px 8px 0 0;
     overflow: hidden;
 }
 
@@ -65,5 +63,4 @@
     padding: 1rem;
     background-color: var(--c-material);
     min-height: 150px;
-    border-radius: 0 0 8px 8px;
 }
