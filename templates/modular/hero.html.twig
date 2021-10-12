@@ -2,11 +2,16 @@
 {% set name = 'hero' %}
 
 {% set title = title ?? page.header.display_title ?? null %}
+{% set image = page.header.image ? page.media[page.header.image] %}
+{% set image_alt = page.header.image_alt ?? '' %}
 
 {% block content %}
 <div class="wrapper">
-    <div class="title text large">
+    <div class="media">
+        {% include "partials/img.html.twig" with {image: image, alt: image_alt} %}
+    </div>
+    <div class="title text">
         <h1>{{ title|raw }}</h1>
-    </div>        
+    </div>     
 </div>
 {% endblock %}
