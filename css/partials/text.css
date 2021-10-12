@@ -273,6 +273,34 @@
 
 
 /*===========================================
+        	    HUGE 
+============================================*/
+.text.huge {
+    font-size: xx-large;
+    line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+    .text.huge :where(*) {
+        font-size: clamp(32px, 5vw, 90px);
+    }
+}
+
+@media (min-width: 1440px) {
+    .text.huge :where(*) {
+        font-size: 90px;
+    }
+}
+
+.text.huge.prose :where(*) {
+    margin: 4rem 0;
+}
+
+
+
+
+
+/*===========================================
         	 	   MISC 
 ============================================*/
 

@@ -1,6 +1,8 @@
 .module.hero {
     margin-top: 0;
     height: calc(100vh - var(--header));
+    background-color: var(--c-material);
+    max-width: var(--w-full);
 }
 
 .module.hero .wrapper {
@@ -14,14 +16,11 @@
     left: 0;
     margin: 0 auto;
     padding: var(--gutter);
-    max-width: var(--w-full);
-    background-color: var(--c-hl);
+    max-width: var(--w-main);
 }
 
 .module.hero .title {
-    max-width: var(--w-tight);
-    text-align: center;
-    color: var(--c-bg);
+    color: var(--c-hl);
     z-index: 1;
 }
 
