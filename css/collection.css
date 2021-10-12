@@ -5,16 +5,15 @@
 .collection__list > .wrapper {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 10px;
+	gap: calc(var(--gutter)/2);
 	margin: 0 auto;
 	padding: 0 var(--gutter);
 	max-width: var(--w-main);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
 	.collection__list > .wrapper {
 		grid-template-columns:repeat(3, 1fr);
-		grid-gap: var(--gutter);
 	}
 }
 

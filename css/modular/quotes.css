@@ -26,7 +26,6 @@
   padding: var(--rhythm) 2rem;
   text-align: center;
   background-color: var(--c-material);
-  border-radius: 6px;
 }
 
 .module.quotes blockquote {
@@ -37,7 +36,7 @@
 
 .module.quotes .portrait {
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 2rem;
   width: 50px;
   height: 50px;
   overflow: hidden;
@@ -52,6 +51,6 @@
 }
 
 .module.quotes .source {
-  margin-top: 10px;
+  margin-top: 1rem;
   width: 250px;
 }
