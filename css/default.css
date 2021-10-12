@@ -13,7 +13,7 @@
 .default__heading .wrapper {
     padding: 0 var(--gutter);
     margin: 0 auto;
-    max-width: var(--w-tight);
+    max-width: var(--w-main);
     width: 100%;
     text-align: center;
 }
@@ -62,5 +62,11 @@
 .default__card__content {
     padding: 1rem;
     background-color: var(--c-material);
-    min-height: 150px;
+    min-height: 100px;
+}
+
+@media (min-width: 1024px) {
+    .default__card__content {
+        min-height: 150px;
+    }
 }
