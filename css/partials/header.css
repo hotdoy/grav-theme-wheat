@@ -1,9 +1,9 @@
 /* #header {} */
 
-#header .shim {
+/* #header .shim {
     position: relative;
     height: var(--header);
-}
+} */
 
 #header .header {
     position: fixed;
@@ -13,7 +13,6 @@
 
     height: var(--header);
     background-color: var(--c-bg);
-    backdrop-filter: blur(10px);
     color: var(--c-fg);
     border-bottom: 1px solid var(--c-guide);
     z-index: 5000;
