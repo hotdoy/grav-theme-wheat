@@ -6,10 +6,11 @@
 {% set image_alt = page.header.image_alt ?? '' %}
 
 {% block content %}
+<div class="media">
+    {% include "partials/img.html.twig" with {image: image, alt: image_alt} %}
+    <div class="veil"></div>
+</div>
 <div class="wrapper">
-    <div class="media">
-        {% include "partials/img.html.twig" with {image: image, alt: image_alt} %}
-    </div>
     <div class="title text huge">
         <h1>{{ title|raw }}</h1>
     </div>     
