@@ -243,7 +243,7 @@
 .text.small :where(h1),
 .text.small :where(h2) {
     font-size: large;
-    line-height: 1.5rem;
+    line-height: 1.2rem;
     font-weight: var(--fw-bold);
 }
 
@@ -257,7 +257,7 @@
 .text.small :where(h5),
 .text.small :where(h6) {
     font-size: medium;
-    line-height: 1.5rem;
+    line-height: 1.2rem;
     font-weight: var(--fw-bold);
 }
 

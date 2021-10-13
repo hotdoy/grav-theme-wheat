@@ -142,3 +142,42 @@
     border-top: 1px solid var(--c-guide);
     margin: 0 var(--gutter);
 }
+
+
+
+
+
+
+/*===========================================
+				    CARD 
+============================================*/
+
+/* .product__card {} */
+
+.product__card a {
+    display: block;
+    text-decoration: none;
+}
+
+.product__card__media {
+    position: relative;
+    padding-top: 133%;
+    background-color: var(--c-material);
+    overflow: hidden;
+}
+
+.product__card__media img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product__card__content {
+    margin-top: 0.5rem;
+}
