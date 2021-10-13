@@ -11,7 +11,16 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 0;
+}
+
+.module.hero .media .veil {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #00000061;
 }
 
 .module.hero .media img {
@@ -36,6 +45,5 @@
 }
 
 .module.hero .title {
-    color: var(--c-hl);
-    z-index: 1;
+    color: white;
 }
