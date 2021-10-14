@@ -10,8 +10,9 @@
 }
 
 .module.carousel > .wrapper > h2 {
-	margin-bottom: 1rem;
+	margin-bottom: calc(var(--rhythm)/2);
 	width: 100%;
+	text-align: center;
 }
 
 .module.carousel .scroller__slide {

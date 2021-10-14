@@ -8,14 +8,15 @@
 }
 
 .module.grid > .wrapper > h2 {
+    margin-bottom: calc(var(--rhythm)/2);
     width: 100%;
-    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .module.grid .layout {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: calc(var(--gutter)/2)
+    grid-template-columns: repeat(1,1fr);
+    gap: calc(var(--gutter)*2);
 }
 @media (min-width: 1024px) {
     .module.grid .layout {
@@ -23,16 +24,4 @@
     }
 }
 
-.module.grid .item {
-    padding: 1rem;
-    /* border-radius: 8px; */
-    background-color: var(--c-material);
-}
-
-.module.grid .item img {
-    width: 30px;
-    padding: 6px;
-    background-color: var(--c-material);
-    border-radius: 4px;
-    box-sizing: content-box;
-}
+/* .module.grid .item {} */

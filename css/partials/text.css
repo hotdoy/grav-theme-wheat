@@ -228,28 +228,28 @@
 
 .text.small {
     font-size: small;
-    line-height: 1.2rem;
+    line-height: 1.2;
 }
 
 .text.small :where(p) {
     font-size: small;
-    line-height: 1.2rem;
+    line-height: 1.2;
 }
 
 .text.small.prose :where(p) {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 .text.small :where(h1),
 .text.small :where(h2) {
     font-size: large;
-    line-height: 1.2rem;
+    line-height: 1.2;
     font-weight: var(--fw-bold);
 }
 
 .text.small.prose :where(h1),
 .text.small.prose :where(h2) {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 .text.small :where(h3),
@@ -257,7 +257,7 @@
 .text.small :where(h5),
 .text.small :where(h6) {
     font-size: medium;
-    line-height: 1.2rem;
+    line-height: 1.2;
     font-weight: var(--fw-bold);
 }
 
@@ -265,7 +265,7 @@
 .text.small.prose :where(h4),
 .text.small.prose :where(h5),
 .text.small.prose :where(h6) {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 

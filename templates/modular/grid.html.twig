@@ -13,15 +13,8 @@
     <div class="layout">
         {% for item in items %}
         <div class="item text small prose">
-            {% set title = item.title %}
-            {% set image = item.image ? page.media[item.image] %}
-            {% set image_alt = item.image_alt %}
-            {% set text = item.text %}
-            {% include "partials/img.html.twig" with {image: image, alt: image_alt} only %}
-            {% if title %}
-            <h3>{{ title }}</h3>
-            <p>{{ text }}</p>
-            {% endif %}
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.text }}</p>
         </div>
         {% endfor %}
     </div>
