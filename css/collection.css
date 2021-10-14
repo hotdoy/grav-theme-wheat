@@ -5,7 +5,7 @@
 .collection__list > .wrapper {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: calc(var(--gutter)/2);
+	gap: var(--gutter) calc(var(--gutter)/2);
 	margin: 0 auto;
 	padding: 0 var(--gutter);
 	max-width: var(--w-main);
