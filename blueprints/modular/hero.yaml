@@ -11,17 +11,9 @@ form:
             content:
               unset@: true
             header.media_order:
-              ordering@: +99
+              unset@: true
 
             header.display_title:
               type: text
               style: vertical
               label: Display Title
-
-            header.image:
-              label: Image
-              type: pagemediaselect
-
-            header.image_alt:
-              label: Image Alt
-              type: text
