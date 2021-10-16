@@ -48,7 +48,7 @@ body.landing #header .shim {
     max-width: var(--w-main);
 }
 
-.landing__heading .title {
-    text-align: center;
+.landing__heading .content {
     padding-bottom: var(--header);
+    text-align: center;
 }

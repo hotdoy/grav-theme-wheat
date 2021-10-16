@@ -123,10 +123,11 @@
 
 /*INLINE CODE*/
 .module.editor :where(:not(pre)) > code {
-    padding: 0 4px 2px 4px;
+    padding: 2px 4px 2px 4px;
     font-family: monospace;
-    background-color: var(--c-material);
-    border: 1px solid var(--c-guide);
+    background-color: #f1f1f1;
+    color: var(--c-fg);
+    border: 1px solid lightgray;
     border-radius: 4px;
 }
 
@@ -135,8 +136,9 @@
     margin: 1rem 0;
     padding: 1rem;
     font-family: monospace;
-    background-color: var(--c-material);
-    border: 1px solid var(--c-guide);
+    background-color: #f1f1f1;
+    color: var(--c-fg);
+    border: 1px solid lightgray;
     border-radius: 4px;
     overflow-x: auto;
 }
