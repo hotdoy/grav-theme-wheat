@@ -11,13 +11,10 @@
 			{% include "partials/img.html.twig" with {image: image} only %}
 		</div>
 		<div class="product__card__content text small">
-			
 			<h3>{{ title }}</h3>
-			
 			{% if price %}
 			<p>{{ price|number_format(2, ',', ' ') }} $</p>
 			{% endif %}
-
 		</div>
 	</a>
 </article>

@@ -19,7 +19,7 @@ padding-bottom: var(--gutter);
 }
 
 .scroller__scrollctn::-webkit-scrollbar-track {
-    background-color: var(--c-material);
+    background-color: lightgray;
     padding: 0 var(--gutter);
 }
 
@@ -29,7 +29,7 @@ padding-bottom: var(--gutter);
 }
 
 .scroller__scrollctn::-webkit-scrollbar-thumb {
-    background-color: var(--c-guide);
+    background-color: grey;
 }
 
 .scroller__slide {
