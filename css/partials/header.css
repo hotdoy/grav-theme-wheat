@@ -9,7 +9,8 @@
     top: 0;
     left: 0;
     right: 0;
-    height: var(--header);
+    padding: var(--gutter);
+    padding-bottom: 0;
     color: var(--c-fg);
     z-index: 5000;
 }
@@ -26,7 +27,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 var(--gutter);
     font-family: var(--ff-serif);
 }
 
@@ -36,10 +36,7 @@
     justify-content: flex-end;
 }
 
-#header .version {
-    margin-right: 10px;
-    color: var(--c-hl);
-}
+/* #header .version {} */
 
 
 
@@ -59,7 +56,7 @@
 }
 
 #header .layout nav li {
-    margin-right: var(--gutter);
+    margin-left: var(--gutter);
 }
 
 #header .layout nav .langswitcher {

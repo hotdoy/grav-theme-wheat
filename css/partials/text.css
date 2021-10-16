@@ -98,7 +98,7 @@
 }
 ::selection{
     background-color:#ffee00;
-    color: var(--c-fg);
+    color: black;
 }
 
 
