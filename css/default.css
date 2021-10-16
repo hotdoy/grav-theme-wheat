@@ -43,7 +43,6 @@
 .default__card__media {
     position: relative;
     padding-top: 100%;
-    background-color: var(--c-material);
     overflow: hidden;
 }
 
@@ -61,7 +60,8 @@
 
 .default__card__content {
     padding: 1rem;
-    background-color: var(--c-material);
+    background-color: var(--c-bg);
+    color: var(--c-fg);
     min-height: 100px;
 }
 

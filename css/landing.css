@@ -1,0 +1,54 @@
+/* body.landing {} */
+
+
+
+
+
+
+
+/*===========================================
+         		OVERRIDES 
+============================================*/
+body.landing #header {
+	--c-bg: #1a202c;
+	--c-fg: white;
+    --c-btn-bg: white;
+	--c-btn-fg: #1a202c;
+}
+
+body.landing #header .shim {
+    height: 0;
+}
+
+
+/*===========================================
+         		HEADING 
+============================================*/
+
+.landing__heading {
+	--c-bg: #1a202c;
+	--c-fg: white;
+    height: 100vh;
+    max-width: var(--w-full);
+    background-color: #1a202c;
+    color: var(--c-fg);
+}
+
+.landing__heading .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: var(--gutter);
+    max-width: var(--w-main);
+}
+
+.landing__heading .title {
+    text-align: center;
+    padding-bottom: var(--header);
+}

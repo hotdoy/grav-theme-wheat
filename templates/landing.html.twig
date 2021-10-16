@@ -1,0 +1,14 @@
+{% extends 'partials/base.html.twig' %}
+{% set modules = page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
+
+{% block content %}
+
+	{# HEADING #}
+	{% include 'partials/landing-heading.html.twig' %}
+	
+	{# MODULES #}
+	{% for module in modules %}
+	{{ module.content|raw }}
+	{% endfor %}
+
+{% endblock %}

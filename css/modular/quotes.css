@@ -25,7 +25,8 @@
   height: auto;
   padding: var(--rhythm) 2rem;
   text-align: center;
-  background-color: var(--c-material);
+  background-color: var(--c-bg);
+  color: var(--c-fg);
 }
 
 .module.quotes blockquote {

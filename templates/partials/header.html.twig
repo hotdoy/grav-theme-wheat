@@ -1,15 +1,15 @@
 {% import "partials/svg.html.twig" as svg %}
 
 <header id="header">
-    
-    <div class="shim"></div>
 
+    <div class="shim"></div>
+    
     <div class="header">
         <div class="layout">
 
             {# LEFT - LOGO #}
             <a class="logo" href="{{ home_url }}" aria-label="Site logo">
-                {{ svg.wheat() }}
+                {{ site.title }}
             </a> 
 
             {# RIGHT - LINKS & TOGGLES #}

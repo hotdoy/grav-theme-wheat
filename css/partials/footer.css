@@ -2,7 +2,8 @@
     margin-top: var(--rhythm);
     padding-top: var(--rhythm);
     padding-bottom: var(--gutter);
-    background-color: var(--c-material);
+    background-color: var(--c-bg);
+    color: var(--c-fg);
     z-index: 1000;
 }
 
@@ -42,6 +43,7 @@
     min-width: 50%;
     padding-right: 10px;;
 }
+
 @media (min-width: 735px) {
     #footer .links nav ul {
         margin-top: 0;
@@ -56,20 +58,13 @@
 
 #footer .links li {
     padding-top: 5px;
-    color: var(--c-fg);
 }
 
 #footer .links a {
     text-decoration: none;
-    color: var(--c-text);
 }
 
 #footer .legal {
     margin-top: var(--rhythm);
     max-width: 80%;
-}
-
-#footer .domstate-ttc,
-#footer .domstate-tti {
-    color: var(--c-hl);
 }

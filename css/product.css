@@ -181,3 +181,7 @@
 .product__card__content {
     margin-top: 0.5rem;
 }
+
+.product__card__content p {
+    margin-top: 5px;
+}
