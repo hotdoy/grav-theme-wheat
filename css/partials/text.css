@@ -318,20 +318,44 @@
 }
 
 @media (min-width: 640px) {
-    .text.huge :where(*) {
+    .text.huge :where(h1) {
         font-size: clamp(32px, 5vw, 90px);
     }
 }
 
 @media (min-width: 1440px) {
-    .text.huge :where(*) {
+    .text.huge :where(h1) {
         font-size: 90px;
     }
 }
 
-.text.huge.prose :where(*) {
+.text.huge.prose :where(h1) {
     margin: 4rem 0;
 }
+
+.text.huge :where(p) {
+    font-size: 24px;
+    font-family: var(--ff-serif);
+	font-weight: var(--fw-bold);
+    line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+    .text.huge :where(p) {
+        font-size: clamp(24px, 2vw, 32px);
+    }
+}
+
+@media (min-width: 1440px) {
+    .text.huge :where(p) {
+        font-size: 32px;
+    }
+}
+
+.text.huge.prose :where(p) {
+    margin: 3rem 0 1rem 0;
+}
+
 
 
 
