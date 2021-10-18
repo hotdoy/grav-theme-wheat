@@ -9,7 +9,7 @@
 
 {% block content %}
 <div class="wrapper {{ media_position }}">
-	<div class="media-ctn">
+	<div class="media">
 		{% if mp4 %}
 		<video autoplay loop muted poster="{{ image.url }}">
 			{% if mp4 %} <source type="video/mp4" src="{{ mp4.url }}">{% endif %}
@@ -18,7 +18,7 @@
 		{% include "partials/img.html.twig" with {image: image, alt: image_alt} %}
 		{% endif %}
 	</div>
-	<div class="content-ctn text prose">
+	<div class="content text prose">
 		{% if content %}{{ content|raw }}{% endif %}
 	</div>
 </div>

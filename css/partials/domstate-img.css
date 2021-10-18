@@ -1,4 +1,4 @@
-/* 
+
 img {
     opacity: 0;
 }
@@ -7,4 +7,4 @@ img[data-state="complete"] {
     opacity: 1;
     transition: opacity 0.2s;
 } 
-*/
+
