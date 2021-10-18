@@ -28,6 +28,8 @@ body.landing #header .shim {
 .landing__heading {
 	--c-bg: #1a202c;
 	--c-fg: white;
+    --c-btn-bg: white;
+	--c-btn-fg: #1a202c;
     height: 100vh;
     max-width: var(--w-full);
     background-color: #1a202c;
@@ -45,10 +47,27 @@ body.landing #header .shim {
     left: 0;
     margin: 0 auto;
     padding: var(--gutter);
-    max-width: var(--w-main);
+}
+
+.landing__heading .media {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.landing__heading .media img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
 }
 
 .landing__heading .content {
     padding-bottom: var(--header);
     text-align: center;
+    max-width: var(--w-tight);
+    z-index: 1;
 }

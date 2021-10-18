@@ -1,7 +1,7 @@
 @media (prefers-reduced-motion: no-preference) {
 
     /* FADEIN ALL MODULE ON SCROLL */
-    .module {
+    /* .module {
         transform: translateY(15px);
         opacity: 0;
         transition-duration: 0.5s;
@@ -12,6 +12,6 @@
     .module[data-scroll="in"] {
         transform: translateY(0px);
         opacity: 1;
-    }
+    } */
 
 }
