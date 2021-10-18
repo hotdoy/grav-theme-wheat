@@ -1,0 +1,10 @@
+{% extends 'modular/module.html.twig' %}
+{% set name = 'emphasis' %}
+
+{% set content = page.content %}
+
+{% block content %}
+<div class="wrapper text prose huge">
+	{% if content %}{{ content|raw }}{% endif %}
+</div>
+{% endblock %}

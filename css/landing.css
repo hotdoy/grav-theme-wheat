@@ -30,6 +30,7 @@ body.landing #header .shim {
 	--c-fg: white;
     --c-btn-bg: white;
 	--c-btn-fg: #1a202c;
+    position: relative;
     height: 100vh;
     max-width: var(--w-full);
     background-color: #1a202c;

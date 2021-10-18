@@ -1,0 +1,12 @@
+/* .module.emphasis {} */
+
+.module.emphasis .wrapper {
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    width: 100%;
+    max-width: var(--w-main);
+}
+
+.module.emphasis .text * {
+    line-height: 1.5;
+}
