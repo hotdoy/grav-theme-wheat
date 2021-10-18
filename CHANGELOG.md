@@ -1,3 +1,11 @@
+# v0.18.2
+## 10/18/2021
+
+1. [](#improved)
+    * Morning build 
+    * with less animations
+    * and landing heading image
+
 # v0.18.1
 ## 10/15/2021
 
