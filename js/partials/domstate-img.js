@@ -21,11 +21,11 @@ const DomStateImg = {
         document.querySelectorAll('img').forEach(el => {
             el.onload = function() {
                 DomStateImg.SetAttr(el, 'complete');
-                // DomStateImg.RemPh(el);
+                DomStateImg.RemPh(el);
             };
             if (el.complete) {
                 DomStateImg.SetAttr(el, 'complete');
-                // DomStateImg.RemPh(el);
+                DomStateImg.RemPh(el);
             };
         });
     },
