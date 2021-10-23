@@ -8,5 +8,9 @@ document.addEventListener('domstateInteractive', () => {
             once: true,
         });
 
+        Splitting({
+            target: ".module.emphasis p",
+          });
+
     }, delay);
 });
