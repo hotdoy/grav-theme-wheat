@@ -32,7 +32,7 @@
 	--w-body: 100%;
 	--w-full: 100%;
 	--gutter: 20px;
-	--rhythm: 120px;
+	--rhythm: 180px;
 	--header: 46px;
 }
 
@@ -43,7 +43,7 @@
 		--w-body: 100%;
 		--w-full: 100%;
 		--gutter: 20px;
-		--rhythm: 160px;
+		--rhythm: 180px;
 	}
 }
   
@@ -54,7 +54,7 @@
 		--w-body: 100%;
 		--w-full: 100%;
 		--gutter: 20px;
-		--rhythm: 160px;
+		--rhythm: 200px;
 	}
 }
   
@@ -65,7 +65,7 @@
 		--w-body: 100%;
 		--w-full: 100%;
 		--gutter: 20px;
-		--rhythm: 160px;
+		--rhythm: 200px;
 	}
 }
 
@@ -76,7 +76,7 @@
 		--w-body: 1600px;
 		--w-full: 1920px;
 		--gutter: 20px;
-		--rhythm: 160px;
+		--rhythm: 200px;
 	}
 }
 

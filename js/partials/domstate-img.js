@@ -1,9 +1,11 @@
 const DomStateImg = {
+
     ObserveMutation: function() {
         const target = document.querySelector("#main");
         const config = { childList: true, subtree: true };
         const observer = new MutationObserver(function() {
             DomStateImg.Init();
+            observer.disconnect();
         });
         observer.observe(target, config);
     },
