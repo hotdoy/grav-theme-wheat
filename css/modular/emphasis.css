@@ -6,7 +6,3 @@
     width: 100%;
     max-width: var(--w-main);
 }
-
-.module.emphasis .text * {
-    line-height: 1.5;
-}

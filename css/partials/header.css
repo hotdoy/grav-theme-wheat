@@ -36,7 +36,9 @@
     justify-content: flex-end;
 }
 
-/* #header .version {} */
+#header .version {
+    opacity: 0.7;
+}
 
 
 
@@ -47,12 +49,6 @@
 /*LINKS*/
 #header .layout nav {
     display: flex;
-}
-
-#header .layout nav a.button {
-    margin-top: 0;
-    padding: 7px 6px 7px 6px;
-    font-size: small;
 }
 
 #header .layout nav li {
@@ -72,51 +68,24 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    padding-right: var(--gutter);
+    margin-left: var(--gutter);
     height: 100%;
 }
 
 #header .snipcart-checkout .snipcart-items-count {
     position: absolute;
-    top: 9px;
-    right: 11px;
+    top: 13px;
+    right: -2px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 15px;
-    width: 15px;
-    font-size: 9px;
-    line-height: 9px;
+    height: 14px;
+    width: 14px;
+    font-size: 8px;
+    line-height: 8px;
     border-radius: 100%;
     background-color: var(--c-btn-bg);
-    color: white;
-}
-
-#header .snipcart-pulse {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    opacity: 0;
-    border-radius: 100%;
-    background-color: var(--c-btn-bg);
-}
-
-#header .snipcart-pulse.pulse {
-    opacity: 1;
-    animation-name: snipcart-pulse;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-}
-
-@keyframes snipcart-pulse {
-    from {
-        opacity: 0.7;
-        transform: scale(1);
-    }
-    to {
-        opacity: 0;
-        transform: scale(20);
-    }
+    color: var(--c-btn-fg);
 }
 
 #header .layout .snipcart-account {
@@ -124,6 +93,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    padding-right: var(--gutter);
+    margin-left: var(--gutter);
     height: 100%;
 }
