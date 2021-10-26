@@ -75,7 +75,6 @@ const App = {
                     App.dest = href;                    
                     App.destDepth = App.getDepth(App.dest);
 
-                    // Add link prerender
                     if (App.navDelay > 0) {
                         const prefetch = document.createElement('link');
                         prefetch.href = App.path;
@@ -83,7 +82,6 @@ const App = {
                         document.getElementsByTagName('head')[0].appendChild(prefetch);                        
                     }
 
-                    // Trigger navigation event
                     if (App.destDepth < App.depth) {
                         App.setState(App.b, 'navigating-backward', 0, [App.events.navigating, App.events.navigatingBackward]);
                     } else if(App.depth > App.depth) {
@@ -92,21 +90,14 @@ const App = {
                         App.setState(App.b, 'navigating', 0, [App.events.navigating]);
                     }
 
-                    // Navigate
                     setTimeout(function(){ 
-                        window.location.href = App.path;
-                    }, App.delay);
+                        window.location.href = App.dest;
+                    }, App.navDelay);
 
                 }, false);
             }
         });
     },
-
-
-
-
-
-
 
     Init: function() {
         App.depth = App.getDepth(App.path);
