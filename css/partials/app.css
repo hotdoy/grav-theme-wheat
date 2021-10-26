@@ -11,3 +11,7 @@
 /* body[data-state^='navigating-forward'] {} */
 
 /* body[data-state^='navigating-backward'] {} */
+
+/* img {opacity: 0;} */
+
+/* img[data-state="complete"] {opacity: 1; transition: opacity 0.2s;}  */
