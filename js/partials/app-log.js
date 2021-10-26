@@ -1,15 +1,19 @@
-document.addEventListener('domstateInteractive', () => {
+document.addEventListener('appInteractive', () => {
     const tti = (performance.now()/1000).toPrecision(2);
     console.log('%c interactive - ' + tti, 'color:green;');
-    document.querySelectorAll('.domstate-tti').forEach(el => {
+    document.querySelectorAll('.app-tti').forEach(el => {
         el.innerHTML = tti + 's';
     });
 });
 
-document.addEventListener('domstateComplete', () => {
+document.addEventListener('appComplete', () => {
     const ttc = (performance.now()/1000).toPrecision(2);
     console.log('%c complete - ' + ttc, 'color:green;');
-    document.querySelectorAll('.domstate-ttc').forEach(el => {
+    document.querySelectorAll('.app-ttc').forEach(el => {
         el.innerHTML = ttc + 's';
     });
+});
+
+document.addEventListener('appNavigating', () => {
+    console.log('%c navigating', 'color:green;');
 });

@@ -1,4 +1,4 @@
-document.addEventListener('domstateInteractive', () => {
+document.addEventListener('appInteractive', () => {
     const delay = 0;
 
     setTimeout(function(){
