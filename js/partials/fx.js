@@ -5,12 +5,17 @@ document.addEventListener('domstateInteractive', () => {
 
         ScrollOut({
             targets: ['.module'],
-            once: true,
+            // once: true,
+        });
+
+        ScrollOut({
+            targets: ['.landing__heading'],
+            // once: true,
         });
 
         Splitting({
             target: ".module.emphasis p",
-          });
+        });
 
     }, delay);
 });

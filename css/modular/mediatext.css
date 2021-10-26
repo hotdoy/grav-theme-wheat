@@ -27,12 +27,13 @@
 
 .module.mediatext .media video,
 .module.mediatext .media img {
+    display: block;
     width: 100%;
     height: auto;
 }
 
 .module.mediatext .content {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     width: 100%;
 }
 

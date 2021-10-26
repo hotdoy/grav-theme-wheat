@@ -21,6 +21,9 @@ body.landing #header .shim {
 }
 
 
+
+
+
 /*===========================================
          		HEADING 
 ============================================*/
@@ -35,6 +38,7 @@ body.landing #header .shim {
     max-width: var(--w-full);
     background-color: #1a202c;
     color: var(--c-fg);
+    overflow: hidden;
 }
 
 .landing__heading .wrapper {
