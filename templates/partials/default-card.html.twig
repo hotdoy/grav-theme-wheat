@@ -3,14 +3,18 @@
 {% set image = image|default(item.header.image ? item.media[item.header.image] : item.media.images|first) %}
 {% set image_alt = image_alt|default(item.header.image_alt ?? '') %}
 {% set title = title|default(item.header.title) %}
+{% set subtitle = subtitle ?? item.header.price ? item.header.price|number_format(2, ',', ' ') ~ '$' : item.header.date ? item.header.date|date('d/m/Y') : null %}
 
-<article class="default__card dark">
+<article class="default__card">
 	<a href="{{ item.url }}">
 		<div class="default__card__media">
 			{% include "partials/img.html.twig" with {image: image} only %}
 		</div>
 		<div class="default__card__content text small">
 			<h3>{{ title }}</h3>
+			{% if subtitle %}
+			<p>{{ subtitle }}</p>
+			{% endif %}
 		</div>
 	</a>
 </article>
