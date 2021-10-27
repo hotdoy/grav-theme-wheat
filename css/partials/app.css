@@ -24,7 +24,7 @@ img[loading="lazy"][data-state="complete"] {
     animation-delay: 0ms;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-timing-function: linear;
 } 
 
 @keyframes appImg {

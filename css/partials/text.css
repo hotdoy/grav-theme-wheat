@@ -32,42 +32,9 @@
 		url('../../fonts/inter-v3-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 		url('../../fonts/inter-v3-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* source-serif-pro-regular - latin */
-@font-face {
-    font-family: 'Source Serif Pro';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''),
-         url('../../fonts/source-serif-pro-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../../fonts/source-serif-pro-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* source-serif-pro-italic - latin */
-  @font-face {
-    font-family: 'Source Serif Pro';
-    font-style: italic;
-    font-weight: 400;
-    src: local(''),
-         url('../../fonts/source-serif-pro-v11-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../../fonts/source-serif-pro-v11-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* source-serif-pro-600 - latin */
-  @font-face {
-    font-family: 'Source Serif Pro';
-    font-style: normal;
-    font-weight: 600;
-    src: local(''),
-         url('../../fonts/source-serif-pro-v11-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../../fonts/source-serif-pro-v11-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* source-serif-pro-600italic - latin */
-  @font-face {
-    font-family: 'Source Serif Pro';
-    font-style: italic;
-    font-weight: 600;
-    src: local(''),
-         url('../../fonts/source-serif-pro-v11-latin-600italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../../fonts/source-serif-pro-v11-latin-600italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
+
+
+
 
 
 /*===========================================
@@ -76,8 +43,6 @@
 
 :root {
 	--ff-sans: "Inter";
-    --ff-serif: "Source Serif Pro";
-
 	--fw-regular: 400;
     --fw-medium: 500;
 	--fw-bold: 600;
@@ -124,7 +89,6 @@
 
 .text :where(h1) {
     font-size: 32px;
-    font-family: var(--ff-serif);
 	font-weight: var(--fw-bold);
     line-height: 1.2;
 }
@@ -147,7 +111,6 @@
 
 .text :where(h2) {
     font-size: 24px;
-    font-family: var(--ff-serif);
 	font-weight: var(--fw-bold);
     line-height: 1.2;
 }
@@ -304,58 +267,6 @@
 .text.small.prose :where(h6) {
     margin: 0.5rem 0;
 }
-
-
-
-
-
-/*===========================================
-        	    HUGE 
-============================================*/
-.text.huge {
-    font-size: xx-large;
-    line-height: 1.2;
-}
-
-@media (min-width: 640px) {
-    .text.huge :where(h1) {
-        font-size: clamp(32px, 5vw, 90px);
-    }
-}
-
-@media (min-width: 1440px) {
-    .text.huge :where(h1) {
-        font-size: 90px;
-    }
-}
-
-.text.huge.prose :where(h1) {
-    margin: 4rem 0;
-}
-
-.text.huge :where(p) {
-    font-size: 24px;
-    font-family: var(--ff-serif);
-	font-weight: var(--fw-bold);
-    line-height: 1.2;
-}
-
-@media (min-width: 640px) {
-    .text.huge :where(p) {
-        font-size: clamp(24px, 2vw, 32px);
-    }
-}
-
-@media (min-width: 1440px) {
-    .text.huge :where(p) {
-        font-size: 32px;
-    }
-}
-
-.text.huge.prose :where(p) {
-    margin: 3rem 0 1rem 0;
-}
-
 
 
 

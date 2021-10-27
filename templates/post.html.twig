@@ -3,14 +3,14 @@
 {% block content %}
 
 	{# HEADING #}
-	{% include 'partials/post-heading.html.twig' with {class: 'mt-half'} %}
+	{% include 'partials/post-heading.html.twig' %}
 
 	{# MEDIA #}
-	{% include 'modular/media.html.twig' with {class: 'mt-half'} %}
+	{% include 'modular/media.html.twig' %}
 	
 	{# CONTENT #}
 	{% if page.content %}
-	{% include 'modular/editor.html.twig' with {class: 'mt-half'} %}
+	{% include 'modular/editor.html.twig' %}
 	{% endif %}
 
 	{# MODULES #}

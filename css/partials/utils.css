@@ -5,26 +5,3 @@
   bottom: 0;
   left: 0;
 }
-
-.width-tight,
-.w-tight {
-  width: 100%;
-  max-width: var(--w-tight);
-  padding: 0 var(--gutter);
-  margin: 0 auto;
-}
-
-.width-body,
-.w-body {
-  width: 100%;
-  max-width: var(--w-body);
-  padding: 0 var(--gutter);
-  margin: 0 auto;
-}
-
-.width-full,
-.w-full {
-  width: 100%;
-  max-width: var(--w-full);
-  margin: 0 auto;
-}

@@ -3,24 +3,3 @@
   margin-top: var(--rhythm);
   z-index: 1000;
 }
-
-.module.padded {
-	padding-top: var(--rhythm);
-  padding-bottom: var(--rhythm);
-}
-
-.module.mt-rhythm {
-  margin-top: var(--rhythm);
-}
-
-.module.mt-half {
-  margin-top: calc(var(--rhythm) / 2);
-}
-
-.module.mt-gutter {
-  margin-top: var(--gutter);
-}
-
-.module.mt-none {
-  margin-top: 0;
-}
