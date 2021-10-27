@@ -3,7 +3,7 @@ const App = {
     path: window.location.pathname,
     depth: 0,
     dest: '',
-    destDepth: '',
+    destDepth: 0,
     delay: 0,
     navDelay: 0,
     perceivedDelay: performance.now(),
@@ -61,8 +61,17 @@ const App = {
         el.setAttribute("rel", "noopener");
     },
 
-    navigation: function() {
-        document.querySelectorAll("a").forEach(el => {
+    setPrerenderLink: function() {
+        if (App.navDelay > 0) {
+            const l = document.createElement('link');
+            l.href = App.dest;
+            l.rel='prerender';
+            document.getElementsByTagName('head')[0].appendChild(l);    
+        } 
+    },
+
+    navigation: function(els) {
+        els.forEach(el => {
 
             const href = el.getAttribute("href");
             
@@ -74,18 +83,12 @@ const App = {
 
                     App.dest = href;                    
                     App.destDepth = App.getDepth(App.dest);
-
-                    if (App.navDelay > 0) {
-                        const prefetch = document.createElement('link');
-                        prefetch.href = App.path;
-                        prefetch.rel='prerender';
-                        document.getElementsByTagName('head')[0].appendChild(prefetch);                        
-                    }
+                    App.setPrerenderLink(); 
 
                     if (App.destDepth < App.depth) {
                         App.setState(App.b, 'navigating-backward', 0, [App.events.navigating, App.events.navigatingBackward]);
-                    } else if(App.depth > App.depth) {
-                        App.setState('navigating-forward', 0, [App.events.navigating, App.events.navigatingForward]);
+                    } else if(App.destDepth > App.depth) {
+                        App.setState(App.b, 'navigating-forward', 0, [App.events.navigating, App.events.navigatingForward]);
                     } else {
                         App.setState(App.b, 'navigating', 0, [App.events.navigating]);
                     }
@@ -108,7 +111,7 @@ const App = {
             }
         });
 
-        App.navigation();
+        App.navigation(document.querySelectorAll("a"));
 
         // IMG
         document.querySelectorAll('img').forEach(el => {
@@ -128,5 +131,3 @@ const App = {
 };
 
 App.Init();
-
-
