@@ -18,7 +18,7 @@
     {% include 'partials/default-heading.html.twig' with {title: title} %}
    
     {# LIST #}
-    <section class="module collection__list" data-list>
+    <section class="module collection__list mt-half" data-list>
         <div class="wrapper">
             {% for item in collection_slice %}
             {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item} only %}
