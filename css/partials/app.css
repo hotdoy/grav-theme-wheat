@@ -12,6 +12,21 @@
 
 /* body[data-state^='navigating-backward'] {} */
 
-/* img {opacity: 0;} */
+/* [data-state="in"] {} */
 
-/* img[data-state="complete"] {opacity: 1; transition: opacity 0.2s;}  */
+/* [data-state="out"] {} */
+
+img[loading="lazy"] {opacity: 0;}
+
+img[loading="lazy"][data-state="complete"] {
+    animation-name: appImg;
+    animation-duration: 400ms; 
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+} 
+
+@keyframes appImg {
+    to {opacity: 1;}
+}
