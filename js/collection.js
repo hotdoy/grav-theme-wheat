@@ -47,6 +47,9 @@ const Collection = {
             // Swap the current url with the one including the new query
             window.history.replaceState({}, "", `${location.pathname}?${Collection.qs}`);
 
+            // Make sure new images are handled by App
+            App.setImgBehaviour(document.querySelectorAll('img'));
+
             // Restart the whole process
             Collection.Init();
         })
