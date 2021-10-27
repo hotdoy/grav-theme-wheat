@@ -42,7 +42,8 @@
 
 .default__card__media {
     position: relative;
-    padding-top: 100%;
+    padding-top: 133%;
+    background-color: var(--c-material);
     overflow: hidden;
 }
 
@@ -59,14 +60,9 @@
 }
 
 .default__card__content {
-    padding: 1rem;
-    background-color: var(--c-bg);
-    color: var(--c-fg);
-    min-height: 100px;
+    margin-top: 0.5rem;
 }
 
-@media (min-width: 1024px) {
-    .default__card__content {
-        min-height: 150px;
-    }
+.default__card__content p {
+    margin-top: 5px;
 }
