@@ -5,7 +5,6 @@
     padding: 0 var(--gutter);
     width: 100%;
     max-width: var(--w-main);
-    font-size: larger;
 }
 
 .module.emphasis .text * {
@@ -16,7 +15,6 @@
 @media (min-width: 1024px) {
     .module.emphasis .text * {
         font-size: xx-large;
-        line-height: 1.5;
     }
 }
 
