@@ -44,7 +44,7 @@ body.landing #header .shim {
 .landing__heading .wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     position: absolute;
     top: 0;
     right: 0;
@@ -70,11 +70,21 @@ body.landing #header .shim {
     height: 100%;
 }
 
+.landing__heading .veil {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(31,31,31,0.7) 0%, rgba(31,31,31,0.05) 100%);
+    z-index: 1;
+}
+
 .landing__heading .content {
     padding-bottom: var(--header);
-    text-align: center;
+    /* text-align: center; */
     max-width: var(--w-tight);
-    z-index: 1;
+    z-index: 2;
 }
 
 
