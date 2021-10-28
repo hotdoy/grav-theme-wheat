@@ -1,6 +1,7 @@
 {% set content = content ?? page.content ?? null %}
 {% set image = page.header.image ? page.media[page.header.image] %}
 {% set image_alt = page.header.image_alt ?? '' %}
+{% set veil = page.header.veil ?? false %}
 
 <section class="landing__heading">
     <div class="wrapper">
@@ -13,6 +14,7 @@
             {% include "partials/img.html.twig" with {image: image, alt: image_alt} %}
             {% endif %}
         </div>
+        {% if veil %}<div class="veil"></div>{% endif %}
         <div class="content text">
             {{ content|raw }}
         </div>
