@@ -8,20 +8,33 @@
 }
 
 .module.grid > .wrapper > h2 {
-    margin-bottom: calc(var(--rhythm)/2);
+    margin-bottom: 2rem;
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 
 .module.grid .layout {
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    gap: calc(var(--gutter)*2);
+    gap: var(--gutter);
 }
+
 @media (min-width: 1024px) {
     .module.grid .layout {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* .module.grid .item {} */
+.module.grid .item {
+    border-top: 2px solid #f1f1f1;
+}
+
+.module.grid .item h3 {
+    margin-top: 1.5rem;
+    font-size: medium
+}
+
+.module.grid .item p {
+    margin-top: 1rem;
+    font-size: small;
+}
