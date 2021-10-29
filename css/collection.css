@@ -1,6 +1,10 @@
 /* body.collection {} */
 
-/*.collection__list {}*/
+.collection__list {
+	position: relative;
+	margin-top: calc(var(--rhythm)/2);
+	z-index: 1000;
+}
 
 .collection__list > .wrapper {
 	display: grid;
