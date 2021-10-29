@@ -6,8 +6,6 @@
 
 /* body[data-state='complete'] {} */
 
-/* body[data-state='waiting'] {} */
-
 /* body[data-state^='navigating'] {} */
 
 /* body[data-state^='navigating-forward'] {} */

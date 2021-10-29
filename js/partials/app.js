@@ -13,7 +13,6 @@ const App = {
     events: {
         interactive: new Event('appInteractive'),
         complete: new Event('appComplete'),
-        waiting: new Event('appWaiting'),
         navigating: new Event('appNavigating'),
         navigatingForward: new Event('appNavigatingForward'),
         navigatingBackward: new Event('appNavigatingBackward'),
