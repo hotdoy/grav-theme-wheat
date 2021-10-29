@@ -1,15 +1,16 @@
 const App = {
-    b: document.body,
+    win: window,
+    doc: document,
+    body: document.body,
     currentPath: window.location.pathname,
     currentDepth: 0,
     destinatioPath: '',
     destinationDepth: 0,
     delay: 0,
-    navigationDelay: 0,
+    navigationDelay: 200,
     perceivedDelay: performance.now(),
     adjustedDelay: 0,
     events: {
-        // update: new Event('appUpdate'),
         interactive: new Event('appInteractive'),
         complete: new Event('appComplete'),
         navigating: new Event('appNavigating'),
@@ -22,7 +23,7 @@ const App = {
             el.setAttribute('data-state', state);
             if (events) {
                 events.forEach(e => {
-                    document.dispatchEvent(e);   
+                    App.doc.dispatchEvent(e);   
                 });
             }
         }, delay);
@@ -70,8 +71,20 @@ const App = {
         App.adjustedDelay = App.getAdjustedDelay(App.delay);
     },
 
+    setCompleteListener: function() {
+        if (App.doc.readyState === 'complete') {
+            App.setState(App.body, 'complete', App.adjustedDelay, [App.events.complete]);
+        } else {
+            App.doc.addEventListener('readystatechange', e => {
+                if (e.target.readyState === 'complete') {
+                    App.setState(App.body, 'complete', App.adjustedDelay, [App.events.complete]);
+                }
+            });
+        }
+    },
+
     observeMutation: function(selector, callback) {
-        const target = document.querySelector(selector);
+        const target = App.doc.querySelector(selector);
         const config = { attributes: false, childList: true, subtree: true };
         const observer = new MutationObserver(function() {
             callback();
@@ -95,13 +108,13 @@ const App = {
             App.setPrerenderLink(); 
 
             if (App.destinationDepth < App.currentDepth) {
-                App.setState(App.b, 'navigating-backward', 0, [App.events.navigating, App.events.navigatingBackward]);
+                App.setState(App.body, 'navigating-backward', 0, [App.events.navigating, App.events.navigatingBackward]);
 
             } else if(App.destinationDepth > App.currentDepth) {
-                App.setState(App.b, 'navigating-forward', 0, [App.events.navigating, App.events.navigatingForward]);
+                App.setState(App.body, 'navigating-forward', 0, [App.events.navigating, App.events.navigatingForward]);
 
             } else {
-                App.setState(App.b,'navigating', 0, [App.events.navigating]);
+                App.setState(App.body,'navigating', 0, [App.events.navigating]);
             }
             setTimeout(function(){ 
                 window.location.href = App.destinatioPath;
@@ -112,10 +125,10 @@ const App = {
 
     setPrerenderLink: function() {
         if (App.navigationDelay > 0) {
-            const link = document.createElement('link');
+            const link = App.doc.createElement('link');
             link.href = App.destinatioPath;
             link.rel='prerender';
-            document.getElementsByTagName('head')[0].appendChild(link);    
+            App.doc.getElementsByTagName('head')[0].appendChild(link);    
         } 
     },
 
@@ -146,17 +159,11 @@ const App = {
 
     Init: function() {
         App.setCurrentDepth();
+        App.setLinkBehaviour(App.doc.querySelectorAll("a"));
+        App.setImgBehaviour(App.doc.querySelectorAll('img'));
         App.setAdjustedDelay();
-        App.setLinkBehaviour(document.querySelectorAll("a"));
-        App.setImgBehaviour(document.querySelectorAll('img'));
-
-        document.addEventListener('readystatechange', e => {
-            if (e.target.readyState === 'complete') {
-                App.setState(App.b, 'complete', App.adjustedDelay, [App.events.complete]);
-            }
-        });
-
-        App.setState(App.b, 'interactive', App.adjustedDelay, [App.events.interactive]);
+        App.setState(App.body, 'interactive', App.adjustedDelay, [App.events.interactive]);
+        App.setCompleteListener();
     }
 };
 
