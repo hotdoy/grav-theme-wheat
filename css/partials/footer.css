@@ -57,7 +57,7 @@
 }
 
 #footer .links li {
-    padding-top: 5px;
+    margin-top: 10px;
 }
 
 #footer .links a {
@@ -67,4 +67,9 @@
 #footer .legal {
     margin-top: var(--rhythm);
     max-width: 80%;
+    font-size: small;
+}
+
+#footer .legal a {
+    color: dodgerblue;
 }
