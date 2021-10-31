@@ -16,7 +16,7 @@
 .module.grid .layout {
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    gap: var(--gutter);
+    gap: 1.5rem;
 }
 
 @media (min-width: 1024px) {
@@ -26,7 +26,7 @@
 }
 
 .module.grid .item {
-    border-top: 2px solid #f1f1f1;
+    border-top: 1px solid #f1f1f1;
 }
 
 .module.grid .item h3 {
