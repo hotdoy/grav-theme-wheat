@@ -271,6 +271,36 @@
 
 
 
+/*===========================================
+        	 	   CODE 
+============================================*/
+
+
+/* INLINE */
+
+.text :where(:not(pre))>code {
+    padding: 0px 4px 1px 4px;
+    font-family: monospace;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+}
+
+
+/* CODE BLOCK */
+
+.text pre {
+    margin: 1rem 0;
+    padding: 1rem;
+    font-family: monospace;
+    background-color: #f1f1f1;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+
+
+
 
 /*===========================================
         	 	   MISC 

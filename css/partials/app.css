@@ -20,11 +20,10 @@ img[loading="lazy"] {opacity: 0;}
 
 img[loading="lazy"][data-state="complete"] {
     animation-name: appImg;
-    animation-duration: 400ms; 
+    animation-duration: 200ms; 
     animation-delay: 0ms;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
-    animation-timing-function: linear;
 } 
 
 @keyframes appImg {
