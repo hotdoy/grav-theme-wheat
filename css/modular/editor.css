@@ -120,25 +120,3 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-
-/*INLINE CODE*/
-.module.editor :where(:not(pre)) > code {
-    padding: 2px 4px 2px 4px;
-    font-family: monospace;
-    background-color: #f1f1f1;
-    color: var(--c-fg);
-    border: 1px solid lightgray;
-    border-radius: 4px;
-}
-
-/* CODE BLOCK */
-.module.editor pre {
-    margin: 1rem 0;
-    padding: 1rem;
-    font-family: monospace;
-    background-color: #f1f1f1;
-    color: var(--c-fg);
-    border: 1px solid lightgray;
-    border-radius: 4px;
-    overflow-x: auto;
-}
