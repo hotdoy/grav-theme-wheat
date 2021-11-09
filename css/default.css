@@ -15,7 +15,7 @@
     margin: 0 auto;
     max-width: var(--w-main);
     width: 100%;
-    text-align: left;
+    text-align: center;
 }
 
 .default__heading .breadcrumbs {
