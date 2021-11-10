@@ -2,7 +2,7 @@
 
 .collection__list {
 	position: relative;
-	margin-top: calc(var(--rhythm)/2);
+	margin-top: var(--rhythm);
 	z-index: 1000;
 }
 
