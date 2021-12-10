@@ -1,3 +1,9 @@
+# v0.19.0
+## 12/10/2021
+
+1. [](#improved)
+    * WE DO NOTE USE RELEASES ANYMORE. JUST DOWNLOAD THE MASTER BRANCH.
+
 # v0.18.2
 ## 10/18/2021
 
