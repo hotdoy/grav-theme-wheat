@@ -13,9 +13,5 @@ document.addEventListener('appInteractive', () => {
             // once: true,
         });
 
-        Splitting({
-            target: ".module.emphasis p",
-        });
-
     }, delay);
 });

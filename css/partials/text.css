@@ -177,6 +177,7 @@
 .text ul li,
 .text ol li {
 	font-size: inherit;
+    line-height: inherit;
 }
 
 .text ul li p,

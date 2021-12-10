@@ -1,5 +1,8 @@
 on:
-  release:
+  push:
+    branches: 
+      - master
+  pull_request:
     branches: 
       - master
   workflow_dispatch:
@@ -18,9 +21,9 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
-        server: ${{ secrets.WHEAT_SERVER }}
-        username: ${{ secrets.WHEAT_USERNAME }}
-        password: ${{ secrets.WHEAT_PASSWORD }}
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
 
   # https://github.com/marketplace/actions/cloudflare-purge-cache
   purge-cloudflare:
@@ -29,5 +32,5 @@ jobs:
     steps:
       - uses: jakejarvis/cloudflare-purge-action@master
         env:
-          CLOUDFLARE_ZONE: ${{ secrets.WHEAT_CLOUDFLARE_ZONE }}
-          CLOUDFLARE_TOKEN: ${{ secrets.WHEAT_CLOUDFLARE_TOKEN }}
+          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}

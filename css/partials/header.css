@@ -9,13 +9,15 @@
     top: 0;
     left: 0;
     right: 0;
+    font-size: medium;
+    line-height: 1;
     padding: var(--gutter);
     padding-bottom: 0;
     color: var(--c-fg);
     z-index: 5000;
 }
 
-#header .layout {
+#header .header .layout {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -23,20 +25,19 @@
     height: 100%;
 }
 
-#header .layout .logo {
+#header .header .layout .logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--ff-serif);
 }
 
-#header .layout .toggles {
+#header .header .layout .toggles {
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-#header .version {
+#header .header .version {
     opacity: 0.7;
 }
 
@@ -47,15 +48,17 @@
 
 
 /*LINKS*/
-#header .layout nav {
+#header .header .layout nav ul {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#header .layout nav li {
+#header .header .layout nav ul li {
     margin-left: var(--gutter);
 }
 
-#header .layout nav .langswitcher {
+#header .header .layout nav ul li.langswitcher {
     opacity: 0.7;
 }
 
@@ -63,16 +66,15 @@
 
 
 /*TOGGLES*/
-#header .layout .snipcart-checkout {
+#header .header .layout nav ul li button {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-left: var(--gutter);
     height: 100%;
 }
 
-#header .snipcart-checkout .snipcart-items-count {
+#header .header .snipcart-items-count {
     position: absolute;
     top: 13px;
     right: -2px;
@@ -86,13 +88,4 @@
     border-radius: 100%;
     background-color: var(--c-btn-bg);
     color: var(--c-btn-fg);
-}
-
-#header .layout .snipcart-account {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-left: var(--gutter);
-    height: 100%;
 }

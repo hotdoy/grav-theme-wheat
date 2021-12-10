@@ -14,30 +14,33 @@
 
             {# RIGHT - LINKS & TOGGLES #}
             <div class="toggles">
-                <div class="version text small">v{{ grav.theme.getBlueprint().version }}</div>
                 <nav class="nav">
                     <ul>
+                        <li class="version">v{{ grav.theme.getBlueprint().version }}</li>
                         {% for link in root_params.header.header_links %}
                         <li><a href="{{ link.url }}">{{ link.label }}</a></li>
                         {% endfor %}
                         {% include 'partials/langswitcher.html.twig' %}
+                        {% if theme.snipcart %}
+                        {% if not theme.snipcart_allow_guests_only %}
+                        <li>
+                            <button class="snipcart-account snipcart-customer-signin" aria-label="customer sign in">
+                                {{ svg.user() }}
+                            </button>
+                        </li>
+                        {% endif %}
+                        <li>
+                            <button class="snipcart-checkout" aria-label="open cart">
+                                {{ svg.bag() }}
+                                <span class="snipcart-items-count">0</span>
+                            </button>
+                        </li>
+                        {% endif %}
                     </ul>
                 </nav>
-                {% if theme.snipcart %}
-                {% if not theme.snipcart_allow_guests_only %}
-                <button class="snipcart-account snipcart-customer-signin" aria-label="customer sign in">{{ svg.user() }}</button>
-                {% endif %}
-                <button class="snipcart-checkout" aria-label="open cart">
-                    {{ svg.bag() }}
-                    <span class="snipcart-items-count">0</span>
-                    <span class="snipcart-pulse"></span>
-                </button>
-                {% endif %}
             </div>
-
         </div>
     </div>
-
 </header>
 
 {#
