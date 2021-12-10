@@ -9,51 +9,11 @@
 
 .module.emphasis .text * {
     font-size: x-large;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 @media (min-width: 1024px) {
     .module.emphasis .text * {
         font-size: xx-large;
-    }
-}
-
-
-
-
-
-/*===========================================
-                    FX 
-============================================*/
-
-@media (prefers-reduced-motion: no-preference) {
-    
-    .module.emphasis p {
-        opacity: 0;
-       }
-       
-    .module.emphasis p.splitting {
-        opacity: 1;
-    }
-    
-    .module.emphasis .splitting .word {
-        display: inline-block;
-        overflow: hidden;
-    }
-    
-    .module.emphasis .splitting .char {
-        transform: translateY(150%);
-        display: inline-block;
-    }
-    
-    .module.emphasis[data-scroll="in"] .splitting .char {
-        animation: emphasis-slidein 500ms cubic-bezier(.2, 0, .1, 1) both;
-        animation-delay: calc(10ms * var(--word-index));
-    }
-    
-    @keyframes emphasis-slidein {
-        to {
-            transform: translateY(0%);
-        }
     }
 }
