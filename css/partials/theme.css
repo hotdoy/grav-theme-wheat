@@ -4,18 +4,16 @@
 
 :root {
 	--c-bg: white;
-	--c-fg: #1a202c;
-	--c-btn-bg: #1a202c;
+	--c-fg: #1f1f1f;
+	--c-btn-bg: #1f1f1f;
 	--c-btn-fg: white;
-	--c-focus: rgb(0 78 255 / 66%);
 }
 
 .dark {
-	--c-bg: #1a202c;
+	--c-bg: #1f1f1f;
 	--c-fg: white;
 	--c-btn-bg: white;
-	--c-btn-fg: #1a202c;
-	--c-focus: rgb(0 78 255 / 66%);
+	--c-btn-fg: #1f1f1f;
 }
 
 

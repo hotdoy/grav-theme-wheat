@@ -66,10 +66,10 @@
 
 #footer .legal {
     margin-top: var(--rhythm);
-    max-width: 80%;
+    max-width: var(--w-tight);
     font-size: small;
 }
 
 #footer .legal a {
-    color: dodgerblue;
+    text-decoration: underline;
 }

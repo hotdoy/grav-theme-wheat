@@ -10,10 +10,10 @@
          		OVERRIDES 
 ============================================*/
 body.landing #header {
-	--c-bg: #1a202c;
+	--c-bg: #1f1f1f;
 	--c-fg: white;
     --c-btn-bg: white;
-	--c-btn-fg: #1a202c;
+	--c-btn-fg: #1f1f1f;
 }
 
 body.landing #header .shim {
@@ -29,14 +29,14 @@ body.landing #header .shim {
 ============================================*/
 
 .landing__heading {
-	--c-bg: #1a202c;
+	--c-bg: #1f1f1f;
 	--c-fg: white;
     --c-btn-bg: white;
-	--c-btn-fg: #1a202c;
+	--c-btn-fg: #1f1f1f;
     position: relative;
     height: 100vh;
     max-width: var(--w-full);
-    background-color: #1a202c;
+    background-color: var(--c-bg);
     color: var(--c-fg);
     overflow: hidden;
 }
