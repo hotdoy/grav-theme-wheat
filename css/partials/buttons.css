@@ -22,24 +22,15 @@ button.button {
     transition-duration: 0.2s;
 }
 
+a:focus {
+    outline: 1px dotted var(--c-fg);
+}
+
 .button:hover,
 a.button:hover,
 button.button:hover {
     outline: none;
     opacity: 0.8;
-}
-
-.button:hover:active,
-a.button:hover:active,
-button.button:hover:active {
-    outline: none;
-    box-shadow: 0 0 0 3px var(--c-focus);
-}
-
-a:focus,
-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px var(--c-focus);
 }
 
 .button.disabled {
