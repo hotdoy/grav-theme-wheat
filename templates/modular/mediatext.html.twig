@@ -12,7 +12,7 @@
 	<div class="media">
 		{% if mp4 %}
 		<video autoplay loop muted poster="{{ image.url }}">
-			{% if mp4 %} <source type="video/mp4" src="{{ mp4.url }}">{% endif %}
+			{% if mp4 %}<source type="video/mp4" src="{{ mp4.url }}">{% endif %}
 		</video>
 		{% elseif image %}
 		{% include "partials/img.html.twig" with {image: image, alt: image_alt} %}
