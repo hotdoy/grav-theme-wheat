@@ -12,7 +12,7 @@ padding-bottom: var(--gutter);
 -webkit-overflow-scrolling: touch;
 }
 
-@media (min-width: 735px) {
+@media (min-width: 1024px) {
     .scroller__scrollctn {
         scroll-behavior: smooth;
     }
@@ -48,7 +48,7 @@ padding-bottom: var(--gutter);
     transition: all 0.2s;
 }
 
-@media (min-width: 735px) {
+@media (min-width: 1024px) {
     .scroller__prev,
     .scroller__next {
         display: inline;
@@ -89,7 +89,7 @@ padding-bottom: var(--gutter);
     max-width: 60%;
 }
 
-@media (min-width: 735px) {
+@media (min-width: 1024px) {
     .scroller__slide {
             min-width: 39%;
             max-width: 39%;
