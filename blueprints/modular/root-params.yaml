@@ -53,11 +53,11 @@ form:
                         label: Label
                       .url:
                         type: text
-                        label: Url
+                        label: Url        
     
-              section_share:
+              section_site:
                 type: section
-                title: Share
+                title: Site
                 underline: true
 
               header.site_title:
