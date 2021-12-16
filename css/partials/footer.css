@@ -1,6 +1,6 @@
 #footer {
     margin-top: var(--rhythm);
-    padding-top: var(--rhythm);
+    padding-top: calc(var(--rhythm) - 2rem);
     padding-bottom: var(--gutter);
     background-color: var(--c-bg);
     color: var(--c-fg);
@@ -53,7 +53,7 @@
 
 #footer .links ul li:first-child {
     font-weight: var(--fw-bold);
-    margin-top: var(--gutter);
+    margin-top: 2rem;
 }
 
 #footer .links li {
@@ -64,12 +64,26 @@
     text-decoration: none;
 }
 
-#footer .legal {
+#footer .footnote {
     margin-top: var(--rhythm);
     max-width: var(--w-tight);
     font-size: small;
 }
 
-#footer .legal a {
+/* #footer .footnote p {} */
+
+#footer .footnote p + p {
+    opacity: 0.5;
+}
+
+#footer .footnote p a {
     text-decoration: underline;
 }
+
+#footer .footnote svg {
+    margin:  1rem 10px 0 0;
+    opacity: 0.5;
+    height: 20px;
+    width: auto;
+}
+
