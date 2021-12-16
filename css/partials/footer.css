@@ -65,14 +65,9 @@
 }
 
 #footer .footnote {
-    margin-top: var(--rhythm);
+    margin-top: calc(var(--rhythm)/2);
     max-width: var(--w-tight);
     font-size: small;
-}
-
-/* #footer .footnote p {} */
-
-#footer .footnote p + p {
     opacity: 0.5;
 }
 
@@ -81,9 +76,9 @@
 }
 
 #footer .footnote svg {
+    display: inline-block;
     margin:  1rem 10px 0 0;
     opacity: 0.5;
     height: 20px;
     width: auto;
 }
-
