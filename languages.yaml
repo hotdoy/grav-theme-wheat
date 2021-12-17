@@ -5,6 +5,8 @@ en:
       END: That's it for now!
     PRODUCT:
       RELATED: In the same collection
+    POST:
+      RELATED: Random picks
     CART:
       DISABLED: Cart is disabled
       ADD: Add to cart
@@ -26,6 +28,8 @@ fr:
       END: C'est tout pour le moment!
     PRODUCT:
       RELATED: Dans la même collection
+    POST:
+      RELATED: Continuez votre lecture
     CART:
       DISABLED: Panier désactivé
       ADD: Ajouter au panier
