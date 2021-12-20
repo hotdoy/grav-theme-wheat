@@ -135,7 +135,7 @@ const App = {
     setLinkBehaviour: function(els) {
         els.forEach(el => {
             const url = el.getAttribute("href");
-            if (!!url && url.match("^http")) {
+            if (!!url && url.match("^http") || url.match("^mailto:")) {
                 App.setExtLinkBehaviour(el);
             } 
             if (!!url && url.match("^/")) {
