@@ -1,155 +1,36 @@
-.module.form {
-    background-color: #f1f1f1;
+/* body.form {} */
+
+body.form,
+body.login,
+body.forgot,
+body.register {
+	--c-bg: #1f1f1f;
+	--c-fg: white;
+    --c-btn-bg: white;
+	--c-btn-fg: #1f1f1f;
 }
 
-/*MODULE*/
-.module.form .wrapper{
-	width: 100%;
-	max-width: var(--w-main);
-	margin: var(--rhythm) auto;
-	padding: var(--rhythm) var(--gutter);
-}
-
-.module.form .layout {
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    gap: 10%;
+body.form #footer,
+body.login #footer,
+body.forgot #footer,
+body.register #footer {
+    border-top: 1px solid #383838;
 }
 
 
-@media (min-width: 1024px) {
-    .module.form .layout {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-    }
+
+
+
+/* FIXES FOR GRAV USERS FORMS */
+#grav-login h1,
+#grav-login p {
+	display: none;
 }
 
-.module.form .content {
-    max-width: var(--w-tight);
-    margin: 0 auto;
-    
+#grav-login h4 {
+	color: var(--c-fg);
 }
 
-@media (min-width: 1024px) {
-    .module.form .content {
-        order: 2;
-    }
-}
-
-.module.form .panel {
-    font-size: 16px;
-    margin: 0 auto;
-    width: 100%;
-    max-width: var(--w-tight);
-    padding: 1rem;
-    border: 1px solid whitesmoke;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: var(--bs-medium);
-}
-
-@media (min-width: 1024px) {
-    .module.form .panel {
-        order: 1;
-    }
-}
-
-/*REQUIRED FLAG*/
-.module.form span.required {
-    color: red;
-}
-
-/*FIELDS*/
-.module.form .form-field {
-	margin-bottom: 10px;
-}
-
-.module.form .form-field + .form-field {
+#grav-login .form-actions {
 	margin-top: 20px;
-}
-
-/*LABEL*/
-.module.form .form-field  .form-label {
-	margin-bottom: 5px;
-}
-
-/*TEXT INPUT*/
-.form-field input[type="text"],
-.form-field input[type="email"],
-.form-field input[type="number"],
-.form-field input[type="date"],
-.form-field input[type="tel"],
-.form-field input[type="url"],
-.form-field input[type="password"],
-.form-field textarea,
-.form-field select {
-	display: block;
-	box-sizing: border-box;
-	width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    padding: .375rem .75rem;
-    font-family: inherit;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-}
-
-/*RADIO & CHECKBOX LIST*/
-.module.form .form-field [data-grav-field="checkboxes"] .checkboxes,
-.module.form .form-field [data-grav-field="radio"] .radio {
-    margin-top: 10px;
-}
-
-/*FIX LAFT MARGIN ON SOME INPUT*/
-input[type="checkbox"],
-input[type="radio"] {
-    margin-left: 0;
-}
-
-.module.form .form-field input[type="file"] {
-    display: none;
-}
-
-.module.form .dropzone {
-    display: flex;
-    min-height: 0!important;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    font-family: inherit;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-}
-
-/*BUTTONS*/
-.module.form .buttons {
-    margin-top: 20px;
-}
-
-.module.form form .button {
-    width: 100%;
-    display: block;
-}
-
-.module.form form button[type="submit"] {
-    background-color: #0d59f2;
-    color: white;
-}
-
-/* FOCUS */ 
-.module.form input:focus,
-.module.form textarea:focus {
-    transition: box-shadow 200ms;
-    outline: none;
-    box-shadow: 0 0 0 3px rgb(121 164 255);
 }

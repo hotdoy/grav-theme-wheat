@@ -3,20 +3,11 @@
 {% block content %}
 
 	{# FORM #}
-	<section class="module form">
-		<div class="wrapper">
-			<div class="layout">
-				<div class="content text prose">{{ page.content|raw }}</div>
-				<div class="panel">
-					{% include "forms/form.html.twig" %}
-				</div>
-			</div>			
-		</div>
-	</section>
+	{% include "modular/form.html.twig" %}
 
 	{# MODULES #}
-	{% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
+	{# {% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
 	{{ module.content|raw }}
-	{% endfor %}
+	{% endfor %} #}
 
 {% endblock %}

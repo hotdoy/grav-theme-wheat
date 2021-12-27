@@ -1,0 +1,26 @@
+{% extends 'modular/module.html.twig' %}
+{% set name = 'form' %}
+
+{% set grav_form = page.header.form ?? null %}
+{% set misc_form = misc_form ?? null %}
+{% set content = content ?? page.content ?? null %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="layout">
+
+        <div class="content text prose">
+            {{ page.content|raw }}
+        </div>
+
+        <div class="panel">
+            {% if misc_form %}
+                {{ misc_form }}
+            {% elseif grav_form %}
+                {% include "forms/form.html.twig" with {form: grav_form}%}
+            {% endif %}
+        </div>
+
+    </div>			
+</div>
+{% endblock %}
