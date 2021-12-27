@@ -1,3 +1,5 @@
+body.login {background-color: whitesmoke;}
+
 .login header,
 .login footer {
     display: none;
@@ -13,12 +15,19 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: var(--gutter);
+
+    background-image: url(../images/login-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .login #grav-login {
     font-size: small;
     margin: 0 auto;
-    max-width: 300px;
+    width: 100%;
+    max-width: 400px;
     padding: 1rem;
     border: 1px solid whitesmoke;
     background-color: white;
@@ -46,4 +55,14 @@
     transition: box-shadow 200ms;
     outline: none;
     box-shadow: 0 0 0 3px rgb(147, 181, 255);
+}
+
+.login #grav-login hr {
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.login #grav-login a.button.logout {
+    background-color: #e85a4a;
+    color: white;
 }
