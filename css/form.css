@@ -39,6 +39,7 @@ body.form .form-container .notices  {
 .form-field input[type="date"],
 .form-field input[type="tel"],
 .form-field input[type="url"],
+.form-field input[type="password"],
 .form-field textarea,
 .form-field select {
 	display: block;
@@ -100,4 +101,11 @@ input[type="radio"] {
     .form form .buttons button.button {
         width: auto;
     }
+}
+
+/* FOCUS */ 
+.form input:focus {
+    transition: box-shadow 200ms;
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(121 164 255);
 }
