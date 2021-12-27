@@ -2,17 +2,16 @@
 
 {% block content %}
 
-	{# HEADING #}
-	{% include 'partials/default-heading.html.twig' %}
-	
-	{# CONTENT #}
-	{% if page.content %}
-	{% include 'modular/editor.html.twig' %}
-	{% endif %}
-
 	{# FORM #}
-	<section class="module form-container">
-		{% include "forms/form.html.twig" %}
+	<section class="module form">
+		<div class="wrapper">
+			<div class="layout">
+				<div class="panel">
+					{% include "forms/form.html.twig" %}
+				</div>
+				<div class="content text prose">{{ page.content|raw }}</div>
+			</div>			
+		</div>
 	</section>
 
 	{# MODULES #}

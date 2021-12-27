@@ -1,35 +1,50 @@
-/*body.form {}*/
-
-/*CONTAINER*/
-body.form .form-container {
-	width: 100%;
-	max-width: var(--w-tight);
-	margin: var(--rhythm) auto;
-	padding: 0 var(--gutter);
+.module.form {
+    background-color: #f1f1f1;
 }
 
-/*MESSAGES*/
-body.form .form-container .notices  {
-    text-align: center;
+/*MODULE*/
+.module.form .wrapper{
+	width: 100%;
+	max-width: var(--w-main);
+	margin: var(--rhythm) auto;
+	padding: calc(var(--rhythm)/2) var(--gutter);
+}
+
+.module.form .layout {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10%;
+}
+
+.module.form .panel {
+    font-size: 16px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    border: 1px solid whitesmoke;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--bs-medium);
 }
 
 /*REQUIRED FLAG*/
-.form span.required {
-    color: var(--color-hl);
+.module.form span.required {
+    color: red;
 }
 
 /*FIELDS*/
-.form-field {
+.module.form .form-field {
 	margin-bottom: 10px;
 }
 
-.form-field + .form-field {
+.module.form .form-field + .form-field {
 	margin-top: 20px;
 }
 
 /*LABEL*/
-.form-field  .form-label {
-	margin-bottom: 10px;
+.module.form .form-field  .form-label {
+	margin-bottom: 5px;
 }
 
 /*TEXT INPUT*/
@@ -59,8 +74,8 @@ body.form .form-container .notices  {
 }
 
 /*RADIO & CHECKBOX LIST*/
-.form-field [data-grav-field="checkboxes"] .checkboxes,
-.form-field [data-grav-field="radio"] .radio {
+.module.form .form-field [data-grav-field="checkboxes"] .checkboxes,
+.module.form .form-field [data-grav-field="radio"] .radio {
     margin-top: 10px;
 }
 
@@ -70,11 +85,11 @@ input[type="radio"] {
     margin-left: 0;
 }
 
-.form-field input[type="file"] {
+.module.form .form-field input[type="file"] {
     display: none;
 }
 
-.form .dropzone {
+.module.form .dropzone {
     display: flex;
     min-height: 0!important;
     justify-content: center;
@@ -91,20 +106,18 @@ input[type="radio"] {
 }
 
 /*BUTTONS*/
-.form form .buttons button.button {
+.module.form .buttons {
     margin-top: 20px;
+}
+
+.module.form form .button {
     width: 100%;
     display: block;
 }
 
-@media (min-width: 835px) {
-    .form form .buttons button.button {
-        width: auto;
-    }
-}
-
 /* FOCUS */ 
-.form input:focus {
+.module.form input:focus,
+.module.form textarea:focus {
     transition: box-shadow 200ms;
     outline: none;
     box-shadow: 0 0 0 3px rgb(121 164 255);
