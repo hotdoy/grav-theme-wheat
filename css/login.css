@@ -1,12 +1,10 @@
 body.login,
-body.forgot,
-body.profile {
+body.forgot {
     background-color: whitesmoke;
 }
 
 body.login #header,
-body.forgot #header,
-body.profile #header {
+body.forgot #header {
 	--c-bg: #1f1f1f;
 	--c-fg: white;
     --c-btn-bg: white;
@@ -14,14 +12,12 @@ body.profile #header {
 }
 
 body.login #footer,
-body.forgot #footer,
-body.profile #footer {
+body.forgot #footer {
     display: none;
 }
 
 body.login main,
-body.forgot main,
-body.profile main {
+body.forgot main {
     position: fixed;
     top: 0;
     right: 0;
@@ -40,8 +36,7 @@ body.profile main {
 }
 
 body.login #grav-login, 
-body.forgot #grav-login, 
-body.profile #grav-login {
+body.forgot #grav-login {
     font-size: 16px;
     margin: 0 auto;
     width: 100%;
@@ -54,38 +49,33 @@ body.profile #grav-login {
 }
 
 body.login #grav-login h1,
-body.forgot #grav-login h1,
-body.profile #grav-login h1 {
+body.forgot #grav-login h1 {
     font-size: large;
     margin-bottom: 1.5rem;
 }
 
 body.login #grav-login button,
-body.forgot #grav-login button,
-body.profile #grav-login button {
+body.forgot #grav-login button {
     width: 100%;
     background-color: #0d59f2;
 }
 
 body.login #grav-login a.button,
-body.forgot #grav-login a.button,
-body.profile #grav-login a.button  {
+body.forgot #grav-login a.button  {
     width: 100%;
     background-color: whitesmoke;
     color: var(--c-fg);
 }
 
 body.login #grav-login input:focus,
-body.forgot #grav-login input:focus,
-body.profile #grav-login input:focus {
+body.forgot #grav-login input:focus {
     transition: box-shadow 200ms;
     outline: none;
     box-shadow: 0 0 0 3px rgb(147, 181, 255);
 }
 
 body.login #grav-login hr,
-body.forgot #grav-login hr,
-body.profile #grav-login hr {
+body.forgot #grav-login hr {
     border: none;
     border-bottom: 1px solid whitesmoke;
 }
