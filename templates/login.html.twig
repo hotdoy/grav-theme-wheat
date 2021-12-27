@@ -1,0 +1,13 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set misc_form %}
+{% include 'partials/messages.html.twig' %}
+{% include 'partials/login-form.html.twig' %}
+{% endset %}
+
+{% block content %}
+
+	{# FORM #}
+	{% include "modular/form.html.twig" with {misc_form: misc_form} %}
+
+{% endblock %}
