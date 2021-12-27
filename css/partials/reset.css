@@ -105,6 +105,10 @@ section {
   display: block;
 }
 
+input, button, textarea, select {
+  font: inherit;
+}
+
 ol,
 ul,
 li {
@@ -151,3 +155,4 @@ svg,
 video {
   max-width: 100%;
 }
+

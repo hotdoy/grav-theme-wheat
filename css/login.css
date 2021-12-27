@@ -1,0 +1,49 @@
+.login header,
+.login footer {
+    display: none;
+}
+
+.login main {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login #grav-login {
+    font-size: small;
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 1rem;
+    border: 1px solid whitesmoke;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--bs-medium);
+}
+
+.login #grav-login h1 {
+    font-size: large;
+    margin-bottom: 1.5rem;
+}
+
+.login #grav-login button {
+    width: 100%;
+    background-color: #0d59f2;
+}
+
+.login #grav-login a.button {
+    width: 100%;
+    background-color: whitesmoke;
+    color: var(--c-fg);
+}
+
+.login #grav-login input:focus {
+    transition: box-shadow 200ms;
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(147, 181, 255);
+}
