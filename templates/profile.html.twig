@@ -1,0 +1,10 @@
+{% extends 'partials/base.html.twig' %}
+
+{% do form.setAllData(grav.user.toArray) %}
+
+{% block content %}
+
+	{# FORM #}
+	{% include "modular/form.html.twig" %}
+
+{% endblock %}

@@ -3,7 +3,8 @@
 body.form,
 body.login,
 body.forgot,
-body.register {
+body.register,
+body.profile {
 	--c-bg: #1f1f1f;
 	--c-fg: white;
     --c-btn-bg: white;
@@ -13,7 +14,8 @@ body.register {
 body.form #footer,
 body.login #footer,
 body.forgot #footer,
-body.register #footer {
+body.register #footer,
+body.profile #footer {
     border-top: 1px solid #383838;
 }
 
@@ -31,6 +33,18 @@ body.register #footer {
 	color: var(--c-fg);
 }
 
-#grav-login .form-actions {
+body.form,
+body.login .form-actions,
+body.forgot .form-actions,
+body.register .form-actions,
+body.profile .buttons {
 	margin-top: 20px;
+}
+
+/* GRAVATAR */
+body.profile #user-profile img {
+	display: block;
+    width: 100px;
+    height: auto;
+    margin: 20px auto 20px auto;
 }

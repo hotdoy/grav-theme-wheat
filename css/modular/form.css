@@ -20,11 +20,13 @@
 }
 
 .module.form .content {
+    margin: 0 auto;
     max-width: var(--w-tight);
 }
 
 @media (min-width: 1024px) {
     .module.form .content {
+        margin: 0;
         order: 2;
     }
 }

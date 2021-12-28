@@ -1,7 +1,7 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'form' %}
 
-{% set grav_form = page.header.form ?? null %}
+{% set grav_form = form ?? page.header.form ?? null %}
 {% set misc_form = misc_form ?? null %}
 {% set content = content ?? page.content ?? null %}
 
