@@ -1,13 +1,20 @@
 title: Root Params
 
+rules:
+  slug:
+    pattern: '[a-zA-Zа-яA-Я0-9_\-]+'
+    min: 1
+    max: 200
+
 form:
   validation: loose
   fields:
+
     tabs:
       type: tabs
       active: 1
-      fields:
 
+      fields:
         navigation:
             type: tab
             title: Navigation
@@ -23,9 +30,11 @@ form:
                 type: list
                 label: Header Links
                 fields:
+
                   .label:
                     type: text
                     label: Label
+
                   .url:
                     type: text
                     label: Url
@@ -40,20 +49,24 @@ form:
                 type: list
                 label: Footer Links
                 fields:
+
                   .label:
                     type: text
                     label: Label
+
                   .links:
                     name: links
                     type: list
                     label: Links
+
                     fields:
+
                       .label:
                         type: text
                         label: Label
                       .url:
                         type: text
-                        label: Url        
+                        label: Url
     
               section_site:
                 type: section
@@ -80,4 +93,3 @@ form:
               header.media_order:
                 type: pagemedia
                 label: PLUGIN_ADMIN.PAGE_MEDIA
-
