@@ -7,6 +7,9 @@ form:
       fields:
         content:
           fields:
+          
+            header.media_order:
+              ordering@: +99
 
             header.image:
               type: pagemediaselect
@@ -22,3 +25,14 @@ form:
               label: image_alt
               style: vertical
               ordering@: header.image
+            
+            header.show_recommendations:
+              type: toggle
+              label: Show Recommendations
+              highlight: 1
+              default: 1
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool

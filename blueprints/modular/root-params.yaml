@@ -1,13 +1,9 @@
 title: Root Params
 
-rules:
-  slug:
-    pattern: '[a-zA-Zа-яA-Я0-9_\-]+'
-    min: 1
-    max: 200
-
 form:
+
   validation: loose
+
   fields:
 
     tabs:
@@ -15,9 +11,11 @@ form:
       active: 1
 
       fields:
+
         navigation:
             type: tab
             title: Navigation
+
             fields:
 
               header.section_header:
@@ -29,6 +27,7 @@ form:
                 name: header_links
                 type: list
                 label: Header Links
+
                 fields:
 
                   .label:
@@ -43,11 +42,12 @@ form:
                 type: section
                 title: Footer
                 underline: true
-              
+
               header.footer_links:
                 name: footer_nav
                 type: list
                 label: Footer Links
+
                 fields:
 
                   .label:
@@ -67,7 +67,7 @@ form:
                       .url:
                         type: text
                         label: Url
-    
+
               section_site:
                 type: section
                 title: Site
