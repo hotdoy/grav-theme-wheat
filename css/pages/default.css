@@ -8,7 +8,11 @@
 				HEADING 
 ============================================*/
 
-/* .default__heading {} */
+.default__heading {
+    position: relative;
+    margin-top: var(--rhythm);
+    z-index: 1000;
+}
 
 .default__heading .wrapper {
     padding: 0 var(--gutter);

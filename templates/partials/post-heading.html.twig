@@ -1,16 +1,12 @@
 {% import "partials/breadcrumbs.html.twig" as breadcrumbs %} 
-{% extends 'modular/module.html.twig' %}
-{% set name = 'post__heading' %}
-
 {% set title = title|default(page.header.display_title) %}
-
-{% block content %}
-<div class="wrapper">
-	{{ breadcrumbs.html(page, pages, page.collection({items: {'@self.page': ''}})) }}
-	<div class="title text">
-		<h1>{{ title|raw }}</h1>
-	</div>
-</div>
-{% endblock %}
+<section class="post__heading">
+	<div class="wrapper">
+		{{ breadcrumbs.html(page, pages, page.collection({items: {'@self.page': ''}})) }}
+		<div class="title text">
+			<h1>{{ title|raw }}</h1>
+		</div>
+	</div>	
+</section>
 
 
