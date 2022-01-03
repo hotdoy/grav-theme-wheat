@@ -70,19 +70,26 @@ body.landing #header .shim {
     height: 100%;
 }
 
+.landing__heading .media video {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
 .landing__heading .veil {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(0deg, rgba(31,31,31,0.7) 0%, rgba(31,31,31,0.05) 100%);
+    background-color: #1f1f1f;
+    opacity: 0.4;
     z-index: 1;
 }
 
 .landing__heading .content {
     padding-bottom: var(--header);
-    /* text-align: center; */
     max-width: var(--w-tight);
     z-index: 2;
 }

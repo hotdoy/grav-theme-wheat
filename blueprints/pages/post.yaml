@@ -7,9 +7,12 @@ form:
       fields:
         content:
           fields:
-          
-            header.media_order:
-              ordering@: +99
+  
+            header.display_title:
+              ordering@: header.title
+              type: text
+              style: vertical
+              label: Display Title
 
             header.image:
               type: pagemediaselect
@@ -36,3 +39,7 @@ form:
                 1: PLUGIN_ADMIN.ENABLED
               validate:
                 type: bool
+
+            header.media_order:
+              ordering@: +99
+              

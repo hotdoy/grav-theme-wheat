@@ -1,0 +1,21 @@
+{% set item = item ?? null %}
+{% set image = image ?? item.header.image ? item.media[item.header.image] : item.media.images|first %}
+{% set image_alt = image_alt ?? item.header.image_alt ?? null %}
+{% set date = date ?? item.header.date ? item.header.date|date('Y/m/d') : null %}
+{% set title = title ?? item.title ?? null %}
+{% set summary = item.summary|striptags %}
+{% set url = url ?? item.url %}
+
+
+<article class="blog__card">
+	<a href="{{ url }}">
+		<div class="blog__card__content text">
+            <time>{{ date }}</time>
+			<h2>{{ title }}</h2>
+            <p>{{ summary }}</p>
+		</div>
+        <div class="blog__card__media">
+			{% include "partials/img.html.twig" with {image: image, alt: image_alt} only %}
+		</div>
+	</a>
+</article>
