@@ -106,14 +106,27 @@
     font-size: small;
 }
 
-
 .product__showcase .variant select {
-    width: 100%;
-    border-radius: 4px;
-    padding: 10px 5px;
-    border-color: var(--c-guide);
-    background-color: var(--c-bg);
-    color: var(--c-fg);
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    padding: .375rem .75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.product__showcase .variant select:focus {
+    transition: box-shadow 200ms;
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(121 164 255);
 }
 
 .product__showcase .price {

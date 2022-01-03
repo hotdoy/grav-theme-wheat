@@ -19,11 +19,7 @@ body.profile #footer {
     border-top: 1px solid #383838;
 }
 
-
-
-
-
-/* FIXES FOR GRAV USERS FORMS */
+/* GRAV LOGIN FORM */
 #grav-login h1,
 #grav-login p {
 	display: none;
@@ -41,7 +37,6 @@ body.profile .buttons {
 	margin-top: 20px;
 }
 
-/* GRAVATAR */
 body.profile #user-profile img {
 	display: block;
     width: 100px;
