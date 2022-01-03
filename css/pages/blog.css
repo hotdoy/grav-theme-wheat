@@ -61,6 +61,7 @@
     width: 95px;
     height: 95px;
     overflow: hidden;
+    background-color: #f1f1f1;
 }
 
 @media (min-width: 1024px) {
@@ -91,6 +92,8 @@
 }
 
 .blog__card__content time {
+    display: block;
+    margin-top: -5px;
     font-size: small;
     color: grey;
 }
@@ -101,17 +104,21 @@
     }
 }
 
-/* .blog__card__content h2 {} */
+.blog__card__content h2 {
+    margin: 0.5rem 0;
+}
+
+.blog__card a:hover h2 {
+    text-decoration: underline;
+}
 
 .blog__card__content p {
     font-size: small;
     color: grey;
-    margin-top: 0.5rem;
 }
 
 @media (min-width: 1024px) {
     .blog__card__content p {
         font-size: medium;
-        margin-top: 1rem;
     }
 }

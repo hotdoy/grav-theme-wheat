@@ -1,4 +1,4 @@
-const Collection = {
+const Pagination = {
     list: null,
     pagination: null,
     trigger: null,
@@ -8,8 +8,8 @@ const Collection = {
     qs: new URLSearchParams(),
 
     Fetch: function() {
-        Collection.trigger.classList.add('disabled', 'waiting');
-        fetch(Collection.url)
+        Pagination.trigger.classList.add('disabled', 'waiting');
+        fetch(Pagination.url)
 
         .then(function(r) {
             // return response as text
@@ -30,28 +30,28 @@ const Collection = {
 
             // Replace old trigger with new one or remove if none is available
             if (!!newTrigger) {
-                Collection.trigger.parentNode.replaceChild(newTrigger, Collection.trigger);
+                Pagination.trigger.parentNode.replaceChild(newTrigger, Pagination.trigger);
             } else {
-                Collection.pagination.remove();
+                Pagination.pagination.remove();
             }
 
             // Add new articles to existing list
-            Collection.list.insertAdjacentHTML('beforeend', el);
+            Pagination.list.insertAdjacentHTML('beforeend', el);
 
             // Update query-string value with current # of articles
-            Collection.qsValue = Collection.list.children.length;
+            Pagination.qsValue = Pagination.list.children.length;
 
             // Build qs based on the real number of articles
-            Collection.qs.set(Collection.qsKey, '0-' + Collection.qsValue);
+            Pagination.qs.set(Pagination.qsKey, '0-' + Pagination.qsValue);
 
             // Swap the current url with the one including the new query
-            window.history.replaceState({}, "", `${location.pathname}?${Collection.qs}`);
+            window.history.replaceState({}, "", `${location.pathname}?${Pagination.qs}`);
 
             // Make sure new images are handled by App
             App.setImgBehaviour(document.querySelectorAll('img'));
 
             // Restart the whole process
-            Collection.Init();
+            Pagination.Init();
         })
 
         // Handle error
@@ -62,19 +62,19 @@ const Collection = {
     },
 
     Init: function() {
-        Collection.list = document.querySelector('[data-list] .wrapper');
-        Collection.pagination = document.querySelector('[data-pagination]');
-        if (!!Collection.pagination) {
-            Collection.trigger = Collection.pagination.querySelector('button');
-            Collection.url = Collection.trigger.getAttribute('href');
-            if (!!Collection.url) {
-                Collection.trigger.addEventListener('click', function(event) {
+        Pagination.list = document.querySelector('[data-list] .wrapper');
+        Pagination.pagination = document.querySelector('[data-pagination]');
+        if (!!Pagination.pagination) {
+            Pagination.trigger = Pagination.pagination.querySelector('button');
+            Pagination.url = Pagination.trigger.getAttribute('href');
+            if (!!Pagination.url) {
+                Pagination.trigger.addEventListener('click', function(event) {
                     event.preventDefault();
-                    Collection.Fetch();
+                    Pagination.Fetch();
                 })
             }
         }
     },
 };
 
-Collection.Init();
+Pagination.Init();
