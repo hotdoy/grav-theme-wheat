@@ -8,6 +8,12 @@ form:
         content:
           fields:
 
+            header.display_title:
+              ordering@: header.title
+              type: text
+              style: vertical
+              label: Display Title
+
             header.section_product:
               type: section
               title: Product

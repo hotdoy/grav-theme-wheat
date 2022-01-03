@@ -7,17 +7,15 @@ form:
       fields:
         content:
           fields:
+
             content:
               unset@: true
             header.media_order:
               unset@: true
 
-            header.note:
-              type: section
-              title: "NOTHING TO SEE HERE. MOVE ALONG ;)"
-
             header.template_format:
               type: text
-              label: template_format
+              label: Template Format
               default: xml
               placeholder: xml
+              style: vertical

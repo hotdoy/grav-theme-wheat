@@ -7,11 +7,7 @@ form:
       fields:
         content:
           fields:
-            header.display_title:
-              ordering@: header.title
-              type: text
-              style: vertical
-              label: Display Title
+
             content:
               label: Content
 

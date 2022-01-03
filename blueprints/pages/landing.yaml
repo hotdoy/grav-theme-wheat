@@ -8,8 +8,6 @@ form:
         content:
           fields:
           
-            header.display_title:
-              unset@: true
             header.media_order:
               ordering@: +99
               
