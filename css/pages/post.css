@@ -5,7 +5,11 @@
 				HEADING 
 ============================================*/
 
-/* .post__heading {} */
+.post__heading {
+    position: relative;
+    margin-top: var(--rhythm);
+    z-index: 1000;
+}
 
 .post__heading .wrapper {
     padding: 0 var(--gutter);
