@@ -1,0 +1,5 @@
+[data-algolia-pro] .ais-InstantSearch {
+    z-index: 6000;
+	backdrop-filter: blur(10px);
+    background-color: rgb(31 31 31 / 50%);
+}

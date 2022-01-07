@@ -26,6 +26,9 @@
 		{% include 'partials/dialog.html.twig' %}
 		{% include 'partials/dialog.html.twig' with {id: 'dialog-signin', content: 'THEME.DIALOG.SIGNIN'|t } %}
 		{% include 'partials/dialog.html.twig' with {id: 'dialog-signout', content: 'THEME.DIALOG.SIGNOUT'|t } %}
+		{% if config.plugins['algolia-pro'].enabled %}
+		{% include 'partials/algolia-pro/instantsearch.html.twig' with { index: 'pages' } %}
+		{% endif %}
 		{{ assets.js('bottom')|raw }}
 		{% if theme.inline_body_script %}{{ theme.inline_body_script|raw }}{% endif %}
 		{% include 'partials/serviceworker.html.twig' %}
