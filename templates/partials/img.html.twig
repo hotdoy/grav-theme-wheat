@@ -26,7 +26,7 @@
     {% elseif bypass %}
         {{ image.attribute('style', style).attribute('width', width).attribute('height', height).loading(loading).html(title, alt)|raw }}
     {% else %}
-        {{ image.derivatives(320,1920).attribute('style', style).attribute('width', width).attribute('height', height).quality(quality).loading(loading).sizes('(max-width:26em) 100vw, 50vw').html(title, alt)|raw }}
+        {{ image.derivatives(320,1920).attribute('style', style).attribute('width', width).attribute('height', height).quality(quality).loading(loading).sizes('(max-width:600px) 100vw, 50vw').html(title, alt)|raw }}
     {% endif %}
 {% endif %}
 
