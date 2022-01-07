@@ -3,3 +3,14 @@
 	backdrop-filter: blur(10px);
     background-color: rgb(31 31 31 / 50%);
 }
+
+[data-algolia-pro] input[type="search"] {
+    -webkit-appearance: textfield;
+}
+
+[data-algolia-pro] input[type="search"]::-webkit-search-decoration,
+[data-algolia-pro] input[type="search"]::-webkit-search-cancel-button,
+[data-algolia-pro] input[type="search"]::-webkit-search-results-button,
+[data-algolia-pro] input[type="search"]::-webkit-search-results-decoration { 
+    display: none; 
+}
