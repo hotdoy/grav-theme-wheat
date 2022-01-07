@@ -19,7 +19,6 @@
     margin: 0 auto;
     max-width: var(--w-main);
     width: 100%;
-    text-align: center;
 }
 
 .default__heading .breadcrumbs {
@@ -27,7 +26,17 @@
     opacity: 0.5;
 }
 
-/* .default__heading .title {} */
+.default__heading__title {
+    text-align: center;
+}
+
+.default__heading__intro {
+    margin: 1rem auto 0 auto;
+    padding: 0 var(--gutter);
+    text-align: center;
+    max-width: var(--w-tight);
+    color: grey;
+}
 
 
 

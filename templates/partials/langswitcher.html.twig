@@ -1,4 +1,4 @@
-{% if config.plugins.langswitcher.enabled %}
+{% if config.plugins['langswitcher'].enabled %}
 <li class="langswitcher">
     {% for language in langswitcher.languages if grav.language.getActive != language %}
         {% set show_language = true %}

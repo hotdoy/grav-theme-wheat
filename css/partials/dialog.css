@@ -24,8 +24,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-color: #000;
-	opacity: 0.7;
+	background-color: rgb(31 31 31 / 50%);
 }
 
 .dialog__box {

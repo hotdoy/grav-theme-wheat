@@ -8,11 +8,18 @@ form:
         content:
           fields:
 
+            content:
+              unset@: true
+            header.media_order:
+              ordering@: +99
+
             header.display_title:
               ordering@: header.title
               type: text
               style: vertical
               label: Display Title
 
-            content:
-              unset@: true
+            header.intro:
+              type: textarea
+              label: Intro
+              style: vertical

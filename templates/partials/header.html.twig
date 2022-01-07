@@ -21,6 +21,14 @@
                         <li><a href="{{ link.url }}">{{ link.label }}</a></li>
                         {% endfor %}
                         {% include 'partials/langswitcher.html.twig' %}
+                        {# {% if config.get('plugins.algolia-pro.enabled') %} #}
+                        {% if config.plugins['algolia-pro'].enabled %}
+                        <li>
+                            <button class="search" aria-label="search" data-algolia-pro-trigger>
+                                {{ svg.search() }}
+                            </button>
+                        </li>
+                        {% endif %}
                         {% if theme.snipcart %}
                         {% if not theme.snipcart_allow_guests_only %}
                         <li>

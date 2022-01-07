@@ -8,24 +8,19 @@ form:
         content:
           fields:
 
+            content:
+              unset@: true
+            header.media_order:
+              ordering@: +99
+
             header.display_title:
               ordering@: header.title
               type: text
               style: vertical
               label: Display Title
 
-            content:
-              unset@: true
+            header.intro:
+              type: textarea
+              label: Intro
+              style: vertical
               
-            # header.references:
-            #   name: references
-            #   type: list
-            #   style: vertical
-            #   label: References
-            #   description: Allows you to reference pages from another collections or locations.
-            #   fields:
-            #     .page:
-            #       type: pages
-            #       label: Page
-            #       show_modular: false
-            #       show_root: false
