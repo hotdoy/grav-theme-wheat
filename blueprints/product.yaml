@@ -1,5 +1,5 @@
 title: product
-"@extends": default
+extends@: default
 
 form:
   fields:

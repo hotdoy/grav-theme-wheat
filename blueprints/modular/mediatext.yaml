@@ -1,5 +1,5 @@
 title: mediatext
-"@extends": modular/module
+extends@: modular/module
 
 form:
   fields:
@@ -7,9 +7,6 @@ form:
       fields:
         content:
           fields:
-
-            header.display_title:
-              unset@: true
             header.media_order:
               ordering@: +99
               
