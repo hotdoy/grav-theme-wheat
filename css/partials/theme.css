@@ -88,6 +88,4 @@
 body {
 	background-color: var(--c-bg);
     color: var(--c-fg);
-	font-family: sans-serif;
-	line-height: 1.5;
 }
