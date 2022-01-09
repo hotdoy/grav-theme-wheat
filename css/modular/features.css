@@ -16,25 +16,37 @@
 .module.features .layout {
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 624px) {
     .module.features .layout {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+@media (min-width: 1024px) {
+    .module.features .layout {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .module.features .item {
-    border-top: 1px solid #f1f1f1;
+    max-width: 300px;
+}
+
+.module.features .item img {
+    width: 30px;
+    height: auto;
 }
 
 .module.features .item h3 {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     font-size: medium
 }
 
 .module.features .item p {
-    margin-top: 1rem;
+    color: grey;
+    margin-top: 0.5rem;
     font-size: small;
 }
