@@ -46,21 +46,24 @@
 				    CARD 
 ============================================*/
 
-/* .default__card {} */
-
-.default__card a {
-    display: block;
-    text-decoration: none;
+.default-card {
+    border-radius: 4px;
 }
 
-.default__card__media {
+.default-card a {
+    display: block;
+    border-radius: 4px;
+}
+
+.default-card__media {
     position: relative;
     padding-top: 133%;
     background-color: #f1f1f1;
+    border-radius: 4px;
     overflow: hidden;
 }
 
-.default__card__media img {
+.default-card__media img {
     position: absolute;
     top: 0;
     right: 0;
@@ -72,10 +75,14 @@
     object-position: center;
 }
 
-.default__card__content {
+.default-card__content {
     margin-top: 0.5rem;
 }
 
-.default__card__content p {
+.default-card a:hover h3 {
+    text-decoration: underline;
+}
+
+.default-card__content p {
     margin-top: 5px;
 }

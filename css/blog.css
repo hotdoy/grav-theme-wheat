@@ -44,35 +44,36 @@
 				    CARD 
 ============================================*/
 
-.blog__card {
+.blog-card {
     padding-top: var(--gutter);
     border-top: 1px solid #f1f1f1;
 }
 
-.blog__card a {
+.blog-card a {
     display: flex;
     flex-wrap: nowrap;
     gap: var(--gutter);
 }
 
-.blog__card__media {
+.blog-card__media {
     position: relative;
     flex-shrink: 0;
     width: 95px;
     height: 95px;
     overflow: hidden;
     background-color: #f1f1f1;
+    border-radius: 4px;
 }
 
 @media (min-width: 1024px) {
-    .blog__card__media {
+    .blog-card__media {
         aspect-ratio: 4/3;
         width: 40%;
         height: auto;
     }
 }
 
-.blog__card__media img {
+.blog-card__media img {
     position: absolute;
     top: 0;
     left: 0;
@@ -81,17 +82,17 @@
     height: 100%;
 }
 
-.blog__card__content {
+.blog-card__content {
     width: auto;
 }
 
 @media (min-width: 1024px) {
-    .blog__card__content {
+    .blog-card__content {
         width: 60%;
     }
 }
 
-.blog__card__content time {
+.blog-card__content time {
     display: block;
     margin-top: -5px;
     font-size: small;
@@ -99,26 +100,26 @@
 }
 
 @media (min-width: 1024px) {
-    .blog__card__content time {
+    .blog-card__content time {
         font-size: medium;
     }
 }
 
-.blog__card__content h2 {
+.blog-card__content h2 {
     margin: 0.5rem 0;
 }
 
-.blog__card a:hover h2 {
+.blog-card a:hover h2 {
     text-decoration: underline;
 }
 
-.blog__card__content p {
+.blog-card__content p {
     font-size: small;
     color: grey;
 }
 
 @media (min-width: 1024px) {
-    .blog__card__content p {
+    .blog-card__content p {
         font-size: medium;
     }
 }
