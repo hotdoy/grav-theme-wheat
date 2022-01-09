@@ -1,5 +1,5 @@
 title: blog
-"@extends": default
+extends@: 'default'
 
 form:
   fields:

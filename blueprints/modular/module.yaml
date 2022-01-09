@@ -1,61 +1,234 @@
 title: module
-'@extends': default
 
 form:
+  validation: loose
+
   fields:
+
     tabs:
+      type: tabs
+      active: 1
+
       fields:
-        options:
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+
           fields:
+            xss_check:
+              type: xss
+
+            header.title:
+              type: text
+              autofocus: true
+              style: vertical
+              label: PLUGIN_ADMIN.TITLE
+
+            content:
+                type: markdown
+                validate:
+                  type: textarea
+
+            header.media_order:
+              type: pagemedia
+              label: PLUGIN_ADMIN.PAGE_MEDIA
+
+        options:
+          type: tab
+          title: PLUGIN_ADMIN.OPTIONS
+
+          fields:
+
             publishing:
+              type: section
+              title: PLUGIN_ADMIN.PUBLISHING
+              underline: true
+
               fields:
-                header.date:
-                  unset@: true
-                header.metadata:
-                  unset@: true
-                header.page_title:
-                  unset@: true
-                header.meta_description:
-                  unset@: true
-                header.meta_image:
-                  unset@: true
-            taxonomies:
-              unset@: true
+                header.published:
+                  type: toggle
+                  toggleable: true
+                  label: PLUGIN_ADMIN.PUBLISHED
+                  help: PLUGIN_ADMIN.PUBLISHED_HELP
+                  highlight: 1
+                  size: medium
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
+
+                header.publish_date:
+                  type: datetime
+                  label: PLUGIN_ADMIN.PUBLISHED_DATE
+                  toggleable: true
+                  help: PLUGIN_ADMIN.PUBLISHED_DATE_HELP
+
+                header.unpublish_date:
+                  type: datetime
+                  label: PLUGIN_ADMIN.UNPUBLISHED_DATE
+                  toggleable: true
+                  help: PLUGIN_ADMIN.UNPUBLISHED_DATE_HELP
+
         advanced:
+          type: tab
+          title: PLUGIN_ADMIN.ADVANCED
+
           fields:
             columns:
+              type: columns
               fields:
                 column1:
+                  type: column
                   fields:
+
+                    settings:
+                      type: section
+                      title: PLUGIN_ADMIN.SETTINGS
+                      underline: true
+
+                    folder:
+                      type: folder-slug
+                      label: PLUGIN_ADMIN.FOLDER_NAME
+                      validate:
+                        rule: slug
+
+                    route:
+                      type: parents
+                      label: PLUGIN_ADMIN.PARENT
+                      classes: fancy
+
+                    name:
+                      type: select
+                      classes: fancy
+                      label: PLUGIN_ADMIN.PAGE_FILE
+                      help: PLUGIN_ADMIN.PAGE_FILE_HELP
+                      default: default
+                      data-options@: '\Grav\Common\Page\Pages::pageTypes'
+
                     header.body_classes:
-                      unset@: true
-                    header.class:
                       type: text
-                      label: Class
-                    header.id:
-                      type: text
-                      label: Id
+                      label: PLUGIN_ADMIN.BODY_CLASSES
+
+
+                column2:
+                  type: column
+
+                  fields:
+                    order_title:
+                      type: section
+                      title: PLUGIN_ADMIN.ORDERING
+                      underline: true
+
+                    ordering:
+                      type: toggle
+                      label: PLUGIN_ADMIN.FOLDER_NUMERIC_PREFIX
+                      help: PLUGIN_ADMIN.FOLDER_NUMERIC_PREFIX_HELP
+                      highlight: 1
+                      options:
+                        1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
+                      validate:
+                        type: bool
+
+                    order:
+                      type: order
+                      label: PLUGIN_ADMIN.SORTABLE_PAGES
+                      sitemap:
+
             overrides:
+              type: section
+              title: PLUGIN_ADMIN.OVERRIDES
+              underline: true
+
               fields:
-                header.dateformat:
-                  unset@: true
-                header.menu:
-                  unset@: true
-                header.slug:
-                  unset@: true
-                header.redirect:
-                  unset@: true
+
+                header.process:
+                  type: checkboxes
+                  label: PLUGIN_ADMIN.PROCESS
+                  toggleable: true
+                  config-default@: system.pages.process
+                  default:
+                    markdown: true
+                    twig: false
+                  options:
+                    markdown: Markdown
+                    twig: Twig
+                  use: keys
+
+                header.twig_first:
+                  type: toggle
+                  toggleable: true
+                  label: PLUGIN_ADMIN.TWIG_FIRST
+                  help: PLUGIN_ADMIN.TWIG_FIRST_HELP
+                  highlight: 0
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
+
+                header.never_cache_twig:
+                  type: toggle
+                  toggleable: true
+                  label: PLUGIN_ADMIN.NEVER_CACHE_TWIG
+                  help: PLUGIN_ADMIN.NEVER_CACHE_TWIG_HELP
+                  highlight: 0
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
+
                 header.child_type:
-                  unset@: true
-                header.routable:
-                  unset@: true
-                header.visible:
-                  unset@: true
-                header.debugger:
-                  unset@: true
-                header.append_url_extension:
-                  unset@: true
-            routes_only:
-              unset@: true
+                  type: select
+                  toggleable: true
+                  label: PLUGIN_ADMIN.DEFAULT_CHILD_TYPE
+                  default: default
+                  placeholder: PLUGIN_ADMIN.USE_GLOBAL
+                  data-options@: '\Grav\Common\Page\Pages::types'
+
+                header.cache_enable:
+                  type: toggle
+                  toggleable: true
+                  label: PLUGIN_ADMIN.CACHING
+                  highlight: 1
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool
+
+                header.template:
+                  type: text
+                  toggleable: true
+                  label: PLUGIN_ADMIN.DISPLAY_TEMPLATE
+
             admin_only:
-              unset@: true
+              type: section
+              title: PLUGIN_ADMIN.ADMIN_SPECIFIC_OVERRIDES
+              underline: true
+
+              fields:
+
+                header.admin.children_display_order:
+                  type: select
+                  label: PLUGIN_ADMIN.ADMIN_CHILDREN_DISPLAY_ORDER
+                  help: PLUGIN_ADMIN.ADMIN_CHILDREN_DISPLAY_ORDER_HELP
+                  toggleable: true
+                  classes: fancy
+                  default: 'collection'
+                  options:
+                    'default': 'Ordered by Folder name (default)'
+                    'collection': 'Ordered by Collection definition'
+
+                header.order_by:
+                  type: hidden
+
+                header.order_manual:
+                  type: hidden
+                  validate:
+                    type: commalist
+
+                blueprint:
+                  type: blueprint

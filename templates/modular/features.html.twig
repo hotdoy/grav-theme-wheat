@@ -1,18 +1,21 @@
 {% extends 'modular/module.html.twig' %}
-{% set name = 'grid' %}
-{% set display_title = page.header.display_title %}
+{% set name = 'features' %}
+{% set title = page.header.display_title %}
 {% set items = items|default(page.header.items) %}
 
 {% block content %}
 <div class="wrapper text">
 
-    {% if display_title %}
-	<h2>{{ display_title }}</h2>
+    {% if title %}
+	<h2>{{ title }}</h2>
 	{% endif %}
 
     <div class="layout">
         {% for item in items %}
-        <div class="item text" style="--index:{{ loop.index }}">
+        {% set image = item.image ? page.media[item.image] %}
+
+        <div class="item text">
+            {% include "partials/img.html.twig" with {image: image} %}
             <h3>{{ item.title }}</h3>
             <p>{{ item.text }}</p>
         </div>

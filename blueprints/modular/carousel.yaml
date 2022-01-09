@@ -1,5 +1,5 @@
 title: carousel
-"@extends": modular/module
+extends@: modular/module
 
 form:
   fields:
@@ -7,7 +7,6 @@ form:
       fields:
         content:
           fields:
-            
             content:
               unset@: true
             header.media_order:
