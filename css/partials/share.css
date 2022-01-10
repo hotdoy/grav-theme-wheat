@@ -12,89 +12,39 @@
 }
 
 #share .wrapper .layout {
-	background-color: var(--c-fg);
+	background-color: #f1f1f1;
 	border-radius: 8px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	color: white;
-	padding: 32px var(--gutter);
+	padding: var(--gutter);
 }
 
-#share .wrapper .content {
-	text-align: center;
-	margin: 0 auto;
+/* #share .wrapper .content {} */
+
+#share .wrapper .triggers {
+	display: flex;
+}
+
+#share a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid var(--c-fg);
+	border-radius: 4px;
+	padding: 8px;
+}
+
+#share a:not(:first-of-type) {
+	margin-left: 10px;
+}
+
+#share a.native.hidden {
+	display: none;
+}
+
+#share a > svg {
 	width: 100%;
-}
-
-#share .native {
-	display: none;
-	position: relative;
-	padding-right: 25px;
-	background-color: transparent;
-	color: white;
-	font-weight: 500;
-	border-color: white;
-	margin: 20px auto 0;
-}
-
-#share .button::after {
-	display: none;
-}
-
-#share #share-fallback {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 10px auto 0;
-}
-
-#share.desktop #share-fallback .social-link {
-	position: relative;
-	margin: 0 5px;
-	width: 40px;
-	height: 40px;
-	border-radius: 4px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: background-color 0.2s ease;
-}
-
-#share.desktop #share-fallback .social-link:hover {
-	background-color: var(--c-fg);
-	border: 2px solid var(--c-fg);
-}
-
-#share.desktop #share-fallback .social-link svg {
-	width: 20px;
 	height: auto;
-}
-
-#share.desktop #share-fallback .social-link svg path {
-	fill: var white;
-	transition: fill 0.2s ease;
-}
-
-#share.desktop #share-fallback .social-link .copy-result {
-	opacity: 0;
-	visibility: hidden;
-	position: absolute;
-	top: -50px;
-	left: 50%;
-	transform: translate(-50%, 3px);
-	background-color: var(--c-purple_ultralite);
-	border-radius: 4px;
-	color: #582de3;
-	white-space: nowrap;
-	padding: 10px;
-	font-weight: 500;
-	transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
-}
-
-#share.desktop #share-fallback .social-link .copy-result.display {
-	opacity: 1;
-	visibility: visible;
-	transform: translate(-50%, 0);
 }
