@@ -1,0 +1,38 @@
+{% import 'partials/svg.html.twig' as svg %}
+
+{% set title = page.header.display_title  %}
+{% set url = page.url %}
+
+<div id="share">
+	<div class="wrapper">
+		<div class="layout">
+			<div class="content">
+				<p>
+					Liked what you read?
+					Share this article!
+				</p>
+			</div>
+			<button class="native">Share now</button>
+			<div class="share-fallback">
+				<a alt="Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ url }}">
+					{# {{ svg.shareFacebook() }} #}Fb
+				</a>
+				<a alt="Linkedin" target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url={{ url }}">
+					{# {{ svg.shareLinkedin() }} #}Lkd
+				</a>
+				<a alt="Twitter" target="_blank" href="https://twitter.com/intent/tweet?url={{ url }}&text={{ title }}">
+					{# {{ svg.shareTwitter() }} #}Twt
+				</a>
+				<a alt="Mail" target="_blank" href="mailto:?subject={{ title }}&amp;body=Check this article: {{ url }}">
+					{# {{ svg.shareMail() }} #}Ml
+				</a>
+				<button class="copy">
+					{# {{ svg.shareLink() }} #}Sh
+					<p class="copy-result">
+						Link copied!
+					</p>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
