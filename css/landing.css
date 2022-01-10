@@ -35,6 +35,7 @@ body.landing #header .shim {
 	--c-btn-fg: #1f1f1f;
     position: relative;
     height: 100vh;
+    min-height: 667px;
     max-width: var(--w-full);
     background-color: var(--c-bg);
     color: var(--c-fg);
