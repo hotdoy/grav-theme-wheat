@@ -12,7 +12,13 @@
 	max-width: var(--w-main);
     display: flex;
     flex-direction: column;
-    gap: var(--gutter);
+    gap: calc(var(--gutter)*2);
+}
+
+@media (min-width: 1024px) {
+    .blog__list > .wrapper {
+        gap: var(--gutter);
+    }
 }
 
 .blog__pagination {
@@ -30,7 +36,7 @@
 	width: 100%;
 }
   
-@media (min-width: 835px) {
+@media (min-width: 1024px) {
 	.blog__pagination button{
 		width: auto;
 	}
@@ -47,6 +53,7 @@
 .blog-card {
     padding-top: var(--gutter);
     border-top: 1px solid #f1f1f1;
+    width: 100%;
 }
 
 .blog-card a {
@@ -84,6 +91,7 @@
 
 .blog-card__content {
     width: auto;
+    flex-grow: 1;
 }
 
 @media (min-width: 1024px) {

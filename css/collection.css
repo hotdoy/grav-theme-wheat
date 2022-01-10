@@ -36,7 +36,7 @@
 	width: 100%;
 }
   
-@media (min-width: 835px) {
+@media (min-width: 1024px) {
 	.collection__pagination button{
 		width: auto;
 	}
