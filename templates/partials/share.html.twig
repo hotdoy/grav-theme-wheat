@@ -13,24 +13,28 @@
 			</div>
 			
 			<div class="triggers">
-
-				{# <a class="native hidden">Na</a> #}
-
-				<a class="poly facebook" alt="Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ url }}">
-					{{ svg.facebook() }}
-				</a>
-				<a class="poly linkedin" alt="Linkedin" target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url={{ url }}">
-					{{ svg.linkedin() }}
-				</a>
-				<a class="poly twitter" alt="Twitter" target="_blank" href="https://twitter.com/intent/tweet?url={{ url }}&text={{ title }}">
-					{{ svg.twitter() }}
-				</a>
-				<a class="poly mail" alt="Mail" target="_blank" href="mailto:?subject={{ title }}&amp;body=Check this article: {{ url }}">
-					{{ svg.mail() }}
-				</a>
-				{#<a class="poly copy">
-					{{ svg.link() }}
-				</a>#}
+				<div class="system">
+					<a>
+						{{ svg.share() }}
+					</a>
+				</div>
+				<div class="fallback">
+					<a alt="Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ url }}">
+						{{ svg.facebook() }}
+					</a>
+					<a alt="Linkedin" target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url={{ url }}">
+						{{ svg.linkedin() }}
+					</a>
+					<a alt="Twitter" target="_blank" href="https://twitter.com/intent/tweet?url={{ url }}&text={{ title }}">
+						{{ svg.twitter() }}
+					</a>
+					<a alt="Mail" target="_blank" href="mailto:?subject={{ title }}&amp;body=Check this article: {{ url }}">
+						{{ svg.mail() }}
+					</a>
+					{#<a class="poly copy">
+						{{ svg.link() }}
+					</a>#}					
+				</div>
 
 			</div>
 		</div>

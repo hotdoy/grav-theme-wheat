@@ -21,27 +21,34 @@
 	padding: var(--gutter);
 }
 
-/* #share .wrapper .content {} */
+/* #share .content {} */
 
-#share .wrapper .triggers {
+#share .triggers {
 	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#share .system {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#share .fallback {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #share a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-left: 10px;
 	border: 1px solid var(--c-fg);
 	border-radius: 4px;
 	padding: 8px;
-}
-
-#share a:not(:first-of-type) {
-	margin-left: 10px;
-}
-
-#share a.native.hidden {
-	display: none;
 }
 
 #share a > svg {
