@@ -1,0 +1,33 @@
+title: numbers
+extends@: modular/module
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            content:
+              unset@: true
+            header.media_order:
+              ordering@: +99
+
+            header.display_title:
+              type: text
+              style: vertical
+              label: Display Title
+            
+            header.items:
+              name: items
+              type: list
+              style: vertical
+              label: Items
+              fields:
+
+                .number:
+                  type: textarea
+                  label: Number
+
+                .text:
+                  type: textarea
+                  label: Text

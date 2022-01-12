@@ -1,0 +1,26 @@
+{% extends 'modular/module.html.twig' %}
+{% set name = 'numbers' %}
+{% set title = title|default(page.header.display_title) %}
+{% set items = items ?? page.header.items ?? null  %}
+{% block content %}
+
+<div class="wrapper text">
+
+	{% if title %}
+	<h2>{{ title }}</h2>
+	{% endif %}
+
+    <div class="layout">
+        {% for item in items %}
+		{% set n = item.number %}
+		{% set t = item.text %}
+		<div class="item">
+			<h3>{{ n }}</h3>
+			<p>{{ t }}</p>
+		</div>
+		{% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}

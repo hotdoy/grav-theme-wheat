@@ -1,0 +1,24 @@
+/* .module.numbers {} */
+
+.module.numbers > .wrapper {
+	position: relative;
+	margin: 0 auto;
+	padding: 0 var(--gutter);
+	width: 100%;
+	max-width: var(--w-main);
+	overflow: hidden;
+}
+
+.module.numbers > .wrapper > h2 {
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: left;
+}
+
+/* .module.numbers .layout {} */
+
+/* .module.numbers .item {} */
+
+/* .module.numbers .item h3 {} */
+
+/* .module.numbers .item p {} */
