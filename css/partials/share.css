@@ -12,7 +12,7 @@
 }
 
 #share .wrapper .layout {
-	background-color: #f1f1f1;
+	background-color: var(--c-bg-alt);
 	border-radius: 8px;
 	display: flex;
 	align-items: center;
@@ -46,12 +46,12 @@
 	align-items: center;
 	justify-content: center;
 	margin-left: 10px;
-	border: 1px solid var(--c-fg);
+	border: 1px solid var(--c-fg-alt);
 	border-radius: 4px;
 	padding: 8px;
 }
 
-#share a > svg {
+#share a svg {
 	width: 100%;
 	height: auto;
 }
