@@ -15,6 +15,10 @@
 }
 
 .module.quotes .scroller__slide {
+  --c-bg: #1f1f1f;
+	--c-fg: white;
+	--c-btn-bg: white;
+	--c-btn-fg: #1f1f1f;
   display: flex;
   align-items: center;
   justify-content: center;

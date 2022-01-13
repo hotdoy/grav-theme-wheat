@@ -15,10 +15,43 @@
     text-align: left;
 }
 
-/* .module.numbers .layout {} */
+.module.numbers .layout {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 2rem;
+}
 
-/* .module.numbers .item {} */
+@media (min-width: 624px) {
+    .module.numbers .layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-/* .module.numbers .item h3 {} */
+@media (min-width: 1024px) {
+    .module.numbers .layout {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
-/* .module.numbers .item p {} */
+.module.numbers .item {
+	max-width: 300px;
+}
+
+.module.numbers .item h3 {
+	font-size: xx-large;
+}
+
+.module.numbers .item h3 {
+    font-size: 48px;
+	font-weight: var(--fw-bold);
+}
+
+@media (min-width: 640px) {
+    .module.numbers .item h3 {
+        font-size: clamp(48px, 4vw, 64px);
+    }
+}
+
+.module.numbers .item p {
+	color: var(--c-fg-alt);
+}

@@ -1,4 +1,8 @@
 #footer {
+    --c-bg: #1f1f1f;
+	--c-fg: white;
+	--c-btn-bg: white;
+	--c-btn-fg: #1f1f1f;
     margin-top: var(--rhythm);
     padding-top: calc(var(--rhythm) - 2rem);
     padding-bottom: var(--gutter);
