@@ -10,6 +10,7 @@ form:
             content:
               unset@: true
             header.media_order:
+              unset@: true
               ordering@: +99
 
             header.display_title:
@@ -25,7 +26,7 @@ form:
               fields:
 
                 .number:
-                  type: textarea
+                  type: text
                   label: Number
 
                 .text:

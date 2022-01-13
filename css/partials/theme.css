@@ -4,16 +4,11 @@
 
 :root {
 	--c-bg: white;
+	--c-bg-alt: #f1f1f1;
 	--c-fg: #1f1f1f;
+	--c-fg-alt: grey;
 	--c-btn-bg: #1f1f1f;
 	--c-btn-fg: white;
-}
-
-.dark {
-	--c-bg: #1f1f1f;
-	--c-fg: white;
-	--c-btn-bg: white;
-	--c-btn-fg: #1f1f1f;
 }
 
 

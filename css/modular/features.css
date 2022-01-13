@@ -46,7 +46,6 @@
 }
 
 .module.features .item p {
-    color: grey;
+    color: var(--c-fg-alt);
     margin-top: 0.5rem;
-    font-size: small;
 }
