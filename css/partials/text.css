@@ -62,7 +62,7 @@
 	line-height: 1.5;
 }
 ::selection{
-    background-color:#ffee00;
+    background-color:yellow;
     color: black;
 }
 

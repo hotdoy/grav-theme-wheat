@@ -19,6 +19,7 @@
 	</head>
 
 	<body class="{{ page.template }}{% if page.header.body_classes %} {{ page.header.body_classes }}{% endif %}">
+		<a href="#main" class="skipto">Skip to content</a>
 		{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
 		<main id="main">{% block content %}{% endblock %}</main>
 		{% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %}
