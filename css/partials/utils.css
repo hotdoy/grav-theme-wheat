@@ -5,3 +5,19 @@
   bottom: 0;
   left: 0;
 }
+
+.skipto {
+  background-color: yellow;
+  color: black;
+  padding: 8px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  z-index: 9999;
+}
+
+.skipto:focus-visible {
+  transition: transform 0.2s;
+  transform: translateY(0%);
+}
