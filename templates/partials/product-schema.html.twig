@@ -1,0 +1,29 @@
+{% set name = page.header.name ?? page.title %}
+{% set image = page.header.image ? page.media[page.header.image] : null %}
+{% set description = page.header.description %}
+{% set sku = page.header.id %}
+{% set url = page.url(true, true) %}
+{% set currency = theme.currency ?? 'CAD' %}
+{% set price = page.header.price %}
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "{{ name }}",
+      {% if images %}
+      "image": [
+          "{{ image.url }}"  
+      ],
+      {% endif %}
+      "description": "{{ description }}",
+      "sku": "{{ sku }}",
+      "offers": {
+        "@type": "Offer",
+        "url": "{{ url }}",
+        "priceCurrency": "{{ currency }}",
+        "price": "{{ price }}",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+</script>
