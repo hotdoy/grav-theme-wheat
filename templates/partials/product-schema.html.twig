@@ -11,9 +11,9 @@
       "@context": "https://schema.org/",
       "@type": "Product",
       "name": "{{ name }}",
-      {% if images %}
+      {% if image %}
       "image": [
-          "{{ image.url }}"  
+          "{{ uri.base() ~ image.url }}"  
       ],
       {% endif %}
       "description": "{{ description }}",

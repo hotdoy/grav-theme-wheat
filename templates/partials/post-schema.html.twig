@@ -8,9 +8,9 @@
         "@context": "https://schema.org",
         "@type": "NewsArticle",
         "headline": "{{ headline }}",
-        {% if images %}
+        {% if image %}
         "image": [
-            "{{ image.url }}"  
+            "{{ uri.base() ~ image.url }}"   
         ],
         {% endif %}
         "datePublished": "{{ date }}",
