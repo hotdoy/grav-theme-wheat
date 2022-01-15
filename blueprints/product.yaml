@@ -28,7 +28,7 @@ form:
 
             header.id:
               type: text
-              label: Id
+              label: Id / SKU
               help: Product's unique ID to be used by Snipcart.
               validate:
                 required: true

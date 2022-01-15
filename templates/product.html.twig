@@ -4,8 +4,10 @@
 {% set gallery_images = page.header.gallery_images %}
 {% set price = page.header.price|number_format(2, ',', ' ') %}
 
-{% block head_extra %}
-<meta name="uid" content="{{ page.id() }}">
+{% block metadata %}
+	{{ parent() }}
+	<meta name="uid" content="{{ page.id() }}">
+	{% include "partials/product-schema.html.twig" %}
 {% endblock %}
 
 {% block content %}
@@ -16,7 +18,7 @@
 
 			<div class="media-ctn">
 
-				{# SWIPER - TODO REPLACE WITH SCROLLER #}
+				{# GALLERY #}
 				{% if gallery_images %}
 				<div class="scroller">
 					<div class="scroller__scrollctn">
