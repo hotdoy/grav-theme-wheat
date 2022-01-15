@@ -1,7 +1,12 @@
 {% extends 'partials/base.html.twig' %}
 
-{% block content %}
+{% block metadata %}
+	{{ parent() }}
+	{% include "partials/post-schema.html.twig" %}
+{% endblock %}
 
+{% block content %}
+ 
 	{# HEADING #}
 	{% include 'partials/post-heading.html.twig' %}
 

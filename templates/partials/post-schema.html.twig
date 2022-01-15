@@ -1,0 +1,22 @@
+{% set headline = page.title %}
+{% set image = page.header.image ? page.media[page.header.image] : null %}
+{% set date = page.header.date|date('Y-m-d\TH:i:sO') %}
+{% set author = page.header.author ?? config.site.author.name %}
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "{{ headline }}",
+        {% if images %}
+        "image": [
+            "{{ image.url }}"  
+        ],
+        {% endif %}
+        "datePublished": "{{ date }}",
+        "author": [{
+            "@type": "Person",
+            "name": "{{ author }}"
+        }]
+    }
+</script>
