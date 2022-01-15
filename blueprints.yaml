@@ -54,6 +54,12 @@ form:
       title: Snipcart
       underline: true
 
+    currency:
+      type: text
+      label: Currency
+      default: CAD
+      description: Use ISO 4217 code and make sure this is the same as in your Snipcart dashboard. 
+
     snipcart:
       type: toggle
       label: Snipcart
