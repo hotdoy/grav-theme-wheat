@@ -1,0 +1,33 @@
+title: event
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+  
+            header.display_title:
+              ordering@: header.title
+              type: text
+              style: vertical
+              label: Display Title
+
+            header.image:
+              type: pagemediaselect
+              label: image
+              style: vertical
+              ordering@: header.display_title
+              accept:
+                - jpg
+                - gif
+
+            header.image_alt:
+              type: text
+              label: Image Alt
+              style: vertical
+              ordering@: header.image
+
+            header.media_order:
+              ordering@: +99
