@@ -23,15 +23,7 @@
 	{{ module.content|raw }}
 	{% endfor %}
 
-	{# RANDOM PICKS #}
-	{#{% if page.header.show_recommendations %}
-	{% set related_options = { items: {'@self.siblings':''}, 'limit': 6, 'order': {'by': 'random'}} %}
-	{% set related_items = page.collection(related_options) %}
-	{% if related_items %}
-	{% include 'modular/carousel.html.twig' with { 'title': 'THEME.POST.RELATED'|t, 'collection': related_items } only %}
-	{% endif %}
-	{% endif %}#}
-
+	{# SHARE #}
 	{% include "partials/share.html.twig" %}
 
 {% endblock %}

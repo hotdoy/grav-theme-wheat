@@ -21,7 +21,18 @@
 
 .post__heading .breadcrumbs {
     margin-bottom: var(--gutter);
-    opacity: 0.5;
+    color: var(--c-fg-alt);
+    text-decoration: underline;
 }
 
 /* .post__heading .title {} */
+
+.post__heading .cartel {
+    margin-top: var(--gutter);
+    color: var(--c-fg-alt); 
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* .post__heading time {} */
+
+/* .post__heading .author {} */
