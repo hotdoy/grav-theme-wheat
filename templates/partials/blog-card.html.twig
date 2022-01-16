@@ -2,15 +2,24 @@
 {% set image = image ?? item.header.image ? item.media[item.header.image] : item.media.images|first %}
 {% set image_alt = image_alt ?? item.header.image_alt ?? null %}
 {% set date = date ?? item.header.date ? item.header.date|date('Y/m/d') : null %}
+{% set datetime = item.header.date|date('Y-m-d\TH:i:sO') %}
+{% set author = item.header.author ?? config.site.author.name %}
 {% set title = title ?? item.title ?? null %}
 {% set summary = item.summary|striptags %}
 {% set url = url ?? item.url %}
 
-
 <article class="blog-card">
 	<a href="{{ url }}">
 		<div class="blog-card__content text">
-            <time>{{ date }}</time>
+			
+			{% if date or author %}
+			<div class="cartel">
+				{% if date %}<time datetime="{{ datetime }}">{{ date }}</time>{% endif %}
+				{% if date and author %}—{% endif %}
+				{% if author %}<span class="author">{{ author }}</span>{% endif %}
+			</div>		
+			{% endif %}
+
 			<h2>{{ title }}</h2>
             <p>{{ summary }}</p>
 		</div>

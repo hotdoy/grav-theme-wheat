@@ -100,15 +100,15 @@
     }
 }
 
-.blog-card__content time {
-    display: block;
-    margin-top: -5px;
+.blog-card__content .cartel {
+    display: inline;
     font-size: small;
-    color: grey;
+    color: var(--c-fg-alt);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 @media (min-width: 1024px) {
-    .blog-card__content time {
+    .blog-card__content .cartel {
         font-size: medium;
     }
 }

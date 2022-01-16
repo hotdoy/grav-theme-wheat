@@ -21,7 +21,7 @@
     <section class="blog__list" data-list>
         <div class="wrapper">
             {% for item in collection_slice %}
-            {% include ['partials/blog-card.html.twig' ] with {'item': item} only %}
+            {% include ['partials/blog-card.html.twig' ] with {'item': item} %}
             {% endfor %}
         </div>
     </section>
