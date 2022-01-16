@@ -18,7 +18,7 @@
     {% include 'partials/default-heading.html.twig' with {title: title} %}
    
     {# LIST #}
-    <section class="blog__list" data-list>
+    <section class="blog__list" data-pagination-list>
         <div class="wrapper">
             {% for item in collection_slice %}
             {% include ['partials/blog-card.html.twig' ] with {'item': item} %}
