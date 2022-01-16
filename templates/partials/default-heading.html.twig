@@ -1,6 +1,6 @@
 {% import "partials/breadcrumbs.html.twig" as breadcrumbs %}
 
-{% set title = title ?? page.header.display_title %}
+{% set title = title ?? page.header.display_title ?? page.title %}
 {% set intro = intro ?? page.header.intro %}
 
 <section class="default__heading">
