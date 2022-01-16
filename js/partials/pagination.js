@@ -23,7 +23,7 @@ const Pagination = {
             r = parser.parseFromString(r, 'text/html');
 
             // Get content of new list
-            let el = r.querySelector('[data-list] .wrapper').innerHTML;
+            let el = r.querySelector('[data-pagination-list] .wrapper').innerHTML;
 
             // Get next trigger from response
             let newTrigger = r.querySelector("[data-pagination] button");
