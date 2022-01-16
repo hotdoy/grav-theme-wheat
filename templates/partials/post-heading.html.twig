@@ -3,14 +3,14 @@
 {% set date = date ?? page.header.date ? page.header.date|date('Y/m/d') : null %}
 {% set datetime = page.header.date|date('Y-m-d\TH:i:sO') %}
 {% set author = page.header.author ?? config.site.author.name %}
-<section class="post__heading">
+<section class="post-heading">
 	<div class="wrapper">
 		{{ breadcrumbs.html(page, pages, page.collection({items: {'@self.page': ''}})) }}
-		<div class="title text">
+		<div class="post-heading__title text">
 			<h1>{{ title|raw }}</h1>
 		</div>
 		{% if date or author %}
-		<div class="cartel">
+		<div class="post-heading__cartel">
 			{% if date %}<time datetime="{{ datetime }}">{{ date }}</time>{% endif %}
 			{% if date and author %}—{% endif %}
 			{% if author %}<span class="author">{{ author }}</span>{% endif %}
