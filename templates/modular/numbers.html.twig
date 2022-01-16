@@ -16,7 +16,7 @@
 		{% set t = item.text %}
 		<div class="item">
 			<h3>{{ n }}</h3>
-			<p>{{ t }}</p>
+			<p>{{ t|raw }}</p>
 		</div>
 		{% endfor %}
     </div>
