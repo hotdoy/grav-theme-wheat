@@ -1,5 +1,9 @@
 /* #header {} */
 
+
+
+
+
 #header .shim {
     height: var(--header);
 }
@@ -38,10 +42,8 @@
 }
 
 #header .header .version {
-    opacity: 0.7;
+    color: var(--c-fg-alt);
 }
-
-
 
 
 
@@ -55,12 +57,18 @@
 }
 
 #header .header .layout nav ul li {
-    margin-left: var(--gutter);
+    margin-left: 10px;
 }
 
-#header .header .layout nav ul li.langswitcher {
-    opacity: 0.7;
+@media (min-width: 640px) {
+    #header .header .layout nav ul li {
+        margin-left: var(--gutter);
+    }
 }
+
+
+/* #header .header .layout nav ul li.langswitcher {} */
+
 
 
 

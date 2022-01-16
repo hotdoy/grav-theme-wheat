@@ -1,15 +1,15 @@
 {% import "partials/breadcrumbs.html.twig" as breadcrumbs %}
 
-{% set title = title ?? page.header.display_title %}
+{% set title = title ?? page.header.display_title ?? page.title %}
 {% set intro = intro ?? page.header.intro %}
 
-<section class="default__heading">
-	<div class="default__heading__wrapper">
+<section class="default-heading">
+	<div class="default-heading__wrapper">
 		{{ breadcrumbs.html(page, pages, page.collection({items: {'@self.page': ''}})) }}
-		<div class="default__heading__title text">
+		<div class="default-heading__title text">
 			<h1>{{ title|raw }}</h1>
 		</div>
-		<div class="default__heading__intro text">
+		<div class="default-heading__intro text">
 			<p>{{ intro }}</p>
 		</div>
 	</div>	

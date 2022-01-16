@@ -62,7 +62,7 @@ const Pagination = {
     },
 
     Init: function() {
-        Pagination.list = document.querySelector('[data-list] .wrapper');
+        Pagination.list = document.querySelector('[data-pagination-list] .wrapper');
         Pagination.pagination = document.querySelector('[data-pagination]');
         if (!!Pagination.pagination) {
             Pagination.trigger = Pagination.pagination.querySelector('button');

@@ -2,13 +2,13 @@
 
 {% block metadata %}
 	{{ parent() }}
-	{% include "partials/post-schema.html.twig" %}
+	{# {% include "partials/event-schema.html.twig" %} #}
 {% endblock %}
 
 {% block content %}
  
 	{# HEADING #}
-	{% include 'partials/post-heading.html.twig' %}
+	{% include 'partials/event-heading.html.twig' %}
 
 	{# MEDIA #}
 	{% include 'modular/media.html.twig' %}

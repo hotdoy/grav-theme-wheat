@@ -1,17 +1,17 @@
-/*body.post {}*/
+/*body.event {}*/
 
 
 /*===========================================
 				HEADING 
 ============================================*/
 
-.post-heading {
+.event__heading {
     position: relative;
     margin-top: var(--rhythm);
     z-index: 1000;
 }
 
-.post-heading .wrapper {
+.event__heading .wrapper {
     padding: 0 var(--gutter);
     margin: 0 auto;
     max-width: var(--w-main);
@@ -19,20 +19,18 @@
     text-align: center;
 }
 
-.post-heading .breadcrumbs {
+.event__heading .breadcrumbs {
     margin-bottom: var(--gutter);
     color: var(--c-fg-alt);
     text-decoration: underline;
 }
 
-/* .post-heading__title {} */
+/* .event__heading .title {} */
 
-.post-heading__cartel {
+.event__heading .cartel {
     margin-top: var(--gutter);
     color: var(--c-fg-alt); 
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* .post-heading time {} */
-
-/* .post-heading .author {} */
+/* .event__heading time {} */
