@@ -8,29 +8,29 @@
 				HEADING 
 ============================================*/
 
-.default__heading {
+.default-heading {
     position: relative;
     margin-top: var(--rhythm);
     z-index: 1000;
 }
 
-.default__heading .wrapper {
+.default-heading .wrapper {
     padding: 0 var(--gutter);
     margin: 0 auto;
     max-width: var(--w-main);
     width: 100%;
 }
 
-.default__heading .breadcrumbs {
+.default-heading .breadcrumbs {
     margin-bottom: var(--gutter);
     opacity: 0.5;
 }
 
-.default__heading__title {
+.default-heading__title {
     text-align: center;
 }
 
-.default__heading__intro {
+.default-heading__intro {
     margin: 1rem auto 0 auto;
     padding: 0 var(--gutter);
     text-align: center;
