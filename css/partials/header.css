@@ -42,7 +42,7 @@
 }
 
 #header .header .version {
-    color: var(--c-fg-alt);
+    opacity: 0.7;
 }
 
 
