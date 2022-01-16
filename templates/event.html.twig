@@ -1,0 +1,29 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block metadata %}
+	{{ parent() }}
+	{# {% include "partials/event-schema.html.twig" %} #}
+{% endblock %}
+
+{% block content %}
+ 
+	{# HEADING #}
+	{% include 'partials/event-heading.html.twig' %}
+
+	{# MEDIA #}
+	{% include 'modular/media.html.twig' %}
+	
+	{# CONTENT #}
+	{% if page.content %}
+	{% include 'modular/editor.html.twig' %}
+	{% endif %}
+
+	{# MODULES #}
+	{% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
+	{{ module.content|raw }}
+	{% endfor %}
+
+	{# SHARE #}
+	{% include "partials/share.html.twig" %}
+
+{% endblock %}
