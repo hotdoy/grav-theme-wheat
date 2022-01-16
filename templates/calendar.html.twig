@@ -1,5 +1,5 @@
 {% extends 'partials/base.html.twig' %}
-
+{% set now = 'now'|date('m/d/Y') %}
 {% set key = 'articles' %}
 {% set step = 6 %}
 {% set qs = uri.query(key) ?? null %}
@@ -7,18 +7,25 @@
 {% set qs_end = qs ? qs|split('-')[1] : step %}
 {% set next_start = qs_end %}
 {% set next_end = next_start + step %}
-{% set collection_raw = page.collection({ items: {'@self.children':''}, 'order': {'by': 'date', 'dir': 'asc'}}) %}
+{% set collection_raw = page.collection({ items: {'@self.children':''},
+    'order': {'by': 'date', 'dir': 'asc'},
+    'dateRange': {'start': now, 'end': null }
+}) %}
 {% set collection_raw_length = collection_raw|length %}
-{% set collection = page.collection({ items: {'@self.children':''}, 'limit': qs_end, 'order': {'by': 'date', 'dir': 'asc'}}) %}
+{% set collection = page.collection({ items: {'@self.children':''},
+    'limit': qs_end, 
+    'order': {'by': 'date', 'dir': 'asc'},
+    'dateRange': {'start': now, 'end': null }
+}) %}
 {% set collection_slice = collection|slice(qs_start, qs_end) %}
 
 {% block content %}
 
     {# HEADING #}
-    {% include 'partials/default-heading.html.twig' with {title: title} %}
+    {% include 'partials/default-heading.html.twig' %}
    
     {# LIST #}
-    <section class="calendar__list" data-list>
+    <section class="calendar__list" data-pagination-list>
         <div class="wrapper">
             {% for item in collection_slice %}
             {% include ['partials/calendar-card.html.twig' ] with {'item': item} %}
