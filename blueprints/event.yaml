@@ -28,6 +28,14 @@ form:
               label: Image Alt
               style: vertical
               ordering@: header.image
+            
+            # header.type:
+            #   type: elements
+            #   label: Type
+            #   default: Standard
+            #   options:
+            #     standard: Standard
+            #     online: Online
 
             header.media_order:
               ordering@: +99
