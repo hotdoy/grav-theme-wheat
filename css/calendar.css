@@ -52,7 +52,7 @@
 
 .calendar-card {
     padding-top: var(--gutter);
-    border-top: 1px solid #f1f1f1;
+    border-top: 1px solid var(--c-bg-alt);
     width: 100%;
 }
 
@@ -68,20 +68,39 @@
     border-radius: 4px;
     flex-shrink: 0;
     height: fit-content;
-    width: 95px;
+    width: 70px;
     text-align: center;
     padding: 10px;
     line-height: 1;
 }
 
+@media (min-width: 1024px) {
+    .calendar-card__date {
+        width: 95px;
+        padding: 10px;
+    }
+}
+
 .calendar-card__date .day {
-    font-size: xx-large;
+    font-size: x-large;
     font-weight: bold;
 }
 
+@media (min-width: 1024px) {
+    .calendar-card__date .day {
+        font-size: xx-large;
+    }
+}
+
 .calendar-card__date .month {
-    font-size: large;
+    font-size: medium;
     text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+    .calendar-card__date .month {
+        font-size: large;
+    }
 }
 
 .calendar-card__date .year {
@@ -130,7 +149,7 @@
     border-radius: 4px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 640px) {
     .calendar-card__media {
         display: block;
         aspect-ratio: 4/3;
