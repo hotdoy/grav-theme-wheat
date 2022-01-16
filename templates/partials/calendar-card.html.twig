@@ -1,0 +1,34 @@
+{% set item = item ?? null %}
+{% set image = image ?? item.header.image ? item.media[item.header.image] : item.media.images|first %}
+{% set image_alt = image_alt ?? item.header.image_alt ?? null %}
+{% set date = date ?? item.header.date ? item.header.date|date('Y/m/d') : null %}
+{% set datetime = item.header.date|date('Y-m-d\TH:i:sO') %}
+{% set day = day ?? item.header.date ? item.header.date|date('d') : null %}
+{% set month = month ?? item.header.date ? item.header.date|date('M') : null %}
+{% set year = year ?? item.header.date ? item.header.date|date('Y') : null %}
+{% set title = title ?? item.title ?? null %}
+{% set summary = item.summary|striptags %}
+{% set url = url ?? item.url %}
+
+<article class="calendar-card">
+	<a href="{{ url }}">
+
+        <div class="calendar-card__date">
+            <time datetime="{{ datetime }}">
+                <div class="day">{{ day }}</div>
+                <div class="month">{{ month }}</div>
+                <div class="year">{{ year }}</div>
+            </time>
+        </div>
+
+		<div class="calendar-card__content text">	
+			<h2>{{ title }}</h2>
+            <p>{{ summary }}</p>
+		</div>
+
+        <div class="calendar-card__media">
+			{% include "partials/img.html.twig" with {image: image, alt: image_alt} only %}
+		</div>
+
+	</a>
+</article>
