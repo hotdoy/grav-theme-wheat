@@ -12,10 +12,13 @@
 
 	{# MEDIA #}
 	{% include 'modular/media.html.twig' %}
-	
+
+	{# INFO #}
+	{% include "partials/event-info.html.twig" %}
+
 	{# CONTENT #}
 	{% if page.content %}
-	{% include 'modular/editor.html.twig' %}
+	{% include 'modular/editor.html.twig' with {class: 'rhythm-half'} %}
 	{% endif %}
 
 	{# MODULES #}

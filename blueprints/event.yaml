@@ -16,18 +16,50 @@ form:
 
             header.image:
               type: pagemediaselect
-              label: image
+              label: Image
               style: vertical
-              ordering@: header.display_title
               accept:
                 - jpg
-                - gif
 
             header.image_alt:
               type: text
               label: Image Alt
               style: vertical
-              ordering@: header.image
+            
+            header.runtime:
+              type: text
+              label: Runtime
+              style: vertical
 
+            header.location:
+              type: text
+              label: Location
+              style: vertical
+            
+            header.note:
+              type: text
+              label: Note
+              style: vertical
+
+            header.registration_instruction:
+              type: text
+              label: Registration instruction
+              style: vertical
+
+            header.registration_link:
+              type: text
+              label: Registration link
+              style: vertical
+
+            # header.type:
+            #   type: elements
+            #   label: Type
+            #   default: Standard
+            #   options:
+            #     standard: Standard
+            #     online: Online
+            
+            content:
+              ordering@: +98
             header.media_order:
               ordering@: +99

@@ -1,0 +1,43 @@
+{% set date = date ?? page.header.date ? page.header.date|date('D F d Y - G:i') : null %}
+{% set runtime = runtime ?? page.header.runtime ?? null %}
+{% set location = location ?? page.header.location ?? null %}
+{% set note = note ?? page.header.note ?? null %}
+{% set registration_instruction = registration_instruction ?? page.header.registration_instruction ?? null %}
+{% set registration_link = registration_link ?? page.header.registration_link ?? null %}
+
+<section class="event-info">
+    <div class="wrapper">
+        <div class="layout">
+
+            {% if date %}
+            <div class="event-info__date">
+                <h2>{{ 'THEME.EVENT.DATE'|t }}</h2>
+                <p>{{ date }} {% if runtime %}({{ runtime }}){% endif %}</p>
+            </div>            
+            {% endif %}
+
+            {% if location %}
+            <div class="event-info__location">
+                <h2>{{ 'THEME.EVENT.LOCATION'|t }}</h2>
+                <p>{{ location }}</p>
+            </div>            
+            {% endif %}
+
+            {% if note %}
+            <div class="event-info__note">
+                <h2>{{ 'THEME.EVENT.DETAILS'|t }}</h2>
+                <p>{{ note }}</p>
+            </div>            
+            {% endif %}
+
+            {% if registration_instruction or registration_link %}
+            <div class="event-info__registration">
+                <h2>{{ 'THEME.EVENT.REGISTRATION'|t }}</h2>
+                {% if registration_instruction %}<p>{{ registration_instruction }}</p>{% endif %}    
+                {% if registration_link %}<a class="button" href="{{ registration_link }}">{{ 'THEME.EVENT.REGISTER'|t }}</a>{% endif %}
+            </div>            
+            {% endif %}
+
+        </div>  
+    </div>
+</section>

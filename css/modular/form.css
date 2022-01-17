@@ -1,6 +1,5 @@
 /* .module.form {} */
 
-/*MODULE*/
 .module.form .wrapper{
 	width: 100%;
 	max-width: var(--w-main);
@@ -9,7 +8,6 @@
 }
 
 /* .module.form .layout {} */
-
 
 @media (min-width: 1024px) {
     .module.form .layout {
@@ -40,6 +38,7 @@
     margin: 0 auto;
     margin-top: 2rem;
     width: 100%;
+    flex-grow: 0;
     max-width: var(--w-tight);
     padding: 1rem;
     border: 1px solid whitesmoke;
@@ -98,6 +97,11 @@
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
+}
+
+.module.form textarea {
+    min-height: 150px;
+    resize: none;
 }
 
 /*RADIO & CHECKBOX LIST*/
