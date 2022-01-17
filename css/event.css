@@ -1,6 +1,9 @@
 /*body.event {}*/
 
 
+
+
+
 /*===========================================
 				HEADING 
 ============================================*/
@@ -34,3 +37,40 @@
 }
 
 /* .event__heading time {} */
+
+
+
+
+
+/*===========================================
+				INFO
+============================================*/
+
+.event-info {
+    position: relative;
+    margin-top: calc(var(--rhythm)/2);
+    z-index: 1000;
+}
+
+.event-info .wrapper {
+    padding: 0 var(--gutter);
+    margin: 0 auto;
+    max-width: var(--w-tight);
+    width: 100%;
+}
+
+.event-info h2 {
+    text-transform: uppercase;
+    font-size: small;
+}
+
+.event-info .layout {
+	background-color: var(--c-bg-alt);
+	border-radius: 8px;
+	padding: var(--gutter);
+}
+
+/* .event-info__date {} */
+/* .event-info__location {} */
+/* .event-info__details {} */
+/* .event-info__registration {} */

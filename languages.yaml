@@ -5,21 +5,19 @@ en:
       END: That's it for now!
     PRODUCT:
       RELATED: In the same collection
-    POST:
-      RELATED: Random picks
-    CART:
       DISABLED: Cart is disabled
       ADD: Add to cart
       INSTRUCTION: Product availability and discount will be confirmed during the checkout process.
+    POST:
+      RELATED: Random picks
+    EVENT:
+      DATE: Date & Time
+      LOCATION: Location
+      DETAILS: Additional Details
+      REGISTRATION: Registration
     DIALOG:
       SIGNIN: 🥰<br><strong>Welcome back!</strong>
       SIGNOUT: 👋<br><strong>You've been logged out.</strong>
-    NEWSLETTER:
-      TITLE: Sign Up
-      SUBTITLE: I probably won't have time to send anything but who knows.
-    SAMEAS:
-      TITLE: Follow Me
-      SUBTITLE: I mean, why not?
 
 fr:
   THEME:
@@ -28,19 +26,18 @@ fr:
       END: C'est tout pour le moment!
     PRODUCT:
       RELATED: Dans la même collection
-    POST:
-      RELATED: Continuez votre lecture
-    CART:
       DISABLED: Panier désactivé
       ADD: Ajouter au panier
       INSTRUCTION: La disponibilité et rabias sur les produits seront confirmées lors du processus de commande.
+    POST:
+      RELATED: Continuez votre lecture
+    EVENT:
+      DATE: Date et heure
+      LOCATION: Emplacement
+      DETAILS: Détails additionnels
+      REGISTRATION: Enregistrement
     DIALOG:
       SIGNIN: 🥰<br><strong>Content de vous revoir!</strong>
       SIGNOUT: 👋<br><strong>Vous avez été déconnecté.</strong>
-    NEWSLETTER:
-      TITLE: Sign Up
-      SUBTITLE: I probably won't have time to send anything but who knows.
-    SAMEAS:
-      TITLE: Follow Me
-      SUBTITLE: I mean, why not?
+
 
