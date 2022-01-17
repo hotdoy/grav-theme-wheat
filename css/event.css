@@ -62,6 +62,19 @@
 .event-info h2 {
     text-transform: uppercase;
     font-size: small;
+    color: var(--c-fg-alt);
+}
+
+.event-info p {
+    margin-bottom: 1.5rem;
+}
+
+.event-info .button {
+    margin-top: 0;
+}
+
+.event-info a.button {
+    width: 100%;
 }
 
 .event-info .layout {
@@ -72,5 +85,5 @@
 
 /* .event-info__date {} */
 /* .event-info__location {} */
-/* .event-info__details {} */
+/* .event-info__note {} */
 /* .event-info__registration {} */

@@ -15,6 +15,7 @@ en:
       LOCATION: Location
       DETAILS: Additional Details
       REGISTRATION: Registration
+      REGISTER: Register
     DIALOG:
       SIGNIN: 🥰<br><strong>Welcome back!</strong>
       SIGNOUT: 👋<br><strong>You've been logged out.</strong>
@@ -36,6 +37,7 @@ fr:
       LOCATION: Emplacement
       DETAILS: Détails additionnels
       REGISTRATION: Enregistrement
+      REGISTER: S'inscrire
     DIALOG:
       SIGNIN: 🥰<br><strong>Content de vous revoir!</strong>
       SIGNOUT: 👋<br><strong>Vous avez été déconnecté.</strong>

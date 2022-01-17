@@ -15,7 +15,7 @@
 	
 	{# CONTENT #}
 	{% if page.content %}
-	{% include 'modular/editor.html.twig' %}
+	{% include 'modular/editor.html.twig' with {class: 'rhythm-half'} %}
 	{% endif %}
 
 	{# MODULES #}
