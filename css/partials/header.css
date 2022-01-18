@@ -15,6 +15,8 @@
     right: 0;
     font-size: medium;
     line-height: 1;
+    max-width: var(--w-full);
+    margin: 0 auto;
     padding: var(--gutter);
     padding-bottom: 0;
     color: var(--c-fg);
@@ -25,7 +27,6 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: var(--w-full);
     height: 100%;
 }
 
