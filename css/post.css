@@ -5,13 +5,13 @@
 				HEADING 
 ============================================*/
 
-.post__heading {
+.post-heading {
     position: relative;
     margin-top: var(--rhythm);
     z-index: 1000;
 }
 
-.post__heading .wrapper {
+.post-heading .wrapper {
     padding: 0 var(--gutter);
     margin: 0 auto;
     max-width: var(--w-main);
@@ -19,9 +19,20 @@
     text-align: center;
 }
 
-.post__heading .breadcrumbs {
+.post-heading .breadcrumbs {
     margin-bottom: var(--gutter);
-    opacity: 0.5;
+    color: var(--c-fg-alt);
+    text-decoration: underline;
 }
 
-/* .post__heading .title {} */
+/* .post-heading__title {} */
+
+.post-heading__cartel {
+    margin-top: var(--gutter);
+    color: var(--c-fg-alt); 
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* .post-heading time {} */
+
+/* .post-heading .author {} */

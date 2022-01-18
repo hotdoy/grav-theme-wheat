@@ -1,0 +1,65 @@
+title: event
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+  
+            header.display_title:
+              ordering@: header.title
+              type: text
+              style: vertical
+              label: Display Title
+
+            header.image:
+              type: pagemediaselect
+              label: Image
+              style: vertical
+              accept:
+                - jpg
+
+            header.image_alt:
+              type: text
+              label: Image Alt
+              style: vertical
+            
+            header.runtime:
+              type: text
+              label: Runtime
+              style: vertical
+
+            header.location:
+              type: text
+              label: Location
+              style: vertical
+            
+            header.note:
+              type: text
+              label: Note
+              style: vertical
+
+            header.registration_instruction:
+              type: text
+              label: Registration instruction
+              style: vertical
+
+            header.registration_link:
+              type: text
+              label: Registration link
+              style: vertical
+
+            # header.type:
+            #   type: elements
+            #   label: Type
+            #   default: Standard
+            #   options:
+            #     standard: Standard
+            #     online: Online
+            
+            content:
+              ordering@: +98
+            header.media_order:
+              ordering@: +99

@@ -25,21 +25,9 @@ form:
 
             header.image_alt:
               type: text
-              label: image_alt
+              label: Image Alt
               style: vertical
               ordering@: header.image
-            
-            header.show_recommendations:
-              type: toggle
-              label: Show Recommendations
-              highlight: 1
-              default: 1
-              options:
-                0: PLUGIN_ADMIN.DISABLED
-                1: PLUGIN_ADMIN.ENABLED
-              validate:
-                type: bool
 
             header.media_order:
               ordering@: +99
-              
