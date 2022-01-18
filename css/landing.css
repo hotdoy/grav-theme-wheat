@@ -34,9 +34,10 @@ body.landing #header .shim {
     --c-btn-bg: white;
 	--c-btn-fg: #1f1f1f;
     position: relative;
+    margin: 0 auto;
     height: 100vh;
     min-height: 667px;
-    max-width: var(--w-full);
+    width: 100%;
     background-color: var(--c-bg);
     color: var(--c-fg);
     overflow: hidden;
@@ -45,13 +46,13 @@ body.landing #header .shim {
 .landing__heading .wrapper {
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     margin: 0 auto;
+    max-width: var(--w-main);
     padding: var(--gutter);
 }
 
