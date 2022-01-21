@@ -46,20 +46,18 @@
 				    CARD 
 ============================================*/
 
-.default-card {
-    border-radius: 4px;
-}
+/* .default-card {} */
 
 .default-card a {
     display: block;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .default-card__media {
     position: relative;
     padding-top: 133%;
-    background-color: #f1f1f1;
-    border-radius: 4px;
+    background-color: var(--c-bg-alt);
+    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -79,10 +77,14 @@
     margin-top: 0.5rem;
 }
 
+.default-card h3 {
+    font-size: medium;
+}
+
 .default-card a:hover h3 {
     text-decoration: underline;
 }
 
 .default-card__content p {
-    margin-top: 5px;
+    font-size: small;
 }

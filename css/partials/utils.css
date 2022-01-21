@@ -10,7 +10,7 @@
   margin-top: calc(var(--rhythm)/2);
 }
 
-.skipto {
+#skipto {
   background-color: yellow;
   color: black;
   padding: 8px;
@@ -21,7 +21,23 @@
   z-index: 9999;
 }
 
-.skipto:focus-visible {
+#skipto:focus-visible {
   transition: transform 0.2s;
   transform: translateY(0%);
+}
+
+#edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: yellow;
+  color: black;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  border-radius: 100%;
+  z-index: 9999;
 }

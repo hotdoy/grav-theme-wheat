@@ -121,23 +121,6 @@ form:
       validate:
         type: bool
 
-    pwa_section:
-      type: section
-      title: PWA
-      underline: true 
-
-    pwa_allow_install:
-      type: toggle
-      label: Allow Installation
-      help: Allow the installation of service worker on users devices (if serviceworker.js is properly hosted).
-      highlight: 1
-      default: 0
-      options:
-        0: PLUGIN_ADMIN.DISABLED
-        1: PLUGIN_ADMIN.ENABLED
-      validate:
-        type: bool
-
     facebook_section:
       type: section
       title: Facebook
@@ -182,3 +165,20 @@ form:
       type: textarea
       rows: 13
       label: Snazzy Maps
+
+    admin_section:
+      type: section
+      title: Admin
+      underline: true
+
+    admin_edit_button:
+      type: toggle
+      label: Edit button
+      highlight: 1
+      default: 0
+      options:
+        0: PLUGIN_ADMIN.DISABLED
+        1: PLUGIN_ADMIN.ENABLED
+      validate:
+        type: bool
+        
