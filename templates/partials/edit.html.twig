@@ -1,0 +1,16 @@
+{% import "partials/svg.html.twig" as svg %}
+{% if grav.user.access.admin.login %}
+
+{% set admin_url = base_url_absolute  ~ '/admin/pages' %}
+
+{% set page_url -%}
+    {%- if page.url == home_url %}
+        {{- '/' ~ page.slug -}}
+    {% else %}
+        {{- page.url -}}
+    {% endif -%}
+{% endset %}
+
+{% set url = admin_url ~ page_url %}
+<a id="edit" href="{{ url }}" target="_blank" rel="nofollow">{{ svg.edit() }}</a>
+{% endif %}
