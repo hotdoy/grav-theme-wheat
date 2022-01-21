@@ -165,3 +165,20 @@ form:
       type: textarea
       rows: 13
       label: Snazzy Maps
+
+    admin_section:
+      type: section
+      title: Admin
+      underline: true
+
+    admin_edit_button:
+      type: toggle
+      label: Edit button
+      highlight: 1
+      default: 0
+      options:
+        0: PLUGIN_ADMIN.DISABLED
+        1: PLUGIN_ADMIN.ENABLED
+      validate:
+        type: bool
+        
