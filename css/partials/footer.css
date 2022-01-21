@@ -70,19 +70,10 @@
 
 #footer .footnote {
     margin-top: calc(var(--rhythm)/2);
-    max-width: var(--w-tight);
-    font-size: small;
+    font-size: x-small;
     opacity: 0.5;
 }
 
 #footer .footnote p a {
     text-decoration: underline;
-}
-
-#footer .footnote svg {
-    display: inline-block;
-    margin:  1rem 10px 0 0;
-    opacity: 0.5;
-    height: 20px;
-    width: auto;
 }
