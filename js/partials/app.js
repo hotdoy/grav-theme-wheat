@@ -134,12 +134,18 @@ const App = {
 
     setLinkBehaviour: function(els) {
         els.forEach(el => {
-            const url = el.getAttribute("href");
-            if (!!url && (url.match("^http") || url.match("^mailto:"))) {
-                App.setExtLinkBehaviour(el);
-            } 
-            if (!!url && url.match("^/")) {
-                App.setIntLinkBehaviour(el);
+            const url = el.getAttribute('href');
+            const targetAttr = el.getAttribute('target');
+            if (!!url) {
+                if (!!targetAttr) {
+                    return;
+                }
+                else if (url.match("^http") || url.match("^mailto:") || url.match("^tel:")) {
+                    App.setExtLinkBehaviour(el);
+                } 
+                else if (url.match("^/")) {
+                    App.setIntLinkBehaviour(el);
+                }                
             }
         });
     },

@@ -68,6 +68,13 @@ form:
                         type: text
                         label: Url
 
+              header.footnotes:
+                type: editor
+                codemirror:
+                  mode: html
+                label: Footnotes
+                style: vertical
+
               section_site:
                 type: section
                 title: Site

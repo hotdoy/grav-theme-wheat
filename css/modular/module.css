@@ -1,4 +1,5 @@
 .module {
+  display: block;
   position: relative;
   margin-top: var(--rhythm);
   z-index: 1000;
