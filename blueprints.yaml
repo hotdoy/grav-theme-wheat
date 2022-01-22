@@ -173,7 +173,7 @@ form:
 
     admin_edit_button:
       type: toggle
-      label: Edit button
+      label: Front-end author UI
       highlight: 1
       default: 0
       options:

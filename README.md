@@ -18,7 +18,12 @@ It uses no build tool, no framework of any kind, only needs a basic LAMP setup, 
 - Default
 - Collection
 - Product
+- Blog
 - Post
+- Calendar
+- Event
+- Form
+- Most of the templates related to users management
 
 ### Modular templates
 
@@ -30,18 +35,28 @@ It uses no build tool, no framework of any kind, only needs a basic LAMP setup, 
 - Map
 - Grid
 - Carousel
+- Numbers
+- Form
 
 ### Required plugins
 
-- Breadcrumbs (if you want breadcrumbs)
+- Everything required by Admin
 - Shortcode core (with `custom shortcode` pointing to `/user/themes/wheat/shortcodes`)
+- Sitemap
+- License Manager
 - File content (Allowed extensions: `txt, html, jpg, jpeg, png`)
+
+### Other compatible or optional plugins
+
+- Algolia Pro
+- Cloudflare
 
 ### External libraries shipped with Wheat
 
 - [Scroll-out](https://scroll-out.github.io/)
+- [Splitting](https://splitting.js.org/)
 - [QuickLink](https://github.com/GoogleChromeLabs/quicklink)
-- [Snipcart](https://snipcart.com/) (can be turned on or off from theme settings)
+- [Snipcart](https://snipcart.com/)
 
 ## Starting a new project
 
@@ -159,7 +174,7 @@ Login into the admin panel, go to "Themes" and activate the desired theme.
 
 While this is totally optional, I strongly suggest that you setup a domain on your localhost (and virtualhost). This will allow you to work in a more realistic environment and prevent URL shenanigans.
 
-### Adding a domain to your localhost.
+### Adding a domain to your localhost
 
 Go to `windows\system32\drivers\etc\hosts` and add...
 
@@ -169,7 +184,7 @@ Go to `windows\system32\drivers\etc\hosts` and add...
 
 ... at the end of the file.
 
-### Adding a virtual host to xampp.
+### Adding a virtual host to XAMPP
 
 Go to `xampp\apache\conf\extra\httpd-vhostconf` and add...
 
@@ -184,11 +199,11 @@ Go to `xampp\apache\conf\extra\httpd-vhostconf` and add...
 
 Reset XAMPP Apache module (or the whole thing if you prefer) and test your new domain!
 
-## _ROOT folder (WIP)
+## _ROOT folder
 
 The theme comes with a `_ROOT` directory where you should keep everything that will eventually go in your server's webroot. Doing this, you can be certain it follows the theme when using the Github Actions or when you move you theme around. Don't forget to manually move those files after you make a new release from the _ROOT folder to you webroot. This usually contains favicons, webmanifest, serviceworker.js, etc.
 
-## Going Live (WIP)
+## Going Live
 
 - From the Grav Admin Dashboard: Use the backup generator to create a ZIP of the whole site.
 - Go to cPanel and use the File Manager to upload the ZIP to your server.
@@ -217,14 +232,6 @@ Cloudflare cache can also be purged at the same time if you need it, given you h
 - `CLOUDFLARE_TOKEN`
 - `CLOUDFLARE_ZONE`
 
-## PWA & serviceworker
-
-The theme comes with a Service Worker ready to be rolled-out. If you followed the "Going Live" part of this README, it should already be at the root of your server. Now you just need to make sure PWA is enabled in the theme settings.
-
-### A word of warning of service workers
-
-Serviceworker will make the cache extremely hard to bust. You should always make sure your project is in a stable and tested state before releasing a worker. You can prevent installation from the theme settings by simply switcing it off until ready.
-
 ## Release process
 
 Releasing is a pretty straightforward process once your Github Actions are properly configured.
@@ -232,9 +239,14 @@ Releasing is a pretty straightforward process once your Github Actions are prope
 - Make sure all of your changes are committed.
 - Update the version number in `blueprint.yaml`.
 - Add an entry to `CHANGELOG.md` with a short description of your changes (Grav will show the changelog to the user in various locations).
-- Update the `CACHE` variable in `_ROOT/sericeworker.js` (you can skip this if youdon't plan on using a PWA).
 - Commit the changes using the new version number as summary.
 - Push to origin.
 - Create a pull request.
 - Merge (push) the pull request into master.
 - Github Actions should take over and deploy your changes.
+
+## Notable features
+
+### Front-end author UI
+
+The "Front-end author UI" is meant to speed up the content management while in development or staging. It coud technically be used in Production but cannot be recommended since you might end up caching some of the front-end UI aimed at authors. You can activate this feature in the theme settings unde Admin/Front-end author UI.
