@@ -32,10 +32,13 @@
   justify-content: center;
   border-radius: 4px;
   z-index: 9999;
-  background-color: yellow;
+  color: white;
+  background-color: #29c768;
   font-size: x-small;
   padding: 2px 5px;
 }
+
+
 
 body > .edit {
   position: fixed;
@@ -46,7 +49,7 @@ body > .edit {
 .module > .edit {
   position: absolute;
   top: 0;
-  left: var(--gutter);
+  right: var(--gutter);
 }
 
 .edit-overlay {
@@ -54,9 +57,9 @@ body > .edit {
   opacity: 0;
   position: absolute;
   height: 0;
-  border: 2px solid yellow;
-  background-color: rgba(255, 255, 184, 0.26);
-  border-radius: 20px;
+  border: 2px solid #29c768;
+  background-color: #29c76817;
+  border-radius: 4px;
   z-index: 9998;
   transition-duration: 0.2s;
   transition-property: visibility, opacity;
