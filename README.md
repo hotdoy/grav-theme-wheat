@@ -250,3 +250,7 @@ Releasing is a pretty straightforward process once your Github Actions are prope
 ### Front-end author UI
 
 The "Front-end author UI" is meant to speed up the content management while in development or staging. It coud technically be used in Production but cannot be recommended since you might end up caching some of the front-end UI aimed at authors. You can activate this feature in the theme settings unde Admin/Front-end author UI.
+
+### Schema.org
+
+Most page templates comes with their own schema.org implementation based on [Google's recommendations](https://developers.google.com/search/docs/advanced/structured-data/search-gallery). This can be a significant advantage when "selling" this starter kit as stakeholders usually take SEO seriously.
