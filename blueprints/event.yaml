@@ -31,9 +31,14 @@ form:
               label: Runtime
               style: vertical
 
-            header.location:
+            header.location_name:
               type: text
-              label: Location
+              label: Location Name
+              style: vertical
+
+            header.location_address:
+              type: text
+              label: Location Address
               style: vertical
             
             header.note:

@@ -1,6 +1,7 @@
 {% set date = date ?? page.header.date ? page.header.date|date('D F d Y - G:i') : null %}
 {% set runtime = runtime ?? page.header.runtime ?? null %}
-{% set location = location ?? page.header.location ?? null %}
+{% set location_name = location_name ?? page.header.location_name ?? null %}
+{% set location_address = location_address ?? page.header.location_address ?? null %}
 {% set note = note ?? page.header.note ?? null %}
 {% set registration_instruction = registration_instruction ?? page.header.registration_instruction ?? null %}
 {% set registration_link = registration_link ?? page.header.registration_link ?? null %}
@@ -16,10 +17,18 @@
             </div>            
             {% endif %}
 
-            {% if location %}
+            {% if location_name or location_address %}
             <div class="event-info__location">
                 <h2>{{ 'THEME.EVENT.LOCATION'|t }}</h2>
-                <p>{{ location }}</p>
+                <p>
+                    {% if location_name %}
+                        {{ location_name }}
+                    {% endif %}
+                    {% if location_name and location_address %} - {% endif %}
+                    {% if location_address %}
+                        {{ location_address }}
+                    {% endif %}
+                </p>
             </div>            
             {% endif %}
 
