@@ -8,5 +8,6 @@
 {% endset -%}
 
 <section{% if id %} id="{{ id|url_encode|lower }}"{% endif %} class="module {{ computed_classes }}">
+{% include "partials/edit.html.twig" %}
 {% block content %}{% endblock %}
 </section>
