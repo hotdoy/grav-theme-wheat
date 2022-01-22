@@ -1,11 +1,12 @@
 {% import "partials/svg.html.twig" as svg %}
+{% set nav = root_params.header.footer_links %}
+{% set footnotes = root_params.header.footnotes %}
 
 <footer id="footer">
 	<div class="wrapper">
-
 		<div class="links text">
 			<nav>
-				{% for group in root_params.header.footer_links %}
+				{% for group in nav %}
 				<ul>
 					<li>{{ group.label }}</li>
 					{% for link in group.links %}
@@ -15,14 +16,10 @@
 				{% endfor %}
 			</nav>			
 		</div>
-
 		<div class="footnote">
 			<p>
-				This page became interactive in <span class="app-tti">X.XXs</span> and complete in <span class="app-ttc">X.XXs</span>.
-				Wheat is maintained by <a href="https://calotte.ca">Calotte</a> with some financial support from <a href="https://snipcart.com">Snipcart</a>.
-				Hosting is provided by <a href="https://www.digitalocean.com/">DigitalOcean</a>, managed with <a href="https://cpanel.net/">cPanel</a> and delivered by <a href="https://cloudflare.com/">Cloudflare</a>
-				while analytics is done trough <a href="https://panelbear.com/">Panelbear</a>'s privacy-oriented monitoring.
+				{{ footnotes|raw }}
 			</p>
-		</div>
+		</div>		
 	</div>
 </footer>
