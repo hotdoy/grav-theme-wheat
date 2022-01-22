@@ -1,0 +1,29 @@
+{% set name = page.title %}
+{% set description = page.header.page_description %}
+{% set image = page.header.image ? page.media[page.header.image] : null %}
+{% set date = page.header.date|date('Y-m-d\TH:i:sO') %}
+{% set location_name = page.header.location_name %}
+{% set location_address = page.header.location_address %}
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "{{ name }}",
+        "startDate": "{{ date }}",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+        "@type": "Place",
+        "name": "{{ location_name }}",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "{{ location_address }}"
+            }
+        },
+        "image": [
+            "{{ uri.base() ~ image.url }}"
+        ],
+        "description": "{{ description }}"
+    }
+</script>
