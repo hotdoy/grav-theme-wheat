@@ -7,14 +7,14 @@ modular page support
 #}
 
 {% if grav.user.access.admin.login and theme.admin_edit_button %}
-    {% set admin_url = base_url_absolute  ~ '/admin/pages' %}
-    {% set page_url -%}
+    {% set adminPath = base_url ~ config.get('plugins.admin.route') ~ '/pages' %}
+    {% set pagePath -%}
         {%- if page.url == home_url %}
             {{- '/' ~ page.slug -}}
         {% else %}
             {{- page.url -}}
         {% endif -%}
     {% endset %}
-    {% set url = admin_url ~ page_url %}
+    {% set url = adminPath ~ pagePath %}
     <a id="edit" href="{{ url }}" target="_blank" rel="nofollow">{{ svg.edit() }}</a>
 {% endif %}
