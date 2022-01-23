@@ -64,7 +64,7 @@
                     FX 
 ============================================*/
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
 
     .module.mediatext .media img {
         transition: transform 8s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -74,4 +74,4 @@
     .module.mediatext[data-scroll="in"] .media img {
         transform: scale(1);
     }
-}
+} */
