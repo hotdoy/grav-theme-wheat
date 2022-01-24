@@ -26,7 +26,7 @@
 	--w-full: 100%;
 	--gutter: 10px;
 	--rhythm: 120px;
-	--header: 46px;
+	--header: 34px;
 }
 
 @media (min-width: 640px) {
@@ -37,6 +37,7 @@
 		--w-full: 100%;
 		--gutter: 16px;
 		--rhythm: 160px;
+		--header: 40px;
 	}
 }
   
@@ -48,6 +49,7 @@
 		--w-full: 100%;
 		--gutter: 20px;
 		--rhythm: 180px;
+		--header: 44px;
 	}
 }
   
@@ -59,6 +61,7 @@
 		--w-full: 100%;
 		--gutter: 20px;
 		--rhythm: 200px;
+		--header: 44px;
 	}
 }
 
@@ -70,6 +73,7 @@
 		--w-full: 1920px;
 		--gutter: 20px;
 		--rhythm: 200px;
+		--header: 44px;
 	}
 }
 
