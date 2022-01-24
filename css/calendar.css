@@ -83,7 +83,7 @@
 
 .calendar-card__date .day {
     font-size: x-large;
-    font-weight: bold;
+    font-weight: var(--fw-bold);
 }
 
 @media (min-width: 1024px) {

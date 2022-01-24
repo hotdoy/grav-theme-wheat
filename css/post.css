@@ -30,7 +30,6 @@
 .post-heading__cartel {
     margin-top: var(--gutter);
     color: var(--c-fg-alt); 
-    font-family: 'Courier New', Courier, monospace;
 }
 
 /* .post-heading time {} */
