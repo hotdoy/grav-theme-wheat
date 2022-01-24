@@ -52,7 +52,7 @@
 
 .blog-card {
     padding-top: var(--gutter);
-    border-top: 1px solid #f1f1f1;
+    border-top: 1px solid var(--c-bg-alt);
     width: 100%;
 }
 
@@ -68,7 +68,7 @@
     width: 95px;
     height: 95px;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: var(--c-bg-alt);
     border-radius: 4px;
 }
 
@@ -105,13 +105,6 @@
     display: inline;
     font-size: small;
     color: var(--c-fg-alt);
-    font-family: 'Courier New', Courier, monospace;
-}
-
-@media (min-width: 1024px) {
-    .blog-card__content .cartel {
-        font-size: medium;
-    }
 }
 
 .blog-card__content h2 {
@@ -124,7 +117,7 @@
 
 .blog-card__content p {
     font-size: small;
-    color: grey;
+    color: var(--c-fg-alt);
 }
 
 @media (min-width: 1024px) {

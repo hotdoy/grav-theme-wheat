@@ -33,7 +33,6 @@
 .event__heading .cartel {
     margin-top: var(--gutter);
     color: var(--c-fg-alt); 
-    font-family: 'Courier New', Courier, monospace;
 }
 
 /* .event__heading time {} */
