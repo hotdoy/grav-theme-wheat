@@ -34,6 +34,7 @@ jobs:
           
   # https://github.com/marketplace/actions/lighthouse-check    
   lighthouse:
+    name: 🏆 Lighthouse
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -41,3 +42,4 @@ jobs:
       uses: foo-software/lighthouse-check-action@master
       with:
         urls: 'https://getwheat.ca'
+        
