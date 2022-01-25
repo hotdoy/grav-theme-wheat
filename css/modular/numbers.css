@@ -43,7 +43,7 @@
 
 .module.numbers .item h3 {
     font-size: 48px;
-	font-weight: var(--fw-bold);
+	font-weight: var(--fw-base-bold);
 }
 
 @media (min-width: 640px) {
