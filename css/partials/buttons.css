@@ -11,8 +11,8 @@ button.button {
     text-align: center;
     font-size: 14px;
     line-height: 1;
-    font-weight: var(--fw-medium);
-    font-family: var(--ff-mono);
+    font-weight: var(--fw-base-medium);
+    font-family: var(--ff-base);
     background-color: var(--c-btn-bg);
     color: var(--c-btn-fg);
     text-decoration: none;

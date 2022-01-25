@@ -134,7 +134,7 @@
     display: block;
     margin-top: 1rem;
     font-size: large;
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-base-bold);
 }
 
 .product__showcase .button {

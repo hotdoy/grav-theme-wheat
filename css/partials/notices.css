@@ -25,6 +25,7 @@ Make sure to disable built-in CSS.
 
 .text .notices code {
     border: 1px solid currentColor;
+    background-color: transparent;
 }
 
 
