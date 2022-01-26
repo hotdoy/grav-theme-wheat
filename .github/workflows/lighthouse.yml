@@ -10,7 +10,7 @@ jobs:
   lighthouse:
       runs-on: ubuntu-latest
       steps:
-          - name: Lighthouse
+          - name: ✨ Lighthouse
             uses: foo-software/lighthouse-check-action@v7.1.1
             with:
                 urls: ${{ secrets.LIGHTHOUSE_URLS }}
