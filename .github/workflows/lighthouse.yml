@@ -3,7 +3,7 @@ on:
     branches:
       - master
   schedule:
-    - cron: '0,30,45 * * * *'
+    - cron: '30 0 * * *'
 
 jobs:
   # https://github.com/marketplace/actions/lighthouse-check    
