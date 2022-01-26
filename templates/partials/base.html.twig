@@ -1,15 +1,15 @@
 {% set root_params = page.find('/_root-params/') %}
 {% set snipcart_version = theme.snipcart_version ?? '3.3.1' %}
+{% include 'partials/js.html.twig' %}
+{% include 'partials/css.html.twig' %}
+
 <!DOCTYPE html> 
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 	<head>
 		{% block metadata %}{% include 'partials/metadata.html.twig' %}{% endblock %}
 		{% block canonical %}<link rel="canonical" href="{{ page.url(true, true) }}" />{% endblock %}
 		{% block favicon %}{% include 'partials/favicon.html.twig' %}{% endblock %}
-		<link rel="preload" href="{{ url('theme://fonts/inter-v3-latin-regular.woff2', true) }}" as="font" crossorigin>
-		<link rel="preload" href="{{ url('theme://fonts/inter-v3-latin-600.woff2', true) }}" as="font" crossorigin>
-		{% include 'partials/js.html.twig' %}
-		{% include 'partials/css.html.twig' %}
+		{% block preload %}{% include "partials/preload.html.twig" %}{% endblock %}
 		{% block assets deferred %}
 		{{ assets.css()|raw }}
 		{{ assets.js('top')|raw }}
