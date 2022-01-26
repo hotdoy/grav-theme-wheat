@@ -1,15 +1,18 @@
-# Wheat -  The sustainable theme for Grav CMS
+# Wheat - Starter-kit for Grav CMS
 
 [![Discord](https://img.shields.io/discord/501836936584101899.svg?logo=discord&colorB=728ADA&label=Discord%20Chat)](https://chat.getgrav.org)
 [![Get Grav](https://img.shields.io/badge/get-grav-blueviolet)](https://getgrav.org/downloads)
 
-[Live demo](https://getwheat.ca/)
+[Live project](https://getwheat.ca/)
 
-## Description (WIP)
+## Description
 
-Wheat is a theme for Grav CMS. It is aimed at building sustainable websites by limiting overheads and development tooling. It takes a responsible approach to web development and try leading by examples by offering common patterns and related solutions.
+Wheat is a theme for Grav CMS. It's goal is to give a reasonable starting point for building sustainable websites by limiting overheads and development tooling. It takes a responsible approach to web development and try to lead by examples while offering common patterns and related solutions.
 
-It uses no build tool, no framework of any kind, only needs a basic LAMP setup, uses Github Actions for automatic deployment and takes about 30 minutes minutes to setup.
+It uses no build tool, no framework of any kind, only needs a basic LAMP setup, uses Github Actions for automatic deployment and takes about 30 minutes to setup.
+Wheat is mostly aimed at front-end developers or anyone familiar with HTML, CSS, Twig, Javascript and Grav in general.
+
+> :warning: I am in the process of restructuring the docs so things might get a bit bumpy.
 
 ## What's in the theme?
 
