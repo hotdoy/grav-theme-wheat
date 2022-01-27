@@ -1,7 +1,6 @@
+# Creating a new project
 
-## Creating a new project
-
-This section is for starting a project from scratch using Wheat as a starting point. If you are working on an already started project, you should probably be in the [Contributin to a project](/01-contributin-to-a-project) section.
+This section is for starting a project from scratch using Wheat as a starting point. If you are working on an already started project, you should probably be in the [Contributing to an existing project](https://github.com/hotdoy/grav-theme-wheat/blob/main/docs/01-contributing-to-a-project.md) section.
 
 ## What you'll need
 
@@ -43,36 +42,36 @@ mycoolname
 
 ### Cleaning and renaming
 
-Alright so Wheat is now alive and well in your GitHub repo. It's now time to make it unique so we'll rename and clean a bunch of files. As a side effect, this will ensure I don't push unwanted updates on your theme trough the GPM if I publish Wheat on it.
+It's time to make your theme unique, ensuring you don't receive unwanted updates trough the [GPM](https://learn.getgrav.org/17/cli-console/grav-cli-gpm) (if I ever publish Wheat on it).
 
-- `wheat.yaml` should be `mytheme.yaml`
-- `wheat.php` file name and any reference to the theme inside the PHP code (make sure you follow capitalization).
+- Rename `wheat.yaml` to `mycoolname.yaml`
+- Rename `wheat.php` to `mycoolname.php` and change any reference to `wheat` to `mycoolname` in the file (make sure you follow capitalization).
 - Erase the content of CHANGELOG.md and start fresh with version v0.1.0 (or whatever you think is best).
-- Replace references to Wheat in `blueprints.yaml` and add your own informations.
-- Delete the content of `_ROOT` except `serviceworker.js`.
-- Adjust `_ROOT/serviceworker.js` `CACHE` variable name using your theme name and version.
+- Replace references to `wheat` in `blueprints.yaml` and add your own contact informations.
+- Delete or modify the content of `_ROOT` to suit your needs (you might simply want to replace the favicons and modify the `site.webmanifest`).
+- At that point, you probably saw the `serviceworker.js`. This is an experiment and you should absolutely delete it unless you feel like putting on your mad scientist hat.
 - Replace `screenshot.jpg` and `thumbnai.jpg` with your own images while following the size and format of the ones provided.
-- Commit to master. (congratulation! That's v0.1.0 of your new project.)
+- Commit to `master`. (congratulation! That's v0.1.0 of your new project.)
 - Create a new branch named `develop` and publish it.
 - From here on out, commit all changes to the new `develop` branch.
 
 ### Symlinks
 
-Since our 3 main folder (admin, theme and user) are side by side in our project folder, and probably not in our XAMPP web root, we need to symlink everything together. You'll have to change the paths bellow to fit with your setup. I usually keep a copy of this the `_SETUP` folder in the theme repo so I can get back on my feet quickly if anything happen.
+If you followed this guide, your 3 main directories (admin, theme and user) are side by side in our project folder so we'll now want to [symlink](https://en.wikipedia.org/wiki/Symbolic_link#:~:text=In%20computing%2C%20a%20symbolic%20link,and%20that%20affects%20pathname%20resolution.) everything together. You'll have to change the paths bellow to fit with your setup. I usually keep a copy of this the `_SETUP` folder in the theme repo so I can get back on my feet quickly if anything happen.
 
 **Local webroot to Grav install**
 
-`mklink /D D:\xampp\htdocs\myproject D:\myproject\grav-admin`
+`mklink /D D:\xampp\htdocs\mycoolname D:\mycoolname\grav-admin`
 
 **grav-admin to user**
 
-`mklink /D D:\myproject\grav-admin\user D:\myproject\user`
+`mklink /D D:\mycoolname\grav-admin\user D:\mycoolname\user`
 
 **user to theme**
 
-`mklink /D D:\myproject\user\themes\mytheme D:\myproject\grav-theme-mytheme`
+`mklink /D D:\mycoolname\user\themes\mycoolname D:\mycoolname\grav-theme-mycoolname`
 
-Test your setup using your favorite browser and going to your local webroot (something like `127.0.0.1/myproject`).
+Test your setup using your favorite browser and going to your local webroot (something like `127.0.0.1/mycoolname`).
 If everything goes well, Grav will prompt you to create an account. At this point, you can consider the whole operation a success.
 
-Login into the admin panel, go to "Themes" and activate your new theme.
+Login into the admin panel, go to `Themes` and activate your new theme.
