@@ -12,6 +12,8 @@ Wheat is a theme for Grav CMS. It's goal is to give a reasonable starting point 
 It uses no build tool, no framework of any kind, only needs a basic LAMP setup, uses Github Actions for automatic deployment and takes about 30 minutes to setup.
 Wheat is mostly aimed at front-end developers or anyone familiar with HTML, CSS, Twig, Javascript and Grav in general.
 
+> ⚠️ I am in the process of restructuring the docs so things might get a bit bumpy.
+
 ## Docs (WIP)
 
 - [Creating a new project](https://github.com/hotdoy/grav-theme-wheat/blob/main/docs/00-creating-a-new-project.md)
