@@ -1,17 +1,23 @@
-# Wheat -  The sustainable theme for Grav CMS
+# Wheat - Starter-kit for Grav CMS
 
 [![Discord](https://img.shields.io/discord/501836936584101899.svg?logo=discord&colorB=728ADA&label=Discord%20Chat)](https://chat.getgrav.org)
 [![Get Grav](https://img.shields.io/badge/get-grav-blueviolet)](https://getgrav.org/downloads)
 
-[Live demo](https://getwheat.ca/)
+[Live project](https://getwheat.ca/)
 
-## Description (WIP)
+## Description
 
-Wheat is a theme for Grav CMS. It is aimed at building sustainable websites by limiting overheads and development tooling. It takes a responsible approach to web development and try leading by examples by offering common patterns and related solutions.
+Wheat is a theme for Grav CMS. It's goal is to give a reasonable starting point for building sustainable websites by limiting overheads and development tooling. It takes a responsible approach to web development and try to lead by examples while offering common patterns and related solutions.
 
-It uses no build tool, no framework of any kind, only needs a basic LAMP setup, uses Github Actions for automatic deployment and takes about 30 minutes minutes to setup.
+It uses no build tool, no framework of any kind, only needs a basic LAMP setup, uses Github Actions for automatic deployment and takes about 30 minutes to setup.
+Wheat is mostly aimed at front-end developers or anyone familiar with HTML, CSS, Twig, Javascript and Grav in general.
 
-## What's in the theme?
+> ⚠️ I am in the process of restructuring the docs so things might get a bit bumpy.
+
+## Docs (WIP)
+
+- [Creating a new project](https://github.com/hotdoy/grav-theme-wheat/blob/main/docs/00-creating-a-new-project.md)
+- [Contributing to an existing project](https://github.com/hotdoy/grav-theme-wheat/blob/main/docs/01-contributing-to-a-project.md)
 
 ### Page templates
 
@@ -57,118 +63,6 @@ It uses no build tool, no framework of any kind, only needs a basic LAMP setup, 
 - [Splitting](https://splitting.js.org/)
 - [QuickLink](https://github.com/GoogleChromeLabs/quicklink)
 - [Snipcart](https://snipcart.com/)
-
-## Starting a new project
-
-- On GitHub, create a new repo named grav-theme-mytheme (where mytheme is your project name). (The grav-theme- prefix is not required but is good practice in Grav development. It is also required if you plan on releasing on the GPM). You wont need GitHub for a bit so you can close it once the repository has been created.
-On your computer, create a folder named after your project.
-- Download the latest version of GRAV Core + ADMIN.
-- Unzip the downloaded Grav archive and put it in you project folder.
-- From inside grav-admin, cut the user folder and paste it right next to grav-admin.
-- At that point, your project folder should look like this:
-
-```bash
-myproject
-  grav-admin
-  user
-```
-
-- Clone your theme repo in the project folder, next to the other ones so it looks like...
-
-```bash
-myproject
-  grav-admin
-  grav-theme-mytheme
-  user
-```
-
-- Delete the content of grav-theme-mytheme, if there is any.
-- Download Wheat latest release source code (zip) OR the evergreen Master branch.
-- Unzip the downloaded grav-theme-wheat-vx.x.x.
-- Dump the entire content of grav-theme-wheat-vx.x.x in your grav-theme-mytheme folder.
-
-### Cleaning and renaming
-
-Alright so Wheat is now alive and well in your GitHub repo. It's now time to make it unique so we'll rename and clean a bunch of files. As a side effect, this will ensure I don't push unwanted updates on your theme trough the GPM if I publish Wheat on it.
-
-- `wheat.yaml` should be `mytheme.yaml`
-- `wheat.php` file name and any reference to the theme inside the PHP code (make sure you follow capitalization).
-- Erase the content of CHANGELOG.md and start fresh with version v0.1.0 (or whatever you think is best).
-- Replace references to Wheat in `blueprints.yaml` and add your own informations.
-- Delete the content of `_ROOT` except `serviceworker.js`.
-- Adjust `_ROOT/serviceworker.js` `CACHE` variable name using your theme name and version.
-- Replace `screenshot.jpg` and `thumbnai.jpg` with your own images while following the size and format of the ones provided.
-- Commit to master. (congratulation! That's v0.1.0 of your new project.)
-- Create a new branch named `develop` and publish it.
-- From here on out, commit all changes to the new `develop` branch.
-
-### Symlinks
-
-Since our 3 main folder (admin, theme and user) are side by side in our project folder, and probably not in our XAMPP web root, we need to symlink everything together. You'll have to change the paths bellow to fit with your setup. I usually keep a copy of this the `_SETUP` folder in the theme repo so I can get back on my feet quickly if anything happen.
-
-**Local webroot to Grav install**
-
-`mklink /D D:\xampp\htdocs\myproject D:\myproject\grav-admin`
-
-**grav-admin to user**
-
-`mklink /D D:\myproject\grav-admin\user D:\myproject\user`
-
-**user to theme**
-
-`mklink /D D:\myproject\user\themes\mytheme D:\myproject\grav-theme-mytheme`
-
-Test your setup using your favorite browser and going to your local webroot (something like `127.0.0.1/myproject`).
-If everything goes well, Grav will prompt you to create an account. At this point, you can consider the whole operation a success.
-
-Login into the admin panel, go to "Themes" and activate your new theme.
-
-## Contributing to an existing project
-
-- On your computer, create a folder named after your project.
-- [Download](https://getgrav.org/downloads) the latest version of GRAV Core + ADMIN.
-- Unzip the downloaded Grav folder and put it in you project folder.
-- Rename the Grav directory to `grav-admin`.
-- From inside `grav-admin`, cut the `user` folder and paste it right next to grav-admin.
-- At that point, your project folder should look something like this:
-
-```bash
-myproject
-  grav-admin
-  user
-```
-
-- Clone the theme repo you are working on in the project folder, next to the other ones so it looks like...
-
-```bash
-myproject
-  grav-admin
-  grav-theme-mytheme
-  user
-```
-
-- **Make sure you are always working in the `develop` branch.**
-
-### Symlinks
-
-Since our 3 main folders (admin, theme and user) are side by side in our project, and probably not in our XAMPP web root, we need to symlink everything together. You'll have to change the paths bellow to fit with your setup. I usually keep a copy of this the `_SETUP` folder in the theme repo so I can get back on my feet quickly if anything happen.
-
-### Local webroot to Grav install
-
-`mklink /D D:\xampp\htdocs\myproject D:\myproject\grav-admin`
-
-#### grav-admin to user
-
-`mklink /D D:\myproject\grav-admin\user D:\myproject\user`
-
-#### user to theme
-
-`mklink /D D:\myproject\user\themes\mytheme D:\myproject\grav-theme-mytheme`
-
-Test your setup using your favorite browser by going to your local web root (something like `127.0.0.1/myproject`).
-If everything goes well, Grav will prompt you to create an account. At that point, you can consider the whole operation a success.
-
-Login into the admin panel, go to "Themes" and activate the desired theme.
 
 ## Setting up a domain on your localhost and virtualhost
 
