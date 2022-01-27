@@ -16,8 +16,8 @@ Wheat is mostly aimed at front-end developers or anyone familiar with HTML, CSS,
 
 ## Docs (WIP)
 
-- [Creating a new project](https://github.com/hotdoy/grav-theme-wheat/blob/main/docs/00-creating-a-new-project.md)
-- [Contributing to an existing project](https://github.com/hotdoy/grav-theme-wheat/blob/main/docs/01-contributing-to-a-project.md)
+- [Creating a new project](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/00-creating-a-new-project.md)
+- [Contributing to an existing project](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/01-contributing-to-a-project.md)
 
 ### Page templates
 
