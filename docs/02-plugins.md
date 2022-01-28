@@ -1,28 +1,50 @@
 # Plugins (WIP)
 
-Most required plugins come packaged with the Grav CORE + Admin package. This list is mostly recommendations and thing I've seen myself install over and over so you do whatever you want with the info. Most of the time, you should probably not install a plugin if you don't know why you are doing it.
+Most required plugins are already installed with the [Grav Core + Admin](https://getgrav.org/downloads) package. This list includes some settings you should go over for those default plugins and some recommendations I've seen myself installing over and over again.
+Never install a plugin if you don't know what it does or why you are doing it.
 
 ## Included with Admin
 
-- Admin Panel
-- Email
+- Admin Panel (head to the Extras tab and set resize quality to `0`).
+- Email (make sure you have at least From and To emails setup on Sendmail).
 - Error
 - Flex Objects
-- Form
-- Login
-- Markdown Notices
+- Form (set built-in and inline CSS to `false`).
+- Login (set built-in to `false`).
+- Markdown Notices (set built-in to `false`).
 - Problems
 
-## Used by Wheat
+## Recommended plugins
 
-- Shortcode core
-- File content
-- Algolia Pro
+### License Manager
 
-## Other recommended plugins
+Needed to install any [Premium plugins](https://getgrav.org/premium) so might as well install it from the get go.
 
-- License Manager
-- Cloudflare
-- Sitemap
-- Quick Tray Links
-- Custom HTTP Header
+### Sitemap
+
+Wheat used to come with it's own sitemap implementation but with the advent of the plugin vcersion being a dependency to other plugins (Algolia), some blueprints where refactored and I now fully support the official Sitemap plugin. It's a no brainer really. Who doesn't want a sitemap.
+
+### Shortcode core
+
+A great way to add custom features inside of the editor field. Wheat comes with a `lite-youtube` and basic Vimeo SC. You can easilly ad your own shortcodes.
+Make sure to set the `Custom Shortcodes` path to `/user/themes/mytheme/shortcodes`.
+
+### Quick Tray Links
+
+Add QoL links to the dashboard to services your clients might need on a regular basis.
+
+### Custom HTTP Header
+
+If you need http headers, it's hard to make it easier than that. If you don't know what it is, make sure you keep this one disabled.
+
+### File Content
+
+Wheat comes with `img.html.twig` as the prefered way to render images. It adds a small abstraction layer to the default Grav way of doing things and while at it, can use the File Content plugin too generate base64 low-res placeholders for your images. It's commented out by default but if you feel adventurous (or just like placeholders), give it a spin! The end result is close to what you'll see in frameworks like next.js and gives a very "modern" look. Might be a good idea to look into it if you have issues with images and [LCP](https://web.dev/lcp/).
+
+### Algolia Pro
+
+A nice and easy way to add a fully featured Algolia Search to any sites. Wheat supports it out of the box and at 100$, it's the kind of feature that can easily be absorbed in a development budget.
+
+### Cloudflare
+
+I freakin love Cloudflare and so does the Grav Team! While it does not add anything to Grav or Cloudflare per se, it allows you to take control of your DNS records, gives you some Cache Purge shortcuts, some analytics and a bunch of other CF features directly from your Grav admin. Access to the full Cloudflare dashboard is still required at some point but the plugin opens the door at resselling CF services and giving client just enough tools to stay independent without having access to the account directly.
