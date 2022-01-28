@@ -1,6 +1,6 @@
 # Creating a new project
 
-This section is for starting a project from scratch using Wheat as a starting point. If you are working on an already started project, you should probably be in the [Contributing to an existing project](https://github.com/hotdoy/grav-theme-wheat/blob/main/docs/01-contributing-to-a-project.md) section.
+This section is for starting a project from scratch using Wheat as a starting point. If you are working on an already started project, you should probably be in the [Contributing to an existing project](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/01-contributing-to-a-project.md) section.
 
 ## What you'll need
 
