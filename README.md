@@ -19,15 +19,15 @@ Wheat is mostly aimed at front-end developers or anyone familiar with HTML, CSS,
 - [Creating a new project](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/00-creating-a-new-project.md)
 - [Contributing to an existing project](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/01-contributing-to-a-project.md)
 - [Plugins](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/02-plugins.md)
+- [Setting up a domain name on your localhost](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/03-setting-up-a-domain-on-localhost.md)
 
-Comming up...
+Being worked on...
 
-- Setting up a domain name on your localhost
-- App.js
-- Github Actions
-- Going live (first deployment)
-- Pushing to production (other deployments)
-- Cloudflare and DNS
+- [App.js]()
+- [Github Actions]()
+- [Going live (first deployment)]()
+- [Pushing to production (other deployments)]()
+- [Cloudflare and DNS]()
 
 ### Page templates
 
@@ -60,35 +60,6 @@ Comming up...
 - [Splitting](https://splitting.js.org/)
 - [QuickLink](https://github.com/GoogleChromeLabs/quicklink)
 - [Snipcart](https://snipcart.com/)
-
-## Setting up a domain on your localhost and virtualhost
-
-While this is totally optional, I strongly suggest that you setup a domain on your localhost (and virtualhost). This will allow you to work in a more realistic environment and prevent URL shenanigans.
-
-### Adding a domain to your localhost
-
-Go to `windows\system32\drivers\etc\hosts` and add...
-
-```bash
-127.0.0.1       wheat.localhost.com
-```
-
-... at the end of the file.
-
-### Adding a virtual host to XAMPP
-
-Go to `xampp\apache\conf\extra\httpd-vhostconf` and add...
-
-```bash
-<VirtualHost *:80>
-  DocumentRoot "C:/xampp/htdocs/wheat"
-  ServerName wheat.localhost.com
-</VirtualHost>
-```
-
-... at the end of the file.
-
-Reset XAMPP Apache module (or the whole thing if you prefer) and test your new domain!
 
 ## _ROOT folder
 

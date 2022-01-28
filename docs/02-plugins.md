@@ -1,4 +1,4 @@
-# Plugins (WIP)
+# Plugins
 
 Most required plugins are already installed with the [Grav Core + Admin](https://getgrav.org/downloads) package. This list includes some settings you should go over for those default plugins and some recommendations I've seen myself installing over and over again.
 Never install a plugin if you don't know what it does or why you are doing it.
