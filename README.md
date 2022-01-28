@@ -18,6 +18,16 @@ Wheat is mostly aimed at front-end developers or anyone familiar with HTML, CSS,
 
 - [Creating a new project](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/00-creating-a-new-project.md)
 - [Contributing to an existing project](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/01-contributing-to-a-project.md)
+- [Plugins](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/02-plugins.md)
+
+Comming up...
+
+- Setting up a domain name on your localhost
+- App.js
+- Github Actions
+- Going live (first deployment)
+- Pushing to production (other deployments)
+- Cloudflare and DNS
 
 ### Page templates
 
@@ -43,19 +53,6 @@ Wheat is mostly aimed at front-end developers or anyone familiar with HTML, CSS,
 - Carousel
 - Numbers
 - Form
-
-### Required plugins
-
-- Everything required by Admin
-- Shortcode core (with `custom shortcode` pointing to `/user/themes/wheat/shortcodes`)
-- Sitemap
-- License Manager
-- File content (Allowed extensions: `txt, html, jpg, jpeg, png`)
-
-### Other compatible or optional plugins
-
-- Algolia Pro
-- Cloudflare
 
 ### External libraries shipped with Wheat
 
