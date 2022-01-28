@@ -22,9 +22,16 @@ button.button {
     transition-duration: 0.2s;
 }
 
-a:focus,
-button:focus {
+a:focus {
     outline: 1px dotted var(--c-fg);
+}
+
+.button:focus,
+a.button:focus,
+button.button:focus {
+    transition: box-shadow 200ms;
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(121 164 255);
 }
 
 .button:hover,
