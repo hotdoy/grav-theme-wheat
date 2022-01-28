@@ -8,7 +8,7 @@ This section is for starting a project from scratch using Wheat as a starting po
 - A [GitHub](https://github.com/) account.
 - Some knowledge of Git. (I recommend using the [Github Desktop App](https://desktop.github.com/)).
 - A comand line interface (we will be using Window's Command Prompt).
-- XAMPP or any similar web server solution.
+- XAMPP or any similar web server solution (I'll be moving to Grav built-in server soon).
 - A cool name for your theme (Use it whenever we refer to `mycoolname`).
 
 ## Local setup
