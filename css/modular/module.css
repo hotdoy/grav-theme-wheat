@@ -1,15 +1,29 @@
 .module {
-  display: block;
-  position: relative;
-  margin-top: var(--rhythm);
-  z-index: 1000;
-  opacity: 0.5;
-  transform: translateY(15px);
-  transition-property: opacity, transform;
-  transition-duration: 500ms;
+	display: block;
+	position: relative;
+	margin-top: var(--rhythm);
+	z-index: 1000;
 }
 
-.module[data-scroll="in"] {
-  opacity: 1;
-  transform: translateY(0px);
+
+
+
+
+/*===========================================
+				    FX 
+============================================*/
+
+@media (prefers-reduced-motion: no-preference) {
+
+	.module {
+		opacity: 0.5;
+		transform: translateY(15px);
+		transition-property: opacity, transform;
+		transition-duration: 500ms;
+	}
+
+	.module[data-scroll="in"] {
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }

@@ -1,17 +1,22 @@
 document.addEventListener('appInteractive', () => {
-    const delay = 0;
 
-    setTimeout(function(){
+    ScrollOut({
+        targets: ['.module'],
+        once: true,
+    });
 
-        ScrollOut({
-            targets: ['.module'],
-            // once: true,
-        });
+    ScrollOut({
+        targets: ['.landing__heading'],
+    });
 
-        ScrollOut({
-            targets: ['.landing__heading'],
-            // once: true,
-        });
+    // MODULE: NUMBERS
+    ScrollOut({
+        targets: ['.module.numbers .item'],
+        // once: true,
+    });
 
-    }, delay);
+    Splitting({
+        target: ['.module.numbers .item h3'],
+    });
+
 });
