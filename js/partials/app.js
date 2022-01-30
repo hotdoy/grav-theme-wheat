@@ -7,7 +7,7 @@ const App = {
     destinatioPath: '',
     destinationDepth: 0,
     delay: 0,
-    navigationDelay: 200,
+    navigationDelay: 0,
     perceivedDelay: performance.now(),
     adjustedDelay: 0,
     events: {
@@ -73,11 +73,11 @@ const App = {
 
     setCompleteListener: function() {
         if (App.doc.readyState === 'complete') {
-            App.setState(App.body, 'complete', App.adjustedDelay, [App.events.complete]);
+            App.setState(App.body, '_012', App.adjustedDelay, [App.events.complete]);
         } else {
             App.doc.addEventListener('readystatechange', e => {
                 if (e.target.readyState === 'complete') {
-                    App.setState(App.body, 'complete', App.adjustedDelay, [App.events.complete]);
+                    App.setState(App.body, '_012', App.adjustedDelay, [App.events.complete]);
                 }
             });
         }
@@ -108,13 +108,13 @@ const App = {
             App.setPrerenderLink(); 
 
             if (App.destinationDepth < App.currentDepth) {
-                App.setState(App.body, 'navigating-backward', 0, [App.events.navigating, App.events.navigatingBackward]);
+                App.setState(App.body, '_012_nav-b', 0, [App.events.navigating, App.events.navigatingBackward]);
 
             } else if(App.destinationDepth > App.currentDepth) {
-                App.setState(App.body, 'navigating-forward', 0, [App.events.navigating, App.events.navigatingForward]);
+                App.setState(App.body, '_012_nav-f', 0, [App.events.navigating, App.events.navigatingForward]);
 
             } else {
-                App.setState(App.body,'navigating', 0, [App.events.navigating]);
+                App.setState(App.body,'_012_nav', 0, [App.events.navigating]);
             }
             setTimeout(function(){ 
                 window.location.href = App.destinatioPath;
@@ -153,11 +153,11 @@ const App = {
     setImgBehaviour: function(els) {
         els.forEach(el => {
             el.onload = function() {
-                App.setState(el, 'complete');
+                App.setState(el, '1');
                 // el.removeAttribute('style');
             };
             if (el.complete) {
-                App.setState(el, 'complete');
+                App.setState(el, '1');
                 // el.removeAttribute('style');
             };
         });
@@ -168,7 +168,7 @@ const App = {
         App.setLinkBehaviour(App.doc.querySelectorAll("a"));
         App.setImgBehaviour(App.doc.querySelectorAll('img'));
         App.setAdjustedDelay();
-        App.setState(App.body, 'interactive', App.adjustedDelay, [App.events.interactive]);
+        App.setState(App.body, '_01', App.adjustedDelay, [App.events.interactive]);
         App.setCompleteListener();
     }
 };

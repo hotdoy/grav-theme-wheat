@@ -1,22 +1,17 @@
-/* body {} */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors */
 
-/* body[data-state='interactive'] {} */
+/* body[data-state^='_0'] {} */
+/* body[data-state^='_01'] {} */
+/* body[data-state^='_012'] {} */
+/* body[data-state*='_nav'] {} */
+/* body[data-state*='_nav-f'] {} */
+/* body[data-state*='_nav-b'] {} */
 
-/* body[data-state='complete'] {} */
+img[loading="lazy"] {
+    opacity: 0;
+}
 
-/* body[data-state^='navigating'] {} */
-
-/* body[data-state^='navigating-forward'] {} */
-
-/* body[data-state^='navigating-backward'] {} */
-
-/* [data-state="in"] {} */
-
-/* [data-state="out"] {} */
-
-img[loading="lazy"] {opacity: 0;}
-
-img[loading="lazy"][data-state="complete"] {
+img[loading="lazy"][data-state="1"] {
     animation-name: appImg;
     animation-duration: 200ms; 
     animation-delay: 0ms;
