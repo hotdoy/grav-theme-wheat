@@ -55,3 +55,29 @@
 .module.numbers .item p {
 	color: var(--c-fg-alt);
 }
+
+
+
+
+
+/*===========================================
+				    FX 
+============================================*/
+
+@media (prefers-reduced-motion: no-preference) {
+
+    .module.numbers .item h3 {
+        overflow: hidden;
+    }
+
+    .module.numbers .item h3 .char {
+        transition-property: transform;
+        transition-duration: 400ms;
+        transform: translateY(100%);
+    }
+
+    .module.numbers .item[data-scroll="in"] h3 .char {
+        transition-delay: calc(var(--char-index)*100ms);
+        transform: translateY(0%);
+    }
+}
