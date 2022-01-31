@@ -1,6 +1,6 @@
 document.addEventListener('appInteractive', () => {
 
-    // DEFAULT
+    // MODULE
     ScrollOut({
         targets: ['.module'],
         // once: true,
@@ -13,15 +13,24 @@ document.addEventListener('appInteractive', () => {
     // NUMBERS
     ScrollOut({
         targets: ['.module.numbers .item'],
+        once: true,
     });
 
     Splitting({
         target: ['.module.numbers .item h3'],
     });
 
+    // EMPHASIS
     Splitting({
         target: ['.module.emphasis p'],
         by: ['lines'],
+    });
+
+    // MEDIATEXT
+    Splitting({
+        target: '.module.mediatext',
+        by: 'items',
+        matching: '.content > *'
     });
 
 });

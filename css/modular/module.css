@@ -13,7 +13,7 @@
 				    FX 
 ============================================*/
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
 
 	.module {
 		opacity: 0.5;
@@ -26,4 +26,4 @@
 		opacity: 1;
 		transform: translateY(0px);
 	}
-}
+} */

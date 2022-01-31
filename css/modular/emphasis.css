@@ -28,7 +28,6 @@
 
 @media (prefers-reduced-motion: no-preference) {
     .module.emphasis .word {
-        overflow: hidden;
         line-height: 1.2;
     }
 
@@ -36,13 +35,13 @@
         opacity: 0;
         transition-property: transform, opacity;
         transition-duration: 400ms;
-        transform: translateY(100%);
+        transform: translateY(50px);
     }
 
     .module.emphasis[data-scroll="in"] .word {
         opacity: 1;
         transition-delay: calc(var(--line-index)*50ms);
         transition-duration: calc((var(--line-index)*100ms) + 1000ms);
-        transform: translateY(0%);
+        transform: translateY(0);
     }
 }
