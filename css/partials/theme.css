@@ -24,7 +24,7 @@
 	--w-main: 100%;
 	--w-body: 100%;
 	--w-full: 100%;
-	--gutter: 10px;
+	--gutter: 16px;
 	--rhythm: 120px;
 	--header: 34px;
 }
@@ -35,7 +35,7 @@
 		--w-main: 100%;
 		--w-body: 100%;
 		--w-full: 100%;
-		--gutter: 16px;
+		--gutter: 18px;
 		--rhythm: 160px;
 		--header: 40px;
 	}
