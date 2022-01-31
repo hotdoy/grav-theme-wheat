@@ -6,7 +6,6 @@
 	padding: 0 var(--gutter);
 	width: 100%;
 	max-width: var(--w-main);
-	overflow: hidden;
 }
 
 .module.numbers > .wrapper > h2 {
@@ -77,6 +76,19 @@
 
     .module.numbers .item[data-scroll="in"] h3 .char {
         transition-delay: calc(var(--char-index)*100ms);
+        transition-duration: calc((var(--char-index)*100ms) + 400ms);
         transform: translateY(0%);
+    }
+
+    .module.numbers .item p {
+        transition-property: transform, opacity;
+        transition-duration: 1000ms;
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    .module.numbers .item[data-scroll="in"] p {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
