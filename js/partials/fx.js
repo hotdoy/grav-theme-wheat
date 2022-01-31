@@ -1,22 +1,27 @@
 document.addEventListener('appInteractive', () => {
 
+    // DEFAULT
     ScrollOut({
         targets: ['.module'],
-        once: true,
+        // once: true,
     });
 
     ScrollOut({
         targets: ['.landing__heading'],
     });
 
-    // MODULE: NUMBERS
+    // NUMBERS
     ScrollOut({
         targets: ['.module.numbers .item'],
-        // once: true,
     });
 
     Splitting({
         target: ['.module.numbers .item h3'],
+    });
+
+    Splitting({
+        target: ['.module.emphasis p'],
+        by: ['lines'],
     });
 
 });

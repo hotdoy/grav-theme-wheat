@@ -65,7 +65,6 @@
 ============================================*/
 
 @media (prefers-reduced-motion: no-preference) {
-
     .module.numbers .item h3 {
         overflow: hidden;
     }
