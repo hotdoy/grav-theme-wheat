@@ -88,3 +88,25 @@
 .default-card__content p {
     font-size: small;
 }
+
+
+
+
+
+/*===========================================
+			    MODULE OVERRIDE 
+============================================*/
+
+body.default .module.mediatext:first-child  {
+    margin-top: calc(var(--gutter)*2);
+    text-align: center;
+    border-bottom: 1px solid var(--c-bg-alt);
+    padding-bottom: var(--rhythm);
+}
+
+@media (min-width: 1024px) {
+    body.default .module.mediatext:first-child  {
+        margin-top: var(--gutter);
+        text-align: left;
+    }
+}
