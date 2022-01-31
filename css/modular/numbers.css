@@ -70,7 +70,6 @@
 
     .module.numbers .item h3 .char {
         transition-property: transform;
-        transition-duration: 400ms;
         transform: translateY(100%);
     }
 
@@ -83,7 +82,7 @@
     .module.numbers .item p {
         transition-property: transform, opacity;
         transition-duration: 1000ms;
-        transform: translateY(20px);
+        transform: translateY(15px);
         opacity: 0;
     }
 
