@@ -13,7 +13,7 @@ document.addEventListener('appInteractive', () => {
     // NUMBERS
     ScrollOut({
         targets: ['.module.numbers .item'],
-        once: true,
+        // once: true,
     });
 
     Splitting({
