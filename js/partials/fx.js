@@ -1,12 +1,5 @@
 document.addEventListener('appInteractive', () => {
 
-    // MODULE
-    ScrollOut({
-        targets: ['.module'],
-        once: true,
-    });
-
-
     // LANDING
     ScrollOut({
         targets: ['.landing__heading'],
@@ -16,7 +9,6 @@ document.addEventListener('appInteractive', () => {
     // NUMBERS
     ScrollOut({
         targets: ['.module.numbers .item'],
-        once: true,
     });
     Splitting({
         target: ['.module.numbers .item h3'],
@@ -24,6 +16,9 @@ document.addEventListener('appInteractive', () => {
 
 
     // EMPHASIS
+    ScrollOut({
+        targets: '.module.emphasis',
+    });
     Splitting({
         target: ['.module.emphasis p'],
         by: ['lines'],
@@ -31,17 +26,18 @@ document.addEventListener('appInteractive', () => {
 
 
     // MEDIATEXT
+    ScrollOut({
+        targets: '.module.mediatext .content',
+    });
     Splitting({
         target: '.module.mediatext',
         by: 'items',
         matching: '.content > *'
     });
-
     
     // FEATURES
     ScrollOut({
         targets: '.module.features .item',
-        once: true,
     });
     Splitting({
         target: '.module.features .item',
