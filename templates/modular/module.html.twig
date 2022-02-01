@@ -1,10 +1,10 @@
 {% set name = name|default() %}
 {% set id = id ?? page.header.id ?? null %}
-{% set class = class ?? page.header.class ?? null %}
+{% set classes = classes ?? page.header.body_classes ?? null %}
 
 {% set computed_classes %}
 {{ name }}
-{%- if class %} {{ class }}{% endif %}
+{%- if classes %} {{ classes }}{% endif %}
 {% endset -%}
 
 <section{% if id %} id="{{ id|url_encode|lower }}"{% endif %} class="module {{ computed_classes }}">
