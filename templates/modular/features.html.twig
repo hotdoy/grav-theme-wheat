@@ -14,7 +14,7 @@
         {% for item in items %}
         {% set image = item.image ? page.media[item.image] %}
         <div class="item text">
-            {% include "partials/img.html.twig" with {image: image} %}
+            {% include "partials/img.html.twig" with {image: image} only %}
             <h3>{{ item.title }}</h3>
             <p>{{ item.text }}</p>
         </div>
