@@ -36,6 +36,7 @@
 .module.mediatext .content {
     margin-top: 1.5rem;
     width: 100%;
+    text-align: center;
 }
 
 @media (min-width: 1024px) {
@@ -73,7 +74,7 @@
         transform: translateY(50px);
     }
 
-    .module.mediatext[data-scroll="in"] .content > * {
+    .module.mediatext .content[data-scroll="in"] > * {
         opacity: 1;
         transition-delay: calc(var(--item-index)*50ms);
         transition-duration: calc((var(--item-index)*100ms) + 1000ms);
