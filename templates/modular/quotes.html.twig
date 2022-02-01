@@ -6,17 +6,20 @@
 	<div class="scroller">
 		<div class="scroller__scrollctn">
 			{% for item in page.header.items %}
+			{% set quote = item.quote %}
+			{% set color = item.color %}
+			{% set source = item.source %}
 			{% set image = item.image ? page.media[item.image] %}
-			<div class="scroller__slide">
+			<div class="scroller__slide"{% if color %} style="--color:{{ color }}"{% endif %}>
 				<div class="quote text">
-					<blockquote>{{ item.quote }}</blockquote>
+					<blockquote>{{ quote }}</blockquote>
 				</div>
 				{% if image %}
 				<div class="portrait">
 					{% include "partials/img.html.twig" with {image: image} only %}
 				</div>
 				{% endif %}
-				<div class="source text small">{{ item.source }}</div>
+				<div class="source text small">{{ source }}</div>
 			</div>
 			{% endfor %}
 		</div>

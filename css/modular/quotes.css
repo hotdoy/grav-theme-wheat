@@ -11,14 +11,9 @@
 .module.quotes .scroller__scrollctn {
   height: auto;
   width: 100%;
-
 }
 
 .module.quotes .scroller__slide {
-  --c-bg: #1f1f1f;
-	--c-fg: white;
-	--c-btn-bg: white;
-	--c-btn-fg: #1f1f1f;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,8 +24,8 @@
   height: auto;
   padding: var(--rhythm) 2rem;
   text-align: center;
-  background-color: var(--c-bg);
-  color: var(--c-fg);
+  background-color: var(--color, #1f1f1f);
+  color: white;
   border-radius: 8px;
 }
 
