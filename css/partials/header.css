@@ -36,6 +36,11 @@
     justify-content: center;
 }
 
+#header .header .layout .logo svg {
+    width: 70px;
+    height: auto;
+}
+
 #header .header .layout .toggles {
     display: flex;
     align-items: center;
