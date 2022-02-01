@@ -25,6 +25,18 @@
 /*===========================================
 				    FX 
 ============================================*/
+.module.emphasis.dark {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+
+
+
+
+/*===========================================
+				    FX 
+============================================*/
 
 @media (prefers-reduced-motion: no-preference) {
     .module.emphasis .word {

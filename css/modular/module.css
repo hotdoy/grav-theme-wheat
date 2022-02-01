@@ -5,25 +5,14 @@
 	z-index: 1000;
 }
 
+.module.padded {
+	padding: var(--rhythm) 0;
+}
 
+.module.rhythm-none {
+	margin-top: 0;
+}
 
-
-
-/*===========================================
-				    FX 
-============================================*/
-
-/* @media (prefers-reduced-motion: no-preference) {
-
-	.module {
-		opacity: 0.5;
-		transform: translateY(15px);
-		transition-property: opacity, transform;
-		transition-duration: 500ms;
-	}
-
-	.module[data-scroll="in"] {
-		opacity: 1;
-		transform: translateY(0px);
-	}
-} */
+.module.rhythm-half {
+	margin-top: calc(var(--rhythm)/2);
+}
