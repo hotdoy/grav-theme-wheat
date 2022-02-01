@@ -13,12 +13,12 @@
     {% set bypass = image ? '_bypass' in image.filename : false %}
 
     {# PLACEHOLDER #}
-    {# {% if type != 'vector' -%}
+    {% if type != 'vector' -%}
         {% set base64 = 'data:' ~ image.mime ~ ';base64,' ~ filecontent(image.cropResize(16,16).url)|base64_encode %}
         {%- set style -%}
-        background-image:url('{{ base64 }}');background-size:cover;background-position:center;filter:blur(20px);
+        background-image:url('{{ base64 }}');background-size:cover;background-position:center;image-rendering:pixelated;
         {%- endset -%}
-    {% endif %} #}
+    {% endif %}
 
     {# IMAGE #}
     {% if type == 'vector' %}
