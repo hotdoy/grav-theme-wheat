@@ -45,4 +45,14 @@ document.addEventListener('appInteractive', () => {
         matching: '.item > *'
     });
 
+    // ACTIONS
+    ScrollOut({
+        targets: '.module.actions .item',
+    });
+    Splitting({
+        target: '.module.actions .item',
+        by: 'items',
+        matching: '.content > *'
+    });
+
 });
