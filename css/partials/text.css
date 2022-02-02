@@ -173,7 +173,7 @@
 .text.prose :where(h4),
 .text.prose :where(h5),
 .text.prose :where(h6) {
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .text ul,

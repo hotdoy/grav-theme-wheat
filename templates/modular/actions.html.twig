@@ -1,0 +1,32 @@
+{% extends 'modular/module.html.twig' %}
+{% set name = 'actions' %}
+
+{% set title = page.header.display_title %}
+{% set items = page.header.items %}
+
+{% block content %}
+<div class="wrapper text">
+    {% if title %}
+	    <h2>{{ title }}</h2>
+	{% endif %}
+
+    <div class="layout">
+        {% for item in items %}
+            {% set title = item.title %}
+            {% set text = item.text %}
+            {% set button_label = item.button_label %}
+            {% set button_url = item.button_url %}
+            <div class="item">
+                <div class="content text prose">
+                    {% if title %}<h3>{{ title }}</h3>{% endif %}
+                    {% if text %}<p>{{ text }}</p>{% endif %}
+                </div>
+                <div class="action">
+                    <a href="{{ button_url }}" class="button">{{ button_label }}</a>
+                </div>
+            </div>        
+        {% endfor %}        
+    </div>
+
+</div>
+{% endblock %}

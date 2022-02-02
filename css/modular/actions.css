@@ -1,0 +1,106 @@
+/* .module.actions  {} */
+
+.module.actions > .wrapper {
+	margin: 0 auto;
+    max-width: var(--w-main);
+	padding: 0 var(--gutter);
+    position: relative;
+	width: 100%;
+}
+
+.module.actions > .wrapper > h2 {
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: left;
+}
+
+
+.module.actions .item {
+    background-color: var(--c-btn-bg);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+@media (min-width: 640px) {
+    .module.actions .item {
+        padding: 2rem;
+    }
+}
+
+.module.actions .item:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.module.actions .item:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.module.actions .item:not(:first-child) {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.module.actions .content {
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .module.actions .content {
+        text-align: left;
+        width: 66.66%;
+    }
+}
+
+.module.actions .action {
+    align-items: flex-end;
+    display: flex;
+    justify-content: right;
+    margin-top: var(--gutter);
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .module.actions .action {
+        margin-top: 0;
+        width: 33.33%;
+    }
+}
+
+.module.actions .action .button {
+    background-color: white;
+    color: var(--c-btn-bg);
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .module.actions .action .button {
+        width: auto;   
+    }
+}
+
+
+
+
+
+/*===========================================
+				    FX 
+============================================*/
+
+@media (prefers-reduced-motion: no-preference) {
+
+    .module.actions .content > * {
+        opacity: 0.2;
+        transition-property: transform, opacity;
+        transform: translateY(10px);
+    }
+
+    .module.actions .item[data-scroll="in"] .content > * {
+        opacity: 1;
+        transition-delay: calc(var(--item-index) * 50ms);
+        transition-duration: calc((var(--item-index) * 100ms) + 500ms);
+        transform: translateY(0);
+    }
+}

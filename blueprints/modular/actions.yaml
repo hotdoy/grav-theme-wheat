@@ -1,0 +1,41 @@
+title: actions
+extends@: modular/module
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            content:
+              unset@: true
+            header.media_order:
+              unset@: true
+
+            header.display_title:
+              type: text
+              style: vertical
+              label: Display Title
+
+            header.items:
+              name: items
+              type: list
+              style: vertical
+              label: items
+              fields:
+
+                .title:
+                  type: text
+                  label: Title
+
+                .text:
+                  type: textarea
+                  label: Text
+                
+                .button_label:
+                  type: text
+                  label: Button Label
+
+                .button_url:
+                  type: text
+                  label: Button Url

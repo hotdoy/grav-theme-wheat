@@ -63,16 +63,16 @@
         transition-property: transform, opacity;
         transition-delay: 100ms;
         transition-duration: 400ms;
-        transform: translateY(15px);
+        transform: translateY(10px);
         opacity: 0;
     }
 
     .module.features .item > h3,
     .module.features .item > p {
         transition-property: transform, opacity;
-        transition-delay: calc(var(--item-index) * 100ms);
-        transition-duration: calc((var(--item-index) * 100ms) + 400ms);
-        transform: translateY(15px);
+        transition-delay: calc(var(--item-index) * 50ms);
+        transition-duration: calc((var(--item-index) * 100ms) + 500ms);
+        transform: translateY(10px);
         opacity: 0;
     }
 
