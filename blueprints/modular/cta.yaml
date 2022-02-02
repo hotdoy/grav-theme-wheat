@@ -16,15 +16,22 @@ form:
               type: text
               style: vertical
               label: Display Title
+
+            header.text:
+              type: textarea
+              style: vertical
+              label: Text
             
             header.button_label:
               type: text
               label: Button Label
+              style: vertical
 
             header.button_url:
               type: text
               label: Button Url
-            
+              style: vertical
+
             header.color:
               type: colorpicker
               label: Color

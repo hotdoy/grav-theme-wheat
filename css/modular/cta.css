@@ -1,1 +1,62 @@
-/* .modular.cta  {} */
+/* .module.cta  {} */
+
+.module.cta > .wrapper {
+	position: relative;
+	margin: 0 auto;
+	padding: 0 var(--gutter);
+	width: 100%;
+	max-width: var(--w-main);
+}
+
+.module.cta .layout {
+    /* align-items: center; */
+    background-color: #1f1f1f;
+    background: linear-gradient(138deg, #1f1f1f, var(--color, #0a2540));
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.module.cta .content {
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .module.cta .content {
+        text-align: left;
+        width: 66.66%;
+    }
+}
+
+.module.cta .action {
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    margin-top: var(--gutter);
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .module.cta .action {
+        margin-top: 0;
+        width: 33.33%;
+    }
+}
+
+.module.cta .action .button {
+    width: 100%;
+    background-color: white;
+    color: var(--color, #0a2540);
+}
+
+@media (min-width: 640px) {
+    .module.cta .action .button {
+        width: auto;   
+    }
+}
+
+.module.cta + .module.cta  {
+    margin-top: var(--gutter);
+} 
