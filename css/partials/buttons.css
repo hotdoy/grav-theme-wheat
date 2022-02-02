@@ -31,14 +31,15 @@ a.button:focus,
 button.button:focus {
     transition: box-shadow 200ms;
     outline: none;
-    box-shadow: 0 0 0 3px rgb(121 164 255);
+    box-shadow: 0 0 0 4px rgb(121 164 255);
 }
 
 .button:hover,
 a.button:hover,
 button.button:hover {
+    transition: box-shadow 200ms;
     outline: none;
-    opacity: 0.8;
+    box-shadow: 0 0 0 2px rgb(121 164 255);
 }
 
 .button.disabled {
