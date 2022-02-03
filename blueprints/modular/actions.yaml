@@ -21,7 +21,7 @@ form:
               name: items
               type: list
               style: vertical
-              label: items
+              label: Items
               fields:
 
                 .title:
