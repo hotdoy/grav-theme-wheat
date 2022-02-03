@@ -1,4 +1,4 @@
-title: actions
+title: details
 extends@: modular/module
 
 form:
@@ -10,7 +10,7 @@ form:
             content:
               unset@: true
             header.media_order:
-              unset@: true
+              ordering@: +99
 
             header.display_title:
               type: text
@@ -28,14 +28,8 @@ form:
                   type: text
                   label: Title
 
-                .text:
-                  type: textarea
-                  label: Text
-                
-                .button_label:
-                  type: text
-                  label: Button Label
-
-                .button_url:
-                  type: text
-                  label: Button Url
+                .content:
+                  type: markdown
+                  label: Content
+                  validate:
+                    type: textarea
