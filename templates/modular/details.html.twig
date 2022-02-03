@@ -14,12 +14,10 @@
         {% for item in items %}
             {% set title = item.title %}
             {% set content = item.content %}
-
             <details>
                 <summary><h3>{{ title }}</h3></summary>
-                <div class="content">{{ content|markdown }}</div>
+                <div class="content text prose">{{ content|markdown }}</div>
             </details>
-
         {% endfor %}        
     </div>
 
