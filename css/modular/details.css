@@ -1,0 +1,82 @@
+.module.details {}
+
+.module.details .wrapper {
+    margin: 0 auto;
+    max-width: var(--w-main);
+    padding: 0 var(--gutter);
+    width: 100%;
+}
+
+.module.details .wrapper > h2 {
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: left;
+}
+
+.module.details details {
+    background-color: var(--c-bg-alt);
+    border-radius: 8px;
+    display: block;
+    padding: 1rem;
+}
+
+.module.details details:not(:first-child) {
+    margin-top: calc(var(--gutter) / 2);
+}
+
+.module.details details summary {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-right: 15%;
+    font-size: large;
+    font-weight: var(--fw-base-bold);
+    user-select: none;
+}
+
+.module.details details summary:focus {
+    outline: none;
+}
+
+.module.details details summary::marker {
+    display: none;
+}
+
+.module.details details summary:before {
+    background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='17' cy='17' r='17' fill='white'/%3E%3Cpath d='M24 18H18V24H16V18H10V16H16V10H18V16H24V18Z' fill='black'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-position: center;
+    content: '';
+    position: absolute;
+    height: 24px;
+    right: 0;
+    width: 24px;
+}
+
+.module.details details[open] summary:before {
+    background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='17' cy='17' r='17' fill='white'/%3E%3Cpath d='M24 18H10V16H24V18Z' fill='black'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-position: center;
+    content: '';
+    position: absolute;
+    height: 24px;
+    right: 0;
+    width: 24px;
+}
+
+.module.details .content {
+    margin: 1rem 0 0.5rem 0;
+    width: 95%;
+}
+
+.module.details details[open] .content {
+    animation-name: details;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes details {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0px);}
+}
