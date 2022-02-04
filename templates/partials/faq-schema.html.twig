@@ -1,0 +1,22 @@
+{% set items = items %}
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+
+        {% for item in items %}
+        {
+        "@type": "Question",
+        "name": "{{ item.title }}",
+            "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{ item.content|markdown }}"
+            }
+        } 
+        {% if not loop.last %},{% endif %}
+        {% endfor %}
+        ]
+    }
+</script>
