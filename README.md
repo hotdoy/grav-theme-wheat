@@ -20,7 +20,7 @@ Wheat is mostly aimed at front-end developers or anyone familiar with HTML, CSS,
 - [Contributing to an existing project](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/01-contributing-to-a-project.md)
 - [Plugins](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/02-plugins.md)
 - [Setting up a domain name on your localhost](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/03-setting-up-a-domain-on-localhost.md)
-- [App.js](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/04-app-js.md) WIP
+- [App.js](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/04-app-js.md)
 
 Stuff I still haven't documented
 
