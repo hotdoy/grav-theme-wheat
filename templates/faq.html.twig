@@ -3,10 +3,10 @@
 {% set modules = page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
 {% set items = page.header.items %}
 
-{# {% block metadata %}
+{% block metadata %}
 	{{ parent() }}
 	{% include "partials/faq-schema.html.twig" with {items: items} %}
-{% endblock %} #}
+{% endblock %}
 
 {% block content %}
 

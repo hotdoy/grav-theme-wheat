@@ -12,7 +12,7 @@
         "name": "{{ item.title }}",
             "acceptedAnswer": {
             "@type": "Answer",
-            "text": "{{ item.content|markdown }}"
+            "text": "{{ item.content|markdown|striptags }}"
             }
         } 
         {% if not loop.last %},{% endif %}
