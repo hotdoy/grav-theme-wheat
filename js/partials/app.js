@@ -6,10 +6,12 @@ const App = {
     currentDepth: 0,
     destinatioPath: '',
     destinationDepth: 0,
-    delay: 0,
+    interactiveDelay: 0,
+    completeDelay: 0,
     navigationDelay: 0,
     perceivedDelay: performance.now(),
-    adjustedDelay: 0,
+    interactiveAdjustedDelay: 0,
+    completeAdjustedDelay: 0,
     events: {
         interactive: new Event('appInteractive'),
         complete: new Event('appComplete'),
@@ -68,16 +70,17 @@ const App = {
     },
 
     setAdjustedDelay: function() {
-        App.adjustedDelay = App.getAdjustedDelay(App.delay);
+        App.interactiveAdjustedDelay = App.getAdjustedDelay(App.interactiveDelay);
+        App.completeAdjustedDelay = App.getAdjustedDelay(App.completeDelay);
     },
 
     setCompleteListener: function() {
         if (App.doc.readyState === 'complete') {
-            App.setState(App.body, '_012', App.adjustedDelay, [App.events.complete]);
+            App.setState(App.body, '_012', App.completeAdjustedDelay, [App.events.complete]);
         } else {
             App.doc.addEventListener('readystatechange', e => {
                 if (e.target.readyState === 'complete') {
-                    App.setState(App.body, '_012', App.adjustedDelay, [App.events.complete]);
+                    App.setState(App.body, '_012', App.completeAdjustedDelay, [App.events.complete]);
                 }
             });
         }
@@ -168,7 +171,7 @@ const App = {
         App.setLinkBehaviour(App.doc.querySelectorAll("a"));
         App.setImgBehaviour(App.doc.querySelectorAll('img'));
         App.setAdjustedDelay();
-        App.setState(App.body, '_01', App.adjustedDelay, [App.events.interactive]);
+        App.setState(App.body, '_01', App.interactiveAdjustedDelay, [App.events.interactive]);
         App.setCompleteListener();
     }
 };

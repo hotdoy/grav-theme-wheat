@@ -1,0 +1,26 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set modules = page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
+{% set items = page.header.items %}
+
+{% block metadata %}
+	{{ parent() }}
+	{% include "partials/faq-schema.html.twig" with {items: items} %}
+{% endblock %}
+
+{% block content %}
+
+	{# HEADING #}
+	{% include 'partials/default-heading.html.twig' %}
+	
+	{# CONTENT #}
+	{% if items %}
+	    {% include 'modular/details.html.twig' with {items: items} only %}
+	{% endif %}
+	
+	{# MODULES #}
+	{% for module in modules %}
+	    {{ module.content|raw }}
+	{% endfor %}
+
+{% endblock %}

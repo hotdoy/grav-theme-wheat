@@ -1,15 +1,14 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'details' %}
 
-{% set title = page.header.display_title %}
-{% set items = page.header.items %}
+{% set title = title ?? page.header.display_title %}
+{% set items = items ?? page.header.items %}
 
 {% block content %}
 <div class="wrapper text">
     {% if title %}
 	    <h2>{{ title }}</h2>
 	{% endif %}
-
     <div class="layout">
         {% for item in items %}
             {% set title = item.title %}
@@ -20,6 +19,5 @@
             </details>
         {% endfor %}        
     </div>
-
 </div>
 {% endblock %}
