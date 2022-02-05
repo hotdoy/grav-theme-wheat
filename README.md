@@ -20,39 +20,43 @@ Wheat is mostly aimed at front-end developers or anyone familiar with HTML, CSS,
 - [Contributing to an existing project](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/01-contributing-to-a-project.md)
 - [Plugins](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/02-plugins.md)
 - [Setting up a domain name on your localhost](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/03-setting-up-a-domain-on-localhost.md)
+- [App.js](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/04-app-js.md) WIP
 
-Being worked on...
+Stuff I still haven't documented
 
-- [App.js]()
 - [Github Actions]()
 - [Going live (first deployment)]()
 - [Pushing to production (other deployments)]()
 - [Cloudflare and DNS]()
+- [Pages]()
+- [Modules (modular)]()
+- [Shortcodes]()
 
 ### Page templates
 
-- Default
-- Collection
-- Product
 - Blog
-- Post
 - Calendar
+- Collection
+- Default
 - Event
+- FAQ
 - Form
-- Most of the templates related to users management
+- Product
+- Post
 
 ### Modular templates
 
+- Actions
+- Carousel
+- Details
 - Editor
 - Emphasis
+- Form
+- Map
 - Media
 - Mediatext
-- Quotes
-- Map
-- Grid
-- Carousel
 - Numbers
-- Form
+- Quotes
 
 ### External libraries shipped with Wheat
 
@@ -107,12 +111,10 @@ Releasing is a pretty straightforward process once your Github Actions are prope
 - Merge (push) the pull request into master.
 - Github Actions should take over and deploy your changes.
 
-## Notable features
-
-### Front-end author UI
+## Front-end author UI
 
 The "Front-end author UI" is meant to speed up the content management while in development or staging. It coud technically be used in Production but cannot be recommended since you might end up caching some of the front-end UI aimed at authors. You can activate this feature in the theme settings unde Admin/Front-end author UI.
 
-### Schema.org
+## Schema.org
 
 Most page templates comes with their own schema.org implementation based on [Google's recommendations](https://developers.google.com/search/docs/advanced/structured-data/search-gallery). This can be a significant advantage when "selling" this starter kit as stakeholders usually take SEO seriously.
