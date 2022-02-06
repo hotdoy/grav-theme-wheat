@@ -1,53 +1,56 @@
-/* #header {} */
-
-
-
-
-
-#header .shim {
-    height: var(--header);
+#header {
+    --header-heigth: 56px;
 }
 
-#header .header {
+@media (min-width: 640px) {
+    #header {
+        --header-heigth: 64px;
+    }
+}
+
+#header .shim {
+    height: var(--header-heigth);
+}
+
+#header .main {
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
     font-size: medium;
     line-height: 1;
     max-width: var(--w-full);
     margin: 0 auto;
     padding: var(--gutter);
-    padding-bottom: 0;
     color: var(--c-fg);
     z-index: 5000;
 }
 
-#header .header .layout {
+#header .main .layout {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     height: 100%;
 }
 
-#header .header .layout .logo {
+#header .main .layout .logo {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#header .header .layout .logo svg {
+#header .main .layout .logo svg {
     width: 70px;
     height: auto;
 }
 
-#header .header .layout .toggles {
+#header .main .layout .toggles {
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-#header .header .version {
+#header .main .version {
     opacity: 0.7;
 }
 
@@ -56,31 +59,31 @@
 
 
 /*LINKS*/
-#header .header .layout nav ul {
+#header .main .layout nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#header .header .layout nav ul li {
+#header .main .layout nav ul li {
     margin-left: 10px;
 }
 
 @media (min-width: 640px) {
-    #header .header .layout nav ul li {
+    #header .main .layout nav ul li {
         margin-left: var(--gutter);
     }
 }
 
 
-/* #header .header .layout nav ul li.langswitcher {} */
+/* #header .main .layout nav ul li.langswitcher {} */
 
 
 
 
 
 /*TOGGLES*/
-#header .header .layout nav ul li button {
+#header .main .layout nav ul li button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,7 +91,7 @@
     height: 100%;
 }
 
-#header .header .snipcart-items-count {
+#header .main .snipcart-items-count {
     position: absolute;
     top: 13px;
     right: -2px;

@@ -1,8 +1,8 @@
 document.addEventListener('appInteractive', () => {
 
-    // LANDING
+    // SPLASH
     ScrollOut({
-        targets: ['.landing__heading'],
+        targets: ['.splash__heading'],
     });
 
 

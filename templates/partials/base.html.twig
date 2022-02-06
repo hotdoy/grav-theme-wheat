@@ -24,12 +24,10 @@
 		<main id="main">{% block content %}{% endblock %}</main>
 		{% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %}
 		{% include 'partials/snipcart.html.twig' %}
-		{% include 'partials/dialog.html.twig' %}
+		{% include 'partials/gdpr.html.twig' %}
 		{% include 'partials/dialog.html.twig' with {id: 'dialog-signin', content: 'THEME.DIALOG.SIGNIN'|t } %}
 		{% include 'partials/dialog.html.twig' with {id: 'dialog-signout', content: 'THEME.DIALOG.SIGNOUT'|t } %}
-		{% if config.plugins['algolia-pro'].enabled %}
-		{% include 'partials/algolia-pro/instantsearch.html.twig' with { index: 'pages' } %}
-		{% endif %}
+		{% if config.plugins['algolia-pro'].enabled %}{% include 'partials/algolia-pro/instantsearch.html.twig' with { index: 'pages' } %}{% endif %}
 		{% include "partials/edit.html.twig" %}
 		{% block loader %}{% include "partials/loader.html.twig" %}{% endblock %}
 		{{ assets.js('bottom')|raw }}

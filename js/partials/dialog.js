@@ -97,6 +97,6 @@ const Dialog = {
 
 Dialog.init();
 
-document.addEventListener('domstate-navigating', () => {
+document.addEventListener('appNavigating', () => {
     Dialog.closeAll(); 
 });

@@ -4,7 +4,7 @@
 {% set mp4 = page.header.mp4 ? page.media[page.header.mp4] %}
 {% set veil = page.header.veil ?? false %}
 
-<section class="landing__heading">
+<section class="splash__heading">
 
     {% if image or mp4 %}
     <div class="media">
@@ -23,7 +23,7 @@
     {% endif %}
 
     <div class="wrapper">
-        <div class="content text">
+        <div class="content text prose">
             {{ content|raw }}
         </div>
     </div>

@@ -98,15 +98,12 @@
 ============================================*/
 
 body.default .module.mediatext:first-child  {
-    margin-top: calc(var(--gutter)*2);
+    margin-top: var(--gutter);
     border-bottom: 1px solid var(--c-bg-alt);
     padding-bottom: var(--rhythm);
 }
 
 @media (min-width: 1024px) {
-    body.default .module.mediatext:first-child  {
-        margin-top: var(--gutter);
-    }
     body.default .module.mediatext:first-child .content  {
         text-align: left;
     }
