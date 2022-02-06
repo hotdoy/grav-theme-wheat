@@ -1,10 +1,12 @@
 #header {
-    --header-heigth: 64px;
+    --header-heigth: 56px;
 }
 
-
-
-
+@media (min-width: 640px) {
+    #header {
+        --header-heigth: 64px;
+    }
+}
 
 #header .shim {
     height: var(--header-heigth);
