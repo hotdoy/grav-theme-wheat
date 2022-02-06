@@ -31,8 +31,6 @@ body.splash #header .shim {
 .splash__heading {
 	--c-bg: #1f1f1f;
 	--c-fg: white;
-    --c-btn-bg: white;
-	--c-btn-fg: #1f1f1f;
     position: relative;
     margin: 0 auto;
     height: 100vh;
@@ -66,16 +64,10 @@ body.splash #header .shim {
     z-index: 0;
 }
 
-.splash__heading .media img {
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    height: 100%;
-}
-
+.splash__heading .media img,
 .splash__heading .media video {
     object-fit: cover;
-    object-position: center;
+    object-position: var(--background-position);
     width: 100%;
     height: 100%;
 }

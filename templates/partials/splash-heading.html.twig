@@ -3,11 +3,11 @@
 {% set image_alt = page.header.image_alt ?? '' %}
 {% set mp4 = page.header.mp4 ? page.media[page.header.mp4] %}
 {% set veil = page.header.veil ?? false %}
-
+{% set background_position = page.header.background_position %}
+  
 <section class="splash__heading">
-
     {% if image or mp4 %}
-    <div class="media">
+    <div class="media"{% if background_position %} style="--background-position: {{ background_position }};"{% endif %}>
         {% if image and not mp4 %}
         {% include "partials/img.html.twig" with {image: image, alt: image_alt} %}
         {% endif %}
