@@ -9,16 +9,12 @@
 }
 
 #header .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     font-size: medium;
     line-height: 1;
     max-width: var(--w-full);
     margin: 0 auto;
     padding: var(--gutter);
-    padding-bottom: 0;
     color: var(--c-fg);
     z-index: 5000;
 }
