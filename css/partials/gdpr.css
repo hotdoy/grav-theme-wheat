@@ -1,0 +1,22 @@
+#gdpr {}
+
+#gdpr .dialog__box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: unset;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: unset;
+    padding: 10px var(--gutter);
+    background-color: var(--c-btn-bg);
+    color: var(--c-btn-fg);
+    border-radius: 0;
+}
+
+#gdpr .dialog__content {
+    font-size: small;
+}
