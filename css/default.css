@@ -11,6 +11,7 @@
 .default-heading {
     position: relative;
     margin-top: var(--rhythm);
+    text-align: center;
     z-index: 1000;
 }
 
@@ -26,9 +27,7 @@
     opacity: 0.5;
 }
 
-.default-heading__title {
-    text-align: center;
-}
+/* .default-heading__title {} */
 
 .default-heading__intro {
     margin: 1rem auto 0 auto;
