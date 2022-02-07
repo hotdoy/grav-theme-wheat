@@ -24,8 +24,7 @@
 
 .event__heading .breadcrumbs {
     margin-bottom: var(--gutter);
-    color: var(--c-fg-alt);
-    text-decoration: underline;
+    opacity: 0.5;
 }
 
 /* .event__heading .title {} */

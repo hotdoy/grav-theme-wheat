@@ -164,6 +164,16 @@ form:
               title: Misc
               underline: true
 
+            header.related:
+              type: toggle
+              label: Related
+              highlight: 1
+              default: 1
+              options:
+                0: None
+                1: Random
+                3: As Specified
+
             header.stackable:
               type: toggle
               label: Stackable
