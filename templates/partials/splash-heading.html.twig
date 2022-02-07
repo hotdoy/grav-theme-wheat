@@ -12,7 +12,7 @@
         {% include "partials/img.html.twig" with {image: image, alt: image_alt} %}
         {% endif %}
         {% if mp4 %}
-        <video autoplay loop muted poster="{{ image.url }}">
+        <video autoplay loop muted playsinline disablepictureinpicture disableremoteplayback poster="{{ image.url }}">
             <source type="video/mp4" src="{{ mp4.url }}">
         </video>
         {% endif %}

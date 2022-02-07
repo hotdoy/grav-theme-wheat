@@ -11,7 +11,7 @@
 <div class="wrapper {{ media_position }}">
 	<div class="media">
 		{% if mp4 %}
-		<video autoplay loop muted poster="{{ image.url }}">
+		<video autoplay loop muted playsinline disablepictureinpicture disableremoteplayback poster="{{ image.url }}">
 			{% if mp4 %}<source type="video/mp4" src="{{ mp4.url }}">{% endif %}
 		</video>
 		{% elseif image %}
