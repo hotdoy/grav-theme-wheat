@@ -1,7 +1,7 @@
 {% extends 'modular/module.html.twig' %}
-{% set name = 'carousel' %}
-{% set title = title|default(page.header.display_title) %}
-{% set collection = collection|default(null) %}
+{% set name = 'product__carousel' %}
+{% set title = title ?? null %}
+{% set collection = collection ?? null %}
 {% set items = items ?? page.header.items ?? collection  %}
 {% block content %}
 
@@ -14,7 +14,7 @@
 	<div class="scroller">
 		<div class="scroller__scrollctn">
 			{% for item in items %}
-			{% if not collection %}
+            {% if not collection %}
 			{% set item = page.find(item.page) %}
 			{% endif %}	
 			<div class="scroller__slide">
