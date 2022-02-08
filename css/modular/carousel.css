@@ -24,8 +24,8 @@
 ============================================*/
 
 .module.carousel .scroller__slide {
-	min-width: 70%;
-	max-width: 70%;
+	min-width: 85%;
+	max-width: 85%;
 }
 
 @media (min-width: 640px) {
@@ -37,15 +37,15 @@
 
 @media (min-width: 1024px) {
 	.module.carousel .scroller__slide {
-		min-width: 43%;
-		max-width: 43%;
+		min-width: 45%;
+		max-width: 45%;
 	}
 }
 
 @media (min-width: 1280px) {
 	.module.carousel .scroller__slide {
-		min-width: 30%;
-		max-width: 30%;
+		min-width: 31%;
+		max-width: 31%;
 	}
 }
 
@@ -69,6 +69,8 @@
 	overflow: hidden;
 }
 
+/* .module.carousel article a {} */
+
 .module.carousel article .media {
 	aspect-ratio: 1/1;
 	background-color: #f1f1f1;
@@ -86,10 +88,11 @@
 .module.carousel article .content {
 	background-color: #1f1f1f;
 	color: white;
-	display: flex;
+	display: grid;
 	flex-direction: column;
 	gap: 10px;
-	min-height: 220px;
+	grid-auto-rows: max-content;
+	min-height: 250px;
 	padding: var(--gutter) var(--gutter) 3rem var(--gutter);
 }
 
@@ -99,4 +102,6 @@
 	text-decoration: underline;
 }
 
-/* .module.carousel article .content p {} */
+.module.carousel article .content p {
+	opacity: 0.7;
+}
