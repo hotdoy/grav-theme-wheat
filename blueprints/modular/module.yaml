@@ -108,7 +108,7 @@ form:
 
                     header.classes:
                       type: text
-                      label: PLUGIN_ADMIN.CLASSES
+                      label: Classes
                     
                     header.id:
                       type: text
