@@ -157,11 +157,11 @@ const App = {
         els.forEach(el => {
             el.onload = function() {
                 App.setState(el, '1');
-                // el.removeAttribute('style');
+                el.removeAttribute('style');
             };
             if (el.complete) {
                 App.setState(el, '1');
-                // el.removeAttribute('style');
+                el.removeAttribute('style');
             };
         });
     },
