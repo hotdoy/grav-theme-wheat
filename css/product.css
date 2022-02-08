@@ -190,3 +190,54 @@
     display: block;
     text-decoration: none;
 }
+
+
+
+
+
+/*===========================================
+				    CARD 
+============================================*/
+
+/* .product-card {} */
+
+.product-card a {
+    display: block;
+    border-radius: 8px;
+}
+
+.product-card__media {
+    position: relative;
+    padding-top: 133%;
+    background-color: var(--c-bg-alt);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-card__media img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-card__content {
+    margin-top: 0.5rem;
+}
+
+.product-card h3 {
+    font-size: medium;
+}
+
+.product-card a:hover h3 {
+    text-decoration: underline;
+}
+
+.product-card__content p {
+    font-size: small;
+}

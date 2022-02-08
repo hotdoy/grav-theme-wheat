@@ -15,26 +15,88 @@
     text-align: left;
 }
 
+
+
+
+
+/*===========================================
+				SCROLLER
+============================================*/
+
 .module.carousel .scroller__slide {
-	min-width: 60%;
-	max-width: 60%;
+	min-width: 70%;
+	max-width: 70%;
 }
 
-@media (min-width: 735px) {
+@media (min-width: 640px) {
 	.module.carousel .scroller__slide {
-		min-width: 39%;
-		max-width: 39%;
+		min-width: 45%;
+		max-width: 45%;
 	}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
 	.module.carousel .scroller__slide {
-		min-width: 29%;
-		max-width: 29%;
+		min-width: 43%;
+		max-width: 43%;
 	}
 }
+
+@media (min-width: 1280px) {
+	.module.carousel .scroller__slide {
+		min-width: 30%;
+		max-width: 30%;
+	}
+}
+
+@media (min-width: 1440px) {}
 
 .module.carousel .scroller__slide a {
     display: block;
     text-decoration: none;
 }
+
+
+
+
+
+/*===========================================
+				    CARD 
+============================================*/
+
+.module.carousel article {
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.module.carousel article .media {
+	aspect-ratio: 1/1;
+	background-color: #f1f1f1;
+	overflow: hidden;
+	position: relative;
+}
+
+.module.carousel article .media img {
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+	height: 100%;
+}
+
+.module.carousel article .content {
+	background-color: #1f1f1f;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	min-height: 220px;
+	padding: var(--gutter) var(--gutter) 3rem var(--gutter);
+}
+
+/* .module.carousel article .content h3 {} */
+
+.module.carousel article a:hover .content h3 {
+	text-decoration: underline;
+}
+
+/* .module.carousel article .content p {} */

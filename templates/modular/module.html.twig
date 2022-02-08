@@ -1,6 +1,6 @@
 {% set name = name|default() %}
 {% set id = id ?? page.header.id ?? null %}
-{% set classes = classes ?? page.header.body_classes ?? null %}
+{% set classes = classes ?? page.header.classes ?? page.header.body_classes ?? null %}
 
 {% set computed_classes %}
 {{ name }}
