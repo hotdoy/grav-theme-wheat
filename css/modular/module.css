@@ -2,6 +2,7 @@
 	display: block;
 	position: relative;
 	margin-top: var(--rhythm);
+	scroll-margin-top: var(--gutter);
 	z-index: 1000;
 }
 
