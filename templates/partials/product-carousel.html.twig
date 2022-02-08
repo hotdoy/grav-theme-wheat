@@ -18,7 +18,7 @@
 			{% set item = page.find(item.page) %}
 			{% endif %}	
 			<div class="scroller__slide">
-				{% include 'partials/default-card.html.twig' with {'item': item, 'loop': loop} only %}
+				{% include 'partials/product-card.html.twig' with {'item': item, 'loop': loop} only %}
 			</div>
 			{% endfor %}
 		</div>

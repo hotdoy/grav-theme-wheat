@@ -1,0 +1,20 @@
+{% set item = item|default(item) %}
+{% set title = title|default(item.title) %}
+{% set image = image|default(item.header.image ? item.media[item.header.image] : item.media.images|first) %}
+{% set image_alt = image_alt|default(item.header.image_alt ?? '') %}
+{% set title = title|default(item.header.title) %}
+{% set price = item.header.price ? item.header.price|number_format(2, ',', ' ') ~ '$' : null %}
+
+<article class="product-card">
+	<a href="{{ item.url }}">
+		<div class="product-card__media">
+			{% include "partials/img.html.twig" with {image: image} %}
+		</div>
+		<div class="product-card__content text">
+			<h3>{{ title }}</h3>
+			{% if price %}
+				<p>{{ price }}</p>
+			{% endif %}
+		</div>
+	</a>
+</article>

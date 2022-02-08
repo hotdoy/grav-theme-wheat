@@ -106,10 +106,13 @@ form:
                       default: default
                       data-options@: '\Grav\Common\Page\Pages::pageTypes'
 
-                    header.body_classes:
+                    header.classes:
                       type: text
-                      label: PLUGIN_ADMIN.BODY_CLASSES
-
+                      label: PLUGIN_ADMIN.CLASSES
+                    
+                    header.id:
+                      type: text
+                      label: Id
 
                 column2:
                   type: column

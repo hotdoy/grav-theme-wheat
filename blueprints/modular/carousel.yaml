@@ -10,7 +10,7 @@ form:
             content:
               unset@: true
             header.media_order:
-              unset@: true
+              ordering@: +99
 
             header.display_title:
               type: text
@@ -18,13 +18,28 @@ form:
               label: Display Title
 
             header.items:
-              name: Items
+              name: items
               type: list
               style: vertical
               label: Items
               fields:
-                .page:
-                  type: pages
-                  label: Page
-                  show_modular: false
-                  show_root: false
+
+                .image:
+                  type: pagemediaselect
+                  label: Image
+
+                .image_alt:
+                  type: text
+                  label: Image Alt
+
+                .title:
+                  type: text
+                  label: Title
+
+                .subtitle:
+                  type: text
+                  label: Subtitle
+
+                .url:
+                  type: text
+                  label: Url
