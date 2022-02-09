@@ -1,4 +1,3 @@
-/* DEFAULT LOADER */
 /* #loader {
     position: fixed;
     top: 0;
@@ -11,7 +10,6 @@
     background-color: white;
     z-index: 2147483647;
     transition: all 200ms;
-    transition-timing-function: cubic-bezier(.645,.045,.355,1);
 }
 
 body[data-state^='_01'] #loader {
@@ -22,26 +20,18 @@ body[data-state^='_01'] #loader {
 body[data-state*='_nav'] #loader {
     opacity: 1;
     visibility: visible;
-} */
+}
 
-
-
-
-
-/* DEFAULT PAGE TRANSITION */
-/* body[data-state^='_0'] #main {
-    opacity: 0;
+body[data-state^='_0'] #main {
     transform: translateY(15px);
+    transition-property: transform;
+    transition-duration: 200ms;
 }
 
 body[data-state^='_01'] #main {
-    transition: all 200ms;
-    opacity: 1;
     transform: translateY(0);
 }
 
 body[data-state*='_nav'] #main {
-    transition: all 100ms;
-    opacity: 0;
     transform: translateY(15px);
 } */
