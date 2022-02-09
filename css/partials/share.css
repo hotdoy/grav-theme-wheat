@@ -12,12 +12,13 @@
 }
 
 #share .wrapper .layout {
-	background-color: var(--c-bg-alt);
-	border-radius: 8px;
-	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	background-color: var(--color-area);
+	border-radius: 8px;
+	color: var(--color-areatext);
+	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	padding: var(--gutter);
 }
 
@@ -46,7 +47,7 @@
 	align-items: center;
 	justify-content: center;
 	margin-left: 10px;
-	border: 1px solid var(--c-fg-alt);
+	border: 1px solid var(--color-arealighttext);
 	border-radius: 4px;
 	padding: 8px;
 }

@@ -28,7 +28,7 @@
 
 .post-heading__cartel {
     margin-top: var(--gutter);
-    color: var(--c-fg-alt); 
+    color: var(--color-lighttext); 
 }
 
 /* .post-heading time {} */

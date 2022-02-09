@@ -21,12 +21,18 @@
 	--color-marktext: MarkText;
 	--color-graytext: GrayText;
 
-	--c-bg: white;
-	--c-bg-alt: #f1f1f1;
-	--c-fg: #0a2540;
-	--c-fg-alt: #425466;
-	--c-btn-bg: #0d59f2;
-	--c-btn-fg: white;
+	--color-bg: white;
+	--color-fg: #0a2540;
+	--color-hl: #0d59f2;
+	--color-lighttext: #425466;
+
+	--color-buttonface: #0d59f2;
+	--color-buttontext: white;
+	--color-buttonfocus: rgb(121 164 255);
+
+	--color-area: #f1f1f1;
+	--color-areatext: #0a2540;
+	--color-arealighttext: #425466;
 }
 
 

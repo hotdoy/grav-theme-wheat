@@ -31,7 +31,7 @@
 
 .event__heading .cartel {
     margin-top: var(--gutter);
-    color: var(--c-fg-alt); 
+    color: var(--color-lighttext); 
 }
 
 /* .event__heading time {} */
@@ -60,7 +60,7 @@
 .event-info h2 {
     text-transform: uppercase;
     font-size: small;
-    color: var(--c-fg-alt);
+    color: var(--color-lighttext);
 }
 
 .event-info p {

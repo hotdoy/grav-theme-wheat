@@ -56,7 +56,7 @@
 }
 
 #footer .links ul li:first-child {
-    font-weight: var(--fw-base-bold);
+    font-weight: var(--font-base-bold);
     margin-top: 2rem;
 }
 

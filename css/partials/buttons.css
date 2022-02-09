@@ -11,10 +11,10 @@ button.button {
     text-align: center;
     font-size: 14px;
     line-height: 1;
-    font-weight: var(--fw-base-medium);
-    font-family: var(--ff-base);
-    background-color: var(--c-btn-bg);
-    color: var(--c-btn-fg);
+    font-weight: var(--font-base-medium);
+    font-family: var(--font-base);
+    background-color: var(--color-buttonface);
+    color: var(--color-buttontext);
     text-decoration: none;
     outline: none;
     cursor: pointer;
@@ -31,7 +31,7 @@ a.button:focus,
 button.button:focus {
     transition: box-shadow 200ms;
     outline: none;
-    box-shadow: 0 0 0 4px rgb(121 164 255);
+    box-shadow: 0 0 0 4px var(--color-buttonfocus);
 }
 
 .button:hover,
@@ -39,7 +39,7 @@ a.button:hover,
 button.button:hover {
     transition: box-shadow 200ms;
     outline: none;
-    box-shadow: 0 0 0 2px rgb(121 164 255);
+    box-shadow: 0 0 0 2px var(--color-buttonfocus);
 }
 
 .button.disabled {
@@ -59,7 +59,7 @@ button.button:hover {
     position: absolute;
     top: calc(50% - 4px);
     left: calc(50% - 4px);
-    background-color: white;
+    background-color: var(--color-buttontext);
     animation-name: button_waiting;
     animation-duration: 1s;
     animation-iteration-count: infinite;

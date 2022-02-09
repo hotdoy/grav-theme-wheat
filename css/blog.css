@@ -52,7 +52,7 @@
 
 .blog-card {
     padding-top: var(--gutter);
-    border-top: 1px solid var(--c-bg-alt);
+    border-top: 1px solid var(--color-area);
     width: 100%;
 }
 
@@ -68,7 +68,7 @@
     width: 95px;
     height: 95px;
     overflow: hidden;
-    background-color: var(--c-bg-alt);
+    background-color: var(--color-area);
     border-radius: 4px;
 }
 
@@ -104,7 +104,7 @@
 .blog-card__content .cartel {
     display: inline;
     font-size: small;
-    color: var(--c-fg-alt);
+    color: var(--color-lighttext);
 }
 
 .blog-card__content h2 {
@@ -117,7 +117,7 @@
 
 .blog-card__content p {
     font-size: small;
-    color: var(--c-fg-alt);
+    color: var(--color-lighttext);
 }
 
 @media (min-width: 1024px) {

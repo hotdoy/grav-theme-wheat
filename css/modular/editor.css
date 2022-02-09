@@ -54,7 +54,7 @@
     padding-right: 2rem;
     font-size: large;
     line-height: 2rem;
-    font-weight: var(--fw-base-bold);
+    font-weight: var(--font-base-bold);
 }
 
 .module.editor details summary:focus {
