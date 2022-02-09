@@ -103,6 +103,6 @@
     font-size: 8px;
     line-height: 8px;
     border-radius: 100%;
-    background-color: var(--c-btn-bg);
-    color: var(--c-btn-fg);
+    background-color: var(--color-buttonface);
+    color: var(--color-buttontext);
 }

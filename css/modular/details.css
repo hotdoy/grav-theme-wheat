@@ -1,4 +1,4 @@
-.module.details {}
+/* .module.details {} */
 
 .module.details .wrapper {
     margin: 0 auto;
@@ -14,8 +14,9 @@
 }
 
 .module.details details {
-    background-color: var(--c-bg-alt);
+    background-color: var(--color-area);
     border-radius: 8px;
+    color: var(--color-areatext);
     display: block;
     padding: 1rem;
 }
@@ -31,7 +32,7 @@
     position: relative;
     padding-right: 15%;
     font-size: large;
-    font-weight: var(--fw-base-bold);
+    font-weight: var(--font-base-bold);
     user-select: none;
 }
 

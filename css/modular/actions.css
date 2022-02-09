@@ -16,8 +16,8 @@
 
 
 .module.actions .item {
-    background-color: var(--c-btn-bg);
-    color: white;
+    background-color: var(--color-hl);
+    color: var(--color-bg);
     display: flex;
     flex-wrap: wrap;
     padding: 2rem 1rem 1rem 1rem;
@@ -70,8 +70,8 @@
 }
 
 .module.actions .action .button {
-    background-color: white;
-    color: var(--c-btn-bg);
+    background-color: var(--color-buttontext);
+    color: var(--color-buttonface);
     width: 100%;
 }
 
