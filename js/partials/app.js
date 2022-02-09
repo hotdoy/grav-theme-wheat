@@ -12,12 +12,15 @@ const App = {
     perceivedDelay: performance.now(),
     interactiveAdjustedDelay: 0,
     completeAdjustedDelay: 0,
+    tti: null,
+    ttc: null,
     events: {
         interactive: new Event('appInteractive'),
         complete: new Event('appComplete'),
         navigating: new Event('appNavigating'),
         navigatingForward: new Event('appNavigatingForward'),
         navigatingBackward: new Event('appNavigatingBackward'),
+        persisting: new Event('appPersisting'),
     },
 
     setState: function(el, state, delay, events) {
@@ -75,11 +78,18 @@ const App = {
     },
 
     setCompleteListener: function() {
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                App.setState(App.body, '_012', App.completeAdjustedDelay, [App.events.persisting]);
+            }
+        });
         if (App.doc.readyState === 'complete') {
+            App.ttc = performance.now();
             App.setState(App.body, '_012', App.completeAdjustedDelay, [App.events.complete]);
         } else {
             App.doc.addEventListener('readystatechange', e => {
                 if (e.target.readyState === 'complete') {
+                    App.ttc = performance.now();
                     App.setState(App.body, '_012', App.completeAdjustedDelay, [App.events.complete]);
                 }
             });
@@ -171,6 +181,9 @@ const App = {
         App.setLinkBehaviour(App.doc.querySelectorAll("a"));
         App.setImgBehaviour(App.doc.querySelectorAll('img'));
         App.setAdjustedDelay();
+        if (App.tti == null) {
+            App.tti = performance.now();
+        }
         App.setState(App.body, '_01', App.interactiveAdjustedDelay, [App.events.interactive]);
         App.setCompleteListener();
     }
