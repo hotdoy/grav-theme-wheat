@@ -6,20 +6,31 @@
     width: 100%;
     max-width: var(--w-main);
     margin: 0 auto;
-    padding: 0 var(--gutter);   
+}
+
+@media (min-width: 640px) {
+    .module.media > .wrapper {
+        padding: 0 var(--gutter);   
+    }
 }
 
 .module.media .wrapper > * {
     width: 100%;
     height: auto;
     margin: 0 auto;
-    border-radius: 8px;
     overflow: hidden;
+}
+
+@media (min-width: 640px) {
+    .module.media .wrapper > * {
+        border-radius: 8px;
+    }
 }
 
 .module.media .caption {
     margin-top: 0.5rem;
-    padding-right: 20%;
+    max-width: 80%;
+    text-align: center;
 }
 
 .module.media:first-child {
