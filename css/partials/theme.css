@@ -3,6 +3,24 @@
 ============================================*/
 
 :root {
+	--color-canvas: Canvas;
+	--color-canvastext: CanvasText;
+	--color-linktext: LinkText;
+	--color-visitedtext: VisitedText;
+	--color-activetext: ActiveText;
+	--color-buttonface: ButtonFace;
+	--color-buttontext: ButtonText;
+	--color-buttonborder: ButtonBorder;
+	--color-field: Field;
+	--color-fieldtext: FieldText;
+	--color-highlight: Highlight;
+	--color-highlighttext: HighlightText;
+	--color-selecteditem: SelectedItem;
+	--color-selecteditemtext: SelectedItemText;
+	--color-mark: Mark;
+	--color-marktext: MarkText;
+	--color-graytext: GrayText;
+
 	--c-bg: white;
 	--c-bg-alt: #f1f1f1;
 	--c-fg: #0a2540;
