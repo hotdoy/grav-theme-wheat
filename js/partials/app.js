@@ -8,7 +8,7 @@ const App = {
     destinationDepth: 0,
     interactiveDelay: 100,
     completeDelay: 0,
-    navigationDelay: 100,
+    navigationDelay: 150,
     perceivedDelay: performance.now(),
     interactiveAdjustedDelay: 0,
     completeAdjustedDelay: 0,
