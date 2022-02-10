@@ -1,58 +1,60 @@
 document.addEventListener('appInteractive', () => {
+    setTimeout(() => {
 
-    // SPLASH
-    ScrollOut({
-        targets: ['.splash__heading'],
-    });
-
-
-    // NUMBERS
-    ScrollOut({
-        targets: ['.module.numbers .item'],
-    });
-    Splitting({
-        target: ['.module.numbers .item h3'],
-    });
+        // SPLASH
+        ScrollOut({
+            targets: ['.splash__heading'],
+        });
 
 
-    // EMPHASIS
-    ScrollOut({
-        targets: '.module.emphasis',
-    });
-    Splitting({
-        target: ['.module.emphasis p'],
-        by: ['lines'],
-    });
+        // NUMBERS
+        ScrollOut({
+            targets: ['.module.numbers .item'],
+        });
+        Splitting({
+            target: ['.module.numbers .item h3'],
+        });
 
 
-    // MEDIATEXT
-    ScrollOut({
-        targets: '.module.mediatext .content',
-    });
-    Splitting({
-        target: '.module.mediatext',
-        by: 'items',
-        matching: '.content > *'
-    });
-    
-    // FEATURES
-    ScrollOut({
-        targets: '.module.features .item',
-    });
-    Splitting({
-        target: '.module.features .item',
-        by: 'items',
-        matching: '.item > *'
-    });
+        // EMPHASIS
+        ScrollOut({
+            targets: '.module.emphasis',
+        });
+        Splitting({
+            target: ['.module.emphasis p'],
+            by: ['lines'],
+        });
 
-    // ACTIONS
-    ScrollOut({
-        targets: '.module.actions .item',
-    });
-    Splitting({
-        target: '.module.actions .item',
-        by: 'items',
-        matching: '.content > *'
-    });
 
+        // MEDIATEXT
+        ScrollOut({
+            targets: '.module.mediatext .content',
+        });
+        Splitting({
+            target: '.module.mediatext',
+            by: 'items',
+            matching: '.content > *'
+        });
+        
+        // FEATURES
+        ScrollOut({
+            targets: '.module.features .item',
+        });
+        Splitting({
+            target: '.module.features .item',
+            by: 'items',
+            matching: '.item > *'
+        });
+
+        // ACTIONS
+        ScrollOut({
+            targets: '.module.actions .item',
+        });
+        Splitting({
+            target: '.module.actions .item',
+            by: 'items',
+            matching: '.content > *'
+        });
+        
+    }, App.fxDelay);
 });
