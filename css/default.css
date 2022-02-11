@@ -47,7 +47,7 @@
 
 body.default .module.mediatext:first-child  {
     margin-top: var(--gutter);
-    border-bottom: 1px solid var(--c-bg-alt);
+    border-bottom: 1px solid var(--color-area);
     padding-bottom: var(--rhythm);
 }
 

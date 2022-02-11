@@ -1,13 +1,10 @@
-{% import "partials/svg.html.twig" as svg %}
+{# {% import "partials/svg.html.twig" as svg %}
 
 {% if root_params.header.gdpr_banner %}
-    <div class="dialog" id="gdpr">
-        <div class="dialog__veil"></div>
-        <div class="dialog__box">
-            <button class="dialog__close">{{ svg.close() }}</button>
-            <div class="dialog__content text">
-                {{ root_params.header.gdpr_banner|raw }}
-            </div>
+    <div id="gdpr">
+        <div class="gdpr__content text">
+            {{ root_params.header.gdpr_banner|raw }}
         </div>
+        <button class="gdpr__action button">Cool!</button>
     </div>
-{% endif %}
+{% endif %}  #}
