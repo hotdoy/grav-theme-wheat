@@ -99,13 +99,27 @@ form:
 
               section_gdpr:
                 type: section
-                title: Site
+                title: GDPR Banner
                 underline: true
 
-              header.gdpr_banner:
+              header.gdpr_status:
+                type: toggle
+                label: Status
+                highlight: 1
+                default: 0
+                options:
+                  0: Disabled
+                  1: Enabled
+                validate:
+                  type: bool
+
+              header.gdpr_content:
                 type: text
-                label: GDPR Banner
-                toggleable: true
+                label: Content
+
+              header.gdpr_label:
+                type: text
+                label: Label
                 
               header.media_order:
                 type: pagemedia
