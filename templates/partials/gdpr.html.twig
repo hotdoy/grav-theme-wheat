@@ -1,10 +1,10 @@
-{# {% import "partials/svg.html.twig" as svg %}
+{% import "partials/svg.html.twig" as svg %}
 
-{% if root_params.header.gdpr_banner %}
+{% if root_params.header.gdpr_status %}
     <div id="gdpr">
         <div class="gdpr__content text">
-            {{ root_params.header.gdpr_banner|raw }}
+            {{ root_params.header.gdpr_content|raw }}
         </div>
-        <button class="gdpr__action button">Cool!</button>
+        <button class="gdpr__action button">{{ root_params.header.gdpr_label }}</button>
     </div>
-{% endif %}  #}
+{% endif %}
