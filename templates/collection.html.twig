@@ -21,7 +21,7 @@
     <section class="collection__list" data-pagination-list>
         <div class="wrapper">
             {% for item in collection_slice %}
-            {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item} only %}
+            {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item} %}
             {% endfor %}
         </div>
     </section>
