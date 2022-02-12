@@ -36,23 +36,3 @@
     max-width: var(--w-tight);
     color: grey;
 }
-
-
-
-
-
-/*===========================================
-			    MODULE OVERRIDE 
-============================================*/
-
-body.default .module.mediatext:first-child  {
-    margin-top: var(--gutter);
-    border-bottom: 1px solid var(--color-area);
-    padding-bottom: var(--rhythm);
-}
-
-@media (min-width: 1024px) {
-    body.default .module.mediatext:first-child .content  {
-        text-align: left;
-    }
-}

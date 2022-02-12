@@ -17,3 +17,7 @@
 .module.rhythm-half {
 	margin-top: calc(var(--rhythm)/2);
 }
+
+.module:first-child  {
+    margin-top: var(--gutter);
+}
