@@ -54,6 +54,21 @@
     }
 }
 
+.module.actions .index {
+    align-items: center;
+    background-color: var(--color-bg);
+    border-radius: 100%;
+    color: var(--color-hl);
+    display: inline-flex;
+    font-size: large;
+    font-weight: 500;
+    height: 30px;
+    justify-content: center;
+    line-height: 1;
+    margin-bottom: 3px;
+    width: 30px;
+}
+
 .module.actions .action {
     align-items: flex-end;
     display: flex;

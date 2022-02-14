@@ -18,6 +18,9 @@
             {% set button_url = item.button_url %}
             <div class="item">
                 <div class="content text prose">
+                    {% if loop.length > 1 %}
+                        <div class="index">{{ loop.index }}</div>
+                    {% endif %}
                     {% if title %}<h3>{{ title }}</h3>{% endif %}
                     {% if text %}<p>{{ text }}</p>{% endif %}
                 </div>
