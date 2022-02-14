@@ -7,19 +7,19 @@
   
 <section class="splash__heading">
     {% if image or mp4 %}
-    <div class="media"{% if background_position %} style="--background-position: {{ background_position }};"{% endif %}>
-        {% if image and not mp4 %}
-        {% include "partials/img.html.twig" with {image: image, alt: image_alt} %}
-        {% endif %}
-        {% if mp4 %}
-        <video autoplay loop muted playsinline disablepictureinpicture disableremoteplayback poster="{{ image.url }}">
-            <source type="video/mp4" src="{{ mp4.url }}">
-        </video>
-        {% endif %}
-    </div>
+        <div class="media"{% if background_position %} style="--background-position: {{ background_position }};"{% endif %}>
+            {% if image and not mp4 %}
+                {% include "partials/img.html.twig" with {image: image, alt: image_alt} %}
+            {% endif %}
+            {% if mp4 %}
+                <video autoplay loop muted playsinline disablepictureinpicture disableremoteplayback poster="{{ image.url }}">
+                    <source type="video/mp4" src="{{ mp4.url }}">
+                </video>
+            {% endif %}
+        </div>
     {% endif %}
     {% if veil %}
-    <div class="veil"></div>
+        <div class="veil"></div>
     {% endif %}
 
     <div class="wrapper">
