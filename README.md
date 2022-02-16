@@ -24,13 +24,12 @@ Wheat is mostly aimed at front-end developers or anyone familiar with HTML, CSS,
 
 Stuff I still haven't documented
 
-- [Github Actions]()
-- [Going live (first deployment)]()
-- [Pushing to production (other deployments)]()
-- [Cloudflare and DNS]()
-- [Pages]()
-- [Modules (modular)]()
-- [Shortcodes]()
+- [Pages](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/05-pages.md)
+- [Modules (modular)](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/06-modules.md)
+- [Shortcodes](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/07-shortcodes.md)
+- [Going live](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/08-going-live.md)
+- [Github Actions](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/09-github-actions.md)
+- [Cloudflare and DNS](https://github.com/hotdoy/grav-theme-wheat/blob/master/docs/10-github-actions.md)
 
 ### Page templates
 
