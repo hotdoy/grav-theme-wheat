@@ -6,7 +6,7 @@
         const b = e.querySelector('button');
         
         if (!localStorage.getItem('accept_cookies')) {
-            e.style.display = 'flex';
+            e.style.display = 'block';
             b.addEventListener('click', function() {
                 localStorage.setItem('accept_cookies', 'true');
                 e.remove();
