@@ -2,7 +2,7 @@
     display: none;
     position: fixed;
     bottom: var(--gutter);
-    max-width: 250px;
+    left: var(--gutter);
     right: var(--gutter);
     align-items: center;
     justify-content: center;
@@ -11,10 +11,10 @@
     color: var(--color-buttontext);
     z-index: 5000;
     border-radius: 8px;
-    /* border: 1px solid var(--color-area); */
+    border: 1px solid var(--color-area);
     background-color: var(--color-bg);
     color: var(--color-fg);
-
+    --color-buttonfocus: #a3ffc8;
     --shadow-color: 0deg 0% 63%;
     --shadow-elevation-medium:
       0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
@@ -22,6 +22,13 @@
       2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
       5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
       box-shadow: var(--shadow-elevation-medium);
+}
+
+@media (min-width: 640px) {
+    #gdpr {
+        max-width: 250px;
+        left: unset;
+    }
 }
 
 .gdpr__content {
