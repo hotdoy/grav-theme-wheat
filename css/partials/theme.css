@@ -109,6 +109,6 @@
 				DOCUMENT 
 ============================================*/
 body {
-	background-color: var(--c-bg);
-    color: var(--c-fg);
+	background-color: var(--color-bg);
+    color: var(--color-fg);
 }
