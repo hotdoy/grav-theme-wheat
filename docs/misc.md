@@ -13,3 +13,10 @@ Next, move aside the old CSR (if it exists):
 Finally, run checkallsslcerts to order a new certificate:
 
 `/usr/local/cpanel/bin/checkallsslcerts`
+
+## Recursively Change the file's and folder's Permissions
+
+Navigate to your `public_html` folder and run...
+
+`find . -type d -exec chmod 755 {} \;`
+`find . -type f -exec chmod 644 {} \;`
