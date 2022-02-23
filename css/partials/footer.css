@@ -1,9 +1,10 @@
 #footer {
-    margin-top: var(--rhythm);
-    padding-top: calc(var(--rhythm) - 2rem);
-    padding-bottom: var(--gutter);
     background-color: var(--color-bg);
+    border-top: 1px solid var(--color-area);
     color: var(--color-fg);
+    margin-top: var(--rhythm);
+    padding-bottom: var(--gutter);
+    padding-top: calc(var(--rhythm) - 2rem);
     z-index: 1000;
 }
 
