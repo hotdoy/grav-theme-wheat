@@ -24,8 +24,8 @@
   height: auto;
   padding: var(--rhythm) 2rem;
   text-align: center;
-  background-color: var(--color, #1f1f1f);
-  color: white;
+  background-color: var(--color-area);
+  color: var(--color-areatext);
   border-radius: 8px;
 }
 
@@ -54,4 +54,5 @@
 .module.quotes .source {
   margin-top: 1rem;
   width: 250px;
+  color: var(--color-arealighttext);
 }

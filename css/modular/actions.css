@@ -16,8 +16,8 @@
 
 
 .module.actions .item {
-    background-color: var(--color-hl);
-    color: var(--color-bg);
+    background-color: var(--color-buttonface);
+    color: var(--color-buttontext);
     display: flex;
     flex-wrap: wrap;
     padding: 2rem 1rem 1rem 1rem;
@@ -56,9 +56,9 @@
 
 .module.actions .index {
     align-items: center;
-    background-color: var(--color-bg);
+    background-color: var(--color-buttontext);
     border-radius: 100%;
-    color: var(--color-hl);
+    color: var(--color-buttonface);
     display: inline-flex;
     font-size: large;
     font-weight: 500;

@@ -13,13 +13,11 @@
 
 #share .wrapper .layout {
 	align-items: center;
-	background-color: var(--color-area);
-	border-radius: 8px;
-	color: var(--color-areatext);
+	border-top: 1px solid var(--color-fg);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding: var(--gutter);
+	padding-top: 1rem;
 }
 
 /* #share .content {} */
@@ -43,14 +41,18 @@
 }
 
 #share a {
-	display: flex;
 	align-items: center;
+	border-radius: 4px;
+	display: flex;
 	justify-content: center;
 	margin-left: 10px;
-	border: 1px solid var(--color-arealighttext);
-	border-radius: 4px;
 	padding: 8px;
 }
+
+#share a:hover {
+	background-color: var(--color-area);
+}
+
 
 #share a svg {
 	width: 100%;

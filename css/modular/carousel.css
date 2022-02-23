@@ -65,7 +65,6 @@
 ============================================*/
 
 .module.carousel article {
-	border-radius: 8px;
 	overflow: hidden;
 }
 
@@ -74,6 +73,7 @@
 .module.carousel article .media {
 	aspect-ratio: 1/1;
 	background-color: #f1f1f1;
+	border-radius: 8px;
 	overflow: hidden;
 	position: relative;
 }
@@ -86,14 +86,12 @@
 }
 
 .module.carousel article .content {
-	background-color: #1f1f1f;
-	color: white;
+	color: var(--color-areatext);
 	display: grid;
 	flex-direction: column;
 	gap: 10px;
 	grid-auto-rows: max-content;
-	min-height: 250px;
-	padding: var(--gutter) var(--gutter) 3rem var(--gutter);
+	margin-top: 1rem;
 }
 
 /* .module.carousel article .content h3 {} */
@@ -103,5 +101,5 @@
 }
 
 .module.carousel article .content p {
-	opacity: 0.7;
+	color: var(--color-lighttext);
 }
