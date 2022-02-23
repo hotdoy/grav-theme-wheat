@@ -21,7 +21,7 @@
 
 .post-heading .breadcrumbs {
     margin-bottom: var(--gutter);
-    opacity: 0.5;
+    color: var(--color-lighttext);
 }
 
 /* .post-heading__title {} */

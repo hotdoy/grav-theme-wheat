@@ -13,10 +13,11 @@
 
 .module.editor p img,
 .module.editor p video {
+    border-radius: 4px;
     display: block;
+    height: auto;
     margin: 2rem auto;
     width: 100%;
-    height: auto;
 }
 
 /*SPOTIFY*/
@@ -111,8 +112,8 @@
 
 /*LITE-YOUTUBE*/
 .module.editor lite-youtube {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    border-radius: 4px;
+    margin: 2rem 0;
 }
 
 /*TABLES*/

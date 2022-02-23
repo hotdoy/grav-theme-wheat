@@ -19,7 +19,7 @@ padding-bottom: var(--gutter);
 }
 
 .scroller__scrollctn::-webkit-scrollbar-track {
-    background-color: lightgray;
+    background-color: var(--color-area);
     padding: 0 var(--gutter);
     border-radius: 9999px;
 }
@@ -30,7 +30,7 @@ padding-bottom: var(--gutter);
 }
 
 .scroller__scrollctn::-webkit-scrollbar-thumb {
-    background-color: grey;
+    background-color: var(--color-arealighttext);
     border-radius: 9999px;
 }
 

@@ -4,10 +4,13 @@
 	margin-top: var(--rhythm);
 	scroll-margin-top: var(--gutter);
 	z-index: 1000;
+	color: var(--color-fg);
 }
 
 .module.padded {
 	padding: var(--rhythm) 0;
+	background-color: var(--color-bg);
+
 }
 
 .module.rhythm-none {
