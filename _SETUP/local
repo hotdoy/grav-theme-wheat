@@ -15,13 +15,13 @@ VINCENT
         SYMLINK
 
             Webroot to Grav install
-            mklink /D D:\dev\xampp\htdocs\wheat D:\dev\_PROJECTS\wheat\grav-admin
+            mklink /D D:\dev\xampp\htdocs\wheat D:\dev\_calotte\wheat\grav-admin
 
             Grav-admin user folder to project user
-            mklink /D D:\dev\_PROJECTS\wheat\grav-admin\user D:\dev\_PROJECTS\wheat\user
+            mklink /D D:\dev\_calotte\wheat\grav-admin\user D:\dev\_calotte\wheat\user
 
             user/themes/project-theme to grav-theme-name
-            mklink /D D:\dev\_PROJECTS\wheat\user\themes\wheat D:\dev\_PROJECTS\wheat\grav-theme-wheat
+            mklink /D D:\dev\_calotte\wheat\user\themes\wheat D:\dev\_calotte\wheat\grav-theme-wheat
 
         LOCALHOSTS
 
