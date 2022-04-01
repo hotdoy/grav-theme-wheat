@@ -1,7 +1,8 @@
 (function () {
 	'use strict';
 	const initShare = function() {
-		const e = document.getElementById('share');
+		const d = document;
+		const e = d.getElementById('share');
 		if (e) {
 			let isMobile = false;
 			if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
@@ -11,11 +12,10 @@
 			const isSecure = location.protocol === 'https:'
 			const native = e.querySelector('.native');
 			const fallback = e.querySelector('.fallback');
-
-			const title = document.querySelector('meta[property="og:title"]').content
-			const url = document.querySelector('meta[property="og:url"]').content
-			const text = document.querySelector('meta[property="og:description"]').content
-			const file = document.querySelector('meta[property="og:image"]').content;
+			const title = d.querySelector('meta[property="og:title"]') ? d.querySelector('meta[property="og:title"]').content : '';
+			const url = d.querySelector('meta[property="og:url"]') ? d.querySelector('meta[property="og:url"]').content : '';
+			const text = d.querySelector('meta[property="og:description"]') ? d.querySelector('meta[property="og:description"]').content : '';
+			const file = d.querySelector('meta[property="og:image"]') ? d.querySelector('meta[property="og:image"]').content : '';
 			console.log(file);
 
 			let shareData = {
