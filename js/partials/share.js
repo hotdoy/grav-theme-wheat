@@ -23,7 +23,7 @@
 				text: text
 			};
 
-			if (navigator.canShare && navigator.canShare({ files: file })) {
+			if (file.length && navigator.canShare && navigator.canShare({ files: file })) {
 				shareData = {
 					url: url,
 					title: title,
