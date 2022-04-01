@@ -1,8 +1,7 @@
 (function () {
 	'use strict';
 	const initShare = function() {
-		const d = document;
-		const e = d.getElementById('share');
+		const e = document.getElementById('share');
 		if (e) {
 			let isMobile = false;
 			if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
@@ -14,21 +13,21 @@
 			const fallback = e.querySelector('.fallback');
 
 			if (navigator.canShare && isMobile && isSecure) {
-				const title = d.querySelector('meta[property="og:title"]') ? d.querySelector('meta[property="og:title"]').content : '';
-				const url = d.querySelector('meta[property="og:url"]') ? d.querySelector('meta[property="og:url"]').content : '';
-				const text = d.querySelector('meta[property="og:description"]') ? d.querySelector('meta[property="og:description"]').content : '';
-				let shareData = {
+				const title = document.querySelector('meta[property="og:title"]') ? document.querySelector('meta[property="og:title"]').content : '';
+				const url = document.querySelector('meta[property="og:url"]') ? document.querySelector('meta[property="og:url"]').content : '';
+				const text = document.querySelector('meta[property="og:description"]') ? document.querySelector('meta[property="og:description"]').content : '';
+				const shareData = {
 					url: url,
 					title: title,
-					text: text,
+					text: text
 				};
 				fallback.remove();
 				native.querySelector('a').addEventListener('click', async () => {
 					try {
-						await Navigator.share(shareData);
+						await navigator.share(shareData);
 						console.log('Shared!');
 					} catch(err) {
-						console.log('Error while sharing.');
+						console.log('Error:' + err);
 					}
 				});				
 			} else {
