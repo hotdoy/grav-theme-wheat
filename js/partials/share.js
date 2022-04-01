@@ -29,7 +29,7 @@
 					url: url,
 					title: title,
 					text: text,
-					files: files
+					files: file
 				};
 			}
 
