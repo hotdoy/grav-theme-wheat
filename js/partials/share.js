@@ -12,27 +12,18 @@
 			const isSecure = location.protocol === 'https:'
 			const native = e.querySelector('.native');
 			const fallback = e.querySelector('.fallback');
-			const title = d.querySelector('meta[property="og:title"]') ? d.querySelector('meta[property="og:title"]').content : '';
-			const url = d.querySelector('meta[property="og:url"]') ? d.querySelector('meta[property="og:url"]').content : '';
-			const text = d.querySelector('meta[property="og:description"]') ? d.querySelector('meta[property="og:description"]').content : '';
-			const file = d.querySelector('meta[property="og:image"]') ? Array.from(d.querySelector('meta[property="og:image"]').content) : null;
 
-			let shareData = {
-				url: url,
-				title: title,
-				text: text
-			};
-
-			if (!!file && navigator.canShare && navigator.canShare({ files: file })) {
-				shareData = {
+			if (navigator.canShare && isMobile && isSecure) {
+				const title = d.querySelector('meta[property="og:title"]') ? d.querySelector('meta[property="og:title"]').content : '';
+				const url = d.querySelector('meta[property="og:url"]') ? d.querySelector('meta[property="og:url"]').content : '';
+				const text = d.querySelector('meta[property="og:description"]') ? d.querySelector('meta[property="og:description"]').content : '';
+				const file = d.querySelector('meta[property="og:image"]') ? Array.from(d.querySelector('meta[property="og:image"]').content) : null;
+				let shareData = {
 					url: url,
 					title: title,
 					text: text,
 					files: file
 				};
-			}
-
-			if (isMobile && isSecure) {
 				fallback.remove();
 				native.querySelector('a').addEventListener('click', async () => {
 					try {
