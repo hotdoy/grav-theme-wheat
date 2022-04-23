@@ -7,16 +7,6 @@
 	color: var(--color-fg);
 }
 
-.module.padded {
-	padding: var(--rhythm) 0;
-	background-color: var(--color-bg);
-}
-
-body.dark .module.padded.dark {
-	padding: unset;
-	background-color: unset;
-}
-
 .module.rhythm-none {
 	margin-top: 0;
 }

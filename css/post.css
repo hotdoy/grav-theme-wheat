@@ -21,14 +21,14 @@
 
 .post-heading .breadcrumbs {
     margin-bottom: var(--gutter);
-    color: var(--color-lighttext);
+    color: var(--color-graytext);
 }
 
 /* .post-heading__title {} */
 
 .post-heading__cartel {
     margin-top: var(--gutter);
-    color: var(--color-lighttext); 
+    color: var(--color-graytext); 
 }
 
 /* .post-heading time {} */

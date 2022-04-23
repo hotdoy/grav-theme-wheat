@@ -20,11 +20,6 @@ dependencies:
 form:
   validation: loose
   fields:
-
-    theme:
-      type: section
-      title: Theme
-      underline: true
         
     script_section:
       type: section

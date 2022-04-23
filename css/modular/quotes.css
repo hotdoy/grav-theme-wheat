@@ -54,5 +54,5 @@
 .module.quotes .source {
   margin-top: 1rem;
   width: 250px;
-  color: var(--color-arealighttext);
+  color: var(--color-area-graytext);
 }

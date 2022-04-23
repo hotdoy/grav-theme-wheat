@@ -101,5 +101,5 @@
 }
 
 .module.carousel article .content p {
-	color: var(--color-lighttext);
+	color: var(--color-graytext);
 }
