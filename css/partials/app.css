@@ -24,7 +24,7 @@ img[loading="lazy"][data-state="1"] {
     to {opacity: 1;}
 } */
 
-body[data-state^='_0'] #main {
+/* body[data-state^='_0'] #main {
     transform: translateY(15px);
     transition-property: transform, opacity;
     transition-duration: 200ms;
@@ -37,4 +37,4 @@ body[data-state^='_01'] #main {
 body[data-state*='_nav'] #main {
     opacity: 0;
     transform: translateY(15px);
-}
+} */
