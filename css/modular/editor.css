@@ -3,7 +3,7 @@
 .module.editor > .wrapper {
     padding: 0 var(--gutter);
     margin: 0 auto;
-    max-width: var(--w-tight);
+    max-width: var(--width-tight);
     width: 100%;
 }
 
@@ -39,8 +39,8 @@
     margin-top: 2rem;
     padding: 1rem 0;
     width: 100%;
-    border-top: 1px solid var(--c-fg);
-    border-bottom: 1px solid var(--c-fg);
+    border-top: 1px solid var(--color-fg);
+    border-bottom: 1px solid var(--color-fg);
 }
 
 .module.editor details>*:last-child {
@@ -73,7 +73,7 @@
     content: ' ';
     height: 20px;
     width: 1px;
-    background-color: var(--c-fg);
+    background-color: var(--color-fg);
     transition: transform 0.2s;
 }
 

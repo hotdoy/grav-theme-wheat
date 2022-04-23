@@ -1,13 +1,15 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'numbers' %}
-{% set title = title|default(page.header.display_title) %}
+{% set display_title = display_title|default(page.header.display_title) %}
 {% set items = items ?? page.header.items ?? null  %}
 {% block content %}
 
 <div class="wrapper text">
 
-	{% if title %}
-	<h2>{{ title }}</h2>
+	{% if display_title %}
+	<div class="module__title">
+		<h2>{{ display_title|raw }}</h2>
+	</div>
 	{% endif %}
 
     <div class="layout">
