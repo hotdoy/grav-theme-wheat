@@ -28,18 +28,13 @@ a:focus {
 
 .button:focus,
 a.button:focus,
-button.button:focus {
-    transition: box-shadow 200ms;
-    outline: none;
-    box-shadow: 0 0 0 4px var(--color-buttonfocus);
-}
-
+button.button:focus,
 .button:hover,
 a.button:hover,
 button.button:hover {
     transition: box-shadow 200ms;
     outline: none;
-    box-shadow: 0 0 0 2px var(--color-buttonfocus);
+    box-shadow: 0 0 0 4px var(--color-buttonfocus);
 }
 
 .button.disabled {

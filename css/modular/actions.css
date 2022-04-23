@@ -54,6 +54,10 @@
     }
 }
 
+.module.actions .content p {
+    color: var(--color-buttontext);
+}
+
 .module.actions .index {
     align-items: center;
     background-color: var(--color-buttontext);
