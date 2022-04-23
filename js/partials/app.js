@@ -9,7 +9,7 @@ const App = {
     interactiveDelay: 0,
     completeDelay: 0,
     fxDelay: 0,
-    navigationDelay: 200,
+    navigationDelay: 0,
     perceivedDelay: performance.now(),
     interactiveAdjustedDelay: 0,
     completeAdjustedDelay: 0,
