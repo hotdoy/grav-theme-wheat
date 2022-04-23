@@ -19,7 +19,7 @@ padding-bottom: var(--gutter);
 }
 
 .scroller__scrollctn::-webkit-scrollbar-track {
-    background-color: var(--color-area);
+    background-color: var(--color-area-bg);
     padding: 0 var(--gutter);
     border-radius: 9999px;
 }

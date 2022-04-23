@@ -3,7 +3,7 @@
 .module.features  > .wrapper {
     margin: 0 auto;
     width: 100%;
-    max-width: var(--w-main);
+    max-width: var(--width-main);
     padding: 0 var(--gutter);
 }
 
@@ -46,7 +46,7 @@
 }
 
 .module.features .item p {
-    color: var(--c-fg-alt);
+    color: var(--color-graytext);
     margin-top: 0.5rem;
 }
 

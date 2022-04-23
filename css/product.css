@@ -8,7 +8,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    max-width: var(--w-main);
+    max-width: var(--width-main);
     margin: 0 auto;
     padding: 0 var(--gutter);
 }
@@ -45,7 +45,7 @@
 
 .product__showcase .scroller__slide .fill,
 .product__showcase .single-image .fill {
-    background-color: var(--c-material);
+    background-color: var(--color-area-bg);
 }
 
 .product__showcase .scroller__slide img,

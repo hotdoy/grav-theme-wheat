@@ -66,11 +66,11 @@ form:
       validate:
         type: bool
 
-    snipcart_version:
-      type: text
-      label: Snipcart Version
-      placeholder: 3.3.1
-      description: 'Change at your own risk!'
+    # snipcart_version:
+    #   type: text
+    #   label: Snipcart Version
+    #   placeholder: 3.3.1
+    #   description: 'Change at your own risk!'
 
     snipcart_mode:
       type: toggle

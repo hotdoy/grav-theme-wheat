@@ -18,7 +18,7 @@
 .default-heading .wrapper {
     padding: 0 var(--gutter);
     margin: 0 auto;
-    max-width: var(--w-main);
+    max-width: var(--width-main);
     width: 100%;
 }
 
@@ -33,6 +33,6 @@
     margin: 1rem auto 0 auto;
     padding: 0 var(--gutter);
     text-align: center;
-    max-width: var(--w-tight);
+    max-width: var(--width-tight);
     color: grey;
 }

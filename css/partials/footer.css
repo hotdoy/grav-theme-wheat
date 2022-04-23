@@ -1,7 +1,7 @@
 #footer {
-    background-color: var(--color-bg);
-    border-top: 1px solid var(--color-area);
-    color: var(--color-fg);
+    background-color: var(--color-area-bg);
+    border-top: 1px solid var(--color-area-bg);
+    color: var(--color-area-fg);
     margin-top: var(--rhythm);
     padding-bottom: var(--gutter);
     padding-top: calc(var(--rhythm) - 2rem);
@@ -14,7 +14,7 @@
 }
 
 #footer .wrapper {
-    max-width: var(--w-main);
+    max-width: var(--width-main);
     margin: 0 auto;
     padding: 0 var(--gutter);
 }

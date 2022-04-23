@@ -39,8 +39,7 @@
 	justify-content: center;
 	min-height: 20vh; 
 	padding: 20px var(--gutter);
-	background-color: var(--c-bg);
-	border: 1px solid var(--c-guide);
+	background-color: var(--color-bg);
 	border-radius: 20px;
 	transition-property: opacity, transform;
 	transition-duration: 0.5s;

@@ -19,10 +19,10 @@
     left: 0;
     font-size: medium;
     line-height: 1;
-    max-width: var(--w-full);
+    max-width: var(--width-full);
     margin: 0 auto;
     padding: var(--gutter);
-    color: var(--c-fg);
+    color: var(--color-fg);
     z-index: 5000;
 }
 

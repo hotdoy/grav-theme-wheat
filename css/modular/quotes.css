@@ -3,7 +3,7 @@
 .module.quotes > .wrapper {
   position: relative;
   width: 100%;
-  max-width: var(--w-main);
+  max-width: var(--width-main);
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
@@ -24,14 +24,14 @@
   height: auto;
   padding: var(--rhythm) 2rem;
   text-align: center;
-  background-color: var(--color-area);
-  color: var(--color-areatext);
+  background-color: var(--color-area-bg);
+  color: var(--color-area-fg);
   border-radius: 8px;
 }
 
 .module.quotes blockquote {
   margin: 0 auto;
-  max-width: var(--w-tight);
+  max-width: var(--width-tight);
   font-size: 1.5em;
 }
 

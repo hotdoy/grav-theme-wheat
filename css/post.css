@@ -14,7 +14,7 @@
 .post-heading .wrapper {
     padding: 0 var(--gutter);
     margin: 0 auto;
-    max-width: var(--w-main);
+    max-width: var(--width-main);
     width: 100%;
     text-align: center;
 }

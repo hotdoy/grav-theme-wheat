@@ -27,10 +27,10 @@
 ============================================*/
 
 :root {
-	--w-tight: 100%;
-	--w-main: 100%;
-	--w-body: 100%;
-	--w-full: 100%;
+	--width-tight: 100%;
+	--width-main: 100%;
+	--width-body: 100%;
+	--width-full: 100%;
 	--gutter: 16px;
 	--rhythm: 120px;
 	--header: 34px;
@@ -38,10 +38,10 @@
 
 @media (min-width: 640px) {
 	:root {
-		--w-tight: 500px;
-		--w-main: 100%;
-		--w-body: 100%;
-		--w-full: 100%;
+		--width-tight: 500px;
+		--width-main: 100%;
+		--width-body: 100%;
+		--width-full: 100%;
 		--gutter: 18px;
 		--rhythm: 160px;
 		--header: 40px;
@@ -50,10 +50,10 @@
   
 @media (min-width: 1024px) {
 	:root {
-		--w-tight: 535px;
-		--w-main: 900px;
-		--w-body: 100%;
-		--w-full: 100%;
+		--width-tight: 535px;
+		--width-main: 900px;
+		--width-body: 100%;
+		--width-full: 100%;
 		--gutter: 20px;
 		--rhythm: 180px;
 		--header: 44px;
@@ -62,10 +62,10 @@
   
 @media (min-width: 1280px) {
 	:root {
-		--w-tight: 535px;
-		--w-main: 1200px;
-		--w-body: 100%;
-		--w-full: 100%;
+		--width-tight: 535px;
+		--width-main: 1200px;
+		--width-body: 100%;
+		--width-full: 100%;
 		--gutter: 20px;
 		--rhythm: 200px;
 		--header: 44px;
@@ -74,10 +74,10 @@
 
 @media (min-width: 1440px) {
 	:root {
-		--w-tight: 640px;
-		--w-main: 1200px;
-		--w-body: 1600px;
-		--w-full: 1920px;
+		--width-tight: 640px;
+		--width-main: 1200px;
+		--width-body: 1600px;
+		--width-full: 1920px;
 		--gutter: 20px;
 		--rhythm: 200px;
 		--header: 44px;

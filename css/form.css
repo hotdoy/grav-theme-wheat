@@ -5,10 +5,10 @@ body.login,
 body.forgot,
 body.register,
 body.profile {
-	--c-bg: #1f1f1f;
-	--c-fg: white;
-    --c-btn-bg: white;
-	--c-btn-fg: #1f1f1f;
+	--c0lor-bg: #1f1f1f;
+	--color-fg: white;
+    --color-buttonface: white;
+	--color-buttontext: #1f1f1f;
 }
 
 body.form #footer,
@@ -26,7 +26,7 @@ body.profile #footer {
 }
 
 #grav-login h4 {
-	color: var(--c-fg);
+	color: var(--color-fg);
 }
 
 body.form,
