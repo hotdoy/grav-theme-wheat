@@ -1,6 +1,7 @@
 {% set image = image ?? null %}
 
 {% if image %}
+    {% set src = image.url %}
     {% set image_alt = image_alt ?? null %}
     {% set image_title = image_title ?? null %}
     {% set width = image ? image.width : null %}
@@ -10,7 +11,7 @@
     {% set system_quality = system.images.default_image_quality ?? '85' %}
     {% set quality = image.quality matches '/^\\d+$/' ? image.quality > system_quality ? system_quality : image.quality %}
     {% set loading = loading ?? page.header.image_loading ?? 'lazy' %}
-    {% set bypass = image ? '_bypass' in image.filename : page.header.image_bypass ? true : false %}
+    {% set bypass = page.header.image_bypass ?? false %}
 
     {# PLACEHOLDER #}
     {% if config.plugins['file-content'].enabled and type != 'vector' -%}
@@ -24,9 +25,9 @@
     {% if type == 'vector' %}
         {{ image.loading.html(image_title, image_alt)|raw }}
     {% elseif bypass %}
-        {{ image.attribute('style', style).attribute('width', width).attribute('height', height).loading(loading).html(image_title, image_alt)|raw }}
+        <img src="{{ src }}" style="{{ style }}" width="{{ width }}" height="{{ height }}" loading="{{ loading }}" alt="{{ image_alt }}">
     {% else %}
-        {{ image.derivatives(320,1920).attribute('style', style).attribute('width', width).attribute('height', height).quality(quality).loading(loading).sizes('(max-width:26em) 100vw, 50vw').html(image_title, image_alt)|raw }}
+        {{ image.attribute('style', style).attribute('width', width).attribute('height', height).quality(quality).loading(loading).html(image_title, image_alt)|raw }}
     {% endif %}
 {% endif %}
 

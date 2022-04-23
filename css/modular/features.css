@@ -49,35 +49,3 @@
     color: var(--color-graytext);
     margin-top: 0.5rem;
 }
-
-
-
-
-/*===========================================
-				    FX 
-============================================*/
-
-@media (prefers-reduced-motion: no-preference) {
-
-    .module.features .item > img {
-        transition-property: transform, opacity;
-        transition-delay: 100ms;
-        transition-duration: 400ms;
-        transform: translateY(10px);
-        opacity: 0;
-    }
-
-    .module.features .item > h3,
-    .module.features .item > p {
-        transition-property: transform, opacity;
-        transition-delay: calc(var(--item-index) * 50ms);
-        transition-duration: calc((var(--item-index) * 100ms) + 500ms);
-        transform: translateY(10px);
-        opacity: 0;
-    }
-
-    .module.features .item[data-scroll="in"] > * {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}

@@ -70,14 +70,16 @@
     .module.mediatext .content > * {
         opacity: 0;
         transition-property: transform, opacity;
-        transition-duration: 400ms;
+        transition-duration: 1s;
         transform: translateY(50px);
+        transition-timing-function: var(--ease-outexpo);
     }
 
-    .module.mediatext .content[data-scroll="in"] > * {
+    .module[data-scroll="in"].mediatext .content > * {
         opacity: 1;
         transition-delay: calc(var(--item-index)*50ms);
-        transition-duration: calc((var(--item-index)*100ms) + 1000ms);
+        transition-duration: calc((var(--item-index)*100ms) + 1500ms);
         transform: translateY(0);
     }
+
 }
