@@ -9,7 +9,7 @@
 .calendar__list > .wrapper {
 	margin: 0 auto;
 	padding: 0 var(--gutter);
-	max-width: var(--w-main);
+	max-width: var(--width-main);
     display: flex;
     flex-direction: column;
     gap: calc(var(--gutter)*2);
@@ -26,7 +26,7 @@
 	align-items: center;
 	justify-content: center;
 	padding: 0 var(--gutter);
-	max-width: var(--w-main);
+	max-width: var(--width-main);
 	margin: 0 auto;
 	margin-top: calc(var(--gutter)*2);
 }
@@ -52,7 +52,7 @@
 
 .calendar-card {
     padding-top: var(--gutter);
-    border-top: 1px solid var(--c-bg-alt);
+    border-top: 1px solid var(--color-area-bg);
     width: 100%;
 }
 
@@ -64,7 +64,7 @@
 
 .calendar-card__date {
     display: inline-block;
-    background-color: var(--c-bg-alt);
+    background-color: var(--color-area-bg);
     border-radius: 4px;
     flex-shrink: 0;
     height: fit-content;
@@ -145,7 +145,7 @@
     position: relative;
     flex-shrink: 0;
     overflow: hidden;
-    background-color: var(--c-bg-alt);
+    background-color: var(--color-area-bg);
     border-radius: 8px;
 }
 

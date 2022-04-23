@@ -29,15 +29,15 @@ body.splash #header .shim {
 ============================================*/
 
 .splash__heading {
-	--c-bg: #1f1f1f;
-	--c-fg: white;
+	--color-bg: #1f1f1f;
+	--color-fg: white;
     position: relative;
     margin: 0 auto;
     height: 100vh;
     min-height: 667px;
     width: 100%;
-    background-color: var(--c-bg);
-    color: var(--c-fg);
+    background-color: var(--color-bg);
+    color: var(--color-fg);
     overflow: hidden;
 }
 
@@ -51,7 +51,7 @@ body.splash #header .shim {
     bottom: 0;
     left: 0;
     margin: 0 auto;
-    max-width: var(--w-main);
+    max-width: var(--width-main);
     padding: var(--gutter);
 }
 
@@ -84,8 +84,8 @@ body.splash #header .shim {
 }
 
 .splash__heading .content {
-    max-width: var(--w-tight);
-    padding-bottom: var(--header);
+    max-width: var(--width-tight);
+    padding-bottom: var(--header-height);
     text-align: center;
     z-index: 2;
 }

@@ -2,7 +2,7 @@
 
 .module.form .wrapper{
 	width: 100%;
-	max-width: var(--w-main);
+	max-width: var(--width-main);
 	margin: 0 auto;
 	padding: 0 var(--gutter);
 }
@@ -19,7 +19,7 @@
 
 .module.form .content {
     margin: 0 auto;
-    max-width: var(--w-tight);
+    max-width: var(--width-tight);
 }
 
 @media (min-width: 1024px) {
@@ -30,19 +30,18 @@
 }
 
 .module.form .panel {
-    --c-bg: white;
-	--c-fg: #1f1f1f;
-    --c-btn-bg: #1f1f1f;
-	--c-btn-fg: white;
+    --color-bg: white;
+	--color-fg: #1f1f1f;
+    --color-buttonface: #1f1f1f;
+	--color-buttontext: white;
     font-size: 16px;
     margin: 0 auto;
     margin-top: 2rem;
     width: 100%;
     flex-grow: 0;
-    max-width: var(--w-tight);
+    max-width: var(--width-tight);
     padding: 1rem;
-    border: 1px solid whitesmoke;
-    background-color: white;
+    background-color: var(--color-bg);
     border-radius: 8px;
 }
 
@@ -69,7 +68,7 @@
 
 /*LABEL*/
 .module.form .form-field  .form-label {
-    color: var(--c-fg);
+    color: var(--color-fg);
 	margin-bottom: 5px;
 }
 
@@ -93,9 +92,9 @@
     font-size: 1rem;
     line-height: 1.5;
     color: #495057;
-    background-color: #fff;
+    background-color: var(--color-bg);
     background-clip: padding-box;
-    border: 1px solid #ced4da;
+    border: 1px solid var(--color-area-bg);
     border-radius: .25rem;
 }
 
@@ -130,9 +129,9 @@
     font-size: 1rem;
     line-height: 1.5;
     color: #495057;
-    background-color: #fff;
+    background-color: var(--color-bg);
     background-clip: padding-box;
-    border: 1px solid #ced4da;
+    border: 1px solid var(--color-area-bg);
     border-radius: .25rem;
 }
 

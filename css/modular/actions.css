@@ -2,7 +2,7 @@
 
 .module.actions > .wrapper {
 	margin: 0 auto;
-    max-width: var(--w-main);
+    max-width: var(--width-main);
 	padding: 0 var(--gutter);
     position: relative;
 	width: 100%;

@@ -4,7 +4,7 @@
     margin: 0 auto;
     padding: 0 var(--gutter);
     width: 100%;
-    max-width: var(--w-main);
+    max-width: var(--width-main);
 }
 
 .module.emphasis .text * {
@@ -16,18 +16,6 @@
     .module.emphasis .text * {
         font-size: xx-large;
     }
-}
-
-
-
-
-
-/*===========================================
-				    FX 
-============================================*/
-.module.emphasis.dark {
-    background-color: #1f1f1f;
-    color: white;
 }
 
 

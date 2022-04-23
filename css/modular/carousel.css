@@ -5,7 +5,7 @@
 	margin: 0 auto;
 	padding: 0 var(--gutter);
 	width: 100%;
-	max-width: var(--w-main);
+	max-width: var(--width-main);
 	overflow: hidden;
 }
 
@@ -72,7 +72,7 @@
 
 .module.carousel article .media {
 	aspect-ratio: 1/1;
-	background-color: #f1f1f1;
+	background-color: var(--color-area-bg);
 	border-radius: 8px;
 	overflow: hidden;
 	position: relative;
@@ -86,7 +86,7 @@
 }
 
 .module.carousel article .content {
-	color: var(--color-areatext);
+	color: var(--color-area-fg);
 	display: grid;
 	flex-direction: column;
 	gap: 10px;

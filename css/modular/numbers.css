@@ -5,7 +5,7 @@
 	margin: 0 auto;
 	padding: 0 var(--gutter);
 	width: 100%;
-	max-width: var(--w-main);
+	max-width: var(--width-main);
 }
 
 .module.numbers > .wrapper > h2 {

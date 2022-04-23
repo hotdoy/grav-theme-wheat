@@ -53,7 +53,7 @@
 .event-info .wrapper {
     padding: 0 var(--gutter);
     margin: 0 auto;
-    max-width: var(--w-tight);
+    max-width: var(--width-tight);
     width: 100%;
 }
 
@@ -76,7 +76,7 @@
 }
 
 .event-info .layout {
-	background-color: var(--c-bg-alt);
+	background-color: var(--c-area-bg);
 	border-radius: 8px;
 	padding: var(--gutter);
 }

@@ -14,9 +14,9 @@
 }
 
 .module.details details {
-    background-color: var(--color-area);
+    background-color: var(--color-area-bg);
     border-radius: 8px;
-    color: var(--color-areatext);
+    color: var(--color-area-fg);
     display: block;
     padding: 1rem;
 }

@@ -23,7 +23,7 @@ button.button {
 }
 
 a:focus {
-    outline: 1px dotted var(--c-fg);
+    outline: 1px dotted var(--color-fg);
 }
 
 .button:focus,
