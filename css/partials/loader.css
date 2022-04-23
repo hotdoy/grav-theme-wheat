@@ -21,17 +21,3 @@ body[data-state*='_nav'] #loader {
     opacity: 1;
     visibility: visible;
 }
-
-body[data-state^='_0'] #main {
-    transform: translateY(15px);
-    transition-property: transform;
-    transition-duration: 200ms;
-}
-
-body[data-state^='_01'] #main {
-    transform: translateY(0);
-}
-
-body[data-state*='_nav'] #main {
-    transform: translateY(15px);
-} */

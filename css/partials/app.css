@@ -23,3 +23,18 @@ img[loading="lazy"][data-state="1"] {
 @keyframes appImg {
     to {opacity: 1;}
 } */
+
+body[data-state^='_0'] #main {
+    transform: translateY(15px);
+    transition-property: transform, opacity;
+    transition-duration: 200ms;
+}
+
+body[data-state^='_01'] #main {
+    transform: translateY(0);
+}
+
+body[data-state*='_nav'] #main {
+    opacity: 0;
+    transform: translateY(15px);
+}
