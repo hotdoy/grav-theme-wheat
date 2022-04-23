@@ -30,7 +30,7 @@ padding-bottom: var(--gutter);
 }
 
 .scroller__scrollctn::-webkit-scrollbar-thumb {
-    background-color: var(--color-arealighttext);
+    background-color: var(--color-area-graytext);
     border-radius: 9999px;
 }
 

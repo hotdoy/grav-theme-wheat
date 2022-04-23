@@ -52,7 +52,7 @@
 }
 
 .module.numbers .item p {
-	color: var(--color-lighttext);
+	color: var(--color-graytext);
 }
 
 
