@@ -21,3 +21,21 @@ Navigate to your `public_html` folder and run...
 `find . -type d -exec chmod 755 {} \;`
 
 `find . -type f -exec chmod 644 {} \;`
+
+## Track performance with Fathom Analytucs custom events
+
+```
+<script>
+    document.addEventListener('appComplete', () => {
+        if (typeof fathom !== 'undefined') {
+            if (App.tti < 1000) {
+                // FAST 
+                fathom.trackGoal('FAST_EVENT_ID');
+            } else {
+                // SLOW
+                fathom.trackGoal('SLOW_EVENT_ID');
+            }
+        }
+    });
+</script>
+```
