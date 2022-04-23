@@ -26,7 +26,8 @@
     flex-wrap: wrap;
     flex-direction: column-reverse;
 }
-@media (min-width: 735px) {
+
+@media (min-width: 640px) {
     #footer .links {
         flex-direction: row;
     }
@@ -53,16 +54,22 @@
 }
 
 #footer .links ul li:first-child {
-    font-weight: var(--font-base-bold);
+    color: var(--color-area-fg);
     margin-top: 2rem;
 }
 
-#footer .links li {
+#footer .links ul li {
+    color: var(--color-area-graytext);
     margin-top: 10px;
 }
 
 #footer .links a {
     text-decoration: none;
+    transition-property: opacity 0.2s;
+}
+
+#footer .links a:hover {
+    opacity: 0.8;
 }
 
 #footer .footnote {

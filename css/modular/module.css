@@ -33,32 +33,14 @@
     .module {
         opacity: 0;
         transition-property: transform, opacity;
-        transition-duration: 1.7s;
-        transform: translateY(50px);
+        transition-duration: 0.9s;
+        transform: translateY(20px);
         transition-timing-function: var(--ease-outexpo);
     }
 
     .module[data-scroll="in"] {
         opacity: 1;
         transform: translateY(0);
-    }
-
-    .module__title {
-        overflow: hidden;
-    }
-    
-	.module__title * {
-        opacity: 0;
-        transform: translateY(100%);
-    }
-
-    .module[data-scroll="in"] .module__title * {
-        transition-duration: 500ms;
-		transition-property: transform, opacity;
-        transition-timing-function: var(--ease-outexpo);
-        transform: translateY(100%);
-        transform: translateY(0);
-        opacity: 1;
     }
 
 }
