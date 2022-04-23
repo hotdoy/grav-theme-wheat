@@ -8,10 +8,17 @@
 	max-width: var(--width-main);
 }
 
-.module.numbers > .wrapper > h2 {
+.module.numbers .wrapper > h2 {
     margin-bottom: 2rem;
     width: 100%;
+    max-width: 80%;
     text-align: left;
+}
+
+@media (min-width: 1024px) {
+    .module.numbers .wrapper > h2 {
+        max-width: 40%;
+    }
 }
 
 .module.numbers .layout {
@@ -37,6 +44,7 @@
 }
 
 .module.numbers .item h3 {
+    color: var(--color-hl);
 	font-size: xx-large;
 }
 
@@ -71,23 +79,13 @@
     .module.numbers .item h3 .char {
         transition-property: transform;
         transform: translateY(100%);
+        transition-timing-function: var(--ease-outback);
     }
 
-    .module.numbers .item[data-scroll="in"] h3 .char {
+    .module[data-scroll="in"].numbers .item h3 .char {
         transition-delay: calc(var(--char-index) * 50ms);
         transition-duration: calc((var(--char-index) * 100ms) + 500ms);
         transform: translateY(0%);
     }
 
-    .module.numbers .item p {
-        transition-property: transform, opacity;
-        transition-duration: 1000ms;
-        transform: translateY(10px);
-        opacity: 0;
-    }
-
-    .module.numbers .item[data-scroll="in"] p {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }

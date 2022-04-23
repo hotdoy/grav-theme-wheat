@@ -87,6 +87,18 @@
 
 
 
+/*===========================================
+			EASING FUNCTIONS 
+============================================*/
+:root {
+	--ease-outexpo: cubic-bezier(0.16, 1, 0.3, 1);
+	--ease-inoutexpo: cubic-bezier(0.87, 0, 0.13, 1);
+	--ease-outback: cubic-bezier(0.34, 1.56, 0.64, 1)
+}
+
+
+
+
 
 /*===========================================
 				DOCUMENT 
@@ -94,4 +106,7 @@
 body {
 	background-color: var(--color-bg);
     color: var(--color-fg);
+}
+#main {
+	min-height: 80vh;	
 }

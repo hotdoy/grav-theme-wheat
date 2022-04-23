@@ -95,27 +95,3 @@
         width: auto;   
     }
 }
-
-
-
-
-
-/*===========================================
-				    FX 
-============================================*/
-
-@media (prefers-reduced-motion: no-preference) {
-
-    .module.actions .content > * {
-        opacity: 0.2;
-        transition-property: transform, opacity;
-        transform: translateY(10px);
-    }
-
-    .module.actions .item[data-scroll="in"] .content > * {
-        opacity: 1;
-        transition-delay: calc(var(--item-index) * 50ms);
-        transition-duration: calc((var(--item-index) * 100ms) + 500ms);
-        transform: translateY(0);
-    }
-}
