@@ -1,9 +1,9 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'editor' %}
-{% set content = page.content %}
+{% set page_content = page_content ?? page.content ?? null %}
 
 {% block content %}
 <div class="wrapper text prose">
-	{{ content|raw }}
+	{{ page_content|raw }}
 </div>
 {% endblock %}

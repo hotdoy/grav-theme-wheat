@@ -45,6 +45,7 @@
 
 .module.actions .content {
     width: 100%;
+    color: var(--color-buttontext);
 }
 
 @media (min-width: 640px) {
@@ -54,7 +55,7 @@
     }
 }
 
-.module.actions .content p {
+.module.actions .content * {
     color: var(--color-buttontext);
 }
 

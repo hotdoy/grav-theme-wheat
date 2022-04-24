@@ -1,13 +1,15 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'features' %}
-{% set title = page.header.display_title %}
-{% set items = items|default(page.header.items) %}
+{% set display_title = display_title ?? page.header.display_title ?? null %}
+{% set items = items ?? page.header.items ?? null %}
 
 {% block content %}
 <div class="wrapper text">
 
-    {% if title %}
-	<h2>{{ title }}</h2>
+	{% if display_title %}
+	<div class="module__title">
+		<h2>{{ display_title|raw }}</h2>
+	</div>
 	{% endif %}
 
     <div class="layout">

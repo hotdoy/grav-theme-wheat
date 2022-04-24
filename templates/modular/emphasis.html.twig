@@ -1,10 +1,9 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'emphasis' %}
-
-{% set content = page.content %}
+{% set page_content = page_content ?? page.content ?? null %}
 
 {% block content %}
 <div class="wrapper text prose">
-	{% if content %}{{ content|raw }}{% endif %}
+	{{ content|raw }}
 </div>
 {% endblock %}
