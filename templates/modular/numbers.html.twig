@@ -1,11 +1,10 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'numbers' %}
-{% set display_title = display_title|default(page.header.display_title) %}
+{% set display_title = display_title ?? page.header.display_title ?? null %}
 {% set items = items ?? page.header.items ?? null  %}
+
 {% block content %}
-
 <div class="wrapper text">
-
 	{% if display_title %}
 	<div class="module__title">
 		<h2>{{ display_title|raw }}</h2>
@@ -24,5 +23,4 @@
     </div>
 
 </div>
-
 {% endblock %}

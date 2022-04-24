@@ -4,7 +4,7 @@ document.addEventListener('appInteractive', () => {
         // MODULE (DEFAULT)
         ScrollOut({
             targets: ['.module'],
-            // once: true
+            once: true
         });
 
         

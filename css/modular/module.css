@@ -19,6 +19,19 @@
     margin-top: var(--gutter);
 }
 
+.module .module__title {
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 80%;
+    text-align: left;
+}
+
+@media (min-width: 1024px) {
+    .module .module__title {
+        max-width: 40%;
+    }
+}
+
 
 
 

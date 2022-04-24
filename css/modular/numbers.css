@@ -79,7 +79,7 @@
     .module.numbers .item h3 .char {
         transition-property: transform;
         transform: translateY(100%);
-        transition-timing-function: var(--ease-outback);
+        transition-timing-function: var(--ease-outexpo);
     }
 
     .module[data-scroll="in"].numbers .item h3 .char {

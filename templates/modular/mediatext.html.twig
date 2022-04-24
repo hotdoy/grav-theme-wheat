@@ -1,11 +1,10 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'mediatext' %}
-
-{% set mp4 = page.header.mp4 ? page.media[page.header.mp4] %}
-{% set image = page.header.image ? page.media[page.header.image] %}
+{% set mp4 = page.header.mp4 ? page.media[page.header.mp4] : null %}
+{% set image = page.header.image ? page.media[page.header.image] : null %}
 {% set image_alt = page.header.image_alt ?? '' %}
 {% set media_position = page.header.media_position ?? 'left' %}
-{% set content = page.content|raw %}
+{% set page_content = page_content ?? page.content ?? null %}
 
 {% block content %}
 <div class="wrapper {{ media_position }}">
@@ -19,7 +18,7 @@
 		{% endif %}
 	</div>
 	<div class="content text prose">
-		{% if content %}{{ content|raw }}{% endif %}
+		{{ page_content|raw }}
 	</div>
 </div>
 {% endblock %}

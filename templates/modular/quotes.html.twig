@@ -1,11 +1,12 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'quotes' %}
+{% set items = items ?? page.header.items ?? null %}
 
 {% block content %}
 <div class="wrapper">
 	<div class="scroller">
 		<div class="scroller__scrollctn">
-			{% for item in page.header.items %}
+			{% for item in items %}
 			{% set quote = item.quote %}
 			{% set color = item.color %}
 			{% set source = item.source %}
@@ -23,7 +24,7 @@
 			</div>
 			{% endfor %}
 		</div>
-		{% if page.header.items|length > 1 %}
+		{% if items|length > 1 %}
 		<span class="scroller__prev"></span>
 		<span class="scroller__next"></span>
 		{% endif %}
