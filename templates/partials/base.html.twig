@@ -7,14 +7,14 @@
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 	<head>
 		{% block metadata %}{% include 'partials/metadata.html.twig' %}{% endblock %}
-		{% block canonical %}<link rel="canonical" href="{{ page.url(true, true) }}" />{% endblock %}
 		{% block favicon %}{% include 'partials/favicon.html.twig' %}{% endblock %}
-		{% block preload %}{% include "partials/preload.html.twig" %}{% endblock %}
+		{% block canonical %}<link rel="canonical" href="{{ page.url(true, true) }}" />{% endblock %}
 		{% block assets deferred %}
 		{{ assets.css()|raw }}
 		{{ assets.js('top')|raw }}
 		{% endblock %}
 		{% if theme.inline_css -%}<style>{{ theme.inline_css|raw }}</style>{%- endif %}
+		{% block preload %}{% include "partials/preload.html.twig" %}{% endblock %}
 		{% if theme.inline_head_script %}{{ theme.inline_head_script|raw }}{% endif %}
 	</head>
 
