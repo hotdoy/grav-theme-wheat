@@ -7,15 +7,14 @@
     max-width: var(--width-main);
 }
 
-.module.emphasis .text * {
-    font-size: x-large;
-    line-height: 1.5;
-}
-
-@media (min-width: 1024px) {
-    .module.emphasis .text * {
-        font-size: xx-large;
-    }
+.module.emphasis p {
+    font-size: 24px;
+    font-size: clamp(24px, 4vw, 48px);
+    line-height: 1.2;
+    font-weight: var(--font-base-bold);
+    color: var(--color-fg);
+    font-weight: var(--font-base-regular);
+    text-align: center;
 }
 
 

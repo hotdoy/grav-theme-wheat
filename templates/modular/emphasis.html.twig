@@ -1,9 +1,10 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'emphasis' %}
-{% set page_content = page_content ?? page.content ?? null %}
+
+{% set content = page.header.content ?? null %}
 
 {% block content %}
-<div class="wrapper text prose">
-	{{ content|raw }}
+<div class="wrapper text large prose">
+	<p>{{ content|raw }}</p>
 </div>
 {% endblock %}

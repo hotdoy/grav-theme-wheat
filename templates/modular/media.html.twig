@@ -1,24 +1,38 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'media' %}
-{% set yt_videoid = page.header.yt_videoid %}
-{% set mp4 = page.header.mp4 ? page.media[page.header.mp4] %}
-{% set image = page.header.image ? page.media[page.header.image] %}
+
+{% set header = page.header.header ?? null %}
+{% set yt_videoid = page.header.yt_videoid ?? null %}
+{% set mp4 = page.header.mp4 ? page.media[page.header.mp4] : null %}
+{% set image = page.header.image ? page.media[page.header.image] : null %}
 {% set image_alt = page.header.image_alt ?? '' %}
+{% set caption = page.header.caption ?? null %}
 
 {% block content %}
 <div class="wrapper">
+
+	{% if header %}
+	<div class="content text large prose">
+		{{ header|markdown }}
+	</div>
+	{% endif %}
+
 	{% if yt_videoid %}
 	<lite-youtube videoid="{{ yt_videoid }}" params="modestbranding=1&rel=0" style="background-image: url('{{ image.url }}');"></lite-youtube>
+	
 	{% elseif mp4 %}
 	<video autoplay loop muted poster="{{ image.url }}" height="{{ image.height }}" width="{{ image.width }}">
 		{% if mp4 %} <source type="video/mp4" src="{{ mp4.url }}">{% endif %}
 		{% if webm %} <source type="video/webm" src="{{ webm.url }}">{% endif %}
 	</video>
+
 	{% elseif image %}
 	{% include "partials/img.html.twig" with {image: image, image_alt: image_alt} %}
 	{% endif %}
-	{% if page.header.caption %}
+	
+	{% if caption %}
 	<div class="caption text small">{{ page.header.caption|markdown }}</div>
 	{% endif %}
+
 </div>
 {% endblock %}

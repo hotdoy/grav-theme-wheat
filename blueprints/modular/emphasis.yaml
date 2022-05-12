@@ -7,5 +7,12 @@ form:
       fields:
         content:
           fields:
+            content:
+              unset@: true
             header.media_order:
-              ordering@: +99
+              unset@: true
+            
+            header.content:
+              type: textarea
+              style: vertical
+              label: Content
