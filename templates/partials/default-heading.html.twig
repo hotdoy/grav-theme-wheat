@@ -4,9 +4,9 @@
 
 {% if title %}
 <section class="default-heading">
-	<div class="default-heading__wrapper">
+	<div class="wrapper">
 		{{ breadcrumbs.html(page, pages, page.collection({items: {'@self.page': ''}})) }}
-		<div class="default-heading__title text large">
+		<div class="title text large">
 			<h1>{{ title|raw }}</h1>
 		</div>
 	</div>	

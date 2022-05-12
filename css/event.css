@@ -17,7 +17,7 @@
 .event__heading .wrapper {
     padding: 0 var(--gutter);
     margin: 0 auto;
-    max-width: var(--w-main);
+    max-width: var(--width-main);
     width: 100%;
     text-align: center;
 }
@@ -76,7 +76,7 @@
 }
 
 .event-info .layout {
-	background-color: var(--c-area-bg);
+	background-color: var(--color-area-bg);
 	border-radius: 8px;
 	padding: var(--gutter);
 }
