@@ -21,6 +21,11 @@ body.splash #header .shim {
     height: 0;
 }
 
+body.splash #header .main {
+    position: absolute;
+    background: none;
+}
+
 
 
 
@@ -107,7 +112,7 @@ body.splash #header .shim {
         transform: scale(1.1);
     }
 
-    .splash__heading[data-scroll="in"] .media img {
+    body[data-state^='_01'] .splash__heading .media img {
         transform: scale(1);
     }
 }

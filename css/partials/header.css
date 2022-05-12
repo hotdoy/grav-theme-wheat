@@ -13,7 +13,7 @@
 }
 
 #header .main {
-    background: linear-gradient(180deg, white, rgb(255 255 255 / 0%));
+    background: linear-gradient(180deg, var(--color-bg), rgb(255 255 255 / 0%));
     color: var(--color-fg);
     font-size: medium;
     left: 0;
