@@ -27,12 +27,5 @@
     opacity: 0.5;
 }
 
-/* .default-heading__title {} */
+/* .default-heading .title {} */
 
-.default-heading__intro {
-    margin: 1rem auto 0 auto;
-    padding: 0 var(--gutter);
-    text-align: center;
-    max-width: var(--width-tight);
-    color: grey;
-}

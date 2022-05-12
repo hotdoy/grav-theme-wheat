@@ -13,16 +13,17 @@
 }
 
 #header .main {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    font-size: medium;
-    line-height: 1;
-    max-width: var(--width-full);
-    margin: 0 auto;
-    padding: var(--gutter);
+    background: linear-gradient(180deg, white, rgb(255 255 255 / 0%));
     color: var(--color-fg);
+    font-size: medium;
+    left: 0;
+    line-height: 1;
+    margin: 0 auto;
+    max-width: var(--width-full);
+    padding: var(--gutter);
+    position: fixed;
+    right: 0;
+    top: 0;
     z-index: 5000;
 }
 
