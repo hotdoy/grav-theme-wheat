@@ -248,6 +248,64 @@
 
 
 
+
+/*===========================================
+        	        LARGE 
+============================================*/
+
+.text.large {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.text.large :where(p) {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.text.large.prose :where(p) {
+    margin: 1rem 0;
+}
+
+.text.large :where(h1) {
+    font-size: 42px;
+    font-size: clamp(42px, 4vw, 96px);
+    line-height: 1.2;
+    font-weight: var(--font-base-bold);
+}
+
+.text.large :where(h2) {
+    font-size: 32px;
+    font-size: clamp(32px, 4vw, 64px);
+    line-height: 1.2;
+    font-weight: var(--font-base-bold);
+}
+
+.text.large.prose :where(h1),
+.text.large.prose :where(h2) {
+    margin: 2rem 0;
+}
+
+.text.large :where(h3),
+.text.large :where(h4),
+.text.large :where(h5),
+.text.large :where(h6) {
+    font-size: 24px;
+    font-size: clamp(24px, 4vw, 48px);
+    line-height: 1.2;
+    font-weight: var(--font-base-bold);
+}
+
+.text.large.prose :where(h3),
+.text.large.prose :where(h4),
+.text.large.prose :where(h5),
+.text.large.prose :where(h6) {
+    margin: 1rem 0;
+}
+
+
+
+
 /*===========================================
         	 	   CODE 
 ============================================*/

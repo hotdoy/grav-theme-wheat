@@ -1,16 +1,10 @@
 /* .module.features {} */
 
-.module.features  > .wrapper {
+.module.features .wrapper {
     margin: 0 auto;
-    width: 100%;
     max-width: var(--width-main);
     padding: 0 var(--gutter);
-}
-
-.module.features > .wrapper > h2 {
-    margin-bottom: 2rem;
     width: 100%;
-    text-align: left;
 }
 
 .module.features .layout {
@@ -36,13 +30,15 @@
 }
 
 .module.features .item img {
-    width: 30px;
     height: auto;
+    width: 30px;
 }
 
 .module.features .item h3 {
+    color: var(--color-fg);
+    font-size: 16px;
+    line-height: 1.5;
     margin-top: 0.5rem;
-    font-size: medium
 }
 
 .module.features .item p {
