@@ -14,8 +14,24 @@
 
 	--color-area-bg: #f1f1f1;
 	--color-area-fg: #0a2540;
-	--color-area-hl: #0d59f2;
 	--color-area-graytext: #425466;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-bg: #121212;
+		--color-fg: #E1E1E1;
+		--color-hl: #0d59f2;
+		--color-graytext: #A0A0A0;
+
+		--color-buttonface: #0d59f2;
+		--color-buttontext: white;
+		--color-buttonfocus: rgb(121 164 255);
+
+		--color-area-bg: #1E1E1E;
+		--color-area-fg: #E1E1E1;
+		--color-area-graytext: #A0A0A0;
+	}
 }
 
 
