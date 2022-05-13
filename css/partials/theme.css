@@ -5,30 +5,30 @@
 :root {
 	--color-bg: white;
 	--color-fg: #0a2540;
-	--color-hl: #0d59f2;
+	--color-hl: #635bff;
 	--color-graytext: rgb(106, 115, 125);
 
-	--color-buttonface: #0d59f2;
+	--color-buttonface: #635bff;
 	--color-buttontext: white;
 	--color-buttonfocus: rgb(121 164 255);
 
 	--color-area-bg: #f1f1f1;
 	--color-area-fg: #0a2540;
-	--color-area-graytext: #425466;
+	--color-area-graytext: rgb(106, 115, 125);
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--color-bg: #121212;
+		--color-bg: #202124;
 		--color-fg: #E1E1E1;
-		--color-hl: #0d59f2;
+		--color-hl: #635bff;
 		--color-graytext: #A0A0A0;
 
-		--color-buttonface: #0d59f2;
+		--color-buttonface: #635bff;
 		--color-buttontext: white;
 		--color-buttonfocus: rgb(121 164 255);
 
-		--color-area-bg: #1E1E1E;
+		--color-area-bg: #303134;
 		--color-area-fg: #E1E1E1;
 		--color-area-graytext: #A0A0A0;
 	}
