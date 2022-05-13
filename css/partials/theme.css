@@ -19,7 +19,7 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--color-bg: #121212;
+		--color-bg: #202124;
 		--color-fg: #E1E1E1;
 		--color-hl: #635bff;
 		--color-graytext: #A0A0A0;
@@ -28,7 +28,7 @@
 		--color-buttontext: white;
 		--color-buttonfocus: rgb(121 164 255);
 
-		--color-area-bg: #1E1E1E;
+		--color-area-bg: #303134;
 		--color-area-fg: #E1E1E1;
 		--color-area-graytext: #A0A0A0;
 	}
