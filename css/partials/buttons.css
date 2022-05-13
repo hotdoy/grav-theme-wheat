@@ -22,10 +22,6 @@ button.button {
     transition-duration: 0.2s;
 }
 
-a:focus {
-    outline: 1px dotted var(--color-fg);
-}
-
 .button:focus,
 a.button:focus,
 button.button:focus,
