@@ -26,7 +26,7 @@
   text-align: center;
   background-color: var(--color-area-bg);
   color: var(--color-area-fg);
-  border-radius: 8px;
+  border-radius: 1rem;
 }
 
 .module.quotes blockquote {

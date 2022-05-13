@@ -17,12 +17,11 @@ body.splash #header {
 	--color-buttontext: #1f1f1f;
 }
 
-body.splash #header .shim {
+body.splash #header-shim {
     height: 0;
 }
 
-body.splash #header .main {
-    position: absolute;
+body.splash #header {
     background: none;
 }
 

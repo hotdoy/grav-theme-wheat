@@ -10,7 +10,7 @@
 
 .module.banner .layout {
     background-color: var(--color-area-bg);
-    border-radius: 8px;
+    border-radius: 1rem;
     color: var(--color-area-fg);
     display: flex;
     flex-wrap: wrap;
