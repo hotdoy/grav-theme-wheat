@@ -108,33 +108,34 @@
 }
 
 .product__showcase .variant select {
-	display: block;
 	box-sizing: border-box;
+	display: block;
 	width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    padding: .375rem .75rem;
+    background-clip: padding-box;
+    background-color: var(--color-bg);
+    border-radius: .25rem;
+    border: 1px solid var(--color-graytext);
+    color: var(--color-graytext);
     font-family: inherit;
     font-size: 1rem;
     line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
+    max-width: 100%;
+    min-width: 100%;
+    padding: .375rem .75rem;
 }
 
 .product__showcase .variant select:focus {
     transition: box-shadow 200ms;
     outline: none;
-    box-shadow: 0 0 0 3px rgb(121 164 255);
+    box-shadow: 0 0 0 4px var(--color-buttonfocus);
 }
 
 .product__showcase .price {
+    color: var(--color-fg);
     display: block;
-    margin-top: 1rem;
     font-size: large;
     font-weight: var(--font-base-bold);
+    margin-top: 1rem;
 }
 
 .product__showcase .button {
@@ -157,7 +158,7 @@
 	margin: 0 auto;
 	padding: 0 var(--gutter);
 	width: 100%;
-	max-width: var(--w-main);
+	max-width: var(--width-main);
 	overflow: hidden;
 }
 
@@ -209,7 +210,7 @@
 .product-card__media {
     position: relative;
     padding-top: 133%;
-    background-color: var(--c-bg-alt);
+    background-color: var(--color-area-bg);
     border-radius: 8px;
     overflow: hidden;
 }

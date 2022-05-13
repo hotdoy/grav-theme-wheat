@@ -26,12 +26,12 @@ form:
 
                 .image:
                   type: pagemediaselect
-                  label: image
+                  label: Image
 
                 .title:
                   type: text
-                  label: title
+                  label: Title
 
                 .text:
                   type: textarea
-                  label: text
+                  label: Text
