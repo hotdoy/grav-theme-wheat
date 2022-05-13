@@ -32,7 +32,7 @@
     .module.media img,
     .module.media video,
     .module.media lite-youtube {
-        border-radius: 8px;
+        border-radius: 1rem;
     }
 }
 

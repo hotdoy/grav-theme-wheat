@@ -1,6 +1,6 @@
-/* .module.actions  {} */
+/* .module.banner  {} */
 
-.module.actions .wrapper {
+.module.banner .wrapper {
 	margin: 0 auto;
     max-width: var(--width-main);
 	padding: 0 var(--gutter);
@@ -8,8 +8,9 @@
 	width: 100%;
 }
 
-.module.actions .item {
+.module.banner .layout {
     background-color: var(--color-area-bg);
+    border-radius: 1rem;
     color: var(--color-area-fg);
     display: flex;
     flex-wrap: wrap;
@@ -17,50 +18,31 @@
 }
 
 @media (min-width: 640px) {
-    .module.actions .item {
+    .module.banner .layout {
         padding: 2rem;
     }
 }
 
-.module.actions .item:first-child {
-    border-radius: 8px;
-}
-
-.module.actions .content {
+.module.banner .content {
     width: 100%;
 }
 
 @media (min-width: 640px) {
-    .module.actions .content {
+    .module.banner .content {
         text-align: left;
         width: 66.66%;
     }
 }
 
-.module.actions .content h3 {
+.module.banner .content h3 {
     color: var(--color-area-fg);
 }
 
-.module.actions .content p {
+.module.banner .content p {
     color: var(--color-area-graytext);
 }
 
-.module.actions .index {
-    align-items: center;
-    background-color: var(--color-bg);
-    border-radius: 100%;
-    color: var(--color-fg);
-    display: inline-flex;
-    font-size: large;
-    font-weight: 500;
-    height: 30px;
-    justify-content: center;
-    line-height: 1;
-    margin-bottom: 3px;
-    width: 30px;
-}
-
-.module.actions .action {
+.module.banner .action {
     align-items: flex-end;
     display: flex;
     justify-content: right;
@@ -69,18 +51,18 @@
 }
 
 @media (min-width: 640px) {
-    .module.actions .action {
+    .module.banner .action {
         margin-top: 0;
         width: 33.33%;
     }
 }
 
-.module.actions .action .button {
+.module.banner .action .button {
     width: 100%;
 }
 
 @media (min-width: 640px) {
-    .module.actions .action .button {
+    .module.banner .action .button {
         width: auto;   
     }
 }

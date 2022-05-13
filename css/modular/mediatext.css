@@ -16,7 +16,7 @@
 
 .module.mediatext .media {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 1rem;
     overflow: hidden;
 }
 

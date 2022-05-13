@@ -1,21 +1,22 @@
-#header {
+:root {
     --header-heigth: 56px;
 }
 
 @media (min-width: 640px) {
-    #header {
+    :root {
         --header-heigth: 64px;
     }
 }
 
-#header .shim {
+#header-shim {
+    position: relative;
     height: var(--header-heigth);
 }
 
-#header .main {
-    background: linear-gradient(180deg, var(--color-bg), rgb(255 255 255 / 0%));
+#header {
     color: var(--color-fg);
     font-size: medium;
+    height: var(--header-heigth);
     left: 0;
     line-height: 1;
     margin: 0 auto;
@@ -25,33 +26,52 @@
     right: 0;
     top: 0;
     z-index: 5000;
+
+    backdrop-filter: blur(10px);
+    background-color: var(--header-veil);
 }
 
-#header .main .layout {
+#header[data-state] {
+    transition-property: opacity, transform;
+    transition-duration: 200ms;
+}
+
+#header[data-state='1'] {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+#header[data-state='2'] {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+#header .layout {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     height: 100%;
 }
 
-#header .main .layout .logo {
+#header .layout .logo {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#header .main .layout .logo svg {
+#header .layout .logo svg {
     width: 70px;
     height: auto;
+    z-index: 1;
 }
 
-#header .main .layout .toggles {
+#header .layout .toggles {
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-#header .main .version {
+#header .version {
     opacity: 0.7;
 }
 
@@ -60,31 +80,31 @@
 
 
 /*LINKS*/
-#header .main .layout nav ul {
+#header .layout nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#header .main .layout nav ul li {
+#header .layout nav ul li {
     margin-left: 10px;
 }
 
 @media (min-width: 640px) {
-    #header .main .layout nav ul li {
+    #header .layout nav ul li {
         margin-left: var(--gutter);
     }
 }
 
 
-/* #header .main .layout nav ul li.langswitcher {} */
+/* #header .layout nav ul li.langswitcher {} */
 
 
 
 
 
 /*TOGGLES*/
-#header .main .layout nav ul li button {
+#header .layout nav ul li button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +112,7 @@
     height: 100%;
 }
 
-#header .main .snipcart-items-count {
+#header .snipcart-items-count {
     position: absolute;
     top: 13px;
     right: -2px;
