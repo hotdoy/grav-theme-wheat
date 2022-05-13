@@ -1,0 +1,34 @@
+title: banner
+extends@: modular/module
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            content:
+              unset@: true
+            header.media_order:
+              unset@: true
+
+            header.display_title:
+              type: text
+              style: vertical
+              label: Display Title
+
+            header.banner_title:
+              type: text
+              label: Title
+
+            header.banner_text:
+              type: textarea
+              label: Text
+            
+            header.banner_label:
+              type: text
+              label: Button Label
+
+            header.banner_url:
+              type: text
+              label: Button Url
