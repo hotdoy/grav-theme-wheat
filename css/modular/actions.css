@@ -1,6 +1,6 @@
 /* .module.actions  {} */
 
-.module.actions > .wrapper {
+.module.actions .wrapper {
 	margin: 0 auto;
     max-width: var(--width-main);
 	padding: 0 var(--gutter);
@@ -8,16 +8,9 @@
 	width: 100%;
 }
 
-.module.actions > .wrapper > h2 {
-    margin-bottom: 2rem;
-    width: 100%;
-    text-align: left;
-}
-
-
 .module.actions .item {
-    background-color: var(--color-buttonface);
-    color: var(--color-buttontext);
+    background-color: var(--color-area-bg);
+    color: var(--color-area-fg);
     display: flex;
     flex-wrap: wrap;
     padding: 2rem 1rem 1rem 1rem;
@@ -30,22 +23,11 @@
 }
 
 .module.actions .item:first-child {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-.module.actions .item:last-child {
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
-.module.actions .item:not(:first-child) {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
 }
 
 .module.actions .content {
     width: 100%;
-    color: var(--color-buttontext);
 }
 
 @media (min-width: 640px) {
@@ -55,15 +37,19 @@
     }
 }
 
-.module.actions .content * {
-    color: var(--color-buttontext);
+.module.actions .content h3 {
+    color: var(--color-area-fg);
+}
+
+.module.actions .content p {
+    color: var(--color-area-graytext);
 }
 
 .module.actions .index {
     align-items: center;
-    background-color: var(--color-buttontext);
+    background-color: var(--color-bg);
     border-radius: 100%;
-    color: var(--color-buttonface);
+    color: var(--color-fg);
     display: inline-flex;
     font-size: large;
     font-weight: 500;
@@ -90,8 +76,6 @@
 }
 
 .module.actions .action .button {
-    background-color: var(--color-buttontext);
-    color: var(--color-buttonface);
     width: 100%;
 }
 
