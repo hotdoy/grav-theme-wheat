@@ -40,14 +40,13 @@
 				    FX 
 ============================================*/
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
 
-    /* DEFAULT - FADEIN FROM BOTTOM WHOLE MODULE */
     .module {
         opacity: 0;
         transition-property: transform, opacity;
-        transition-duration: 0.9s;
-        transform: translateY(20px);
+        transition-duration: 1s;
+        transform: translateY(10px);
         transition-timing-function: var(--ease-outexpo);
     }
 
@@ -56,4 +55,4 @@
         transform: translateY(0);
     }
 
-}
+} */

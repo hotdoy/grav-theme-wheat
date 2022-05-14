@@ -2,15 +2,15 @@ document.addEventListener('appInteractive', () => {
     setTimeout(() => {
 
         // MODULE (DEFAULT)
-        ScrollOut({
-            targets: ['.module'],
-            once: true
-        });
+        // ScrollOut({
+        //     targets: ['.module'],
+        //     once: true
+        // });
 
         // NUMBERS
-        Splitting({
-            target: ['.module.numbers .item h3'],
-        });
+        // Splitting({
+        //     target: ['.module.numbers .item h3'],
+        // });
  
     }, App.fxDelay);
 });
