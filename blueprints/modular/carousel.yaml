@@ -36,9 +36,9 @@ form:
                   type: text
                   label: Title
 
-                .subtitle:
+                .text:
                   type: text
-                  label: Subtitle
+                  label: Text
 
                 .url:
                   type: text
