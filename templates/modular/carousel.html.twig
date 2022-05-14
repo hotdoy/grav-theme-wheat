@@ -19,19 +19,17 @@
 				{% set image = item.image ? page.media[item.image] %}
 				{% set image_alt = item.image_alt %}
 				{% set title = item.title %}
-				{% set subtitle = item.subtitle %}
+				{% set text = item.text %}
 				<div class="scroller__slide">
 					
 					<article>
-						<a>
-							<div class="media">
-								{% include "partials/img.html.twig" with {image: image, image_alt: image_alt} %}
-							</div>
-							<div class="content">
-								<h3>{{ title }}</h3>
-								<p>{{ subtitle }}</p>
-							</div>
-						</a>
+						<div class="media">
+							{% include "partials/img.html.twig" with {image: image, image_alt: image_alt} %}
+						</div>
+						<div class="content text">
+							<h3>{{ title }}</h3>
+							<p>{{ text }}</p>
+						</div>
 					</article>
 
 				</div>

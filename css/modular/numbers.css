@@ -71,7 +71,7 @@
 				    FX 
 ============================================*/
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
     .module.numbers .item h3 {
         overflow: hidden;
     }
@@ -88,4 +88,4 @@
         transform: translateY(0%);
     }
 
-}
+} */
