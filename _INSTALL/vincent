@@ -1,0 +1,33 @@
+LOCAL FOLDER STRUCTURE
+
+    project_dir
+    |_grav-admin
+    | |_user (symlink)
+    |_user  
+    | |_grav-theme (symlink)
+    |_grav-theme
+
+
+    SYMLINK
+
+        Webroot to Grav install
+        mklink /D D:\dev\xampp\htdocs\wheat D:\dev\_calotte\wheat\grav-admin
+
+        Grav-admin user folder to project user
+        mklink /D D:\dev\_calotte\wheat\grav-admin\user D:\dev\_calotte\wheat\user
+
+        user/themes/project-theme to grav-theme-name
+        mklink /D D:\dev\_calotte\wheat\user\themes\wheat D:\dev\_calotte\wheat\grav-theme-wheat
+
+    LOCALHOSTS
+
+        windows\system32\drivers\etc\hosts
+        127.0.0.1       wheat.localhost.com
+
+    VITRTUAL HOSTS
+
+        xampp\apache\conf\extra\httpd-vhostconf
+        <VirtualHost *:80>
+            DocumentRoot "C:/xampp/htdocs/wheat"
+            ServerName wheat.localhost.com
+        </VirtualHost>
