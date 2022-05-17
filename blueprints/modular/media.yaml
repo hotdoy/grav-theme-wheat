@@ -12,10 +12,9 @@ form:
             header.media_order:
               ordering@: +99
 
-            header.header:
-              type: markdown
-              label: Header
-
+            header.lottie:
+              label: Lottie
+              type: pagemediaselect
 
             header.yt_videoid:
               label: YouTube Video ID
