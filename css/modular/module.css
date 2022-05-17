@@ -15,9 +15,9 @@
 	margin-top: calc(var(--rhythm)/2);
 }
 
-.module:first-child  {
+/* .module:first-child  {
     margin-top: var(--gutter);
-}
+} */
 
 .module .module__title {
     margin-bottom: 2rem;

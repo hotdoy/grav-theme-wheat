@@ -10,6 +10,10 @@ form:
             header.media_order:
               ordering@: +99
               
+            header.lottie:
+              label: Lottie
+              type: pagemediaselect
+
             header.mp4:
               label: Mp4
               type: pagemediaselect
