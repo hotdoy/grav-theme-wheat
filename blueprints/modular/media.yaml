@@ -16,6 +16,14 @@ form:
               label: Lottie
               type: pagemediaselect
 
+            header.lottie_width:
+              label: Lottie Width
+              type: number
+
+            header.lottie_height:
+              label: Lottie Height
+              type: number
+              
             header.yt_videoid:
               label: YouTube Video ID
               type: text
