@@ -15,7 +15,7 @@
 <div class="wrapper">
 
 	{% if lottie %}
-	<div class="lottie" width="{{ lottie_width }}" height="{{ lottie_height }}" data-animation-path="{{ lottie.url }}"></div>
+	<div class="lottie" style="height:{{ lottie_height }}px;" data-animation-path="{{ lottie.url }}"></div>
 
 	{% elseif yt_videoid %}
 	<lite-youtube videoid="{{ yt_videoid }}" params="modestbranding=1&rel=0" style="background-image: url('{{ image.url }}');"></lite-youtube>
