@@ -1,6 +1,8 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'mediatext' %}
 {% set lottie = page.header.lottie ? page.media[page.header.lottie] : null %}
+{% set lottie_width = page.header.lottie_width ?? null %}
+{% set lottie_height = page.header.lottie_height ?? null %}
 {% set mp4 = page.header.mp4 ? page.media[page.header.mp4] : null %}
 {% set image = page.header.image ? page.media[page.header.image] : null %}
 {% set image_alt = page.header.image_alt ?? '' %}
@@ -12,7 +14,7 @@
 	<div class="media">
 
 		{% if lottie %}
-		<div class="lottie" data-animation-path="{{ lottie.url }}"></div>
+		<div class="lottie" width="{{ lottie_width }}" height="{{ lottie_height }}" data-animation-path="{{ lottie.url }}"></div>
 
 		{% elseif mp4 %}
 		<video autoplay loop muted playsinline disablepictureinpicture disableremoteplayback poster="{{ image.url }}">
