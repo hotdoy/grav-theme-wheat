@@ -4,15 +4,15 @@
 {% set items = items ?? page.header.items ?? null %}
 
 {% block content %}
-<div class="wrapper text">
+<details-wrapper>
 
 	{% if display_title %}
-	<div class="module__title">
+	<div class="module__title text">
 		<h2>{{ display_title|raw }}</h2>
 	</div>
 	{% endif %}
     
-    <div class="layout">
+    <details-layout>
         {% for item in items %}
             {% set title = item.title %}
             {% set content = item.content %}
@@ -21,6 +21,7 @@
                 <div class="content text prose">{{ content|markdown }}</div>
             </details>
         {% endfor %}        
-    </div>
-</div>
+    </details-layout>
+
+</details-wrapper>
 {% endblock %}
