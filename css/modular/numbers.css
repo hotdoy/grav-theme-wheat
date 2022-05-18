@@ -1,91 +1,51 @@
 /* .module.numbers {} */
 
-.module.numbers > .wrapper {
+numbers-wrapper {
 	position: relative;
+    display: block;
+    box-sizing: border-box;
 	margin: 0 auto;
 	padding: 0 var(--gutter);
 	width: 100%;
 	max-width: var(--width-main);
 }
 
-.module.numbers .wrapper > h2 {
-    margin-bottom: 2rem;
-    width: 100%;
-    max-width: 80%;
-    text-align: left;
-}
-
-@media (min-width: 1024px) {
-    .module.numbers .wrapper > h2 {
-        max-width: 40%;
-    }
-}
-
-.module.numbers .layout {
+numbers-layout {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 10%;
 }
 
 @media (min-width: 624px) {
-    .module.numbers .layout {
-        grid-template-columns: repeat(2, 1fr);
+    numbers-layout {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (min-width: 1024px) {
-    .module.numbers .layout {
-        grid-template-columns: repeat(3, 1fr);
+    numbers-layout {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-.module.numbers .item {
-	max-width: 300px;
-}
+/* numbers-item {} */
 
-.module.numbers .item h3 {
+numbers-item h3 {
     color: var(--color-hl);
 	font-size: xx-large;
 }
 
-.module.numbers .item h3 {
+numbers-item h3 {
     font-size: 48px;
 	font-weight: var(--font-base-bold);
 }
 
 @media (min-width: 640px) {
-    .module.numbers .item h3 {
+    numbers-item h3 {
         font-size: clamp(48px, 4vw, 64px);
     }
 }
 
-.module.numbers .item p {
+numbers-item p {
 	color: var(--color-graytext);
 }
-
-
-
-
-
-/*===========================================
-				    FX 
-============================================*/
-
-/* @media (prefers-reduced-motion: no-preference) {
-    .module.numbers .item h3 {
-        overflow: hidden;
-    }
-
-    .module.numbers .item h3 .char {
-        transition-property: transform;
-        transform: translateY(100%);
-        transition-timing-function: var(--ease-outexpo);
-    }
-
-    .module[data-scroll="in"].numbers .item h3 .char {
-        transition-delay: calc(var(--char-index) * 50ms);
-        transition-duration: calc((var(--char-index) * 100ms) + 500ms);
-        transform: translateY(0%);
-    }
-
-} */
