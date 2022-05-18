@@ -13,22 +13,26 @@ numbers-wrapper {
 numbers-layout {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10%;
+    gap: 2rem;
 }
 
 @media (min-width: 624px) {
     numbers-layout {
         grid-template-columns: 1fr 1fr;
+        gap: 10%;
     }
 }
 
 @media (min-width: 1024px) {
     numbers-layout {
         grid-template-columns: 1fr 1fr 1fr;
+        gap: 10%;
     }
 }
 
-/* numbers-item {} */
+numbers-item {
+    display: block;
+}
 
 numbers-item h3 {
     color: var(--color-hl);
