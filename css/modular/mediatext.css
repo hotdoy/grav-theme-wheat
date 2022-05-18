@@ -33,7 +33,7 @@ mediatext-media video,
 mediatext-media img {
     width: 100%;
     height: auto;
-    /* border-radius: 1rem; */
+    border-radius: 1rem;
 }
 
 mediatext-content {
