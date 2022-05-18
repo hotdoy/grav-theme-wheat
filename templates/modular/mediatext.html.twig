@@ -10,24 +10,29 @@
 {% set page_content = page_content ?? page.content ?? null %}
 
 {% block content %}
-<div class="wrapper {{ media_position }}">
-	<div class="media">
+<mediatext-wrapper class="{{media_position }}">
+
+	<mediatext-media>
 
 		{% if lottie %}
 		<div class="lottie" style="height:{{ lottie_height }}px;" data-animation-path="{{ lottie.url }}"></div>
 
 		{% elseif mp4 %}
 		<video autoplay loop muted playsinline disablepictureinpicture disableremoteplayback poster="{{ image.url }}">
-			{% if mp4 %}<source type="video/mp4" src="{{ mp4.url }}">{% endif %}
+			<source type="video/mp4" src="{{ mp4.url }}">
 		</video>
 
 		{% elseif image %}
 		{% include "partials/img.html.twig" with {image: image, image_alt: image_alt} %}
 		
 		{% endif %}
-	</div>
-	<div class="content text prose">
-		{{ page_content|raw }}
-	</div>
-</div>
+	</mediatext-media>
+
+	<mediatext-content>
+		<div class="text prose">
+			{{ page_content|raw }}
+		</div>
+	</mediatext-content>
+
+</mediatext-wrapper>
 {% endblock %}

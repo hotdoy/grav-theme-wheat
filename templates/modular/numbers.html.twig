@@ -4,23 +4,24 @@
 {% set items = items ?? page.header.items ?? null  %}
 
 {% block content %}
-<div class="wrapper text">
+<numbers-wrapper>
+
 	{% if display_title %}
-	<div class="module__title">
+	<div class="module__title text">
 		<h2>{{ display_title|raw }}</h2>
 	</div>
 	{% endif %}
 
-    <div class="layout">
+    <numbers-layout>
         {% for item in items %}
 		{% set n = item.number %}
 		{% set t = item.text %}
-		<div class="item">
+		<numbers-item>
 			<h3>{{ n }}</h3>
 			<p>{{ t|raw }}</p>
-		</div>
+		</numbers-item>
 		{% endfor %}
-    </div>
+    </numbers-layout>
 
-</div>
+</numbers-wrapper>
 {% endblock %}

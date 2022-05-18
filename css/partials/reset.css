@@ -135,7 +135,6 @@ button {
   color: inherit;
   font-size: inherit;
   line-height: inherit;
-  /* outline: none; */
   cursor: pointer;
 }
 
@@ -153,6 +152,8 @@ a {
 img,
 svg,
 video {
+  display: block;
+  height: auto;
   max-width: 100%;
 }
 

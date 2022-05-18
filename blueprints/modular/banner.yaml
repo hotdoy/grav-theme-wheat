@@ -12,11 +12,6 @@ form:
             header.media_order:
               unset@: true
 
-            header.display_title:
-              type: text
-              style: vertical
-              label: Display Title
-
             header.banner_title:
               type: text
               label: Title

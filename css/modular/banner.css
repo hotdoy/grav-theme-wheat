@@ -1,6 +1,8 @@
 /* .module.banner  {} */
 
-.module.banner .wrapper {
+banner-wrapper {
+    display: block;
+    box-sizing: border-box;
 	margin: 0 auto;
     max-width: var(--width-main);
 	padding: 0 var(--gutter);
@@ -8,7 +10,7 @@
 	width: 100%;
 }
 
-.module.banner .layout {
+banner-layout {
     background-color: var(--color-area-bg);
     border-radius: 1rem;
     color: var(--color-area-fg);
@@ -18,31 +20,31 @@
 }
 
 @media (min-width: 640px) {
-    .module.banner .layout {
+    banner-layout {
         padding: 2rem;
     }
 }
 
-.module.banner .content {
+banner-content {
     width: 100%;
 }
 
 @media (min-width: 640px) {
-    .module.banner .content {
+    banner-content {
         text-align: left;
         width: 66.66%;
     }
 }
 
-.module.banner .content h3 {
+banner-content h3 {
     color: var(--color-area-fg);
 }
 
-.module.banner .content p {
+banner-content p {
     color: var(--color-area-graytext);
 }
 
-.module.banner .action {
+banner-action {
     align-items: flex-end;
     display: flex;
     justify-content: right;
@@ -51,18 +53,18 @@
 }
 
 @media (min-width: 640px) {
-    .module.banner .action {
+    banner-action {
         margin-top: 0;
         width: 33.33%;
     }
 }
 
-.module.banner .action .button {
+banner-action .button {
     width: 100%;
 }
 
 @media (min-width: 640px) {
-    .module.banner .action .button {
+    banner-action .button {
         width: auto;   
     }
 }

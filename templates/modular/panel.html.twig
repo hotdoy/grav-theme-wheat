@@ -1,0 +1,28 @@
+{% extends 'modular/module.html.twig' %}
+{% set name = 'panel' %}
+{% set mp4 = page.header.mp4 ? page.media[page.header.mp4] : null %}
+{% set image = page.header.image ? page.media[page.header.image] : null %}
+{% set image_alt = page.header.image_alt ?? '' %}
+{% set media_position = page.header.media_position ?? 'left' %}
+{% set page_content = page_content ?? page.content ?? null %}
+
+{% block content %}
+<panel-wrapper>
+    <panel-layout class="{{ media_position }}">
+        <panel-media>
+        {% if mp4 %}
+            <video autoplay loop muted playsinline disablepictureinpicture disableremoteplayback poster="{{ image.url }}">
+                <source type="video/mp4" src="{{ mp4.url }}">
+            </video>
+        {% elseif image %}
+            {% include "partials/img.html.twig" with {image: image, image_alt: image_alt} %}
+        {% endif %}
+        </panel-media>
+        <panel-content>
+            <div class="text prose">
+                {{ page_content|raw }}
+            </div>
+        </panel-content>  
+    </panel-layout>
+</panel-wrapper>
+{% endblock %}

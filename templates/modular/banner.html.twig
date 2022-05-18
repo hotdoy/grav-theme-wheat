@@ -1,6 +1,5 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'banner' %}
-{% set display_title = display_title ?? page.header.display_title ?? null %}
 
 {% set banner_title = page.header.banner_title ?? null %}
 {% set banner_text = page.header.banner_text ?? null %}
@@ -8,23 +7,17 @@
 {% set banner_url = page.header.banner_url ?? null %}
 
 {% block content %}
-<div class="wrapper text">
+<banner-wrapper>
 
-	{% if display_title %}
-	<div class="module__title">
-		<h2>{{ display_title|raw }}</h2>
-	</div>
-	{% endif %}
-
-    <div class="layout">
-        <div class="content text prose">
+    <banner-layout>
+        <banner-content class="text prose">
             {% if banner_title %}<h3>{{ banner_title }}</h3>{% endif %}
             {% if banner_text %}<p>{{ banner_text }}</p>{% endif %}
-        </div>
-        <div class="action">
+        </banner-content>
+        <banner-action>
             <a href="{{ banner_url }}" class="button">{{ banner_label }}</a>
-        </div>
-    </div>
+        </banner-action>
+    </banner-layout>
 
-</div>
+</banner-wrapper>
 {% endblock %}

@@ -4,7 +4,7 @@
     display: block;
     position: relative;
     width: 100%;
-    max-width: var(--width-body);
+    max-width: var(--width-main);
     margin: 0 auto;
 }
 

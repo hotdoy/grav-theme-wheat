@@ -1,16 +1,12 @@
 /* .module.details {} */
 
-.module.details .wrapper {
+details-wrapper {
+    display: block;
+    box-sizing: border-box;
     margin: 0 auto;
     max-width: var(--width-main);
     padding: 0 var(--gutter);
     width: 100%;
-}
-
-.module.details .wrapper > h2 {
-    margin-bottom: 2rem;
-    width: 100%;
-    text-align: left;
 }
 
 .module.details details {
@@ -73,7 +69,7 @@
 
 .module.details details[open] .content {
     animation-name: details;
-    animation-duration: 400ms;
+    animation-duration: 200ms;
     animation-fill-mode: forwards;
 }
 

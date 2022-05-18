@@ -1,0 +1,35 @@
+{% extends 'modular/module.html.twig' %}
+{% set name = 'cards' %}
+
+{% set display_title = display_title ?? page.header.display_title ?? null %}
+{% set items = items ?? page.header.items  %}
+
+{% block content %}
+<cards-wrapper>
+
+	{% if display_title %}
+	<div class="module__title text">
+		<h2>{{ display_title|raw }}</h2>
+	</div>
+	{% endif %}
+
+	<cards-layout>
+    {% for item in items %}
+        {% set image = item.image ? page.media[item.image] %}
+        {% set image_alt = item.image_alt %}
+        {% set text = item.text %}
+        <cards-item>
+            <cards-item-media>
+                {% include "partials/img.html.twig" with {image: image, image_alt: image_alt} %}
+            </cards-item-media>
+            <cards-item-content>
+                <div class="text prose">
+                    {{ text|markdown|raw }}    
+                </div> 
+            </cards-item-content>
+        </cards-item>
+    {% endfor %}
+	</cards-layout>
+
+</cards-wrapper>
+{% endblock %}
