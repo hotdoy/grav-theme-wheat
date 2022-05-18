@@ -9,24 +9,20 @@
 
 .module.features .layout {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: 1fr;
     gap: 2rem;
 }
 
 @media (min-width: 624px) {
     .module.features .layout {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (min-width: 1024px) {
     .module.features .layout {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
     }
-}
-
-.module.features .item {
-    max-width: 300px;
 }
 
 .module.features .item img {
@@ -36,7 +32,7 @@
 
 .module.features .item h3 {
     color: var(--color-fg);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
     margin-top: 0.5rem;
 }

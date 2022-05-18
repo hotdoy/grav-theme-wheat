@@ -18,7 +18,7 @@
 
 		{% elseif mp4 %}
 		<video autoplay loop muted playsinline disablepictureinpicture disableremoteplayback poster="{{ image.url }}">
-			{% if mp4 %}<source type="video/mp4" src="{{ mp4.url }}">{% endif %}
+			<source type="video/mp4" src="{{ mp4.url }}">
 		</video>
 
 		{% elseif image %}

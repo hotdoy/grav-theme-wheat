@@ -73,7 +73,7 @@
 
 .module.details details[open] .content {
     animation-name: details;
-    animation-duration: 400ms;
+    animation-duration: 200ms;
     animation-fill-mode: forwards;
 }
 

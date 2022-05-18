@@ -1,0 +1,33 @@
+title: panel
+extends@: modular/module
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            header.media_order:
+              ordering@: +99
+              
+            header.mp4:
+              label: Mp4
+              type: pagemediaselect
+              accept:
+                - mp4
+
+            header.image:
+              label: Image
+              type: pagemediaselect
+
+            header.image_alt:
+              label: Image Alt
+              type: text
+
+            header.media_position:
+              type: toggle
+              label: Media Position
+              default: left
+              options:
+                left: "Left"
+                right: "Right"
