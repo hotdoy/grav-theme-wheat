@@ -10,8 +10,9 @@
 {% set page_content = page_content ?? page.content ?? null %}
 
 {% block content %}
-<div class="wrapper {{ media_position }}">
-	<div class="media">
+<mediatext-wrapper class="{{media_position }}">
+
+	<mediatext-media>
 
 		{% if lottie %}
 		<div class="lottie" style="height:{{ lottie_height }}px;" data-animation-path="{{ lottie.url }}"></div>
@@ -25,9 +26,13 @@
 		{% include "partials/img.html.twig" with {image: image, image_alt: image_alt} %}
 		
 		{% endif %}
-	</div>
-	<div class="content text prose">
-		{{ page_content|raw }}
-	</div>
-</div>
+	</mediatext-media>
+
+	<mediatext-content>
+		<div class="text prose">
+			{{ page_content|raw }}
+		</div>
+	</mediatext-content>
+
+</mediatext-wrapper>
 {% endblock %}
