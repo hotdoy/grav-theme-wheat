@@ -1,0 +1,41 @@
+title: cards
+extends@: modular/module
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            content:
+              unset@: true
+            header.media_order:
+              ordering@: +99
+
+            header.display_title:
+              type: text
+              style: vertical
+              label: Display Title
+
+            header.items:
+              name: items
+              type: list
+              style: vertical
+              label: Items
+              fields:
+
+                .image:
+                  type: pagemediaselect
+                  label: Image
+
+                .image_alt:
+                  type: text
+                  label: Image Alt
+
+                .text:
+                  type: markdown
+                  label: Text
+
+                .url:
+                  type: text
+                  label: Url
