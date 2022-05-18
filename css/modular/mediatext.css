@@ -24,7 +24,7 @@ mediatext-media {
 }
 
 @media (min-width: 1024px) {
-    mediatext-wrapper.right mediatext-media {
+    .right mediatext-media {
         order: 2;
     }    
 }
@@ -45,6 +45,12 @@ mediatext-content {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 10%;
+        padding-left: 10%;
+        padding-right: 0;
+    }
+
+    .right mediatext-content {
+        padding-right: 10%;
+        padding-left: 0;
     }
 }
