@@ -17,18 +17,11 @@
 
 .module.media img,
 .module.media video {
-    width: 100%;
+    border-radius: 1rem;
     height: auto;
     margin: 0 auto;
     overflow: hidden;
-}
-
-@media (min-width: 640px) {
-    .module.media img,
-    .module.media video,
-    .module.media lite-youtube {
-        border-radius: 1rem;
-    }
+    width: 100%;
 }
 
 .module.media .caption {
