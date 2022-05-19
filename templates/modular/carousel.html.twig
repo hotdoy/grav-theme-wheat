@@ -22,21 +22,23 @@
 				{% set text = item.text %}
 				<div class="scroller__slide">
 					
-					<article>
-						<div class="media">
-							{% include "partials/img.html.twig" with {image: image, image_alt: image_alt} %}
-						</div>
-						<div class="content text">
-							<h3>{{ title }}</h3>
-							<p>{{ text }}</p>
-						</div>
-					</article>
-
+					{% set image = item.image ? page.media[item.image] %}
+					{% set image_alt = item.image_alt %}
+					{% set title = item.title %}
+					{% set text = item.text %}
+					{% set url = item.url %}
+					{% include "partials/default-card.html.twig" with {
+						image: image,
+						image_alt: image_alt,
+						title: title,
+						text: text,
+						url: url
+					}%}
 				</div>
 			{% endfor %}
 		</div>
-		<span class="scroller__prev"></span>
-		<span class="scroller__next"></span>
+		<button class="scroller__prev"></button>
+		<button class="scroller__next"></button>
 	</div>
 </div>
 {% endblock %}
