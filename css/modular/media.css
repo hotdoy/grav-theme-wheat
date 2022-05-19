@@ -2,16 +2,11 @@
 
 .module.media > .wrapper {
     display: block;
+    margin: 0 auto;
+    max-width: var(--width-body);
+    padding: 0 var(--gutter);  
     position: relative;
     width: 100%;
-    max-width: var(--width-body);
-    margin: 0 auto;
-}
-
-@media (min-width: 640px) {
-    .module.media > .wrapper {
-        padding: 0 var(--gutter);   
-    }
 }
 
 .module.media .content {
@@ -22,18 +17,11 @@
 
 .module.media img,
 .module.media video {
-    width: 100%;
+    border-radius: 1rem;
     height: auto;
     margin: 0 auto;
     overflow: hidden;
-}
-
-@media (min-width: 640px) {
-    .module.media img,
-    .module.media video,
-    .module.media lite-youtube {
-        border-radius: 1rem;
-    }
+    width: 100%;
 }
 
 .module.media .caption {
