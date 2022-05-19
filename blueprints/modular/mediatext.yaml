@@ -10,17 +10,17 @@ form:
             header.media_order:
               ordering@: +99
               
-            header.lottie:
-              label: Lottie
-              type: pagemediaselect
+            # header.lottie:
+            #   label: Lottie
+            #   type: pagemediaselect
 
-            header.lottie_width:
-              label: Lottie Width
-              type: number
+            # header.lottie_width:
+            #   label: Lottie Width
+            #   type: number
 
-            header.lottie_height:
-              label: Lottie Height
-              type: number
+            # header.lottie_height:
+            #   label: Lottie Height
+            #   type: number
               
             header.mp4:
               label: Mp4
