@@ -7,7 +7,13 @@
     max-width: var(--width-main);
 }
 
-.module.emphasis p {
+.module.emphasis p,
+.module.emphasis h2,
+.module.emphasis h3,
+.module.emphasis h4,
+.module.emphasis h5,
+.module.emphasis h6,
+.module.emphasis li {
     font-size: 24px;
     font-size: clamp(24px, 4vw, 48px);
     line-height: 1.2;
@@ -15,32 +21,4 @@
     color: var(--color-fg);
     font-weight: var(--font-base-regular);
     text-align: center;
-}
-
-
-
-
-
-/*===========================================
-				    FX 
-============================================*/
-
-@media (prefers-reduced-motion: no-preference) {
-    .module.emphasis .word {
-        line-height: 1.2;
-    }
-
-    .module.emphasis .word {
-        opacity: 0;
-        transition-property: transform, opacity;
-        transition-duration: 400ms;
-        transform: translateY(50px);
-    }
-
-    .module.emphasis[data-scroll="in"] .word {
-        opacity: 1;
-        transition-delay: calc(var(--line-index)*50ms);
-        transition-duration: calc((var(--line-index)*100ms) + 1000ms);
-        transform: translateY(0);
-    }
 }
