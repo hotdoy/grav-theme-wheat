@@ -30,7 +30,3 @@ form:
                 .source:
                   type: text
                   label: Source
-                
-                .color:
-                  type: colorpicker
-                  label: Color

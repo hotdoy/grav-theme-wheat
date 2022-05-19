@@ -1,6 +1,7 @@
 
+{% set el = url ? 'a' : 'span' %}
 <article class="default-card">
-	<a href="{{ url }}">
+	<{{ el }} {% if url %}href="{{ url }}"{% endif %}>
 		<div class="default-card__media">
 			{% include "partials/img.html.twig" with {image: image, image_alt: image_alt} %}
 		</div>
@@ -8,5 +9,6 @@
 			{% if title %}<h3>{{ title }}</h3>{% endif %}
 			{% if text %}<p>{{ text }}</p>{% endif %}
 		</div>
-	</a>
+	</{{ el }}>
 </article>
+

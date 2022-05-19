@@ -16,7 +16,8 @@
 }
 
 .module.media img,
-.module.media video {
+.module.media video,
+.module.media lite-youtube {
     border-radius: 1rem;
     height: auto;
     margin: 0 auto;
@@ -35,7 +36,6 @@
         padding: 0;   
     }
 }
-
 
 .module.media:first-child {
     margin-top: calc(var(--rhythm)/2);

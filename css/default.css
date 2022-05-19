@@ -34,9 +34,10 @@
 
 
 /*===========================================
-				HEADING 
+				    CARD 
 ============================================*/
-.default-card a {
+.default-card a,
+.default-card span {
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -67,4 +68,12 @@
 
 .default-card__content p {
     margin-top: 0.5rem;
+}
+
+.default-card a {
+    text-decoration: none;
+}
+
+.default-card:hover a h3 {
+    text-decoration: underline;
 }
