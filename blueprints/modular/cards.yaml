@@ -32,10 +32,10 @@ form:
                   type: text
                   label: Image Alt
 
-                .text:
-                  type: markdown
-                  label: Text
-
-                .url:
+                .title:
                   type: text
-                  label: Url
+                  label: Title
+
+                .text:
+                  type: text
+                  label: Text

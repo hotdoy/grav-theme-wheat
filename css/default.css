@@ -29,3 +29,42 @@
 
 /* .default-heading .title {} */
 
+
+
+
+
+/*===========================================
+				HEADING 
+============================================*/
+.default-card a {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.default-card__media {
+    aspect-ratio: 1 / 1;
+    display: block;
+    overflow: hidden;
+}
+
+.default-card__media img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;   
+}
+
+
+.default-card__content {
+    background-color: var(--color-area-bg);
+    display: block;
+    flex-grow: 1;
+    padding: var(--gutter);
+}
+
+.default-card__content p {
+    margin-top: 0.5rem;
+}
