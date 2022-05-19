@@ -2,16 +2,11 @@
 
 .module.media > .wrapper {
     display: block;
+    margin: 0 auto;
+    max-width: var(--width-body);
+    padding: 0 var(--gutter);  
     position: relative;
     width: 100%;
-    max-width: var(--width-body);
-    margin: 0 auto;
-}
-
-@media (min-width: 640px) {
-    .module.media > .wrapper {
-        padding: 0 var(--gutter);   
-    }
 }
 
 .module.media .content {
