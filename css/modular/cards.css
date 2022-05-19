@@ -26,31 +26,3 @@ cards-layout {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
-
-cards-item {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border-radius: 1rem;
-}
-
-cards-item-media {
-    aspect-ratio: 3 / 4;
-    display: block;
-    overflow: hidden;
-}
-
-cards-item-media img {
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    width: 100%;   
-}
-
-cards-item-content {
-    padding: var(--gutter);
-    padding-top: 1.5rem;
-    display: block;
-    background-color: var(--color-area-bg);
-    flex-grow: 1;
-}

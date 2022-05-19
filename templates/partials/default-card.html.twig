@@ -1,20 +1,12 @@
-{% set item = item|default(item) %}
-{% set title = title|default(item.title) %}
-{% set image = image|default(item.header.image ? item.media[item.header.image] : item.media.images|first) %}
-{% set image_alt = image_alt|default(item.header.image_alt ?? '') %}
-{% set title = title|default(item.header.title) %}
-{% set subtitle = subtitle ?? item.header.price ? item.header.price|number_format(2, ',', ' ') ~ '$' : item.header.date ? item.header.date|date('d/m/Y') : null %}
 
 <article class="default-card">
-	<a href="{{ item.url }}">
+	<a href="{{ url }}">
 		<div class="default-card__media">
-			{% include "partials/img.html.twig" with {image: image} only %}
+			{% include "partials/img.html.twig" with {image: image, image_alt: image_alt} %}
 		</div>
-		<div class="default-card__content text">
-			<h3>{{ title }}</h3>
-			{% if subtitle %}
-			<p>{{ subtitle }}</p>
-			{% endif %}
+		<div class="default-card__content text small">
+			{% if title %}<h3>{{ title }}</h3>{% endif %}
+			{% if text %}<p>{{ text }}</p>{% endif %}
 		</div>
 	</a>
 </article>

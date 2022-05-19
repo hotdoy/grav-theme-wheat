@@ -17,17 +17,16 @@
     {% for item in items %}
         {% set image = item.image ? page.media[item.image] %}
         {% set image_alt = item.image_alt %}
+        {% set title = item.title %}
         {% set text = item.text %}
-        <cards-item>
-            <cards-item-media>
-                {% include "partials/img.html.twig" with {image: image, image_alt: image_alt} %}
-            </cards-item-media>
-            <cards-item-content>
-                <div class="text prose">
-                    {{ text|markdown|raw }}    
-                </div> 
-            </cards-item-content>
-        </cards-item>
+        {% set url = item.url %}
+        {% include "partials/default-card.html.twig" with {
+            image: image,
+            image_alt: image_alt,
+            title: title,
+            text: text,
+            url: url
+        }%}
     {% endfor %}
 	</cards-layout>
 
