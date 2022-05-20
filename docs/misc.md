@@ -22,6 +22,10 @@ Navigate to your `public_html` folder and run...
 
 `find . -type f -exec chmod 644 {} \;`
 
+## How to generate a free hostname certificate with AutoSSL
+
+https://support.cpanel.net/hc/en-us/articles/360055612073-How-to-generate-a-free-hostname-certificate-with-AutoSSL
+
 ## Track performance with Fathom Analytucs custom events
 
 ```
