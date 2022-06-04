@@ -1,9 +1,10 @@
 {% extends 'modular/module.html.twig' %}
-{% set name = 'quotes' %}
+{% set el = 'wht-quotes' %}
+
 {% set items = items ?? page.header.items ?? null %}
 
 {% block content %}
-<div class="wrapper">
+<quotes-wrapper>
 	<div class="scroller">
 		<div class="scroller__scrollctn">
 			{% for item in items %}
@@ -29,5 +30,5 @@
 		<button class="scroller__next"></button>
 		{% endif %}
 	</div>	
-</div>
+</quotes-wrapper>
 {% endblock %}

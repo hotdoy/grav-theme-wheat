@@ -1,6 +1,8 @@
-/* .module.carousel {} */
+/* wht-carousel {} */
 
-.module.carousel .wrapper {
+carousel-wrapper {
+	box-sizing: border-box;
+	display: block;
 	margin: 0 auto;
 	max-width: var(--width-main);
 	overflow: hidden;
@@ -9,83 +11,32 @@
 	width: 100%;
 }
 
-
-
-
-
 /*===========================================
 				SCROLLER
 ============================================*/
 
-.module.carousel .scroller__slide {
+wht-carousel .scroller__slide {
 	min-width: 85%;
 	max-width: 85%;
 }
 
 @media (min-width: 640px) {
-	.module.carousel .scroller__slide {
+	wht-carousel .scroller__slide {
 		min-width: 45%;
 		max-width: 45%;
 	}
 }
 
 @media (min-width: 1024px) {
-	.module.carousel .scroller__slide {
+	wht-carousel .scroller__slide {
 		min-width: 45%;
 		max-width: 45%;
 	}
 }
 
 @media (min-width: 1280px) {
-	.module.carousel .scroller__slide {
+	wht-carousel .scroller__slide {
 		min-width: 31%;
 		max-width: 31%;
 	}
-}
-
-
-
-
-
-/*===========================================
-				    CARD 
-============================================*/
-
-.module.carousel article {
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
-	height: 100%;
-	overflow: hidden;
-}
-
-.module.carousel article .media {
-	aspect-ratio: 1/1;
-	border-radius: 1rem;
-	overflow: hidden;
-	position: relative;
-}
-
-.module.carousel article .media img {
-	height: 100%;
-	height: auto;
-	object-fit: cover;
-	object-position: center;
-	width: 100%;
-}
-
-.module.carousel article .content {
-	background-color: var(--color-area-bg);
-	border-radius: 1rem;
-	color: var(--color-area-fg);
-	flex-direction: column;
-	flex-grow: 1;
-	padding: 1rem;
-}
-
-/* .module.carousel article .content h3 {} */
-
-.module.carousel article .content p {
-	margin-top: 0.5rem;
-	color: var(--color-graytext);
 }

@@ -1,14 +1,15 @@
 {% import "partials/svg.html.twig" as svg %}
 {% extends 'modular/module.html.twig' %}
-{% set name = 'carousel' %}
+{% set el = 'wht-carousel' %}
+
 {% set display_title = display_title ?? page.header.display_title ?? null %}
 {% set items = items ?? page.header.items  %}
 
 {% block content %}
-<div class="wrapper text">
+<carousel-wrapper>
 
 	{% if display_title %}
-	<div class="module__title">
+	<div class="module__title text">
 		<h2>{{ display_title|raw }}</h2>
 	</div>
 	{% endif %}
@@ -40,5 +41,5 @@
 		<button class="scroller__prev"></button>
 		<button class="scroller__next"></button>
 	</div>
-</div>
+</carousel-wrapper>
 {% endblock %}

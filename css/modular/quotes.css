@@ -1,41 +1,43 @@
-/*.module.quotes {}*/
+/*wht-quotes {}*/
 
-.module.quotes > .wrapper {
-  position: relative;
-  width: 100%;
-  max-width: var(--width-main);
-  margin: 0 auto;
-  padding: 0 var(--gutter);
+quotes-wrapper {
+	box-sizing: border-box;
+	display: block;
+	margin: 0 auto;
+	max-width: var(--width-main);
+	padding: 0 var(--gutter);
+	position: relative;
+	width: 100%;
 }
 
-.module.quotes .scroller__scrollctn {
-  height: auto;
-  width: 100%;
+wht-quotes .scroller__scrollctn {
+	height: auto;
+	width: 100%;
 }
 
-.module.quotes .scroller__slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  flex-shrink: 0;
-  scroll-margin-left: 0;
-  width: 100%;
-  height: auto;
-  padding: var(--rhythm) 2rem;
-  text-align: center;
-  background-color: var(--color-area-bg);
-  color: var(--color-area-fg);
-  border-radius: 1rem;
+wht-quotes .scroller__slide {
+	align-items: center;
+	background-color: var(--color-area-bg);
+	border-radius: 1rem;
+	color: var(--color-area-fg);
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	height: auto;
+	justify-content: center;
+	padding: var(--rhythm) 2rem;
+	scroll-margin-left: 0;
+	text-align: center;
+	width: 100%;
 }
 
-.module.quotes blockquote {
+wht-quotes .text blockquote {
   margin: 0 auto;
   max-width: var(--width-tight);
   font-size: 1.5em;
 }
 
-.module.quotes .portrait {
+wht-quotes .portrait {
   margin: 0 auto;
   margin-top: 2rem;
   width: 50px;
@@ -44,14 +46,14 @@
   border-radius: 9999px;
 }
 
-.module.quotes .portrait img {
+wht-quotes .portrait img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.module.quotes .source {
+wht-quotes .source {
   margin-top: 1rem;
   width: 250px;
   color: var(--color-area-graytext);
