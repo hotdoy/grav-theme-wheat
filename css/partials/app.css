@@ -7,7 +7,7 @@
 /* body[data-state*='_nav-f'] {} */
 /* body[data-state*='_nav-b'] {} */
 
-/* img[loading="lazy"],
+img[loading="lazy"],
 img[loading="lazy"][data-state="0"] {
     opacity: 0;
 }
@@ -18,11 +18,11 @@ img[loading="lazy"][data-state="1"] {
     animation-delay: 0ms;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
-} 
+}
 
 @keyframes appImg {
     to {opacity: 1;}
-} */
+}
 
 /* body[data-state^='_0'] #main {
     transform: translateY(15px);
