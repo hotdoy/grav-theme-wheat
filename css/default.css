@@ -36,6 +36,10 @@
 /*===========================================
 				    CARD 
 ============================================*/
+.default-card {
+    height: 100%;
+}
+
 .default-card a,
 .default-card span {
     border-radius: 1rem;
