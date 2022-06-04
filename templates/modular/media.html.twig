@@ -1,5 +1,6 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'media' %}
+{% set el = 'wht-media' %}
 
 {% set header = page.header.header ?? null %}
 {% set lottie = page.header.lottie ? page.media[page.header.lottie] : null  %}
@@ -12,7 +13,7 @@
 {% set caption = page.header.caption ?? null %}
 
 {% block content %}
-<div class="wrapper">
+<media-wrapper>
 
 	{% if lottie %}
 	<div class="lottie" style="height:{{ lottie_height }}px;" data-animation-path="{{ lottie.url }}"></div>
@@ -34,5 +35,5 @@
 	<div class="caption text small">{{ page.header.caption|markdown }}</div>
 	{% endif %}
 
-</div>
+</media-wrapper>
 {% endblock %}

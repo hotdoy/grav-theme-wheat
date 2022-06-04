@@ -1,0 +1,12 @@
+.edit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.2s;
+    padding: 5px 5px;
+    background-color: midnightblue;
+    z-index: 1999;
+    font-size: x-small;
+    color: white;
+    border-radius: 4px 0 0 4px;
+}

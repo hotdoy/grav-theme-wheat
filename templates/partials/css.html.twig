@@ -24,6 +24,10 @@
 {% do assets.addCss('theme://css/partials/share.css') %}
 {% do assets.addCss('theme://css/partials/gdpr.css') %}
 
+{% if grav.user.access.admin.login and theme.admin_edit_button %}
+{% do assets.addCss('theme://css/partials/edit.css') %}
+{% endif %}
+
 {# MODULAR #}
 {% do assets.addCss('theme://css/modular/module.css') %}
 {% do assets.addCss('theme://css/modular/editor.css') %}

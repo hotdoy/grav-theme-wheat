@@ -1,6 +1,6 @@
-/*.module.media {}*/
+/*wht-media {}*/
 
-.module.media > .wrapper {
+media-wrapper {
     display: block;
     margin: 0 auto;
     max-width: var(--width-body);
@@ -9,15 +9,9 @@
     width: 100%;
 }
 
-.module.media .content {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 0 5%;
-}
-
-.module.media img,
-.module.media video,
-.module.media lite-youtube {
+wht-media img,
+wht-media video,
+wht-media lite-youtube {
     border-radius: 1rem;
     height: auto;
     margin: 0 auto;
@@ -25,18 +19,17 @@
     width: 100%;
 }
 
-.module.media .caption {
+wht-media .caption {
     margin-top: 0.5rem;
     max-width: 80%;
-    padding: 0 var(--gutter);  
 }
 
 @media (min-width: 640px) {
-    .module.media .caption {
+    wht-media .caption {
         padding: 0;   
     }
 }
 
-.module.media:first-child {
+wht-media:first-child {
     margin-top: calc(var(--rhythm)/2);
 }

@@ -1,19 +1,22 @@
-/* .module.emphasis {} */
+/* wht-emphasis {} */
 
-.module.emphasis .wrapper {
+emphasis-wrapper {
+    box-sizing: border-box;
+    display: block;
     margin: 0 auto;
     padding: 0 var(--gutter);
     width: 100%;
     max-width: var(--width-main);
 }
 
-.module.emphasis p,
-.module.emphasis h2,
-.module.emphasis h3,
-.module.emphasis h4,
-.module.emphasis h5,
-.module.emphasis h6,
-.module.emphasis li {
+wht-emphasis .text.large div,
+wht-emphasis .text.large p,
+wht-emphasis .text.large h2,
+wht-emphasis .text.large h3,
+wht-emphasis .text.large h4,
+wht-emphasis .text.large h5,
+wht-emphasis .text.large h6,
+wht-emphasis .text.large li {
     font-size: 24px;
     font-size: clamp(24px, 4vw, 48px);
     line-height: 1.2;
@@ -23,6 +26,6 @@
     text-align: center;
 }
 
-.module.emphasis h1 {
+wht-emphasis .text.large h1 {
     font-weight: var(--font-base-black);
 }

@@ -1,13 +1,14 @@
 {% set name = name|default() %}
-{% set id = id ?? page.header.id ?? null %}
-{% set classes = classes ?? page.header.classes ?? page.header.body_classes ?? null %}
+{% set el = el ?? 'section' %}
+{% set id = id ?? page.header.module_id ?? null %}
+{% set cl = cl ?? page.header.module_classes ?? null %}
 
 {% set computed_classes %}
 {{ name }}
-{%- if classes %} {{ classes }}{% endif %}
+{%- if cl %} {{ cl }}{% endif %}
 {% endset -%}
 
-<section{% if id %} id="{{ id|url_encode|lower }}"{% endif %} class="module {{ computed_classes }}">
+<{{ el }}{% if id %} id="{{ id|url_encode|lower }}"{% endif %} class="module {{ computed_classes }}">
 {% include "partials/edit.html.twig" %}
 {% block content %}{% endblock %}
-</section>
+</{{ el }}>

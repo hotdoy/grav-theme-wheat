@@ -106,11 +106,11 @@ form:
                       default: default
                       data-options@: '\Grav\Common\Page\Pages::pageTypes'
 
-                    header.classes:
+                    header.module_classes:
                       type: text
                       label: Classes
                     
-                    header.id:
+                    header.module_id:
                       type: text
                       label: Id
 
