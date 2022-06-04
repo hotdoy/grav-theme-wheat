@@ -1,27 +1,29 @@
 {% extends 'modular/module.html.twig' %}
 {% set name = 'features' %}
+{% set el = 'wht-features' %}
+
 {% set display_title = display_title ?? page.header.display_title ?? null %}
 {% set items = items ?? page.header.items ?? null %}
 
 {% block content %}
-<div class="wrapper text">
+<features-wrapper>
 
 	{% if display_title %}
-	<div class="module__title">
+	<div class="module__title text">
 		<h2>{{ display_title|raw }}</h2>
 	</div>
 	{% endif %}
 
-    <div class="layout">
+    <features-layout>
         {% for item in items %}
         {% set image = item.image ? page.media[item.image] %}
-        <div class="item text">
+        <article class="text">
             {% include "partials/img.html.twig" with {image: image} only %}
             <h3>{{ item.title }}</h3>
             <p>{{ item.text }}</p>
-        </div>
+        </article>
         {% endfor %}
-    </div>
+    </features-layout>
 
-</div>
+</features-wrapper>
 {% endblock %}

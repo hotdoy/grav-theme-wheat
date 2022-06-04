@@ -16,3 +16,4 @@ form:
               type: textarea
               style: vertical
               label: Content
+              description: Content must be entered using the proper semantic HTML tag (p, h1, h2, h3, etc ...).
