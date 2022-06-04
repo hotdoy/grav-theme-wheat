@@ -1,4 +1,3 @@
-{% import "partials/svg.html.twig" as svg %}
 {% if grav.user.access.admin.login and theme.admin_edit_button %}
     {% set adminPath = base_url ~ config.get('plugins.admin.route') ~ '/pages' %}
     {% set pagePath -%}
@@ -10,5 +9,4 @@
     {% endset %}
     {% set url = adminPath ~ pagePath %}
     <a class="edit" href="{{ url }}" target="_blank" rel="nofollow">edit</a>
-    {% if page.modular %}<div class="edit-overlay"></div>{% endif %}
 {% endif %}

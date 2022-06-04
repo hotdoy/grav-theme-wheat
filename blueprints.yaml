@@ -1,7 +1,7 @@
 name: Wheat
 slug: wheat
 type: theme
-version: 2022.05.19
+version: 2022.06.04
 description: "Wheat is a theme for Grav CMS. It is aimed at building sustainable websites by limiting overheads and development tooling. It takes a responsible approach to web development and try leading by examples by offering common patterns and related solutions. It uses no build tool, no framework of any kind, only needs a basic LAMP setup, uses Github Actions for automatic deployment and takes about 30 minutes minutes to setup."
 icon: rebel
 author:
@@ -66,11 +66,11 @@ form:
       validate:
         type: bool
 
-    # snipcart_version:
-    #   type: text
-    #   label: Snipcart Version
-    #   placeholder: 3.3.1
-    #   description: 'Change at your own risk!'
+    snipcart_version:
+      type: text
+      label: Snipcart Version
+      placeholder: 3.4.4
+      description: 'Change at your own risk!'
 
     snipcart_mode:
       type: toggle
@@ -92,60 +92,6 @@ form:
       type: text
       label: Public Live Key
       placeholder: MDU0OGM2YjItMzZiZS00MjQ4LWJiNGQtOGVlYjE4ODAxMWVhNjM3MDEwNjY5ODU4OTU2Mzkx
-
-    snipcart_product_behavior:
-      type: toggle
-      label: Open cart on add-item
-      highlight: 1
-      default: 0
-      options:
-        0: PLUGIN_ADMIN.DISABLED
-        1: PLUGIN_ADMIN.ENABLED
-      validate:
-        type: bool
-
-    snipcart_allow_guests_only:
-      type: toggle
-      label: Allow Guests Only
-      description: Activate this option to remove the login / registration step from the menu. Make sure this value is the same in Snipcart, under Checkout & Cart.
-      highlight: 0
-      default: 0
-      options:
-        0: PLUGIN_ADMIN.DISABLED
-        1: PLUGIN_ADMIN.ENABLED
-      validate:
-        type: bool
-
-    facebook_section:
-      type: section
-      title: Facebook
-      underline: true
-
-    facebook_app_id:
-      type: text
-      label: Facebook App Id
-      placeholder: "123456789123456"
-
-    twitter_section:
-      type: section
-      title: Twitter
-      underline: true
-
-    twitter_site:
-      type: text
-      label: Twitter Site
-      placeholder: "@twitter_handle"
-
-    monetization_section:
-      type: section
-      title: Monetization
-      underline: true
-
-    monetization_payment_pointer:
-      type: text
-      label: Payment Pointer
-      placeholder: $payment.pointer.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-      description: Experimental web monetization using Coil (coil.com)
 
     gmaps_section:
       type: section
