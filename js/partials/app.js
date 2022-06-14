@@ -119,7 +119,6 @@ const App = {
             const destinationPath = el.getAttribute("href");
             App.setDestinationPath(destinationPath);
             App.setDestinationDepth()         
-            App.setPrerenderLink(); 
 
             if (App.destinationDepth < App.currentDepth) {
                 App.setState(App.body, '_012_nav-b', 0, [App.events.navigating, App.events.navigatingBackward]);
@@ -135,15 +134,6 @@ const App = {
             }, App.navigationDelay);
 
         }, false);
-    },
-
-    setPrerenderLink: function() {
-        if (App.navigationDelay > 0) {
-            const link = App.doc.createElement('link');
-            link.href = App.destinatioPath;
-            link.rel='prerender';
-            App.doc.getElementsByTagName('head')[0].appendChild(link);    
-        } 
     },
 
     setLinkBehaviour: function(els) {
@@ -164,23 +154,9 @@ const App = {
         });
     },
 
-    setImgBehaviour: function(els) {
-        els.forEach(el => {
-            el.onload = function() {
-                App.setState(el, '1');
-                el.removeAttribute('style');
-            };
-            if (el.complete) {
-                App.setState(el, '1');
-                el.removeAttribute('style');
-            };
-        });
-    },
-
     Init: function() {
         App.setCurrentDepth();
-        // App.setLinkBehaviour(App.doc.querySelectorAll("a"));
-        App.setImgBehaviour(App.doc.querySelectorAll('img'));
+        App.setLinkBehaviour(App.doc.querySelectorAll("a"));
         App.setAdjustedDelay();
         if (App.tti == null) {
             App.tti = performance.now();

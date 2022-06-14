@@ -47,8 +47,8 @@ const Pagination = {
             // Swap the current url with the one including the new query
             window.history.replaceState({}, "", `${location.pathname}?${Pagination.qs}`);
 
-            // Make sure new images are handled by App
-            App.setImgBehaviour(document.querySelectorAll('img'));
+            // This is now handled using a mutation observer
+            // App.setImgBehaviour(document.querySelectorAll('img'));
 
             // Restart the whole process
             Pagination.Init();
