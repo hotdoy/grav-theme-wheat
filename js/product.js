@@ -1,6 +1,6 @@
-const Product = {
-
-    InitVariant: function() {
+(function () {
+	"use strict";
+    const InitProduct = function() {
         const selects = document.querySelectorAll(".product .variant select");
         for (let select of selects) {
             select.addEventListener('change', function() {
@@ -9,7 +9,6 @@ const Product = {
                 document.querySelector('.snipcart-add-item').setAttribute(key, value);
             });
         };
-    },
-};
-
-Product.InitVariant();
+    }
+    InitProduct();
+})();

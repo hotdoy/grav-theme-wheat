@@ -179,7 +179,7 @@ const App = {
 
     Init: function() {
         App.setCurrentDepth();
-        App.setLinkBehaviour(App.doc.querySelectorAll("a"));
+        // App.setLinkBehaviour(App.doc.querySelectorAll("a"));
         App.setImgBehaviour(App.doc.querySelectorAll('img'));
         App.setAdjustedDelay();
         if (App.tti == null) {

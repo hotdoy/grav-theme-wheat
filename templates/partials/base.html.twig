@@ -17,15 +17,16 @@
 		{% if theme.inline_head_script %}{{ theme.inline_head_script|raw }}{% endif %}
 	</head>
 
-	<body class="{{ page.template }}{% if page.header.body_classes %} {{ page.header.body_classes }}{% endif %}" data-state='_0'>
+	<body hx-boost="true" class="{{ page.template }}{% if page.header.body_classes %} {{ page.header.body_classes }}{% endif %}" data-state='_0'>
 		<a id="skipto" href="#main">Skip to content</a>
-		{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
-		<main id="main">{% block content %}{% endblock %}</main>
-		{% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %}
-		{% include 'partials/snipcart.html.twig' %}
-		{% include 'partials/gdpr.html.twig' %}
-		{% if config.plugins['algolia-pro'].enabled %}{% include 'partials/algolia-pro/instantsearch.html.twig' with { index: 'pages' } %}{% endif %}
-		{# {% include "partials/edit.html.twig" %} #}
+		<div id="site">
+			{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
+			<main id="main">{% block content %}{% endblock %}</main>
+			{% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %}
+			{% include 'partials/snipcart.html.twig' %}
+			{% include 'partials/gdpr.html.twig' %}
+			{% if config.plugins['algolia-pro'].enabled %}{% include 'partials/algolia-pro/instantsearch.html.twig' with { index: 'pages' } %}{% endif %}
+		</div>
 		{% block loader %}{% include "partials/loader.html.twig" %}{% endblock %}
 		{{ assets.js('bottom')|raw }}
 		{% if theme.inline_body_script %}{{ theme.inline_body_script|raw }}{% endif %}
