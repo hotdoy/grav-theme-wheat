@@ -1,0 +1,17 @@
+title: api
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            content:
+              unset@: true
+            header.media_order:
+              ordering@: +99
+            
+            header.message:
+              type: section
+              title: Welcome to the API base template.
