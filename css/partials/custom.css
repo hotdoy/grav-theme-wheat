@@ -1,4 +1,4 @@
-#loader {
+/* #loader {
     position: fixed;
     opacity: 0;
     top: 0;
@@ -17,4 +17,4 @@
 
 .htmx-swapping #loader {
     opacity: 1;
-}
+} */
