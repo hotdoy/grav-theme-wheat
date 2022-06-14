@@ -1,6 +1,5 @@
 (function() {
     "use strict";
-
     const initGdpr = function() {
         const e = document.getElementById('gdpr');
         if (!!e) {
@@ -13,7 +12,6 @@
                 });
             }         
         }
-
     };
     initGdpr();
 })();
