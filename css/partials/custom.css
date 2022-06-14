@@ -1,3 +1,20 @@
-:root {
-    scroll-behavior: unset!important;
+#loader {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 2147483647;
+    transition: all 200ms;
+    user-select: none;
+    pointer-events: none;
+}
+
+.htmx-swapping #loader {
+    opacity: 1;
 }
