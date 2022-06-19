@@ -19,7 +19,6 @@
 		{% block preload %}{% include "partials/preload.html.twig" %}{% endblock %}
 		{% if theme.inline_head_script %}{{ theme.inline_head_script|raw }}{% endif %}
 		<meta name="htmx-config" content='{"scrollBehavior":"auto"}'>
-
 	</head>
 	<body hx-boost="true" class="{{ page.template }}{% if page.header.body_classes %} {{ page.header.body_classes }}{% endif %}" data-state='_0'>
 		<a id="skipto" href="#main">Skip to content</a> 
