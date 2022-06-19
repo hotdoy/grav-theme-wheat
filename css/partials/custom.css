@@ -18,3 +18,7 @@
 .htmx-swapping #loader {
     opacity: 1;
 } */
+
+[hx-boost], html, body, :root {
+    scroll-behavior: auto !important;
+}

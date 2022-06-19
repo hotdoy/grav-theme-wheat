@@ -18,8 +18,10 @@
 		{% if theme.inline_css -%}<style>{{ theme.inline_css|raw }}</style>{%- endif %}
 		{% block preload %}{% include "partials/preload.html.twig" %}{% endblock %}
 		{% if theme.inline_head_script %}{{ theme.inline_head_script|raw }}{% endif %}
+		<meta name="htmx-config" content='{"scrollBehavior":"auto"}'>
+
 	</head>
-	<body class="{{ page.template }}{% if page.header.body_classes %} {{ page.header.body_classes }}{% endif %}" data-state='_0'>
+	<body hx-boost="true" class="{{ page.template }}{% if page.header.body_classes %} {{ page.header.body_classes }}{% endif %}" data-state='_0'>
 		<a id="skipto" href="#main">Skip to content</a> 
 		<div id="site">
 			{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
