@@ -21,9 +21,8 @@
 	}
 }
   
-.collection #load-more {
+.collection__list #load-more {
 	display: block;
 	width: 100%;
 	grid-column: 1 / -1;
-	
 }
