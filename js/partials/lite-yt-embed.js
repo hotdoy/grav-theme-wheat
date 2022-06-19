@@ -118,5 +118,5 @@
         iframeEl.focus();
     }
 }
-// Register custom element
+
 customElements.define('lite-youtube', LiteYTEmbed);
