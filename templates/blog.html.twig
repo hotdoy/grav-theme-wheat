@@ -23,16 +23,16 @@
             {% for item in collection_slice %}
             {% include ['partials/blog-card.html.twig' ] with {'item': item} %}
             {% endfor %}
+            {% if next_start + 1 <= collection_raw_length %}
+            {% set url = (page.url ~ '?' ~ key ~ '=' ~ next_start ~ '-' ~ next_end) %}
+            <button id="load-more" class="button" href="{{ url }}"
+            hx-push-url="true"
+            hx-get="{{ url }}" 
+            hx-swap="outerHTML" 
+            hx-select=".blog__list article">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</button>
+            {% endif %}
         </div>
     </section>
-    
-    {# PAGINATION #}
-    {% if next_start + 1 <= collection_raw_length %}
-    <section class="blog__pagination" data-pagination>
-        {% set url = (page.url ~ '?' ~ key ~ '=' ~ next_start ~ '-' ~ next_end) %}
-        <button class="button" href="{{ url }}">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</button>
-    </section>
-    {% endif %}
 
     {# MODULES #}
     {% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
