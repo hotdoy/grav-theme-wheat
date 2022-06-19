@@ -9,10 +9,9 @@
 		<div class="scroller__scrollctn">
 			{% for item in items %}
 			{% set quote = item.quote %}
-			{% set color = item.color %}
 			{% set source = item.source %}
 			{% set image = item.image ? page.media[item.image] %}
-			<div class="scroller__slide"{% if color %} style="--color:{{ color }}"{% endif %}>
+			<div class="scroller__slide">
 				<div class="quote text">
 					<blockquote>{{ quote }}</blockquote>
 				</div>

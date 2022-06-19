@@ -72,10 +72,10 @@
     font-weight: var(--font-base-medium);
 	line-height: 1.5;
 }
-/* ::selection{
+::selection{
     background-color: #4b75ff;
     color: white;
-} */
+}
 
 
 

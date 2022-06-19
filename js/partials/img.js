@@ -4,11 +4,9 @@
         document.querySelectorAll('img').forEach(el => {
             el.onload = function() {
                 el.setAttribute('data-state', '1');
-                el.removeAttribute('style');
             };
             if (el.complete) {
                 el.setAttribute('data-state', '1');
-                el.removeAttribute('style');
             };
         });
     };

@@ -97,66 +97,7 @@ const App = {
         }
     },
 
-    observeMutation: function(selector, callback) {
-        const target = App.doc.querySelector(selector);
-        const config = { attributes: false, childList: true, subtree: true };
-        const observer = new MutationObserver(function() {
-            callback();
-            observer.disconnect();
-        });
-        observer.observe(target, config);
-        return;
-    },
-
-    setExtLinkBehaviour: function(el) {
-        el.setAttribute("target", "_blank");
-        el.setAttribute("rel", "noopener");
-    },
-
-    setIntLinkBehaviour: function(el) {
-        el.addEventListener("click", function(e) {
-            e.preventDefault();
-            const destinationPath = el.getAttribute("href");
-            App.setDestinationPath(destinationPath);
-            App.setDestinationDepth()         
-
-            if (App.destinationDepth < App.currentDepth) {
-                App.setState(App.body, '_012_nav-b', 0, [App.events.navigating, App.events.navigatingBackward]);
-
-            } else if(App.destinationDepth > App.currentDepth) {
-                App.setState(App.body, '_012_nav-f', 0, [App.events.navigating, App.events.navigatingForward]);
-
-            } else {
-                App.setState(App.body,'_012_nav', 0, [App.events.navigating]);
-            }
-            setTimeout(function(){ 
-                window.location.href = App.destinatioPath;
-            }, App.navigationDelay);
-
-        }, false);
-    },
-
-    setLinkBehaviour: function(els) {
-        els.forEach(el => {
-            const url = el.getAttribute('href');
-            const targetAttr = el.getAttribute('target');
-            if (!!url) {
-                if (!!targetAttr) {
-                    return;
-                }
-                else if (url.match("^http") || url.match("^mailto:") || url.match("^tel:")) {
-                    App.setExtLinkBehaviour(el);
-                } 
-                else if (url.match("^/")) {
-                    App.setIntLinkBehaviour(el);
-                }                
-            }
-        });
-    },
-
     Init: function() {
-        App.setCurrentDepth();
-        App.setLinkBehaviour(App.doc.querySelectorAll("a"));
         App.setAdjustedDelay();
         if (App.tti == null) {
             App.tti = performance.now();
