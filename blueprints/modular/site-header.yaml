@@ -1,0 +1,35 @@
+title: Site Header
+form:
+  validation: loose
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+
+            header.navigation_section:
+              type: section
+              title: Navigation
+              underline: true
+
+            header.links:
+              name: links
+              type: list
+              label: Links
+              fields:
+
+                .label:
+                  type: text
+                  label: Label
+
+                .url:
+                  type: text
+                  label: Url
+
+            header.media_order:
+              type: pagemedia
+              label: PLUGIN_ADMIN.PAGE_MEDIA

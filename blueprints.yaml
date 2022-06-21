@@ -86,23 +86,6 @@ form:
       validate:
         type: bool
 
-    snipcart_version:
-      type: text
-      label: Snipcart Version
-      placeholder: 3.4.4
-      description: 'Change at your own risk!'
-
-    snipcart_mode:
-      type: toggle
-      label: Mode
-      highlight: 1
-      default: 0
-      options:
-        1: Live
-        0: Test
-      validate:
-        type: bool
-
     snipcart_public_test_key:
       type: text
       label: Public Test Key
@@ -142,4 +125,3 @@ form:
         1: PLUGIN_ADMIN.ENABLED
       validate:
         type: bool
-        

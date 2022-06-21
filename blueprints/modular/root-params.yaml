@@ -47,20 +47,15 @@ form:
                 name: footer_nav
                 type: list
                 label: Footer Links
-
                 fields:
-
                   .label:
                     type: text
                     label: Label
-
                   .links:
                     name: links
                     type: list
                     label: Links
-
                     fields:
-
                       .label:
                         type: text
                         label: Label
