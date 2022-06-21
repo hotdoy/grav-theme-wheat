@@ -44,6 +44,26 @@ form:
         mode: js
       label: Inline Body Script (include script tag)
 
+    schema_section:
+      type: section
+      title: Schema
+      underline: true
+
+    schema_logo:
+      type: file
+      label: Schema Logo
+      destination: 'themes://images'
+      multiple: false
+      help: The logo you want Google to associate with your brand.
+      description: The image must be 112x112px, at minimum.
+      accept:
+        - image/*
+
+    schema_url:
+      type: url
+      label: Schema Url
+      help: The URL of the website of the Organization associated with the logo.
+
     snipcart_section:
       type: section
       title: Snipcart
