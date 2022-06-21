@@ -16,25 +16,25 @@ form:
               title: Navigation
               underline: true
               
-              header.groups:
-                name: groups
-                type: list
-                label: Groups
-                fields:
-                  .label:
-                    type: text
-                    label: Label
-                  .links:
-                    name: links
-                    type: list
-                    label: Links
-                    fields:
-                      .label:
-                        type: text
-                        label: Label
-                      .url:
-                        type: text
-                        label: Url
+            header.groups:
+              name: groups
+              type: list
+              label: Groups
+              fields:
+                .label:
+                  type: text
+                  label: Label
+                .links:
+                  name: links
+                  type: list
+                  label: Links
+                  fields:
+                    .label:
+                      type: text
+                      label: Label
+                    .url:
+                      type: text
+                      label: Url
 
             header.misc_section:
               type: section
