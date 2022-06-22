@@ -1,20 +1,19 @@
-/* #loader {
+#indicator {
     position: fixed;
-    opacity: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: 0; right: 0; bottom: 0; left: 0;
     background-color: white;
-    z-index: 2147483647;
-    transition: all 200ms;
-    user-select: none;
-    pointer-events: none;
+    z-index: 4999;
+
+    visibility: hidden;
+    opacity: 0;
+    transition-property: visibility, opacity;
+    transition-duration: 100ms;
 }
 
-.htmx-swapping #loader {
+.htmx-request #indicator,
+.htmx-added #indicator,
+.htmx-settling #indicator,
+.htmx-swapping #indicator {
+    visibility: visible;
     opacity: 1;
-} */
+}

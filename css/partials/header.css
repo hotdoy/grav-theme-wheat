@@ -19,84 +19,51 @@
     background-color: var(--color-bg);
 }
 
-#header .layout {
+#header .bar {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     height: 100%;
 }
 
-#header .layout .logo {
+#header .bar .logo {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#header .layout .logo svg {
+#header .bar .logo svg {
     width: 70px;
     height: auto;
     z-index: 1;
 }
 
-#header .layout .toggles {
+#header .bar .toggles {
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-#header .version {
-    opacity: 0.7;
-}
-
-
-
-
-
-/*LINKS*/
-#header .layout nav ul {
+#header .bar nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#header .layout nav ul li {
+#header .bar nav ul li {
     margin-left: 10px;
+    font-weight: 700;
 }
 
-@media (min-width: 640px) {
-    #header .layout nav ul li {
-        margin-left: var(--gutter);
-    }
+#header .bar nav ul li.version {
+    color: var(--color-text-medium);
+    font-weight: 400;
 }
 
-
-/* #header .layout nav ul li.langswitcher {} */
-
-
-
-
-
-/*TOGGLES*/
-#header .layout nav ul li button {
+#header .bar nav ul li button {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     height: 100%;
-}
-
-#header .snipcart-items-count {
-    position: absolute;
-    top: 13px;
-    right: -2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 14px;
-    width: 14px;
-    font-size: 8px;
-    line-height: 8px;
-    border-radius: 100%;
-    background-color: var(--color-buttonface);
-    color: var(--color-buttontext);
 }
