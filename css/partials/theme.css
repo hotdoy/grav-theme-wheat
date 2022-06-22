@@ -7,16 +7,12 @@
 	--color-fg: rgba(17, 17, 17, 1);
 	--color-hl: #635bff;
 	--color-graytext: rgb(106, 115, 125);
-
-	--color-area-bg: #f1f1f1;
-	--color-area-fg: #0a2540;
-	--color-area-graytext: rgb(106, 115, 125);
-
 	--color-text-dark: rgba(17, 17, 17, 1);
 	--color-text-medium: rgba(0,0,0,0.6);
 	--color-hover: rgba(0,0,0,0.03);
 	--shadow-100: 0px 4px 18px rgb(0 0 0 / 4%), 0px 2.025px 7.84688px rgb(0 0 0 / 3%), 0px 0.8px 2.925px rgb(0 0 0 / 2%), 0px 0.175px 1.04062px rgb(0 0 0 / 1%);
-	--border-100: 1px solid rgba(0, 0, 0, 0.1)
+	--border-100: 1px solid rgba(0, 0, 0, 0.1);
+	--radius-100: 4px;
 
 	color: var(--color-text-dark);
 	background-color: var(--color-background);

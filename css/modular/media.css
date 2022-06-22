@@ -13,7 +13,7 @@ media-wrapper {
 wht-media img,
 wht-media video,
 wht-media lite-youtube {
-    border-radius: 1rem;
+    border-radius: var(--radius-100);
     height: auto;
     margin: 0 auto;
     overflow: hidden;
