@@ -3,18 +3,16 @@
 {% if site_footer %}
 <footer id="footer">
 	<div class="wrapper">
-		<div class="links">
-			<nav>
-				{% for group in site_footer.header.groups %}
-				<ul>
-					<li>{{ group.label }}</li>
-					{% for link in group.links %}
-					<li><a href="{{ link.url }}"}>{{ link.label }}</a></li>
-					{% endfor %}
-				</ul>
+		<nav>
+			{% for group in site_footer.header.groups %}
+			<ul>
+				<li>{{ group.label }}</li>
+				{% for link in group.links %}
+				<li><a href="{{ link.url }}"}>{{ link.label }}</a></li>
 				{% endfor %}
-			</nav>			
-		</div>
+			</ul>
+			{% endfor %}
+		</nav>			
 		<div class="footnote">
 			<p>{{ site_footer.header.footnotes|raw }}</p>
 		</div>		

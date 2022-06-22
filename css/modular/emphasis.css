@@ -7,25 +7,19 @@ emphasis-wrapper {
     padding: 0 var(--gutter);
     width: 100%;
     max-width: var(--width-main);
-}
-
-wht-emphasis .text.large div,
-wht-emphasis .text.large p,
-wht-emphasis .text.large h2,
-wht-emphasis .text.large h3,
-wht-emphasis .text.large h4,
-wht-emphasis .text.large h5,
-wht-emphasis .text.large h6,
-wht-emphasis .text.large li {
-    font-size: 24px;
-    font-size: clamp(24px, 4vw, 48px);
-    line-height: 1.2;
-    font-weight: var(--font-base-bold);
-    color: var(--color-fg);
-    font-weight: var(--font-base-regular);
     text-align: center;
+    font-size: xx-large;
+    font-size: -webkit-xx-large;
+    line-height: 1.2;
 }
 
-wht-emphasis .text.large h1 {
-    font-weight: var(--font-base-black);
+@media (min-width: 1024px) {
+    emphasis-wrapper {
+        font-size: xxx-large;
+        font-size: -webkit-xxx-large;
+    }
+}
+
+wht-emphasis .button {
+    margin-top: 1rem;
 }

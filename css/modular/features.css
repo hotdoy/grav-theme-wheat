@@ -15,12 +15,6 @@ features-layout {
     gap: 2rem;
 }
 
-@media (min-width: 624px) {
-    features-layout {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 @media (min-width: 1024px) {
     features-layout {
         grid-template-columns: 1fr 1fr 1fr;

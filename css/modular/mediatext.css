@@ -56,3 +56,7 @@ mediatext-content {
         padding-left: 0;
     }
 }
+
+mediatext-content p {
+    color: var(--color-text-medium);
+}

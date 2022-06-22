@@ -1,10 +1,10 @@
 {% extends 'modular/module.html.twig' %}
 {% set el = 'wht-emphasis' %}
 
-{% set content = page.header.content ?? null %}
+{% set content = page.content ?? null %}
 
 {% block content %}
-<emphasis-wrapper class="text large prose">
-	{{ content|raw }}
+<emphasis-wrapper>
+	{{ content|markdown }}
 </emphasis-wrapper>
 {% endblock %}
