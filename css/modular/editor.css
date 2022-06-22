@@ -3,7 +3,7 @@
 .module.editor > .wrapper {
     padding: 0 var(--gutter);
     margin: 0 auto;
-    max-width: var(--width-tight);
+    max-width: var(--width-main);
     width: 100%;
 }
 

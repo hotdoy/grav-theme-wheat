@@ -42,11 +42,12 @@
 
 .default-card a,
 .default-card span {
-    border-radius: 1rem;
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
     height: 100%;
     overflow: hidden;
+    box-shadow: var(--shadow-100);
 }
 
 .default-card__media {
@@ -64,7 +65,7 @@
 
 
 .default-card__content {
-    background-color: var(--color-area-bg);
+    background-color: white;
     display: block;
     flex-grow: 1;
     padding: var(--gutter);

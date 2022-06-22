@@ -4,7 +4,7 @@ media-wrapper {
     box-sizing: border-box;
     display: block;
     margin: 0 auto;
-    max-width: var(--width-body);
+    max-width: var(--width-main);
     padding: 0 var(--gutter);  
     position: relative;
     width: 100%;

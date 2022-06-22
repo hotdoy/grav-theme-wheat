@@ -16,6 +16,7 @@
 	--color-text-medium: rgba(0,0,0,0.6);
 	--color-hover: rgba(0,0,0,0.03);
 	--shadow-100: 0px 4px 18px rgb(0 0 0 / 4%), 0px 2.025px 7.84688px rgb(0 0 0 / 3%), 0px 0.8px 2.925px rgb(0 0 0 / 2%), 0px 0.175px 1.04062px rgb(0 0 0 / 1%);
+	--border-100: 1px solid rgba(0, 0, 0, 0.1)
 
 	color: var(--color-text-dark);
 	background-color: var(--color-background);
@@ -49,10 +50,7 @@
 ============================================*/
 
 :root {
-	--width-tight: 100%;
-	--width-main: 100%;
-	--width-body: 100%;
-	--width-full: 100%;
+	--width-main: 1260px;
 	--gutter: 16px;
 	--rhythm: 120px;
 	--header: 34px;
@@ -60,10 +58,6 @@
 
 @media (min-width: 640px) {
 	:root {
-		--width-tight: 500px;
-		--width-main: 100%;
-		--width-body: 100%;
-		--width-full: 100%;
 		--gutter: 18px;
 		--rhythm: 160px;
 		--header: 40px;
@@ -72,10 +66,6 @@
   
 @media (min-width: 1024px) {
 	:root {
-		--width-tight: 535px;
-		--width-main: 900px;
-		--width-body: 100%;
-		--width-full: 100%;
 		--gutter: 20px;
 		--rhythm: 180px;
 		--header: 44px;
@@ -84,10 +74,6 @@
   
 @media (min-width: 1280px) {
 	:root {
-		--width-tight: 535px;
-		--width-main: 1200px;
-		--width-body: 100%;
-		--width-full: 100%;
 		--gutter: 20px;
 		--rhythm: 200px;
 		--header: 44px;
@@ -96,10 +82,6 @@
 
 @media (min-width: 1440px) {
 	:root {
-		--width-tight: 640px;
-		--width-main: 1200px;
-		--width-body: 1600px;
-		--width-full: 1920px;
 		--gutter: 20px;
 		--rhythm: 200px;
 		--header: 44px;
