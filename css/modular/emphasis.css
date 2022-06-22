@@ -10,6 +10,7 @@ emphasis-wrapper {
     text-align: center;
     font-size: xx-large;
     font-size: -webkit-xx-large;
+    font-weight: 700;
     line-height: 1.2;
 }
 

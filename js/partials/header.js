@@ -1,7 +1,6 @@
 (function () {
 	"use strict";
 
- 	const body = document.body;
   	const header = document.querySelector('#header');
   	let lastScroll = 0;
 

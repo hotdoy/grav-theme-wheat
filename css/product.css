@@ -1,6 +1,6 @@
 /*body.product{}*/
 
-.module.product__showcase {
+.product__showcase {
     margin-top: var(--gutter);
 }
 
@@ -110,7 +110,7 @@
     background-clip: padding-box;
     background-color: white;
     border-radius: var(--radius-100);
-    border: var(--border);
+    border: var(--border-100);
     font-family: inherit;
     font-size: 1rem;
     line-height: 1.5;

@@ -1,49 +1,22 @@
-:root {
-    --header-heigth: 56px;
-}
-
-@media (min-width: 640px) {
-    :root {
-        --header-heigth: 64px;
-    }
-}
-
 #header-shim {
     position: relative;
-    height: var(--header-heigth);
+    height: 50px;
 }
 
 #header {
-    color: var(--color-fg);
     font-size: medium;
-    height: var(--header-heigth);
+    height: 50px;
     left: 0;
     line-height: 1;
     margin: 0 auto;
-    max-width: var(--width-full);
+    max-width: var(--width-main);
     padding: var(--gutter);
     position: fixed;
     right: 0;
     top: 0;
     z-index: 5000;
-
-    backdrop-filter: blur(10px);
-    background-color: var(--header-veil);
-}
-
-#header[data-state] {
-    transition-property: opacity, transform;
-    transition-duration: 100ms;
-}
-
-#header[data-state='1'] {
-    opacity: 0;
-    transform: translateY(-100%);
-}
-
-#header[data-state='2'] {
-    opacity: 1;
-    transform: translateY(0%);
+    border-bottom: var(--border-100);
+    background-color: var(--color-bg);
 }
 
 #header .layout {

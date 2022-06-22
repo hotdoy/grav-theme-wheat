@@ -47,14 +47,14 @@
 
 :root {
 	--width-main: 1260px;
-	--gutter: 16px;
+	--gutter: 1rem;
 	--rhythm: 120px;
 	--header: 34px;
 }
 
 @media (min-width: 640px) {
 	:root {
-		--gutter: 18px;
+		--gutter: 1rem;
 		--rhythm: 160px;
 		--header: 40px;
 	}
@@ -62,7 +62,7 @@
   
 @media (min-width: 1024px) {
 	:root {
-		--gutter: 20px;
+		--gutter: 1rem;
 		--rhythm: 180px;
 		--header: 44px;
 	}
@@ -70,7 +70,7 @@
   
 @media (min-width: 1280px) {
 	:root {
-		--gutter: 20px;
+		--gutter: 1rem;
 		--rhythm: 200px;
 		--header: 44px;
 	}
@@ -78,7 +78,7 @@
 
 @media (min-width: 1440px) {
 	:root {
-		--gutter: 20px;
+		--gutter: 1rem;
 		--rhythm: 200px;
 		--header: 44px;
 	}
