@@ -3,13 +3,13 @@
 {% if site_header %}
 <div id="header-shim"></div>
 <header id="header">
-    <div class="layout">
+    <div class="bar">
         <a class="logo" href="{{ home_url }}" aria-label="Site logo">{{ svg.wheat() }}</a> 
         <div class="toggles">
             <nav class="nav">
                 <ul>
                     <li class="version">v{{ grav.theme.getBlueprint().version }}</li>
-                    {% for link in root_params.header.header_links %}
+                    {% for link in site_header.header.links %}
                     <li><a href="{{ link.url }}">{{ link.label }}</a></li>
                     {% endfor %}
                     {% include 'partials/langswitcher.html.twig' %}
