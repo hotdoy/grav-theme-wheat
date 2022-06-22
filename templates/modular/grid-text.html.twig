@@ -1,11 +1,11 @@
 {% extends 'modular/module.html.twig' %}
-{% set el = 'wht-features' %}
+{% set el = 'wht-grid-text' %}
 
 {% set display_title = display_title ?? page.header.display_title ?? null %}
 {% set items = items ?? page.header.items ?? null %}
 
 {% block content %}
-<features-wrapper>
+<grid-text-wrapper>
 
 	{% if display_title %}
 	<div class="module__title text">
@@ -13,16 +13,14 @@
 	</div>
 	{% endif %}
 
-    <features-layout>
+    <grid-text-layout>
         {% for item in items %}
-        {% set image = item.image ? page.media[item.image] %}
         <article class="text">
-            {% include "partials/img.html.twig" with {image: image} only %}
             <h3>{{ item.title }}</h3>
             <p>{{ item.text }}</p>
         </article>
         {% endfor %}
-    </features-layout>
+    </grid-text-layout>
 
-</features-wrapper>
+</grid-text-wrapper>
 {% endblock %}

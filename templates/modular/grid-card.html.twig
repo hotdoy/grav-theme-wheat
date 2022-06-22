@@ -1,12 +1,11 @@
 {% extends 'modular/module.html.twig' %}
-{% set name = 'cards' %}
-{% set el = 'wht-cards' %}
+{% set el = 'wht-grid-card' %}
 
 {% set display_title = display_title ?? page.header.display_title ?? null %}
 {% set items = items ?? page.header.items  %}
 
 {% block content %}
-<cards-wrapper>
+<grid-card-wrapper>
 
 	{% if display_title %}
 	<div class="module__title text">
@@ -14,14 +13,14 @@
 	</div>
 	{% endif %}
 
-	<cards-layout>
+	<grid-card-layout>
     {% for item in items %}
         {% set image = item.image ? page.media[item.image] %}
         {% set image_alt = item.image_alt %}
         {% set title = item.title %}
         {% set text = item.text %}
         {% set url = item.url %}
-        {% include "partials/default-card.html.twig" with {
+        {% include "partials/card.html.twig" with {
             image: image,
             image_alt: image_alt,
             title: title,
@@ -29,7 +28,7 @@
             url: url
         }%}
     {% endfor %}
-	</cards-layout>
+	</grid-card-layout>
 
-</cards-wrapper>
+</grid-card-wrapper>
 {% endblock %}

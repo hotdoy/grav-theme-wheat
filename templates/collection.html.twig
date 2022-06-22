@@ -20,17 +20,28 @@
     {# LIST #}
     <section class="collection__list">
         <div class="wrapper">
-            {% for item in collection_slice %}
-            {% include ['partials/' ~ item.template ~ '-card.html.twig', 'partials/default-card.html.twig' ] with {'item': item} %}
-            {% endfor %}
-            {% if next_start + 1 <= collection_raw_length %}
+        {% for item in collection_slice %}
+            {% set image = item.header.image ? item.media[item.header.image] %}
+            {% set image_alt = item.header.image_alt %}
+            {% set title = item.title %}
+            {% set text = item.header.price ? item.header.price|number_format(2, ',', ' ') ~ '$' : null %}            
+            {% set url = item.url %}
+            {% include "partials/card.html.twig" with {
+                image: image,
+                image_alt: image_alt,
+                title: title,
+                text: text,
+                url: url
+            }%}
+        {% endfor %}
+        {% if next_start + 1 <= collection_raw_length %}
             {% set url = (page.url ~ '?' ~ key ~ '=' ~ next_start ~ '-' ~ next_end) %}
             <button id="load-more" class="button" href="{{ url }}"
             hx-push-url="true"
             hx-get="{{ url }}" 
             hx-swap="outerHTML" 
             hx-select=".collection__list article">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</button>
-            {% endif %}
+        {% endif %}
         </div>
     </section>
 

@@ -73,21 +73,33 @@
 }
 
 .text :where(h1) {
-    font-size: 32px;
-    font-size: clamp(32px, 5vw, 48px);
+    font-size: xx-large;
 	font-weight: 700;
     line-height: 1.2;
 }
+
+@media (min-width: 1024px) {
+    .text :where(h1) {
+        font-size: xxx-large;
+        font-size: -webkit-xxx-large;
+    }
+}
+
 
 .text.prose :where(h1) {
     margin: 3rem 0 1rem 0;
 }
 
 .text :where(h2) {
-    font-size: 24px;
-    font-size: clamp(24px, 2vw, 32px);
+    font-size: x-large;
 	font-weight: 700;
     line-height: 1.2;
+}
+
+@media (min-width: 1024px) {
+    .text :where(h2) {
+        font-size: xx-large;
+    }
 }
 
 .text.prose :where(h2) {
@@ -98,10 +110,18 @@
 .text :where(h4),
 .text :where(h5),
 .text :where(h6) {
-    font-size: 18px;
-    font-size: clamp(18px, 2vw, 24px);
+    font-size: large;
     line-height: 1.2;
     font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+    .text :where(h3),
+    .text :where(h4),
+    .text :where(h5),
+    .text :where(h6) {
+        font-size: x-large;
+    }
 }
 
 .text.prose :where(h3),

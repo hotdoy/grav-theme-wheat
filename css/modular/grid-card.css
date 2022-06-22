@@ -1,6 +1,6 @@
-/* wht-cards {} */
+/* wht-grid-card {} */
 
-cards-wrapper {
+grid-card-wrapper {
     box-sizing: border-box;
     display: block;
     margin: 0 auto;
@@ -9,20 +9,20 @@ cards-wrapper {
     padding: 0 var(--gutter);
 }
 
-cards-layout {
+grid-card-layout {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--gutter);
 }
 
 @media (min-width: 640px) {
-    cards-layout {
+    grid-card-layout {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (min-width: 1024px) {
-    cards-layout {
+    grid-card-layout {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
