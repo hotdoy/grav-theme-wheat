@@ -12,28 +12,21 @@
 
 {% block content %}
 <mediatext-wrapper class="{{media_position }}">
-
 	<mediatext-media>
-
 		{% if lottie %}
 		<div class="lottie" style="height:{{ lottie_height }}px;" data-animation-path="{{ lottie.url }}"></div>
-
 		{% elseif mp4 %}
 		<video autoplay loop muted playsinline disablepictureinpicture disableremoteplayback poster="{{ image.url }}">
 			<source type="video/mp4" src="{{ mp4.url }}">
 		</video>
-
 		{% elseif image %}
 		{% include "partials/img.html.twig" with {image: image, image_alt: image_alt} %}
-		
 		{% endif %}
 	</mediatext-media>
-
 	<mediatext-content>
 		<div class="text prose">
 			{{ page_content|raw }}
 		</div>
 	</mediatext-content>
-
 </mediatext-wrapper>
 {% endblock %}

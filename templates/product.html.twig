@@ -137,12 +137,4 @@
 		{{ module.content|raw }}
 	{% endfor %}
 
-	{# RELATED #}
-	{% if page.header.related %}
-		{% set related_options = { items: {'@self.siblings':''}, 'limit': 6, 'order': {'by': 'random'}} %}
-		{% set related_items = page.collection(related_options) %}
-		{% include 'partials/product-carousel.html.twig' with { 'title': 'THEME.PRODUCT.RELATED'|t, 'collection': related_items } only %}	
-	{% endif %}
-
-
 {% endblock %}

@@ -11,15 +11,15 @@ banner-wrapper {
 }
 
 banner-layout {
-    background-color: var(--color-area-bg);
-    border-radius: 1rem;
-    color: var(--color-area-fg);
+    border-radius: 4px;
     display: flex;
     flex-wrap: wrap;
+    box-shadow: var(--shadow-100);
+    background-color: white;
     padding: 2rem 1rem 1rem 1rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
     banner-layout {
         padding: 2rem;
     }
@@ -29,7 +29,7 @@ banner-content {
     width: 100%;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
     banner-content {
         text-align: left;
         width: 66.66%;
@@ -52,7 +52,7 @@ banner-action {
     width: 100%;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
     banner-action {
         margin-top: 0;
         width: 33.33%;
@@ -63,7 +63,7 @@ banner-action .button {
     width: 100%;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
     banner-action .button {
         width: auto;   
     }

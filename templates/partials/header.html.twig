@@ -1,63 +1,29 @@
 {% import "partials/svg.html.twig" as svg %}
-
+{% set site_header = page.find('/_site-header/') %}
+{% if site_header %}
 <div id="header-shim"></div>
-
 <header id="header">
-
-        <div class="layout">
-
-            {# LEFT - LOGO #}
-            <a class="logo" href="{{ home_url }}" aria-label="Site logo">
-                {{ svg.wheat() }}
-            </a> 
-
-            {# RIGHT - LINKS & TOGGLES #}
-            <div class="toggles">
-                <nav class="nav">
-                    <ul>
-                        <li class="version">v{{ grav.theme.getBlueprint().version }}</li>
-                        {% for link in root_params.header.header_links %}
-                        <li><a href="{{ link.url }}">{{ link.label }}</a></li>
-                        {% endfor %}
-                        {% include 'partials/langswitcher.html.twig' %}
-                        {% if config.plugins['algolia-pro'].enabled %}
-                        <li>
-                            <button class="search" aria-label="search" data-algolia-pro-trigger>
-                                {{ svg.search() }}
-                            </button>
-                        </li>
-                        {% endif %}
-                        {% if theme.snipcart %}
-                        {% if not theme.snipcart_allow_guests_only %}
-                        <li>
-                            <button class="snipcart-account snipcart-customer-signin" aria-label="customer sign in">
-                                {{ svg.user() }}
-                            </button>
-                        </li>
-                        {% endif %}
-                        <li>
-                            <button class="snipcart-checkout" aria-label="open cart">
-                                {{ svg.bag() }}
-                                <span class="snipcart-items-count">0</span>
-                            </button>
-                        </li>
-                        {% endif %}
-                    </ul>
-                </nav>
-            </div>
+    <div class="layout">
+        <a class="logo" href="{{ home_url }}" aria-label="Site logo">{{ svg.wheat() }}</a> 
+        <div class="toggles">
+            <nav class="nav">
+                <ul>
+                    <li class="version">v{{ grav.theme.getBlueprint().version }}</li>
+                    {% for link in root_params.header.header_links %}
+                    <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+                    {% endfor %}
+                    {% include 'partials/langswitcher.html.twig' %}
+                    {% if theme.snipcart %}
+                    <li>
+                        <button class="snipcart-checkout" aria-label="open cart">
+                            {{ svg.bag() }}
+                            <span class="snipcart-items-count">0</span>
+                        </button>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
         </div>
     </div>
 </header>
-
-{#
-<button class="burger" aria-label="open menu">
-    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"></path><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
-</button>
-
-<nav>
-    {% for link in root_params.header.header_links %}
-    <li><a href="{{ link.url }}">{{ link.label }}</a></li>
-    {% endfor %}
-    {% include 'partials/langswitcher.html.twig' %}
-</nav>
-#}
+{% endif %}

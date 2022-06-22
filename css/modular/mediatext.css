@@ -33,11 +33,12 @@ mediatext-media video,
 mediatext-media img {
     width: 100%;
     height: auto;
-    border-radius: 1rem;
+    border-radius: var(--radius-100);
 }
 
 mediatext-content {
     display: block;
+    text-align: center;
 }
 
 @media (min-width: 1024px) {
@@ -47,10 +48,15 @@ mediatext-content {
         justify-content: center;
         padding-left: 10%;
         padding-right: 0;
+        text-align: left;
     }
 
     .right mediatext-content {
         padding-right: 10%;
         padding-left: 0;
     }
+}
+
+mediatext-content p {
+    color: var(--color-text-medium);
 }

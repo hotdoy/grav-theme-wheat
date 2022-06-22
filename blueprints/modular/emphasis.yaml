@@ -1,19 +1,2 @@
 title: emphasis
 extends@: modular/module
-
-form:
-  fields:
-    tabs:
-      fields:
-        content:
-          fields:
-            content:
-              unset@: true
-            header.media_order:
-              unset@: true
-            
-            header.content:
-              type: textarea
-              style: vertical
-              label: Content
-              description: Content must be entered using the proper semantic HTML tag (p, h1, h2, h3, etc ...).

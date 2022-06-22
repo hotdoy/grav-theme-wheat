@@ -10,9 +10,9 @@ details-wrapper {
 }
 
 wht-details details {
-    background-color: var(--color-area-bg);
-    border-radius: 1rem;
-    color: var(--color-area-fg);
+    background-color: white;
+    box-shadow: var(--shadow-100);
+    border-radius: var(--radius-100);
     display: block;
     padding: 1rem;
 }
@@ -63,8 +63,13 @@ wht-details details[open] summary:before {
 }
 
 wht-details .content {
+    color: var(--color-text-medium);
     margin: 1rem 0 0.5rem 0;
     width: 95%;
+}
+
+wht-details p {
+    color: var(--color-text-medium);
 }
 
 wht-details details[open] .content {

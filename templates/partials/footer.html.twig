@@ -1,25 +1,21 @@
 {% import "partials/svg.html.twig" as svg %}
-{% set nav = root_params.header.footer_links %}
-{% set footnotes = root_params.header.footnotes %}
-
-<footer id="footer" class="dark">
+{% set site_footer = page.find('/_site-footer/') %}
+{% if site_footer %}
+<footer id="footer">
 	<div class="wrapper">
-		<div class="links text">
-			<nav>
-				{% for group in nav %}
-				<ul>
-					<li>{{ group.label }}</li>
-					{% for link in group.links %}
-					<li><a href="{{ link.url }}"}>{{ link.label }}</a></li>
-					{% endfor %}
-				</ul>
+		<nav>
+			{% for group in site_footer.header.groups %}
+			<ul>
+				<li>{{ group.label }}</li>
+				{% for link in group.links %}
+				<li><a href="{{ link.url }}"}>{{ link.label }}</a></li>
 				{% endfor %}
-			</nav>			
-		</div>
+			</ul>
+			{% endfor %}
+		</nav>			
 		<div class="footnote">
-			<p>
-				{{ footnotes|raw }}
-			</p>
+			<p>{{ site_footer.header.footnotes|raw }}</p>
 		</div>		
 	</div>
 </footer>
+{% endif %}

@@ -3,20 +3,19 @@
 ============================================*/
 
 :root {
-	--color-bg: white;
-	--color-fg: #0a2540;
+	--color-bg: #fffefc;
+	--color-fg: rgba(17, 17, 17, 1);
 	--color-hl: #635bff;
 	--color-graytext: rgb(106, 115, 125);
+	--color-text-dark: rgba(17, 17, 17, 1);
+	--color-text-medium: rgba(0,0,0,0.6);
+	--color-hover: rgba(0,0,0,0.03);
+	--shadow-100: 0px 4px 18px rgb(0 0 0 / 4%), 0px 2.025px 7.84688px rgb(0 0 0 / 3%), 0px 0.8px 2.925px rgb(0 0 0 / 2%), 0px 0.175px 1.04062px rgb(0 0 0 / 1%);
+	--border-100: 1px solid rgba(0, 0, 0, 0.1);
+	--radius-100: 4px;
 
-	--color-buttonface: #635bff;
-	--color-buttontext: white;
-	--color-buttonfocus: rgb(121 164 255);
-
-	--color-area-bg: #f1f1f1;
-	--color-area-fg: #0a2540;
-	--color-area-graytext: rgb(106, 115, 125);
-
-	--header-veil: rgb(255 255 255 / 80%);
+	color: var(--color-text-dark);
+	background-color: var(--color-background);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,22 +46,15 @@
 ============================================*/
 
 :root {
-	--width-tight: 100%;
-	--width-main: 100%;
-	--width-body: 100%;
-	--width-full: 100%;
-	--gutter: 16px;
+	--width-main: 1260px;
+	--gutter: 1rem;
 	--rhythm: 120px;
 	--header: 34px;
 }
 
 @media (min-width: 640px) {
 	:root {
-		--width-tight: 500px;
-		--width-main: 100%;
-		--width-body: 100%;
-		--width-full: 100%;
-		--gutter: 18px;
+		--gutter: 1rem;
 		--rhythm: 160px;
 		--header: 40px;
 	}
@@ -70,11 +62,7 @@
   
 @media (min-width: 1024px) {
 	:root {
-		--width-tight: 535px;
-		--width-main: 900px;
-		--width-body: 100%;
-		--width-full: 100%;
-		--gutter: 20px;
+		--gutter: 1rem;
 		--rhythm: 180px;
 		--header: 44px;
 	}
@@ -82,11 +70,7 @@
   
 @media (min-width: 1280px) {
 	:root {
-		--width-tight: 535px;
-		--width-main: 1200px;
-		--width-body: 100%;
-		--width-full: 100%;
-		--gutter: 20px;
+		--gutter: 1rem;
 		--rhythm: 200px;
 		--header: 44px;
 	}
@@ -94,11 +78,7 @@
 
 @media (min-width: 1440px) {
 	:root {
-		--width-tight: 640px;
-		--width-main: 1200px;
-		--width-body: 1600px;
-		--width-full: 1920px;
-		--gutter: 20px;
+		--gutter: 1rem;
 		--rhythm: 200px;
 		--header: 44px;
 	}

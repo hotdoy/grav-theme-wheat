@@ -1,0 +1,33 @@
+/* wht-grid-text {} */
+
+grid-text-wrapper {
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    max-width: var(--width-main);
+    padding: 0 var(--gutter);
+    width: 100%;
+}
+
+grid-text-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    grid-text-layout {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+wht-grid-text article.text h3 {
+    font-size: medium;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+wht-grid-text article.text p {
+    color: var(--color-text-medium);
+    margin-top: 0.5rem;
+}

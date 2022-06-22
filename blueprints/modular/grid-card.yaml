@@ -1,4 +1,4 @@
-title: cards
+title: Grid Card
 extends@: modular/module
 
 form:

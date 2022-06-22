@@ -1,4 +1,4 @@
-title: quotes
+title: Grid Text
 extends@: modular/module
 
 form:
@@ -11,22 +11,23 @@ form:
               unset@: true
             header.media_order:
               ordering@: +99
-              
+
+            header.display_title:
+              type: text
+              style: vertical
+              label: Display Title
+            
             header.items:
               name: items
               type: list
               style: vertical
-              label: Items
+              label: items
               fields:
 
-                .quote:
-                  type: textarea
-                  label: Quote
-
-                .image:
-                  type: pagemediaselect
-                  label: Image
-
-                .source:
+                .title:
                   type: text
-                  label: Source
+                  label: Title
+
+                .text:
+                  type: textarea
+                  label: Text

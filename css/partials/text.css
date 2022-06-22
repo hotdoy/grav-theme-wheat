@@ -7,58 +7,19 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-display: swap;
     src: local(''),
-         url('../../fonts/inter-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../../fonts/inter-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('../../fonts/inter-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../../fonts/inter-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-  /* inter-500 - latin */
+  /* inter-700 - latin */
   @font-face {
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 500;
-    font-display: swap;
+    font-weight: 700;
     src: local(''),
-         url('../../fonts/inter-v7-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../../fonts/inter-v7-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('../../fonts/inter-v11-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../../fonts/inter-v11-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-  /* inter-600 - latin */
-  @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: local(''),
-         url('../../fonts/inter-v7-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../../fonts/inter-v7-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* inter-900 - latin */
-  @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: local(''),
-         url('../../fonts/inter-v7-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../../fonts/inter-v7-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-
-
-
-
-
-/*===========================================
-				    FAMILY 
-============================================*/
-
-:root {
-	--font-base: "Inter";
-	--font-base-regular: 400;
-    --font-base-medium: 500;
-	--font-base-bold: 600;
-	--font-base-black: 900;
-}
-
 
 
 
@@ -67,14 +28,10 @@
 				DOCUMENT 
 ============================================*/
 :root {
-	font-family: var(--font-base),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue", sans-serif;
+	font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue", sans-serif;
 	font-size: 16px;
-    font-weight: var(--font-base-medium);
+    font-weight: 400;
 	line-height: 1.5;
-}
-::selection{
-    background-color: #4b75ff;
-    color: white;
 }
 
 
@@ -87,7 +44,6 @@
 .text {
     font-size: 16px;
     line-height: 1.5;
-    color: var(--color-graytext);
 }
 
 .text :where(p) {
@@ -100,11 +56,16 @@
 }
 
 .text :where(h1) {
-    color: var(--color-fg);
-    font-size: 32px;
-    font-size: clamp(32px, 5vw, 48px);
-	font-weight: var(--font-base-bold);
+    font-size: xx-large;
+	font-weight: 700;
     line-height: 1.2;
+}
+
+@media (min-width: 1024px) {
+    .text :where(h1) {
+        font-size: xxx-large;
+        font-size: -webkit-xxx-large;
+    }
 }
 
 .text.prose :where(h1) {
@@ -112,11 +73,15 @@
 }
 
 .text :where(h2) {
-    color: var(--color-fg);
-    font-size: 24px;
-    font-size: clamp(24px, 2vw, 32px);
-	font-weight: var(--font-base-bold);
+    font-size: x-large;
+	font-weight: 700;
     line-height: 1.2;
+}
+
+@media (min-width: 1024px) {
+    .text :where(h2) {
+        font-size: xx-large;
+    }
 }
 
 .text.prose :where(h2) {
@@ -127,11 +92,18 @@
 .text :where(h4),
 .text :where(h5),
 .text :where(h6) {
-    color: var(--color-fg);
-    font-size: 18px;
-    font-size: clamp(18px, 2vw, 24px);
+    font-size: large;
     line-height: 1.2;
-    font-weight: var(--font-base-bold);
+    font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+    .text :where(h3),
+    .text :where(h4),
+    .text :where(h5),
+    .text :where(h6) {
+        font-size: x-large;
+    }
 }
 
 .text.prose :where(h3),
@@ -184,7 +156,7 @@
 }
 
 .text :where(strong) {
-    font-weight: var(--font-base-bold);
+    font-weight: 700;
 }
 
 .text :where(em) {
@@ -200,119 +172,9 @@
 
 
 /*===========================================
-        	    SMALL 
-============================================*/
-
-.text.small {
-    font-size: small;
-    line-height: 1.2;
-}
-
-.text.small :where(p) {
-    font-size: small;
-    line-height: 1.2;
-}
-
-.text.small.prose :where(p) {
-    margin: 0.5rem 0;
-}
-
-.text.small :where(h1),
-.text.small :where(h2) {
-    font-size: large;
-    line-height: 1.2;
-    font-weight: var(--font-base-bold);
-}
-
-.text.small.prose :where(h1),
-.text.small.prose :where(h2) {
-    margin: 0.5rem 0;
-}
-
-.text.small :where(h3),
-.text.small :where(h4),
-.text.small :where(h5),
-.text.small :where(h6) {
-    font-size: medium;
-    line-height: 1.2;
-    font-weight: var(--font-base-bold);
-}
-
-.text.small.prose :where(h3),
-.text.small.prose :where(h4),
-.text.small.prose :where(h5),
-.text.small.prose :where(h6) {
-    margin: 0.5rem 0;
-}
-
-
-
-
-
-/*===========================================
-        	        LARGE 
-============================================*/
-
-.text.large {
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-.text.large :where(p) {
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-.text.large.prose :where(p) {
-    margin: 1rem 0;
-}
-
-.text.large :where(h1) {
-    font-size: 42px;
-    font-size: clamp(42px, 4vw, 96px);
-    line-height: 1.2;
-    font-weight: var(--font-base-bold);
-}
-
-.text.large :where(h2) {
-    font-size: 32px;
-    font-size: clamp(32px, 4vw, 64px);
-    line-height: 1.2;
-    font-weight: var(--font-base-bold);
-}
-
-.text.large.prose :where(h1),
-.text.large.prose :where(h2) {
-    margin: 2rem 0;
-}
-
-.text.large :where(h3),
-.text.large :where(h4),
-.text.large :where(h5),
-.text.large :where(h6) {
-    font-size: 24px;
-    font-size: clamp(24px, 4vw, 48px);
-    line-height: 1.2;
-    font-weight: var(--font-base-bold);
-}
-
-.text.large.prose :where(h3),
-.text.large.prose :where(h4),
-.text.large.prose :where(h5),
-.text.large.prose :where(h6) {
-    margin: 1rem 0;
-}
-
-
-
-
-/*===========================================
         	 	   CODE 
 ============================================*/
-
-
 /* INLINE */
-
 .text :where(:not(pre))>code {
     padding: 0px 4px 1px 4px;
     font-family: monospace;
@@ -320,9 +182,7 @@
     border-radius: 4px;
 }
 
-
 /* CODE BLOCK */
-
 .text pre {
     margin: 1rem 0;
     padding: 1rem;
@@ -339,7 +199,6 @@
 /*===========================================
         	 	   MISC 
 ============================================*/
-
 .prose > *:first-child {margin-top: 0!important;}
 .prose > *:last-child {margin-bottom: 0!important;}
 
