@@ -1,7 +1,7 @@
 #indicator {
     position: fixed;
     top: 0; right: 0; bottom: 0; left: 0;
-    background-color: white;
+    background-color: var(--color-bg);
     z-index: 4999;
 
     visibility: hidden;

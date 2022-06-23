@@ -10,7 +10,7 @@ details-wrapper {
 }
 
 wht-details details {
-    background-color: white;
+    background-color: var(--color-canva);
     box-shadow: var(--shadow-100);
     border-radius: var(--radius-100);
     display: block;

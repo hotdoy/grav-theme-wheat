@@ -15,7 +15,7 @@ banner-layout {
     display: flex;
     flex-wrap: wrap;
     box-shadow: var(--shadow-100);
-    background-color: white;
+    background-color: var(--color-canva);
     padding: 2rem 1rem 1rem 1rem;
 }
 

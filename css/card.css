@@ -27,7 +27,7 @@
 }
 
 .card__content {
-    background-color: white;
+    background-color: var(--color-canva);
     display: block;
     flex-grow: 1;
     padding: var(--gutter);

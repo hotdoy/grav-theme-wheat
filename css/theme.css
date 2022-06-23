@@ -1,0 +1,70 @@
+:root {
+	--color-bg: #fffefc;
+	--color-fg: rgba(17, 17, 17, 1);
+	--color-text-dark: rgba(17, 17, 17, 1);
+	--color-text-medium: rgba(0,0,0,0.6);
+	--color-canva: white;
+	
+	--button-bg: #e16259;
+    --button-fg: white;
+    --button-border: 1px solid #be5643;
+    --button-shadow: 0 1px 2px rgb(15 15 15 / 10%);
+    --button-hover: #cf534a;
+    --button-active: #bf4d45;
+
+	--shadow-100: 0px 4px 18px rgb(0 0 0 / 4%), 0px 2.025px 7.84688px rgb(0 0 0 / 3%), 0px 0.8px 2.925px rgb(0 0 0 / 2%), 0px 0.175px 1.04062px rgb(0 0 0 / 1%);
+	--border-100: 1px solid rgba(0, 0, 0, 0.1);
+	--radius-100: 4px;
+
+	--ease-outexpo: cubic-bezier(0.16, 1, 0.3, 1);
+	--ease-inoutexpo: cubic-bezier(0.87, 0, 0.13, 1);
+	--ease-outback: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+	--width-main: 1260px;
+	--gutter: 1rem;
+	--rhythm: 120px;
+	--header: 50px;
+}
+
+@media (min-width: 640px) {
+	:root {
+		--rhythm: 160px;
+	}
+}
+  
+@media (min-width: 1024px) {
+	:root {
+		--rhythm: 180px;
+	}
+}
+  
+@media (min-width: 1280px) {
+	:root {
+		--rhythm: 200px;
+	}
+}
+
+@media (min-width: 1440px) {
+	:root {
+		--rhythm: 200px;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root, .dark {
+		--color-bg: #404040;
+		--color-fg: rgb(240, 240, 240);
+		--color-text-dark: rgb(255, 255, 255);
+		--color-text-medium: rgb(240, 240, 240);
+		--color-canva: rgb(32, 32, 32);
+		--border-100: 1px solid rgba(255, 255, 255, 0.1);
+	}
+}
+
+body {
+	background-color: var(--color-bg);
+    color: var(--color-fg);
+}
+#main {
+	min-height: 80vh;	
+}
