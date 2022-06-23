@@ -12,10 +12,18 @@
 				{% endfor %}
 			</ul>
 			{% endfor %}
-		</nav>			
+		</nav>
 		<div class="footnote">
 			<p>{{ site_footer.header.footnotes|raw }}</p>
-		</div>		
+		</div>	
+		<div class="legal">
+			<div>Calotte - Copyright © {{ 'now' | date('Y') }}</div>
+			<ul>
+			{% for item in site_footer.header.legal %}
+				<li><a href="{{ item.url }}">{{ item.label }}</a></li>
+			{% endfor %}
+			</ul>
+		</div>
 	</div>
 </footer>
 {% endif %}

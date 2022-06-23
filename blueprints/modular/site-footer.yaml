@@ -36,6 +36,18 @@ form:
                       type: text
                       label: Url
 
+            header.legal:
+              name: legal
+              type: list
+              label: Legal
+              fields:
+                .label:
+                  type: text
+                  label: Label
+                .url:
+                  type: text
+                  label: Url
+
             header.misc_section:
               type: section
               title: Misc

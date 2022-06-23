@@ -1,10 +1,10 @@
 /* body.error {} */
 
-body.error .module.editor {
+.error .module.editor {
   margin-top: 0;
 }
 
-body.error .module.editor .text {
+.error .module.editor .text {
   margin-top: 0;
   text-align: center;
 }
