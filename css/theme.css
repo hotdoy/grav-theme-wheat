@@ -74,7 +74,3 @@ body {
 	background-color: var(--color-bg);
     color: var(--color-fg);
 }
-
-#site {
-	min-height: 60vh;	
-}
