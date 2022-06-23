@@ -75,6 +75,6 @@ body {
     color: var(--color-fg);
 }
 
-#main {
-	min-height: 80vh;	
+#site {
+	min-height: 60vh;	
 }
