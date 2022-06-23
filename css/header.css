@@ -4,19 +4,28 @@
 }
 
 #header {
+    background-color: var(--color-bg);
+    border-bottom: var(--border-100);
     font-size: medium;
-    height: 50px;
+    height: 60px;
     left: 0;
     line-height: 1;
     margin: 0 auto;
     max-width: var(--width-main);
-    padding: var(--gutter);
+    padding: 0 var(--gutter);
+    padding-top: 10px;
     position: fixed;
     right: 0;
     top: 0;
+    transform: translateY(-10px);
+    transition-duration: 400ms;
+    transition-property: border, transform;
     z-index: 5000;
-    border-bottom: var(--border-100);
-    background-color: var(--color-bg);
+}
+
+.top #header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    transform: translateY(0);
 }
 
 #header .bar {
