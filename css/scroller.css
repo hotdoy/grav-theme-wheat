@@ -24,6 +24,12 @@ padding-bottom: var(--gutter);
     border-radius: 9999px;
 }
 
+@media (prefers-color-scheme: dark) {
+    .scroller__scrollctn::-webkit-scrollbar-track {
+        background-color: gray;
+    }
+}
+
 .scroller__scrollctn::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -32,6 +38,12 @@ padding-bottom: var(--gutter);
 .scroller__scrollctn::-webkit-scrollbar-thumb {
     background-color: gray;
     border-radius: 9999px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .scroller__scrollctn::-webkit-scrollbar-thumb {
+        background-color: lightgray;
+    }  
 }
 
 .scroller__slide {

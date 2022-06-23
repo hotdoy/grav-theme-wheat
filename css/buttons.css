@@ -1,18 +1,17 @@
 .button,
 a.button,
 button.button {
-    background-color: #e16259;
+    background-color: var(--button-bg);
     border-radius: 4px;
-    border: 1px solid #be5643;
-    box-shadow: 0 1px 2px rgb(15 15 15 / 10%);
-    color: white;
+    border: var(--button-border);
+    box-shadow: var(--button-shadow);
+    color: var(--button-fg);
     cursor: pointer;
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
     line-height: 1;
     margin-top: 0.5rem;
-    outline: none;
     padding: 14px 30px 14px 30px;
     position: relative;
     text-align: center;
@@ -23,21 +22,22 @@ button.button {
 .button:hover,
 a.button:hover,
 button.button:hover {
-    background-color: #cf534a;
+    background-color: var(--button-hover);
 }
 
 .button:active,
 a.button:active,
 button.button:active {
-    background-color: #bf4d45;
+    background-color: var(--button-active);
 }
 
-.button:focus,
-a.button:focus,
-button.button:focus {
-    transition: box-shadow 200ms;
-    outline: none;
-    box-shadow: 0 0 0 4px var(--color-buttonfocus);
+.button:focus-visible,
+a.button:focus-visible,
+button.button:focus-visible {
+    outline-color: var(--button-bg);
+    outline-offset: 4px;
+    outline-width: 1px;
+    outline-style: dashed;
 }
 
 .button.disabled {

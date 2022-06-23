@@ -57,3 +57,22 @@
 #footer .footnote a {
     color: var(--color-text-dark);
 }
+
+#footer .legal {
+    border-top: var(--border-100);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 1rem 0 0 0;
+    font-size: x-small;
+    color: var(--color-text-medium);
+}
+
+#footer .legal ul {
+    display: flex;
+}
+
+
+#footer .legal li {
+    margin: 0 0 0 10px;
+}

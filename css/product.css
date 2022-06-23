@@ -35,7 +35,7 @@
 
 .product__showcase .scroller__slide,
 .product__showcase .single-image {
-    background-color: var(--color-area-bg);
+    background-color: lightgray;
     border-radius: var(--radius-100);
     position: relative;
     flex-shrink: 0;
@@ -56,7 +56,7 @@
 @media (min-width: 640px) {
     .product__showcase .sticky-ctn {
         position: sticky;
-        top: calc(var(--header) + var(--gutter));
+        top: calc(var(--gutter) + var(--header));
     }
 }
 
