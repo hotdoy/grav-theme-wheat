@@ -29,7 +29,8 @@
         rs.forEach(r => {
             t = t + r['transferSize']
         });
-        console.log(`🌲${t/1000} KB in ${rs.length} requests. That's about ${(t/1073741824*3).toPrecision(4)} KG of CO2.`)
+        // console.log(`🌲${t/1000} KB in ${rs.length} requests. That's about ${((t*1e-9)*3).toPrecision(4)} KG of CO2.`);
+        console.log(`🌲${t/1000} KB in ${rs.length} requests. And we are still figuring out the maths behing CO2 emissions.`);
     })
 })();
 
