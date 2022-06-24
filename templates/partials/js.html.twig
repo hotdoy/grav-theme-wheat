@@ -1,6 +1,6 @@
 {# TOP #}
 {% do assets.addJs('theme://js/htmx.js', { group:'top', loading: 'defer' }) %}
-{% do assets.addJs('theme://js/performance.js', { group:'top' }) %}
+{% do assets.addJs('theme://js/performance.js', { group:'top', loading: 'inline' }) %}
 {% do assets.addJs('theme://js/lite-yt-embed.js', { group:'top', loading: 'defer' }) %}
 
 {# BOTTOM #}
