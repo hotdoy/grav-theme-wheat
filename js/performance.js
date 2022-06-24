@@ -20,3 +20,16 @@
         }
     });
 })();
+
+(function () {
+	"use strict";
+    htmx.onLoad(function(){
+        let t = 0;
+        const rs = performance.getEntriesByType('resource');
+        rs.forEach(r => {
+            t = t + r['transferSize']
+        });
+        console.log(`🌲${t/1000} KB in ${rs.length} requests. That's about ${(t/1073741824*3).toPrecision(4)} KG of CO2.`)
+    })
+})();
+
