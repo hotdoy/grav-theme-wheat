@@ -5,13 +5,14 @@
     let t = 0;
     let TransferedBytes = 0;
     let co2 = 0;
-    const kwhPerGb = 0.81;
-    const carbonFactor = 50; //50 for renewable | 442 for bog standard
-
+    //https://www.cmswire.com/digital-experience/calculating-the-pollution-effect-of-data/
+    const kwhPerGb = 0.015; 
+    const co2PerKwh = 0.28
+    const co2PerGb = kwhPerGb * co2PerKwh;
+    console.log(co2PerGb)
     function updateCo2() {
         const transferInGb = bToGb(TransferedBytes);
-        const kwhPerVisit = transferInGb * kwhPerGb;
-        const co2PerVisit = (kwhPerVisit * carbonFactor);
+        const co2PerVisit = (transferInGb * co2PerGb)*1000;
         co2 = co2 + co2PerVisit;
     };
 
@@ -34,6 +35,7 @@
     function logPerformance(logToconsole, logTodom) {
         if (logToconsole) {
             console.log(`⚡This site became interactive in ${tti}s and complete in ${ttc}s`);
+            console.log(`🌲The initial load transfered around ${bToKb(TransferedBytes).toPrecision(5)} KB for an estimate of ${co2.toPrecision(2)}g/CO2.`);
         }
         if (logTodom) {
             document.querySelectorAll('.ttc').forEach(el => {
@@ -41,18 +43,10 @@
             });
             document.querySelectorAll('.tti').forEach(el => {
                 el.innerHTML = tti + 's';
-            });  
-        }
-    };
-
-    function logCo2(logToconsole, logTodom) {
-        if (logToconsole) {
-            console.log(`🌲The initial load transfered around ${bToKb(TransferedBytes).toPrecision(5)} KB for an estimate of ${co2.toPrecision(2)}g/CO2.`);
-        }
-        if (logTodom) {
+            });
             document.querySelectorAll('.co2').forEach(el => {
                 el.innerHTML = co2PerVisit + 'g/CO2';
-            });
+            });  
         }
     };
 
@@ -65,7 +59,6 @@
             updateTransferedBytes();
             updateCo2();
             logPerformance(true, true);
-            logCo2(true, true);
         }
     });
 
