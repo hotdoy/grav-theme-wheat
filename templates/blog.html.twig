@@ -18,10 +18,23 @@
     {% include 'partials/default-heading.html.twig' with {title: title} %}
    
     {# LIST #}
-    <section class="blog__list" data-pagination-list>
+    <section class="blog__list">
         <div class="wrapper">
             {% for item in collection_slice %}
-            {% include ['partials/blog-card.html.twig' ] with {'item': item} %}
+            {% set image = image ?? item.header.image ? item.media[item.header.image] : item.media.images|first %}
+            {% set image_alt = image_alt ?? item.header.image_alt ?? null %}
+            {% set title = title ?? item.title ?? null %}
+            {% set date = date ?? item.header.date ? item.header.date|date('Y/m/d') : null %}
+            {% set author = item.header.author ?? config.site.author.name %}
+            {% set text = date ~ ' — ' ~ author %}
+            {% set url = url ?? item.url %}
+            {% include "partials/card.html.twig" with {
+                image: image,
+                image_alt: image_alt,
+                title: title,
+                text: text,
+                url: url
+            }%}
             {% endfor %}
             {% if next_start + 1 <= collection_raw_length %}
             {% set url = (page.url ~ '?' ~ key ~ '=' ~ next_start ~ '-' ~ next_end) %}

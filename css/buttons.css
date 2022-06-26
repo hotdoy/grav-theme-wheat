@@ -45,38 +45,35 @@ button.button:focus-visible {
     box-shadow: 0;
 }
 
-.button.waiting {
+.button.htmx-request {
+    pointer-events: none;
     color: transparent !important;
+
 }
 
-.button.waiting:before {
+.button.htmx-request:before {
     content: "";
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
+    animation: button_request 1.1s infinite linear;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+    border-left: 4px solid #ffffff;
+    border-radius: 100%;
+    border-right: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    color: var(--button-fg);
+    height: 20px;
+    left: calc(50% - 10px);
     position: absolute;
-    top: calc(50% - 4px);
-    left: calc(50% - 4px);
-    background-color: var(--color-buttontext);
-    animation-name: button_waiting;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+    top: calc(50% - 10px);
+    transform: translateZ(0);
+    width: 20px;
 }
 
-@keyframes button_waiting {
+@keyframes button_request {
     0% {
-        opacity: 0;
-        transform: translateY(-7px);
+        transform: rotate(0deg);
     }
-
-    50% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-
     100% {
-        opacity: 0;
-        transform: translateY(7px);
+        transform: rotate(360deg);
     }
 }
-
