@@ -1,6 +1,7 @@
 {# TOP #}
+{% do assets.addJs('theme://js/performance.js', { group:'top' }) %}
 {% do assets.addJs('theme://js/htmx.js', { group:'top', loading: 'defer' }) %}
-{% do assets.addJs('theme://js/performance.js', { group:'top', loading: 'inline' }) %}
+{% do assets.addJs('theme://js/error.js', { group:'top', loading: 'defer' }) %}
 {% do assets.addJs('theme://js/lite-yt-embed.js', { group:'top', loading: 'defer' }) %}
 
 {# BOTTOM #}
@@ -17,7 +18,7 @@
 {% do assets.addJs('theme://js/share.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/intersect.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/fathom.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/error.js', { group:'bottom' }) %}
+
 {% do assets.addJs('theme://js/colorscheme.js', { group:'bottom' }) %}
 {% do assets.addJs('theme://js/scroll.js', { group:'bottom' }) %}
 
