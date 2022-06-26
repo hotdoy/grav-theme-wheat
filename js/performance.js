@@ -9,7 +9,6 @@
     const kwhPerGb = 0.015; 
     const co2PerKwh = 0.28
     const co2PerGb = kwhPerGb * co2PerKwh;
-    console.log(co2PerGb)
     function updateCo2() {
         const transferInGb = bToGb(TransferedBytes);
         const co2PerVisit = (transferInGb * co2PerGb)*1000;
