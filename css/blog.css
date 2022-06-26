@@ -26,3 +26,7 @@
 	width: 100%;
 	grid-column: 1 / -1;
 }
+
+.blog__list .card__media {
+    aspect-ratio: 4 / 3;
+}
