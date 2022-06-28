@@ -36,5 +36,10 @@
 			});
 		});
 	};
+	const ObserveMutation = function () {
+        let o = new MutationObserver(InitScroller);
+        o.observe(document.body, {childList: true, subtree: true});
+    };
 	InitScroller();
+	ObserveMutation();
 })();

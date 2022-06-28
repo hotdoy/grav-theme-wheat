@@ -44,22 +44,22 @@
 ============================================*/
 
 .event-info {
-    position: relative;
     margin-top: calc(var(--rhythm)/2);
+    position: relative;
     z-index: 1000;
 }
 
 .event-info .wrapper {
-    padding: 0 var(--gutter);
     margin: 0 auto;
     max-width: var(--width-main);
+    padding: 0 var(--gutter);
     width: 100%;
 }
 
 .event-info h2 {
-    text-transform: uppercase;
+    color: var(--color-text-medium);
     font-size: small;
-    color: var(--color-graytext);
+    text-transform: uppercase;
 }
 
 .event-info p {
@@ -77,8 +77,9 @@
 .event-info .layout {
 	background-color: var(--color-canva);
 	border-radius: var(--radius-100);
-    border: var(--border-100);
 	padding: var(--gutter);
+    border: var(--border-100);
+    box-shadow: var(--shadow-100);
 }
 
 .event-info + .module {
