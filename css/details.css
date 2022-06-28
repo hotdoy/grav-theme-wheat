@@ -13,6 +13,7 @@ wht-details details {
     background-color: var(--color-canva);
     box-shadow: var(--shadow-100);
     border-radius: var(--radius-100);
+    border: var(--border-100);
     display: block;
     padding: 1rem;
 }

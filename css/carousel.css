@@ -40,3 +40,8 @@ wht-carousel .scroller__slide {
 		max-width: 31%;
 	}
 }
+
+wht-carousel .card span,
+wht-carousel .card a {
+	box-shadow: none;
+}
