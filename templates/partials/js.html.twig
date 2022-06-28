@@ -1,33 +1,14 @@
-{# TOP #}
 {% do assets.addJs('theme://js/performance.js', { group:'top' }) %}
 {% do assets.addJs('theme://js/htmx.js', { group:'top', loading: 'defer' }) %}
 {% do assets.addJs('theme://js/error.js', { group:'top', loading: 'defer' }) %}
 {% do assets.addJs('theme://js/lite-yt-embed.js', { group:'top', loading: 'defer' }) %}
-
-{# BOTTOM #}
-{# {% do assets.addJs('theme://js/splitting.js', { group:'bottom' }) %} #}
-{# {% do assets.addJs('theme://js/lottie.js', { group:'bottom' }) %} #}
-{# {% do assets.addJs('theme://js/quicklink.js', { group:'bottom'}) %} #}
-{# {% do assets.addJs('theme://js/quicklink-init.js', { group:'bottom'}) %} #}
-{% do assets.addJs('theme://js/app-log.js', { group:'bottom' }) %}
-{# {% do assets.addJs('theme://js/app.js', { group: 'bottom'}) %} #}
-{% do assets.addJs('theme://js/link.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/img.js', { group:'bottom' }) %}
-{# {% do assets.addJs('theme://js/dialog.js', { group:'bottom' }) %} #}
-{% do assets.addJs('theme://js/scroller.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/share.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/intersect.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/fathom.js', { group:'bottom' }) %}
-
-{% do assets.addJs('theme://js/colorscheme.js', { group:'bottom' }) %}
-{% do assets.addJs('theme://js/scroll.js', { group:'bottom' }) %}
-
-{# {% do assets.addJs('theme://js/emphasis.js', { group:'bottom' }) %} #}
-{# {% do assets.addJs('theme://js/mediatext.js', { group:'bottom' }) %} #}
-{# {% do assets.addJs('theme://js/features.js', { group:'bottom' }) %} #}
-{# {% do assets.addJs('theme://js/details.js', { group:'bottom' }) %} #}
-{# {% do assets.addJs('theme://js/carousel.js', { group:'bottom' }) %} #}
-
-{% do assets.addJs('theme://js/product.js', { group:'bottom' }) %}
-
-{% do assets.addJs('theme://js/custom.js', { group:'bottom' }) %}
+{% do assets.addJs('theme://js/link.js', { group:'top', loading: 'defer' }) %}
+{% do assets.addJs('theme://js/img.js', { group:'top', loading: 'defer' }) %}
+{% do assets.addJs('theme://js/scroller.js', { group:'top', loading: 'defer' }) %}
+{% do assets.addJs('theme://js/share.js', { group:'top', loading: 'defer' }) %}
+{% do assets.addJs('theme://js/intersect.js', { group:'top', loading: 'defer' }) %}
+{% do assets.addJs('theme://js/fathom.js', { group:'top', loading: 'defer' }) %}
+{% do assets.addJs('theme://js/colorscheme.js', { group:'top', loading: 'defer' }) %}
+{% do assets.addJs('theme://js/scroll.js', { group:'top', loading: 'defer' }) %}
+{% do assets.addJs('theme://js/product.js', { group:'top', loading: 'defer' }) %}
+{% do assets.addJs('theme://js/custom.js', { group:'top', loading: 'defer' }) %}

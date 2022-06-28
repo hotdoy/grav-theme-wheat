@@ -20,14 +20,14 @@
     {# LIST #}
     <section class="blog__list">
         <div class="wrapper">
-            {% for item in collection_slice %}
-            {% set image = image ?? item.header.image ? item.media[item.header.image] : item.media.images|first %}
-            {% set image_alt = image_alt ?? item.header.image_alt ?? null %}
-            {% set title = title ?? item.title ?? null %}
-            {% set date = date ?? item.header.date ? item.header.date|date('Y/m/d') : null %}
+        {% for item in collection_slice %}
+            {% set image = item.header.image ? item.media[item.header.image] : item.media.images|first %}
+            {% set image_alt = item.header.image_alt ?? null %}
+            {% set title = item.title ?? null %}
+            {% set date = item.header.date ? item.header.date|date('Y/m/d') : null %}
             {% set author = item.header.author ?? config.site.author.name %}
             {% set text = date ~ ' — ' ~ author %}
-            {% set url = url ?? item.url %}
+            {% set url = item.url %}
             {% include "partials/card.html.twig" with {
                 image: image,
                 image_alt: image_alt,
@@ -35,15 +35,14 @@
                 text: text,
                 url: url
             }%}
-            {% endfor %}
-            {% if next_start + 1 <= collection_raw_length %}
+        {% endfor %}
+        {% if next_start + 1 <= collection_raw_length %}
             {% set url = (page.url ~ '?' ~ key ~ '=' ~ next_start ~ '-' ~ next_end) %}
             <button id="load-more" class="button" href="{{ url }}"
-            hx-push-url="true"
             hx-get="{{ url }}" 
             hx-swap="outerHTML" 
             hx-select=".blog__list article">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</button>
-            {% endif %}
+        {% endif %}
         </div>
     </section>
 

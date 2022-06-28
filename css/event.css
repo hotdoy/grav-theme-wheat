@@ -31,7 +31,6 @@
 
 .event__heading .cartel {
     margin-top: var(--gutter);
-    color: var(--color-graytext); 
 }
 
 /* .event__heading time {} */
@@ -53,7 +52,7 @@
 .event-info .wrapper {
     padding: 0 var(--gutter);
     margin: 0 auto;
-    max-width: var(--width-tight);
+    max-width: var(--width-main);
     width: 100%;
 }
 
@@ -76,9 +75,14 @@
 }
 
 .event-info .layout {
-	background-color: var(--color-area-bg);
-	border-radius: 8px;
+	background-color: var(--color-canva);
+	border-radius: var(--radius-100);
+    border: var(--border-100);
 	padding: var(--gutter);
+}
+
+.event-info + .module {
+    margin-top: calc(var(--rhythm)/2);   
 }
 
 /* .event-info__date {} */

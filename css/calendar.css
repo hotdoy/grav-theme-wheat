@@ -24,6 +24,7 @@
 .calendar__list #load-more {
 	display: block;
 	width: 100%;
+	grid-column: 1 / -1;
 }
 
 
@@ -36,7 +37,7 @@
 
 .calendar-card {
     padding-top: var(--gutter);
-    border-top: 1px solid var(--color-area-bg);
+    border-top: 1px solid var(--color-canva);
     width: 100%;
 }
 
@@ -48,8 +49,9 @@
 
 .calendar-card__date {
     display: inline-block;
-    background-color: var(--color-area-bg);
-    border-radius: 4px;
+    background-color: var(--color-canva);
+    border-radius: var(--radius-100);
+    border: var(--border-100);
     flex-shrink: 0;
     height: fit-content;
     width: 70px;
@@ -67,7 +69,6 @@
 
 .calendar-card__date .day {
     font-size: x-large;
-    font-weight: var(--font-base-bold);
 }
 
 @media (min-width: 1024px) {
@@ -91,7 +92,7 @@
     margin-top: 0.5rem;
     padding-top: 0.5rem;
     font-size: small;
-    border-top: 1px solid rgb(0 0 0 / 20%);
+    border-top: var(--border-100);
 }
 
 .calendar-card__content {
@@ -115,7 +116,7 @@
 
 .calendar-card__content p {
     font-size: small;
-    color: grey;
+    color: var(--color-text-medium);
 }
 
 @media (min-width: 1024px) {
@@ -129,8 +130,8 @@
     position: relative;
     flex-shrink: 0;
     overflow: hidden;
-    background-color: var(--color-area-bg);
-    border-radius: 8px;
+    background-color: var(--color-placeholder);
+    border-radius: var(--radius-100);
 }
 
 @media (min-width: 640px) {

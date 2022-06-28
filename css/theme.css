@@ -4,6 +4,7 @@
 	--color-text-dark: rgba(17, 17, 17, 1);
 	--color-text-medium: rgba(0,0,0,0.6);
 	--color-canva: white;
+	--color-placeholder: lightgray;
 	
 	--button-bg: #e16259;
     --button-fg: white;
@@ -56,6 +57,7 @@ body.dark {
 	--color-text-dark: rgb(255, 255, 255);
 	--color-text-medium: rgb(240, 240, 240);
 	--color-canva: rgb(46 46 46);
+	--color-placeholder: lightgray;
 	--border-100: 1px solid rgba(255, 255, 255, 0.1);
 }
 

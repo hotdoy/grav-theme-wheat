@@ -16,7 +16,7 @@
     aspect-ratio: 1 / 1;
     display: block;
     overflow: hidden;
-    background-color: lightgray;
+    background-color: var(--color-placeholder);
 }
 
 .card__media img {
