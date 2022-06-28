@@ -18,7 +18,7 @@
 		{% if theme.inline_css -%}<style>{{ theme.inline_css|raw }}</style>{%- endif %}
 		{% block preload %}{% include "partials/preload.html.twig" %}{% endblock %}
 		{% if theme.inline_head_script %}{{ theme.inline_head_script|raw }}{% endif %}
-		<meta name="htmx-config" content='{"scrollBehavior":"auto"}'>
+		<meta name="htmx-config" content='{"includeIndicatorStyles":"false", "scrollBehavior":"auto"}'>
 	</head>
 	<body class="top" hx-boost="true">
 		<a id="skipto" href="#main">Skip to content</a>
