@@ -30,7 +30,8 @@
 		</div>
 		{% include 'partials/snipcart.html.twig' %}
 		{% if config.plugins['algolia-pro'].enabled %}{% include 'partials/algolia-pro/instantsearch.html.twig' with { index: 'pages' } %}{% endif %}
-		<div id="indicator"></div>
+		{% include "partials/transition.html.twig" %}
+		{% include "partials/loading.html.twig" %}
 		{{ assets.js('body')|raw }}
 		{% if theme.inline_body_script %}{{ theme.inline_body_script|raw }}{% endif %}
 		<!-- {{ grav.theme.getBlueprint().name }} {{ grav.theme.getBlueprint().version }} -->
