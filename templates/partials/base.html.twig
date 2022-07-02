@@ -19,7 +19,7 @@
 		{% if theme.inline_css -%}<style>{{ theme.inline_css|raw }}</style>{%- endif %}
 		{% block preload %}{% include "partials/preload.html.twig" %}{% endblock %}
 		{% if theme.inline_head_script %}{{ theme.inline_head_script|raw }}{% endif %}
-		<meta name="htmx-config" content='{"includeIndicatorStyles":"false", "scrollBehavior":"auto", "defaultSwapDelay":"0"}'>
+		<meta name="htmx-config" content='{"includeIndicatorStyles": false, "scrollBehavior":"auto", "defaultSwapDelay":"0"}'>
 	</head>
 	<body class="top" hx-boost="true">
 		<a id="skipto" href="#main">Skip to content</a>
@@ -31,7 +31,7 @@
 		{% include 'partials/snipcart.html.twig' %}
 		{% if config.plugins['algolia-pro'].enabled %}{% include 'partials/algolia-pro/instantsearch.html.twig' with { index: 'pages' } %}{% endif %}
 		{% include "partials/transition.html.twig" %}
-		{% include "partials/loading.html.twig" %}
+		{# {% include "partials/loading.html.twig" %} #}
 		{{ assets.js('body')|raw }}
 		{% if theme.inline_body_script %}{{ theme.inline_body_script|raw }}{% endif %}
 		<!-- {{ grav.theme.getBlueprint().name }} {{ grav.theme.getBlueprint().version }} -->
