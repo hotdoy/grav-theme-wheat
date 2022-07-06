@@ -6,12 +6,12 @@
 	--color-canva: white;
 	--color-placeholder: lightgray;
 	
-	--button-bg: #e16259;
+	--button-bg: #2da44e;
     --button-fg: white;
-    --button-border: 1px solid #be5643;
+    --button-border: 1px solid rgba(27,31,36,0.15);
     --button-shadow: 0 1px 2px rgb(15 15 15 / 10%);
-    --button-hover: #cf534a;
-    --button-active: #bf4d45;
+    --button-hover: #2c974b;
+    --button-active: hsla(137,55%,36%,1);
 
 	--shadow-100: 0px 4px 18px rgb(0 0 0 / 4%), 0px 2.025px 7.84688px rgb(0 0 0 / 3%), 0px 0.8px 2.925px rgb(0 0 0 / 2%), 0px 0.175px 1.04062px rgb(0 0 0 / 1%);
 	--border-100: 1px solid rgba(0, 0, 0, 0.1);
