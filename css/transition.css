@@ -1,4 +1,4 @@
-#indicator {
+#transition {
     position: fixed;
     top: 0; right: 0; bottom: 0; left: 0;
     background-color: var(--color-bg);
@@ -9,10 +9,10 @@
     transition-duration: 100ms;
 }
 
-.htmx-request #indicator,
-.htmx-added #indicator,
-.htmx-settling #indicator,
-.htmx-swapping #indicator {
+.htmx-request #transition,
+.htmx-added #transition,
+.htmx-settling #transition,
+.htmx-swapping #transition {
     visibility: visible;
     opacity: 1;
 }

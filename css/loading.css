@@ -1,0 +1,16 @@
+#loading {
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: #313131;
+    color: white;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+    font-family: 'Courier New', Courier, monospace;
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    transition-property: visibility, opacity;
+    transition-duration: 100ms;
+}

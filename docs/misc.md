@@ -8,7 +8,7 @@ First, reset the hostname certificate to a self-signed one:
 
 Next, move aside the old CSR (if it exists):
 
-`mv /var/cpanel/hostname_cert_csrs{,.cpbkp} -v`
+`mv /var/cpanel/hostname_cert_csrs{,.cpbkp} -b`
 
 Finally, run checkallsslcerts to order a new certificate:
 

@@ -8,8 +8,7 @@
 
 {# SITE #}
 {% do assets.addCss('theme://css/reset.css') %}
-{% do assets.addCss('theme://css/loader.css') %}
-{% do assets.addCss('theme://css/app.css') %}
+{# {% do assets.addCss('theme://css/app.css') %} #}
 {% do assets.addCss('theme://css/img.css') %}
 {% do assets.addCss('theme://css/text.css') %}
 {% do assets.addCss('theme://css/header.css') %}
@@ -24,7 +23,8 @@
 {% do assets.addCss('theme://css/algolia-pro.css') %}
 {% do assets.addCss('theme://css/share.css') %}
 {% do assets.addCss('theme://css/card.css') %}
-{% do assets.addCss('theme://css/indicator.css') %}
+{% do assets.addCss('theme://css/transition.css') %}
+{% do assets.addCss('theme://css/loading.css') %}
 
 {% if grav.user.access.admin.login and theme.admin_edit_button %}
 {% do assets.addCss('theme://css/edit.css') %}

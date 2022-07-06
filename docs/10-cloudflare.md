@@ -83,3 +83,9 @@ Chances are, you are using emails. And chances are, you will eventually run in s
 A	mail XX.XX.XXX.XXX	DNS Only
 MX	domain.com	mail.domain.com
 ```
+
+## Firewall
+
+I usually block everything BUT Cloudflare on the 80 443 ports.
+
+Make sure to also allow [Sectigo](https://support.cpanel.net/hc/en-us/articles/360053968633-What-IP-addresses-do-Sectigo-DCV-requests-originate-from-) (or any other services that needs access to your server) if you are using cPanel.
