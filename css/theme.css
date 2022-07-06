@@ -52,13 +52,13 @@
 }
 
 body.dark {
-	--color-bg: #404040;
-	--color-fg: rgb(240, 240, 240);
-	--color-text-dark: rgb(255, 255, 255);
-	--color-text-medium: rgb(240, 240, 240);
-	--color-canva: rgb(46 46 46);
-	--color-placeholder: lightgray;
-	--border-100: 1px solid rgba(255, 255, 255, 0.1);
+	--color-bg: #0d1117;
+	--color-fg: #c9d1d9;
+	--color-text-dark: #c9d1d9;
+	--color-text-medium: #8b949e;
+	--color-canva: #21262d;
+	--color-placeholder: #21262d;
+	--border-100: 1px solid #393e45;
 }
 
 body {
