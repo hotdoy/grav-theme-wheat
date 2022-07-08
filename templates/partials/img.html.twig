@@ -11,6 +11,7 @@
     {% set system_quality = system.images.default_image_quality ?? '85' %}
     {% set quality = image.quality matches '/^\\d+$/' ? image.quality > system_quality ? system_quality : image.quality %}
     {% set loading = loading ?? page.header.image_loading ?? 'lazy' %}
+    {% set derivatives = image_derivatives ?? page.header.image_derivatives ?? true %}
     {% set bypass = page.header.image_bypass ?? false %}
 
     {# PLACEHOLDER #}
@@ -26,8 +27,8 @@
         {{ image.loading.html(image_title, image_alt)|raw }}
     {% elseif bypass %}
         <img src="{{ src }}" style="{{ style }}" width="{{ width }}" height="{{ height }}" loading="{{ loading }}" alt="{{ image_alt }}">
-    {% else %}
-        {{ image.attribute('style', style).attribute('width', width).attribute('height', height).quality(quality).loading(loading).html(image_title, image_alt)|raw }}
+    {% elseif derivatives %}
+        {{ image.derivatives(320,1920,300).sizes('(max-width:26em) 100vw, 50vw').attribute('style', style).attribute('width', width).attribute('height', height).quality(quality).loading(loading).html(image_title, image_alt)|raw }}
     {% endif %}
 {% endif %}
 
