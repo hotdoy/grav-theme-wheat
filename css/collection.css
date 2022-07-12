@@ -1,12 +1,12 @@
 /* body.collection {} */
 
-.collection__list {
+.collection #list {
 	position: relative;
 	margin-top: var(--rhythm);
 	z-index: 1000;
 }
 
-.collection__list > .wrapper {
+.collection #list .wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: calc(var(--gutter)/2);
@@ -16,12 +16,12 @@
 }
 
 @media (min-width: 1024px) {
-	.collection__list > .wrapper {
+	.collection #list .wrapper {
 		grid-template-columns:repeat(3, 1fr);
 	}
 }
   
-.collection__list #load-more {
+.collection #list #load-more {
 	display: block;
 	width: 100%;
 	grid-column: 1 / -1;

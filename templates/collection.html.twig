@@ -1,5 +1,5 @@
 {% extends 'partials/base.html.twig' %}
-
+{% set category = uri.query('category') ?? null %}
 {% set key = 'articles' %}
 {% set step = 12 %}
 {% set qs = uri.query(key) ?? null %}
@@ -7,18 +7,22 @@
 {% set qs_end = qs ? qs|split('-')[1] : step %}
 {% set next_start = qs_end %}
 {% set next_end = next_start + step %}
-{% set collection_raw = page.collection({ items: {'@self.children':''}, 'order': {'by': 'folder', 'dir': 'asc'}}) %}
-{% set collection_raw_length = collection_raw|length %}
-{% set collection = page.collection({ items: {'@self.children':''}, 'limit': qs_end, 'order': {'by': 'folder', 'dir': 'asc'}}) %}
-{% set collection_slice = collection|slice(qs_start, qs_end) %}
+{% set raw_collection = page.evaluate([{'@self.children':'', '@taxonomy.category': category}]) %}
+{% set raw_collection_length = raw_collection|length %}
+{% set collection = page.evaluate([{'@self.children':'', '@taxonomy.category': category}]) %}
+{% set collection_ordered = collection.order('folder','asc') %}
+{% set collection_slice = collection_ordered|slice(qs_start, qs_end) %}
 
 {% block content %}
 
     {# HEADING #}
     {% include 'partials/default-heading.html.twig' with {title: title} %}
-   
+    {{ dump(collection) }}
+    {# FILTERS #}
+    {% include "partials/filters.html.twig" %}
+
     {# LIST #}
-    <section class="collection__list">
+    <section id="list">
         <div class="wrapper">
         {% for item in collection_slice %}
             {% set image = item.header.image ? item.media[item.header.image] %}
@@ -34,12 +38,12 @@
                 url: url
             }%}
         {% endfor %}
-        {% if next_start + 1 <= collection_raw_length %}
+        {% if next_start + 1 <= raw_collection_length %}
             {% set url = (page.url ~ '?' ~ key ~ '=' ~ next_start ~ '-' ~ next_end) %}
             <button id="load-more" class="button" href="{{ url }}"
             hx-get="{{ url }}" 
             hx-swap="outerHTML" 
-            hx-select=".collection__list article">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</button>
+            hx-select="#list article">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</button>
         {% endif %}
         </div>
     </section>
