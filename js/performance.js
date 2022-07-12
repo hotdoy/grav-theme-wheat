@@ -55,11 +55,14 @@
             tti = (t/1000).toPrecision(2);
         } else if (event.target.readyState == 'complete') {
             ttc = (t/1000).toPrecision(2);
-            updateTransferedBytes();
-            updateCo2();
-            logPerformance(true, true);
         }
     });
+
+    window.addEventListener('load', (event) => {
+        updateTransferedBytes();
+        updateCo2();
+        logPerformance(true, true);
+      });
 
     document.addEventListener('htmx:load', (event) => {
         logPerformance(false, true);
