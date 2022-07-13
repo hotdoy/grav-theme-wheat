@@ -8,7 +8,7 @@
 {% if sort == 'newest' %}{% do collection.order('date', 'desc') %}
 {% elseif sort == 'oldest' %}{% do collection.order('date', 'asc') %}
 {% else %}{% do collection.order('folder', 'asc') %}{% endif %}
-{% do paginate(collection, 12) %}
+{% do paginate(collection, 6) %}
 
 {% block content %}
 
