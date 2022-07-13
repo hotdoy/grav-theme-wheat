@@ -5,7 +5,7 @@
 {% if pagination.hasNext %}
     {% set url = (base_url ~ pagination.params ~ pagination.nextUrl)|replace({'//':'/'}) %}
     <a id="load-more" class="button" href="{{ url }}"
-    hx-get="{{ url }}" 
+    hx-get="{{ url }}"
     hx-swap="outerHTML" 
     hx-select="#list article, #load-more, #no-result">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}
     </a>

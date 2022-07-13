@@ -1,7 +1,9 @@
 {% extends 'partials/base.html.twig' %}
 {% set category = uri.query('category') %}
+{% set tag = uri.query('tag') %}
 {% set collection = page.children %}
 {% if category %}{% do collection.intersect(taxonomy.findTaxonomy({'category':category})) %}{% endif %}
+{% if tag %}{% do collection.intersect(taxonomy.findTaxonomy({'tag':tag})) %}{% endif %}
 {% do collection.order('title', 'asc') %}
 {% do paginate(collection, 12) %}
 

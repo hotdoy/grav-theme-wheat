@@ -1,11 +1,27 @@
 <section id="filters">
-    <div class="wrapper">
+    <form             
+    hx-get="{{ page.url }}"
+    hx-replace-url="true" 
+    hx-trigger="change" 
+    hx-target="#list" 
+    hx-select="#list">
+
+        {# CATEGORY #}
         <label for="category-select">Category</label>
-        <select name="category" id="category-select" hx-get="{{ page.url }}" hx-trigger="change" hx-target="#list" hx-select="#list">
+        <select name="category" id="category-select">
             <option value="">All</option> 
             {% for t in taxonomy.getTaxonomyItemKeys('category') %}
             <option value="{{ t }}">{{ t }}</option> 
             {% endfor %}
         </select>
-    </div>
+
+        {# TAG #}
+        <label for="tag-select">Tag</label>
+        <select name="tag" id="tag-select">
+            <option value="">All</option> 
+            {% for t in taxonomy.getTaxonomyItemKeys('tag') %}
+            <option value="{{ t }}">{{ t }}</option> 
+            {% endfor %}
+        </select>
+    </form>
 </section>

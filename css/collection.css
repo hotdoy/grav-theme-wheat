@@ -4,6 +4,16 @@
 	margin-top: var(--rhythm);
 }
 
+.collection #filters form {
+	display: flex;
+	gap: 1rem;
+	margin: 0 auto;
+    width: 100%;
+    max-width: var(--width-main);
+    padding: 0 var(--gutter);
+	align-items: center;
+}
+
 .collection #filters select {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -21,13 +31,6 @@
 
 .dark .collection #filters select {
 	background-image: url("data:image/svg+xml,%3Csvg width='24' height='16' viewBox='0 0 24 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.136 15.0572C12.9877 16.3143 11.0123 16.3143 9.86399 15.0572L0.767005 5.09889C-0.936104 3.23453 0.382231 0.228569 2.903 0.228568L21.097 0.228567C23.6178 0.228567 24.9361 3.23452 23.233 5.09889L14.136 15.0572Z' fill='%238B949E' fill-opacity='0.6'/%3E%3C/svg%3E%0A");
-}
-
-.collection #filters .wrapper {
-    margin: 0 auto;
-    width: 100%;
-    max-width: var(--width-main);
-    padding: 0 var(--gutter);
 }
 
 .collection #list {
