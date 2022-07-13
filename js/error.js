@@ -1,4 +1,4 @@
 htmx.on("htmx:responseError", function (e) {
-    console.log(e.detail.xhr.status);
-    window.location.href = 'error';
+    console.log('crap! - ' + e.detail.xhr.status);
+    window.location.href = e.detail.xhr.responseURL;
 })

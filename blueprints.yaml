@@ -1,7 +1,7 @@
 name: Wheat
 slug: wheat
 type: theme
-version: 2022.07.13b
+version: 2022.07.13c
 description: "Wheat is a theme for Grav CMS. It is aimed at building sustainable websites by limiting overheads and development tooling. It takes a responsible approach to web development and try leading by examples by offering common patterns and related solutions. It uses no build tool, no framework of any kind, only needs a basic LAMP setup, uses Github Actions for automatic deployment and takes about 30 minutes minutes to setup."
 icon: rebel
 author:
