@@ -1,30 +1,28 @@
 {% extends 'partials/base.html.twig' %}
-{% set category = uri.query('category') ?? null %}
-{% set key = 'articles' %}
-{% set step = 12 %}
-{% set qs = uri.query(key) ?? null %}
-{% set qs_start = qs ? qs|split('-')[0] : 0 %}
-{% set qs_end = qs ? qs|split('-')[1] : step %}
-{% set next_start = qs_end %}
-{% set next_end = next_start + step %}
-{% set raw_collection = page.evaluate([{'@self.children':'', '@taxonomy.category': category}]) %}
-{% set raw_collection_length = raw_collection|length %}
-{% set collection = page.evaluate([{'@self.children':'', '@taxonomy.category': category}]) %}
-{% set collection_ordered = collection.order('folder','asc') %}
-{% set collection_slice = collection_ordered|slice(qs_start, qs_end) %}
+{% set cat = uri.query('category') %}
+
+{# {% set collection = page.evaluate([{'@taxonomy.category': 'Cat1'}]) %} #}
+{# {% set collection = page.evaluate([{'@self.children':''}]) %} #}
+{# {% set collection = page.evaluate([{'self@.children':'', 'taxonomy@.category':'blog'}]) %} #}
+{# {% set collection = page.collection({'items':{'@taxonomy':{'category': 'Cat1'}}}) %} #}
+
+{% set collection = page.children %}
+{% do collection.order('title', 'asc') %}
+{# {% do collection.filterByTaxonomy('not a real thing') %} #}
+{% do paginate(collection, 12) %}
 
 {% block content %}
 
     {# HEADING #}
     {% include 'partials/default-heading.html.twig' with {title: title} %}
-    {{ dump(collection) }}
+    
     {# FILTERS #}
-    {% include "partials/filters.html.twig" %}
+    {# {% include "partials/filters.html.twig" %} #}
 
     {# LIST #}
     <section id="list">
         <div class="wrapper">
-        {% for item in collection_slice %}
+        {% for item in collection %}
             {% set image = item.header.image ? item.media[item.header.image] %}
             {% set image_alt = item.header.image_alt %}
             {% set title = item.title %}
@@ -38,13 +36,7 @@
                 url: url
             }%}
         {% endfor %}
-        {% if next_start + 1 <= raw_collection_length %}
-            {% set url = (page.url ~ '?' ~ key ~ '=' ~ next_start ~ '-' ~ next_end) %}
-            <button id="load-more" class="button" href="{{ url }}"
-            hx-get="{{ url }}" 
-            hx-swap="outerHTML" 
-            hx-select="#list article">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</button>
-        {% endif %}
+        {% include "partials/load-more.html.twig" with {pagination: collection.params.pagination} %}
         </div>
     </section>
 
