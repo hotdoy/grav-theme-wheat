@@ -7,21 +7,27 @@
     hx-select="#list">
 
         {# CATEGORY #}
-        <label for="category-select">Category</label>
         <select name="category" id="category-select">
-            <option value="">All</option> 
+            <option value="">Category</option> 
             {% for t in taxonomy.getTaxonomyItemKeys('category') %}
             <option value="{{ t }}">{{ t }}</option> 
             {% endfor %}
         </select>
 
         {# TAG #}
-        <label for="tag-select">Tag</label>
         <select name="tag" id="tag-select">
-            <option value="">All</option> 
+            <option value="">Tag</option> 
             {% for t in taxonomy.getTaxonomyItemKeys('tag') %}
             <option value="{{ t }}">{{ t }}</option> 
             {% endfor %}
         </select>
+
+        {# SORT #}
+        <select name="sort" id="sort-select">
+            <option value="">Sort</option> 
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option> 
+        </select>
+
     </form>
 </section>
