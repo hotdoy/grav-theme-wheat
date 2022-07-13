@@ -1,11 +1,49 @@
 <section id="filters">
-    <div class="wrapper">
-        <label for="category-select">Category</label>
-        <select name="category" id="category-select" hx-get="{{ page.url }}" hx-trigger="change" hx-target="#list" hx-select="#list">
-            <option value="">All</option> 
-            {% for t in taxonomy.getTaxonomyItemKeys('category') %}
-            <option value="{{ t }}">{{ t }}</option> 
-            {% endfor %}
-        </select>
-    </div>
+    <form             
+    hx-get="{{ page.url }}"
+    hx-replace-url="true" 
+    hx-trigger="change" 
+    hx-target="#list" 
+    hx-select="#list">
+
+        {# RESET #}
+        <label for="reset-button">Reset
+            <button name="reset-button"
+            hx-get="{{ page.url }}"
+            hx-replace-url="true" 
+            hx-target="#list" 
+            hx-select="#list">
+            </button>
+        </label>
+
+        {# CATEGORY #}
+        <label for="category-select">Category
+            <select name="category" id="category-select">
+                <option value="">All</option> 
+                {% for t in taxonomy.getTaxonomyItemKeys('category') %}
+                <option value="{{ t }}">{{ t }}</option> 
+                {% endfor %}
+            </select>
+        </label>
+
+        {# TAG #}
+        <label for="tag-select">Tag
+            <select name="tag" id="tag-select">
+                <option value="">All</option> 
+                {% for t in taxonomy.getTaxonomyItemKeys('tag') %}
+                <option value="{{ t }}">{{ t }}</option> 
+                {% endfor %}
+            </select>            
+        </label>
+
+        {# SORT #}
+        <label for="sort-select">Sort
+            <select name="sort" id="sort-select">
+                <option value="">Default</option> 
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option> 
+            </select>            
+        </label>
+
+    </form>
 </section>
