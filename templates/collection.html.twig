@@ -1,14 +1,8 @@
 {% extends 'partials/base.html.twig' %}
-{% set cat = uri.query('category') %}
-
-{# {% set collection = page.evaluate([{'@taxonomy.category': 'Cat1'}]) %} #}
-{# {% set collection = page.evaluate([{'@self.children':''}]) %} #}
-{# {% set collection = page.evaluate([{'self@.children':'', 'taxonomy@.category':'blog'}]) %} #}
-{# {% set collection = page.collection({'items':{'@taxonomy':{'category': 'Cat1'}}}) %} #}
-
+{% set category = uri.query('category') %}
 {% set collection = page.children %}
+{% if category %}{% do collection.intersect(taxonomy.findTaxonomy({'category':category})) %}{% endif %}
 {% do collection.order('title', 'asc') %}
-{# {% do collection.filterByTaxonomy('not a real thing') %} #}
 {% do paginate(collection, 12) %}
 
 {% block content %}
@@ -17,7 +11,7 @@
     {% include 'partials/default-heading.html.twig' with {title: title} %}
     
     {# FILTERS #}
-    {# {% include "partials/filters.html.twig" %} #}
+    {% include "partials/filters.html.twig" %}
 
     {# LIST #}
     <section id="list">
@@ -36,6 +30,7 @@
                 url: url
             }%}
         {% endfor %}
+        {% include "partials/no-results.html.twig" with {condition: not(collection|length)} %}
         {% include "partials/load-more.html.twig" with {pagination: collection.params.pagination} %}
         </div>
     </section>

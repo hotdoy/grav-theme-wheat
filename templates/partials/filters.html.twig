@@ -1,9 +1,11 @@
-<section id="taxonomy">
-    <label for="category-select">Category</label>
-    <select name="category" id="category-select" hx-get="{{ page.url }}" hx-trigger="change" hx-target="#list" hx-select="#list">
-        <option value=""></option> 
-        {% for t in taxonomy.getTaxonomyItemKeys('category') %}
-        <option value="{{ t }}">{{ t }}</option> 
-        {% endfor %}
-    </select>
+<section id="filters">
+    <div class="wrapper">
+        <label for="category-select">Category</label>
+        <select name="category" id="category-select" hx-get="{{ page.url }}" hx-trigger="change" hx-target="#list" hx-select="#list">
+            <option value="">All</option> 
+            {% for t in taxonomy.getTaxonomyItemKeys('category') %}
+            <option value="{{ t }}">{{ t }}</option> 
+            {% endfor %}
+        </select>
+    </div>
 </section>

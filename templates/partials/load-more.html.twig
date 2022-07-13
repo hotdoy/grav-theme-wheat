@@ -1,4 +1,4 @@
-{# Require https://github.com/getgrav/grav-plugin-pagination #}
+{# https://github.com/getgrav/grav-plugin-pagination #}
 {% set pagination = pagination|default(page.collection.params.pagination) %}
 {% set base_url = base_url|default(page.url) %}
 {% if pagination|length > 1 %}
@@ -7,7 +7,7 @@
     <a id="load-more" class="button" href="{{ url }}"
     hx-get="{{ url }}" 
     hx-swap="outerHTML" 
-    hx-select="#list article, #load-more">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}
+    hx-select="#list article, #load-more, #no-result">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}
     </a>
 {% endif %}
 {% endif %}
