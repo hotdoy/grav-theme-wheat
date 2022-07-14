@@ -1,5 +1,5 @@
 <section id="filters">
-    <form             
+    <form  id="filter-form"            
     hx-get="{{ page.url }}"
     hx-replace-url="true" 
     hx-trigger="change" 
@@ -8,12 +8,13 @@
 
         {# RESET #}
         <label for="reset-button">Reset
-            <button name="reset-button"
+            <input type="reset" value="" id="reset-button"
             hx-get="{{ page.url }}"
             hx-replace-url="true" 
-            hx-target="#list" 
+            hx-target="#list"
+            hx-trigger="click" 
             hx-select="#list">
-            </button>
+            </input>
         </label>
 
         {# CATEGORY #}
