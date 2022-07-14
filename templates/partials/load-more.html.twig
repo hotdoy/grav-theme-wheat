@@ -3,7 +3,8 @@
 {% set base_url = base_url|default(page.url) %}
 {% if pagination|length > 1 %}
 {% if pagination.hasNext %}
-    {% set url = (base_url ~ pagination.params ~ pagination.nextUrl)|replace({'//':'/'}) %}
+    {% set query = uri.query() ? '?' ~ uri.query() : '' %}
+    {% set url = (base_url ~ pagination.params ~ pagination.nextUrl ~ query  )|replace({'//':'/'}) %}
     <a id="load-more" class="button" href="{{ url }}"
     hx-get="{{ url }}"
     hx-swap="outerHTML" 
