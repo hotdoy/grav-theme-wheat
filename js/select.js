@@ -1,13 +1,18 @@
 (function () {
 	"use strict";
 
-    document.querySelector('input[type="reset"]').addEventListener('click', (e) => {
-        e.target.closest('form').querySelectorAll('select').forEach(s => {
-            s.querySelectorAll('option').forEach(o => {
-                o.removeAttribute('selected');
-            })
+    const resets = document.querySelectorAll('input[type="reset"]');
+    if (!!resets) {
+        resets.forEach(reset => {
+            reset.addEventListener('click', (e) => {
+                e.target.closest('form').querySelectorAll('select').forEach(select => {
+                    select.querySelectorAll('option').forEach(option => {
+                        option.removeAttribute('selected');
+                    })
+                });
+            });
         });
-    });
+    }
 
     const SyncOnLoad = function () {
         const query = window.location.search;
