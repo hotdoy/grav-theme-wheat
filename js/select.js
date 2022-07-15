@@ -1,50 +1,25 @@
 (function () {
 	"use strict";
 
-    const resets = document.querySelectorAll('input[type="reset"]');
-    if (!!resets) {
-        resets.forEach(reset => {
-            reset.addEventListener('click', (e) => {
-                e.target.closest('form').querySelectorAll('select').forEach(select => {
-                    select.querySelectorAll('option').forEach(option => {
-                        option.removeAttribute('selected');
-                    })
-                });
-            });
-        });
-    }
-
-    const SyncOnLoad = function () {
-        const query = window.location.search;
-        const params = new URLSearchParams(query);
-        for (const [key, val] of params) {
+    const Sync = function () {
+        const params = new URLSearchParams(window.location.search);
+        for (const [key, value] of params) {
             document.querySelectorAll(`select[name="${key}"]`).forEach(s => {
-                s.querySelectorAll('option').forEach(o => {
-                    if (o.value == val) {
-                        o.setAttribute('selected', "");
-                    } else {
-                        o.removeAttribute('selected');
-                    }
-                });
+                if (s.querySelector(`option[value="${value}"]`)) {
+                    s.value = value;
+                }
             });
         }
-    }
+    };
 
-    const SyncOnChange = function () {
-        document.querySelectorAll('select').forEach(s => {
-            s.addEventListener('change', () => {
-                s.querySelectorAll('option').forEach(o => {
-                    if (o.index == s.selectedIndex) {
-                        o.setAttribute('selected', "");
-                    } else {
-                        o.removeAttribute('selected');
-                    }
-                });
-                
-            });
-        });
-    }
+    const SyncOnLoad = function () {
+        document.addEventListener('htmx:load', function() {
+            setTimeout(() => {
+                Sync();    
+            }, 200);
+        }, false);
+    };
 
+    Sync();
     SyncOnLoad();
-    SyncOnChange();
 })();
