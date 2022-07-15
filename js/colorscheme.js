@@ -11,9 +11,8 @@
             document.body.classList.remove('colorscheme-dark');
         }
     })
-    document.querySelectorAll('.colorscheme-toggle').forEach(toggle => {
-        toggle.addEventListener('click', event => {
-            document.body.classList.toggle('colorscheme-dark');
-        })
-    })
 })();
+
+const ToggleColorScheme = function () {
+    document.body.classList.toggle('colorscheme-dark');
+}

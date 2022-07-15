@@ -79,11 +79,11 @@
     margin: 0 0 0 10px;
 }
 
-.colorscheme-toggle{
-    width: 1.5rem;
+.colorscheme-toggle {
     cursor: pointer;
+    margin: 0 0 0 10px;
+    width: 1.5rem;
 }
-
 
 body.colorscheme-toggle .sun {
     display: block;
