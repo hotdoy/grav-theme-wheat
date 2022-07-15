@@ -28,7 +28,8 @@
 
 a:not(.button):focus-visible,
 summary:focus-visible,
-select:focus-visible {
+select:focus-visible,
+input:focus-visible {
   outline-width: 1px;
   outline-offset: 1px;
   outline-color: inherit;

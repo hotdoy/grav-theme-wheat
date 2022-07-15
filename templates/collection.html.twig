@@ -1,8 +1,20 @@
 {% extends 'partials/base.html.twig' %}
+
 {% set category = uri.query('category') %}
 {% set tag = uri.query('tag') %}
 {% set sort = uri.query('sort') %}
+{% set search = uri.query('search') %}
 {% set collection = page.children %}
+{% set search_collection = page.collection({ items: {'self@.page':''} }) %}
+{% do search_collection.remove(page.path) %}
+{% if search %}
+    {% for item in collection %}
+        {% if search|trim|lower in item.title|trim|lower %}
+            {% do search_collection.addPage(item) %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+{% set collection = search ? search_collection : collection %}
 {% if category %}{% do collection.intersect(taxonomy.findTaxonomy({'category':category})) %}{% endif %}
 {% if tag %}{% do collection.intersect(taxonomy.findTaxonomy({'tag':tag})) %}{% endif %}
 {% if sort == 'newest' %}{% do collection.order('date', 'desc') %}
@@ -11,6 +23,8 @@
 {% do paginate(collection, 6) %}
 
 {% block content %}
+
+    {{ dump(search_collection) }}
 
     {# HEADING #}
     {% include 'partials/default-heading.html.twig' with {title: title} %}

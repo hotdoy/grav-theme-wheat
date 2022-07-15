@@ -1,5 +1,5 @@
 <section id="filters">
-    <form  id="filter-form"            
+    <form id="filter-form" onsubmit="event.preventDefault();"            
     hx-get="{{ page.url }}"
     hx-replace-url="true" 
     hx-trigger="change" 
@@ -15,6 +15,11 @@
             hx-trigger="click" 
             hx-select="#list">
             </input>
+        </label>
+
+        {# SEARCH #}
+        <label for="search-input">Search
+            <input type="search" name="search" id="search-input"/>   
         </label>
 
         {# CATEGORY #}

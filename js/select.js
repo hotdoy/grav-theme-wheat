@@ -1,7 +1,7 @@
 (function () {
 	"use strict";
 
-    const Sync = function () {
+    const SyncSelect = function () {
         const params = new URLSearchParams(window.location.search);
         for (const [key, value] of params) {
             document.querySelectorAll(`select[name="${key}"]`).forEach(s => {
@@ -12,14 +12,25 @@
         }
     };
 
+    const SyncInput = function () {
+        const params = new URLSearchParams(window.location.search);
+        for (const [key, value] of params) {
+            document.querySelectorAll(`input[name="${key}"]`).forEach(i => {
+                i.value = value;
+            });
+        }
+    };
+
     const SyncOnLoad = function () {
         document.addEventListener('htmx:load', function() {
             setTimeout(() => {
-                Sync();    
+                SyncSelect();
+                SyncInput();
             }, 200);
         }, false);
     };
 
-    Sync();
+    SyncSelect();
+    SyncInput();
     SyncOnLoad();
 })();
