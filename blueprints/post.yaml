@@ -16,7 +16,7 @@ form:
 
             header.image:
               type: pagemediaselect
-              label: image
+              label: Image
               style: vertical
               ordering@: header.display_title
               accept:
