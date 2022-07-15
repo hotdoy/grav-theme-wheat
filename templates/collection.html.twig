@@ -17,12 +17,10 @@
 {% set collection = search ? search_collection : collection %}
 {% if category %}{% do collection.intersect(taxonomy.findTaxonomy({'category':category})) %}{% endif %}
 {% if tag %}{% do collection.intersect(taxonomy.findTaxonomy({'tag':tag})) %}{% endif %}
-
 {% if sort == 'newest' %}{% do collection.order('date', 'desc') %}
 {% elseif sort == 'oldest' %}{% do collection.order('date', 'asc') %}
 {% else %}{% do collection.order('folder', 'asc') %}{% endif %}
 {% do paginate(collection, 6) %}
-
 
 {% block content %}
 
