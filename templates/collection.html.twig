@@ -24,13 +24,17 @@
 
 {% block content %}
 
-    {{ dump(search_collection) }}
+    <datalist id="search-list">
+    {% for item in page.children %}
+        <option value="{{ item.title }}"></option>
+    {% endfor %}
+    </datalist>
 
     {# HEADING #}
     {% include 'partials/default-heading.html.twig' with {title: title} %}
     
     {# FILTERS #}
-    {% include "partials/filters.html.twig" %}
+    {% include "partials/collection-filters.html.twig" %}
 
     {# LIST #}
     <section id="list">

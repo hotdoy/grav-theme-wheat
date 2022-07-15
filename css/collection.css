@@ -24,7 +24,7 @@
     text-transform: uppercase;
 }
 
-.collection #filters input[type='search'] {
+.collection #filters input[type="search"] {
 	font-size: medium;
     -moz-appearance: none;
     -webkit-appearance: none;
