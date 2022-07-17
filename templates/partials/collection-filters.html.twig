@@ -1,5 +1,5 @@
 <section id="filters">
-    <form id="filter-form" onsubmit="event.preventDefault();"            
+    <form id="filter-form" onsubmit="event.preventDefault() & document.activeElement.blur()"            
     hx-get="{{ page.url }}"
     hx-replace-url="true" 
     hx-trigger="change" 
