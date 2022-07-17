@@ -16,3 +16,30 @@
     visibility: visible;
     opacity: 1;
 }
+
+/* #main {
+    animation-name: main-in;
+    animation-duration: 200ms; 
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+} */
+
+/* .htmx-request #main,
+.htmx-added #main,
+.htmx-settling #main,
+.htmx-swapping #main {
+    animation-name: main-out;
+    animation-duration: 200ms; 
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+} */
+
+/* @keyframes main-out {
+    from {transform: translateY(0px)}
+    to {transform: translateY(20px)}
+} */
+
+/* @keyframes main-in {
+    from {transform: translateY(20px)}
+    to {transform: translateY(0px)}
+} */
