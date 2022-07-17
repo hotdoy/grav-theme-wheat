@@ -1,3 +1,4 @@
+{% import "partials/date.html.twig" as date %}
 {% extends 'partials/base.html.twig' %}
 
 {% set category = uri.query('category') %}
@@ -24,11 +25,11 @@
 
 {% block content %}
 
-    <datalist id="search-list">
+    {# <datalist id="search-list">
     {% for item in page.children %}
         <option value="{{ item.title }}"></option>
     {% endfor %}
-    </datalist>
+    </datalist> #}
 
     {# HEADING #}
     {% include 'partials/default-heading.html.twig' with {title: title} %}
@@ -43,7 +44,7 @@
             {% set image = item.header.image ? item.media[item.header.image] %}
             {% set image_alt = item.header.image_alt %}
             {% set title = item.title %}
-            {% set text = item.header.price ? item.header.price|number_format(2, ',', ' ') ~ '$' : null %}            
+            {% set text = item.header.price ? item.header.price|number_format(2, ',', ' ') ~ '$' : item.header.date ? date.format(item.header.date) %}            
             {% set url = item.url %}
             {% include "partials/card.html.twig" with {
                 image: image,
