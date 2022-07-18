@@ -1,0 +1,24 @@
+/* wht-titletext {} */
+
+titletext-wrapper {
+    box-sizing: border-box;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: var(--width-main);
+    padding: 0 var(--gutter);
+    width: 100%;
+}
+
+
+@media (min-width: 1024px) {
+    titletext-wrapper {
+        gap: 10%;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+titletext-content p {
+    color: var(--color-text-medium);
+}
