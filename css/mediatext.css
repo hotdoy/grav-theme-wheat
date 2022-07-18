@@ -19,6 +19,7 @@ mediatext-wrapper {
 }
 
 mediatext-media {
+    position: relative;
     display: block;
 }
 

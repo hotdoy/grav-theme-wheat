@@ -1,16 +1,15 @@
-img[loading="lazy"],
-img[loading="lazy"][data-state="0"] {
+img[loading="lazy"]:not([loaded]) {
     opacity: 0;
 }
 
-img[loading="lazy"][data-state="1"] {
-    animation-name: appImg;
+img[loading="lazy"][loaded] {
+    animation-name: lazyImg;
     animation-duration: 200ms; 
     animation-delay: 0ms;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
 
-@keyframes appImg {
+@keyframes lazyImg {
     to {opacity: 1;}
 }

@@ -30,5 +30,6 @@
     {% elseif derivatives %}
         {{ image.derivatives(320,1920,300).sizes('(max-width:26em) 100vw, 50vw').attribute('style', style).attribute('width', width).attribute('height', height).quality(quality).loading(loading).html(image_title, image_alt)|raw }}
     {% endif %}
+
 {% endif %}
 
