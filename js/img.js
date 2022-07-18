@@ -3,10 +3,10 @@
     const SetImgBehavior = function () {
         document.querySelectorAll('img').forEach(el => {
             el.onload = function() {
-                el.setAttribute('data-state', '1');
+                el.setAttribute('loaded', '');
             };
             if (el.complete) {
-                el.setAttribute('data-state', '1');
+                el.setAttribute('loaded', '');
             };
         });
     };
