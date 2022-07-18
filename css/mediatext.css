@@ -3,19 +3,18 @@
 mediatext-wrapper {
     box-sizing: border-box;
     display: grid;
+    gap: 1rem;
     grid-template-columns: 1fr;
     margin: 0 auto;
-    width: 100%;
-    gap: 1.5rem;
     max-width: var(--width-main);
     padding: 0 var(--gutter);
+    width: 100%;
 }
 
 @media (min-width: 1024px) {
     mediatext-wrapper {
-        gap: 0;
+        gap: 10%;
         grid-template-columns: 1fr 1fr;
-        padding: 0 var(--gutter);
     }
 }
 
@@ -46,14 +45,7 @@ mediatext-content {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-left: 10%;
-        padding-right: 0;
         text-align: left;
-    }
-
-    .right mediatext-content {
-        padding-right: 10%;
-        padding-left: 0;
     }
 }
 

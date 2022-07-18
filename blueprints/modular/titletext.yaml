@@ -1,0 +1,17 @@
+title: titletext
+extends@: modular/module
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            header.media_order:
+              ordering@: +99
+              
+            header.display_title:
+              label: Display Title
+              type: text
+              style: vertical
+              ordering@: 2

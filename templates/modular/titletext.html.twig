@@ -1,0 +1,18 @@
+{% extends 'modular/module.html.twig' %}
+{% set el = 'wht-titletext' %}
+
+{% set display_title = page.header.display_title ?? null %}
+{% set page_content = page_content ?? page.content ?? null %}
+
+{% block content %}
+<titletext-wrapper class="{{media_position }}">
+	<titletext-title class="text">
+        <h2>{{ display_title }}</h2>
+	</titletext-title>
+	<titletext-content>
+		<div class="text prose">
+			{{ page_content|raw }}
+		</div>
+	</titletext-content>
+</titletext-wrapper>
+{% endblock %}
