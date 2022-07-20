@@ -1,11 +1,10 @@
 /* body.error {} */
 
 .error .module.editor {
-  margin-top: 0;
+	margin-top: 0;
 }
 
 .error .module.editor .text {
-  margin-top: 0;
-  text-align: center;
+	margin-top: 0;
+	text-align: center;
 }
-

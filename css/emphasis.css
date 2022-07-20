@@ -1,26 +1,26 @@
 /* wht-emphasis {} */
 
 emphasis-wrapper {
-    box-sizing: border-box;
-    display: block;
-    margin: 0 auto;
-    padding: 0 var(--gutter);
-    width: 100%;
-    max-width: var(--width-main);
-    text-align: center;
-    font-size: xx-large;
-    font-size: -webkit-xx-large;
-    font-weight: 700;
-    line-height: 1.2;
+	box-sizing: border-box;
+	display: block;
+	margin: 0 auto;
+	padding: 0 var(--gutter);
+	width: 100%;
+	max-width: var(--width-main);
+	text-align: center;
+	font-size: xx-large;
+	font-size: -webkit-xx-large;
+	font-weight: 700;
+	line-height: 1.2;
 }
 
 @media (min-width: 1024px) {
-    emphasis-wrapper {
-        font-size: xxx-large;
-        font-size: -webkit-xxx-large;
-    }
+	emphasis-wrapper {
+		font-size: xxx-large;
+		font-size: -webkit-xxx-large;
+	}
 }
 
 wht-emphasis .button {
-    margin-top: 1rem;
+	margin-top: 1rem;
 }

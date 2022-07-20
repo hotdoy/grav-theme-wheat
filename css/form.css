@@ -5,9 +5,9 @@ body.login,
 body.forgot,
 body.register,
 body.profile {
-	--c0lor-bg: #1f1f1f;
+	--color-bg: #1f1f1f;
 	--color-fg: white;
-    --color-buttonface: white;
+	--color-buttonface: white;
 	--color-buttontext: #1f1f1f;
 }
 
@@ -16,7 +16,7 @@ body.login #footer,
 body.forgot #footer,
 body.register #footer,
 body.profile #footer {
-    border-top: 1px solid #383838;
+	border-top: 1px solid #383838;
 }
 
 /* GRAV LOGIN FORM */
@@ -39,7 +39,7 @@ body.profile .buttons {
 
 body.profile #user-profile img {
 	display: block;
-    width: 100px;
-    height: auto;
-    margin: 20px auto 20px auto;
+	width: 100px;
+	height: auto;
+	margin: 20px auto 20px auto;
 }

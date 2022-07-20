@@ -1,78 +1,78 @@
 #header-shim {
-    position: relative;
-    height: 60px;
+	position: relative;
+	height: 60px;
 }
 
 #header {
-    background-color: var(--color-bg);
-    border-bottom: var(--border-100);
-    font-size: medium;
-    height: 60px;
-    left: 0;
-    line-height: 1;
-    margin: 0 auto;
-    max-width: var(--width-main);
-    padding: 0 var(--gutter);
-    padding-top: 10px;
-    position: fixed;
-    right: 0;
-    top: 0;
-    transform: translateY(-10px);
-    transition-duration: 400ms;
-    transition-property: border, transform;
-    z-index: 5000;
+	background-color: var(--color-bg);
+	border-bottom: var(--border-100);
+	font-size: medium;
+	height: 60px;
+	left: 0;
+	line-height: 1;
+	margin: 0 auto;
+	max-width: var(--width-main);
+	padding: 0 var(--gutter);
+	padding-top: 10px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transform: translateY(-10px);
+	transition-duration: 400ms;
+	transition-property: border, transform;
+	z-index: 5000;
 }
 
 .top #header {
-    border-bottom: 1px solid rgba(0, 0, 0, 0);
-    transform: translateY(0);
+	border-bottom: 1px solid rgba(0, 0, 0, 0);
+	transform: translateY(0);
 }
 
 #header .bar {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    height: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	height: 100%;
 }
 
 #header .bar .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #header .bar .logo svg {
-    width: 70px;
-    height: auto;
-    z-index: 1;
+	width: 70px;
+	height: auto;
+	z-index: 1;
 }
 
 #header .bar .toggles {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }
 
 #header .bar nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #header .bar nav ul li {
-    margin-left: 10px;
-    font-weight: 700;
+	margin-left: 10px;
+	font-weight: 700;
 }
 
 #header .bar nav ul li.version {
-    color: var(--color-text-medium);
-    font-weight: 400;
+	color: var(--color-text-medium);
+	font-weight: 400;
 }
 
 #header .bar nav ul li button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	height: 100%;
 }

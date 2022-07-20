@@ -1,55 +1,55 @@
 /* wht-mediatext {} */
 
 mediatext-wrapper {
-    box-sizing: border-box;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-    max-width: var(--width-main);
-    padding: 0 var(--gutter);
-    width: 100%;
+	box-sizing: border-box;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 1fr;
+	margin: 0 auto;
+	max-width: var(--width-main);
+	padding: 0 var(--gutter);
+	width: 100%;
 }
 
 @media (min-width: 1024px) {
-    mediatext-wrapper {
-        gap: 10%;
-        grid-template-columns: 1fr 1fr;
-    }
+	mediatext-wrapper {
+		gap: 10%;
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 mediatext-media {
-    position: relative;
-    display: block;
+	display: block;
+	position: relative;
 }
 
 @media (min-width: 1024px) {
-    .right mediatext-media {
-        order: 2;
-    }    
+	.right mediatext-media {
+		order: 2;
+	}
 }
 
 mediatext-media video,
 mediatext-media img {
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius-100);
+	border-radius: var(--radius-100);
+	height: auto;
+	width: 100%;
 }
 
 mediatext-content {
-    display: block;
-    text-align: center;
+	display: block;
+	text-align: center;
 }
 
 @media (min-width: 1024px) {
-    mediatext-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: left;
-    }
+	mediatext-content {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		text-align: left;
+	}
 }
 
 mediatext-content p {
-    color: var(--color-text-medium);
+	color: var(--color-text-medium);
 }

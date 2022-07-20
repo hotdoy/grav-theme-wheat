@@ -9,7 +9,7 @@
 .blog__list > .wrapper {
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: calc(var(--gutter)/2);
+	gap: calc(var(--gutter) / 2);
 	margin: 0 auto;
 	padding: 0 var(--gutter);
 	max-width: var(--width-main);
@@ -17,7 +17,7 @@
 
 @media (min-width: 1024px) {
 	.blog__list > .wrapper {
-		grid-template-columns:repeat(2, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
@@ -28,5 +28,5 @@
 }
 
 .blog__list .card__media {
-    aspect-ratio: 4 / 3;
+	aspect-ratio: 4 / 3;
 }
