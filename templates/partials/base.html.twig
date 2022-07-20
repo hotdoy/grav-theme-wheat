@@ -15,7 +15,7 @@
 		{{ assets.js('head-deferred', {'defer':''})|raw }}
 		{% endblock %}
 		{% if theme.inline_css -%}<style>{{ theme.inline_css|raw }}</style>{%- endif %}
-		{% block preload %}{% include "partials/preload.html.twig" %}{% endblock %}
+		{% block preload %}{% include "partials/preload.html.twig" only %}{% endblock %}
 		{% if theme.inline_head_script %}{{ theme.inline_head_script|raw }}{% endif %}
 		<meta name="htmx-config" content='{"includeIndicatorStyles": false, "scrollBehavior":"auto", "defaultSwapDelay":"0"}'>
 	</head>
@@ -28,7 +28,8 @@
 		</div>
 		{% include 'partials/snipcart.html.twig' %}
 		{% if config.plugins['algolia-pro'].enabled %}{% include 'partials/algolia-pro/instantsearch.html.twig' with { index: 'pages' } %}{% endif %}
-		{% block transition %}{% include "partials/transition.html.twig" %}{% endblock %}
+		{% block transition %}{% include "partials/transition.html.twig" only %}{% endblock %}
+		{% block network %}{% include "partials/network.html.twig" only %}{% endblock %}
 		{# {% block loading %}{% include "partials/loading.html.twig" %}{% endblock %} #}
 		{{ assets.js('body')|raw }}
 		{% if theme.inline_body_script %}{{ theme.inline_body_script|raw }}{% endif %}
