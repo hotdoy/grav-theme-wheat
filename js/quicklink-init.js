@@ -1,3 +1,3 @@
-document.addEventListener('appComplete', () => {
-    quicklink.listen();
+document.addEventListener("appComplete", () => {
+	quicklink.listen();
 });
