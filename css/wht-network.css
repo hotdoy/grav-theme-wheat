@@ -1,7 +1,61 @@
 wht-network {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    background-color: #313131;
-    color: white;
+	background-color: #313131;
+	border-radius: 10px;
+	bottom: 20px;
+	color: white;
+	display: block;
+	font-size: small;
+	left: 20px;
+	margin: 0 auto;
+	max-width: 450px;
+	padding: 10px;
+	position: fixed;
+	right: 20px;
+	text-align: center;
+	z-index: 9999;
+}
+
+wht-network {
+	visibility: hidden;
+}
+
+wht-network[condition="offline"] {
+	animation-duration: 500ms;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-name: wht-network-in;
+}
+
+wht-network[condition="online"] {
+	animation-delay: 1s;
+	animation-duration: 500ms;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-name: wht-network-out;
+	transform: translateY(0);
+	visibility: visible;
+}
+
+@keyframes wht-network-in {
+	from {
+		visibility: hidden;
+		transform: translateY(calc(100% + 20px));
+	}
+
+	to {
+		visibility: visible;
+		transform: translateY(0);
+	}
+}
+
+@keyframes wht-network-out {
+	from {
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	to {
+		visibility: hidden;
+		transform: translateY(calc(100% + 20px));
+	}
 }

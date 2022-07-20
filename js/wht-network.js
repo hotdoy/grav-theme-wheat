@@ -1,23 +1,25 @@
 class WhtNetwork extends HTMLElement {
 	constructor() {
 		super();
-		this.innerHTML = "<div class='online'>🙌 You are back online!</div><div class='offline'>💢 Looks like you are offline.</div>";
-		this.Update();
 		setInterval(() => {
 			this.Update();
 		}, 1000);
 	}
 
-	connectedCallback() {
-		this.innerHTML = "<div class='online'>🙌 You are back online!</div><div class='offline'>💢 Looks like you are offline.</div>";
-	}
-
-	get onlineStatus() {
+	get OnlineStatus() {
 		return navigator.onLine ? "online" : "offline";
 	}
 
 	Update() {
-		this.setAttribute("data-network", this.onlineStatus);
+		if (this.OnlineStatus == "offline" && this.getAttribute("condition") === "offline") {
+			// Nothing, just wait for the next interval.
+		} else if (this.OnlineStatus == "offline") {
+			this.innerHTML = "💢 Internet connection lost.";
+			this.setAttribute("condition", "offline");	
+		}  else if (this.getAttribute("condition") === "offline" && this.OnlineStatus === "online") {
+			this.innerHTML = "🟢 Internet is back!";
+			this.setAttribute("condition", "online");
+		}
 	}
 }
 customElements.define("wht-network", WhtNetwork);
