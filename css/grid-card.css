@@ -1,28 +1,28 @@
 /* wht-grid-card {} */
 
 grid-card-wrapper {
-    box-sizing: border-box;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: var(--width-main);
-    padding: 0 var(--gutter);
+	box-sizing: border-box;
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	max-width: var(--width-main);
+	padding: 0 var(--gutter);
 }
 
 grid-card-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--gutter);
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--gutter);
 }
 
 @media (min-width: 640px) {
-    grid-card-layout {
-        grid-template-columns: 1fr 1fr;
-    }
+	grid-card-layout {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 @media (min-width: 1024px) {
-    grid-card-layout {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+	grid-card-layout {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }

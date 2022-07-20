@@ -1,102 +1,101 @@
 #footer {
-    border-top: var(--border-100);
-    margin-top: var(--rhythm);
-    padding-bottom: 20px;
-    padding-top: calc(var(--rhythm) / 2);
-    z-index: 1000;
+	border-top: var(--border-100);
+	margin-top: var(--rhythm);
+	padding-bottom: 20px;
+	padding-top: calc(var(--rhythm) / 2);
+	z-index: 1000;
 }
 
 #footer ul,
 #footer li {
-    list-style: none;
+	list-style: none;
 }
 
 #footer .wrapper {
-    max-width: var(--width-main);
-    margin: 0 auto;
-    padding: 0 var(--gutter);
+	max-width: var(--width-main);
+	margin: 0 auto;
+	padding: 0 var(--gutter);
 }
 
 #footer nav {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
 }
 
 #footer nav ul {
-    margin: 0;
-    padding: 0;
-    width: 45%;
-    padding-right: var(--gutter);
+	margin: 0;
+	padding: 0;
+	width: 45%;
+	padding-right: var(--gutter);
 }
 
 @media (min-width: 1024px) {
-    #footer nav ul {
-        margin-top: 0;
-        width: 20%;
-    }
+	#footer nav ul {
+		margin-top: 0;
+		width: 20%;
+	}
 }
 
 #footer nav ul li {
-    font-size: small;
-    color: var(--color-text-medium);
-    margin-top: 10px;
+	font-size: small;
+	color: var(--color-text-medium);
+	margin-top: 10px;
 }
 
 #footer nav ul li:first-child {
-    color: var(--color-text-dark);
-    margin-top: 2rem;
+	color: var(--color-text-dark);
+	margin-top: 2rem;
 }
 
 #footer .footnote {
-    margin-top: calc(var(--rhythm)/2);
-    font-size: x-small;
-    color: var(--color-text-medium);
+	margin-top: calc(var(--rhythm) / 2);
+	font-size: x-small;
+	color: var(--color-text-medium);
 }
 
 #footer .footnote a {
-    color: var(--color-text-dark);
+	color: var(--color-text-dark);
 }
 
 #footer .legal {
-    border-top: var(--border-100);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
-    padding: 1rem 0 0 0;
-    font-size: x-small;
-    color: var(--color-text-medium);
+	border-top: var(--border-100);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1rem;
+	padding: 1rem 0 0 0;
+	font-size: x-small;
+	color: var(--color-text-medium);
 }
 
 #footer .legal ul {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
-
 #footer .legal li {
-    margin: 0 0 0 10px;
+	margin: 0 0 0 10px;
 }
 
 .colorscheme-toggle {
-    cursor: pointer;
-    margin: 0 0 0 10px;
-    width: 1.5rem;
+	cursor: pointer;
+	margin: 0 0 0 10px;
+	width: 1.5rem;
 }
 
 body.colorscheme-toggle .sun {
-    display: block;
+	display: block;
 }
 
 body.colorscheme-dark .colorscheme-toggle .sun {
-    display: none;
+	display: none;
 }
 
 body.colorscheme-dark .colorscheme-toggle .moon {
-    display: block;
+	display: block;
 }
 
 body:not(.colorscheme-dark) .colorscheme-toggle .moon {
-    display: none;
+	display: none;
 }

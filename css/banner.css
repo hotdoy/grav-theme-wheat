@@ -1,71 +1,71 @@
 /* wht-banner  {} */
 
 banner-wrapper {
-    display: block;
-    box-sizing: border-box;
+	display: block;
+	box-sizing: border-box;
 	margin: 0 auto;
-    max-width: var(--width-main);
+	max-width: var(--width-main);
 	padding: 0 var(--gutter);
-    position: relative;
+	position: relative;
 	width: 100%;
 }
 
 banner-layout {
-    border-radius: 4px;
-    display: flex;
-    flex-wrap: wrap;
-    box-shadow: var(--shadow-100);
-    background-color: var(--color-canva);
-    border: var(--border-100);
-    padding: 2rem 1rem 1rem 1rem;
+	border-radius: 4px;
+	display: flex;
+	flex-wrap: wrap;
+	box-shadow: var(--shadow-100);
+	background-color: var(--color-canva);
+	border: var(--border-100);
+	padding: 2rem 1rem 1rem 1rem;
 }
 
 @media (min-width: 1024px) {
-    banner-layout {
-        padding: 2rem;
-    }
+	banner-layout {
+		padding: 2rem;
+	}
 }
 
 banner-content {
-    width: 100%;
+	width: 100%;
 }
 
 @media (min-width: 1024px) {
-    banner-content {
-        text-align: left;
-        width: 66.66%;
-    }
+	banner-content {
+		text-align: left;
+		width: 66.66%;
+	}
 }
 
 banner-content h3 {
-    color: var(--color-area-fg);
+	color: var(--color-area-fg);
 }
 
 banner-content p {
-    color: var(--color-area-graytext);
+	color: var(--color-area-graytext);
 }
 
 banner-action {
-    align-items: flex-end;
-    display: flex;
-    justify-content: right;
-    margin-top: var(--gutter);
-    width: 100%;
+	align-items: flex-end;
+	display: flex;
+	justify-content: right;
+	margin-top: var(--gutter);
+	width: 100%;
 }
 
 @media (min-width: 1024px) {
-    banner-action {
-        margin-top: 0;
-        width: 33.33%;
-    }
+	banner-action {
+		margin-top: 0;
+		width: 33.33%;
+	}
 }
 
 banner-action .button {
-    width: 100%;
+	width: 100%;
 }
 
 @media (min-width: 1024px) {
-    banner-action .button {
-        width: auto;   
-    }
+	banner-action .button {
+		width: auto;
+	}
 }

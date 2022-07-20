@@ -3,119 +3,116 @@ For Grav Plugin: Markdown Notices.
 Make sure to disable built-in CSS.
 */
 
-
 /*===========================================
 					BASE 
 ============================================*/
 
 .notices {
-    position: relative;
-    margin: 2rem 0;
-    padding: 1rem;
-    width: 100%;
-    max-width: var(--width-tight);
-    border-radius: 4px;
-    text-align: left;
-    font-size: small;
+	position: relative;
+	margin: 2rem 0;
+	padding: 1rem;
+	width: 100%;
+	max-width: var(--width-tight);
+	border-radius: 4px;
+	text-align: left;
+	font-size: small;
 }
 
 .notices:first-child {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 .text .notices code {
-    border: 1px solid currentColor;
-    background-color: transparent;
+	border: 1px solid currentColor;
+	background-color: transparent;
 }
-
 
 /*===========================================
 					THEMES 
 ============================================*/
 
 .notices.yellow {
-    padding-left: calc(2rem + 25px);
-    background: #fefae1;
-    color: #df8806;
+	padding-left: calc(2rem + 25px);
+	background: #fefae1;
+	color: #df8806;
 }
 
 .notices.notices.yellow::before {
-    position: absolute;
-    left: 1rem;
-    content: " ";
-    width: 25px;
-    height: 25px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23df8806'%3E%3Cpath d='M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z'/%3E%3C/svg%3E");
+	position: absolute;
+	left: 1rem;
+	content: " ";
+	width: 25px;
+	height: 25px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23df8806'%3E%3Cpath d='M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z'/%3E%3C/svg%3E");
 }
 
 .notices.red {
-    padding-left: calc(2rem + 25px);
-    background: #fee1e1;
-    color: #d11f19;
+	padding-left: calc(2rem + 25px);
+	background: #fee1e1;
+	color: #d11f19;
 }
 
 .notices.notices.red::before {
-    position: absolute;
-    left: 1rem;
-    content: " ";
-    width: 25px;
-    height: 25px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23d11f19'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z'/%3E%3C/svg%3E");
+	position: absolute;
+	left: 1rem;
+	content: " ";
+	width: 25px;
+	height: 25px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23d11f19'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z'/%3E%3C/svg%3E");
 }
 
 .notices.blue {
-    padding-left: calc(2rem + 25px);
-    background: #e1f5fe;
-    color: #01579b;
+	padding-left: calc(2rem + 25px);
+	background: #e1f5fe;
+	color: #01579b;
 }
 
 .notices.notices.blue::before {
-    position: absolute;
-    left: 1rem;
-    content: " ";
-    width: 25px;
-    height: 25px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%2301579b'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z'/%3E%3C/svg%3E");
+	position: absolute;
+	left: 1rem;
+	content: " ";
+	width: 25px;
+	height: 25px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%2301579b'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z'/%3E%3C/svg%3E");
 }
 
 .notices.green {
-    padding-left: calc(2rem + 25px);
-    background: #e1feed;
-    color: #099119;
+	padding-left: calc(2rem + 25px);
+	background: #e1feed;
+	color: #099119;
 }
 
 .notices.notices.green::before {
-    position: absolute;
-    left: 1rem;
-    content: " ";
-    width: 25px;
-    height: 25px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23099119'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z'/%3E%3C/svg%3E");
+	position: absolute;
+	left: 1rem;
+	content: " ";
+	width: 25px;
+	height: 25px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23099119'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z'/%3E%3C/svg%3E");
 }
-
 
 /*===========================================
 					CONTENT 
 ============================================*/
 
 .text.prose .notices :where(p) {
-    color: inherit;
-    font-size: inherit;
-    margin: 1rem 0;
+	color: inherit;
+	font-size: inherit;
+	margin: 1rem 0;
 }
 
-.prose .notices>*:first-child {
-    margin-top: 0!important;
+.prose .notices > *:first-child {
+	margin-top: 0 !important;
 }
 
-.prose .notices>*:last-child {
-    margin-bottom: 0!important;
+.prose .notices > *:last-child {
+	margin-bottom: 0 !important;
 }

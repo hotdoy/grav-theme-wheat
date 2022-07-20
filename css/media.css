@@ -1,36 +1,36 @@
 /*wht-media {}*/
 
 media-wrapper {
-    box-sizing: border-box;
-    display: block;
-    margin: 0 auto;
-    max-width: var(--width-main);
-    padding: 0 var(--gutter);  
-    position: relative;
-    width: 100%;
+	box-sizing: border-box;
+	display: block;
+	margin: 0 auto;
+	max-width: var(--width-main);
+	padding: 0 var(--gutter);
+	position: relative;
+	width: 100%;
 }
 
 wht-media img,
 wht-media video,
 wht-media lite-youtube {
-    border-radius: var(--radius-100);
-    height: auto;
-    margin: 0 auto;
-    overflow: hidden;
-    width: 100%;
+	border-radius: var(--radius-100);
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 100%;
 }
 
 wht-media .caption {
-    margin-top: 0.5rem;
-    max-width: 80%;
+	margin-top: 0.5rem;
+	max-width: 80%;
 }
 
 @media (min-width: 640px) {
-    wht-media .caption {
-        padding: 0;   
-    }
+	wht-media .caption {
+		padding: 0;
+	}
 }
 
 wht-media:first-child {
-    margin-top: calc(var(--rhythm)/2);
+	margin-top: calc(var(--rhythm) / 2);
 }

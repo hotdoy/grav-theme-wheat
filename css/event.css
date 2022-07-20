@@ -1,89 +1,81 @@
 /*body.event {}*/
 
-
-
-
-
 /*===========================================
 				HEADING 
 ============================================*/
 
 .event__heading {
-    position: relative;
-    margin-top: var(--rhythm);
-    z-index: 1000;
+	position: relative;
+	margin-top: var(--rhythm);
+	z-index: 1000;
 }
 
 .event__heading .wrapper {
-    padding: 0 var(--gutter);
-    margin: 0 auto;
-    max-width: var(--width-main);
-    width: 100%;
-    text-align: center;
+	padding: 0 var(--gutter);
+	margin: 0 auto;
+	max-width: var(--width-main);
+	width: 100%;
+	text-align: center;
 }
 
 .event__heading .breadcrumbs {
-    margin-bottom: var(--gutter);
-    opacity: 0.5;
+	margin-bottom: var(--gutter);
+	opacity: 0.5;
 }
 
 /* .event__heading .title {} */
 
 .event__heading .cartel {
-    margin-top: var(--gutter);
+	margin-top: var(--gutter);
 }
 
 /* .event__heading time {} */
-
-
-
-
 
 /*===========================================
 				INFO
 ============================================*/
 
 .event-info {
-    margin-top: calc(var(--rhythm)/2);
-    position: relative;
-    z-index: 1000;
+	margin-top: calc(var(--rhythm) / 2);
+	position: relative;
+	z-index: 1000;
 }
 
 .event-info .wrapper {
-    margin: 0 auto;
-    max-width: var(--width-main);
-    padding: 0 var(--gutter);
-    width: 100%;
+	margin: 0 auto;
+	max-width: var(--width-main);
+	padding: 0 var(--gutter);
+	width: 100%;
 }
 
 .event-info h2 {
-    color: var(--color-text-medium);
-    font-size: small;
-    text-transform: uppercase;
+	color: var(--color-text-medium);
+	font-size: small;
+	text-transform: uppercase;
 }
 
 .event-info p {
-    margin-bottom: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 .event-info .button {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 .event-info a.button {
-    width: 100%;
+	width: 100%;
 }
 
 .event-info .layout {
 	background-color: var(--color-canva);
 	border-radius: var(--radius-100);
 	padding: var(--gutter);
-    border: var(--border-100);
-    box-shadow: var(--shadow-100);
+	border: var(--border-100);
+	box-shadow: var(--shadow-100);
 }
 
 .event-info + .module {
-    margin-top: calc(var(--rhythm)/2);   
+	margin-top: calc(var(--rhythm) / 2);
 }
 
 /* .event-info__date {} */

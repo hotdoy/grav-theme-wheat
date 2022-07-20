@@ -5,32 +5,31 @@
 ============================================*/
 
 .post-heading {
-    position: relative;
-    margin-top: var(--rhythm);
-    z-index: 1000;
+	position: relative;
+	margin-top: var(--rhythm);
+	z-index: 1000;
 }
 
 .post-heading .wrapper {
-    padding: 0 var(--gutter);
-    margin: 0 auto;
-    max-width: var(--width-main);
-    width: 100%;
-    text-align: center;
+	padding: 0 var(--gutter);
+	margin: 0 auto;
+	max-width: var(--width-main);
+	width: 100%;
+	text-align: center;
 }
 
 .post-heading .breadcrumbs {
-    margin-bottom: var(--gutter);
-    color: var(--color-graytext);
+	margin-bottom: var(--gutter);
+	color: var(--color-graytext);
 }
 
 /* .post-heading__title {} */
 
 .post-heading__cartel {
-    margin-top: var(--gutter);
-    color: var(--color-graytext); 
+	margin-top: var(--gutter);
+	color: var(--color-graytext);
 }
 
 /* .post-heading time {} */
 
 /* .post-heading .author {} */
-

@@ -1,79 +1,78 @@
 .button,
 a.button,
 button.button {
-    background-color: var(--button-bg);
-    border-radius: 4px;
-    border: var(--button-border);
-    box-shadow: var(--button-shadow);
-    color: var(--button-fg);
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1;
-    margin-top: 0.5rem;
-    padding: 14px 30px 14px 30px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap;
+	background-color: var(--button-bg);
+	border-radius: 4px;
+	border: var(--button-border);
+	box-shadow: var(--button-shadow);
+	color: var(--button-fg);
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1;
+	margin-top: 0.5rem;
+	padding: 14px 30px 14px 30px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
 }
 
 .button:hover,
 a.button:hover,
 button.button:hover {
-    background-color: var(--button-hover);
+	background-color: var(--button-hover);
 }
 
 .button:active,
 a.button:active,
 button.button:active {
-    background-color: var(--button-active);
+	background-color: var(--button-active);
 }
 
 .button:focus-visible,
 a.button:focus-visible,
 button.button:focus-visible {
-    outline-color: var(--button-bg);
-    outline-offset: 4px;
-    outline-width: 1px;
-    outline-style: dashed;
+	outline-color: var(--button-bg);
+	outline-offset: 4px;
+	outline-width: 1px;
+	outline-style: dashed;
 }
 
 .button.disabled {
-    opacity: 0.7;
-    box-shadow: 0;
+	opacity: 0.7;
+	box-shadow: 0;
 }
 
 .button.htmx-request {
-    pointer-events: none;
-    color: transparent !important;
-
+	pointer-events: none;
+	color: transparent !important;
 }
 
 .button.htmx-request:before {
-    content: "";
-    animation: button_request 1.1s infinite linear;
-    border-bottom: 4px solid rgba(255, 255, 255, 0.2);
-    border-left: 4px solid #ffffff;
-    border-radius: 100%;
-    border-right: 4px solid rgba(255, 255, 255, 0.2);
-    border-top: 4px solid rgba(255, 255, 255, 0.2);
-    box-sizing: border-box;
-    color: var(--button-fg);
-    height: 20px;
-    left: calc(50% - 10px);
-    position: absolute;
-    top: calc(50% - 10px);
-    transform: translateZ(0);
-    width: 20px;
+	content: "";
+	animation: button_request 1.1s infinite linear;
+	border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+	border-left: 4px solid #ffffff;
+	border-radius: 100%;
+	border-right: 4px solid rgba(255, 255, 255, 0.2);
+	border-top: 4px solid rgba(255, 255, 255, 0.2);
+	box-sizing: border-box;
+	color: var(--button-fg);
+	height: 20px;
+	left: calc(50% - 10px);
+	position: absolute;
+	top: calc(50% - 10px);
+	transform: translateZ(0);
+	width: 20px;
 }
 
 @keyframes button_request {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
