@@ -19,14 +19,14 @@ wht-network {
 	visibility: hidden;
 }
 
-wht-network[condition="offline"] {
+wht-network[status="offline"] {
 	animation-duration: 500ms;
 	animation-fill-mode: forwards;
 	animation-iteration-count: 1;
 	animation-name: wht-network-in;
 }
 
-wht-network[condition="online"] {
+wht-network[status="online"] {
 	animation-delay: 1s;
 	animation-duration: 500ms;
 	animation-fill-mode: forwards;

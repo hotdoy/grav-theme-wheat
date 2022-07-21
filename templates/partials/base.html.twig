@@ -19,7 +19,7 @@
 		{% if theme.inline_head_script %}{{ theme.inline_head_script|raw }}{% endif %}
 		<meta name="htmx-config" content='{"includeIndicatorStyles": false, "scrollBehavior":"auto", "defaultSwapDelay":"0"}'>
 	</head>
-	<body class="top" hx-boost="true">
+	<body class="top" hx-boost="true" hx-indicator="body">
 		<a id="skipto" href="#main">Skip to content</a>
 		<div id="page" class="{{ page.template }}{% if page.header.body_classes %} {{ page.header.body_classes }}{% endif %}">
 			{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
