@@ -8,7 +8,8 @@
     <a id="load-more" class="button" href="{{ url }}"
     hx-get="{{ url }}"
     hx-swap="outerHTML" 
-    hx-select="#list article, #load-more, #no-result">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}
+    hx-select="#list article, #load-more, #no-result"
+    hx-indicator="#load-more">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}
     </a>
 {% endif %}
 {% endif %}
