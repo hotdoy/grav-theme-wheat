@@ -35,7 +35,7 @@
 
 .product__showcase .scroller__slide,
 .product__showcase .single-image {
-	background-color: lightgray;
+	background-color: var(--color-placeholder);
 	border-radius: var(--radius-100);
 	position: relative;
 	flex-shrink: 0;

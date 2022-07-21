@@ -1,10 +1,16 @@
+/* body {
+	overflow: hidden;
+}
+
+body.loaded {
+	overflow: auto;
+}
+
 #loading {
-	/* opacity: 0; */
-	/* visibility: hidden; */
 	align-items: center;
-	background-color: #313131;
+	background-color: var(--color-bg);
 	bottom: 0;
-	color: white;
+	color: var(--color-fg);
 	display: flex;
 	font-family: "Courier New", Courier, monospace;
 	font-size: small;
@@ -17,3 +23,8 @@
 	transition-property: visibility, opacity;
 	z-index: 9999;
 }
+
+body.loaded #loading {
+	opacity: 0;
+	visibility: hidden;
+} */

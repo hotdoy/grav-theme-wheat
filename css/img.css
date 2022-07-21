@@ -11,6 +11,9 @@ img[loading="lazy"][loaded] {
 }
 
 @keyframes lazyImg {
+	from {
+		opacity: 0;
+	}
 	to {
 		opacity: 1;
 	}

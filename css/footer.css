@@ -88,14 +88,14 @@ body.colorscheme-toggle .sun {
 	display: block;
 }
 
-body.colorscheme-dark .colorscheme-toggle .sun {
+body[data-theme="dark"] .colorscheme-toggle .sun {
 	display: none;
 }
 
-body.colorscheme-dark .colorscheme-toggle .moon {
+body[data-theme="dark"] .colorscheme-toggle .moon {
 	display: block;
 }
 
-body:not(.colorscheme-dark) .colorscheme-toggle .moon {
+body:not([data-theme="dark"]) .colorscheme-toggle .moon {
 	display: none;
 }
