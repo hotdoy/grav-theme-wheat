@@ -1,3 +1,7 @@
+{# CRITICAL #}
+{% do assets.addCss('theme://css/critical.css', {loading: 'inline', position: 'before'}) %}
+{% do assets.addCss('theme://css/loading.css', {loading: 'inline', position: 'before'}) %}
+
 {# THEME #}
 {% do assets.addCss('theme://css/theme.css') %}
 
@@ -8,7 +12,6 @@
 
 {# SITE #}
 {% do assets.addCss('theme://css/reset.css') %}
-{# {% do assets.addCss('theme://css/app.css') %} #}
 {% do assets.addCss('theme://css/img.css') %}
 {% do assets.addCss('theme://css/text.css') %}
 {% do assets.addCss('theme://css/header.css') %}
@@ -23,7 +26,6 @@
 {% do assets.addCss('theme://css/share.css') %}
 {% do assets.addCss('theme://css/card.css') %}
 {% do assets.addCss('theme://css/transition.css') %}
-{% do assets.addCss('theme://css/loading.css') %}
 {% do assets.addCss('theme://css/wht-network.css') %}
 
 {% if grav.user.access.admin.login and theme.admin_edit_button %}
