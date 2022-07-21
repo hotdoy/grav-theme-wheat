@@ -1,24 +1,47 @@
 class WhtNetwork extends HTMLElement {
 	constructor() {
 		super();
-		setInterval(() => {
-			this.Update();
+	}
+
+	connectedCallback() {
+		this.interval = setInterval(() => {
+			this.update();
 		}, 1000);
 	}
 
-	get OnlineStatus() {
+	disconnectedCallback() {
+		clearInterval(this.interval);
+	}
+
+	get status() {
 		return navigator.onLine ? "online" : "offline";
 	}
 
-	Update() {
-		if (this.OnlineStatus == "offline" && this.getAttribute("condition") === "offline") {
+	get networkType() {
+		if ("connection" in navigator) {
+			return navigator.connection.effectiveType;
+		} else {
+			return;
+		}
+	}
+
+	get statusAttr() {
+		return this.getAttribute("status");
+	}
+
+	set statusAttr(status) {
+		this.setAttribute("status", status);
+	}
+
+	update() {
+		if (this.status === "offline" && this.statusAttr === "offline") {
 			// Nothing, just wait for the next interval.
-		} else if (this.OnlineStatus == "offline") {
+		} else if (this.status === "offline") {
 			this.innerHTML = "💢 Internet connection lost.";
-			this.setAttribute("condition", "offline");	
-		}  else if (this.getAttribute("condition") === "offline" && this.OnlineStatus === "online") {
+			this.statusAttr = "offline";
+		} else if (this.statusAttr === "offline" && this.status === "online") {
 			this.innerHTML = "🟢 Internet is back!";
-			this.setAttribute("condition", "online");
+			this.statusAttr = "online";
 		}
 	}
 }
