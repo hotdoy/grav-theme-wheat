@@ -22,7 +22,7 @@
 			{% for item in site_footer.header.legal %}
 				<li><a href="{{ item.url }}">{{ item.label }}</a></li>
 			{% endfor %}
-				<button class="colorscheme-toggle" onclick="ToggleColorScheme()">{{ svg.sun() }}{{ svg.moon }}</button>
+				<li><button class="colorscheme-toggle" title="toggle color scheme" onclick="ToggleColorScheme()">{{ svg.sun() }}{{ svg.moon }}</button></li>
 			</ul>
 		</div>
 	</div>
