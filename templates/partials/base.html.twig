@@ -19,7 +19,7 @@
 		{% if theme.inline_head_script %}{{ theme.inline_head_script|raw }}{% endif %}
 		<meta name="htmx-config" content='{"includeIndicatorStyles": false, "scrollBehavior":"auto", "defaultSwapDelay":"0"}'>
 	</head>
-	<body class="top" hx-boost="true" hx-indicator="body">
+	<body class="top" hx-boost="true" hx-indicator="#transition">
 		<a id="skipto" href="#main">Skip to content</a>
 		<div id="page" class="{{ page.template }}{% if page.header.body_classes %} {{ page.header.body_classes }}{% endif %}">
 			{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
@@ -28,9 +28,9 @@
 		</div>
 		{% include 'partials/snipcart.html.twig' %}
 		{% if config.plugins['algolia-pro'].enabled %}{% include 'partials/algolia-pro/instantsearch.html.twig' with { index: 'pages' } %}{% endif %}
-		{% block transition %}{% include "partials/transition.html.twig" only %}{% endblock %}
+		{% block transition %}<div id="transition"></div>{% endblock %}
 		{% block network %}<wht-network></wht-network>{% endblock %}
-		{# {% block loading %}{% include "partials/loading.html.twig" %}{% endblock %} #}
+		{# {% block loading %}<div id="loading"></div>{% endblock %} #}
 		{{ assets.js('body')|raw }}
 		{% if theme.inline_body_script %}{{ theme.inline_body_script|raw }}{% endif %}
 		<!-- {{ grav.theme.getBlueprint().name }} {{ grav.theme.getBlueprint().version }} -->

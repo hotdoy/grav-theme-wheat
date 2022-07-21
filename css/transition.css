@@ -9,22 +9,15 @@
     transition-duration: 100ms;
 }
 
-.htmx-request #transition,
-.htmx-added #transition,
-.htmx-settling #transition,
-.htmx-swapping #transition {
+#transition.htmx-request,
+#transition.htmx-added,
+#transition.htmx-settling,
+#transition.htmx-swapping  {
     visibility: visible;
     opacity: 1;
 }
 
-#main {
-    animation-name: main-in;
-    animation-duration: 200ms; 
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-}
-
-.htmx-request #transition::before {
+#transition.htmx-request::before {
 	content: "";
     animation-name: transition_spinner;
     animation-delay: 1s;
@@ -46,6 +39,13 @@
 	width: 20px;
     visibility: hidden;
     opacity: 0;
+}
+
+.colorscheme-dark #transition.htmx-request::before {
+	border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+	border-left: 4px solid #f1f1f1;
+	border-right: 4px solid rgba(255, 255, 255, 0.2);
+	border-top: 4px solid rgba(255, 255, 255, 0.2);
 }
 
 @keyframes transition_spinner {
