@@ -1,27 +1,29 @@
 (function () {
 	"use strict";
 	const a = window.matchMedia("(prefers-color-scheme: dark)");
-	const b = localStorage.getItem("colorscheme");
-	if (a.matches || b) {
-		document.body.classList.add("colorscheme-dark");
+	if (a.matches || localStorage.getItem("prefers-color-scheme") == "dark") {
+		document.body.setAttribute("data-theme", "dark");
+	} else {
+		document.body.setAttribute("data-theme", "light");
 	}
+	
 	a.addEventListener("change", (event) => {
 		if (event.matches) {
-			document.body.classList.add("colorscheme-dark");
-			localStorage.setItem("colorscheme", "dark");
+			document.body.setAttribute("data-theme", "dark");
+			localStorage.setItem("prefers-color-scheme", "dark");
 		} else {
-			document.body.classList.remove("colorscheme-dark");
-			localStorage.removeItem("colorscheme");
+			document.body.setAttribute("data-theme", "light");
+			localStorage.setItem("prefers-color-scheme", "light");
 		}
 	});
 })();
 
 const ToggleColorScheme = function () {
-	if (document.body.classList.contains("colorscheme-dark")) {
-		document.body.classList.remove("colorscheme-dark");
-		localStorage.removeItem("colorscheme");
+	if (document.body.getAttribute("data-theme") == "dark") {
+		document.body.setAttribute("data-theme", "light");
+		localStorage.setItem("prefers-color-scheme", "light");
 	} else {
-		document.body.classList.add("colorscheme-dark");
-		localStorage.setItem("colorscheme", "dark");
+		document.body.setAttribute("data-theme", "dark");
+		localStorage.setItem("prefers-color-scheme", "dark");
 	}
 };

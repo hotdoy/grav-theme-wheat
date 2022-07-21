@@ -41,7 +41,7 @@
     opacity: 0;
 }
 
-.colorscheme-dark #transition.htmx-request::before {
+[data-theme="dark"] #transition.htmx-request::before {
 	border-bottom: 4px solid rgba(255, 255, 255, 0.2);
 	border-left: 4px solid #f1f1f1;
 	border-right: 4px solid rgba(255, 255, 255, 0.2);
