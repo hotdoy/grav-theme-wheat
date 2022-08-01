@@ -8,20 +8,20 @@ This section is for starting a project from scratch using Wheat as a starting po
 - A [GitHub](https://github.com/) account.
 - Some knowledge of Git. (I recommend using the [Github Desktop App](https://desktop.github.com/)).
 - A comand line interface (we will be using Window's Command Prompt).
-- XAMPP or any similar web server solution (I'll be moving to Grav built-in server soon).
-- A cool name for your theme (Use it whenever we refer to `mycoolname`).
+- XAMPP, any similar solution or straight up PHP (You don't NEED PHP8+ but you should).
+- A cool name for your theme (Use it whenever we refer to `themeName`).
 
 ## Local setup
 
-- Head to [GitHub](https://github.com/) and create a new repo named `grav-theme-mycoolname`. (The grav-theme- prefix is not required but is good practice in Grav development. It is also required if you plan on releasing on the GPM). You can close Github once the repo is added. We'll get back to it late.
-- On your computer, create a folder named `mycoolname` (or anything really) in a nice location (you won't be able to move it after).
+- Head to [GitHub](https://github.com/) and create a new repo named `grav-theme-themeName`. (The grav-theme- prefix is not required but is good practice in Grav development. It is also required if you plan on releasing on the GPM). You can close Github once the repo is added. We'll get back to it late.
+- On your computer, create a folder named `themeName` (or anything really) in a nice location (you won't be able to move it after).
 - [Download](https://getgrav.org/downloads) the latest version of GRAV Core + ADMIN.
-- Unzip the downloaded Grav archive and put it in you `mycoolname` folder.
+- Unzip the downloaded Grav archive and put it in you `themeName` folder.
 - From inside the `grav-admin` folder, cut ✂️ the `user` folder and paste it right next to `grav-admin`.
 - At that point, your project folder should look like this:
 
 ```bash
-mycoolname
+themeName
   grav-admin
   user
 ```
@@ -29,23 +29,23 @@ mycoolname
 - Clone your theme repo in the project folder, next to the other ones so it looks like...
 
 ```bash
-mycoolname
+themeName
   grav-admin
-  grav-theme-mycoolname
+  grav-theme-themeName
   user
 ```
 
-- Delete the content of grav-theme-mycoolname, if there is any.
+- Delete the content of grav-theme-themeName, if there is any.
 - [Download](https://github.com/hotdoy/grav-theme-wheat/archive/refs/heads/master.zip) Wheat's Master branch.
 - Unzip the downloaded `grav-theme-wheat`...
-- and dump it's entire content in your `grav-theme-mycoolname` directory.
+- and dump it's entire content in your `grav-theme-themeName` directory.
 
 ### Cleaning and renaming
 
 It's time to make your theme unique, ensuring you don't receive unwanted updates trough the [GPM](https://learn.getgrav.org/17/cli-console/grav-cli-gpm) (if I ever publish Wheat on it).
 
-- Rename `wheat.yaml` to `mycoolname.yaml`
-- Rename `wheat.php` to `mycoolname.php` and change any reference to `wheat` to `mycoolname` in the file (make sure you follow capitalization).
+- Rename `wheat.yaml` to `themeName.yaml`
+- Rename `wheat.php` to `themeName.php` and change any reference to `wheat` to `themeName` in the file (make sure you follow capitalization).
 - Erase the content of CHANGELOG.md and start fresh with version v0.1.0 (or whatever you think is best).
 - Replace references to `wheat` in `blueprints.yaml` and add your own contact informations.
 - Delete or modify the content of `_ROOT` to suit your needs (you might simply want to replace the favicons and modify the `site.webmanifest`).
@@ -59,19 +59,19 @@ It's time to make your theme unique, ensuring you don't receive unwanted updates
 
 If you followed this guide, your 3 main directories (admin, theme and user) are side by side in our project folder so we'll now want to [symlink](https://en.wikipedia.org/wiki/Symbolic_link#:~:text=In%20computing%2C%20a%20symbolic%20link,and%20that%20affects%20pathname%20resolution.) everything together. You'll have to change the paths bellow to fit with your setup. I usually keep a copy of this the `_SETUP` folder in the theme repo so I can get back on my feet quickly if anything happen.
 
-**Local webroot to Grav install**
+Windows should look like:
 
-`mklink /D D:\xampp\htdocs\mycoolname D:\mycoolname\grav-admin`
+`mklink /D D:\themeName\grav-admin\user D:\themeName\user`  
+`mklink /D D:\themeName\user\themes\themeName D:\themeName\grav-theme-themeName`
 
-**grav-admin to user**
+And Mac/Linux should look like:
 
-`mklink /D D:\mycoolname\grav-admin\user D:\mycoolname\user`
+`ln -s /Users/userNane/Documents/projectName/user /Users/userNane/Documents/projectName/grav-admin/user`  
+`ln -s /Users/username/Documents/projectName/grav-theme-themeName /Users/vincentrouleau/Documents/projectName/user/themes/themeName`
 
-**user to theme**
+### Grav's built-in Web Server
 
-`mklink /D D:\mycoolname\user\themes\mycoolname D:\mycoolname\grav-theme-mycoolname`
-
-Test your setup using your favorite browser and going to your local webroot (something like `127.0.0.1/mycoolname`).
-If everything goes well, Grav will prompt you to create an account. At this point, you can consider the whole operation a success.
+Once you've read the [instructions](https://getgrav.org/blog/using-builtin-webserver) and installed everything properly, run `bin/grav server` from Grav  inside your project `projectName/grav-admin`.
+If everything goes well, the server should return an IP for you to see your local site. (usually at `127.0.0.1:8000`).
 
 Login into the admin panel, go to `Themes` and activate your new theme.

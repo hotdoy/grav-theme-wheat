@@ -33,14 +33,6 @@ Just make sure to set the `Custom Shortcodes` path to `/user/themes/mytheme/shor
 
 Add QoL links to the dashboard to services your clients might need on a regular basis.
 
-### Custom HTTP Header
-
-If you need http headers, it's hard to make it easier than that. If you don't know what it is, make sure you keep this one disabled.
-
-### File Content
-
-Wheat comes with `img.html.twig` as the prefered way to render images. It adds a small abstraction layer to the default Grav way of doing things and while at it, can use the File Content plugin too generate base64 low-res placeholders for your images. It's commented out by default but if you feel adventurous (or just like placeholders), give it a spin! The end result is close to what you'll see in frameworks like next.js and gives a very "modern" feel. Might be a good idea to look into it if you have issues with images and [LCP](https://web.dev/lcp/).
-
 ### Algolia Pro
 
 A nice and easy way to add a fully featured Algolia Search to any site. Wheat supports it out of the box and at 100$, it's the kind of feature that can easily be absorbed in a development budget.

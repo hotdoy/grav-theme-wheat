@@ -46,46 +46,32 @@ You can prevent this by using a Cloudflare Origin Certificate. A free TLS certif
 
 Cloudflare (and Calotte) recommends [this guide](https://www.digicert.com/kb/ssl-certificate-installation-apache-cpanel.htm) if you need help installing the certificate on your cPanel account.
 
-You will probably need Cloudflare's CA Bundle at one point and since it might be a bit hard to find, here it is...
-
-```
------BEGIN CERTIFICATE-----
-MIIEADCCAuigAwIBAgIID+rOSdTGfGcwDQYJKoZIhvcNAQELBQAwgYsxCzAJBgNV
-BAYTAlVTMRkwFwYDVQQKExBDbG91ZEZsYXJlLCBJbmMuMTQwMgYDVQQLEytDbG91
-ZEZsYXJlIE9yaWdpbiBTU0wgQ2VydGlmaWNhdGUgQXV0aG9yaXR5MRYwFAYDVQQH
-Ew1TYW4gRnJhbmNpc2NvMRMwEQYDVQQIEwpDYWxpZm9ybmlhMB4XDTE5MDgyMzIx
-MDgwMFoXDTI5MDgxNTE3MDAwMFowgYsxCzAJBgNVBAYTAlVTMRkwFwYDVQQKExBD
-bG91ZEZsYXJlLCBJbmMuMTQwMgYDVQQLEytDbG91ZEZsYXJlIE9yaWdpbiBTU0wg
-Q2VydGlmaWNhdGUgQXV0aG9yaXR5MRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMw
-EQYDVQQIEwpDYWxpZm9ybmlhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
-AQEAwEiVZ/UoQpHmFsHvk5isBxRehukP8DG9JhFev3WZtG76WoTthvLJFRKFCHXm
-V6Z5/66Z4S09mgsUuFwvJzMnE6Ej6yIsYNCb9r9QORa8BdhrkNn6kdTly3mdnykb
-OomnwbUfLlExVgNdlP0XoRoeMwbQ4598foiHblO2B/LKuNfJzAMfS7oZe34b+vLB
-yrP/1bgCSLdc1AxQc1AC0EsQQhgcyTJNgnG4va1c7ogPlwKyhbDyZ4e59N5lbYPJ
-SmXI/cAe3jXj1FBLJZkwnoDKe0v13xeF+nF32smSH0qB7aJX2tBMW4TWtFPmzs5I
-lwrFSySWAdwYdgxw180yKU0dvwIDAQABo2YwZDAOBgNVHQ8BAf8EBAMCAQYwEgYD
-VR0TAQH/BAgwBgEB/wIBAjAdBgNVHQ4EFgQUJOhTV118NECHqeuU27rhFnj8KaQw
-HwYDVR0jBBgwFoAUJOhTV118NECHqeuU27rhFnj8KaQwDQYJKoZIhvcNAQELBQAD
-ggEBAHwOf9Ur1l0Ar5vFE6PNrZWrDfQIMyEfdgSKofCdTckbqXNTiXdgbHs+TWoQ
-wAB0pfJDAHJDXOTCWRyTeXOseeOi5Btj5CnEuw3P0oXqdqevM1/+uWp0CM35zgZ8
-VD4aITxity0djzE6Qnx3Syzz+ZkoBgTnNum7d9A66/V636x4vTeqbZFBr9erJzgz
-hhurjcoacvRNhnjtDRM0dPeiCJ50CP3wEYuvUzDHUaowOsnLCjQIkWbR7Ni6KEIk
-MOz2U0OBSif3FTkhCgZWQKOOLo1P42jHC3ssUZAtVNXrCk3fw9/E15k8NPkBazZ6
-0iykLhH1trywrKRMVw67F44IE8Y=
------END CERTIFICATE-----
-```
-
 ## Emails
 
 Chances are, you are using emails. And chances are, you will eventually run in some kind of issues with email delivery when using Cloudflare. So here's a nice example of what kind of DNS records you'll want whenever you put a new website online.
 
-```
-A	mail XX.XX.XXX.XXX	DNS Only
-MX	domain.com	mail.domain.com
+```bash
+A mail XX.XX.XXX.XXX DNS Only
+MX domain.com mail.domain.com
 ```
 
 ## Firewall
 
-I usually block everything BUT Cloudflare on the 80 443 ports.
+When using cPanel, make sure to allow [Sectigo](https://support.cpanel.net/hc/en-us/articles/360053968633-What-IP-addresses-do-Sectigo-DCV-requests-originate-from-) (or any other services that needs access to your server) if you are using cPanel.
+Here's a quick list of ports you'll need to open...
 
-Make sure to also allow [Sectigo](https://support.cpanel.net/hc/en-us/articles/360053968633-What-IP-addresses-do-Sectigo-DCV-requests-originate-from-) (or any other services that needs access to your server) if you are using cPanel.
+```bash
+All IPv4 All IPv6: 1, 20, 21, 22, 25, 26, 110, 143, 465, 993, 995, 2082, 2083, 2086, 2087, 2096, 49152-65534
+```
+
+```bash
+127.0.0,1: 587
+```
+
+```bash
+Cloudflare and Sectigo only: 80, 443
+```
+
+[Cloudflare IPs](https://www.cloudflare.com/en-ca/ips/)
+
+[Sectigo IPs](https://support.cpanel.net/hc/en-us/articles/360053968633-What-IP-addresses-do-Sectigo-DCV-requests-originate-from-)
