@@ -1,6 +1,6 @@
-# Setting up a domain on your localhost (XAMPP)
+# Setting up a domain on your localhost (NEEDS TO BE UPDATED)
 
-While this is totally optional, I strongly suggest that you setup a domain on your localhost (and virtualhost) using XAMPP. This will allow you to work in a more realistic environment and prevent URL shenanigans while in development.
+While this is totally optional, I strongly suggest that you setup a domain on your localhost. This will allow you to work in a more realistic environment and prevent URL shenanigans while in development.
 
 ## Adding a domain to your localhost
 

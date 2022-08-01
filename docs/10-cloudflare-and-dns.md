@@ -1,4 +1,4 @@
-# Cloudflare
+# Cloudflare and DNS
 
 ## What is Cloudflare?
 
@@ -54,24 +54,3 @@ Chances are, you are using emails. And chances are, you will eventually run in s
 A mail XX.XX.XXX.XXX DNS Only
 MX domain.com mail.domain.com
 ```
-
-## Firewall
-
-When using cPanel, make sure to allow [Sectigo](https://support.cpanel.net/hc/en-us/articles/360053968633-What-IP-addresses-do-Sectigo-DCV-requests-originate-from-) (or any other services that needs access to your server) if you are using cPanel.
-Here's a quick list of ports you'll need to open...
-
-```bash
-All IPv4 All IPv6: 1, 20, 21, 22, 25, 26, 110, 143, 465, 993, 995, 2082, 2083, 2086, 2087, 2096, 49152-65534
-```
-
-```bash
-127.0.0,1: 587
-```
-
-```bash
-Cloudflare and Sectigo only: 80, 443
-```
-
-[Cloudflare IPs](https://www.cloudflare.com/en-ca/ips/)
-
-[Sectigo IPs](https://support.cpanel.net/hc/en-us/articles/360053968633-What-IP-addresses-do-Sectigo-DCV-requests-originate-from-)
