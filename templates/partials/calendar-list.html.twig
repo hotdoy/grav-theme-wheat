@@ -18,7 +18,7 @@
 
 {# PAGINATE EVENT ARRAY #}
 {% set currentpage = uri.param('page') ? uri.param('page') : 1 %}
-{% set limit = 6 %}
+{% set limit = 3 %}
 {% set start = (currentpage * limit) - limit + 1 %}
 {% set lastpage = (events|length / limit)|round %}
 {% set nextpage = currentpage + 1 %}
@@ -26,25 +26,23 @@
 
 {# LIST #}
 <section id="calendar-list">
-{% if collection|length %}
+    {% if collection|length %}
     {% for event in events if event.timestamp %}
     {% set item = pages.find(event.page) %}
     {% include "partials/calendar-card.html.twig" %}
     {% endfor %}
-{% else %}
+    {% else %}
     {% include "partials/no-results.html.twig" %}                
-{% endif %}
-
-{# LOAD-MORE #}
-{% if nextpage <= lastpage %}
+    {% endif %}
+    {% if nextpage <= lastpage %}
     {% set query = uri.query() ? '?' ~ uri.query() : '' %}
     {% set url = (page.url ~ '/page:' ~ nextpage ~ query)|replace({'//':'/'}) %}
     <a id="load-more" class="button" href="{{ url }}"
-    hx-trigger="intersect"
+    {# hx-trigger="intersect" #}
     hx-get="{{ url }}"
     hx-swap="outerHTML"
     hx-select="#calendar-list article, #load-more, .no-results"
     hx-indicator="#load-more">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}
     </a>
-{% endif %}
+    {% endif %}
 </section>

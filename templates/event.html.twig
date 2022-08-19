@@ -6,27 +6,18 @@
 {% endblock %}
 
 {% block content %}
- 
-	{# HEADING #}
-	{% include 'partials/event-heading.html.twig' %}
 
-	{# MEDIA #}
-	{% include 'modular/media.html.twig' %}
+	<section id="event-heading">
+		<div class="wrapper text">
+			<h1>{{ page.header.display_title }}</h1>
+		</div>
+	</section>
 
-	{# INFO #}
-	{% include "partials/event-info.html.twig" %}
-
-	{# CONTENT #}
-	{% if page.content %}
-	{% include 'modular/editor.html.twig' with {classes: 'rhythm-half'} %}
-	{% endif %}
+	[TODO]
 
 	{# MODULES #}
 	{% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
 	{{ module.content|raw }}
 	{% endfor %}
-
-	{# SHARE #}
-	{% include "partials/share.html.twig" %}
 
 {% endblock %}
