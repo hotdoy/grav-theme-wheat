@@ -1,132 +1,73 @@
 /* #page.calendar {} */
 
-#calendar-heading {
-	margin-top: var(--gutter);
+#calendar-heading,
+#event-heading {
+	margin-top: var(--rhythm)
 }
 
-#calendar-heading .wrapper {
+#calendar-heading .wrapper,
+#event-heading .wrapper {
 	max-width: var(--width-main);
 	margin: 0 auto;
 	padding: 0 var(--gutter);
 }
 
-/*===========================================
-				    CARD 
-============================================*/
+#calendar-list {
+	margin: var(--rhythm) auto 0 auto;
+	max-width: var(--width-main);
+	padding: 0 var(--gutter);
+}
 
-.calendar-card {
-	padding-top: var(--gutter);
-	border-top: 1px solid var(--color-canva);
+#calendar-list #load-more {
 	width: 100%;
 }
 
-.calendar-card a {
-	display: flex;
-	flex-wrap: nowrap;
-	gap: var(--gutter);
-}
-
-.calendar-card__date {
-	display: inline-block;
-	background-color: var(--color-canva);
-	border-radius: var(--radius-100);
-	border: var(--border-100);
-	flex-shrink: 0;
-	height: fit-content;
-	width: 70px;
-	text-align: center;
-	padding: 10px;
-	line-height: 1;
-}
-
-@media (min-width: 1024px) {
-	.calendar-card__date {
-		width: 95px;
-		padding: 10px;
-	}
-}
-
-.calendar-card__date .day {
-	font-size: x-large;
-}
-
-@media (min-width: 1024px) {
-	.calendar-card__date .day {
-		font-size: xx-large;
-	}
-}
-
-.calendar-card__date .month {
-	font-size: medium;
-	text-transform: uppercase;
-}
-
-@media (min-width: 1024px) {
-	.calendar-card__date .month {
-		font-size: large;
-	}
-}
-
-.calendar-card__date .year {
-	margin-top: 0.5rem;
-	padding-top: 0.5rem;
-	font-size: small;
+.calendar-card {
 	border-top: var(--border-100);
 }
 
-.calendar-card__content {
-	width: auto;
-	flex-grow: 1;
+.calendar-card a {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 10px;
+	padding: var(--gutter) 0;
 }
 
-@media (min-width: 1024px) {
-	.calendar-card__content {
-		width: 60%;
-	}
-}
-
-.calendar-card__content h2 {
-	margin: 0 0 0.5rem 0;
-}
-
-.calendar-card a:hover h2 {
-	text-decoration: underline;
-}
-
-.calendar-card__content p {
-	font-size: small;
-	color: var(--color-text-medium);
-}
-
-@media (min-width: 1024px) {
-	.calendar-card__content p {
-		font-size: medium;
-	}
-}
-
-.calendar-card__media {
-	display: none;
-	position: relative;
-	flex-shrink: 0;
-	overflow: hidden;
-	background-color: var(--color-placeholder);
+.calendar-card .media {
+	aspect-ratio: 4 / 3;
+	width: 100px;
 	border-radius: var(--radius-100);
+	overflow: hidden;
+	transform: translateZ(0);
+	margin-left: auto;
 }
 
-@media (min-width: 640px) {
-	.calendar-card__media {
-		display: block;
-		aspect-ratio: 4/3;
-		width: 25%;
-		height: auto;
-	}
-}
-
-.calendar-card__media img {
-	position: absolute;
-	top: 0;
-	left: 0;
+.calendar-card .media img {
 	object-fit: cover;
+	object-position: center;
 	width: 100%;
 	height: 100%;
 }
+
+.calendar-card .date {
+	display: flex;
+	align-items: center;
+}
+
+.calendar-card .title {
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
