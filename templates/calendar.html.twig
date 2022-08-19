@@ -1,46 +1,19 @@
+{% import "partials/date.html.twig" as date %}
 {% extends 'partials/base.html.twig' %}
-{% set now = 'now'|date('m/d/Y') %}
-{% set key = 'articles' %}
-{% set step = 6 %}
-{% set qs = uri.query(key) ?? null %}
-{% set qs_start = qs ? qs|split('-')[0] : 0 %}
-{% set qs_end = qs ? qs|split('-')[1] : step %}
-{% set next_start = qs_end %}
-{% set next_end = next_start + step %}
-{% set collection_raw = page.collection({ items: {'@self.children':''},
-    'order': {'by': 'date', 'dir': 'asc'},
-    'dateRange': {'start': now, 'end': null }
-}) %}
-{% set collection_raw_length = collection_raw|length %}
-{% set collection = page.collection({ items: {'@self.children':''},
-    'limit': qs_end, 
-    'order': {'by': 'date', 'dir': 'asc'},
-    'dateRange': {'start': now, 'end': null }
-}) %}
-{% set collection_slice = collection|slice(qs_start, qs_end) %}
 
 {% block content %}
 
-    {# HEADING #}
-    {% include 'partials/default-heading.html.twig' %}
-   
-    {# LIST #}
-    <section class="calendar__list" data-pagination-list>
-        <div class="wrapper">
-            {% for item in collection_slice %}
-            {% include ['partials/calendar-card.html.twig' ] with {'item': item} %}
-            {% endfor %}
-            {% if next_start + 1 <= collection_raw_length %}
-            {% set url = (page.url ~ '?' ~ key ~ '=' ~ next_start ~ '-' ~ next_end) %}
-            <button id="load-more" class="button" href="{{ url }}"
-            hx-get="{{ url }}" 
-            hx-swap="outerHTML" 
-            hx-select=".calendar__list article">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}</button>
-            {% endif %}
+    <section id="calendar-heading">
+        <div class="wrapper text">
+            <h1>{{ page.header.display_title }}</h1>
         </div>
     </section>
-
-    {# MODULES #}
+    
+    <section id="calendar-layout">
+        {# {% include "partials/calendar-filter.html.twig" %} #}
+        {% include "partials/calendar-list.html.twig" %}
+    </section>
+    
     {% for module in page.collection({ items: {'@self.modular':''}, 'order': {'by':'folder', 'dir':'asc'}}) %}
     {{ module.content|raw }}
     {% endfor %}

@@ -1,0 +1,59 @@
+title: Event
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            header.section_information:
+              type: section
+              title: Informations
+              underline: true
+
+            header.display_title:
+              type: text
+              label: Display title
+
+            header.image:
+              type: pagemediaselect
+              label: Image
+              preview_images: true
+
+            header.image_alt:
+              type: text
+              label: Image alt
+
+            header.section_dates:
+              type: section
+              title: Dates
+              underline: true
+
+            header.dates:
+              type: list
+              label: Dates
+              fields:
+                .datetime:
+                  type: datetime
+                  label: Date
+                .status:
+                  type: toggle
+                  toggleable: true
+                  label: Status
+                  options:
+                    cancelled: Cancelled
+                    postponed: Postponed
+
+            header.section_content:
+              type: section
+              title: Content
+              underline: true
+
+            content:
+              ordering@: header.section_content
+              label: Descripton
+              
+            header.media_order:
+              ordering@: +99

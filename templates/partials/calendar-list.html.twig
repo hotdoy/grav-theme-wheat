@@ -1,0 +1,50 @@
+{# GET QUERY #}
+{% set category = uri.query('category') %}
+{# GET COLLECTION #}
+{% set collection = page.children %}
+{# FILTER COLLECTION #}
+{% if category %}{% do collection.intersect(taxonomy.findTaxonomy({'category':category})) %}{% endif %}
+
+{# BUILD EVENT ARRAY FROM COLLECTION #}
+{% set events = [{}] %}
+{% for e in collection if e.header.dates %}
+    {% for d in e.header.dates %}
+        {% if d['datetime']|date('U') >= "now"|date('U') %}
+            {% set events = events|merge([{'timestamp' : d['datetime']|date('U'), 'page' : e.url, 'purchase_link' : d['purchase_link']}]) %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+{% set events = events|sort((a) => a.timestamp) %}
+
+{# PAGINATE EVENT ARRAY #}
+{% set currentpage = uri.param('page') ? uri.param('page') : 1 %}
+{% set limit = 6 %}
+{% set start = (currentpage * limit) - limit + 1 %}
+{% set lastpage = (events|length / limit)|round %}
+{% set nextpage = currentpage + 1 %}
+{% set events = events|slice(start, limit) %}
+
+{# LIST #}
+<section id="calendar-list">
+{% if collection|length %}
+    {% for event in events if event.timestamp %}
+    {% set item = pages.find(event.page) %}
+    {% include "partials/calendar-card.html.twig" %}
+    {% endfor %}
+{% else %}
+    {% include "partials/no-results.html.twig" %}                
+{% endif %}
+
+{# LOAD-MORE #}
+{% if nextpage <= lastpage %}
+    {% set query = uri.query() ? '?' ~ uri.query() : '' %}
+    {% set url = (page.url ~ '/page:' ~ nextpage ~ query)|replace({'//':'/'}) %}
+    <a id="load-more" class="button" href="{{ url }}"
+    hx-trigger="intersect"
+    hx-get="{{ url }}"
+    hx-swap="outerHTML"
+    hx-select="#calendar-list article, #load-more, .no-results"
+    hx-indicator="#load-more">{{ 'THEME.PAGINATION.LOAD_MORE'|t }}
+    </a>
+{% endif %}
+</section>
