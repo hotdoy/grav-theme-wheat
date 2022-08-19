@@ -1,30 +1,13 @@
-/* body.calendar {} */
+/* #page.calendar {} */
 
-.calendar__list {
-	position: relative;
-	margin-top: var(--rhythm);
-	z-index: 1000;
+#calendar-heading {
+	margin-top: var(--gutter);
 }
 
-.calendar__list > .wrapper {
+#calendar-heading .wrapper {
+	max-width: var(--width-main);
 	margin: 0 auto;
 	padding: 0 var(--gutter);
-	max-width: var(--width-main);
-	display: flex;
-	flex-direction: column;
-	gap: calc(var(--gutter) * 2);
-}
-
-@media (min-width: 1024px) {
-	.calendar__list > .wrapper {
-		gap: var(--gutter);
-	}
-}
-
-.calendar__list #load-more {
-	display: block;
-	width: 100%;
-	grid-column: 1 / -1;
 }
 
 /*===========================================
