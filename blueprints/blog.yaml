@@ -18,8 +18,3 @@ form:
               type: text
               style: vertical
               label: Display Title
-
-            header.intro:
-              type: textarea
-              label: Intro
-              style: vertical
