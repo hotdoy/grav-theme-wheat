@@ -1,4 +1,4 @@
-title: event
+title: Event
 extends@: default
 
 form:
@@ -7,64 +7,48 @@ form:
       fields:
         content:
           fields:
-  
+
             header.display_title:
-              ordering@: header.title
               type: text
-              style: vertical
-              label: Display Title
+              label: Display title
 
             header.image:
               type: pagemediaselect
               label: Image
-              style: vertical
-              accept:
-                - jpg
+              preview_images: true
 
             header.image_alt:
               type: text
-              label: Image Alt
-              style: vertical
-            
-            header.runtime:
-              type: text
-              label: Runtime
-              style: vertical
+              label: Image alt
 
-            header.location_name:
-              type: text
-              label: Location Name
-              style: vertical
+            header.section_dates:
+              type: section
+              title: Dates
+              underline: true
 
-            header.location_address:
-              type: text
-              label: Location Address
-              style: vertical
-            
-            header.note:
-              type: text
-              label: Note
-              style: vertical
+            header.dates:
+              type: list
+              label: Dates
+              fields:
+                .datetime:
+                  type: datetime
+                  label: Date
+                .status:
+                  type: toggle
+                  toggleable: true
+                  label: Status
+                  options:
+                    cancelled: Cancelled
+                    postponed: Postponed
 
-            header.registration_instruction:
-              type: text
-              label: Registration instruction
-              style: vertical
+            header.section_content:
+              type: section
+              title: Content
+              underline: true
 
-            header.registration_link:
-              type: text
-              label: Registration link
-              style: vertical
-
-            # header.type:
-            #   type: elements
-            #   label: Type
-            #   default: Standard
-            #   options:
-            #     standard: Standard
-            #     online: Online
-            
             content:
-              ordering@: +98
+              ordering@: header.section_content
+              label: Descripton
+              
             header.media_order:
               ordering@: +99
