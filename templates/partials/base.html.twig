@@ -1,5 +1,6 @@
 {% set site_header = page.find('/_site-header') %}
 {% set site_footer = page.find('/_site-footer') %}
+{% set age_gate = page.find('/_age-gate') %}
 {% set api = page.find('/api').url %}
 {% include 'partials/js.html.twig' %}
 {% include 'partials/css.html.twig' %}
@@ -27,7 +28,7 @@
 			{% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %}
 		</div>
 		{% include 'partials/snipcart.html.twig' %}
-		{% if config.plugins['algolia-pro'].enabled %}{% include 'partials/algolia-pro/instantsearch.html.twig' with { index: 'pages' } %}{% endif %}
+		{# {% block agegate %}{% include "partials/age-gate.html.twig" %}{% endblock %} #}
 		{% block transition %}<div id="transition"></div>{% endblock %}
 		{# {% block loading %}<div id="loading"><span></span></div>{% endblock %} #}
 		{% block network %}<wht-network></wht-network>{% endblock %}
