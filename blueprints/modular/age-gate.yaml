@@ -1,0 +1,31 @@
+title: Age Gate
+
+form:
+  validation: loose
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+
+        general:
+            type: tab
+            title: General
+            fields:
+
+              header.provinces:
+                name: provinces
+                type: list
+                style: vertical
+                label: Provinces
+                fields:
+                  .name:
+                    type: text
+                    label: Name
+                  .age:
+                    type: number
+                    label: Age
+                    default: 18
+                  .eligible:
+                    type: checkbox
+                    label: Eligible

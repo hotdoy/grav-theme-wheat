@@ -19,7 +19,11 @@ en:
     DIALOG:
       SIGNIN: 🥰<br><strong>Welcome back!</strong>
       SIGNOUT: 👋<br><strong>You've been logged out.</strong>
-
+    AGEGATE: 
+      CONTENT: It’s nice to see you! Thanks for proving you are of legal age in your province.
+      VALIDATE: Validate
+      FOOTNOTE: <a href="/terms-and-conditions">Terms and conditions</a>
+      WARNING: It seems you are not eligible to view more. That’s OK! We’re glad you stopped by.
 fr:
   THEME:
     PAGINATION:
@@ -41,5 +45,9 @@ fr:
     DIALOG:
       SIGNIN: 🥰<br><strong>Content de vous revoir!</strong>
       SIGNOUT: 👋<br><strong>Vous avez été déconnecté.</strong>
-
+    AGEGATE:
+      CONTENT: C'est un plaisir de vous voir ici ! Merci de prouver que vous avez l'âge légal dans votre province.
+      VALIDATE: Valider
+      FOOTNOTE: <a href="/terms-and-conditions">Termes et conditions</a>
+      WARNING: Il semble que vous n'ayez pas le droit d'en voir plus. Ce n'est pas grave ! Nous sommes heureux que vous soyez passé(e).
 

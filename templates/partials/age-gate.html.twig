@@ -1,0 +1,32 @@
+{% if age_gate %}
+<div id="age-gate">
+    <div class="veil"></div>
+    <div class="wrapper">
+        <div class="content text">{{ 'THEME.AGEGATE.CONTENT'|t|raw }}</div>
+        <div class="toggles">
+            <form>
+                <select name="province">
+                    {% for p in age_gate.header.provinces %}
+                    <option
+                        value="{{ p.name }}"
+                        data-eligible="{{ p.eligible ? 'true' : 'false' }}"
+                        data-age="{{ p.age }}">
+                        {{ p.name }}
+                    </option>
+                    {% endfor %}
+                </select>
+                <div class="date-inputs-ctn">
+					<input class="js-date-input" id="month" type="text" pattern="\d*" maxlength="2" placeholder="MM" inputmode="numeric">
+					<input class="js-date-input" id="day" type="text" pattern="\d*" maxlength="2" placeholder="DD" inputmode="numeric">
+					<input class="js-date-input" id="year" type="text" pattern="\d*" maxlength="4" placeholder="YYYY" inputmode="numeric">
+				</div>
+                <input type="submit" action="/" class="button validate" value="{{ 'THEME.AGEGATE.VALIDATE'|t }}">
+            </form>
+        </div>
+        <div class="warning text">{{ 'THEME.AGEGATE.WARNING'|t }}</div>
+        <div class="footnote text small">{{ 'THEME.AGEGATE.FOOTNOTE'|t|raw }}</div>
+    </div>
+</div>
+{% endif %}
+
+
