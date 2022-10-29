@@ -29,7 +29,3 @@ form:
                 .url:
                   type: text
                   label: Url
-
-            header.media_order:
-              type: pagemedia
-              label: PLUGIN_ADMIN.PAGE_MEDIA
