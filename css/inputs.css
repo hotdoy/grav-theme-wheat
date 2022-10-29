@@ -7,7 +7,8 @@ label {
 	text-transform: uppercase;
 }
 
-input[type="search"] {
+input[type="search"],
+input[type="text"] {
     font-size: medium;
     -moz-appearance: none;
     -webkit-appearance: none;
