@@ -58,7 +58,3 @@ form:
               codemirror:
                 mode: html
               label: Footnotes
-              
-            header.media_order:
-              type: pagemedia
-              label: PLUGIN_ADMIN.PAGE_MEDIA
